@@ -1,18 +1,38 @@
 <template>
-  <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <div>
+      <div class="item">
+        1
+      </div>
+      <div class="item">
+          2
+      </div>
+      <div class="item">
+          3
+      </div>
+      <div class="item">
+          4
+      </div>
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
+
 import HelloWorld from '@/components/HelloWorld.vue'
+
+import VueLoop from 'vue-loop'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    HelloWorld,
+    VueLoop
   }
 }
 </script>
+
+<style scoped lang="sass">
+  item
+    // background-color: $success
+    // &:first-child
+    //   background-color: $main
+</style>
