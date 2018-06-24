@@ -4,6 +4,13 @@
       v-if="fpsActive"
       :fps="background.app.ticker.FPS"
     />
+    <div id="relax">
+      <div class="relax"></div>
+      <div class="relax"></div>
+      <div class="relax"></div>
+      <div class="relax"></div>
+      <div class="relax"></div>
+    </div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -33,6 +40,7 @@ export default {
   created: function () {
     this.$nextTick(function () {
       this.background = new Background();
+      this.background.appendCanvas();
       this.fpsActive = true;
     })
   }
@@ -43,13 +51,5 @@ export default {
 <style lang="sass">
 // Shared styles
 @import './sass/styles'
-
-#nav
-  padding: 30px
-  a
-    font-weight: bold
-    color: #2c3e50
-    &.router-link-exact-active
-      color: #42b983
 
 </style>

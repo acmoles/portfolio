@@ -1,17 +1,53 @@
 <template>
-  <div>
-      <div class="item">
-        1
+  <div class="full-container">
+    <section class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Full Height title 1
+          </h1>
+          <h2 class="subtitle">
+            Full Height subtitle
+          </h2>
+        </div>
       </div>
-      <div class="item">
-          2
+    </section>
+    <section class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Full Height title 1
+          </h1>
+          <h2 class="subtitle">
+            Full Height subtitle
+          </h2>
+        </div>
       </div>
-      <div class="item">
-          3
+    </section>
+    <section class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Full Height title 1
+          </h1>
+          <h2 class="subtitle">
+            Full Height subtitle
+          </h2>
+        </div>
       </div>
-      <div class="item">
-          4
+    </section>
+    <section class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Full Height title 1
+          </h1>
+          <h2 class="subtitle">
+            Full Height subtitle
+          </h2>
+        </div>
       </div>
+    </section>
     </div>
 </template>
 
