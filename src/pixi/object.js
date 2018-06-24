@@ -17,6 +17,12 @@ export class BackgroundObject {
   init() {
     this.graphics = new PIXI.Graphics();
 
+    this.animatableProps = {
+      alpha: 0,
+      scale: 0.6
+    }
+    this.updateProps();
+
     if (this.type === 'pentagon') {
       this.drawPolygon(5);
     } else if (this.type === 'triangle') {
@@ -37,8 +43,8 @@ export class BackgroundObject {
 
     this.app.ticker.add((delta) => {
         this.graphics.x += 0.4 * delta * xDirection;
-        this.graphics.y += 0.4 * delta * yDirection;
-        // this.checkVisible();
+        this.graphics.y += 0.2 * delta * yDirection;
+        this.bounds = this.graphics.getBounds();
     });
 
     // causing webgl error?
@@ -46,19 +52,31 @@ export class BackgroundObject {
   }
 
   checkVisible() {
-    // let visible = this.bounds.x >= this.app.screen.x &&
-    //               this.bounds.y >= this.app.screen.y &&
-    //               this.bounds.x + this.bounds.width <= this.app.screen.height &&
-    //               this.bounds.y + this.bounds.height <= this.app.screen.width;
-    let visible = this.bounds.x >= 0 && this.bounds.x + this.bounds.width <= this.app.screen.width;
-    console.log('visible?', visible);
-    if (!visible) {
-      console.log('Not visible me');
-    }
+    return this.bounds.x >= 0
+    && this.bounds.x + this.bounds.width <= this.app.screen.width;
+  }
+
+  intro() {
+    anime({
+      targets: this.animatableProps,
+      alpha: 1,
+      scale: 1,
+      duration: 2000,
+      delay: anime.random(0, 1000),
+      easing: 'easeInOutQuad',
+      update: () => {
+        this.updateProps();
+      }
+    });
+  }
+
+  updateProps() {
+    this.graphics.alpha = this.animatableProps.alpha;
+    this.graphics.scale.x = this.graphics.scale.y = this.animatableProps.scale;
   }
 
   drawBox() {
-    let scaledSide = this.scale * 64;
+    let scaledSide = this.scale * 64 * anime.random(0.9, 1.1);
     let scaledCorner = this.scale * 12;
     this.graphics.beginFill(this.color);
     this.graphics.drawRoundedRect(
@@ -72,7 +90,7 @@ export class BackgroundObject {
   }
 
   drawPolygon(numberOfSides) {
-    let size = 64 * this.scale,
+    let size = 64 * this.scale * anime.random(0.9, 1.1),
         step  = 2 * Math.PI / numberOfSides, // Precalculate step value
         shift = (Math.PI / 180.0) * -18;
 
@@ -80,7 +98,7 @@ export class BackgroundObject {
     this.graphics.beginFill(this.color, 0);
     this.graphics.lineStyle(10 * this.scale, this.color, 1);
 
-    for (var i = 0; i <= numberOfSides; i++) {
+    for (var i = 0; i <= numberOfSides + 1; i++) {
       var curStep = i * step + shift;
 
       if (i === 0) {
