@@ -19,7 +19,7 @@ export class BackgroundObject {
 
     this.animatableProps = {
       alpha: 0,
-      scale: 0.6
+      scale: 0.8
     }
     this.updateProps();
 
@@ -52,8 +52,8 @@ export class BackgroundObject {
   }
 
   checkVisible() {
-    return this.bounds.x >= 0
-    && this.bounds.x + this.bounds.width <= this.app.screen.width;
+    return this.bounds.x >= 0 - this.bounds.width // visible if off screen left up to own width
+    && this.bounds.x <= this.app.screen.width;
   }
 
   intro() {
@@ -63,9 +63,26 @@ export class BackgroundObject {
       scale: 1,
       duration: 2000,
       delay: anime.random(0, 1000),
+      easing: 'easeInOutQuart',
+      update: () => {
+        this.updateProps();
+      }
+    });
+  }
+
+  outtro() {
+    anime({
+      targets: this.animatableProps,
+      alpha: 0,
+      scale: 0.9,
+      duration: 2000,
+      delay: anime.random(0, 1000),
       easing: 'easeInOutQuad',
       update: () => {
         this.updateProps();
+      },
+      complete: () => {
+        this.graphics.parent.removeChild(this.graphics);
       }
     });
   }

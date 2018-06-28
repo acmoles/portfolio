@@ -16,6 +16,12 @@ export class ObjectPool {
     for (var property in colors) {
       this.colors.push(colors[property]);
     }
+    this.colors.push(colors.orange);
+    this.colors.push(colors.yellow);
+    for (var i = 0; i < 2; i++) {
+      this.colors.push(colors.blue);
+      this.colors.push(colors.green);
+    }
 
     this.types = [
       'box',
@@ -26,12 +32,16 @@ export class ObjectPool {
     this.objectPool = []
 
     this.makeObjects(this.objectsPerLayer);
-    this.objectsToReplace = 0;
+    this.removedObjectCount = 0;
     this.checkAllVisible();
 
-    setInterval(() => {
+    this.checkVisibleTimer = setInterval(() => {
       this.checkAllVisible();
     }, 5000);
+
+    this.replaceAllTimer = setInterval(() => {
+      this.removeAllReplace();
+    }, 10000);
   }
 
   takeObject(layerIndex) {
@@ -46,6 +56,7 @@ export class ObjectPool {
     this.layers.forEach((layer, index) => {
       var scale, type;
       if (index >= 3) {
+        // larger layers
         scale = index * anime.random(1.8, 2.2);
         type = this.types[anime.random(0, this.types.length - 2)];
         amount -= 2;
@@ -61,12 +72,7 @@ export class ObjectPool {
   }
 
   makeObject(scale, layer, type, i) {
-    var color;
-    if (anime.random(-1, 1) > 0) {
-      color = this.colors[anime.random(0, this.colors.length - 5)];
-    } else {
-      color = this.colors[anime.random(0, this.colors.length - 1)];
-    }
+    var color = this.colors[anime.random(0, this.colors.length - 1)];
 
     let backgroundObject = new BackgroundObject(
       this.app, // app
@@ -84,23 +90,44 @@ export class ObjectPool {
 
   checkAllVisible() {
 
-    this.objectPool.forEach((object, index, array) => {
-      let visible = object.checkVisible();
+    var i = this.objectPool.length;
+    while (i--) {
+      let visible = this.objectPool[i].checkVisible();
+
       if (!visible) {
-        object.graphics.parent.removeChild(object);
-        array.splice(index, 1);
-        this.objectsToReplace ++;
+        this.objectPool[i].graphics.parent.removeChild(this.objectPool[i].graphics);
+        this.objectPool.splice(i, 1);
+        this.removedObjectCount ++;
       }
-    });
-
-    console.log('objects removed count: ', this.objectsToReplace);
-
-    if (this.objectsToReplace > this.layers.length) {
-      this.makeObjects(2);
-      console.log('replaced objects: ', this.objectsToReplace);
-      this.objectsToReplace = 0;
     }
 
+    // console.log('objects removed count: ', this.removedObjectCount);
+
+    if (this.removedObjectCount > this.layers.length) {
+      this.makeObjects(2);
+      // console.log('replaced objects: ', this.removedObjectCount);
+      this.removedObjectCount = 0;
+    }
+
+  }
+
+  removeAllReplace() {
+
+    var i = this.objectPool.length;
+    while (i--) {
+      this.objectPool[i].outtro();
+      this.objectPool.splice(i, 1);
+    }
+
+    setTimeout(() => {
+      // console.log('remove all, ', this.objectPool);
+
+      this.makeObjects(this.objectsPerLayer);
+      // console.log('replace all, ', this.objectPool);
+
+    }, 3000);
+
+    // TODO: How have some survived?
   }
 
 }

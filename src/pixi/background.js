@@ -40,7 +40,7 @@ export class Background {
 
   appendCanvas() {
     let filter = new PIXI.filters.BlurFilter();
-    filter.blur = 20;
+    filter.blur = 30;
     // filter.quality = 5;
     this.app.stage.filters = [filter];
 
@@ -68,6 +68,7 @@ export class Background {
         }
       });
       self.relaxInstances.push(relaxInstance);
+      relax.remove();
     });
   }
 
