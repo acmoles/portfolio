@@ -10,6 +10,8 @@ export class ObjectPool {
     this.app = app;
     this.layers = layers;
 
+    this.isPaused = false;
+
     this.objectsPerLayer = 5;
     this.firstMake = true;
 
@@ -31,6 +33,8 @@ export class ObjectPool {
     ];
 
     this.objectPool = [];
+
+    this.setVisibilityApi();
   }
 
   makeObjects(amount) {
@@ -68,8 +72,8 @@ export class ObjectPool {
       color, // color
       type, // type
       scale, // scale
-      anime.random(0, window.innerWidth), // x
-      (window.innerHeight * i) + anime.random(-300, 300), // y
+      anime.random(0, this.app.screen.width), // x
+      (this.app.screen.height * i) + anime.random(-300, 300), // y
       anime.random(1, Math.PI) // rotation
     );
     layer.addChild(backgroundObject.graphics);
@@ -126,12 +130,44 @@ export class ObjectPool {
     this.checkAllVisible();
 
     this.checkVisibleTimer = setInterval(() => {
-      this.checkAllVisible();
+      if (!this.isPaused) {
+        this.checkAllVisible();
+      }
     }, 5000);
 
     this.replaceAllTimer = setInterval(() => {
-      this.removeAllReplace();
+      if (!this.isPaused) {
+        this.removeAllReplace();
+      }
     }, 60000);
+
+    document.addEventListener(this.visibilityChange, () => {
+      if (document[this.hidden]) {
+        this.isPaused = true;
+        this.app.stop();
+      } else {
+        this.isPaused = false;
+        this.app.start();
+      }
+    }, false);
+
+  }
+
+  setVisibilityApi() {
+  // Set the name of the hidden property and the change event for visibility
+  this.hidden = '';
+  this.visibilityChange = '';
+  if (typeof document.hidden !== 'undefined') { // Opera 12.10 and Firefox 18 and later support
+    this.hidden = 'hidden';
+    this.visibilityChange = 'visibilitychange';
+  } else if (typeof document.msHidden !== 'undefined') {
+    this.hidden = 'msHidden';
+    this.visibilityChange = 'msvisibilitychange';
+  } else if (typeof document.webkitHidden !== 'undefined') {
+    this.hidden = 'webkitHidden';
+    this.visibilityChange = 'webkitvisibilitychange';
+  }
+
   }
 
 }

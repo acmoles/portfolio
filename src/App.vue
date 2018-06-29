@@ -18,8 +18,7 @@
 
 import * as smoothScroll from 'smoothscroll'
 
-import { Background } from '@/pixi/background.js'
-import Fps from '@/components/fps.vue'
+// import { Background } from '@/pixi/background.js'
 
 export default {
   name: 'App',
@@ -32,7 +31,7 @@ export default {
   },
   created: function () {
     this.$nextTick(function () {
-      this.background = new Background();
+      // this.background = new Background();
     })
   }
 }

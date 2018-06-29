@@ -1,15 +1,8 @@
 <template>
-  <div class="full-container">
+  <div class="page">
     <section class="hero is-fullheight">
       <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            Full Height title 1
-          </h1>
-          <h2 class="subtitle">
-            Full Height subtitle
-          </h2>
-        </div>
+        <About/>
       </div>
     </section>
     <section class="hero is-fullheight">
@@ -53,22 +46,17 @@
 
 <script>
 
-import HelloWorld from '@/components/HelloWorld.vue'
-
-import VueLoop from 'vue-loop'
+import About from '@/components/homepage/about.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld,
-    VueLoop
+    About,
   }
 }
 </script>
 
 <style scoped lang="sass">
-  item
-    // background-color: $success
-    // &:first-child
-    //   background-color: $main
+
+
 </style>

@@ -58,9 +58,8 @@ export class Background {
   }
 
   init() {
-    console.log('new init');
     this.app = new PIXI.Application({
-      autoStart: true,
+      autoStart: false,
       autoResize: true,
       resolution: 0.1,
       // devicePixelRatio
@@ -69,10 +68,11 @@ export class Background {
   }
 
   appendCanvas() {
-
     let canvas = document.getElementById('canvas');
     canvas.appendChild(this.app.view);
     window.addEventListener('resize', this.resizeCanvas.bind(this));
+
+    this.app.start();
     this.objects.addFirstBatch();
 
     this.ball = document.getElementById('ball');
@@ -82,7 +82,7 @@ export class Background {
     this.app.ticker.add(() => {
       ticks += 1;
 
-      if (ticks === 120) {
+      if (ticks === 180) {
         this.sequence();
       }
     });
@@ -90,13 +90,13 @@ export class Background {
   }
 
   sequence() {
-    this.slideLoader('out', () => {
-      this.ball.classList.remove('active');
-      setTimeout(() => {
+    this.ball.classList.remove('active');
+    setTimeout(() => {
+      this.slideLoader('out', () => {
         this.loader = document.getElementById('loader')
         this.loader.classList.add('none');
-      }, 400);
-    });
+      });
+    }, 400);
   }
 
   slideLoader(direction, callback) {
@@ -104,11 +104,11 @@ export class Background {
     var slide = anime({
       targets: '.loader-bar',
       translateX: '100%',
-      easing: 'easeOutExpo',
+      easing: 'easeInOutExpo',
       autoplay: 'false',
       duration: 800,
       delay: function(el, i) {
-        return i * 100;
+        return i * 120;
       },
       complete: function() {
         callback();
