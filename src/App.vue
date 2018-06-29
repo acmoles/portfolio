@@ -1,11 +1,6 @@
 <template>
   <div id="app">
-    <Fps
-      v-if="fpsActive"
-      :fps="background.app.ticker.FPS"
-    />
     <div id="relax">
-      <div class="relax"></div>
       <div class="relax"></div>
       <div class="relax"></div>
       <div class="relax"></div>
@@ -29,19 +24,15 @@ import Fps from '@/components/fps.vue'
 export default {
   name: 'App',
   components: {
-    Fps
   },
   data: function () {
     return {
       background: {},
-      fpsActive: false
     }
   },
   created: function () {
     this.$nextTick(function () {
       this.background = new Background();
-      this.background.appendCanvas();
-      this.fpsActive = true;
     })
   }
 }

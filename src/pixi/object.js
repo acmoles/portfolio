@@ -70,6 +70,12 @@ export class BackgroundObject {
     });
   }
 
+  introNoAnimation() {
+    this.animatableProps.alpha = 1;
+    this.animatableProps.scale = 1;
+    this.updateProps();
+  }
+
   outtro() {
     anime({
       targets: this.animatableProps,
@@ -113,7 +119,7 @@ export class BackgroundObject {
 
     this.graphics.moveTo(0, 0);
     this.graphics.beginFill(this.color, 0);
-    this.graphics.lineStyle(10 * this.scale, this.color, 1);
+    this.graphics.lineStyle(15 * this.scale, this.color, 1);
 
     for (var i = 0; i <= numberOfSides + 1; i++) {
       var curStep = i * step + shift;

@@ -11,6 +11,7 @@ export class ObjectPool {
     this.layers = layers;
 
     this.objectsPerLayer = 5;
+    this.firstMake = true;
 
     this.colors = [];
     for (var property in colors) {
@@ -27,36 +28,16 @@ export class ObjectPool {
       'box',
       'pentagon',
       'triangle'
-    ]
+    ];
 
-    this.objectPool = []
-
-    this.makeObjects(this.objectsPerLayer);
-    this.removedObjectCount = 0;
-    this.checkAllVisible();
-
-    this.checkVisibleTimer = setInterval(() => {
-      this.checkAllVisible();
-    }, 5000);
-
-    this.replaceAllTimer = setInterval(() => {
-      this.removeAllReplace();
-    }, 10000);
-  }
-
-  takeObject(layerIndex) {
-    return this.objectPools[layerIndex].shift();
-  }
-
-  returnObject(layerIndex, object) {
-    this.objectPools[layerIndex].push(object);
+    this.objectPool = [];
   }
 
   makeObjects(amount) {
     this.layers.forEach((layer, index) => {
       var scale, type;
-      if (index >= 3) {
-        // larger layers
+      if (index == 3) {
+        // larger layer
         scale = index * anime.random(1.8, 2.2);
         type = this.types[anime.random(0, this.types.length - 2)];
         amount -= 2;
@@ -65,13 +46,21 @@ export class ObjectPool {
         type = this.types[anime.random(0, this.types.length - 1)];
       }
 
+      let intro;
+      if (this.firstMake) {
+        intro = false;
+        this.firstMake = false;
+      } else {
+        intro = true;
+      }
+
       for (var i = 0; i < amount; i++) {
-        this.makeObject(scale, layer, type, i);
+        this.makeObject(scale, layer, type, i, intro);
       }
     });
   }
 
-  makeObject(scale, layer, type, i) {
+  makeObject(scale, layer, type, i, intro) {
     var color = this.colors[anime.random(0, this.colors.length - 1)];
 
     let backgroundObject = new BackgroundObject(
@@ -84,7 +73,12 @@ export class ObjectPool {
       anime.random(1, Math.PI) // rotation
     );
     layer.addChild(backgroundObject.graphics);
-    backgroundObject.intro();
+    if (intro) {
+      backgroundObject.intro();
+    } else {
+      backgroundObject.introNoAnimation();
+    }
+
     this.objectPool.push(backgroundObject);
   }
 
@@ -121,13 +115,23 @@ export class ObjectPool {
 
     setTimeout(() => {
       // console.log('remove all, ', this.objectPool);
-
       this.makeObjects(this.objectsPerLayer);
       // console.log('replace all, ', this.objectPool);
-
     }, 3000);
+  }
 
-    // TODO: How have some survived?
+  addFirstBatch() {
+    this.makeObjects(this.objectsPerLayer);
+    this.removedObjectCount = 0;
+    this.checkAllVisible();
+
+    this.checkVisibleTimer = setInterval(() => {
+      this.checkAllVisible();
+    }, 5000);
+
+    this.replaceAllTimer = setInterval(() => {
+      this.removeAllReplace();
+    }, 60000);
   }
 
 }
