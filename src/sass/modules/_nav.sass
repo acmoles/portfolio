@@ -32,14 +32,15 @@
     font-weight: bold
     color: $steel
     margin-right: 1em
-    @for $i from 1 through 3 
+    @for $i from 1 through 3
       &:nth-child(#{$i})
        animation-delay: (400ms - (100ms * $i))
     &.router-link-exact-active
       color: $yellow
-  @media screen and (max-width: $tablet - 1px)
+
+@media screen and (max-width: $tablet - 1px)
+  .burger-options
     background-color: $blue
-    margin-right: 0
     top: 0
     padding: 120px 0
     flex-direction: column
@@ -50,5 +51,6 @@
     right: 0
     a
       color: $white
+      margin-right: 0
 
 .back-wrapper

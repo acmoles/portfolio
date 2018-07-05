@@ -61,9 +61,6 @@ export default {
 <style scoped lang="sass">
   @import '../../sass/variables'
 
-  .container
-    max-width: 1024px
-    
   .glass
     overflow: hidden
     display: flex
@@ -71,6 +68,8 @@ export default {
 
   .glass-header
     height: 80px
+    @media screen and (min-width: $desktop)
+      height: 120px
     position: relative
     color: $white
     display: flex

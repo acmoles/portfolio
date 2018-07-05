@@ -7,7 +7,7 @@
       <div class="relax"></div>
     </div>
       <Nav/>
-    <transition :name="transitionName">
+    <transition :name="transitionName" mode="out-in">
       <router-view/>
     </transition>
   </div>

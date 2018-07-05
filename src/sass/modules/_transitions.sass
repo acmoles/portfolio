@@ -7,6 +7,14 @@
 .fade-enter, .fade-leave-to
   opacity: 0
 
+// Fade up in
+.fadeup-enter-active, .fadeup-leave-active
+  transition: transform, opacity 0.2s ease-out
+
+.fadeup-enter, .fadeup-leave-to
+  transform: translateY(-1em)
+  opacity: 0
+
 // Bulge in animation
 .bulge-enter-active, .bulge-leave-active
   transition: 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55)

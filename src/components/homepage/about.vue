@@ -87,7 +87,6 @@ export default {
   @import '../../sass/variables'
 
   .glass
-    max-width: 1024px
     border-radius: $radius
     overflow: hidden
     background: rgba(255, 255, 255, 0.5)
@@ -169,9 +168,9 @@ export default {
       width: 100%
     .options
       color: $extraDarkSmoke
-      border-color: $darkSmoke
+      border-color: $extraDarkSmoke
       &:active, &:hover
-        border-color: $extraDarkSmoke
+        border-color: darken($extraDarkSmoke, 10%)
       padding-left: 0.75em
       padding-right: 0.75em
       .icon

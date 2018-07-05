@@ -3,6 +3,11 @@ import App from './App.vue'
 import router from './router'
 import './registerServiceWorker'
 import VueEvents from 'vue-events'
+import lazySizes from 'lazysizes';
+// Object.assign(lazySizes.cfg, {
+//     expand: 10
+// });
+lazySizes.init();
 
 Vue.use(VueEvents)
 

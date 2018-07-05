@@ -10,6 +10,7 @@
   "dependencies": {
     "animejs": "^2.2.0",
     "bulma": "^0.7.1",
+    "lazysizes": "^4.0.4",
     "pixi.js": "^4.8.1",
     "register-service-worker": "^1.0.0",
     "rellax": "^1.6.2",

@@ -1,43 +1,106 @@
 <template>
-  <div class="container glass">
-    <div class="content">
-      <i class="icon-plus-squared"></i>
-      <i class="icon-bank"></i>
-      <i class="icon-commenting"></i>
-      <i class="icon-comment-empty"></i>
-      <i class="icon-dot"></i>
-      <i class="icon-to-start-alt"></i>
-      <i class="icon-search"></i>
-      <i class="icon-up-open-big"></i>
-      <i class="icon-flash"></i>
-      <i class="icon-location"></i>
-      <i class="icon-location"></i>
-      <i class="icon-location"></i>
-      <i class="icon-location"></i>
-      <i class="icon-location"></i>
-      <i class="icon-location"></i>
+  <div class="container">
+    <div class="columns is-gapless">
 
-      <h1>Hello World</h1>
-      <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
-      <h2>Second level</h2>
-      <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
-      <ul>
-        <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
-        <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
-        <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
-        <li>Ut non enim metus.</li>
-      </ul>
-      <h3>Third level</h3>
-      <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="#">non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
-      <ol>
-        <li>Donec blandit a lorem id convallis.</li>
-        <li>Cras gravida arcu at diam gravida gravida.</li>
-        <li>Integer in volutpat libero.</li>
-        <li>Donec a diam tellus.</li>
-        <li>Aenean nec tortor orci.</li>
-        <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
-        <li>Vivamus maximus ultricies pulvinar.</li>
-      </ol>
+      <div class="sub-contact">
+        <div class="gradient-header"></div>
+        <div class="color-header"></div>
+        <div class="sub-contact-header-content content">
+          <b>Product designer for hire</b>
+          <p>Available October 2018</p>
+        </div>
+        <div class="sub-contact-footer-content">
+          <i class="icon-linkedin full-opacity"></i>
+        </div>
+      </div>
+      <div class="contact">
+        <p class="contact-time-stamp"><strong>Today</strong> {{ time }}</p>
+
+        <div class="message-wrapper">
+          <div class="message-content">
+            Hello!
+          </div>
+          <div class="message-author">
+            <figure class="image is-64x64">
+              <img src="https://bulma.io/images/placeholders/256x256.png">
+            </figure>
+            <div class="message-unread"></div>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Text input">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Username</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </div>
+            <p class="help is-success">This username is available</p>
+          </div>
+
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <p class="help is-danger">This email is invalid</p>
+          </div>
+
+          <div class="field">
+            <label class="label">Subject</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>Select dropdown</option>
+                  <option>With options</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="Textarea"></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox">
+                I agree to the <a href="#">terms and conditions</a>
+              </label>
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link">Submit</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </div>
   </div>
 </template>
@@ -51,10 +114,25 @@ export default {
       type: Number,
       default: 1
     }
-  }
+  },
+  data () {
+    return {
+      time: 5
+    }
+  },
 }
 </script>
 
 <style scoped lang="sass">
+
+
+
+
+
+  .sub-contact, .sub-contact-header-content, .sub-contact-footer-content
+    position: relative
+
+  .contact
+    background: rgba(255, 255, 255, 0.5)
 
 </style>

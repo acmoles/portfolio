@@ -15,6 +15,14 @@
           <li>Ut non enim metus.</li>
         </ul>
         <h3>Third level</h3>
+        <div class="columns">
+          <div class="column">
+            <figure class="image is-1by1"><img data-src="https://bulma.io/images/placeholders/480x480.png"></figure>
+          </div>
+          <div class="column">
+            <figure class="image is-1by1"><img data-src="https://bulma.io/images/placeholders/480x480.png"></figure>
+          </div>
+        </div>
         <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="#">non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
         <ol>
           <li>Donec blandit a lorem id convallis.</li>
@@ -42,6 +50,7 @@
           <dt>CSS</dt>
           <dd>A technology to make HTML look better</dd>
         </dl>
+        <figure class="image is-16by9"><img data-src="https://bulma.io/images/placeholders/640x360.png"></figure>
         <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet, mollis malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
         <h4>Fourth level</h4>
         <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus laoreet, at elementum ex efficitur.</p>
