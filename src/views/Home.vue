@@ -4,54 +4,43 @@
       <div class="hero-body">
         <About/>
       </div>
-    </section>
-    <section class="hero is-fullheight">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            Full Height title 1
-          </h1>
-          <h2 class="subtitle">
-            Full Height subtitle
-          </h2>
-        </div>
+      <div class="hero-foot">
+        <button @click="scrollTo" class="hamburger" type="button">
+          <span class="icon"><i class="icon-down-open-big full-opacity nav-icons"></i></span>
+        </button>
       </div>
     </section>
     <section class="hero is-fullheight">
       <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            Full Height title 1
-          </h1>
-          <h2 class="subtitle">
-            Full Height subtitle
-          </h2>
-        </div>
+        <Work/>
       </div>
     </section>
     <section class="hero is-fullheight">
       <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            Full Height title 1
-          </h1>
-          <h2 class="subtitle">
-            Full Height subtitle
-          </h2>
-        </div>
+        <Contact/>
       </div>
     </section>
-    </div>
+  </div>
 </template>
 
 <script>
 
 import About from '@/components/homepage/about.vue'
+import Work from '@/components/homepage/work.vue'
+import Contact from '@/components/homepage/contact.vue'
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
     About,
+    Work,
+    Contact
+  },
+  methods: {
+    scrollTo (event) {
+      let path = 'path';
+      this.$events.$emit('scroll', path);
+    }
   }
 }
 </script>

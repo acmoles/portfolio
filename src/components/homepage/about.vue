@@ -24,10 +24,10 @@
           </div>
           <div class="glass-body-details column">
             <h1 class="title">
-              Full Height title About
+              Anthony Moles Lyall
             </h1>
             <h2 class="subtitle">
-              Full Height subtitle About
+              Product Designer
             </h2>
             <p>
               <span class="icon">
@@ -49,7 +49,7 @@
             <div class="column is-narrow">
               <a class="button is-rounded options">
                 <span class="icon is-small">
-                  <i class="icon-dot-3"></i>
+                  <i class="icon-dot-3 full-opacity"></i>
                 </span>
               </a>
             </div>
@@ -84,5 +84,97 @@ export default {
 </script>
 
 <style scoped lang="sass">
+  @import '../../sass/variables'
 
+  .glass
+    max-width: 1024px
+    border-radius: $radius
+    overflow: hidden
+    background: rgba(255, 255, 255, 0.5)
+    display: flex
+    flex-direction: column
+
+  // Translucent header
+
+  .glass-header
+    height: 80px
+    flex-grow: 0
+    @media screen and (min-width: $desktop)
+      height: 238px
+
+  // Body content
+
+  .glass-body
+    position: relative
+    display: flex
+    flex-direction: column
+    @media screen and (min-width: $desktop)
+      flex-direction: row
+
+  // Profile pic and details
+
+  .glass-ghost-body
+    background: $white
+    opacity: 0.75
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    flex-grow: 1
+
+  .ghost-profile
+    .image
+      border-color: $white
+      background: $white
+
+  .columns.glass-body-titles
+    padding: 0 1em !important
+    @media screen and (min-width: $desktop)
+      flex-direction: column
+
+    .profile
+      position: relative
+      top: -64px
+      @media screen and (min-width: $desktop)
+        top: -128px
+      .image
+        height: 128px
+        width: 128px
+        border: solid 5px transparent
+        border-radius: $radius-rounded
+        overflow: hidden
+        @media screen and (min-width: $desktop)
+          border-width: 10px
+          height: 256px
+          width: 256px
+
+    .glass-body-details
+      position: relative
+      margin-left: 1em
+      @media screen and (min-width: $desktop)
+        margin-left: 0
+        top: -128px
+        text-align: center
+
+  // Content
+
+  .glass-body-content
+    padding: 0.75rem
+
+  .glass-body-actions
+    @media screen and (min-width: $desktop)
+      max-width: 400px
+    .button
+      width: 100%
+    .options
+      color: $extraDarkSmoke
+      border-color: $darkSmoke
+      &:active, &:hover
+        border-color: $extraDarkSmoke
+      padding-left: 0.75em
+      padding-right: 0.75em
+      .icon
+        position: relative
+        top: 0.1em
 </style>

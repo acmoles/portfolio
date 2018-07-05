@@ -1,5 +1,15 @@
 @import '../variables'
 
+.hero
+  position: relative
+
 .hero-body
+  padding: 6rem 1.5rem 1.5rem 1.5rem
   @media screen and (max-width: $tablet - 1px)
     padding: 4rem 0.5rem
+
+.hero-foot
+  display: none
+  @media screen and (min-width: $fullhd)
+    display: flex
+    justify-content: center
