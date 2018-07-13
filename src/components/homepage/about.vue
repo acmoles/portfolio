@@ -7,7 +7,7 @@
 
       <div class="glass-ghost-body">
         <div class="glass-body-titles columns is-mobile is-gapless">
-          <div class="profile ghost-profile column is-narrow">
+          <div class="profile ghost-profile column">
             <figure class="image">
             </figure>
           </div>
@@ -17,14 +17,14 @@
       <div class="glass-body">
 
         <div class="glass-body-titles columns is-mobile is-gapless">
-          <div class="profile column is-narrow">
+          <div class="profile column">
             <figure class="image">
               <img src="/img/homepage/photo.jpg">
             </figure>
           </div>
           <div class="glass-body-details column">
             <h1 class="title">
-              Anthony Moles Lyall
+              Anthony Moles
             </h1>
             <h2 class="subtitle">
               Product Designer
@@ -87,7 +87,7 @@ export default {
   @import '../../sass/variables'
 
   .glass
-    border-radius: $radius
+    border-radius: $radius-large
     overflow: hidden
     background: rgba(255, 255, 255, 0.5)
     display: flex
@@ -121,6 +121,7 @@ export default {
     left: 0
     right: 0
     flex-grow: 1
+    margin-bottom: 0 !important
 
   .ghost-profile
     .image
@@ -128,29 +129,35 @@ export default {
       background: $white
 
   .columns.glass-body-titles
-    padding: 0 1em !important
+    width: 100%
+    margin-bottom: 0
     @media screen and (min-width: $desktop)
       flex-direction: column
+      flex: none
+      width: 33.3333%
 
     .profile
       position: relative
       top: -64px
+      flex: none
       @media screen and (min-width: $desktop)
         top: -128px
+        flex: 1
       .image
+        margin: 0 0.75em
         height: 128px
         width: 128px
         border: solid 5px transparent
         border-radius: $radius-rounded
         overflow: hidden
         @media screen and (min-width: $desktop)
+          margin: 0 auto
           border-width: 10px
           height: 256px
           width: 256px
 
     .glass-body-details
       position: relative
-      margin-left: 1em
       @media screen and (min-width: $desktop)
         margin-left: 0
         top: -128px

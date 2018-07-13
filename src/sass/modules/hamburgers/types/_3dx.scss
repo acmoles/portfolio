@@ -25,12 +25,6 @@
         background-color: transparent !important;
         transform: rotateY(180deg);
 
-        &::before, &::after {
-          @media screen and (max-width: $tablet - 1px) {
-            background-color: rgba(255, 255, 255, 1);
-          }
-        }
-
         &::before {
           transform: translate3d(0, $hamburger-layer-height + $hamburger-layer-spacing, 0) rotate(45deg);
         }

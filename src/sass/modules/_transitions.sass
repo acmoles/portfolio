@@ -2,10 +2,13 @@
 
 // Fade transition
 .fade-enter-active, .fade-leave-active
-  transition: opacity 0.2s ease-out
+  transition: opacity 0.4s ease-out
 
 .fade-enter, .fade-leave-to
   opacity: 0
+
+.fade-enter
+  transition-delay: 1s
 
 // Fade up in
 .fadeup-enter-active, .fadeup-leave-active
@@ -24,16 +27,15 @@
   transform: scale(0.8)
   opacity: 0
 
-@keyframes bulgeIn
-  0%
+@keyframes bulge
+  from
     opacity: 0
-    transform: scale(0.8)
+    transform: scale3d(0.8, 0.8, 0.8)
 
-  100%
+  to
     opacity: 1
-    transform: scale(1)
+    transform: scale3d(1, 1, 1)
 
-.bulge-in
-  opacity: 0
-  animation: bulgeIn 700ms forwards
+.bulge-in-animation
+  animation: bulge 700ms both
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55)

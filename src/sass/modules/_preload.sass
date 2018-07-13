@@ -1,8 +1,11 @@
 @import '../variables'
 
+#loader
+  z-index: 2
+
 .loader-bar
   height: calc(100% / 3)
-  background-color: $blue
+  background-color: $white
 
 .loader-container
   position: absolute
@@ -28,7 +31,7 @@
   width: 15px
   height: 15px
   border-radius: 50%
-  background-color: white
+  background-color: $slate
   transform-origin: 50%
   animation: bounce 500ms alternate infinite ease
 

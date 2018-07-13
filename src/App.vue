@@ -16,7 +16,7 @@
 <script>
 
 import * as smoothScroll from 'smoothscroll'
-// import { Background } from '@/pixi/background.js'
+import { Background } from '@/pixi/background.js'
 import Nav from '@/components/nav.vue'
 
 export default {

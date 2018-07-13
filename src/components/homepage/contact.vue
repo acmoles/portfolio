@@ -1,19 +1,17 @@
 <template>
   <div class="container">
-    <div class="columns is-gapless">
+    <div class="contact-wrapper columns is-gapless">
 
-      <div class="sub-contact">
-        <div class="gradient-header"></div>
-        <div class="color-header"></div>
+      <div class="sub-contact column is-one-third">
         <div class="sub-contact-header-content content">
-          <b>Product designer for hire</b>
-          <p>Available October 2018</p>
+          <h2>Contact</h2>
         </div>
-        <div class="sub-contact-footer-content">
+        <!-- <div class="sub-contact-footer-content">
           <i class="icon-linkedin full-opacity"></i>
-        </div>
+        </div> -->
       </div>
-      <div class="contact">
+
+      <div class="contact column">
         <p class="contact-time-stamp"><strong>Today</strong> {{ time }}</p>
 
         <div class="message-wrapper">
@@ -124,15 +122,31 @@ export default {
 </script>
 
 <style scoped lang="sass">
+  @import '../../sass/variables'
 
-
-
-
+  .contact-wrapper
 
   .sub-contact, .sub-contact-header-content, .sub-contact-footer-content
     position: relative
 
+  .sub-contact.column.is-one-third
+    background: rgba(255, 255, 255, 0.75)
+    width: 100%
+    @media screen and (min-width: $tablet)
+      width: calc(33.3333% - 1em)
+
+  .glass-color, .glass-gradient
+    @media screen and (min-width: $tablet)
+      border-radius: $radius-large 0 0 $radius-large
+
   .contact
     background: rgba(255, 255, 255, 0.5)
+
+  .message-wrapper
+    margin: 1em
+
+  .form-wrapper
+    padding: 1em
+
 
 </style>

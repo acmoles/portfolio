@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <section class="hero is-fullheight">
-      <div class="hero-body">
+      <div class="hero-body first-section">
         <About/>
       </div>
       <div class="hero-foot">
@@ -16,7 +16,7 @@
       </div>
     </section>
     <section class="hero is-fullheight">
-      <div class="hero-body">
+      <div class="hero-body last-section">
         <Contact/>
       </div>
     </section>
