@@ -29,8 +29,8 @@
             <h2 class="subtitle">
               Product Designer
             </h2>
-            <p>
-              <span class="icon">
+            <p class="location">
+              <span class="icon is-small">
                 <i class="icon-location"></i>
               </span>
               Berlin, Germany
@@ -41,10 +41,10 @@
         <div class="glass-body-content">
           <div class="glass-body-actions columns is-mobile is-variable is-1">
             <div class="column">
-              <a class="button is-primary is-rounded">Work</a>
+              <a class="button is-primary is-rounded" @click="scrollTo('work')">Work</a>
             </div>
             <div class="column">
-              <a class="button is-success is-rounded is-outlined">Message</a>
+              <a class="button is-success is-rounded is-outlined" @click="scrollTo('contact')">Message</a>
             </div>
             <div class="column is-narrow">
               <a class="button is-rounded options">
@@ -57,7 +57,10 @@
           <div class="content">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut libero vitae dui vehicula aliquet.
-              Nulla euismod tincidunt eros, sit amet cursus odio volutpat id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+              Nulla euismod tincidunt eros, sit amet cursus odio volutpat id.
+            </p>
+            <p>
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
               Nam eget tortor nisl. Ut ut libero vitae dui vehicula aliquet.
             </p>
           </div>
@@ -79,11 +82,17 @@ export default {
       type: Number,
       default: 1
     }
+  },
+  methods: {
+    scrollTo (event) {
+      this.$events.$emit('scroll-trigger', event);
+    },
   }
 }
 </script>
 
 <style scoped lang="sass">
+
   @import '../../sass/variables'
 
   .glass
@@ -130,7 +139,7 @@ export default {
 
   .columns.glass-body-titles
     width: 100%
-    margin-bottom: 0
+    margin-bottom: -0.5em
     @media screen and (min-width: $desktop)
       flex-direction: column
       flex: none
@@ -139,6 +148,7 @@ export default {
     .profile
       position: relative
       top: -64px
+      margin-bottom: -64px
       flex: none
       @media screen and (min-width: $desktop)
         top: -128px
@@ -160,20 +170,40 @@ export default {
       position: relative
       @media screen and (min-width: $desktop)
         margin-left: 0
-        top: -128px
+        // top: -128px
+        top: -64px
         text-align: center
+
+    .title
+      font-size: 1.5rem
+      margin-top: 0.25em
+      @media screen and (min-width: $tablet)
+        font-size: 2rem
+
+    .subtitle
+      font-size: 1rem
+      margin-bottom: 0.75em
+      @media screen and (min-width: $tablet)
+        font-size: 1.25rem
+
+    .location
+      font-size: 0.75rem
 
   // Content
 
   .glass-body-content
-    padding: 0.75rem
+    padding: 0.75em
+    padding-bottom: 1em
 
   .glass-body-actions
+    margin-top: 0.5em
     @media screen and (min-width: $desktop)
+      margin-top: 0
       max-width: 400px
     .button
       width: 100%
     .options
+      background-color: transparent
       color: $extraDarkSmoke
       border-color: $extraDarkSmoke
       &:active, &:hover

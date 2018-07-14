@@ -10,6 +10,13 @@
 .fade-enter
   transition-delay: 1s
 
+@keyframes fade
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
 // Fade up in
 .fadeup-enter-active, .fadeup-leave-active
   transition: transform, opacity 0.2s ease-out
@@ -39,3 +46,12 @@
 .bulge-in-animation
   animation: bulge 700ms both
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55)
+
+// Slide animation
+
+@keyframes slideDown
+  from
+    transform: translateY(-100%)
+
+  to
+    transform: translateY(0%)

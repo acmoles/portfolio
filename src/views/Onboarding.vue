@@ -1,6 +1,7 @@
 <template>
   <WorkWrapper
-    :int="int"
+    :icon="'/img/homepage/project-icons/personalised.svg'"
+    :color="'green'"
   >
     <div class="page-glass-section">
       <div class="content">

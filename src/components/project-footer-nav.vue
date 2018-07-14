@@ -42,6 +42,8 @@
 
 import * as smoothScroll from 'smoothscroll'
 
+// like nav but sends events to nav
+
 export default {
   name: 'Nav',
   data () {
@@ -103,6 +105,8 @@ export default {
 <style lang="sass">
 
   @import '../sass/variables'
+
+  // // TODO: break out nav styles to separate module
 
   #nav
     position: absolute
