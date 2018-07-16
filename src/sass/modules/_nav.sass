@@ -1,0 +1,54 @@
+@import '../variables'
+
+.nav
+  position: absolute
+  padding: 15px
+  width: 100%
+  display: flex
+  justify-content: space-between
+  z-index: 1
+  pointer-events: none
+  transition: color 0.8s ease
+  @media screen and (min-width: $desktop)
+    padding: 20px
+
+.nav.is-light
+  color: $white
+  a
+    color: $white
+    &:hover, &:focus, &:active
+      color: $white-ter
+    &.router-link-exact-active
+      color: $white
+      border-bottom: 2px solid $white
+
+.burger-wrapper, .back-wrapper
+  pointer-events: all
+
+.burger-wrapper
+  display: flex
+
+.burger-options
+  display: flex
+  align-items: center
+  justify-content: space-around
+  position: relative
+  top: -5px
+  a
+    color: $steel
+    font-weight: 600
+    margin-right: 1em
+    margin-top: 0.1em
+    @for $i from 0 through 2
+      &:nth-child(#{$i})
+       animation-delay: (400ms - (100ms * $i))
+    &:hover, &:focus, &:active
+      color: $black
+    &.router-link-exact-active
+      color: $black
+      border-bottom: 2px solid $black
+
+.nav-icons
+  font-size: 1.5em
+  position: relative
+  left: -5px

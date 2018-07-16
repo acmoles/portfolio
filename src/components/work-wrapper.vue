@@ -1,5 +1,6 @@
 <template>
   <div class="page">
+
     <section class="hero is-medium page-header">
       <div class="color-header" :class="color"></div>
       <div class="flat-header" :class="color"></div>
@@ -18,23 +19,29 @@
         </div>
       </div>
     </section>
+
     <section class="container page-glass">
       <div class="overlap-filler"></div>
-      <slot>
+      <slot name="content">
         This will only be displayed if there is no content
         to be distributed.
       </slot>
+      <div class="overlap-filler is-bottom"></div>
     </section>
+
     <section class="hero is-medium page-footer">
       <div class="color-header" :class="color"></div>
       <div class="flat-header" :class="color"></div>
       <div class="hero-body">
-        <div class="container">
-          <p>Test</p>
-          <figure class="image is-16by9"><img data-src="https://bulma.io/images/placeholders/640x360.png"></figure>
-        </div>
+        <slot name="footer-content">
+          This will only be displayed if there is no content
+          to be distributed.
+        </slot>
       </div>
-
+      <FooterNav
+        :back="true"
+        :color="'is-light'"
+      />
     </section>
   </div>
 </template>
@@ -42,9 +49,13 @@
 <script>
 
 import * as smoothScroll from 'smoothscroll'
+import FooterNav from '@/components/footer-nav.vue'
 
 export default {
   name: 'WorkWrapper',
+  components: {
+    FooterNav,
+  },
   props: {
     icon: {
       type: String,
@@ -81,7 +92,7 @@ export default {
   .project-logo
     text-align: center
     position: relative
-    margin: 1.5em 0
+    margin: 1.5em 0 3em 0
     @media screen and (min-width: $tablet)
       margin: 3em 0
       .icon
@@ -89,13 +100,11 @@ export default {
 
   .page-glass
     position: relative
-    overflow: hidden
-    top: -1.5em
-    animation: fade 800ms both
+    top: -3em
+    animation: fadeUp 1200ms both
     animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
     animation-delay: 800ms
-    @media screen and (min-width: $tablet)
-      top: -3em
+    z-index: 1
 
   .page-glass-divider, .page-glass-section, .overlap-filler
     display: flex
@@ -111,11 +120,11 @@ export default {
     padding-bottom: 1.5em
     background: rgba(255, 255, 255, 0.9)
     @media screen and (min-width: $tablet)
-      padding: 1em
-      padding-bottom: 2em
-    &:nth-child(2)
+      padding: 1.5em
+      padding-bottom: 3em
+    &.first-section
       border-radius: $radius-large $radius-large 0 0
-    &:last-child
+    &.last-section
       border-radius: 0 0 $radius-large $radius-large
 
   .overlap-filler
@@ -124,11 +133,15 @@ export default {
     top: 0
     left: 0
     right: 0
-    height: 4em
-    @media screen and (min-width: $tablet)
-        height: 8em
+    height: 8em
     z-index: -1
     background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
+    &.is-bottom
+      background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1))
+      top: auto
+      bottom: 0
+      border-radius: 0 0 $radius-large $radius-large
+
 
   .page-glass-divider
     background: rgba(255, 255, 255, 0.5)
@@ -139,5 +152,31 @@ export default {
       font-size: 1.75em
       color: $steel
       font-weight: 600
+
+  .page-footer
+    margin-top: -6em
+
+  .page-footer-container
+    color: $white
+    position: relative
+    top: -3em
+    margin-bottom: -8em
+    h3
+      color: $white
+      margin-bottom: 0.25em
+    p
+      margin-bottom: 3em
+    .button
+      min-width: 180px
+      position: relative
+      font-weight: 600
+      span
+        margin-top: -0.1em
+      i
+        position: absolute
+        right: 10px
+        font-size: 0.6em
+    @media screen and (min-width: $tablet)
+      padding: 1.5em
 
 </style>

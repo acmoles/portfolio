@@ -188,12 +188,13 @@ export default {
 
     .location
       font-size: 0.75rem
+      opacity: 0.5
 
   // Content
 
   .glass-body-content
     padding: 0.75em
-    padding-bottom: 1em
+    padding-bottom: 1.75em
 
   .glass-body-actions
     margin-top: 0.5em

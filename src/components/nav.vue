@@ -1,14 +1,14 @@
 <template>
   <nav
     id="nav"
-    class="navbar"
+    class="nav navbar"
     :class="navColorScheme"
     role="navigation"
     aria-label="main navigation"
   >
     <div class="back-wrapper">
       <transition name="fade">
-        <button v-if="canGoHome" @click="backHome" class="hamburger" type="button">
+        <button v-if="canGoHome" @click="backHome('about')" class="hamburger" type="button">
           <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
         </button>
       </transition>
@@ -33,8 +33,6 @@
         </span>
       </button>
     </div>
-    <!-- <router-link to="/">Home</router-link> |
-    <router-link to="/onboarding">Onboarding</router-link> | -->
   </nav>
 </template>
 
@@ -54,102 +52,71 @@ export default {
   },
   created () {
     this.$events.$on('navigate-project', (value) => {
+      // Navigate to a project
       this.navColorScheme = 'is-light';
       this.canGoHome = true;
     });
     this.$events.$on('scroll-trigger', (value) => {
+      // Get scroll events from any component
       this.scrollTo(value);
     });
     this.$events.$on('current-scroll-location', (value) => {
+      // Update current scroll position // TODO: Is this the best system?
       console.log('set current scroll location');
       // set by home component?
       this.currentScrollLocation = value;
+    });
+    this.$events.$on('navigate-footer', (value) => {
+      // Navigate events from footer nav
+      if (this.canGoHome) {
+        this.backHome(value);
+      } else {
+        this.scrollTo(value);
+      }
     });
   },
   methods: {
     navigate (event) {
       if (this.canGoHome) {
-        this.backHome();
-        // need to act on callback...
-        this.scrollTo(event);
+        this.backHome(event);
       } else {
         this.scrollTo(event);
       }
     },
     scrollTo (event) {
       this.currentScrollTarget = event;
-      let scrollContext = document.getElementById('app');
-      let scrollTarget = document.getElementById(event);
+
       let time;
-      if (event === 'contact') {
-        time = 1250;
-      } else {
+      if (event === 'about') {
+        time = 1000;
+      } else if (event === 'work') {
         time = 500;
+      } else if (event === 'contact') {
+        time = 1000;
+      } else {
+        time = 750;
       }
+      let scrollTarget = document.getElementById(event);
+      let scrollContext = document.getElementById('app');
+
       smoothScroll(scrollTarget, time, undefined, scrollContext);
     },
     navToggle () {
       this.navActive = !this.navActive;
     },
-    backHome () {
+    backHome (event) {
       this.navColorScheme = 'is-dark';
       this.canGoHome = false;
-      this.$router.push('/');
+      let scrollTarget = event;
+      this.$router.push('/', (event) => {
+        setTimeout(() => {
+          this.scrollTo(scrollTarget);
+        }, 1000)
+      });
     }
   }
 }
 </script>
 
 <style lang="sass">
-
-  @import '../sass/variables'
-
-  #nav
-    position: absolute
-    padding: 15px
-    width: 100%
-    display: flex
-    justify-content: space-between
-    z-index: 1
-    pointer-events: none
-    transition: color 0.8s ease
-    @media screen and (min-width: $desktop)
-      padding: 20px
-
-  #nav.is-light
-    color: $white
-    a
-      color: $white
-      &:hover, &:focus, &:active
-        color: $white-ter
-
-  .burger-wrapper, .back-wrapper
-    pointer-events: all
-
-  .burger-wrapper
-    display: flex
-
-  .burger-options
-    display: flex
-    align-items: center
-    justify-content: space-around
-    position: relative
-    top: -5px
-    a
-      color: $steel
-      margin-right: 1em
-      margin-top: 0.1em
-      @for $i from 0 through 2
-        &:nth-child(#{$i})
-         animation-delay: (400ms - (100ms * $i))
-      &.router-link-exact-active
-        color: $blue
-        // border-bottom: 2px solid $blue
-      &:hover, &:focus, &:active
-        color: $black
-
-  .nav-icons
-    font-size: 1.5em
-    position: relative
-    left: -5px
 </style>

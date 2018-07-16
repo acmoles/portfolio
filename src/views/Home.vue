@@ -32,6 +32,11 @@
           <span class="icon"><i class="icon-up-open-big full-opacity nav-icons"></i></span>
         </button>
       </div>
+
+      <FooterNav
+        :back="false"
+        :color="'is-dark'"
+      />
     </section>
 
   </div>
@@ -42,13 +47,15 @@
 import About from '@/components/homepage/about.vue'
 import Work from '@/components/homepage/work.vue'
 import Contact from '@/components/homepage/contact.vue'
+import FooterNav from '@/components/footer-nav.vue'
 
 export default {
   name: 'Home',
   components: {
     About,
     Work,
-    Contact
+    Contact,
+    FooterNav
   },
   methods: {
     scrollTo (event) {

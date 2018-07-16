@@ -22,8 +22,17 @@
   transition: transform, opacity 0.2s ease-out
 
 .fadeup-enter, .fadeup-leave-to
-  transform: translateY(-1em)
+  transform: translateY(1em)
   opacity: 0
+
+@keyframes fadeUp
+  from
+    opacity: 0
+    transform: translateY(1em)
+
+  to
+    opacity: 1
+    transform: translateY(0)
 
 // Bulge in animation
 .bulge-enter-active, .bulge-leave-active

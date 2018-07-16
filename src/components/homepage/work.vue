@@ -175,12 +175,8 @@ export default {
         margin-bottom: 0
 
   .project-footer
-    color: $silver
-    font-size: 0.8em
-    opacity: 0.75
-    .column
-      margin-bottom: 0
-      padding-bottom: 0.4em
-    .date
-      text-align: right
+    p
+      font-size: 0.75em
+      opacity: 0.5
+
 </style>
