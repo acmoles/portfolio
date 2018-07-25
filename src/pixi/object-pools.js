@@ -1,6 +1,6 @@
 import anime from 'animejs'
 import { colors } from './colors.js'
-// import { greys } from './greys.js'
+import { greys } from './greys.js'
 import { BackgroundObject } from './object.js'
 
 
@@ -11,6 +11,7 @@ export class ObjectPool {
     this.layers = layers;
 
     this.isPaused = false;
+    this.isGrey = false;
 
     this.objectsPerLayer = 5;
     this.firstMake = true;
@@ -25,6 +26,10 @@ export class ObjectPool {
     this.colorsLarge.push(colors.green);
     for (var i = 0; i < 2; i++) {
       this.colorsLarge.push(colors.blue);
+    }
+    this.greys = [];
+    for (var propertyGrey in greys) {
+      this.greys.push(greys[propertyGrey]);
     }
 
     this.types = [
@@ -44,11 +49,19 @@ export class ObjectPool {
       if (index >= 2) {
         // larger layer
         // scale = index * anime.random(1.8, 2.2);
-        color = this.colorsLarge[anime.random(0, this.colorsLarge.length - 1)];
+        if (this.isGrey) {
+          color = this.greys[anime.random(0, this.greys.length - 1)];
+        } else {
+          color = this.colors[anime.random(0, this.colors.length - 1)];
+        }
         amount -= 3;
       } else {
         // scale = index;
-        color = this.colors[anime.random(0, this.colors.length - 1)];
+        if (this.isGrey) {
+          color = this.greys[anime.random(0, this.greys.length - 1)];
+        } else {
+          color = this.colors[anime.random(0, this.colors.length - 1)];
+        }
       }
       scale = index + 1;
       type = this.types[anime.random(0, this.types.length - 1)];
@@ -135,6 +148,7 @@ export class ObjectPool {
   addFirstBatch() {
     this.makeObjects(this.objectsPerLayer);
     this.removedObjectCount = 0;
+    this.isGrey = true;
     this.checkAllVisible();
 
     this.checkVisibleTimer = setInterval(() => {

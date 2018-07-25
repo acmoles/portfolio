@@ -7,7 +7,7 @@
   width: 100%
   display: flex
   justify-content: space-between
-  z-index: 1
+  z-index: 2
   pointer-events: none
   transition: color 0.8s ease
   @media screen and (min-width: $desktop)
@@ -26,31 +26,11 @@
 
 .burger-wrapper, .back-wrapper, .grid-wrapper
   pointer-events: all
+  position: relative
+  z-index: 2
 
 .burger-wrapper
   display: flex
-
-.burger-options
-  display: flex
-  align-items: center
-  justify-content: space-around
-  position: relative
-  top: -5px
-  a
-    color: $steel
-    transition: transform 1s ease
-    font-weight: 600
-    margin-right: 1em
-    margin-top: 0.1em
-    @for $i from 0 through 2
-      &:nth-child(#{$i})
-       animation-delay: (400ms - (100ms * $i))
-    &:hover, &:focus, &:active
-      transform: scale(1.2)
-      color: $black
-    &.location-active
-      color: $black
-      border-bottom: 2px solid $black
 
 .nav-icons
   font-size: 1.5em
@@ -59,4 +39,5 @@
 
 .router-link-exact-active
   .glass-body
-    opacity: 0.5
+    h4, p
+      opacity: 0.5

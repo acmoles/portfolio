@@ -18,6 +18,7 @@
     "smoothscroll": "^0.4.0",
     "vee-validate": "^2.1.0-beta.6",
     "vue": "^2.5.16",
+    "vue-clipboard2": "^0.2.1",
     "vue-events": "^3.1.0",
     "vue-loop": "^0.2.6",
     "vue-router": "^3.0.1"

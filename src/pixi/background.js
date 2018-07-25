@@ -67,13 +67,16 @@ export class Background {
     });
   }
 
+  start() {
+    this.objects.addFirstBatch();
+  }
+
   appendCanvas() {
     let canvas = document.getElementById('canvas');
     canvas.appendChild(this.app.view);
     window.addEventListener('resize', this.resizeCanvas.bind(this));
 
     this.app.start();
-    this.objects.addFirstBatch();
 
     this.spinner = document.getElementById('spinner');
     this.spinner.classList.add('active');
@@ -103,7 +106,7 @@ export class Background {
 
     var slide = anime({
       targets: '.loader-bar',
-      translateX: '100%',
+      translateY: '100%',
       easing: 'easeInOutExpo',
       autoplay: 'false',
       duration: 800,

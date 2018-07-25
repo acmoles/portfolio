@@ -1,0 +1,53 @@
+@import '../variables'
+
+.dropdown
+  width: 100%
+  .dropdown-trigger
+    width: 100%
+
+.dropdown-content
+  position: relative
+
+.dropdown-ghost, .dropdown-arrow
+  position: absolute
+  background: $steel
+
+.dropdown-ghost
+  opacity: 0.9
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  border-radius: $radius-large
+
+.dropdown-arrow
+  width: 20px
+  height: 20px
+  bottom: -5px
+  &.center
+    left: 50%
+    transform: translateX(-50%) rotate(45deg)
+  &.right
+    right: 10px
+    transform: rotate(45deg)
+    @media screen and (min-width: $desktop)
+      left: 50%
+      transform: translateX(-50%) rotate(45deg)
+
+.dropdown.is-right
+  .dropdown-menu.email-dropdown
+    text-align: center
+    right: 50%
+    transform: translateX(50%)
+    .dropdown-content
+      padding-bottom: 0.6em
+
+.dropdown.is-right
+  .dropdown-menu.options-dropdown
+    @media screen and (min-width: $desktop)
+      right: 50%
+      transform: translateX(50%)
+
+.dropdown-item
+  .icon
+    margin-right: 0.5em

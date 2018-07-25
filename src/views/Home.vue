@@ -73,8 +73,8 @@ export default {
     @media screen and (min-width: $desktop)
       display: flex
       justify-content: flex-end
-    @media screen and (min-width: $fullhd)
-      padding: 1.5em
-      justify-content: center
+    // @media screen and (min-width: $fullhd)
+    //   padding: 1.5em
+    //   justify-content: center
 
 </style>

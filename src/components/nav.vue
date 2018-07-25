@@ -6,6 +6,31 @@
     role="navigation"
     aria-label="main navigation"
   >
+
+    <transition name="slidedown">
+      <div v-if="navActive" class="hero is-fullheight burger-options">
+        <div class="hero-body">
+          <button
+            class="button"
+            :class="{ 'location-active' : currentScrollLocation === 'about' }"
+            @click="navigate('about')"
+          >
+            About
+          </button>
+          <button
+            class="button"
+            :class="{ 'location-active' : currentScrollLocation === 'work' }"
+            @click="navigate('work')"
+          >
+            Work
+          </button>
+          <!-- <a class="bulge-in-animation" @click="navigate('contact')">
+            Contact
+          </a> -->
+        </div>
+      </div>
+    </transition>
+
     <div class="back-wrapper">
       <transition name="fade">
         <button v-if="canGoHome" @click="backHome('about')" class="hamburger" type="button">
@@ -14,19 +39,6 @@
       </transition>
     </div>
     <div class="burger-wrapper">
-      <transition name="fade">
-        <div v-if="navActive" class="burger-options">
-          <a class="bulge-in-animation" @click="navigate('about')">
-            About
-          </a>
-          <a class="bulge-in-animation" @click="navigate('work')">
-            Work
-          </a>
-          <!-- <a class="bulge-in-animation" @click="navigate('contact')">
-            Contact
-          </a> -->
-        </div>
-      </transition>
       <button @click="navToggle" :class="{ 'is-active': navActive }" class="hamburger hamburger--3dx" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -56,24 +68,22 @@ export default {
       this.navColorScheme = 'is-light';
       this.canGoHome = true;
       setTimeout(() => {
-        let scrollContext = document.getElementById('app');
-        smoothScroll(0, 500, undefined, scrollContext);
+        this.scrollTo('project');
       }, 200);
     });
     this.$events.$on('scroll-trigger', (value) => {
       // Get scroll events from any component
       this.scrollTo(value);
     });
-    this.$events.$on('current-scroll-location', (value) => {
-      // Update current scroll position // TODO: Is this the best system?
-      console.log('set current scroll location');
-      // set by home component?
-      this.currentScrollLocation = value;
-    });
+    // this.$events.$on('current-scroll-location', (value) => {
+    //   // Update current scroll position // TODO: Is this the best system?
+    //   console.log('set current scroll location');
+    //   // set by watching home component?
+    //   this.currentScrollLocation = value;
+    // });
     this.$events.$on('navigate-footer', (value) => {
       // Navigate home events from footer nav
-      let scrollContext = document.getElementById('app');
-      smoothScroll(0, 750, undefined, scrollContext);
+      this.scrollTo('top');
       setTimeout(() => {
         this.backHome(value);
       }, 750);
@@ -88,20 +98,39 @@ export default {
       }
     },
     scrollTo (event) {
-      this.currentScrollTarget = event;
+      this.currentScrollLocation = event;
+      console.log('scroll location = ', this.currentScrollLocation);
+
+      // ensure menu is dismissed
+      this.navActive = false;
+      this.$events.$emit('exit-scroll-lock', event);
+      if (!this.canGoHome) {
+        this.navColorScheme = 'is-dark';
+      }
+
+      let scrollTarget;
+      if (event === 'top' || event === 'project') {
+        scrollTarget = 0;
+      } else {
+        scrollTarget = document.getElementById(event);
+      }
 
       let time = 750;
-      let scrollTarget = document.getElementById(event);
       let scrollContext = document.getElementById('app');
 
       smoothScroll(scrollTarget, time, undefined, scrollContext);
     },
     navToggle () {
+      this.$events.$emit('toggle-scroll-lock', event);
+      if (!this.canGoHome) {
+        this.navColorScheme = this.navActive ? 'is-dark' : 'is-light';
+      }
       this.navActive = !this.navActive;
     },
     backHome (event) {
       this.navColorScheme = 'is-dark';
       this.canGoHome = false;
+
       let scrollTarget = event;
       this.$router.push('/', () => {
         setTimeout(() => {
@@ -114,4 +143,39 @@ export default {
 </script>
 
 <style lang="sass">
+
+  @import '../sass/variables'
+
+  .hero.burger-options
+    position: fixed
+    bottom: 0
+    top: 0
+    left: 0
+    right: 0
+    pointer-events: all
+    background: rgba( $steel, 0.85)
+    .hero-body
+      animation: fade 400ms ease-in-out both
+      animation-delay: 400ms
+
+    // display: flex
+    // align-items: center
+    // justify-content: space-around
+    // position: relative
+    // top: -5px
+    // a
+    //   color: $steel
+    //   transition: transform 1s ease
+    //   font-weight: 600
+    //   margin-right: 1em
+    //   border-bottom: 2px solid transparent
+    //   @for $i from 0 through 2
+    //     &:nth-child(#{$i})
+    //      animation-delay: (400ms - (100ms * $i))
+    //   &:hover, &:focus, &:active
+    //     transform: scale(1.2)
+    //     color: $black
+    //   &.location-active
+    //     color: $black
+    //     border-bottom: 2px solid $black
 </style>

@@ -41,17 +41,76 @@
         <div class="glass-body-content">
           <div class="glass-body-actions columns is-mobile is-variable is-1">
             <div class="column">
-              <a class="button is-primary is-rounded" @click="scrollTo('work')">Work</a>
+              <button
+                class="button is-primary is-rounded"
+                @click="scrollTo('work')"
+                role="button"
+              >
+                Work
+              </button>
             </div>
             <div class="column">
-              <a class="button is-success is-rounded is-outlined" @click="scrollTo('contact')">Message</a>
+              <div class="dropdown is-up is-right is-active">
+                <div class="dropdown-trigger">
+                  <button
+                    class="button is-success is-rounded is-outlined"
+                    v-clipboard:copy="email"
+                    v-clipboard:success="onCopy"
+                    v-clipboard:error="onError"
+                    role="button"
+                    aria-haspopup="true"
+                  >
+                    Message
+                  </button>
+                </div>
+                <transition name="fade">
+                  <div v-if="emailDropdown" class="dropdown-menu email-dropdown" role="menu">
+                    <div class="dropdown-content">
+                      <div class="dropdown-ghost">
+                        <div class="dropdown-arrow center"></div>
+                      </div>
+                      <div class="dropdown-item">
+                        {{ copyTextMessage }}
+                      </div>
+                    </div>
+                  </div>
+                </transition>
+              </div>
             </div>
             <div class="column is-narrow">
-              <a class="button is-rounded options">
-                <span class="icon is-small">
-                  <i class="icon-dot-3 full-opacity"></i>
-                </span>
-              </a>
+              <div class="dropdown is-up is-right is-active">
+                <div class="dropdown-trigger">
+                  <button
+                    class="button is-rounded options"
+                    @click="toggleOptions"
+                    role="button"
+                    aria-haspopup="true"
+                  >
+                    <span class="icon is-small">
+                      <i class="icon-dot-3 full-opacity"></i>
+                    </span>
+                  </button>
+                </div>
+                <transition name="fade">
+                  <div v-if="optionsDropdown" class="dropdown-menu options-dropdown" role="menu">
+                    <div class="dropdown-content">
+                      <div class="dropdown-ghost">
+                        <div class="dropdown-arrow right"></div>
+                      </div>
+                      <a href="" target="_blank" class="dropdown-item">
+                        <span class="icon is-small">
+                          <i class="icon-linkedin-squared full-opacity"></i>
+                        </span> Linkedin
+                      </a>
+                      <a href="" target="_blank" class="dropdown-item">
+                        <span class="icon is-small">
+                          <i class="icon-github-squared full-opacity"></i>
+                        </span> Github
+                      </a>
+                    </div>
+                  </div>
+                </transition>
+              </div>
             </div>
           </div>
           <div class="content">
@@ -83,9 +142,33 @@ export default {
       default: 1
     }
   },
+  data () {
+    return {
+      email: 'info@acmoles.design',
+      copyTextMessage: 'Email copied',
+      optionsDropdown: false,
+      emailDropdown: false
+    }
+  },
   methods: {
     scrollTo (event) {
       this.$events.$emit('scroll-trigger', event);
+    },
+    onCopy () {
+      this.emailDropdown = true;
+      setTimeout(() => {
+        this.emailDropdown = false;
+      }, 1500);
+    },
+    onError () {
+      this.copyTextMessage = 'Error';
+      this.emailDropdown = true;
+      setTimeout(() => {
+        this.emailDropdown = false;
+      }, 1500);
+    },
+    toggleOptions () {
+      this.optionsDropdown = !this.optionsDropdown;
     }
   }
 }
@@ -211,6 +294,9 @@ export default {
       border-color: $extraDarkSmoke
       &:active, &:hover
         border-color: darken($extraDarkSmoke, 10%)
+        color: darken($extraDarkSmoke, 10%)
+      &:focus
+        box-shadow: 0 0 0 0.125em rgba($extraDarkSmoke, 0.25)
       padding-left: 0.75em
       padding-right: 0.75em
       .icon
