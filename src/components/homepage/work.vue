@@ -11,9 +11,13 @@
       >
         <router-link
           :to="{ name: project.route, params: {} }"
+          @click.native="exitScrollLock"
           class="glass"
         >
-          <div class="glass-header">
+          <div
+            v-if="headers"
+            class="glass-header"
+          >
             <div class="color-header" :class="project.color"></div>
             <div class="flat-header" :class="project.color"></div>
             <div class="project-logo">
@@ -29,20 +33,14 @@
               </span>
             </div>
           </div>
-          <div class="glass-body content">
+          <div
+            class="glass-body content"
+            :class="{'all-rounded': !headers }"
+          >
             <h4>{{ project.title }}</h4>
             <p>{{ project.description }}</p>
-            <!-- <div class="project-footer columns is-mobile">
-              <p class="client column">{{ project.client }}</p>
-              <p class="date column">
-                <span class="icon">
-                  <i class="icon-calendar"></i>
-                </span> {{ project.date }}
-              </p>
-            </div> -->
             <div class="project-footer">
-              <p class="client">
-              </span> {{ project.client }} | {{ project.date }}</p>
+              <p class="client">{{ project.client }} | {{ project.date }}</p>
             </div>
           </div>
         </router-link>
@@ -57,9 +55,9 @@
 export default {
   name: 'Work',
   props: {
-    prop: {
-      type: Number,
-      default: 1
+    headers: {
+      type: Boolean,
+      default: true
     }
   },
   data () {
@@ -80,7 +78,7 @@ export default {
           icon: '/img/homepage/project-icons/personalised.svg',
           color: 'red',
           title: 'Delight customers with a personalised experience',
-          route: 'onboarding',
+          route: 'personalisation',
           description: 'A signup flow that increased conversion and contributed to record customer acquisition',
           client: 'toucanBox',
           date: 'Q3 2017'
@@ -88,9 +86,9 @@ export default {
         {
           index: 'wesen',
           icon: '/img/homepage/project-icons/personalised.svg',
-          color: 'yellow',
+          color: 'orange',
           title: 'Delight customers with a personalised experience',
-          route: 'onboarding',
+          route: 'personalisation',
           description: 'A signup flow that increased conversion and contributed to record customer acquisition',
           client: 'toucanBox',
           date: 'Q3 2017'
@@ -127,6 +125,11 @@ export default {
         }
       ],
     }
+  },
+  methods: {
+    exitScrollLock () {
+      this.$events.$emit('exit-scroll-lock', event);
+    }
   }
 }
 </script>
@@ -161,6 +164,8 @@ export default {
   .glass-body
     background: rgba(255, 255, 255, 0.9)
     border-radius: 0 0 $radius-large $radius-large
+    &.all-rounded
+      border-radius: $radius-large
     padding: 0.75em
     color: $slate
     &:hover, &:focus, &:active

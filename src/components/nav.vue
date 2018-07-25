@@ -22,9 +22,9 @@
           <a class="bulge-in-animation" @click="navigate('work')">
             Work
           </a>
-          <a class="bulge-in-animation" @click="navigate('contact')">
+          <!-- <a class="bulge-in-animation" @click="navigate('contact')">
             Contact
-          </a>
+          </a> -->
         </div>
       </transition>
       <button @click="navToggle" :class="{ 'is-active': navActive }" class="hamburger hamburger--3dx" type="button">
@@ -51,10 +51,14 @@ export default {
     }
   },
   created () {
-    this.$events.$on('navigate-project', (value) => {
+    this.$events.$on('navigate-project', () => {
       // Navigate to a project
       this.navColorScheme = 'is-light';
       this.canGoHome = true;
+      setTimeout(() => {
+        let scrollContext = document.getElementById('app');
+        smoothScroll(0, 500, undefined, scrollContext);
+      }, 200);
     });
     this.$events.$on('scroll-trigger', (value) => {
       // Get scroll events from any component
@@ -67,12 +71,12 @@ export default {
       this.currentScrollLocation = value;
     });
     this.$events.$on('navigate-footer', (value) => {
-      // Navigate events from footer nav
-      if (this.canGoHome) {
+      // Navigate home events from footer nav
+      let scrollContext = document.getElementById('app');
+      smoothScroll(0, 750, undefined, scrollContext);
+      setTimeout(() => {
         this.backHome(value);
-      } else {
-        this.scrollTo(value);
-      }
+      }, 750);
     });
   },
   methods: {
@@ -86,16 +90,7 @@ export default {
     scrollTo (event) {
       this.currentScrollTarget = event;
 
-      let time;
-      if (event === 'about') {
-        time = 1000;
-      } else if (event === 'work') {
-        time = 500;
-      } else if (event === 'contact') {
-        time = 1000;
-      } else {
-        time = 750;
-      }
+      let time = 750;
       let scrollTarget = document.getElementById(event);
       let scrollContext = document.getElementById('app');
 
@@ -108,7 +103,7 @@ export default {
       this.navColorScheme = 'is-dark';
       this.canGoHome = false;
       let scrollTarget = event;
-      this.$router.push('/', (event) => {
+      this.$router.push('/', () => {
         setTimeout(() => {
           this.scrollTo(scrollTarget);
         }, 1000)

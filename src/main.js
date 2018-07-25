@@ -3,12 +3,16 @@ import App from './App.vue'
 import router from './router'
 import './registerServiceWorker'
 import VueEvents from 'vue-events'
+import VeeValidate from 'vee-validate';
 import lazySizes from 'lazysizes';
 // Object.assign(lazySizes.cfg, {
 //     expand: 10
 // });
 lazySizes.init();
 
+Vue.use(VeeValidate, {
+  events: 'change'
+});
 Vue.use(VueEvents)
 
 Vue.config.productionTip = false

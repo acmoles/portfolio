@@ -14,16 +14,18 @@
 
     <section id="work" class="hero is-fullheight">
       <div class="hero-body">
-        <Work/>
+        <Work
+          :headers="true"
+        />
       </div>
       <div class="hero-foot">
-        <button @click="scrollTo('contact')" class="hamburger" type="button">
-          <span class="icon"><i class="icon-down-open-big full-opacity nav-icons"></i></span>
+        <button @click="scrollTo('about')" class="hamburger" type="button">
+          <span class="icon"><i class="icon-up-open-big full-opacity nav-icons"></i></span>
         </button>
       </div>
     </section>
 
-    <section id="contact" class="hero is-fullheight">
+    <!-- <section id="contact" class="hero is-fullheight">
       <div class="hero-body last-section">
         <Contact/>
       </div>
@@ -32,12 +34,7 @@
           <span class="icon"><i class="icon-up-open-big full-opacity nav-icons"></i></span>
         </button>
       </div>
-
-      <FooterNav
-        :back="false"
-        :color="'is-dark'"
-      />
-    </section>
+    </section> -->
 
   </div>
 </template>
@@ -47,20 +44,17 @@
 import About from '@/components/homepage/about.vue'
 import Work from '@/components/homepage/work.vue'
 import Contact from '@/components/homepage/contact.vue'
-import FooterNav from '@/components/footer-nav.vue'
 
 export default {
   name: 'Home',
   components: {
     About,
     Work,
-    Contact,
-    FooterNav
+    Contact
   },
   methods: {
     scrollTo (event) {
-      let path = 'path';
-      this.$events.$emit('scroll', path);
+      this.$events.$emit('scroll-trigger', event);
     }
   }
 }
@@ -68,5 +62,19 @@ export default {
 
 <style scoped lang="sass">
 
+  @import '../sass/variables'
+
+  .hero-foot
+    display: none
+    padding: 20px
+    position: absolute
+    width: 100%
+    bottom: 0
+    @media screen and (min-width: $desktop)
+      display: flex
+      justify-content: flex-end
+    @media screen and (min-width: $fullhd)
+      padding: 1.5em
+      justify-content: center
 
 </style>

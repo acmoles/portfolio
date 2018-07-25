@@ -1,11 +1,11 @@
 <template>
   <WorkWrapper
     :icon="'/img/homepage/project-icons/personalised.svg'"
-    :color="'blue'"
+    :color="'orange'"
   >
     <template slot="content">
       <div class="page-glass-section first-section">
-        <div class="content blue">
+        <div class="content orange">
           <p class="client">toucanBox</p>
           <!-- <p class="client">toucanBox <span>Q3 2017</span></p> -->
           <h1 class="project-title">Delight customers with a personalised experience</h1>
@@ -142,7 +142,7 @@
 import WorkWrapper from '@/components/work-wrapper.vue'
 
 export default {
-  name: 'Onboarding',
+  name: 'Personalisation',
   components: {
     WorkWrapper,
   },
@@ -155,8 +155,10 @@ export default {
 </script>
 
 <style scoped lang="sass">
-
   @import '../sass/variables'
 
+  .content.orange
+    .client
+      color: $orange
 
 </style>

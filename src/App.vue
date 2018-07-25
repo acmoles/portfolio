@@ -1,5 +1,8 @@
 <template>
-  <div id="app">
+  <div
+    id="app"
+    :class="{'scroll-lock': scrollLock }"
+  >
     <div id="relax">
       <div class="relax"></div>
       <div class="relax"></div>
@@ -15,7 +18,6 @@
 
 <script>
 
-import * as smoothScroll from 'smoothscroll'
 import { Background } from '@/pixi/background.js'
 import Nav from '@/components/nav.vue'
 
@@ -27,26 +29,34 @@ export default {
   data () {
     return {
       background: {},
-      transitionName: 'fade'
+      transitionName: 'fade',
+      scrollLock: false
     }
   },
   created () {
+    this.$events.$on('toggle-scroll-lock', () => {
+      this.scrollLock = !this.scrollLock;
+    });
+    this.$events.$on('exit-scroll-lock', () => {
+      this.scrollLock = false;
+    });
+    this.$events.$on('remove-all-background', () => {
+      if (this.background) {
+        this.background.removeAll();
+      }
+    });
+    this.$events.$on('replace-all-background', () => {
+      if (this.background) {
+        this.background.replaceAll();
+      }
+    });
     this.$nextTick(function () {
-      // this.background = new Background();
+      this.background = new Background();
     })
   },
   beforeMount () {
-    this.$events.$on('load', (value) => {
-    });
   },
   mounted () {
-  },
-  methods: {
-    scrollTo (event) {
-      console.log('scroll');
-      let scrollContext = document.getElementById('app');
-      smoothScroll(0, 500, undefined, scrollContext);
-    }
   }
 }
 
@@ -55,5 +65,8 @@ export default {
 <style lang="sass">
 // Shared styles
 @import './sass/styles'
+
+#app.scroll-lock
+  overflow-y: hidden
 
 </style>

@@ -19,11 +19,12 @@ export class ObjectPool {
     for (var property in colors) {
       this.colors.push(colors[property]);
     }
-    this.colors.push(colors.orange);
-    this.colors.push(colors.yellow);
+    this.colorsLarge = [];
+    this.colorsLarge.push(colors.orange);
+    this.colorsLarge.push(colors.yellow);
+    this.colorsLarge.push(colors.green);
     for (var i = 0; i < 2; i++) {
-      this.colors.push(colors.blue);
-      this.colors.push(colors.green);
+      this.colorsLarge.push(colors.blue);
     }
 
     this.types = [
@@ -39,16 +40,18 @@ export class ObjectPool {
 
   makeObjects(amount) {
     this.layers.forEach((layer, index) => {
-      var scale, type;
-      if (index == 3) {
+      var scale, color, type;
+      if (index >= 2) {
         // larger layer
-        scale = index * anime.random(1.8, 2.2);
-        type = this.types[anime.random(0, this.types.length - 2)];
-        amount -= 2;
+        // scale = index * anime.random(1.8, 2.2);
+        color = this.colorsLarge[anime.random(0, this.colorsLarge.length - 1)];
+        amount -= 3;
       } else {
-        scale = index;
-        type = this.types[anime.random(0, this.types.length - 1)];
+        // scale = index;
+        color = this.colors[anime.random(0, this.colors.length - 1)];
       }
+      scale = index + 1;
+      type = this.types[anime.random(0, this.types.length - 1)];
 
       let intro;
       if (this.firstMake) {
@@ -59,13 +62,12 @@ export class ObjectPool {
       }
 
       for (var i = 0; i < amount; i++) {
-        this.makeObject(scale, layer, type, i, intro);
+        this.makeObject(scale, color, layer, type, i, intro);
       }
     });
   }
 
-  makeObject(scale, layer, type, i, intro) {
-    var color = this.colors[anime.random(0, this.colors.length - 1)];
+  makeObject(scale, color, layer, type, i, intro) {
 
     let backgroundObject = new BackgroundObject(
       this.app, // app
@@ -87,7 +89,6 @@ export class ObjectPool {
   }
 
   checkAllVisible() {
-
     var i = this.objectPool.length;
     while (i--) {
       let visible = this.objectPool[i].checkVisible();
@@ -109,17 +110,24 @@ export class ObjectPool {
 
   }
 
-  removeAllReplace() {
-
+  removeAll() {
     var i = this.objectPool.length;
     while (i--) {
       this.objectPool[i].outtro();
       this.objectPool.splice(i, 1);
     }
+  }
+
+  replaceAll() {
+    this.makeObjects(this.objectsPerLayer);
+  }
+
+  removeAllReplace() {
+    this.removeAll();
 
     setTimeout(() => {
       // console.log('remove all, ', this.objectPool);
-      this.makeObjects(this.objectsPerLayer);
+      this.replaceAll();
       // console.log('replace all, ', this.objectPool);
     }, 3000);
   }

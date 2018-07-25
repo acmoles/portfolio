@@ -48,7 +48,6 @@
 
 <script>
 
-import * as smoothScroll from 'smoothscroll'
 import FooterNav from '@/components/footer-nav.vue'
 
 export default {
@@ -73,15 +72,6 @@ export default {
   },
   mounted () {
     this.$events.$emit('navigate-project', true);
-    setTimeout(() => {
-      let scrollContext = document.getElementById('app');
-      smoothScroll(0, 0, undefined, scrollContext);
-    }, 200);
-  },
-  methods: {
-    onClick (event) {
-      this.$events.$emit('next', true);
-    },
   }
 }
 </script>
@@ -118,7 +108,7 @@ export default {
   .page-glass-section
     padding: 0.75em
     padding-bottom: 1.5em
-    background: rgba(255, 255, 255, 0.9)
+    background: rgba(255, 255, 255, 0.95)
     @media screen and (min-width: $tablet)
       padding: 1.5em
       padding-bottom: 3em
@@ -144,7 +134,7 @@ export default {
 
 
   .page-glass-divider
-    background: rgba(255, 255, 255, 0.5)
+    background: rgba(255, 255, 255, 0.75)
     padding: 1.5em 0.75em
     @media screen and (min-width: $tablet)
       padding: 2em 1em
@@ -159,8 +149,6 @@ export default {
   .page-footer-container
     color: $white
     position: relative
-    top: -3em
-    margin-bottom: -8em
     h3
       color: $white
       margin-bottom: 0.25em
@@ -178,5 +166,7 @@ export default {
         font-size: 0.6em
     @media screen and (min-width: $tablet)
       padding: 1.5em
+      top: -3em
+      margin-bottom: -8em
 
 </style>

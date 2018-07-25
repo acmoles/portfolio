@@ -86,7 +86,7 @@ export default {
   methods: {
     scrollTo (event) {
       this.$events.$emit('scroll-trigger', event);
-    },
+    }
   }
 }
 </script>
@@ -165,6 +165,8 @@ export default {
           border-width: 10px
           height: 256px
           width: 256px
+        img
+          mix-blend-mode: multiply
 
     .glass-body-details
       position: relative

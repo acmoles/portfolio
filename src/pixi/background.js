@@ -28,7 +28,7 @@ export class Background {
       let layer = new PIXI.Container();
       this.layers.push(layer);
 
-      if (i < 3) {
+      if (i < 2) {
         this.blurLayerSmall.addChild(layer);
       } else {
         this.blurLayerLarge.addChild(layer);
@@ -75,8 +75,8 @@ export class Background {
     this.app.start();
     this.objects.addFirstBatch();
 
-    this.ball = document.getElementById('ball');
-    this.ball.classList.add('active');
+    this.spinner = document.getElementById('spinner');
+    this.spinner.classList.add('active');
 
     let ticks = 0;
     this.app.ticker.add(() => {
@@ -90,7 +90,7 @@ export class Background {
   }
 
   sequence() {
-    this.ball.classList.remove('active');
+    this.spinner.classList.remove('active');
     setTimeout(() => {
       this.slideLoader('out', () => {
         this.loader = document.getElementById('loader')
@@ -132,7 +132,7 @@ export class Background {
 
     relax.forEach((relax, index) => {
       let relaxInstance = new Rellax(relax, {
-        speed: index * 1.1,
+        speed: index * 1.5,
         wrapper: app,
         callback: function(positions) {
           // callback every position change
@@ -152,5 +152,14 @@ export class Background {
 
     // position rectangle
     // this.rect.position.set(this.app.screen.width, this.app.screen.height);
+  }
+
+  // Remove replace API
+  removeAll() {
+    this.objectPool.removeAll();
+  }
+
+  replaceAll() {
+    this.objectPool.removeAllReplace();
   }
 }

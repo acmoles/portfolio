@@ -6,7 +6,7 @@
   cursor: pointer;
   outline: none !important;
 
-  transition-property: opacity, filter;
+  transition-property: opacity, filter, transform;
   transition-duration: $hamburger-hover-transition-duration;
   transition-timing-function: $hamburger-hover-transition-timing-function;
 
@@ -26,6 +26,7 @@
     @else {
       opacity: $hamburger-hover-opacity;
     }
+    transform: scale(1.2);
   }
 }
 
