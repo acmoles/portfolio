@@ -151,8 +151,8 @@ export default {
     padding: 1.5em 0.75em
     @media screen and (min-width: $tablet)
       padding: 2em 1em
-    h2
-      font-size: 1.75em
+    h1
+      font-size: 2em
       color: $steel
       font-weight: 600
 
@@ -166,7 +166,7 @@ export default {
   .page-footer-container
     color: $white
     position: relative
-    padding: 0 3em
+    padding: 3em 0
     @media screen and (min-width: $tablet)
       padding: 1.5em
       top: -3em
@@ -179,7 +179,7 @@ export default {
       color: $white
       margin-bottom: 0.25em
     p
-      margin-bottom: 3em
+      margin-bottom: 2em
     .button
       min-width: 180px
       position: relative
@@ -190,5 +190,23 @@ export default {
         position: absolute
         right: 10px
         font-size: 0.6em
-
+    .links-container
+      text-align: center
+      max-width: 300px
+      margin: 0 auto
+      a
+        width: 100%
+      .other-link
+        color: $white
+        font-weight: 600
+        padding-left: 1em
+        padding-right: 1em
+        padding-bottom: calc(0.375em - 2px)
+        padding-top: calc(0.375em - 2px)
+        margin-top: 0.5em
+        display: inline-block
+        text-align: center
+        &:hover, &:focus, &:active
+          color: $white
+          opacity: 0.8
 </style>

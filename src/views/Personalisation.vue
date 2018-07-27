@@ -67,10 +67,13 @@
           <div class="column content link-container">
             <h3>Link title</h3>
             <p>Link description</p>
-            <a class="button is-primary is-rounded is-inverted is-outlined">
-              <span>view site</span>
-              <i class="icon-play full-opacity footer-icon"></i>
-            </a>
+            <div class="links-container">
+              <a class="button is-primary is-rounded is-inverted is-outlined">
+                <span>View site</span>
+                <i class="icon-play full-opacity footer-icon"></i>
+              </a>
+              <a class="other-link" href="#">View other site</a>
+            </div>
           </div>
           <div class="column is-three-quarters">
             <figure class="image is-16by9"><img src="/img/projects/test-presentation.png"></figure>

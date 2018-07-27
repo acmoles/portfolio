@@ -21,15 +21,20 @@
           >
             <div class="color-header" :class="project.color"></div>
             <div class="flat-header" :class="project.color"></div>
-            <div class="project-logo">
+            <div class="project-logo" :class="{ 'unlimited': project.icon === 'dots' || project.icon === 'toucan' }">
               <span
-                v-if="project.icon == 'dots'"
+                v-if="project.icon === 'dots'"
                 class="icon is-large">
                 <i class="icon-dot-3 full-opacity"></i>
               </span>
               <span
-                v-else
+                v-else-if="project.icon === 'toucan'"
                 class="icon is-large">
+                <img src="/img/homepage/project-icons/toucan.svg" alt="project icon">
+              </span>
+              <span
+                v-else
+                class="icon is-medium">
                 <img :src="project.icon" alt="project icon">
               </span>
             </div>
@@ -38,8 +43,10 @@
             class="glass-body content"
             :class="{'all-rounded': !headers }"
           >
-            <h4>{{ project.title }}</h4>
-            <p>{{ project.description }}</p>
+            <div class="project-description">
+              <h4>{{ project.title }}</h4>
+              <p>{{ project.description }}</p>
+            </div>
             <div class="project-footer">
               <p class="client">{{ project.client }} | {{ project.date }}</p>
             </div>
@@ -66,9 +73,9 @@ export default {
       projects: [
         {
           index: 'onboarding',
-          icon: '/img/homepage/project-icons/personalised.svg',
+          icon: 'toucan',
           color: 'blue',
-          title: 'Delight customers with a personalised experience',
+          title: 'Optimising customer onboarding',
           route: 'onboarding',
           description: 'A signup flow that increased conversion and contributed to record customer acquisition',
           client: 'toucanBox',
@@ -78,39 +85,39 @@ export default {
           index: 'personalisation',
           icon: '/img/homepage/project-icons/personalised.svg',
           color: 'green',
-          title: 'Delight customers with a personalised experience',
+          title: 'Personalisation',
           route: 'personalisation',
-          description: 'A signup flow that increased conversion and contributed to record customer acquisition',
+          description: 'Personalisation',
           client: 'toucanBox',
-          date: 'Q3 2017'
+          date: 'Q2 2018'
         },
         {
           index: 'wesen',
-          icon: '/img/homepage/project-icons/personalised.svg',
+          icon: '/img/homepage/project-icons/wesen.svg',
           color: 'red',
-          title: 'Delight customers with a personalised experience',
-          route: 'personalisation',
-          description: 'A signup flow that increased conversion and contributed to record customer acquisition',
-          client: 'toucanBox',
-          date: 'Q3 2017'
+          title: 'Building a jewellery brand with user generated products',
+          route: 'wesen',
+          description: 'Will a compelling product creation experience be rewarded with a purchase decision?',
+          client: 'Wesen',
+          date: 'Q1 2018'
         },
         {
           index: 'blkbrd',
-          icon: '/img/homepage/project-icons/personalised.svg',
+          icon: '/img/homepage/project-icons/blkbrd.svg',
           color: 'black',
-          title: 'Delight customers with a personalised experience',
-          route: 'onboarding',
-          description: 'A signup flow that increased conversion and contributed to record customer acquisition',
-          client: 'toucanBox',
+          title: 'Exploring a new dimension for messaging',
+          route: 'blkbrd',
+          description: 'Digital messages with a location in the physical world',
+          client: 'BLKBRD',
           date: 'Q3 2017'
         },
         {
           index: 'toucanoo',
-          icon: '/img/homepage/project-icons/personalised.svg',
+          icon: '/img/homepage/project-icons/toucanoo.svg',
           color: 'purple',
-          title: 'Delight customers with a personalised experience',
-          route: 'onboarding',
-          description: 'A signup flow that increased conversion and contributed to record customer acquisition',
+          title: 'Adding value to a physical product with digital content',
+          route: 'toucanoo',
+          description: 'Can we address customer concern regarding value for money without increasing operational cost?',
           client: 'toucanBox',
           date: 'Q3 2017'
         },
@@ -118,11 +125,11 @@ export default {
           index: 'more',
           icon: 'dots',
           color: 'yellow',
-          title: 'Delight customers with a personalised experience',
-          route: 'onboarding',
-          description: 'A signup flow that increased conversion and contributed to record customer acquisition',
-          client: 'toucanBox',
-          date: 'Q3 2017'
+          title: 'Before 2016',
+          route: 'earlier',
+          description: 'A selection for projects prior to 2016',
+          client: 'Various',
+          date: '< 2016'
         }
       ],
     }
@@ -143,9 +150,12 @@ export default {
     overflow: hidden
     display: flex
     flex-direction: column
+    flex-grow: 1
+    height: 100%
 
   .glass-header
     height: 80px
+    flex-shrink: 0
     // @media screen and (min-width: $desktop)
     //   height: 120px
     position: relative
@@ -156,11 +166,18 @@ export default {
 
   .project-logo
     position: relative
+    height: 36px
+    &.unlimited
+      height: auto
 
   .color-header, .flat-header
     border-radius: $radius-large $radius-large 0 0
 
   .glass-body
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     background: rgba(255, 255, 255, 0.9)
     border-radius: 0 0 $radius-large $radius-large
     &.all-rounded
