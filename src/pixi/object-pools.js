@@ -13,7 +13,7 @@ export class ObjectPool {
     this.isPaused = false;
     this.isGrey = false;
 
-    this.objectsPerLayer = 5;
+    this.objectsPerLayer = 6;
     this.firstMake = true;
 
     this.colors = [];
@@ -63,7 +63,7 @@ export class ObjectPool {
           color = this.colors[anime.random(0, this.colors.length - 1)];
         }
       }
-      scale = index + 1;
+      scale = (index + 1) * 1.5;
       type = this.types[anime.random(0, this.types.length - 1)];
 
       let intro;
@@ -137,6 +137,7 @@ export class ObjectPool {
 
   removeAllReplace() {
     this.removeAll();
+    this.isGrey = true;
 
     setTimeout(() => {
       // console.log('remove all, ', this.objectPool);
@@ -148,7 +149,6 @@ export class ObjectPool {
   addFirstBatch() {
     this.makeObjects(this.objectsPerLayer);
     this.removedObjectCount = 0;
-    this.isGrey = true;
     this.checkAllVisible();
 
     this.checkVisibleTimer = setInterval(() => {

@@ -45,62 +45,6 @@
       </div>
       <div class="page-glass-section last-section">
         <div class="content">
-          <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
-          <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum commodo.</p>
-          <dl>
-            <dt>Web</dt>
-            <dd>The part of the Internet that contains websites and web pages</dd>
-            <dt>HTML</dt>
-            <dd>A markup language for creating web pages</dd>
-            <dt>CSS</dt>
-            <dd>A technology to make HTML look better</dd>
-          </dl>
-          <figure class="image is-16by9"><img data-src="https://bulma.io/images/placeholders/640x360.png"></figure>
-          <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet, mollis malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
-          <h4>Fourth level</h4>
-          <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus laoreet, at elementum ex efficitur.</p>
-          <pre>
-        &lt;!DOCTYPE html&gt;
-        &lt;html&gt;
-          &lt;head&gt;
-            &lt;title&gt;Hello World&lt;/title&gt;
-          &lt;/head&gt;
-          &lt;body&gt;
-            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.&lt;/p&gt;
-          &lt;/body&gt;
-        &lt;/html&gt;
-        </pre>
-          <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>One</th>
-                <th>Two</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Three</td>
-                <td>Four</td>
-              </tr>
-              <tr>
-                <td>Five</td>
-                <td>Six</td>
-              </tr>
-              <tr>
-                <td>Seven</td>
-                <td>Eight</td>
-              </tr>
-              <tr>
-                <td>Nine</td>
-                <td>Ten</td>
-              </tr>
-              <tr>
-                <td>Eleven</td>
-                <td>Twelve</td>
-              </tr>
-            </tbody>
-          </table>
           <p>Phasellus porttitor enim id metus volutpat ultricies. Ut nisi nunc, blandit sed dapibus at, vestibulum in felis. Etiam iaculis lorem ac nibh bibendum rhoncus. Nam interdum efficitur ligula sit amet ullamcorper. Etiam tristique, leo vitae porta faucibus, mi lacus laoreet metus, at cursus leo est vel tellus. Sed ac posuere est. Nunc ultricies nunc neque, vitae ultricies ex sodales quis. Aliquam eu nibh in libero accumsan pulvinar. Nullam nec nisl placerat, pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel condimentum. Nam pharetra varius metus non pellentesque.</p>
           <h5>Fifth level</h5>
           <p>Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed tincidunt ligula. Vestibulum at nunc elit. Praesent aliquet ligula mi, in luctus elit volutpat porta. Phasellus molestie diam vel nisi sodales, a eleifend augue laoreet. Sed nec eleifend justo. Nam et sollicitudin odio.</p>
@@ -120,7 +64,7 @@
     <template slot="footer-content">
       <div class="container page-footer-container">
         <div class="columns">
-          <div class="column content">
+          <div class="column content link-container">
             <h3>Link title</h3>
             <p>Link description</p>
             <a class="button is-primary is-rounded is-inverted is-outlined">

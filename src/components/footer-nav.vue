@@ -8,60 +8,43 @@
   >
     <div class="back-wrapper">
       <button
+        v-if="!menuActive"
         @click="navigate('about')"
         class="hamburger"
         type="button">
         <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
       </button>
     </div>
-    <div class="grid-wrapper">
-      <a
+    <div v-if="!menuActive" class="grid-wrapper">
+      <div
         @click="menuToggle"
         class="gridicon"
-      ><span></span></a>
+      >
+        <span></span>
+      </div>
     </div>
 
-    <transition name="slide">
-      <div
-          v-if="menuActive"
-          id="footer-work"
-          class="hero is-fullheight footer-nav-menu"
-        >
+    <transition name="slideup">
+      <template v-if="menuActive">
 
-        <div class="hero-head modal-menu">
-          <div class="burger-wrapper">
-            <button
-              @click="menuToggle"
-              class="hamburger hamburger--3dx is-active"
-              type="button"
-            >
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
-            </button>
-          </div>
-        </div>
+        <MenuNav
+          :footer="true"
+          @dismiss="menuToggle"
+        />
 
-        <div class="hero-body">
-          <Work
-            :headers="false"
-          />
-        </div>
-
-        </div>
-      </div>
+      </template>
     </transition>
   </nav>
 </template>
 
 <script>
 
-import Work from '@/components/homepage/work.vue'
+import MenuNav from '@/components/nav-menu.vue'
 
 export default {
   name: 'FooterNav',
   components: {
-    Work
+    MenuNav
   },
   props: {
     color: {
@@ -79,8 +62,8 @@ export default {
       this.$events.$emit('navigate-footer', event);
     },
     menuToggle () {
+      this.$events.$emit('toggle-scroll-lock');
       this.menuActive = !this.menuActive;
-      this.$events.$emit('toggle-scroll-lock', event);
     }
   }
 }
@@ -96,18 +79,21 @@ export default {
     position: relative
     top: 0.25em
 
-  a.gridicon
+  .grid-wrapper
+    cursor: pointer
+
+  .gridicon
   	width: 1.5em
   	height: 1.5em
   	display: inline-flex
   	align-items: center
   	justify-content: center
 
-  a.gridicon > span
+  .gridicon > span
   	transition: opacity, box-shadow .2s ease
     // font-family: icon
 
-  a.gridicon > span
+  .gridicon > span
   	background: $white
   	width: 3px
   	height: 3px
@@ -123,31 +109,5 @@ export default {
 
   .gridicon:active > span
     opacity: 0.5
-
-  // Footer menu
-
-  .footer-nav-menu
-    position: fixed
-    bottom: 0
-    top: 0
-    left: 0
-    right: 0
-    z-index: 2
-    pointer-events: all
-    background: rgba( $steel, 0.85)
-    overflow-y: scroll
-    .hero-body
-      animation: fade 400ms ease-in-out both
-      animation-delay: 400ms
-      @media screen and (max-width: $tablet)
-        padding-top: 3.5em
-
-  .modal-menu
-    display: flex
-    justify-content: flex-end
-    width: 100%
-    position: absolute
-    padding: 20px 15px
-    z-index: 2
 
 </style>

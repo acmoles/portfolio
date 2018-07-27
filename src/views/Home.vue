@@ -13,7 +13,7 @@
     </section>
 
     <section id="work" class="hero is-fullheight">
-      <div class="hero-body">
+      <div class="hero-body last-section">
         <Work
           :headers="true"
         />
@@ -43,14 +43,14 @@
 
 import About from '@/components/homepage/about.vue'
 import Work from '@/components/homepage/work.vue'
-import Contact from '@/components/homepage/contact.vue'
+// import Contact from '@/components/homepage/contact.vue'
 
 export default {
   name: 'Home',
   components: {
     About,
     Work,
-    Contact
+    // Contact
   },
   methods: {
     scrollTo (event) {
@@ -73,6 +73,7 @@ export default {
     @media screen and (min-width: $desktop)
       display: flex
       justify-content: flex-end
+    // Centre on very large screens?
     // @media screen and (min-width: $fullhd)
     //   padding: 1.5em
     //   justify-content: center

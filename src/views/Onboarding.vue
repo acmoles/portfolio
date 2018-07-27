@@ -120,7 +120,7 @@
     <template slot="footer-content">
       <div class="container page-footer-container">
         <div class="columns">
-          <div class="column content">
+          <div class="column content link-container">
             <h3>Link title</h3>
             <p>Link description</p>
             <a class="button is-primary is-rounded is-inverted is-outlined">

@@ -20,7 +20,7 @@
       </div>
     </section>
 
-    <section class="container page-glass">
+    <section class="container page-glass" :class="{ 'is-visible': contentVisible }">
       <div class="overlap-filler"></div>
       <slot name="content">
         This will only be displayed if there is no content
@@ -29,7 +29,7 @@
       <div class="overlap-filler is-bottom"></div>
     </section>
 
-    <section class="hero is-medium page-footer">
+    <section class="hero is-medium page-footer" :class="{ 'is-visible': contentVisible }">
       <div class="color-header" :class="color"></div>
       <div class="flat-header" :class="color"></div>
       <div class="hero-body">
@@ -50,6 +50,8 @@
 
 import FooterNav from '@/components/footer-nav.vue'
 
+import * as smoothScroll from 'smoothscroll'
+
 export default {
   name: 'WorkWrapper',
   components: {
@@ -67,11 +69,20 @@ export default {
   },
   data () {
     return {
-      hello: 'hello world'
+      contentVisible: false
     }
   },
   mounted () {
-    this.$events.$emit('navigate-project', true);
+    this.$events.$emit('navigate-project');
+
+    let scrollContext = document.getElementById('app');
+
+    smoothScroll(0, 750, this.fadeInContent, scrollContext);
+  },
+  methods: {
+    fadeInContent () {
+      this.contentVisible = true;
+    }
   }
 }
 </script>
@@ -91,10 +102,12 @@ export default {
   .page-glass
     position: relative
     top: -3em
-    animation: fadeUp 1200ms both
-    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
-    animation-delay: 800ms
     z-index: 1
+    opacity: 0
+    &.is-visible
+      animation: fadeUp 1200ms both
+      animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+
 
   .page-glass-divider, .page-glass-section, .overlap-filler
     display: flex
@@ -145,10 +158,23 @@ export default {
 
   .page-footer
     margin-top: -6em
+    opacity: 0
+    transition: opacity 0.4s ease
+    &.is-visible
+      opacity: 1
 
   .page-footer-container
     color: $white
     position: relative
+    padding: 0 3em
+    @media screen and (min-width: $tablet)
+      padding: 1.5em
+      top: -3em
+      margin-bottom: -8em
+    .link-container
+      text-align: center
+      @media screen and (min-width: $tablet)
+        text-align: left
     h3
       color: $white
       margin-bottom: 0.25em
@@ -164,9 +190,5 @@ export default {
         position: absolute
         right: 10px
         font-size: 0.6em
-    @media screen and (min-width: $tablet)
-      padding: 1.5em
-      top: -3em
-      margin-bottom: -8em
 
 </style>

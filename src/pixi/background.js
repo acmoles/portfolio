@@ -2,8 +2,6 @@ import * as PIXI from 'pixi.js'
 import anime from 'animejs'
 import Rellax from 'rellax'
 
-// import { greys } from './greys.js'
-
 import { ObjectPool } from './object-pools.js'
 import { BackgroundGradientCanvas } from './gradient-canvas.js'
 
@@ -23,7 +21,7 @@ export class Background {
     this.app.stage.addChild(this.blurLayerLarge);
 
     this.layers = [];
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < 3; i++) {
       // 0 smallest (closest) 3 biggest (furthest)
       let layer = new PIXI.Container();
       this.layers.push(layer);
@@ -35,6 +33,7 @@ export class Background {
       }
     }
 
+    // Per layer blur filters
     let filterSmall = new PIXI.filters.BlurFilter();
     filterSmall.blur = 10;
     filterSmall.quality = 2;
@@ -45,6 +44,7 @@ export class Background {
     filterLarge.quality = 2;
     this.blurLayerLarge.filters = [filterLarge];
 
+    // Global blur filter
     // let filterAll = new PIXI.filters.BlurFilter();
     // filterAll.blur = 20;
     // this.app.stage.filters = [filterAll];
@@ -135,7 +135,7 @@ export class Background {
 
     relax.forEach((relax, index) => {
       let relaxInstance = new Rellax(relax, {
-        speed: index * 1.5,
+        speed: index * 2,
         wrapper: app,
         callback: function(positions) {
           // callback every position change

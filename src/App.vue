@@ -7,11 +7,10 @@
       <div class="relax"></div>
       <div class="relax"></div>
       <div class="relax"></div>
-      <div class="relax"></div>
     </div>
-      <Nav/>
+      <Nav />
     <transition :name="transitionName" mode="out-in">
-      <router-view/>
+      <router-view />
     </transition>
   </div>
 </template>
@@ -54,10 +53,6 @@ export default {
       this.background = new Background();
       this.background.start();
     })
-  },
-  beforeMount () {
-  },
-  mounted () {
   }
 }
 

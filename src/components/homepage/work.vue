@@ -8,6 +8,7 @@
         :key="project.index"
         :id="project.index"
         class="column is-one-third"
+        :class="project.color"
       >
         <router-link
           :to="{ name: project.route, params: {} }"
@@ -23,7 +24,7 @@
             <div class="project-logo">
               <span
                 v-if="project.icon == 'dots'"
-                class="icon is-large dot-grey">
+                class="icon is-large">
                 <i class="icon-dot-3 full-opacity"></i>
               </span>
               <span
@@ -76,7 +77,7 @@ export default {
         {
           index: 'personalisation',
           icon: '/img/homepage/project-icons/personalised.svg',
-          color: 'red',
+          color: 'green',
           title: 'Delight customers with a personalised experience',
           route: 'personalisation',
           description: 'A signup flow that increased conversion and contributed to record customer acquisition',
@@ -86,7 +87,7 @@ export default {
         {
           index: 'wesen',
           icon: '/img/homepage/project-icons/personalised.svg',
-          color: 'orange',
+          color: 'red',
           title: 'Delight customers with a personalised experience',
           route: 'personalisation',
           description: 'A signup flow that increased conversion and contributed to record customer acquisition',
@@ -106,7 +107,7 @@ export default {
         {
           index: 'toucanoo',
           icon: '/img/homepage/project-icons/personalised.svg',
-          color: 'green',
+          color: 'purple',
           title: 'Delight customers with a personalised experience',
           route: 'onboarding',
           description: 'A signup flow that increased conversion and contributed to record customer acquisition',
@@ -116,7 +117,7 @@ export default {
         {
           index: 'more',
           icon: 'dots',
-          color: 'grey',
+          color: 'yellow',
           title: 'Delight customers with a personalised experience',
           route: 'onboarding',
           description: 'A signup flow that increased conversion and contributed to record customer acquisition',
@@ -135,6 +136,7 @@ export default {
 </script>
 
 <style scoped lang="sass">
+
   @import '../../sass/variables'
 
   .glass
@@ -155,9 +157,6 @@ export default {
   .project-logo
     position: relative
 
-  .dot-grey
-    color: $steel
-
   .color-header, .flat-header
     border-radius: $radius-large $radius-large 0 0
 
@@ -171,6 +170,7 @@ export default {
     &:hover, &:focus, &:active
       color: $slate
     h4
+      transition: color 0.4s ease
       margin-bottom: 0.5em
       &:hover, &:focus, &:active
         color: $black
@@ -183,5 +183,60 @@ export default {
     p
       font-size: 0.75em
       opacity: 0.5
+
+  // Color dependent hover effects
+
+  .blue
+    a:hover, a:active, a:active
+      h4
+        color: $darkBlue
+
+  .red
+    a:hover, a:active, a:active
+      h4
+        color: $red
+
+  .yellow
+    a:hover, a:active, a:active
+      h4
+        color: $darkYellow
+
+  .orange
+    a:hover, a:active, a:active
+      h4
+        color: $darkOrange
+
+  .black
+    a:hover, a:active, a:active
+      h4
+        color: $slate
+
+  .green
+    a:hover, a:active, a:active
+      h4
+        color: $darkGreen
+
+  .grey
+    a:hover, a:active, a:active
+      h4
+        color: $silver
+
+  .purple
+    a:hover, a:active, a:active
+      h4
+        color: $darkPurple
+
+  // In menus specific styles
+
+  .router-link-exact-active
+    cursor: not-allowed
+    .glass-body
+      h4, p
+        opacity: 0.5
+
+  .router-link-exact-active
+    h4
+      color: $slate !important
+
 
 </style>
