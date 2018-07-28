@@ -44,22 +44,9 @@
   transform: scale(0.8)
   opacity: 0
 
-@keyframes bulge
-  from
-    opacity: 0
-    transform: scale3d(0.8, 0.8, 0.8)
+// Slide up / down animation
 
-  to
-    opacity: 1
-    transform: scale3d(1, 1, 1)
-
-.bulge-in-animation
-  animation: bulge 700ms both
-  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55)
-
-// Slide animation
-
-.slideup-enter-active, .slideup-leave-active
+.slideup-enter-active, .slideup-leave-active, .slidedown-enter-active, .slidedown-leave-active
   transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1)
   transition-property: transform, opacity
 
@@ -67,10 +54,14 @@
   transform: translateY(50%)
   opacity: 0
 
-.slidedown-enter-active, .slidedown-leave-active
-  transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1)
-  transition-property: transform, opacity
-
 .slidedown-enter, .slidedown-leave-to
   transform: translateY(-50%)
+  opacity: 0
+
+.slideleft-enter, .slideleft-leave-to
+  transform: translateX(-50%)
+  opacity: 0
+
+.slideright-enter, .slideright-leave-to
+  transform: translateX(50%)
   opacity: 0

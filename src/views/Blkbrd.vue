@@ -1,24 +1,20 @@
 <template>
   <WorkWrapper
-    :icon="'/img/homepage/project-icons/toucan.svg'"
-    :color="'blue'"
+    :icon="'/img/homepage/project-icons/blkbrd.svg'"
+    :color="'black'"
   >
     <template slot="content">
       <div class="page-glass-section first-section">
 
         <div class="content">
-          <p class="client blue">toucanBox</p>
+          <p class="client black">BLKBRD</p>
           <!-- <p class="client">toucanBox <span>Q3 2017</span></p> -->
-          <h1 class="project-title">Optimise customer onboarding</h1>
+          <h1 class="project-title">Exploring a new dimension for messaging</h1>
 
           <p><strong>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</strong></p>
           <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
-          <h2>Second level</h2>
-          <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
           <ul>
             <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
-            <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
-            <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
             <li>Ut non enim metus.</li>
           </ul>
         </div>
@@ -30,25 +26,6 @@
       </div>
 
       <div class="page-glass-section">
-
-        <div class="columns">
-          <div class="column">
-            <figure class="image is-1by1">
-              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-            <figcaption>
-              Figure 1: Some beautiful placeholders
-            </figcaption>
-          </div>
-          <div class="column">
-            <figure class="image is-1by1">
-              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-            <figcaption>
-              Figure 1: Some beautiful placeholders
-            </figcaption>
-          </div>
-        </div>
 
         <div class="figure-container">
           <figure class="image is-16by9 single-image">
@@ -251,7 +228,7 @@
 import WorkWrapper from '@/components/work-wrapper.vue'
 
 export default {
-  name: 'Onboarding',
+  name: 'Blkbrd',
   components: {
     WorkWrapper
   }

@@ -2,7 +2,6 @@
 
 .nav
   position: absolute
-  // position: fixed
   padding: 20px
   width: 100%
   display: flex
@@ -14,7 +13,6 @@
     padding: 20px
 
 .nav.is-light
-  position: absolute
   color: $white
   a
     color: $white
@@ -24,10 +22,18 @@
       color: $white
       border-bottom: 2px solid $white
 
+.nav.is-dark
+  .burger-wrapper
+    .hamburger, .gridicon
+      display: none
+      @media screen and (min-width: $desktop)
+        display: block
+
 .burger-wrapper, .back-wrapper, .grid-wrapper
   pointer-events: all
   position: relative
-  z-index: 3
+  z-index: 2
+  cursor: pointer
 
 .burger-wrapper
   display: flex
@@ -36,3 +42,33 @@
   font-size: 1.5em
   position: relative
   left: -5px
+
+// Grid icon
+
+.gridicon
+	width: 1.5em
+	height: 1.5em
+	display: inline-flex
+	align-items: center
+	justify-content: center
+
+.gridicon > span
+	transition: opacity, box-shadow .2s ease
+  // font-family: icon
+
+.gridicon > span
+	background: $white
+	width: 3px
+	height: 3px
+	box-shadow: -.6em -.6em $white, 0 -.6em $white, .6em -.6em $white, -.6em 0 $white, .6em 0 $white, -.6em .6em $white, 0 .6em $white, .6em .6em $white
+
+
+.gridicon:hover > span
+	box-shadow: -.7em -.7em $white, 0 -.7em $white, .7em -.7em $white, -.7em 0 $white, .7em 0 $white, -.7em .7em $white, 0 .7em $white, .7em .7em $white
+
+
+.gridicon:active > span
+	box-shadow: -.5em -.5em $white, 0 -.5em $white, .5em -.5em $white, -.5em 0 $white, .5em 0 $white, -.5em .5em $white, 0 .5em $white, .5em .5em $white
+
+.gridicon:active > span
+  opacity: 0.5

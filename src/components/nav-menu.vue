@@ -1,10 +1,9 @@
 <template>
-      <div
-          id="nav-menu-work"
-          class="hero is-fullheight nav-menu"
-        >
+  <div id="nav-menu-work" class="nav-menu">
+    <transition name="fade">
 
-        <div v-if="footer" class="hero-head header-menu">
+      <div class="hero is-fullheight" v-if="menuVisible">
+        <div class="hero-head header-menu">
           <div class="burger-wrapper">
             <button
               @click="$emit('dismiss')"
@@ -18,15 +17,17 @@
           </div>
         </div>
 
-        <transition name="fade">
-          <div v-if="menuVisible" class="hero-body">
-            <Work
-              :headers="false"
-            />
-          </div>
-        </transition>
+        <div class="hero-body">
+          <Work
+            :headers="false"
+          />
+        </div>
 
       </div>
+
+    </transition>
+
+    </div>
 </template>
 
 <script>
@@ -37,12 +38,6 @@ export default {
   name: 'MenuNav',
   components: {
     Work
-  },
-  props: {
-    footer: {
-      type: Boolean,
-      default: false
-    }
   },
   data () {
     return {
@@ -61,7 +56,7 @@ export default {
 </script>
 
 <style scoped lang="sass">
-  
+
   @import '../sass/variables'
 
   .nav-menu
@@ -84,7 +79,7 @@ export default {
     justify-content: flex-end
     width: 100%
     position: absolute
-    padding: 20px 15px
+    padding: 20px
     z-index: 2
 
 </style>

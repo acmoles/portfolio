@@ -126,7 +126,7 @@ export default {
           icon: 'dots',
           color: 'yellow',
           title: 'Before 2016',
-          route: 'earlier',
+          route: 'pre2016',
           description: 'A selection for projects prior to 2016',
           client: 'Various',
           date: '< 2016'
@@ -226,7 +226,7 @@ export default {
   .black
     a:hover, a:active, a:active
       h4
-        color: $slate
+        color: darken($black, 20%)
 
   .green
     a:hover, a:active, a:active

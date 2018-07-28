@@ -79,35 +79,4 @@ export default {
     position: relative
     top: 0.25em
 
-  .grid-wrapper
-    cursor: pointer
-
-  .gridicon
-  	width: 1.5em
-  	height: 1.5em
-  	display: inline-flex
-  	align-items: center
-  	justify-content: center
-
-  .gridicon > span
-  	transition: opacity, box-shadow .2s ease
-    // font-family: icon
-
-  .gridicon > span
-  	background: $white
-  	width: 3px
-  	height: 3px
-  	box-shadow: -.6em -.6em $white, 0 -.6em $white, .6em -.6em $white, -.6em 0 $white, .6em 0 $white, -.6em .6em $white, 0 .6em $white, .6em .6em $white
-
-
-  .gridicon:hover > span
-  	box-shadow: -.8em -.8em $white, 0 -.8em $white, .8em -.8em $white, -.8em 0 $white, .8em 0 $white, -.8em .8em $white, 0 .8em $white, .8em .8em $white
-
-
-  .gridicon:active > span, .gridicon:focus > span
-  	box-shadow: -1em -1em $white, 0 -1em $white, 1em -1em $white, -1em 0 $white, 1em 0 $white, -1em .8em $white, 0 1em $white, 1em 1em $white
-
-  .gridicon:active > span
-    opacity: 0.5
-
 </style>

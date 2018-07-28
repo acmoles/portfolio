@@ -12,6 +12,11 @@
             <i class="icon-dot-3 full-opacity"></i>
           </span>
           <span
+            v-else-if="icon === '/img/homepage/project-icons/toucan.svg'"
+            class="icon is-large is-larger">
+            <img :src="icon" alt="project icon">
+          </span>
+          <span
             v-else
             class="icon is-large">
             <img :src="icon" alt="project icon">
@@ -94,10 +99,14 @@ export default {
     text-align: center
     position: relative
     margin: 1.5em 0 3em 0
+    .is-larger
+      transform: scale(1.5)
     @media screen and (min-width: $tablet)
       margin: 3em 0
       .icon
-        transform: scale(1.5)
+        transform: scale(2)
+      .is-larger
+        transform: scale(2.5)
 
   .page-glass
     position: relative

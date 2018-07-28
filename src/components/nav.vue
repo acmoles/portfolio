@@ -14,11 +14,17 @@
       </transition>
     </div>
     <div class="burger-wrapper">
-      <button @click="menuToggle" :class="{ 'is-active': menuActive }" class="hamburger hamburger--3dx" type="button">
+      <!-- <button @click="menuToggle" :class="{ 'is-active': menuActive }" class="hamburger hamburger--3dx" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
-      </button>
+      </button> -->
+      <div
+        @click="menuToggle"
+        class="gridicon"
+      >
+        <span></span>
+      </div>
     </div>
 
     <transition name="slidedown">
@@ -58,9 +64,6 @@ export default {
       // Navigate to a project from anywhere
       this.navColorScheme = 'is-light';
       this.canGoHome = true;
-      setTimeout(() => {
-        this.scrollTo('project');
-      }, 200);
     });
     this.$events.$on('scroll-trigger', (value) => {
       // Get scroll events from any component

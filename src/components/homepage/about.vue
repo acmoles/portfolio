@@ -60,7 +60,7 @@
                     role="button"
                     aria-haspopup="true"
                   >
-                    Message
+                    Email
                   </button>
                 </div>
                 <transition name="fade">
@@ -114,15 +114,41 @@
             </div>
           </div>
           <div class="content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut libero vitae dui vehicula aliquet.
-              Nulla euismod tincidunt eros, sit amet cursus odio volutpat id.
-            </p>
-            <p>
-              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-              Nam eget tortor nisl. Ut ut libero vitae dui vehicula aliquet.
-            </p>
+            <transition name="fade" mode="out-in">
+              <div v-if="blurbName === 'intro'" key="intro" class="intro-text">
+                <p>
+                  I help companies build useful and pleasing products.
+                </p>
+                <p>
+                  Over the past three years I’ve been working with toucanBox, a
+                  subscription / <span>e-commerce</span> start-up based in London.
+                  I’ve just arrived in Berlin.
+                </p>
+                <p>
+                  This portfolio consists of five case studies, three from toucanBox
+                  and two side projects. It also includes an overview of select projects
+                  dating from before 2016.
+                </p>
+                <a @click="blurbForward"><i class="icon-dot-2 full-opacity blurb-icon"></i></a>
+              </div>
+              <div v-if="blurbName === 'extra'" key="extra" class="detail-text">
+                <p>
+                  I use the design process to bring clarity to complex problems. I sketch and
+                  build prototypes to test hypotheses. I gather feedback and iterate.
+                </p>
+                <p>
+                  My training in human-centred design, originally focussing on physical objects, helps
+                  me uncover user’s fundamental needs and make systematic decisions.
+                </p>
+                <p>
+                  I work alongside developers, speaking their language, to ensure products ship with
+                  the highest possible level of polish.
+                </p>
+                <a @click="blurbBack"><i class="icon-dot-2 full-opacity blurb-icon"></i></a>
+              </div>
+            </transition>
           </div>
+
         </div>
 
       </div>
@@ -147,7 +173,9 @@ export default {
       email: 'info@acmoles.design',
       copyTextMessage: 'Email copied',
       optionsDropdown: false,
-      emailDropdown: false
+      emailDropdown: false,
+      blurbName: 'intro',
+      transitionName: 'slidedown'
     }
   },
   methods: {
@@ -169,6 +197,14 @@ export default {
     },
     toggleOptions () {
       this.optionsDropdown = !this.optionsDropdown;
+    },
+    blurbForward () {
+      this.transitionName = 'slideright';
+      this.blurbName = 'extra';
+    },
+    blurbBack () {
+      this.transitionName = 'slideup';
+      this.blurbName = 'intro';
     }
   }
 }
@@ -280,6 +316,8 @@ export default {
   .glass-body-content
     padding: 0.75em
     padding-bottom: 1.75em
+    @media screen and (min-width: $desktop)
+      min-height: 380px
 
   .glass-body-actions
     margin-top: 0.5em
@@ -302,4 +340,12 @@ export default {
       .icon
         position: relative
         top: 0.1em
+
+  .content
+    p span
+      white-space: nowrap
+
+  .blurb-icon:before
+    margin: 0
+    font-size: 100%
 </style>
