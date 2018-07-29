@@ -96,7 +96,8 @@ export class Background {
     this.app.ticker.add(() => {
       ticks += 1;
 
-      if (ticks === 10) {
+      if (ticks === 100) {
+        // We're happy after 100 ticks
         this.sequence();
       }
     });
