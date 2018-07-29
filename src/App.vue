@@ -42,12 +42,12 @@ export default {
     }
   },
   created () {
-    this.$events.$on('toggle-scroll-lock', () => {
-      this.scrollLock = !this.scrollLock;
-    });
-    this.$events.$on('exit-scroll-lock', () => {
-      this.scrollLock = false;
-    });
+    // this.$events.$on('toggle-scroll-lock', () => {
+    //   this.scrollLock = !this.scrollLock;
+    // });
+    // this.$events.$on('exit-scroll-lock', () => {
+    //   this.scrollLock = false;
+    // });
     this.$events.$on('remove-all-background', () => {
       if (this.background) {
         this.background.removeAll();
