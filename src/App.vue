@@ -8,10 +8,17 @@
       <div class="relax"></div>
       <div class="relax"></div>
     </div>
-      <Nav />
+
+    <Nav />
+
     <transition :name="transitionName" mode="out-in">
       <router-view />
     </transition>
+
+    <FooterNav
+      :back="true"
+    />
+
   </div>
 </template>
 
@@ -19,11 +26,13 @@
 
 import { Background } from '@/pixi/background.js'
 import Nav from '@/components/nav.vue'
+import FooterNav from '@/components/footer-nav.vue'
 
 export default {
   name: 'App',
   components: {
-    Nav
+    Nav,
+    FooterNav
   },
   data () {
     return {

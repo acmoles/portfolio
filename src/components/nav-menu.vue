@@ -53,7 +53,7 @@ export default {
   mounted () {
     setTimeout(() => {
       this.menuVisible = true;
-    }, 400);
+    }, 600);
   },
   beforeDestroy () {
     this.menuVisible = false;

@@ -43,25 +43,16 @@
           to be distributed.
         </slot>
       </div>
-      <FooterNav
-        :back="true"
-        :color="footerNavColor"
-      />
     </section>
   </div>
 </template>
 
 <script>
 
-import FooterNav from '@/components/footer-nav.vue'
-
 import * as smoothScroll from 'smoothscroll'
 
 export default {
   name: 'WorkWrapper',
-  components: {
-    FooterNav,
-  },
   props: {
     project: {
       type: String,

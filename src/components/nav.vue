@@ -118,6 +118,7 @@ export default {
       // ensure menu is dismissed
       this.menuActive = false;
       this.$events.$emit('exit-scroll-lock');
+      this.$events.$emit('footer-menu-dismiss');
     },
     menuToggle () {
       this.$events.$emit('toggle-scroll-lock');

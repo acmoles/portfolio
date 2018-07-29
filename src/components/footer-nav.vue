@@ -1,8 +1,8 @@
 <template>
-  <nav
+  <footer
     id="footer-nav"
-    class="nav navbar"
-    :class="color"
+    class="nav navbar footer"
+    :class="navColorScheme"
     role="navigation"
     aria-label="footer navigation"
   >
@@ -34,7 +34,7 @@
 
       </template>
     </transition>
-  </nav>
+  </footer>
 </template>
 
 <script>
@@ -46,16 +46,23 @@ export default {
   components: {
     MenuNav
   },
-  props: {
-    color: {
-      type: String,
-      default: 'is-light'
-    }
-  },
   data () {
     return {
+      navColorScheme: 'is-light',
       menuActive: false
     }
+  },
+  created () {
+    this.$events.$on('footer-menu-dismiss', () => {
+      this.menuActive = false;
+    });
+    this.$events.$on('navigate-project', (event) => {
+      if (event === '2016') {
+        this.navColorScheme = 'is-dark';
+      } else {
+        this.navColorScheme = 'is-light';
+      }
+    });
   },
   methods: {
     navigate (event) {

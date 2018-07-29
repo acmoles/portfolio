@@ -47,25 +47,17 @@
 // Slide up / down animation
 
 .slideup-enter-active, .slideup-leave-active, .slidedown-enter-active, .slidedown-leave-active
-  transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1)
-  transition-property: transform, opacity
-
-.slidedown-leave-active
-  transition-duration: 0.4s
-  transition-timing-function: ease
+  transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1)
+  transition-property: transform
 
 .slideup-enter, .slideup-leave-to
-  transform: translateY(50%)
-  opacity: 0
+  transform: translateY(100%)
 
 .slidedown-enter, .slidedown-leave-to
-  transform: translateY(-50%)
-  opacity: 0
+  transform: translateY(-100%)
 
 .slideleft-enter, .slideleft-leave-to
-  transform: translateX(-50%)
-  opacity: 0
+  transform: translateX(-100%)
 
 .slideright-enter, .slideright-leave-to
-  transform: translateX(50%)
-  opacity: 0
+  transform: translateX(100%)
