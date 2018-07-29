@@ -1,5 +1,6 @@
 <template>
   <WorkWrapper
+    :project="'2016'"
     :icon="'dots'"
     :color="'grey'"
   >
@@ -9,7 +10,7 @@
         <div class="content">
           <p class="client grey">Various</p>
           <!-- <p class="client">toucanBox <span>Q3 2017</span></p> -->
-          <h1 class="project-title">A selection for projects prior to 2016</h1>
+          <h1 class="project-title">A selection of projects prior to 2016</h1>
 
           <h2>Second level</h2>
           <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
@@ -22,7 +23,7 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Discovery</h1>
+        <h1>Lego Dimensions</h1>
       </div>
 
       <div class="page-glass-section">
@@ -63,10 +64,29 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Analysis</h1>
+        <h1>Makielab</h1>
       </div>
 
       <div class="page-glass-section">
+
+        <div class="columns">
+          <div class="column">
+            <figure class="image is-1by1">
+              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+            </figure>
+            <figcaption>
+              Figure 1: Some beautiful placeholders
+            </figcaption>
+          </div>
+          <div class="column">
+            <figure class="image is-1by1">
+              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+            </figure>
+            <figcaption>
+              Figure 1: Some beautiful placeholders
+            </figcaption>
+          </div>
+        </div>
 
         <div class="content">
           <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
@@ -85,57 +105,12 @@
           <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet, mollis malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
           <h4>Fourth level</h4>
           <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus laoreet, at elementum ex efficitur.</p>
-          <pre>
-        &lt;!DOCTYPE html&gt;
-        &lt;html&gt;
-          &lt;head&gt;
-            &lt;title&gt;Hello World&lt;/title&gt;
-          &lt;/head&gt;
-          &lt;body&gt;
-            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.&lt;/p&gt;
-          &lt;/body&gt;
-        &lt;/html&gt;
-        </pre>
-          <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>One</th>
-                <th>Two</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Three</td>
-                <td>Four</td>
-              </tr>
-              <tr>
-                <td>Five</td>
-                <td>Six</td>
-              </tr>
-              <tr>
-                <td>Seven</td>
-                <td>Eight</td>
-              </tr>
-              <tr>
-                <td>Nine</td>
-                <td>Ten</td>
-              </tr>
-              <tr>
-                <td>Eleven</td>
-                <td>Twelve</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>Phasellus porttitor enim id metus volutpat ultricies. Ut nisi nunc, blandit sed dapibus at, vestibulum in felis. Etiam iaculis lorem ac nibh bibendum rhoncus. Nam interdum efficitur ligula sit amet ullamcorper. Etiam tristique, leo vitae porta faucibus, mi lacus laoreet metus, at cursus leo est vel tellus. Sed ac posuere est. Nunc ultricies nunc neque, vitae ultricies ex sodales quis. Aliquam eu nibh in libero accumsan pulvinar. Nullam nec nisl placerat, pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel condimentum. Nam pharetra varius metus non pellentesque.</p>
-          <h5>Fifth level</h5>
-          <p>Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed tincidunt ligula. Vestibulum at nunc elit. Praesent aliquet ligula mi, in luctus elit volutpat porta. Phasellus molestie diam vel nisi sodales, a eleifend augue laoreet. Sed nec eleifend justo. Nam et sollicitudin odio.</p>
         </div>
 
       </div>
 
       <div class="page-glass-divider">
-        <h1>Design</h1>
+        <h1>Nova</h1>
       </div>
 
       <div class="page-glass-section">
@@ -167,10 +142,29 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Production</h1>
+        <h1>Spaced</h1>
       </div>
 
       <div class="page-glass-section">
+
+        <div class="columns">
+          <div class="column">
+            <figure class="image is-1by1">
+              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+            </figure>
+            <figcaption>
+              Figure 1: Some beautiful placeholders
+            </figcaption>
+          </div>
+          <div class="column">
+            <figure class="image is-1by1">
+              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+            </figure>
+            <figcaption>
+              Figure 1: Some beautiful placeholders
+            </figcaption>
+          </div>
+        </div>
 
         <div class="content">
           <h6>Seventh</h6>
@@ -189,10 +183,93 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Evaluation</h1>
+        <h1>Nita</h1>
+      </div>
+
+      <div class="page-glass-section">
+
+        <div class="columns">
+          <div class="column">
+            <figure class="image is-1by1">
+              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+            </figure>
+            <figcaption>
+              Figure 1: Some beautiful placeholders
+            </figcaption>
+          </div>
+          <div class="column">
+            <figure class="image is-1by1">
+              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+            </figure>
+            <figcaption>
+              Figure 1: Some beautiful placeholders
+            </figcaption>
+          </div>
+        </div>
+
+        <div class="content">
+          <h6>Seventh</h6>
+          <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
+        </div>
+
+      </div>
+
+      <div class="page-glass-divider">
+        <h1>Random International</h1>
+      </div>
+
+      <div class="page-glass-section">
+
+        <div class="columns">
+          <div class="column">
+            <figure class="image is-1by1">
+              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+            </figure>
+            <figcaption>
+              Figure 1: Some beautiful placeholders
+            </figcaption>
+          </div>
+          <div class="column">
+            <figure class="image is-1by1">
+              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+            </figure>
+            <figcaption>
+              Figure 1: Some beautiful placeholders
+            </figcaption>
+          </div>
+        </div>
+
+        <div class="content">
+          <h6>Seventh</h6>
+          <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
+        </div>
+
+      </div>
+
+      <div class="page-glass-divider">
+        <h1>Sprint</h1>
       </div>
 
       <div class="page-glass-section last-section">
+
+        <div class="columns">
+          <div class="column">
+            <figure class="image is-1by1">
+              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+            </figure>
+            <figcaption>
+              Figure 1: Some beautiful placeholders
+            </figcaption>
+          </div>
+          <div class="column">
+            <figure class="image is-1by1">
+              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+            </figure>
+            <figcaption>
+              Figure 1: Some beautiful placeholders
+            </figcaption>
+          </div>
+        </div>
 
         <div class="content">
           <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="#">non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
@@ -212,22 +289,6 @@
 
     <template slot="footer-content">
       <div class="container page-footer-container">
-        <div class="columns">
-          <div class="column content link-container">
-            <h3>Link title</h3>
-            <p>Cras in nibh lacinia, venenatis nisi et, auctor urna.</p>
-            <div class="links-container">
-              <a class="button is-primary is-rounded is-inverted is-outlined">
-                <span>View site</span>
-                <i class="icon-play full-opacity footer-icon"></i>
-              </a>
-              <a class="other-link" href="#">View other site</a>
-            </div>
-          </div>
-          <div class="column is-three-quarters">
-            <figure class="image is-16by9"><img src="/img/projects/test-presentation.png"></figure>
-          </div>
-        </div>
       </div>
     </template>
   </WorkWrapper>

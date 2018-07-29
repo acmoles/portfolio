@@ -45,47 +45,44 @@ export class ObjectPool {
 
   makeObjects(amount) {
     this.layers.forEach((layer, index) => {
-      var scale, color, type;
-      if (index >= 2) {
+      var scale, large;
+
+      if (index === 2) {
         // larger layer
-        // scale = index * anime.random(1.8, 2.2);
-        if (this.isGrey) {
-          color = this.greys[anime.random(0, this.greys.length - 1)];
-        } else {
-          color = this.colors[anime.random(0, this.colors.length - 1)];
-        }
-        amount -= 3;
-      } else {
-        // scale = index;
-        if (this.isGrey) {
-          color = this.greys[anime.random(0, this.greys.length - 1)];
-        } else {
-          color = this.colors[anime.random(0, this.colors.length - 1)];
-        }
+        amount = 2;
+        large = true;
       }
       scale = (index + 1) * 1.5;
-      type = this.types[anime.random(0, this.types.length - 1)];
 
-      let intro;
-      if (this.firstMake) {
-        intro = false;
-        this.firstMake = false;
-      } else {
-        intro = true;
-      }
+      let intro = true;
+      // if (this.firstMake) {
+      //   intro = false;
+      //   this.firstMake = false;
+      // } else {
+      //   intro = true;
+      // }
 
       for (var i = 0; i < amount; i++) {
-        this.makeObject(scale, color, layer, type, i, intro);
+        this.makeObject(scale, layer, i, intro, large);
       }
     });
   }
 
-  makeObject(scale, color, layer, type, i, intro) {
+  makeObject(scale, layer, i, intro, large) {
+
+    let color;
+    if (this.isGrey) {
+      color = this.greys[anime.random(0, this.greys.length - 1)];
+    } else if (large) {
+      color = this.colorsLarge[anime.random(0, this.colorsLarge.length - 1)];
+    } else {
+      color = this.colors[anime.random(0, this.colors.length - 1)];
+    }
 
     let backgroundObject = new BackgroundObject(
       this.app, // app
       color, // color
-      type, // type
+      this.types[anime.random(0, this.types.length - 1)], // type
       scale, // scale
       anime.random(0, this.app.screen.width), // x
       (this.app.screen.height * i) + anime.random(-300, 300), // y

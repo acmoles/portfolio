@@ -1,5 +1,6 @@
 <template>
   <WorkWrapper
+    :project="'personalisation'"
     :icon="'/img/homepage/project-icons/personalised.svg'"
     :color="'green'"
   >

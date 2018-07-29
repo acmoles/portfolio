@@ -35,12 +35,20 @@ export class Background {
 
     // Per layer blur filters
     let filterSmall = new PIXI.filters.BlurFilter();
-    filterSmall.blur = 10;
+    if (window.innerWidth < 600) {
+      filterSmall.blur = 5;
+    } else {
+      filterSmall.blur = 10;
+    }
     filterSmall.quality = 2;
     this.blurLayerSmall.filters = [filterSmall];
 
     let filterLarge = new PIXI.filters.BlurFilter();
-    filterLarge.blur = 25;
+    if (window.innerWidth < 600) {
+      filterLarge.blur = 10;
+    } else {
+      filterLarge.blur = 25;
+    }
     filterLarge.quality = 2;
     this.blurLayerLarge.filters = [filterLarge];
 
@@ -68,7 +76,7 @@ export class Background {
   }
 
   start() {
-    this.objects.addFirstBatch();
+
   }
 
   appendCanvas() {
@@ -79,13 +87,16 @@ export class Background {
     this.app.start();
 
     this.spinner = document.getElementById('spinner');
-    this.spinner.classList.add('active');
+    setTimeout(() => {
+      this.spinner.removeAttribute('style');
+      this.spinner.classList.add('active');
+    }, 100);
 
     let ticks = 0;
     this.app.ticker.add(() => {
       ticks += 1;
 
-      if (ticks === 180) {
+      if (ticks === 10) {
         this.sequence();
       }
     });
@@ -96,6 +107,7 @@ export class Background {
     this.spinner.classList.remove('active');
     setTimeout(() => {
       this.slideLoader('out', () => {
+        this.objects.addFirstBatch();
         this.loader = document.getElementById('loader')
         this.loader.classList.add('none');
       });
@@ -135,7 +147,7 @@ export class Background {
 
     relax.forEach((relax, index) => {
       let relaxInstance = new Rellax(relax, {
-        speed: index * 2,
+        speed: (index + 1) * 2,
         wrapper: app,
         callback: function(positions) {
           // callback every position change

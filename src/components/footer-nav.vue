@@ -18,7 +18,7 @@
     <div v-if="!menuActive" class="grid-wrapper">
       <div
         @click="menuToggle"
-        class="gridicon"
+        class="gridicon in-project"
       >
         <span></span>
       </div>

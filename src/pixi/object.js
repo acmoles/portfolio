@@ -102,7 +102,7 @@ export class BackgroundObject {
     let responsiveScaleFactor = (64 * this.app.screen.width) / 1000,
         objectSizeConstant = this.scale * anime.random(0.9, 1.1),
         scaledSide =  responsiveScaleFactor * objectSizeConstant,
-        scaledCorner = objectSizeConstant * 12;
+        scaledCorner = scaledSide / 12;
     this.graphics.beginFill(this.color);
     this.graphics.drawRoundedRect(
       -scaledSide / 2,
@@ -123,7 +123,7 @@ export class BackgroundObject {
 
     this.graphics.moveTo(0, 0);
     this.graphics.beginFill(this.color, 0);
-    this.graphics.lineStyle(15 * objectSizeConstant, this.color, 1);
+    this.graphics.lineStyle(0.15 * size, this.color, 1);
 
     for (var i = 0; i <= numberOfSides + 1; i++) {
       var curStep = i * step + shift;

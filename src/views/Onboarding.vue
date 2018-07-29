@@ -1,5 +1,6 @@
 <template>
   <WorkWrapper
+    :project="'onboarding'"
     :icon="'/img/homepage/project-icons/toucan.svg'"
     :color="'blue'"
   >

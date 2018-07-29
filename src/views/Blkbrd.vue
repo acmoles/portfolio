@@ -1,5 +1,6 @@
 <template>
   <WorkWrapper
+    :project="'blkbrd'"
     :icon="'/img/homepage/project-icons/blkbrd.svg'"
     :color="'black'"
   >

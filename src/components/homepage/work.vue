@@ -12,7 +12,7 @@
       >
         <router-link
           :to="{ name: project.route, params: {} }"
-          @click.native="exitScrollLock"
+          @click.native="workNavigate"
           class="glass"
         >
           <div
@@ -21,7 +21,7 @@
           >
             <div class="color-header" :class="project.color"></div>
             <div class="flat-header" :class="project.color"></div>
-            <div class="project-logo" :class="{ 'unlimited': project.icon === 'dots' || project.icon === 'toucan' }">
+            <div class="project-logo" :class="{ 'larger': project.icon === 'dots' || project.icon === 'toucan' }">
               <span
                 v-if="project.icon === 'dots'"
                 class="icon is-large">
@@ -135,8 +135,9 @@ export default {
     }
   },
   methods: {
-    exitScrollLock () {
-      this.$events.$emit('exit-scroll-lock', event);
+    workNavigate () {
+      this.$events.$emit('fade-out-nav-menu');
+      this.$events.$emit('exit-scroll-lock');
     }
   }
 }
@@ -167,8 +168,8 @@ export default {
   .project-logo
     position: relative
     height: 36px
-    &.unlimited
-      height: auto
+    &.larger
+      height: 54px
 
   .color-header, .flat-header
     border-radius: $radius-large $radius-large 0 0

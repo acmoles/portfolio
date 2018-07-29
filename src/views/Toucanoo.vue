@@ -1,5 +1,6 @@
 <template>
   <WorkWrapper
+    :project="'toucanoo'"
     :icon="'/img/homepage/project-icons/toucanoo.svg'"
     :color="'purple'"
   >

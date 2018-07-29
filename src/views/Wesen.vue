@@ -1,5 +1,6 @@
 <template>
   <WorkWrapper
+    :project="'wesen'"
     :icon="'/img/homepage/project-icons/wesen.svg'"
     :color="'red'"
   >

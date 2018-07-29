@@ -51,7 +51,6 @@ export default {
     });
     this.$nextTick(function () {
       this.background = new Background();
-      this.background.start();
     })
   }
 }

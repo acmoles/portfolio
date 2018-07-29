@@ -22,6 +22,7 @@
       <div
         @click="menuToggle"
         class="gridicon"
+        :class="{ 'in-project' : canGoHome }"
       >
         <span></span>
       </div>
@@ -60,9 +61,17 @@ export default {
     }
   },
   created () {
-    this.$events.$on('navigate-project', () => {
+    this.$events.$on('navigate-project', (event) => {
       // Navigate to a project from anywhere
-      this.navColorScheme = 'is-light';
+      setTimeout(() => {
+        // Avoid popin mix layers
+        this.ensureMenuDismiss();
+      }, 500);
+      if (event === '2016') {
+        this.navColorScheme = 'is-dark';
+      } else {
+        this.navColorScheme = 'is-light';
+      }
       this.canGoHome = true;
     });
     this.$events.$on('scroll-trigger', (value) => {
@@ -87,11 +96,8 @@ export default {
     },
     scrollTo (event) {
       this.currentScrollLocation = event;
-      console.log('scroll location = ', this.currentScrollLocation);
+      this.ensureMenuDismiss();
 
-      // ensure menu is dismissed
-      this.menuActive = false;
-      this.$events.$emit('exit-scroll-lock', event);
       if (!this.canGoHome) {
         this.navColorScheme = 'is-dark';
       }
@@ -108,8 +114,13 @@ export default {
 
       smoothScroll(scrollTarget, time, undefined, scrollContext);
     },
+    ensureMenuDismiss() {
+      // ensure menu is dismissed
+      this.menuActive = false;
+      this.$events.$emit('exit-scroll-lock');
+    },
     menuToggle () {
-      this.$events.$emit('toggle-scroll-lock', event);
+      this.$events.$emit('toggle-scroll-lock');
       if (!this.canGoHome) {
         this.navColorScheme = this.menuActive ? 'is-dark' : 'is-light';
       }

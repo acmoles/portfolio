@@ -22,12 +22,13 @@
       color: $white
       border-bottom: 2px solid $white
 
-.nav.is-dark
-  .burger-wrapper
-    .hamburger, .gridicon
-      display: none
-      @media screen and (min-width: $desktop)
-        display: block
+.gridicon
+  opacity: 0
+  @media screen and (min-width: $desktop)
+    opacity: 1
+
+.gridicon.in-project
+  opacity: 1
 
 .burger-wrapper, .back-wrapper, .grid-wrapper
   pointer-events: all
@@ -54,21 +55,34 @@
 
 .gridicon > span
 	transition: opacity, box-shadow .2s ease
-  // font-family: icon
 
-.gridicon > span
-	background: $white
-	width: 3px
-	height: 3px
-	box-shadow: -.6em -.6em $white, 0 -.6em $white, .6em -.6em $white, -.6em 0 $white, .6em 0 $white, -.6em .6em $white, 0 .6em $white, .6em .6em $white
+.nav.is-light
+  .gridicon > span
+  	background: $white
+  	width: 3px
+  	height: 3px
+  	box-shadow: -.6em -.6em $white, 0 -.6em $white, .6em -.6em $white, -.6em 0 $white, .6em 0 $white, -.6em .6em $white, 0 .6em $white, .6em .6em $white
+
+  .gridicon:hover > span
+  	box-shadow: -.7em -.7em $white, 0 -.7em $white, .7em -.7em $white, -.7em 0 $white, .7em 0 $white, -.7em .7em $white, 0 .7em $white, .7em .7em $white
 
 
-.gridicon:hover > span
-	box-shadow: -.7em -.7em $white, 0 -.7em $white, .7em -.7em $white, -.7em 0 $white, .7em 0 $white, -.7em .7em $white, 0 .7em $white, .7em .7em $white
+  .gridicon:active > span
+  	box-shadow: -.5em -.5em $white, 0 -.5em $white, .5em -.5em $white, -.5em 0 $white, .5em 0 $white, -.5em .5em $white, 0 .5em $white, .5em .5em $white
+
+.nav.is-dark
+  .gridicon > span
+  	background: $slate
+  	width: 3px
+  	height: 3px
+  	box-shadow: -.6em -.6em $slate, 0 -.6em $slate, .6em -.6em $slate, -.6em 0 $slate, .6em 0 $slate, -.6em .6em $slate, 0 .6em $slate, .6em .6em $slate
+
+  .gridicon:hover > span
+  	box-shadow: -.7em -.7em $slate, 0 -.7em $slate, .7em -.7em $slate, -.7em 0 $slate, .7em 0 $slate, -.7em .7em $slate, 0 .7em $slate, .7em .7em $slate
 
 
-.gridicon:active > span
-	box-shadow: -.5em -.5em $white, 0 -.5em $white, .5em -.5em $white, -.5em 0 $white, .5em 0 $white, -.5em .5em $white, 0 .5em $white, .5em .5em $white
+  .gridicon:active > span
+  	box-shadow: -.5em -.5em $slate, 0 -.5em $slate, .5em -.5em $slate, -.5em 0 $slate, .5em 0 $slate, -.5em .5em $slate, 0 .5em $slate, .5em .5em $slate
 
 .gridicon:active > span
   opacity: 0.5

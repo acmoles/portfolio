@@ -45,7 +45,7 @@
       </div>
       <FooterNav
         :back="true"
-        :color="'is-light'"
+        :color="footerNavColor"
       />
     </section>
   </div>
@@ -63,6 +63,10 @@ export default {
     FooterNav,
   },
   props: {
+    project: {
+      type: String,
+      default: 'none'
+    },
     icon: {
       type: String,
       default: 'dots'
@@ -77,8 +81,13 @@ export default {
       contentVisible: false
     }
   },
+  computed: {
+    footerNavColor () {
+      return (this.color === 'grey' ? 'is-dark' : 'is-light')
+    }
+  },
   mounted () {
-    this.$events.$emit('navigate-project');
+    this.$events.$emit('navigate-project', this.project);
 
     let scrollContext = document.getElementById('app');
 
@@ -98,15 +107,20 @@ export default {
   .project-logo
     text-align: center
     position: relative
-    margin: 1.5em 0 3em 0
+    padding: 1.5em 0 3em 0
     .is-larger
-      transform: scale(1.5)
+      height: 4em
+      width: 4em
     @media screen and (min-width: $tablet)
-      margin: 3em 0
-      .icon
-        transform: scale(2)
+      padding: 0
+      .is-large
+        height: 5em
+        width: 5em
       .is-larger
-        transform: scale(2.5)
+        height: 5em
+        width: 8em
+      .icon i
+        font-size: 2em
 
   .page-glass
     position: relative
@@ -207,6 +221,7 @@ export default {
         width: 100%
       .other-link
         color: $white
+        font-size: 0.8em
         font-weight: 600
         padding-left: 1em
         padding-right: 1em

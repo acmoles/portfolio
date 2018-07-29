@@ -126,10 +126,9 @@
                 </p>
                 <p>
                   This portfolio consists of five case studies, three from toucanBox
-                  and two side projects. It also includes an overview of select projects
+                  and two side projects. It also includes an overview of select work
                   dating from before 2016.
                 </p>
-                <a @click="blurbForward"><i class="icon-dot-2 full-opacity blurb-icon"></i></a>
               </div>
               <div v-if="blurbName === 'extra'" key="extra" class="detail-text">
                 <p>
@@ -144,9 +143,15 @@
                   I work alongside developers, speaking their language, to ensure products ship with
                   the highest possible level of polish.
                 </p>
-                <a @click="blurbBack"><i class="icon-dot-2 full-opacity blurb-icon"></i></a>
               </div>
             </transition>
+            <a
+              class="blurb-toggle"
+              @click="blurbToggle"
+            >
+              <span class="blurb-button" :class="{ 'is-active' : blurbName === 'intro' }"></span>
+              <span class="blurb-button" :class="{ 'is-active' : blurbName === 'extra' }"></span>
+            </a>
           </div>
 
         </div>
@@ -174,8 +179,7 @@ export default {
       copyTextMessage: 'Email copied',
       optionsDropdown: false,
       emailDropdown: false,
-      blurbName: 'intro',
-      transitionName: 'slidedown'
+      blurbName: 'intro'
     }
   },
   methods: {
@@ -198,13 +202,8 @@ export default {
     toggleOptions () {
       this.optionsDropdown = !this.optionsDropdown;
     },
-    blurbForward () {
-      this.transitionName = 'slideright';
-      this.blurbName = 'extra';
-    },
-    blurbBack () {
-      this.transitionName = 'slideup';
-      this.blurbName = 'intro';
+    blurbToggle () {
+      this.blurbName = this.blurbName === 'extra' ? 'intro' : 'extra';
     }
   }
 }
@@ -250,6 +249,7 @@ export default {
     right: 0
     flex-grow: 1
     margin-bottom: 0 !important
+    border-radius: 0 0 $radius-large $radius-large
 
   .ghost-profile
     .image
@@ -286,6 +286,7 @@ export default {
           width: 256px
         img
           mix-blend-mode: multiply
+          border-radius: $radius-rounded
 
     .glass-body-details
       position: relative
@@ -345,7 +346,18 @@ export default {
     p span
       white-space: nowrap
 
-  .blurb-icon:before
-    margin: 0
-    font-size: 100%
+  .blurb-toggle
+    display: block
+    margin-top: 0.75em
+
+  .blurb-button
+    display: inline-block
+    width: 8px
+    height: 8px
+    margin-right: 0.25em
+    border-radius: $radius-rounded
+    background-color: $smoke
+    transition: background-color 0.4s ease
+    &.is-active
+      background-color: $green
 </style>

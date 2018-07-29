@@ -20,6 +20,7 @@
         <div class="hero-body">
           <Work
             :headers="false"
+
           />
         </div>
 
@@ -43,6 +44,11 @@ export default {
     return {
       menuVisible: false
     }
+  },
+  created () {
+    this.$events.$on('fade-out-nav-menu', () => {
+      this.menuVisible = false;
+    });
   },
   mounted () {
     setTimeout(() => {
@@ -71,7 +77,7 @@ export default {
     overflow-y: scroll
     .hero-body
       @media screen and (max-width: $tablet)
-        padding-top: 3.5em
+        padding-top: 4em
         padding-bottom: 6.5em
 
   .header-menu
