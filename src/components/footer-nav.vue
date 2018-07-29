@@ -5,6 +5,7 @@
     :class="navColorScheme"
     role="navigation"
     aria-label="footer navigation"
+    v-show="canGoHome"
   >
     <div class="back-wrapper">
       <button
@@ -49,7 +50,8 @@ export default {
   data () {
     return {
       navColorScheme: 'is-light',
-      menuActive: false
+      menuActive: false,
+      canGoHome: false
     }
   },
   created () {
@@ -57,11 +59,15 @@ export default {
       this.menuActive = false;
     });
     this.$events.$on('navigate-project', (event) => {
+      this.canGoHome = true;
       if (event === '2016') {
         this.navColorScheme = 'is-dark';
       } else {
         this.navColorScheme = 'is-light';
       }
+    });
+    this.$events.$on('cant-go-home', () => {
+      this.canGoHome = false;
     });
   },
   methods: {

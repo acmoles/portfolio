@@ -130,6 +130,7 @@ export default {
     backHome (event) {
       this.navColorScheme = 'is-dark';
       this.canGoHome = false;
+      this.$events.$emit('cant-go-home');
 
       let scrollTarget = event;
       this.$router.push('/', () => {
