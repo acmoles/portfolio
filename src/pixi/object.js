@@ -100,7 +100,7 @@ export class BackgroundObject {
 
   drawBox() {
     let responsiveScaleFactor = (64 * this.app.screen.width) / 1000,
-        objectSizeConstant = this.scale * anime.random(0.9, 1.1),
+        objectSizeConstant = this.scale * anime.random(0.95, 1.05),
         scaledSide =  responsiveScaleFactor * objectSizeConstant,
         scaledCorner = scaledSide / 12;
     this.graphics.beginFill(this.color);
@@ -116,7 +116,7 @@ export class BackgroundObject {
 
   drawPolygon(numberOfSides) {
     let responsiveScaleFactor = (64 * this.app.screen.width) / 1000,
-        objectSizeConstant = this.scale * anime.random(0.9, 1.1),
+        objectSizeConstant = this.scale * anime.random(0.95, 1.05),
         size = responsiveScaleFactor * objectSizeConstant,
         step  = 2 * Math.PI / numberOfSides, // Precalculate step value
         shift = (Math.PI / 180.0) * -18;

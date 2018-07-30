@@ -13,7 +13,11 @@ export class ObjectPool {
     this.isPaused = false;
     this.isGrey = false;
 
-    this.objectsPerLayer = 6;
+    if (window.innerWidth < 1500) {
+      this.objectsPerLayer = 6;
+    } else {
+      this.objectsPerLayer = 4;
+    }
     this.firstMake = true;
 
     this.colors = [];
@@ -85,7 +89,7 @@ export class ObjectPool {
       this.types[anime.random(0, this.types.length - 1)], // type
       scale, // scale
       anime.random(0, this.app.screen.width), // x
-      (this.app.screen.height * i) + anime.random(-300, 300), // y
+      (this.app.screen.height * anime.random(0, i)) + anime.random(-300, 300), // y
       anime.random(1, Math.PI) // rotation
     );
     layer.addChild(backgroundObject.graphics);
