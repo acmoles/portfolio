@@ -5,6 +5,8 @@ body, #loader
   width: 100%
   position: fixed
   top: 0
+  @media screen and (min-width: $desktop)
+    font-size: 1.2vw
 
 body
   background: linear-gradient($extraDarkSnow, $snow)
@@ -32,3 +34,9 @@ p
 
 *:focus
   outline: none
+
+// Typography
+
+h1, h2, h3, h4, h5, h6
+  font-family: $family-display
+  font-weight: 400 !important

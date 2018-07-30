@@ -122,9 +122,6 @@ export default {
     },
     menuToggle () {
       this.$events.$emit('toggle-scroll-lock');
-      if (!this.canGoHome) {
-        this.navColorScheme = this.menuActive ? 'is-dark' : 'is-light';
-      }
       this.menuActive = !this.menuActive;
     },
     backHome (event) {

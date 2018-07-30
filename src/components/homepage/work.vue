@@ -155,7 +155,9 @@ export default {
     height: 100%
 
   .glass-header
-    height: 80px
+    height: 5.25em
+    @media screen and (min-width: $fullhd)
+      height: 4em
     flex-shrink: 0
     // @media screen and (min-width: $desktop)
     //   height: 120px

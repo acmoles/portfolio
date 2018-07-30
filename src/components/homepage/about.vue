@@ -223,10 +223,13 @@ export default {
   // Translucent header
 
   .glass-header
-    height: 80px
+    border-radius: $radius-large $radius-large 0 0
+    height: 5.25em
     flex-grow: 0
     @media screen and (min-width: $desktop)
-      height: 238px
+      height: 15em
+    @media screen and (min-width: $fullhd)
+      height: 12em
 
   // Body content
 
@@ -272,6 +275,8 @@ export default {
       @media screen and (min-width: $desktop)
         top: -128px
         flex: 1
+      @media screen and (min-width: 1600px)
+        top: -158px
       .image
         margin: 0 0.75em
         height: 128px
@@ -284,6 +289,9 @@ export default {
           border-width: 10px
           height: 256px
           width: 256px
+        @media screen and (min-width: 1600px)
+          height: 320px
+          width: 320px
         img
           mix-blend-mode: multiply
           border-radius: $radius-rounded
@@ -295,6 +303,8 @@ export default {
         // top: -128px
         top: -64px
         text-align: center
+      @media screen and (min-width: 1600px)
+        top: -80px
 
     .title
       font-size: 1.5rem
@@ -318,7 +328,7 @@ export default {
     padding: 0.75em
     padding-bottom: 1.75em
     @media screen and (min-width: $desktop)
-      min-height: 380px
+      min-height: 22em
 
   .glass-body-actions
     margin-top: 0.5em

@@ -232,8 +232,8 @@
             <p>Cras in nibh lacinia, venenatis nisi et, auctor urna.</p>
             <div class="links-container">
               <a class="button is-primary is-rounded is-inverted is-outlined">
-                <span>View site</span>
-                <i class="icon-play full-opacity footer-icon"></i>
+                View site
+                <i class="icon-right-open-big full-opacity footer-icon"></i>
               </a>
               <a class="other-link" href="#">View other site</a>
             </div>

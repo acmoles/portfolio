@@ -201,9 +201,19 @@ export default {
       span
         margin-top: -0.1em
       i
-        position: absolute
-        right: 10px
-        font-size: 0.6em
+        // position: absolute
+        // right: 10px
+        // top: 50%
+        // transform: translateY(-50%)
+        // font-size: 15px
+        // height: 21px
+        &::before
+          width: auto
+          margin: 0
+          margin-left: 0.5em
+          font-size: 100%
+          font-weight: 1000
+        //   height: 15px
     .links-container
       text-align: center
       max-width: 300px

@@ -310,5 +310,8 @@ export default {
 
   @import '../sass/variables'
 
+  .button.is-primary.is-inverted.is-outlined:hover, .button.is-primary.is-inverted.is-outlined:focus
+    color: $slate
+
 
 </style>
