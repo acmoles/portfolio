@@ -1,4 +1,5 @@
 import * as PIXI from 'pixi.js'
+import * as filters from 'pixi-filters'
 import anime from 'animejs'
 import Rellax from 'rellax'
 
@@ -34,26 +35,32 @@ export class Background {
     }
 
     // Per layer blur filters
-    let filterSmall = new PIXI.filters.BlurFilter();
+    let filterSmall = new filters.KawaseBlurFilter();
     if (window.innerWidth < 600) {
       filterSmall.blur = 5;
     } else if (window.innerWidth > 1600) {
-      filterSmall.blur = 15;
+      filterSmall.blur = 20;
+    } else if (window.innerWidth > 2000) {
+      filterSmall.blur = 40;
     } else {
       filterSmall.blur = 10;
     }
-    filterSmall.quality = 1;
+    filterSmall.quality = 3;
+    filterSmall.autoFit = true;
     this.blurLayerSmall.filters = [filterSmall];
 
-    let filterLarge = new PIXI.filters.BlurFilter();
+    let filterLarge = new filters.KawaseBlurFilter();
     if (window.innerWidth < 600) {
       filterLarge.blur = 10;
     } else if (window.innerWidth > 1600) {
-      filterLarge.blur = 30;
+      filterLarge.blur = 40;
+    } else if (window.innerWidth > 2000) {
+      filterLarge.blur = 60;
     } else {
       filterLarge.blur = 25;
     }
-    filterLarge.quality = 1;
+    filterLarge.quality = 3;
+    filterLarge.autoFit = true;
     this.blurLayerLarge.filters = [filterLarge];
 
     // Global blur filter
@@ -93,7 +100,9 @@ export class Background {
     this.spinner = document.getElementById('spinner');
     setTimeout(() => {
       this.spinner.removeAttribute('style');
-      this.spinner.classList.add('active');
+      setTimeout(() => {
+        this.spinner.classList.add('active');
+      }, 100);
     }, 100);
 
     let ticks = 0;

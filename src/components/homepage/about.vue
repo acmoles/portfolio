@@ -269,29 +269,29 @@ export default {
 
     .profile
       position: relative
-      top: -64px
-      margin-bottom: -64px
+      top: -1em
+      margin-bottom: -1em
       flex: none
       @media screen and (min-width: $desktop)
-        top: -128px
+        top: -7.5em
         flex: 1
-      @media screen and (min-width: 1600px)
-        top: -158px
+      // @media screen and (min-width: 1600px)
+      //   top: -158px
       .image
         margin: 0 0.75em
-        height: 128px
-        width: 128px
+        height: 7.5em
+        width: 7.5em
         border: solid 5px transparent
         border-radius: $radius-rounded
         overflow: hidden
         @media screen and (min-width: $desktop)
           margin: 0 auto
           border-width: 10px
-          height: 256px
-          width: 256px
-        @media screen and (min-width: 1600px)
-          height: 320px
-          width: 320px
+          height: 16em
+          width: 16em
+        // @media screen and (min-width: 1600px)
+        //   height: 320px
+        //   width: 320px
         img
           mix-blend-mode: multiply
           border-radius: $radius-rounded
@@ -301,25 +301,25 @@ export default {
       @media screen and (min-width: $desktop)
         margin-left: 0
         // top: -128px
-        top: -64px
+        top: -6em
         text-align: center
-      @media screen and (min-width: 1600px)
-        top: -80px
+      // @media screen and (min-width: 1600px)
+      //   top: -80px
 
     .title
-      font-size: 1.5rem
+      font-size: 1.5em
       margin-top: 0.25em
       @media screen and (min-width: $tablet)
-        font-size: 2rem
+        font-size: 2em
 
     .subtitle
-      font-size: 1rem
+      font-size: 1em
       margin-bottom: 0.75em
       @media screen and (min-width: $tablet)
-        font-size: 1.25rem
+        font-size: 1.25em
 
     .location
-      font-size: 0.75rem
+      font-size: 0.75em
       opacity: 0.5
 
   // Content
@@ -334,7 +334,7 @@ export default {
     margin-top: 0.5em
     @media screen and (min-width: $desktop)
       margin-top: 0
-      max-width: 400px
+      max-width: 25em
     .button
       width: 100%
     .options
@@ -364,8 +364,8 @@ export default {
 
   .blurb-button
     display: inline-block
-    width: 8px
-    height: 8px
+    width: 0.5em
+    height: 0.5em
     margin-right: 0.25em
     border-radius: $radius-rounded
     background-color: $smoke

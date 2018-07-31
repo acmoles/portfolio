@@ -19,9 +19,12 @@
           <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
         </button>
       </div>
-      <div v-if="!menuActive" class="grid-wrapper">
+      <div
+        v-if="!menuActive" 
+        @click="menuToggle"
+        class="grid-wrapper"
+      >
         <div
-          @click="menuToggle"
           class="gridicon in-project"
         >
           <span></span>

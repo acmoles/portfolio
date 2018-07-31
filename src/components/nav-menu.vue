@@ -85,7 +85,7 @@ export default {
     justify-content: flex-end
     width: 100%
     position: absolute
-    padding: 20px
+    padding: 1em
     z-index: 2
 
 </style>

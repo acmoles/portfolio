@@ -13,14 +13,11 @@
         </button>
       </transition>
     </div>
-    <div class="burger-wrapper">
-      <!-- <button @click="menuToggle" :class="{ 'is-active': menuActive }" class="hamburger hamburger--3dx" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button> -->
+    <div
+      @click="menuToggle"
+      class="burger-wrapper"
+    >
       <div
-        @click="menuToggle"
         class="gridicon"
         :class="{ 'in-project' : canGoHome }"
       >

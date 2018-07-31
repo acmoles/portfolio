@@ -156,11 +156,7 @@ export default {
 
   .glass-header
     height: 5.25em
-    @media screen and (min-width: $fullhd)
-      height: 4em
     flex-shrink: 0
-    // @media screen and (min-width: $desktop)
-    //   height: 120px
     position: relative
     color: $white
     display: flex
@@ -169,9 +165,15 @@ export default {
 
   .project-logo
     position: relative
-    height: 36px
+    height: 2em
     &.larger
-      height: 54px
+      height: 3em
+    .icon.is-medium
+      width: 2em
+      height: 2em
+    .icon.is-large
+      width: 3em
+      height: 3em
 
   .color-header, .flat-header
     border-radius: $radius-large $radius-large 0 0

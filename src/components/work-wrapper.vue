@@ -164,7 +164,7 @@ export default {
     background: rgba(255, 255, 255, 0.75)
     padding: 1.5em 0.75em
     @media screen and (min-width: $tablet)
-      padding: 2em 1em
+      padding: 2em 1.5em
     h1
       font-size: 2em
       color: $steel
@@ -195,28 +195,20 @@ export default {
     p
       margin-bottom: 2em
     .button
-      min-width: 180px
       position: relative
       font-weight: 600
       span
         margin-top: -0.1em
       i
-        // position: absolute
-        // right: 10px
-        // top: 50%
-        // transform: translateY(-50%)
-        // font-size: 15px
-        // height: 21px
         &::before
           width: auto
           margin: 0
           margin-left: 0.5em
           font-size: 100%
           font-weight: 1000
-        //   height: 15px
     .links-container
       text-align: center
-      max-width: 300px
+      max-width: 16em
       margin: 0 auto
       a
         width: 100%
@@ -234,4 +226,10 @@ export default {
         &:hover, &:focus, &:active
           color: $white
           opacity: 0.8
+
+    .column.is-three-quarters
+      @media screen and (min-width: $desktop)
+        padding: 1em
+      @media screen and (min-width: $fullhd)
+        padding: 3em
 </style>

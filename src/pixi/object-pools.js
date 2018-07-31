@@ -13,10 +13,10 @@ export class ObjectPool {
     this.isPaused = false;
     this.isGrey = false;
 
-    if (window.innerWidth < 1500) {
-      this.objectsPerLayer = 6;
+    if (window.innerWidth > 1500) {
+      this.objectsPerLayer = 8;
     } else {
-      this.objectsPerLayer = 4;
+      this.objectsPerLayer = 6;
     }
     this.firstMake = true;
 
@@ -55,8 +55,11 @@ export class ObjectPool {
         // larger layer
         amount = 2;
         large = true;
+        scale = (index + 1) * 2;
+      } else {
+        scale = (index + 1) * 1.5;
       }
-      scale = (index + 1) * 1.5;
+
 
       let intro = true;
       // if (this.firstMake) {
