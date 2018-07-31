@@ -1,40 +1,44 @@
 <template>
   <footer
     id="footer-nav"
-    class="nav navbar footer"
-    :class="navColorScheme"
+    class="footer"
     role="navigation"
     aria-label="footer navigation"
     v-show="canGoHome"
   >
-    <div class="back-wrapper">
-      <button
-        v-if="!menuActive"
-        @click="navigate('about')"
-        class="hamburger"
-        type="button">
-        <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
-      </button>
-    </div>
-    <div v-if="!menuActive" class="grid-wrapper">
-      <div
-        @click="menuToggle"
-        class="gridicon in-project"
-      >
-        <span></span>
+    <div
+      class="nav navbar"
+      :class="navColorScheme"
+    >
+      <div class="back-wrapper">
+        <button
+          v-if="!menuActive"
+          @click="navigate('about')"
+          class="hamburger"
+          type="button">
+          <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
+        </button>
       </div>
+      <div v-if="!menuActive" class="grid-wrapper">
+        <div
+          @click="menuToggle"
+          class="gridicon in-project"
+        >
+          <span></span>
+        </div>
+      </div>
+
+      <transition name="slideup">
+        <template v-if="menuActive">
+
+          <MenuNav
+            :footer="true"
+            @dismiss="menuToggle"
+          />
+
+        </template>
+      </transition>
     </div>
-
-    <transition name="slideup">
-      <template v-if="menuActive">
-
-        <MenuNav
-          :footer="true"
-          @dismiss="menuToggle"
-        />
-
-      </template>
-    </transition>
   </footer>
 </template>
 

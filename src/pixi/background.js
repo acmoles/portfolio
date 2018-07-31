@@ -37,19 +37,23 @@ export class Background {
     let filterSmall = new PIXI.filters.BlurFilter();
     if (window.innerWidth < 600) {
       filterSmall.blur = 5;
+    } else if (window.innerWidth > 1600) {
+      filterSmall.blur = 15;
     } else {
       filterSmall.blur = 10;
     }
-    filterSmall.quality = 2;
+    filterSmall.quality = 1;
     this.blurLayerSmall.filters = [filterSmall];
 
     let filterLarge = new PIXI.filters.BlurFilter();
     if (window.innerWidth < 600) {
       filterLarge.blur = 10;
+    } else if (window.innerWidth > 1600) {
+      filterLarge.blur = 30;
     } else {
       filterLarge.blur = 25;
     }
-    filterLarge.quality = 2;
+    filterLarge.quality = 1;
     this.blurLayerLarge.filters = [filterLarge];
 
     // Global blur filter

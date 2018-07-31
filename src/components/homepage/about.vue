@@ -349,8 +349,10 @@ export default {
       padding-left: 0.75em
       padding-right: 0.75em
       .icon
-        position: relative
-        top: 0.1em
+        i::before
+          line-height: 0
+          font-size: 110%
+
 
   .content
     p span
