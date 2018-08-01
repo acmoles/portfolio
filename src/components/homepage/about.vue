@@ -137,7 +137,7 @@
                 </p>
                 <p>
                   My training in human-centred design, originally focussing on physical objects, helps
-                  me uncover user’s fundamental needs and make systematic decisions.
+                  me uncover users' fundamental needs and make systematic decisions.
                 </p>
                 <p>
                   I work alongside developers, speaking their language, to ensure products ship with
