@@ -183,7 +183,7 @@ export default {
     padding: 3em 0
     @media screen and (min-width: $tablet)
       padding: 1.5em
-      top: -3em
+      top: -2em
       margin-bottom: -8em
     .link-container
       text-align: center

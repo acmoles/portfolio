@@ -46,7 +46,7 @@
                 @click="scrollTo('work')"
                 role="button"
               >
-                Work
+                Portfolio
               </button>
             </div>
             <div class="column">
@@ -272,6 +272,7 @@ export default {
       top: -1em
       margin-bottom: -1em
       flex: none
+      text-align: center
       @media screen and (min-width: $desktop)
         top: -7.5em
         flex: 1
@@ -285,8 +286,8 @@ export default {
         border-radius: $radius-rounded
         overflow: hidden
         @media screen and (min-width: $desktop)
-          margin: 0 auto
-          border-width: 10px
+          display: inline-flex
+          border-width: 0.5em
           height: 16em
           width: 16em
         // @media screen and (min-width: 1600px)
@@ -351,7 +352,7 @@ export default {
       .icon
         i::before
           line-height: 0
-          font-size: 110%
+          font-size: 100%
 
 
   .content

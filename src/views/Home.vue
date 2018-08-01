@@ -66,7 +66,7 @@ export default {
 
   .hero-foot
     display: none
-    padding: 20px
+    padding: 1em
     position: absolute
     width: 100%
     bottom: 0
