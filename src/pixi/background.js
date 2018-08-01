@@ -45,7 +45,7 @@ export class Background {
     } else {
       filterSmall.blur = 10;
     }
-    filterSmall.quality = 2;
+    filterSmall.quality = 1;
     filterSmall.autoFit = true;
     this.blurLayerSmall.filters = [filterSmall];
 
@@ -59,7 +59,7 @@ export class Background {
     } else {
       filterLarge.blur = 25;
     }
-    filterLarge.quality = 2;
+    filterLarge.quality = 1;
     filterLarge.autoFit = true;
     this.blurLayerLarge.filters = [filterLarge];
 

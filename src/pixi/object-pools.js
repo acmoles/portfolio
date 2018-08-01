@@ -55,9 +55,9 @@ export class ObjectPool {
         // larger layer
         amount = 2;
         large = true;
-        scale = (index + 1) * 2;
-      } else {
         scale = (index + 1) * 1.5;
+      } else {
+        scale = (index + 1);
       }
 
 
