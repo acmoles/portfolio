@@ -13,14 +13,14 @@
       <div class="back-wrapper">
         <button
           v-if="!menuActive"
-          @click="navigate('about')"
+          @click="navigate('work')"
           class="hamburger"
           type="button">
           <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
         </button>
       </div>
       <div
-        v-if="!menuActive" 
+        v-if="!menuActive"
         @click="menuToggle"
         class="grid-wrapper"
       >

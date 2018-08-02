@@ -8,9 +8,12 @@
   >
     <div class="back-wrapper">
       <transition name="fade">
-        <button v-if="canGoHome" @click="backHome('about')" class="hamburger" type="button">
+        <button v-if="canGoHome" @click="backHome('work')" class="hamburger" type="button">
           <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
         </button>
+        <!-- <div v-else class="logotype">
+          ANTHONY MOLES
+        </div> -->
       </transition>
     </div>
     <div
@@ -82,6 +85,11 @@ export default {
         this.backHome(value);
       }, 750);
     });
+
+    // Initial scroll to work
+    setTimeout(() => {
+      this.scrollTo('work');
+    }, 1000);
   },
   methods: {
     navigate (event) {

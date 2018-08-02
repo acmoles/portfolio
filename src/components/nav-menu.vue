@@ -4,6 +4,11 @@
 
       <div class="hero is-fullheight" v-if="menuVisible">
         <div class="hero-head header-menu">
+          <!-- <div class="back-wrapper">
+            <div @click="navigate('about')" class="logotype">
+              About
+            </div>
+          </div> -->
           <div class="burger-wrapper">
             <button
               @click="$emit('dismiss')"
@@ -55,8 +60,10 @@ export default {
       this.menuVisible = true;
     }, 600);
   },
-  beforeDestroy () {
-    this.menuVisible = false;
+  methods: {
+    navigate (event) {
+      this.$events.$emit('navigate-footer', event);
+    }
   }
 }
 </script>
