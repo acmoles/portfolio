@@ -2,52 +2,39 @@
   <div class="page">
 
     <section id="scroll-area" class="hero is-fullheight">
-      <div class="hero-body"></div>
+      <div class="hero-body">
+        <div class="columns is-desktop is-gapless is-mobile">
+          <div class="column is-narrow header-extension">
+          </div>
+          <div class="column project-column">
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="work" class="hero is-fullheight">
       <div class="hero-body">
-        <Work
-          :headers="true"
-        />
-      </div>
-      <div class="hero-foot">
-        <button @click="scrollTo('about')" class="hamburger" type="button">
-          <span class="icon"><i class="icon-down-open-big full-opacity nav-icons"></i></span>
-        </button>
-      </div>
-    </section>
-
-    <section id="about" class="hero is-fullheight">
-      <div class="hero-body">
-        <About/>
-      </div>
-      <div class="hero-foot">
-        <button @click="scrollTo('work')" class="hamburger" type="button">
-          <span class="icon"><i class="icon-up-open-big full-opacity nav-icons"></i></span>
-        </button>
+        <div class="columns is-desktop is-gapless">
+          <div class="column is-narrow">
+            <About/>
+          </div>
+          <div class="column project-column">
+            <Work
+              :headers="true"
+            />
+          </div>
+        </div>
       </div>
     </section>
-
-    <!-- <section id="contact" class="hero is-fullheight">
-      <div class="hero-body">
-        <Contact/>
-      </div>
-      <div class="hero-foot">
-        <button @click="scrollTo('about')" class="hamburger" type="button">
-          <span class="icon"><i class="icon-up-open-big full-opacity nav-icons"></i></span>
-        </button>
-      </div>
-    </section> -->
 
   </div>
 </template>
 
 <script>
 
-import About from '@/components/homepage/about.vue'
-import Work from '@/components/homepage/work.vue'
-// import Contact from '@/components/homepage/contact.vue'
+import About from '@/components/about.vue'
+import Work from '@/components/work.vue'
+// import Contact from '@/componentscontact.vue'
 
 export default {
   name: 'Home',
@@ -68,18 +55,19 @@ export default {
 
   @import '../sass/variables'
 
-  .hero-foot
-    display: none
-    padding: 1em
-    position: absolute
+  .columns.is-gapless
     width: 100%
-    bottom: 0
+    min-height: 100vh
+
+  .project-column
+    display: flex
+    align-items: center
+
+  .header-extension
+    background: linear-gradient( rgba($white, 0), rgba($white, 0), rgba($white, 0.35) )
+    width: 100%
     @media screen and (min-width: $desktop)
-      display: flex
-      justify-content: flex-end
-    // Centre on very large screens?
-    // @media screen and (min-width: $fullhd)
-    //   padding: 1.5em
-    //   justify-content: center
+      width: 13em
+
 
 </style>

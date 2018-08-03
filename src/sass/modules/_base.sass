@@ -26,6 +26,8 @@ p
 #canvas
   transform: scale3D(1.1, 1.1, 1.1)
   filter: blur(1em)
+  @media screen and (min-width: $fullhd)
+    filter: blur(2em)
 // #canvas
   // opacity: 0
   // transition: opacity 1s ease
@@ -42,4 +44,3 @@ p
 
 h1, h2, h3, h4, h5, h6
   font-family: $family-display
-  font-weight: 400 !important

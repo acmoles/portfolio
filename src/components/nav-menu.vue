@@ -38,7 +38,7 @@
 
 <script>
 
-import Work from '@/components/homepage/work.vue'
+import Work from '@/components/work.vue'
 
 export default {
   name: 'MenuNav',
@@ -61,6 +61,7 @@ export default {
     }, 600);
   },
   methods: {
+    // TODO: fix about event and styling
     navigate (event) {
       this.$events.$emit('navigate-footer', event);
     }

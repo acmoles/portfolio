@@ -211,7 +211,7 @@ export default {
 
 <style scoped lang="sass">
 
-  @import '../../sass/variables'
+  @import '../sass/variables'
 
   .glass
     border-radius: $radius-large

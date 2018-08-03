@@ -1,23 +1,27 @@
 @import '../variables'
 
 .container
+  @media screen and (min-width: $widescreen)
+    max-width: 75%
+    width: 75%
   @media screen and (min-width: $fullhd)
-    max-width: 65%
+    max-width: 60%
+    width: 60%
 
 .hero
   position: relative
 
 .hero-body
-  padding: 2em 0.75em
-  @media screen and (min-width: $tablet)
-    padding: 1.5em
+  padding: 0
 
-.hero-body.first-section
-  padding: 0.75em 0.75em 2em 0.75em
-  @media screen and (min-width: $tablet)
-    padding: 1.5em
+.hero.is-medium
+  .hero-body
+    @media screen and (min-width: $tablet)
+      padding-top: 6em
+      padding-bottom: 6em
 
-.hero-body.last-section
-  padding: 2em 0.75em 3.5em 0.75em
-  @media screen and (min-width: $tablet)
-    padding: 1.5em
+.hero.is-large
+  .hero-body
+    @media screen and (min-width: $tablet)
+      padding-top: 9em
+      padding-bottom: 9em

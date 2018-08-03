@@ -34,7 +34,7 @@
       <div class="overlap-filler is-bottom"></div>
     </section>
 
-    <section class="hero is-medium page-footer" :class="{ 'is-visible': contentVisible }">
+    <section class="hero is-large page-footer" :class="{ 'is-visible': contentVisible }">
       <div class="color-header" :class="color"></div>
       <div class="flat-header" :class="color"></div>
       <div class="hero-body">
@@ -98,7 +98,7 @@ export default {
   .project-logo
     text-align: center
     position: relative
-    padding: 1.5em 0 3em 0
+    padding: 3.5em 0 5em 0
     .is-larger
       height: 4em
       width: 4em
@@ -129,8 +129,8 @@ export default {
     min-height: 3em
     margin-bottom: 0
     margin: 0 0.75em
-    @media screen and (min-width: $tablet)
-      margin: 0 1em
+    @media screen and (min-width: $desktop)
+      margin: 0
 
   .page-glass-section
     padding: 0.75em
@@ -180,7 +180,7 @@ export default {
   .page-footer-container
     color: $white
     position: relative
-    padding: 3em 0
+    padding: 5em 0.75em
     @media screen and (min-width: $tablet)
       padding: 1.5em
       top: -2em

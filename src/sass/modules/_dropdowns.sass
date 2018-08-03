@@ -1,5 +1,11 @@
 @import '../variables'
 
+.dropdown-menu
+  text-align: left
+  min-width: 11em
+  left: 50%
+  transform: translateX(-50%)
+
 .dropdown
   width: 100%
   .dropdown-trigger
@@ -18,35 +24,14 @@
   right: 0
   bottom: 0
   top: 0
-  border-radius: $radius-large
+  border-radius: 10px
 
 .dropdown-arrow
   width: 20px
   height: 20px
-  bottom: -5px
-  &.center
-    left: 50%
-    transform: translateX(-50%) rotate(45deg)
-  &.right
-    right: 10px
-    transform: rotate(45deg)
-    @media screen and (min-width: $desktop)
-      left: 50%
-      transform: translateX(-50%) rotate(45deg)
-
-.dropdown.is-right
-  .dropdown-menu.email-dropdown
-    text-align: center
-    right: 50%
-    transform: translateX(50%)
-    .dropdown-content
-      padding-bottom: 0.6em
-
-.dropdown.is-right
-  .dropdown-menu.options-dropdown
-    @media screen and (min-width: $desktop)
-      right: 50%
-      transform: translateX(50%)
+  top: -5px
+  left: 50%
+  transform: translateX(-50%) rotate(45deg)
 
 .dropdown-item
   .icon

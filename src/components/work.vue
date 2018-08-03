@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container project-container">
 
     <div class="columns is-multiline">
 
@@ -15,42 +15,51 @@
           @click.native="workNavigate"
           class="glass"
         >
-          <div
-            v-if="headers"
-            class="glass-header"
-          >
-            <div class="color-header" :class="project.color"></div>
-            <div class="flat-header" :class="project.color"></div>
-            <div class="project-logo" :class="{ 'larger': project.icon === 'dots' || project.icon === 'toucan' }">
-              <span
-                v-if="project.icon === 'dots'"
-                class="icon is-large">
-                <i class="icon-dot-3 full-opacity"></i>
-              </span>
-              <span
-                v-else-if="project.icon === 'toucan'"
-                class="icon is-large">
-                <img src="/img/homepage/project-icons/toucan.svg" alt="project icon">
-              </span>
-              <span
-                v-else
-                class="icon is-medium">
-                <img :src="project.icon" alt="project icon">
-              </span>
+          <div class="glass-header">
+            <div v-if="headers" class="color-header" :class="project.color"></div>
+            <div v-if="headers" class="flat-header" :class="project.color"></div>
+            <div v-if="!headers" class="dark-header"></div>
+
+            <div v-if="logoIcons" class="logo-container">
+              <div class="project-logo" :class="{ 'larger': project.icon === 'dots' || project.icon === 'toucan' }">
+                <span
+                  v-if="project.icon === 'dots'"
+                  class="icon is-large">
+                  <i class="icon-dot-3 full-opacity"></i>
+                </span>
+                <span
+                  v-else-if="project.icon === 'toucan'"
+                  class="icon is-large">
+                  <img src="/img/homepage/project-icons/toucan.svg" alt="project icon">
+                </span>
+                <span
+                  v-else
+                  class="icon is-medium">
+                  <img :src="project.icon" alt="project icon">
+                </span>
+              </div>
             </div>
+
+
+            <div
+              class="glass-body content"
+            >
+              <div class="project-description">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+              </div>
+            </div>
+
+            <div class="hover-indicator">
+              <span></span>
+            </div>
+
           </div>
-          <div
-            class="glass-body content"
-            :class="{'all-rounded': !headers }"
-          >
-            <div class="project-description">
-              <h4>{{ project.title }}</h4>
-              <p>{{ project.description }}</p>
-            </div>
-            <div class="project-footer">
-              <p class="client">{{ project.client }} | {{ project.date }}</p>
-            </div>
+
+          <div :class="{ 'dark-footer' : !headers }" class="project-footer content">
+            <p class="client">{{ project.client }} | {{ project.date }}</p>
           </div>
+
         </router-link>
       </div>
 
@@ -70,6 +79,7 @@ export default {
   },
   data () {
     return {
+      logoIcons: false,
       projects: [
         {
           index: 'onboarding',
@@ -145,20 +155,30 @@ export default {
 
 <style scoped lang="sass">
 
-  @import '../../sass/variables'
+  @import '../sass/variables'
+
+  .project-container
+    @media screen and (max-width: $desktop)
+      padding: 2.5em 0.75em 3em 0.75em
 
   .glass
     overflow: hidden
     display: flex
     flex-direction: column
+    justify-content: space-between
     flex-grow: 1
     height: 100%
+    color: $white
+    transition: transform 0.4s ease
 
   .glass-header
-    height: 5.25em
-    flex-shrink: 0
     position: relative
-    color: $white
+    display: flex
+    flex-direction: column
+    height: 100%
+
+  .logo-container
+    height: 4.5em
     display: flex
     justify-content: center
     align-items: center
@@ -175,90 +195,99 @@ export default {
       width: 3em
       height: 3em
 
-  .color-header, .flat-header
+  .color-header, .flat-header, .dark-header
     border-radius: $radius-large $radius-large 0 0
 
   .glass-body
+    padding: 1em 0.75em
+    position: relative
     height: 100%
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    background: rgba(255, 255, 255, 0.9)
-    border-radius: 0 0 $radius-large $radius-large
-    &.all-rounded
-      border-radius: $radius-large
-    padding: 0.75em
-    color: $slate
-    &:hover, &:focus, &:active
-      color: $slate
-    h4
+    margin-bottom: 0 !important
+    h3
+      color: $white
+      opacity: 0.95
+      font-size: 1.2em
       transition: color 0.4s ease
       margin-bottom: 0.5em
-      &:hover, &:focus, &:active
-        color: $black
     p
-      margin-bottom: 1.5em
-      &.client
-        margin-bottom: 0
+      opacity: 0.9
 
   .project-footer
+    padding: 0.75em
+    background: rgba($white, 0.9)
+    border-radius: 0 0 $radius-large $radius-large
+    color: $slate
     p
       font-size: 0.75em
       opacity: 0.5
 
-  // Color dependent hover effects
+  // Hover effects
+
+  .hover-indicator
+    height: 0.25em
+    position: relative
+    span
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      top: 0
+      background: $darkBlue
+      transition: transform 0.4s ease
+      transform: translateX(-105%)
+
+  .glass
+    &:hover, &:active
+      .hover-indicator
+        span
+          transform: translateX(0%)
+  .router-link-exact-active
+    &:hover, &:active
+      .hover-indicator
+        span
+          transform: translateX(-105%)
 
   .blue
-    a:hover, a:active, a:active
-      h4
-        color: $darkBlue
+    .hover-indicator
+      span
+        background: $darkBlue
 
   .red
-    a:hover, a:active, a:active
-      h4
-        color: $red
+    .hover-indicator
+      span
+        background: darken($red, 20%)
 
   .yellow
-    a:hover, a:active, a:active
-      h4
-        color: $darkYellow
-
-  .orange
-    a:hover, a:active, a:active
-      h4
-        color: $darkOrange
+    .hover-indicator
+      span
+        background: darken($darkYellow, 5%)
 
   .black
-    a:hover, a:active, a:active
-      h4
-        color: darken($black, 20%)
+    .hover-indicator
+      span
+        background: darken($steel, 5%)
 
   .green
-    a:hover, a:active, a:active
-      h4
-        color: $darkGreen
-
-  .grey
-    a:hover, a:active, a:active
-      h4
-        color: $silver
+    .hover-indicator
+      span
+        background: $darkGreen
 
   .purple
-    a:hover, a:active, a:active
-      h4
-        color: $darkPurple
+    .hover-indicator
+      span
+        background: $darkPurple
 
   // In menus specific styles
 
   .router-link-exact-active
     cursor: not-allowed
     .glass-body
-      h4, p
+      h3, p
         opacity: 0.5
-
-  .router-link-exact-active
-    h4
-      color: $slate !important
-
+  .dark-footer
+    background-color: lighten($steel, 2%)
+    p
+      color: $silver
+      opacity: 1
 
 </style>
