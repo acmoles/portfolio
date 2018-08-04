@@ -64,7 +64,7 @@ export default {
     align-items: center
 
   .header-extension
-    background: linear-gradient( rgba($white, 0), rgba($white, 0), rgba($white, 0.35) )
+    background: linear-gradient( rgba($white, 0), rgba($white, 0), rgba($white, 0), rgba($white, 0.35) )
     width: 100%
     @media screen and (min-width: $desktop)
       width: 13em

@@ -5,8 +5,9 @@
       <div class="dropdown is-left is-active">
         <div class="dropdown-trigger">
           <button
-            class="button is-primary is-rounded"
+            class="button is-rounded about-button"
             role="button"
+            @click="aboutToggle"
           >
             About
           </button>
@@ -17,7 +18,7 @@
       <div class="dropdown is-left is-active">
         <div class="dropdown-trigger">
           <button
-            class="button is-rounded is-outlined options"
+            class="button is-rounded options"
             @click="toggleOptions"
             role="button"
             aria-haspopup="true"
@@ -40,7 +41,7 @@
                 v-clipboard:error="onError"
               >
                 <span class="icon is-small">
-                  <i class="icon-mail full-opacity"></i>
+                  <i class="icon-mail-squared full-opacity"></i>
                 </span> {{ copyTextMessage }}
               </a>
               <a href="" target="_blank" class="dropdown-item">
@@ -58,20 +59,37 @@
         </transition>
       </div>
     </div>
+
+    <transition name="slideleft">
+      <template v-if="aboutActive">
+
+        <MenuNav
+          :menuId="'about-popup'"
+          @dismiss="aboutToggle"
+        />
+
+      </template>
+    </transition>
+
   </div>
 
 </template>
 
 <script>
 
+import MenuNav from '@/components/nav-menu.vue'
+
 export default {
   name: 'AboutActions',
+  components: {
+    MenuNav
+  },
   data () {
     return {
       email: 'info@acmoles.design',
       copyTextMessage: 'Copy email',
       optionsDropdown: false,
-      emailDropdown: false,
+      aboutActive: false,
     }
   },
   methods: {
@@ -95,6 +113,10 @@ export default {
           this.optionsDropdown = false;
         }, 4000)
       }
+    },
+    aboutToggle () {
+      this.$events.$emit('toggle-scroll-lock');
+      this.aboutActive = !this.aboutActive;
     }
   }
 }
@@ -104,23 +126,27 @@ export default {
   @import '../sass/variables'
 
   .glass-body-actions
-    max-width: 16em
+    max-width: 13em
     width: 100%
     display: inline-flex
     position: relative
     top: -1em
-    margin: 0.5em 0.75em
+    padding: 0.5em 0.75em
     .button
       width: 100%
-    .options
       background-color: transparent
-      color: $extraDarkSmoke
       border-color: $extraDarkSmoke
       &:active, &:hover
         border-color: darken($extraDarkSmoke, 10%)
         color: darken($extraDarkSmoke, 10%)
       &:focus
         box-shadow: 0 0 0 0.125em rgba($extraDarkSmoke, 0.25)
+    .about-button
+      color: $slate
+      &:active, &:hover
+        color: $black
+    .options
+      color: $extraDarkSmoke
       padding-left: 0.75em
       padding-right: 0.75em
       .icon

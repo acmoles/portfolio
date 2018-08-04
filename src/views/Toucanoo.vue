@@ -4,13 +4,17 @@
     :icon="'/img/homepage/project-icons/toucanoo.svg'"
     :color="'purple'"
   >
+    <template slot="titles">
+      <div class="content">
+        <h1 class="project-title">Adding value to a physical product with digital content</h1>
+        <p class="client purple">toucanBox</p>
+      </div>
+    </template>
+
     <template slot="content">
       <div class="page-glass-section first-section">
 
         <div class="content">
-          <p class="client purple">toucanBox</p>
-          <!-- <p class="client">toucanBox <span>Q3 2017</span></p> -->
-          <h1 class="project-title">Adding value to a physical product with digital content</h1>
 
           <p><strong>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</strong></p>
           <h2>Second level</h2>

@@ -57,7 +57,11 @@
           </div>
 
           <div :class="{ 'dark-footer' : !headers }" class="project-footer content">
-            <p class="client">{{ project.client }} | {{ project.date }}</p>
+            <p class="client">{{ project.client }}
+              <span class="date">
+                {{ project.date }}
+              </span>
+            </p>
           </div>
 
         </router-link>
@@ -125,7 +129,7 @@ export default {
           index: 'toucanoo',
           icon: '/img/homepage/project-icons/toucanoo.svg',
           color: 'purple',
-          title: 'Adding value to a physical product with digital content',
+          title: 'Adding value to a physical product with digital content <br>',
           route: 'toucanoo',
           description: 'Can we address customer concern regarding value for money without increasing operational cost?',
           client: 'toucanBox',
@@ -159,7 +163,8 @@ export default {
 
   .project-container
     @media screen and (max-width: $desktop)
-      padding: 2.5em 0.75em 3em 0.75em
+      padding: 1.5em 0.75em 3em 0.75em
+      max-width: 20em
 
   .glass
     overflow: hidden
@@ -214,12 +219,18 @@ export default {
 
   .project-footer
     padding: 0.75em
+    padding-top: 0.5em
     background: rgba($white, 0.9)
     border-radius: 0 0 $radius-large $radius-large
     color: $slate
     p
       font-size: 0.75em
       opacity: 0.5
+      display: inline-flex
+      justify-content: space-between
+      width: 100%
+    .icon-calendar::before
+      font-size: 100%
 
   // Hover effects
 
@@ -255,7 +266,7 @@ export default {
   .red
     .hover-indicator
       span
-        background: darken($red, 20%)
+        background: darken($red, 25%)
 
   .yellow
     .hover-indicator
@@ -265,7 +276,7 @@ export default {
   .black
     .hover-indicator
       span
-        background: darken($steel, 5%)
+        background: darken($black, 10%)
 
   .green
     .hover-indicator
@@ -285,7 +296,7 @@ export default {
       h3, p
         opacity: 0.5
   .dark-footer
-    background-color: lighten($steel, 2%)
+    background-color: lighten($steel, 1.5%)
     p
       color: $silver
       opacity: 1

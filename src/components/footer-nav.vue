@@ -22,7 +22,7 @@
       <div
         v-if="!menuActive"
         @click="menuToggle"
-        class="grid-wrapper"
+        class="burger-wrapper"
       >
         <div
           class="gridicon in-project"
@@ -35,7 +35,7 @@
         <template v-if="menuActive">
 
           <MenuNav
-            :footer="true"
+            :menuId="'footer-nav'"
             @dismiss="menuToggle"
           />
 

@@ -15,6 +15,8 @@ export class ObjectPool {
 
     if (window.innerWidth > 1500) {
       this.objectsPerLayer = 8;
+    } else if (window.innerWidth < 600) {
+      this.objectsPerLayer = 3;
     } else {
       this.objectsPerLayer = 6;
     }
@@ -63,10 +65,10 @@ export class ObjectPool {
 
       let intro = true;
       // if (this.firstMake) {
-      //   intro = false;
+      //   // intro = false;
       //   this.firstMake = false;
       // } else {
-      //   intro = true;
+      //   // intro = true;
       // }
 
       for (var i = 0; i < amount; i++) {
@@ -86,13 +88,20 @@ export class ObjectPool {
       color = this.colors[anime.random(0, this.colors.length - 1)];
     }
 
+    let y;
+    if (window.innerWidth >= 600 && this.firstMake) {
+      y = this.app.screen.height * anime.random(0 + (i * 0.5), i = i > 3 ? 4 : i + 1);
+    } else {
+      y = this.app.screen.height * anime.random(0.25, 1);
+    }
+
     let backgroundObject = new BackgroundObject(
       this.app, // app
       color, // color
       this.types[anime.random(0, this.types.length - 1)], // type
       scale, // scale
       anime.random(0, this.app.screen.width), // x
-      (this.app.screen.height * anime.random(0, i)) + anime.random(-300, 300), // y
+      y, // y
       anime.random(1, Math.PI) // rotation
     );
     layer.addChild(backgroundObject.graphics);
@@ -153,6 +162,8 @@ export class ObjectPool {
   addFirstBatch() {
     this.makeObjects(this.objectsPerLayer);
     this.removedObjectCount = 0;
+    this.firstMake = false;
+
     this.checkAllVisible();
 
     this.checkVisibleTimer = setInterval(() => {

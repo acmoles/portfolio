@@ -32,7 +32,7 @@
       <template v-if="menuActive">
 
         <MenuNav
-          :footer="false"
+          :menuId="'header-nav'"
           @dismiss="menuToggle"
         />
 

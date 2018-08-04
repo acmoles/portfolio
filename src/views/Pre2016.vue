@@ -4,13 +4,17 @@
     :icon="'dots'"
     :color="'grey'"
   >
+    <template slot="titles">
+      <div class="content">
+        <h1 class="project-title">A selection of projects prior to 2016</h1>
+        <p class="client grey">Various</p>
+      </div>
+    </template>
+
     <template slot="content">
       <div class="page-glass-section first-section">
 
         <div class="content">
-          <p class="client grey">Various</p>
-          <!-- <p class="client">toucanBox <span>Q3 2017</span></p> -->
-          <h1 class="project-title">A selection of projects prior to 2016</h1>
 
           <h2>Second level</h2>
           <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>

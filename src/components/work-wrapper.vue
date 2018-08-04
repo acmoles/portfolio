@@ -5,22 +5,11 @@
       <div class="color-header" :class="color"></div>
       <div class="flat-header" :class="color"></div>
       <div class="hero-body">
-        <div class="project-logo">
-          <span
-            v-if="icon === 'dots'"
-            class="icon is-large">
-            <i class="icon-dot-3 full-opacity"></i>
-          </span>
-          <span
-            v-else-if="icon === '/img/homepage/project-icons/toucan.svg'"
-            class="icon is-large is-larger">
-            <img :src="icon" alt="project icon">
-          </span>
-          <span
-            v-else
-            class="icon is-large">
-            <img :src="icon" alt="project icon">
-          </span>
+        <div class="container titles" :class="color">
+          <slot name="titles">
+            This will only be displayed if there is no content
+            to be distributed.
+          </slot>
         </div>
       </div>
     </section>
@@ -95,23 +84,30 @@ export default {
 <style scoped lang="sass">
   @import '../sass/variables'
 
-  .project-logo
-    text-align: center
-    position: relative
-    padding: 3.5em 0 5em 0
-    .is-larger
-      height: 4em
-      width: 4em
+  // Header
+
+  .titles
+    padding: 0 0.75em
+    @media screen and (max-width: $desktop)
+      padding: 4em 1.5em
+    .client
+      font-weight: 600
+      font-size: 1.5em
+    color: $white
+    &.grey
+      color: $slate
+      h1
+        color: $slate
+    h1
+      color: $white
+      font-size: 2.5em
+      @media screen and (max-width: $desktop)
+        font-size: 2.25em
+      margin-bottom: 0.1em
     @media screen and (min-width: $tablet)
-      padding: 0
-      .is-large
-        height: 5em
-        width: 5em
-      .is-larger
-        height: 5em
-        width: 8em
-      .icon i
-        font-size: 2em
+      padding: 0 1.5em
+
+  // Page
 
   .page-glass
     position: relative
@@ -121,7 +117,6 @@ export default {
     &.is-visible
       animation: fadeUp 1200ms both
       animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
-
 
   .page-glass-divider, .page-glass-section, .overlap-filler
     display: flex
@@ -169,6 +164,9 @@ export default {
       font-size: 2em
       color: $steel
       font-weight: 600
+
+
+  // Footer
 
   .page-footer
     margin-top: -6em

@@ -4,14 +4,17 @@
     :icon="'/img/homepage/project-icons/wesen.svg'"
     :color="'red'"
   >
+    <template slot="titles">
+      <div class="content">
+        <h1 class="project-title">Building a jewellery brand with user generated products</h1>
+        <p class="client red">Wesen</p>
+      </div>
+    </template>
+
     <template slot="content">
       <div class="page-glass-section first-section">
 
         <div class="content">
-          <p class="client red">Wesen</p>
-          <!-- <p class="client">toucanBox <span>Q3 2017</span></p> -->
-          <h1 class="project-title">Building a jewellery brand with user generated products</h1>
-
           <h2>Second level</h2>
           <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
           <ul>

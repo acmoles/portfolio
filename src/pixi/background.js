@@ -71,7 +71,9 @@ export class Background {
     this.objects = new ObjectPool(this.app, this.layers);
 
     this.relaxInstances = [];
-    this.startRelax();
+    if (window.innerWidth >= 600) {
+      this.startRelax();
+    }
 
     this.appendCanvas();
   }
