@@ -150,7 +150,7 @@ export class ObjectPool {
 
   removeAllReplace() {
     this.removeAll();
-    this.isGrey = true;
+    // this.isGrey = true;
 
     setTimeout(() => {
       // console.log('remove all, ', this.objectPool);

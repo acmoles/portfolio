@@ -1,7 +1,6 @@
 <template>
   <div
     id="app"
-    :class="{'scroll-lock': scrollLock }"
   >
     <div id="relax">
       <div class="relax"></div>
@@ -38,16 +37,10 @@ export default {
     return {
       background: {},
       transitionName: 'fade',
-      scrollLock: false
+      scrollLock: true
     }
   },
   created () {
-    // this.$events.$on('toggle-scroll-lock', () => {
-    //   this.scrollLock = !this.scrollLock;
-    // });
-    // this.$events.$on('exit-scroll-lock', () => {
-    //   this.scrollLock = false;
-    // });
     this.$events.$on('remove-all-background', () => {
       if (this.background) {
         this.background.removeAll();
@@ -61,7 +54,24 @@ export default {
     this.$nextTick(function () {
       this.background = new Background();
     })
-  }
+  },
+  methods: {
+    toggleBodyClass(addRemoveClass, className) {
+      const el = document.body;
+
+      if (addRemoveClass === 'add-class') {
+        el.classList.add(className);
+      } else {
+        el.classList.remove(className);
+      }
+    },
+  },
+  // mounted() {
+  //   this.toggleBodyClass('add-class', 'scroll-lock');
+  // },
+  // destroyed() {
+  //   this.toggleBodyClass('remove-class', 'scroll-lock');
+  // }
 }
 
 </script>
@@ -70,7 +80,7 @@ export default {
 // Shared styles
 @import './sass/styles'
 
-#app.scroll-lock
+.scroll-lock
   overflow-y: hidden
 
 </style>

@@ -47,7 +47,7 @@ export class Background {
     }
     filterSmall.quality = 1;
     filterSmall.autoFit = true;
-    this.blurLayerSmall.filters = [filterSmall];
+    // this.blurLayerSmall.filters = [filterSmall];
 
     let filterLarge = new filters.KawaseBlurFilter();
     if (window.innerWidth < 600) {
@@ -61,7 +61,7 @@ export class Background {
     }
     filterLarge.quality = 1;
     filterLarge.autoFit = true;
-    this.blurLayerLarge.filters = [filterLarge];
+    // this.blurLayerLarge.filters = [filterLarge];
 
     // Global blur filter
     // let filterAll = new PIXI.filters.BlurFilter();
@@ -82,14 +82,10 @@ export class Background {
     this.app = new PIXI.Application({
       autoStart: false,
       autoResize: true,
-      resolution: 0.1,
+      resolution: 0.2,
       // devicePixelRatio
       // transparent: true
     });
-  }
-
-  start() {
-
   }
 
   appendCanvas() {
@@ -105,7 +101,7 @@ export class Background {
       setTimeout(() => {
         this.spinner.classList.add('active');
       }, 100);
-    }, 100);
+    }, 400);
 
     let ticks = 0;
     this.app.ticker.add(() => {
@@ -156,7 +152,6 @@ export class Background {
   }
 
   startRelax() {
-    let app = document.getElementById('app');
     let relax = document.querySelectorAll('.relax');
 
     let self = this;
@@ -164,7 +159,6 @@ export class Background {
     relax.forEach((relax, index) => {
       let relaxInstance = new Rellax(relax, {
         speed: (index + 1) * 2,
-        wrapper: app,
         callback: function(positions) {
           // callback every position change
           self.layers[index].y = positions.y;

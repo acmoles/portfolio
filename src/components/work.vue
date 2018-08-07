@@ -1,13 +1,13 @@
 <template>
   <div class="container project-container">
 
-    <div class="columns is-multiline">
+    <div class="columns is-multiline is-desktop">
 
       <div
         v-for="project in projects"
         :key="project.index"
         :id="project.index"
-        class="column is-one-third"
+        class="column is-one-third-desktop"
         :class="project.color"
       >
         <router-link

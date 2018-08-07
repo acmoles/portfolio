@@ -115,9 +115,8 @@ export default {
       }
 
       let time = 750;
-      let scrollContext = document.getElementById('app');
 
-      smoothScroll(scrollTarget, time, undefined, scrollContext);
+      smoothScroll(scrollTarget, time);
     },
     ensureMenuDismiss() {
       // ensure menu is dismissed

@@ -69,9 +69,7 @@ export default {
   mounted () {
     this.$events.$emit('navigate-project', this.project);
 
-    let scrollContext = document.getElementById('app');
-
-    smoothScroll(0, 750, this.fadeInContent, scrollContext);
+    smoothScroll(0, 750, this.fadeInContent);
   },
   methods: {
     fadeInContent () {
