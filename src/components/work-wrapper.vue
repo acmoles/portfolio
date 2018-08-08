@@ -38,8 +38,6 @@
 
 <script>
 
-import * as smoothScroll from 'smoothscroll'
-
 export default {
   name: 'WorkWrapper',
   props: {
@@ -68,8 +66,11 @@ export default {
   },
   mounted () {
     this.$events.$emit('navigate-project', this.project);
+    this.$events.$emit('scroll-trigger', 'top');
 
-    smoothScroll(0, 750, this.fadeInContent);
+    setTimeout(() => {
+      this.fadeInContent();
+    }, 700);
   },
   methods: {
     fadeInContent () {
@@ -128,7 +129,8 @@ export default {
   .page-glass-section
     padding: 0.75em
     padding-bottom: 1.5em
-    background: rgba(255, 255, 255, 0.95)
+    // background: rgba(255, 255, 255, 0.95)
+    background: $white
     @media screen and (min-width: $tablet)
       padding: 1.5em
       padding-bottom: 3em
@@ -138,23 +140,23 @@ export default {
       border-radius: 0 0 $radius-large $radius-large
 
   .overlap-filler
-    border-radius: $radius-large $radius-large 0 0
+    // border-radius: $radius-large $radius-large 0 0
     position: absolute
-    top: 0
-    left: 0
-    right: 0
-    height: 8em
-    z-index: -1
-    background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
-    &.is-bottom
-      background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1))
-      top: auto
-      bottom: 0
-      border-radius: 0 0 $radius-large $radius-large
+    // top: 0
+    // left: 0
+    // right: 0
+    // height: 8em
+    // z-index: -1
+    // background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
+    // &.is-bottom
+    //   background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1))
+    //   top: auto
+    //   bottom: 0
+    //   border-radius: 0 0 $radius-large $radius-large
 
 
   .page-glass-divider
-    background: rgba(255, 255, 255, 0.75)
+    background: rgba(255, 255, 255, 0.90)
     padding: 1.5em 0.75em
     @media screen and (min-width: $tablet)
       padding: 2em 1.5em

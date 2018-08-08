@@ -92,13 +92,6 @@ export default {
     }, 1000);
   },
   methods: {
-    navigate (event) {
-      if (this.canGoHome) {
-        this.backHome(event);
-      } else {
-        this.scrollTo(event);
-      }
-    },
     scrollTo (event) {
       this.currentScrollLocation = event;
       this.ensureMenuDismiss();

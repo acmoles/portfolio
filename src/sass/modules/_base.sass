@@ -18,7 +18,9 @@ body
   right: 0
   bottom: 0
   transform: scale3D(1.1, 1.1, 1.1)
-  filter: blur(1.5em)
+  filter: blur(1em)
+  @media screen and (min-width: $desktop)
+    filter: blur(1.5em)
   @media screen and (min-width: $fullhd)
     filter: blur(2em)
 // #canvas
