@@ -61,6 +61,10 @@ export default {
     }
   },
   created () {
+    // Initial scroll to work
+    this.scrollTo('work');
+    // TODO non animated scrollTo, able to pass a callback
+
     this.$events.$on('navigate-project', (event) => {
       // Navigate to a project from anywhere
       setTimeout(() => {
@@ -85,16 +89,11 @@ export default {
         this.backHome(value);
       }, 750);
     });
-
-    // Initial scroll to work
-    setTimeout(() => {
-      this.scrollTo('work');
-    }, 1000);
   },
   methods: {
     scrollTo (event) {
+
       this.currentScrollLocation = event;
-      this.ensureMenuDismiss();
 
       if (!this.canGoHome) {
         this.navColorScheme = 'is-dark';
@@ -109,7 +108,9 @@ export default {
 
       let time = 750;
 
-      smoothScroll(scrollTarget, time);
+      smoothScroll(scrollTarget, time, () => {
+        this.ensureMenuDismiss();
+      });
     },
     ensureMenuDismiss() {
       // ensure menu is dismissed
