@@ -42,8 +42,8 @@ export class BackgroundObject {
     let yDirection = anime.random(-1, 1) / this.scale;
 
     this.app.ticker.add((delta) => {
-        this.graphics.x += 0.4 * delta * xDirection;
-        this.graphics.y += 0.2 * delta * yDirection;
+        this.graphics.x += 0.5 * delta * xDirection;
+        this.graphics.y += 0.3 * delta * yDirection;
         this.bounds = this.graphics.getBounds();
     });
 

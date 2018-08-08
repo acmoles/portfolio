@@ -56,7 +56,8 @@ export default {
   },
   data () {
     return {
-      contentVisible: false
+      contentVisible: false,
+      headerVisible: false
     }
   },
   computed: {
@@ -70,11 +71,17 @@ export default {
 
     setTimeout(() => {
       this.fadeInContent();
-    }, 700);
+    }, 800);
+    setTimeout(() => {
+      this.$events.$emit('remove-all-background');
+    }, 2000);
   },
   methods: {
     fadeInContent () {
       this.contentVisible = true;
+    },
+    fadeInHeader () {
+      this.headerVisible = true;
     }
   }
 }
@@ -110,12 +117,16 @@ export default {
 
   .page-glass
     position: relative
+    border-radius: $radius-large
+    background: rgba($white, 0.90)
     top: -3em
     z-index: 1
     opacity: 0
+    transform: translateY(1em)
+    transition: all 1s ease
     &.is-visible
-      animation: fadeUp 1200ms both
-      animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+      transform: translateY(0)
+      opacity: 1
 
   .page-glass-divider, .page-glass-section, .overlap-filler
     display: flex
@@ -129,7 +140,6 @@ export default {
   .page-glass-section
     padding: 0.75em
     padding-bottom: 1.5em
-    // background: rgba(255, 255, 255, 0.95)
     background: $white
     @media screen and (min-width: $tablet)
       padding: 1.5em
@@ -154,9 +164,7 @@ export default {
     //   bottom: 0
     //   border-radius: 0 0 $radius-large $radius-large
 
-
   .page-glass-divider
-    background: rgba(255, 255, 255, 0.90)
     padding: 1.5em 0.75em
     @media screen and (min-width: $tablet)
       padding: 2em 1.5em
@@ -164,7 +172,6 @@ export default {
       font-size: 2em
       color: $steel
       font-weight: 600
-
 
   // Footer
 

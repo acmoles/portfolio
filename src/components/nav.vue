@@ -19,6 +19,7 @@
     <div
       @click="menuToggle"
       class="burger-wrapper"
+      v-if="canGoHome"
     >
       <div
         class="gridicon"
@@ -61,10 +62,6 @@ export default {
     }
   },
   created () {
-    // Initial scroll to work
-    this.scrollTo('work');
-    // TODO non animated scrollTo, able to pass a callback
-
     this.$events.$on('navigate-project', (event) => {
       // Navigate to a project from anywhere
       setTimeout(() => {
@@ -115,11 +112,9 @@ export default {
     ensureMenuDismiss() {
       // ensure menu is dismissed
       this.menuActive = false;
-      this.$events.$emit('exit-scroll-lock');
       this.$events.$emit('footer-menu-dismiss');
     },
     menuToggle () {
-      this.$events.$emit('toggle-scroll-lock');
       this.menuActive = !this.menuActive;
     },
     backHome (event) {

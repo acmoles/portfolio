@@ -88,12 +88,7 @@ export class ObjectPool {
       color = this.colors[anime.random(0, this.colors.length - 1)];
     }
 
-    let y;
-    if (window.innerWidth >= 600 && this.firstMake) {
-      y = this.app.screen.height * anime.random(0 + (i * 0.5), i = i > 3 ? 4 : i + 1);
-    } else {
-      y = this.app.screen.height * anime.random(0.25, 1);
-    }
+    let y = ( this.app.screen.height * anime.random(0 + (i * 0.5), i = i > 2 ? 2 : i + 1) ) - ( this.app.screen.height / 1.2 );
 
     let backgroundObject = new BackgroundObject(
       this.app, // app
@@ -172,11 +167,11 @@ export class ObjectPool {
       }
     }, 5000);
 
-    this.replaceAllTimer = setInterval(() => {
-      if (!this.isPaused) {
-        this.removeAllReplace();
-      }
-    }, 60000);
+    // this.replaceAllTimer = setInterval(() => {
+    //   if (!this.isPaused) {
+    //     this.removeAllReplace();
+    //   }
+    // }, 60000);
 
     document.addEventListener(this.visibilityChange, () => {
       if (document[this.hidden]) {

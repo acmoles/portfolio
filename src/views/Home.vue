@@ -34,7 +34,7 @@
 
 import About from '@/components/about.vue'
 import Work from '@/components/work.vue'
-// import Contact from '@/componentscontact.vue'
+// import Contact from '@/components/contact.vue'
 
 export default {
   name: 'Home',
@@ -42,6 +42,9 @@ export default {
     About,
     Work,
     // Contact
+  },
+  mounted () {
+    this.$events.$emit('replace-all-background');
   },
   methods: {
     scrollTo (event) {
@@ -68,6 +71,5 @@ export default {
     width: 100%
     @media screen and (min-width: $desktop)
       width: 13em
-
 
 </style>

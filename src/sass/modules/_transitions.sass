@@ -10,30 +10,14 @@
 .fade-enter
   transition-delay: 1s
 
-@keyframes fade
-  from
-    opacity: 0
-
-  to
-    opacity: 1
-
 // Fade up in
 .fadeup-enter-active, .fadeup-leave-active
   transition: transform, opacity 1.2s
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1)
 
 .fadeup-enter, .fadeup-leave-to
   transform: translateY(1em)
   opacity: 0
-
-@keyframes fadeUp
-  from
-    opacity: 0
-    transform: translateY(1em)
-
-  to
-    opacity: 1
-    transform: translateY(0)
 
 // Bulge in animation
 .bulge-enter-active, .bulge-leave-active
