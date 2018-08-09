@@ -7,16 +7,18 @@
   top: 0
 
 body
-  background: linear-gradient($extraDarkSnow, $snow)
+  background: $snow
   @media screen and (min-width: $fullhd)
     font-size: 1vw
 
 #canvas
-  position: fixed
+  position: absolute
   top: 0
   left: 0
-  right: 0
-  bottom: 0
+  height: 95%
+  width: 95%
+  overflow-y: hidden
+  overflow-x: hidden
   transform: scale3D(1.1, 1.1, 1.1)
   filter: blur(1em)
   @media screen and (min-width: $desktop)

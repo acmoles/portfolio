@@ -7,7 +7,15 @@
 .fade-enter, .fade-leave-to
   opacity: 0
 
-.fade-enter
+// Fade delay transition
+
+.fade-delay-enter-active, .fade-delay-leave-active
+  transition: opacity 0.4s ease-out
+
+.fade-delay-enter, .fade-delay-leave-to
+  opacity: 0
+
+.fade-delay-enter-active
   transition-delay: 1s
 
 // Fade up in

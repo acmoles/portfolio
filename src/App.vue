@@ -28,7 +28,7 @@ export default {
   data () {
     return {
       background: {},
-      transitionName: 'fade',
+      transitionName: 'fade-delay',
       backgroundReady: false,
       scrollLock: true,
       firstBatch: true

@@ -1,17 +1,6 @@
 <template>
   <div class="page">
 
-    <section id="scroll-area" class="hero is-fullheight">
-      <div class="hero-body">
-        <div class="columns is-desktop is-gapless is-mobile">
-          <div class="column is-narrow header-extension">
-          </div>
-          <div class="column project-column">
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="work" class="hero is-fullheight">
       <div class="hero-body">
         <div class="columns is-desktop is-gapless">
@@ -66,10 +55,10 @@ export default {
     display: flex
     align-items: center
 
-  .header-extension
-    background: linear-gradient( rgba($white, 0), rgba($white, 0), rgba($white, 0), rgba($white, 0.35) )
-    width: 100%
-    @media screen and (min-width: $desktop)
-      width: 13em
+  // .header-extension
+  //   background: linear-gradient( rgba($white, 0), rgba($white, 0), rgba($white, 0), rgba($white, 0.35) )
+  //   width: 100%
+  //   @media screen and (min-width: $desktop)
+  //     width: 13em
 
 </style>

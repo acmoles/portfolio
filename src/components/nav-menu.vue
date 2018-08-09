@@ -52,7 +52,6 @@
           <template v-else>
             <Work
               :headers="false"
-
             />
           </template>
         </div>

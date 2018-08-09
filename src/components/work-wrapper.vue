@@ -15,12 +15,10 @@
     </section>
 
     <section class="container page-glass" :class="{ 'is-visible': contentVisible }">
-      <div class="overlap-filler"></div>
       <slot name="content">
         This will only be displayed if there is no content
         to be distributed.
       </slot>
-      <div class="overlap-filler is-bottom"></div>
     </section>
 
     <section class="hero is-large page-footer" :class="{ 'is-visible': contentVisible }">
@@ -117,30 +115,29 @@ export default {
 
   .page-glass
     position: relative
-    border-radius: $radius-large
-    background: rgba($white, 0.90)
     top: -3em
+    background: $white
+    border-radius: $radius-large
     z-index: 1
     opacity: 0
     transform: translateY(1em)
-    transition: all 1s ease
+    transition: opacity 1s ease, transform 1s ease
+    margin: 0 0.75em
+    @media screen and (min-width: $desktop)
+      margin: 0 auto
     &.is-visible
       transform: translateY(0)
       opacity: 1
 
-  .page-glass-divider, .page-glass-section, .overlap-filler
+  .page-glass-divider, .page-glass-section
     display: flex
     flex-direction: column
     min-height: 3em
     margin-bottom: 0
-    margin: 0 0.75em
-    @media screen and (min-width: $desktop)
-      margin: 0
 
   .page-glass-section
     padding: 0.75em
     padding-bottom: 1.5em
-    background: $white
     @media screen and (min-width: $tablet)
       padding: 1.5em
       padding-bottom: 3em
@@ -149,9 +146,9 @@ export default {
     &.last-section
       border-radius: 0 0 $radius-large $radius-large
 
-  .overlap-filler
+  // .overlap-filler
     // border-radius: $radius-large $radius-large 0 0
-    position: absolute
+    // position: absolute
     // top: 0
     // left: 0
     // right: 0
