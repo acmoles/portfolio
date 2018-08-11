@@ -6,7 +6,7 @@
   cursor: pointer;
   outline: none !important;
 
-  transition-property: opacity, filter, transform;
+  transition-property: opacity, transform;
   transition-duration: $hamburger-hover-transition-duration;
   transition-timing-function: $hamburger-hover-transition-timing-function;
 
@@ -19,66 +19,13 @@
   margin: 0;
   overflow: visible;
 
+  transform: scale3D(1, 1, 1);
+
   &:hover {
-    @if $hamburger-hover-use-filter == true {
-      filter: $hamburger-hover-filter;
-    }
-    @else {
-      opacity: $hamburger-hover-opacity;
-    }
-    transform: scale(1.1);
+    transform: scale3D(1.1, 1.1, 1.1);
   }
   &:active {
-    transform: scale(0.9);
+    opacity: 0.9;
+    transform: scale3D(0.9, 0.9, 0.9);
   }
 }
-
-.hamburger-box {
-  width: $hamburger-layer-width;
-  height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
-  display: inline-block;
-  position: relative;
-}
-
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: $hamburger-layer-height / -2;
-
-  &,
-  &::before,
-  &::after {
-    width: $hamburger-layer-width;
-    height: $hamburger-layer-height;
-    background-color: $hamburger-layer-color-white;
-    border-radius: $hamburger-layer-border-radius;
-    position: absolute;
-    transition-property: transform, color;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-  }
-
-  &::before {
-    top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
-  }
-
-  &::after {
-    bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
-  }
-}
-
-// .nav.is-light {
-//   .hamburger-inner {
-//     &,
-//     &::before,
-//     &::after {
-//       background-color: $hamburger-layer-color-white;
-//     }
-//   }
-// }

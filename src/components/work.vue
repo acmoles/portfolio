@@ -12,34 +12,14 @@
       >
         <router-link
           :to="{ name: project.route, params: {} }"
-          @click.native="workNavigate"
+          event=""
+          @click.native="workNavigate(project.route)"
           class="glass"
         >
           <div class="glass-header">
             <div v-if="headers" class="color-header" :class="project.color"></div>
             <div v-if="headers" class="flat-header" :class="project.color"></div>
             <div v-if="!headers" class="dark-header"></div>
-
-            <div v-if="logoIcons" class="logo-container">
-              <div class="project-logo" :class="{ 'larger': project.icon === 'dots' || project.icon === 'toucan' }">
-                <span
-                  v-if="project.icon === 'dots'"
-                  class="icon is-large">
-                  <i class="icon-dot-3 full-opacity"></i>
-                </span>
-                <span
-                  v-else-if="project.icon === 'toucan'"
-                  class="icon is-large">
-                  <img src="/img/homepage/project-icons/toucan.svg" alt="project icon">
-                </span>
-                <span
-                  v-else
-                  class="icon is-medium">
-                  <img :src="project.icon" alt="project icon">
-                </span>
-              </div>
-            </div>
-
 
             <div
               class="glass-body content"
@@ -83,7 +63,6 @@ export default {
   },
   data () {
     return {
-      logoIcons: false,
       projects: [
         {
           index: 'onboarding',
@@ -149,9 +128,13 @@ export default {
     }
   },
   methods: {
-    workNavigate () {
-      this.$events.$emit('fade-out-nav-menu');
-      this.$events.$emit('exit-scroll-lock');
+    workNavigate (route) {
+      // :to="{ name: project.route, params: {} }"
+      if (route !== this.$router.currentRoute.name) {
+        this.$events.$emit('fade-out-nav-menu');
+        this.$router.push('/' + route);
+      }
+
     }
   }
 }
@@ -181,24 +164,6 @@ export default {
     display: flex
     flex-direction: column
     height: 100%
-
-  .logo-container
-    height: 4.5em
-    display: flex
-    justify-content: center
-    align-items: center
-
-  .project-logo
-    position: relative
-    height: 2em
-    &.larger
-      height: 3em
-    .icon.is-medium
-      width: 2em
-      height: 2em
-    .icon.is-large
-      width: 3em
-      height: 3em
 
   .color-header, .flat-header, .dark-header
     border-radius: $radius-large $radius-large 0 0

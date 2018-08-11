@@ -3,12 +3,11 @@
     <transition name="fade">
 
       <div class="hero is-fullheight" v-if="menuVisible">
-        <div class="hero-head header-menu">
-
-          <div class="burger-wrapper">
+        <div class="hero-head nav navbar">
+          <div class="navbar-brand header-menu">
             <button
               @click="$emit('dismiss')"
-              class="hamburger hamburger--3dx is-active"
+              class="navbar-item burger-wrapper hamburger"
               type="button"
             >
               <span class="icon is-medium">
@@ -19,7 +18,7 @@
         </div>
 
         <template v-if="menuId === 'about-popup'">
-          <div class="hero-body menu-container">
+          <div class="hero-body">
             <div class="content about-copy">
               <h3>
                 I help companies build useful and pleasing products
@@ -51,7 +50,7 @@
           </div>
           </template>
           <template v-else>
-            <div class="hero-body">
+            <div class="hero-body menu-container">
               <Work
                 :headers="false"
               />
@@ -121,17 +120,15 @@ export default {
     display: flex
     justify-content: flex-end
     width: 100%
-    position: absolute
-    padding: 1.1em
+    position: relative
     z-index: 2
+
+  .navbar-item
+    padding: 1.1em 1.25em
 
   .menu-container
     @media screen and (min-width: $desktop)
       padding: 0 6.5em
-
-  .icon.is-medium
-    width: 1.25em
-    height: 1.25em
 
   .content
     color: $white

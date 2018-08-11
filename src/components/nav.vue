@@ -6,28 +6,34 @@
     role="navigation"
     aria-label="main navigation"
   >
-    <div class="back-wrapper">
-      <transition name="fade">
-        <button v-if="canGoHome" @click="backHome('work')" class="hamburger" type="button">
-          <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
-        </button>
-        <!-- <div v-else class="logotype">
-          ANTHONY MOLES
-        </div> -->
-      </transition>
-    </div>
+  <transition name="fade">
     <div
-      @click="menuToggle"
-      class="burger-wrapper"
       v-if="canGoHome"
+      class="navbar-brand"
     >
-      <div
-        class="gridicon"
-        :class="{ 'in-project' : canGoHome }"
+      <button
+        @click="backHome('work')"
+        class="navbar-item back-wrapper hamburger"
+        type="button"
       >
-        <span></span>
-      </div>
+          <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
+      </button>
+      <button
+        @click="menuToggle"
+        class="navbar-item burger-wrapper hamburger"
+        type="button"
+      >
+        <span class="icon is-large">
+          <template v-if="navColorScheme === 'dark'">
+            <img src="/img/homepage/grid-dark.svg" alt="">
+          </template>
+          <template v-else>
+            <img src="/img/homepage/grid.svg" alt="">
+          </template>
+        </span>
+      </button>
     </div>
+  </transition>
 
     <transition name="slidedown">
       <template v-if="menuActive">
@@ -56,7 +62,7 @@ export default {
   data () {
     return {
       canGoHome: false,
-      navColorScheme: 'is-dark',
+      navColorScheme: 'dark',
       menuActive: false,
       currentScrollLocation: 'about'
     }
@@ -67,13 +73,13 @@ export default {
       setTimeout(() => {
         // Avoid popin mix layers
         this.ensureMenuDismiss();
+        this.canGoHome = true;
       }, 500);
       if (event === '2016') {
-        this.navColorScheme = 'is-dark';
+        this.navColorScheme = 'dark';
       } else {
-        this.navColorScheme = 'is-light';
+        this.navColorScheme = 'light';
       }
-      this.canGoHome = true;
     });
     this.$events.$on('scroll-trigger', (value) => {
       // Get scroll events from any component
@@ -92,17 +98,12 @@ export default {
 
       this.currentScrollLocation = event;
 
-      if (!this.canGoHome) {
-        this.navColorScheme = 'is-dark';
-      }
-
       let scrollTarget;
       if (event === 'top') {
         scrollTarget = 0;
       } else {
         scrollTarget = document.getElementById(event);
       }
-
       let time = 750;
 
       smoothScroll(scrollTarget, time, () => {
@@ -118,7 +119,7 @@ export default {
       this.menuActive = !this.menuActive;
     },
     backHome (event) {
-      this.navColorScheme = 'is-dark';
+      this.navColorScheme = 'dark';
       this.canGoHome = false;
       this.$events.$emit('cant-go-home');
 

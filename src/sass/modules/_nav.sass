@@ -2,97 +2,45 @@
 
 .nav
   position: absolute
-  padding: 1em
   width: 100%
   display: flex
   justify-content: space-between
   align-items: flex-start
   z-index: 2
-  pointer-events: none
+  // pointer-events: none
   transition: color 0.8s ease
 
-.footer
-  position: relative
-  padding: 0
-  background-color: transparent
-  .nav
-    align-items: flex-end
-
-.nav.is-light
+.nav.light
   color: $white
   a
     color: $white
     &:hover, &:focus, &:active
       color: $white
 
-.logotype
-  font-family: $family-display
-  font-size: 1.2em
+.navbar-brand .navbar-item
+  display: flex
+  align-items: center
 
-.gridicon
-  opacity: 0
-  @media screen and (min-width: $desktop)
-    opacity: 1
+.navbar-brand
+  width: 100%
+  justify-content: space-between
 
-.gridicon.in-project
-  opacity: 1
-
-.burger-wrapper, .back-wrapper, .grid-wrapper
-  pointer-events: all
-  position: relative
-  z-index: 2
-  cursor: pointer
+.navbar-item
+  padding: 1em 1.25em
 
 .burger-wrapper
   display: flex
+  align-items: center
 
 .nav-icons
   font-size: 1.25em
   position: relative
   left: -0.25em
 
-// Grid icon
-
-.gridicon
-	width: 1.5em
-	height: 1.5em
-	display: inline-flex
-	align-items: center
-	justify-content: center
-
-.gridicon > span
-	transition: opacity, box-shadow .2s ease
-	width: 2px
-	height: 2px
-
-@media screen and (min-width: $largeformat)
-  .gridicon > span
-    width: 3px
-    height: 3px
-
-.nav.is-light
-  .gridicon > span
-  	background: $white
-  	box-shadow: -.5em -.5em $white, 0 -.5em $white, .5em -.5em $white, -.5em 0 $white, .5em 0 $white, -.5em .5em $white, 0 .5em $white, .5em .5em $white
-
-  .gridicon:hover > span
-  	box-shadow: -.7em -.7em $white, 0 -.7em $white, .7em -.7em $white, -.7em 0 $white, .7em 0 $white, -.7em .7em $white, 0 .7em $white, .7em .7em $white
-
-
-  .gridicon:active > span
-  	box-shadow: -.4em -.4em $white, 0 -.4em $white, .4em -.4em $white, -.4em 0 $white, .4em 0 $white, -.4em .4em $white, 0 .4em $white, .4em .4em $white
-
-.nav.is-dark
-  .gridicon > span
-  	background: $slate
-  	box-shadow: -.5em -.5em $slate, 0 -.5em $slate, .5em -.5em $slate, -.5em 0 $slate, .5em 0 $slate, -.5em .5em $slate, 0 .5em $slate, .5em .5em $slate
-
-  .gridicon:hover > span
-  	box-shadow: -.7em -.7em $slate, 0 -.7em $slate, .7em -.7em $slate, -.7em 0 $slate, .7em 0 $slate, -.7em .7em $slate, 0 .7em $slate, .7em .7em $slate
-
-
-  .gridicon:active > span
-  	box-shadow: -.4em -.4em $slate, 0 -.4em $slate, .4em -.4em $slate, -.4em 0 $slate, .4em 0 $slate, -.4em .4em $slate, 0 .4em $slate, .4em .4em $slate
-
-.gridicon:active > span
-  opacity: 0.5
+.nav
+  .icon.is-medium
+    width: 1.15em
+    height: 1.15em
+  .icon.is-large
+    width: 1.25em
+    height: 1.25em

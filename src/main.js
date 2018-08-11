@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import './registerServiceWorker'
 import VueEvents from 'vue-events'
-import VeeValidate from 'vee-validate'
+// import VeeValidate from 'vee-validate'
 import VueClipboard from 'vue-clipboard2'
 import lazySizes from 'lazysizes'
 // Object.assign(lazySizes.cfg, {
@@ -11,9 +11,9 @@ import lazySizes from 'lazysizes'
 // });
 lazySizes.init();
 
-Vue.use(VeeValidate, {
-  events: 'change'
-});
+// Vue.use(VeeValidate, {
+//   events: 'change'
+// });
 Vue.use(VueEvents)
 Vue.use(VueClipboard)
 

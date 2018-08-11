@@ -2,33 +2,34 @@
   <footer
     id="footer-nav"
     class="footer"
-    role="navigation"
-    aria-label="footer navigation"
     v-show="canGoHome"
   >
-    <div
+    <nav
       class="nav navbar"
+      role="navigation"
+      aria-label="footer navigation"
       :class="navColorScheme"
     >
-      <div class="back-wrapper">
-        <button
-          v-if="!menuActive"
-          @click="navigate('work')"
-          class="hamburger"
-          type="button">
-          <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
-        </button>
-      </div>
       <div
         v-if="!menuActive"
-        @click="menuToggle"
-        class="burger-wrapper"
+        class="navbar-brand"
       >
-        <div
-          class="gridicon in-project"
+        <button
+          @click="navigate('work')"
+          class="navbar-item back-wrapper hamburger"
+          type="button"
         >
-          <span></span>
-        </div>
+            <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
+        </button>
+        <button
+          @click="menuToggle"
+          class="navbar-item burger-wrapper hamburger"
+          type="button"
+        >
+          <span class="icon is-large">
+            <img src="/img/homepage/grid.svg" alt="">
+          </span>
+        </button>
       </div>
 
       <transition name="slideup">
@@ -41,7 +42,7 @@
 
         </template>
       </transition>
-    </div>
+    </nav>
   </footer>
 </template>
 
@@ -56,7 +57,7 @@ export default {
   },
   data () {
     return {
-      navColorScheme: 'is-light',
+      navColorScheme: 'light',
       menuActive: false,
       canGoHome: false
     }
@@ -68,9 +69,9 @@ export default {
     this.$events.$on('navigate-project', (event) => {
       this.canGoHome = true;
       if (event === '2016') {
-        this.navColorScheme = 'is-dark';
+        this.navColorScheme = 'dark';
       } else {
-        this.navColorScheme = 'is-light';
+        this.navColorScheme = 'light';
       }
     });
     this.$events.$on('cant-go-home', () => {
@@ -82,7 +83,6 @@ export default {
       this.$events.$emit('navigate-footer', event);
     },
     menuToggle () {
-      this.$events.$emit('toggle-scroll-lock');
       this.menuActive = !this.menuActive;
     }
   }
@@ -92,11 +92,14 @@ export default {
 <style scoped lang="sass">
   @import '../sass/variables'
 
+  .footer
+    position: relative
+    padding: 0
+    background-color: transparent
+    .nav
+      align-items: flex-end
+
   .nav
     bottom: 0
-
-  .icon
-    position: relative
-    top: 0.25em
 
 </style>
