@@ -147,7 +147,7 @@ export class Background {
       anime({
         targets: layer,
         y: amount,
-        easing: 'easeInOutQuad',
+        easing: 'easeInOutQuart',
         duration: 750
       });
     });

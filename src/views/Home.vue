@@ -34,11 +34,6 @@ export default {
   },
   mounted () {
     this.$events.$emit('replace-all-background');
-  },
-  methods: {
-    scrollTo (event) {
-      this.$events.$emit('scroll-trigger', event);
-    }
   }
 }
 </script>

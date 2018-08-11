@@ -72,6 +72,7 @@ export default {
 
   .glass
     width: 100%
+    background: rgba($white, 0.35)
     @media screen and (min-width: $desktop)
       width: 13em
     display: flex
@@ -83,7 +84,6 @@ export default {
   .glass-header
     height: 7em
     flex-grow: 0
-    background: rgba($white, 0.35)
 
   // Body content
 
@@ -93,7 +93,7 @@ export default {
 
   .glass-ghost-body
     background: $white
-    opacity: 0.75
+    opacity: 0.5
     position: absolute
     top: 0
     bottom: 0
@@ -145,7 +145,7 @@ export default {
 
   .location
     font-size: 0.75em
-    opacity: 0.5
+    color: $silver
 
   .copywrite
     display: none

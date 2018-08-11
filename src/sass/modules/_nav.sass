@@ -62,12 +62,17 @@
 
 .gridicon > span
 	transition: opacity, box-shadow .2s ease
+	width: 2px
+	height: 2px
+
+@media screen and (min-width: $largeformat)
+  .gridicon > span
+    width: 3px
+    height: 3px
 
 .nav.is-light
   .gridicon > span
   	background: $white
-  	width: 0.12em
-  	height: 0.12em
   	box-shadow: -.5em -.5em $white, 0 -.5em $white, .5em -.5em $white, -.5em 0 $white, .5em 0 $white, -.5em .5em $white, 0 .5em $white, .5em .5em $white
 
   .gridicon:hover > span
@@ -80,8 +85,6 @@
 .nav.is-dark
   .gridicon > span
   	background: $slate
-  	width: 0.1em
-  	height: 0.1em
   	box-shadow: -.5em -.5em $slate, 0 -.5em $slate, .5em -.5em $slate, -.5em 0 $slate, .5em 0 $slate, -.5em .5em $slate, 0 .5em $slate, .5em .5em $slate
 
   .gridicon:hover > span

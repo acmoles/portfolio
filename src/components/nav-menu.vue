@@ -11,8 +11,8 @@
               class="hamburger hamburger--3dx is-active"
               type="button"
             >
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
+              <span class="icon is-medium">
+                <img src="/img/homepage/cross.svg" alt="">
               </span>
             </button>
           </div>
@@ -109,9 +109,9 @@ export default {
     z-index: 2
     pointer-events: all
     background: $steel
-    overflow-y: scroll
-    .hero-body
-      @media screen and (max-width: $tablet)
+    @media screen and (max-width: $tablet)
+      overflow-y: scroll
+      .hero-body
         padding-top: 4em
         padding-bottom: 6.5em
 
@@ -120,8 +120,12 @@ export default {
     justify-content: flex-end
     width: 100%
     position: absolute
-    padding: 1em
+    padding: 1.1em
     z-index: 2
+
+  .icon.is-medium
+    width: 1.25em
+    height: 1.25em
 
   .content
     color: $white

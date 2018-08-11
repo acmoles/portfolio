@@ -122,12 +122,7 @@ export default {
       this.canGoHome = false;
       this.$events.$emit('cant-go-home');
 
-      let scrollTarget = event;
-      this.$router.push('/', () => {
-        setTimeout(() => {
-          this.scrollTo(scrollTarget);
-        }, 1000)
-      });
+      this.$router.push('/');
     }
   }
 }

@@ -38,10 +38,8 @@ export default {
     this.$events.$on('remove-all-background', () => {
       if (this.backgroundReady) {
         this.background.removeAll();
-        setTimeout(() => {
-          this.background.animateObjects('down');
-        }, 2000);
       }
+      this.setBackwardTransition();
     });
     this.$events.$on('replace-all-background', () => {
       if (this.firstBatch) {
@@ -51,11 +49,21 @@ export default {
           this.background.replaceAll();
         }
       }
+      this.setForwardTransition();
     });
     this.$events.$on('navigate-project', () => {
       if (this.backgroundReady) {
         this.background.animateObjects('up');
       }
+      // this.toggleBodyClass('remove-class', 'scroll-lock');
+    });
+    this.$events.$on('cant-go-home', () => {
+      if (this.backgroundReady) {
+        setTimeout(() => {
+          this.background.animateObjects('down');
+        }, 400);
+      }
+      // this.toggleBodyClass('add-class', 'scroll-lock');
     });
 
     this.$nextTick(function () {
@@ -72,6 +80,15 @@ export default {
     })
   },
   methods: {
+    toggleReversibleTransition() {
+      this.transitionName = this.transitionName === 'fade-delay' ? 'fade-delay-reverse' : 'fade-delay';
+    },
+    setBackwardTransition() {
+      this.transitionName = 'fade-delay-reverse';
+    },
+    setForwardTransition() {
+      this.transitionName = 'fade-delay';
+    },
     toggleBodyClass(addRemoveClass, className) {
       const el = document.body;
 
@@ -81,13 +98,7 @@ export default {
         el.classList.remove(className);
       }
     },
-  },
-  // mounted() {
-  //   this.toggleBodyClass('add-class', 'scroll-lock');
-  // },
-  // destroyed() {
-  //   this.toggleBodyClass('remove-class', 'scroll-lock');
-  // }
+  }
 }
 
 </script>
