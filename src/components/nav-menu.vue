@@ -18,8 +18,8 @@
           </div>
         </div>
 
-        <div class="hero-body">
-          <template v-if="menuId === 'about-popup'">
+        <template v-if="menuId === 'about-popup'">
+          <div class="hero-body menu-container">
             <div class="content about-copy">
               <h3>
                 I help companies build useful and pleasing products
@@ -48,13 +48,15 @@
                 the highest possible level of polish.
               </p>
             </div>
+          </div>
           </template>
           <template v-else>
-            <Work
-              :headers="false"
-            />
+            <div class="hero-body">
+              <Work
+                :headers="false"
+              />
+            </div>
           </template>
-        </div>
 
       </div>
 
@@ -122,6 +124,10 @@ export default {
     position: absolute
     padding: 1.1em
     z-index: 2
+
+  .menu-container
+    @media screen and (min-width: $desktop)
+      padding: 0 6.5em
 
   .icon.is-medium
     width: 1.25em

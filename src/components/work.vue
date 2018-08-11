@@ -1,5 +1,5 @@
 <template>
-  <div class="container project-container" :class="{ 'menu-container': !headers }">
+  <div class="container project-container">
 
     <div class="columns is-multiline is-desktop">
 
@@ -165,10 +165,6 @@ export default {
     @media screen and (max-width: $desktop)
       padding: 1.5em 0.75em 3em 0.75em
       max-width: 20em
-
-  .menu-container
-    @media screen and (min-width: $desktop)
-      padding: 0 6.5em
 
   .glass
     overflow: hidden
