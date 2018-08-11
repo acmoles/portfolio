@@ -19,7 +19,7 @@
           <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
       </button>
       <button
-        @click="menuToggle"
+        @click="menuOpen"
         class="navbar-item burger-wrapper hamburger"
         type="button"
       >
@@ -35,30 +35,15 @@
     </div>
   </transition>
 
-    <transition name="slidedown">
-      <template v-if="menuActive">
-
-        <MenuNav
-          :menuId="'header-nav'"
-          @dismiss="menuToggle"
-        />
-
-      </template>
-    </transition>
-
   </nav>
 </template>
 
 <script>
 
 import * as smoothScroll from 'smoothscroll'
-import MenuNav from '@/components/nav-menu.vue'
 
 export default {
   name: 'Nav',
-  components: {
-    MenuNav
-  },
   data () {
     return {
       canGoHome: false,
@@ -106,19 +91,21 @@ export default {
       }
       let time = 750;
 
-      smoothScroll(scrollTarget, time, () => {
-        this.ensureMenuDismiss();
-      });
+      smoothScroll(scrollTarget, time);
     },
     ensureMenuDismiss() {
       // ensure menu is dismissed
-      this.menuActive = false;
-      this.$events.$emit('footer-menu-dismiss');
+      this.$events.$emit('toggle-overlay-off', {
+        transition: 'slidedown'
+      });
     },
-    menuToggle () {
-      this.menuActive = !this.menuActive;
+    menuOpen () {
+      this.$events.$emit('toggle-overlay-on', {
+        transition: 'slidedown',
+        type: 'nav-menu'
+      });
     },
-    backHome (event) {
+    backHome () {
       this.navColorScheme = 'dark';
       this.canGoHome = false;
       this.$events.$emit('cant-go-home');

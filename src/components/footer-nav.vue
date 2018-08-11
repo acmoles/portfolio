@@ -11,7 +11,6 @@
       :class="navColorScheme"
     >
       <div
-        v-if="!menuActive"
         class="navbar-brand"
       >
         <button
@@ -22,7 +21,7 @@
             <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
         </button>
         <button
-          @click="menuToggle"
+          @click="menuOpen"
           class="navbar-item burger-wrapper hamburger"
           type="button"
         >
@@ -32,33 +31,17 @@
         </button>
       </div>
 
-      <transition name="slideup">
-        <template v-if="menuActive">
-
-          <MenuNav
-            :menuId="'footer-nav'"
-            @dismiss="menuToggle"
-          />
-
-        </template>
-      </transition>
     </nav>
   </footer>
 </template>
 
 <script>
 
-import MenuNav from '@/components/nav-menu.vue'
-
 export default {
   name: 'FooterNav',
-  components: {
-    MenuNav
-  },
   data () {
     return {
       navColorScheme: 'light',
-      menuActive: false,
       canGoHome: false
     }
   },
@@ -82,9 +65,12 @@ export default {
     navigate (event) {
       this.$events.$emit('navigate-footer', event);
     },
-    menuToggle () {
-      this.menuActive = !this.menuActive;
-    }
+    menuOpen () {
+      this.$events.$emit('toggle-overlay-on', {
+        transition: 'slideup',
+        type: 'nav-menu'
+      });
+    },
   }
 }
 </script>

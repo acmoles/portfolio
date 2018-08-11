@@ -7,7 +7,7 @@
           <button
             class="button is-rounded about-button"
             role="button"
-            @click="aboutToggle"
+            @click="menuOpen"
           >
             About
           </button>
@@ -60,36 +60,19 @@
       </div>
     </div>
 
-    <transition name="slideleft">
-      <template v-if="aboutActive">
-
-        <MenuNav
-          :menuId="'about-popup'"
-          @dismiss="aboutToggle"
-        />
-
-      </template>
-    </transition>
-
   </div>
 
 </template>
 
 <script>
 
-import MenuNav from '@/components/nav-menu.vue'
-
 export default {
   name: 'AboutActions',
-  components: {
-    MenuNav
-  },
   data () {
     return {
       email: 'info@acmoles.design',
       copyTextMessage: 'Copy email',
       optionsDropdown: false,
-      aboutActive: false,
     }
   },
   methods: {
@@ -114,9 +97,11 @@ export default {
         }, 4000)
       }
     },
-    aboutToggle () {
-      this.$events.$emit('toggle-scroll-lock');
-      this.aboutActive = !this.aboutActive;
+    menuOpen () {
+      this.$events.$emit('toggle-overlay-on', {
+        transition: 'slideleft',
+        type: 'about-popup'
+      });
     }
   }
 }

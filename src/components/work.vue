@@ -131,7 +131,7 @@ export default {
     workNavigate (route) {
       // :to="{ name: project.route, params: {} }"
       if (route !== this.$router.currentRoute.name) {
-        this.$events.$emit('fade-out-nav-menu');
+        this.$events.$emit('fade-out-overlay-body');
         this.$router.push('/' + route);
       }
 
@@ -194,8 +194,6 @@ export default {
       display: inline-flex
       justify-content: space-between
       width: 100%
-    .icon-calendar::before
-      font-size: 100%
 
   // Hover effects
 

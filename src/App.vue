@@ -9,6 +9,9 @@
     </transition>
 
     <FooterNav />
+
+    <OverlayMenu />
+
   </div>
 </template>
 
@@ -18,19 +21,21 @@ import { Background } from '@/service/background.js'
 import { Intro } from '@/service/intro.js'
 import Nav from '@/components/nav.vue'
 import FooterNav from '@/components/footer-nav.vue'
+import OverlayMenu from '@/components/overlay-menu.vue'
 
 export default {
   name: 'App',
   components: {
     Nav,
-    FooterNav
+    FooterNav,
+    OverlayMenu
   },
   data () {
     return {
       background: {},
       transitionName: 'fade-delay',
+      overlayTransitionName: 'slidedown',
       backgroundReady: false,
-      scrollLock: true,
       firstBatch: true
     }
   },
@@ -55,7 +60,6 @@ export default {
       if (this.backgroundReady) {
         this.background.animateObjects('up');
       }
-      // this.toggleBodyClass('remove-class', 'scroll-lock');
     });
     this.$events.$on('cant-go-home', () => {
       if (this.backgroundReady) {
@@ -63,7 +67,6 @@ export default {
           this.background.animateObjects('down');
         }, 400);
       }
-      // this.toggleBodyClass('add-class', 'scroll-lock');
     });
 
     this.$nextTick(function () {
