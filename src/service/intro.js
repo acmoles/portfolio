@@ -4,7 +4,22 @@ export class Intro {
 
   constructor() {
     this.spinner = document.getElementById('spinner');
+    this.canvasContainer = document.getElementById('canvas');
+    this.checkUserAgent();
     this.beginLoadIntro();
+  }
+
+  checkUserAgent() {
+    if (navigator.userAgent.indexOf('Firefox') > -1) {
+     //"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
+      this.firefox = true;
+    } else {
+      this.addCanvasBlur();
+    }
+  }
+
+  addCanvasBlur() {
+    this.canvasContainer.classList.add('blur');
   }
 
   beginLoadIntro() {

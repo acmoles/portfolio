@@ -73,8 +73,12 @@ export default {
         // background ready callback
         this.intro.introSequence(() => {
           // sliders finished callback
-          this.background.addFirstBatch();
-          this.backgroundReady = true;
+          if (!this.intro.firefox) {
+            this.background.addFirstBatch();
+            this.backgroundReady = true;
+          } else {
+            this.backgroundReady = false;
+          }
         });
       });
     })
