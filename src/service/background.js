@@ -9,16 +9,19 @@ export class Background {
 
   constructor() {
 
+    this.canvas = document.getElementById('canvas');
+
     this.init();
 
     this.backgroundGradient = new BackgroundGradientCanvas(this.app);
 
     this.resizeCanvas();
 
-    this.blurLayerSmall = new PIXI.Container();
-    this.app.stage.addChild(this.blurLayerSmall);
-    this.blurLayerLarge = new PIXI.Container();
-    this.app.stage.addChild(this.blurLayerLarge);
+    // TODO was used for two levels of depth blur
+    // this.blurLayerSmall = new PIXI.Container();
+    // this.app.stage.addChild(this.blurLayerSmall);
+    // this.blurLayerLarge = new PIXI.Container();
+    // this.app.stage.addChild(this.blurLayerLarge);
 
     this.layers = [];
     for (var i = 0; i < 3; i++) {
@@ -26,11 +29,12 @@ export class Background {
       let layer = new PIXI.Container();
       this.layers.push(layer);
 
-      if (i < 2) {
-        this.blurLayerSmall.addChild(layer);
-      } else {
-        this.blurLayerLarge.addChild(layer);
-      }
+      // if (i < 2) {
+      //   this.blurLayerSmall.addChild(layer);
+      // } else {
+      //   this.blurLayerLarge.addChild(layer);
+      // }
+      this.app.stage.addChild(layer);
     }
 
     // this.addBlurEffects();
@@ -49,7 +53,6 @@ export class Background {
   }
 
   appendCanvas(callback) {
-    this.canvas = document.getElementById('canvas');
     this.canvas.appendChild(this.app.view);
     window.addEventListener('resize', this.resizeCanvas.bind(this));
 
@@ -106,7 +109,7 @@ export class Background {
   // }
 
   resizeCanvas() {
-    this.app.renderer.resize(window.innerWidth, window.innerHeight);
+    this.app.renderer.resize(this.canvas.offsetWidth, this.canvas.offsetHeight);
 
     this.backgroundGradient.backgroundSprite.width = this.app.screen.width;
     this.backgroundGradient.backgroundSprite.height = this.app.screen.height;

@@ -67,6 +67,8 @@ export default {
           this.background.animateObjects('down');
         }, 400);
       }
+      // TODO bring bars across, remove ^
+      // Then remove bars again
     });
 
     this.$nextTick(function () {
@@ -91,7 +93,8 @@ export default {
       this.transitionName = this.transitionName === 'fade-delay' ? 'fade-delay-reverse' : 'fade-delay';
     },
     setBackwardTransition() {
-      this.transitionName = 'fade-delay-reverse';
+      // this.transitionName = 'fade-delay-reverse';
+      this.transitionName = 'fade-delay-none';
     },
     setForwardTransition() {
       this.transitionName = 'fade-delay';

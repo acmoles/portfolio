@@ -47,7 +47,7 @@ export default {
   data () {
     return {
       canGoHome: false,
-      navColorScheme: 'dark',
+      navColorScheme: 'light',
       menuActive: false,
       currentScrollLocation: 'about'
     }
@@ -58,7 +58,9 @@ export default {
       setTimeout(() => {
         // Avoid popin mix layers
         this.ensureMenuDismiss();
-        this.canGoHome = true;
+        setTimeout(() => {
+          this.canGoHome = true;
+        }, 300);
       }, 500);
       if (event === '2016') {
         this.navColorScheme = 'dark';
@@ -72,7 +74,10 @@ export default {
     });
     this.$events.$on('navigate-footer', (value) => {
       // Navigate home events from footer nav
-      this.scrollTo('top');
+      this.scrollTo({
+        location: 'top',
+        smooth: true
+      });
       setTimeout(() => {
         this.backHome(value);
       }, 750);
@@ -81,17 +86,26 @@ export default {
   methods: {
     scrollTo (event) {
 
-      this.currentScrollLocation = event;
+      this.currentScrollLocation = event.location;
 
       let scrollTarget;
-      if (event === 'top') {
+      if (event.location === 'top') {
         scrollTarget = 0;
       } else {
         scrollTarget = document.getElementById(event);
       }
       let time = 750;
 
-      smoothScroll(scrollTarget, time);
+      if (event.smooth) {
+        smoothScroll(scrollTarget, time);
+      } else {
+        if (event.location === 'top') {
+          window.scrollTo(0, 0);
+        } else {
+          scrollTarget.scrollIntoView();
+        }
+      }
+
     },
     ensureMenuDismiss() {
       // ensure menu is dismissed
@@ -106,7 +120,6 @@ export default {
       });
     },
     backHome () {
-      this.navColorScheme = 'dark';
       this.canGoHome = false;
       this.$events.$emit('cant-go-home');
 
