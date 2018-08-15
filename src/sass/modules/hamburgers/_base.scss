@@ -22,10 +22,9 @@
   transform: scale3D(1, 1, 1);
 
   &:hover {
-    transform: scale3D(1.1, 1.1, 1.1);
+    opacity: 0.8;
   }
   &:active {
-    opacity: 0.9;
     transform: scale3D(0.9, 0.9, 0.9);
   }
 }

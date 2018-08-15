@@ -93,6 +93,10 @@ export default {
 
   // Header
 
+  .page-header
+    height: 33.333vh
+    min-height: 33.333vh
+
   .titles
     padding: 0 0.75em
     @media screen and (max-width: $desktop)
@@ -123,8 +127,8 @@ export default {
     border-radius: $radius-large
     z-index: 1
     opacity: 0
-    transform: translateY(1em)
-    transition: opacity 1s ease, transform 1s ease
+    transform: translateY(3em)
+    transition: opacity 0.2s, transform 2s cubic-bezier(0.19, 1, 0.22, 1)
     margin: 0 0.75em
     @media screen and (min-width: $desktop)
       margin: 0 auto

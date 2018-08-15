@@ -72,14 +72,14 @@ export default {
       // Get scroll events from any component
       this.scrollTo(value);
     });
-    this.$events.$on('navigate-footer', (value) => {
+    this.$events.$on('back-home-footer', () => {
       // Navigate home events from footer nav
       this.scrollTo({
         location: 'top',
         smooth: true
       });
       setTimeout(() => {
-        this.backHome(value);
+        this.backHome();
       }, 750);
     });
   },
@@ -120,10 +120,11 @@ export default {
       });
     },
     backHome () {
-      this.canGoHome = false;
-      this.$events.$emit('cant-go-home');
-
-      this.$router.push('/');
+      this.$events.$emit('home-sequence', () => {
+        this.canGoHome = false;
+        this.$events.$emit('cant-go-home');
+        this.$router.push('/');
+      });
     }
   }
 }

@@ -10,7 +10,7 @@
 // router transition
 .fade-delay-enter-active, .fade-delay-reverse-enter-active
   top: 0
-  transition: top 750ms cubic-bezier(0.77, 0, 0.175, 1)
+  transition: top 750ms $cubicTransition
   position: relative
 
 .fade-delay-leave-active, .fade-delay-reverse-leave-active
@@ -30,7 +30,7 @@
 // Fade up in
 .fadeup-enter-active, .fadeup-leave-active
   transition: transform, opacity 1.2s
-  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1)
+  transition-timing-function: $cubicTransition
 
 .fadeup-enter, .fadeup-leave-to
   transform: translateY(1em)
@@ -55,7 +55,7 @@
 .slideright-leave-active,
 .slideleft-enter-active,
 .slideleft-leave-active,
-  transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1)
+  transition: 0.4s $cubicTransition
   transition-property: transform
 
 .slideup-enter, .slideup-leave-to

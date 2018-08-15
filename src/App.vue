@@ -33,8 +33,7 @@ export default {
   data () {
     return {
       background: {},
-      transitionName: 'fade-delay',
-      overlayTransitionName: 'slidedown',
+      transitionName: 'fade-delay-none',
       backgroundReady: false,
       firstBatch: true
     }
@@ -61,14 +60,14 @@ export default {
         this.background.animateObjects('up');
       }
     });
-    this.$events.$on('cant-go-home', () => {
-      if (this.backgroundReady) {
-        setTimeout(() => {
-          this.background.animateObjects('down');
-        }, 400);
-      }
-      // TODO bring bars across, remove ^
-      // Then remove bars again
+    this.$events.$on('home-sequence', (callback) => {
+      this.intro.slideLoader('in', () => {
+        this.background.resetLayerHeight();
+        this.intro.slideLoader('out');
+        if (callback) {
+          callback();
+        }
+      });
     });
 
     this.$nextTick(function () {

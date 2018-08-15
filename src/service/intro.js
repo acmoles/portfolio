@@ -5,6 +5,7 @@ export class Intro {
   constructor() {
     this.spinner = document.getElementById('spinner');
     this.canvasContainer = document.getElementById('canvas');
+    this.loader = document.getElementById('loader')
     this.checkUserAgent();
     this.beginLoadIntro();
   }
@@ -12,7 +13,8 @@ export class Intro {
   checkUserAgent() {
     if (navigator.userAgent.indexOf('Firefox') > -1) {
      //"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
-      this.firefox = true;
+     // TODO use pixi blur if firefox
+     this.addSoftwareBlur();
     } else {
       this.addCanvasBlur();
     }
@@ -20,6 +22,11 @@ export class Intro {
 
   addCanvasBlur() {
     this.canvasContainer.classList.add('blur');
+  }
+
+  addSoftwareBlur() {
+    this.firefox = true;
+    this.canvasContainer.classList.add('background');
   }
 
   beginLoadIntro() {
@@ -35,8 +42,8 @@ export class Intro {
     this.spinner.classList.remove('active');
     setTimeout(() => {
       this.slideLoader('out', () => {
-        this.loader = document.getElementById('loader')
-        this.loader.classList.add('none');
+        // this.loader.classList.add('none');
+        this.spinner.classList.add('none');
         if (callback) {
           callback();
         }
@@ -46,26 +53,22 @@ export class Intro {
 
   slideLoader(direction, callback) {
 
-    var slide = anime({
+    let tx = direction === 'in' ? '0' : '-100%';
+
+    anime({
       targets: '.loader-bar',
-      translateX: '-100%',
+      translateX: tx,
       easing: 'easeInOutExpo',
-      autoplay: 'false',
       duration: 1400,
       delay: function(el, i) {
         return i * 120;
       },
       complete: function() {
-        callback();
+        if (callback) {
+          callback();
+        }
       }
     });
-
-    if (direction === 'out') {
-      slide.play();
-    } else if (direction === 'in') {
-      slide.reverse();
-      slide.play();
-    }
 
   }
 
