@@ -68,7 +68,7 @@ export default {
           index: 'onboarding',
           icon: 'toucan',
           color: 'blue',
-          title: 'Optimising customer onboarding',
+          title: 'Refining the value proposition',
           route: 'onboarding',
           description: 'A signup flow that increased conversion and contributed to record customer acquisition',
           client: 'toucanBox',
@@ -108,7 +108,7 @@ export default {
           index: 'toucanoo',
           icon: '/img/homepage/project-icons/toucanoo.svg',
           color: 'purple',
-          title: 'Adding value to a physical product with digital content <br>',
+          title: 'Adding value to a physical product with digital content',
           route: 'toucanoo',
           description: 'Can we address customer concern regarding value for money without increasing operational cost?',
           client: 'toucanBox',
@@ -127,6 +127,12 @@ export default {
       ],
     }
   },
+  mounted () {
+    window.addEventListener('resize', this.equalHeights);
+    this.$nextTick(() => {
+      this.equalHeights();
+    });
+  },
   methods: {
     workNavigate (route) {
       // :to="{ name: project.route, params: {} }"
@@ -135,6 +141,23 @@ export default {
         this.$router.push('/' + route);
       }
 
+    },
+    equalHeights () {
+      let topRow = document.getElementById('onboarding'),
+      bottomRow = document.getElementById('more'),
+      topHeight = window.getComputedStyle(topRow, null).getPropertyValue('height'),
+      bottomHeight = window.getComputedStyle(bottomRow, null).getPropertyValue('height');
+
+      console.log('top height, ', topHeight);
+      console.log('bottom height, ', bottomHeight);
+
+      if ( topHeight > bottomHeight ) {
+        bottomRow.style.height = topHeight;
+        console.log('tried to do it 1');
+      } else {
+        topRow.style.height = bottomHeight;
+        console.log('tried to do it 2');
+      }
     }
   }
 }

@@ -74,13 +74,7 @@ export default {
     });
     this.$events.$on('back-home-footer', () => {
       // Navigate home events from footer nav
-      this.scrollTo({
-        location: 'top',
-        smooth: true
-      });
-      setTimeout(() => {
-        this.backHome();
-      }, 750);
+      this.backHome();
     });
   },
   methods: {
