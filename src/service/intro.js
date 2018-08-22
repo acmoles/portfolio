@@ -6,6 +6,7 @@ export class Intro {
     this.spinner = document.getElementById('spinner');
     this.canvasContainer = document.getElementById('canvas');
     this.loader = document.getElementById('loader')
+    this.loaderBars = document.querySelectorAll('.loader-bar');
     this.checkUserAgent();
     this.beginLoadIntro();
   }
@@ -41,7 +42,7 @@ export class Intro {
   introSequence(callback) {
     this.spinner.classList.remove('active');
     setTimeout(() => {
-      this.slideLoader('out', () => {
+      this.slideLoader('out', true, () => {
         // this.loader.classList.add('none');
         this.spinner.classList.add('none');
         if (callback) {
@@ -51,17 +52,21 @@ export class Intro {
     }, 400);
   }
 
-  slideLoader(direction, callback) {
+  slideLoader(direction, stepped, callback) {
 
     let tx = direction === 'in' ? '0' : '-100%';
 
     anime({
-      targets: '.loader-bar',
+      targets: this.loaderBars,
       translateX: tx,
       easing: 'easeInOutExpo',
       duration: 1400,
       delay: function(el, i) {
-        return i * 120;
+        if (stepped) {
+          return i * 120;
+        } else {
+          return i;
+        }
       },
       complete: function() {
         if (callback) {
@@ -70,6 +75,24 @@ export class Intro {
       }
     });
 
+  }
+
+  fadeLoader(direction) {
+    let opacity = direction === 'in' ? '1' : '0';
+
+    anime({
+      targets: this.loaderBars,
+      opacity: opacity,
+      easing: 'easeInOutQuad',
+      duration: 600,
+      delay: 200,
+      complete: () => {
+        this.loaderBars.forEach((bar) => {
+          bar.style.opacity = 1;
+          bar.style.transform = 'translateX(-100%)'
+        });
+      }
+    });
   }
 
 

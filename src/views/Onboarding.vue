@@ -6,8 +6,8 @@
   >
     <template slot="titles">
       <div class="content">
-        <h1 class="project-title">Optimise customer onboarding</h1>
-        <p class="client">toucanBox</p>
+        <h1 class="project-title">Refining the value proposition</h1>
+        <p class="client">toucanBox chapter 1</p>
       </div>
     </template>
 
@@ -15,7 +15,7 @@
       <div class="page-glass-section first-section">
 
         <div class="content">
-          
+
           <p><strong>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</strong></p>
           <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
           <h2>Second level</h2>

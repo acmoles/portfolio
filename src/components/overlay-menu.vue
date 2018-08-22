@@ -14,7 +14,7 @@
             <div class="navbar-brand header-menu">
               <button
                 @click="dismiss"
-                class="navbar-item burger-wrapper hamburger"
+                class="navbar-item hamburger"
                 type="button"
               >
                 <span class="icon is-medium">
@@ -142,6 +142,8 @@ export default {
 
   .navbar-item
     padding: 1.1em 1.25em
+    &:hover
+      background-color: lighten($steel, 4%)
 
   .menu-container
     @media screen and (min-width: $desktop)

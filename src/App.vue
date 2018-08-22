@@ -61,9 +61,9 @@ export default {
       }
     });
     this.$events.$on('home-sequence', (callback) => {
-      this.intro.slideLoader('in', () => {
+      this.intro.slideLoader('in', true, () => {
         this.background.resetLayerHeight();
-        this.intro.slideLoader('out');
+        this.intro.fadeLoader('out');
         if (callback) {
           callback();
         }

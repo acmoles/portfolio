@@ -6,8 +6,8 @@
   >
   <template slot="titles">
     <div class="content">
-      <h1 class="project-title">Personalisation</h1>
-      <p class="client green">toucanBox</p>
+      <h1 class="project-title">Increasing satisfaction with a personalised experience</h1>
+      <p class="client green">toucanBox chapter 2</p>
     </div>
   </template>
 

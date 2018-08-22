@@ -13,14 +13,14 @@
     >
       <button
         @click="backHome('work')"
-        class="navbar-item back-wrapper hamburger"
+        class="navbar-item hamburger"
         type="button"
       >
           <span class="icon"><i class="icon-left-open-big full-opacity nav-icons"></i></span>
       </button>
       <button
         @click="menuOpen"
-        class="navbar-item burger-wrapper hamburger"
+        class="navbar-item hamburger"
         type="button"
       >
         <span class="icon is-large">

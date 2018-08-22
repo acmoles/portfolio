@@ -70,7 +70,7 @@ export default {
           color: 'blue',
           title: 'Refining the value proposition',
           route: 'onboarding',
-          description: 'A signup flow that increased conversion and contributed to record customer acquisition',
+          description: 'An optimised homepage and sign up funnel which increased website conversion and contributed to record acquisition',
           client: 'toucanBox',
           date: 'Q3 2017'
         },
@@ -78,11 +78,11 @@ export default {
           index: 'personalisation',
           icon: '/img/homepage/project-icons/personalised.svg',
           color: 'green',
-          title: 'Personalisation',
+          title: 'Increasing satisfaction with a personalised experience',
           route: 'personalisation',
-          description: 'Personalisation',
+          description: 'How we identified ‘personalisation’ as our top product opportunity and baked it into the toucanBox experience',
           client: 'toucanBox',
-          date: 'Q2 2018'
+          date: 'Q2-3 2018'
         },
         {
           index: 'wesen',
@@ -100,7 +100,7 @@ export default {
           color: 'black',
           title: 'Exploring a new dimension for messaging',
           route: 'blkbrd',
-          description: 'Digital messages with a location in the physical world',
+          description: 'What meaning can we derive from digital messages with a location in the physical world?',
           client: 'BLKBRD',
           date: 'Q3 2017'
         },
@@ -112,17 +112,17 @@ export default {
           route: 'toucanoo',
           description: 'Can we address customer concern regarding value for money without increasing operational cost?',
           client: 'toucanBox',
-          date: 'Q3 2017'
+          date: 'Q1 2017 (Q1 2018)'
         },
         {
           index: 'more',
           icon: 'dots',
           color: 'yellow',
-          title: 'Before 2016',
+          title: 'Travelling back before 2016',
           route: 'pre2016',
-          description: 'A selection for projects prior to 2016',
+          description: 'A selection of projects from the not too distant past',
           client: 'Various',
-          date: '< 2016'
+          date: 'X < 2016'
         }
       ],
     }
