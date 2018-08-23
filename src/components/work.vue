@@ -118,7 +118,7 @@ export default {
           index: 'more',
           icon: 'dots',
           color: 'yellow',
-          title: 'Travelling back before 2016',
+          title: 'Travelling back in time to before 2016',
           route: 'pre2016',
           description: 'A selection of projects from the not too distant past',
           client: 'Various',
@@ -143,20 +143,21 @@ export default {
 
     },
     equalHeights () {
-      let topRow = document.getElementById('onboarding'),
-      bottomRow = document.getElementById('more'),
-      topHeight = window.getComputedStyle(topRow, null).getPropertyValue('height'),
-      bottomHeight = window.getComputedStyle(bottomRow, null).getPropertyValue('height');
+      if (window.innerWidth > 1088) {
+        let topRow = document.getElementById('onboarding'),
+        bottomRow = document.getElementById('more');
 
-      console.log('top height, ', topHeight);
-      console.log('bottom height, ', bottomHeight);
+        topRow.removeAttribute('style');
+        bottomRow.removeAttribute('style');
 
-      if ( topHeight > bottomHeight ) {
-        bottomRow.style.height = topHeight;
-        console.log('tried to do it 1');
-      } else {
-        topRow.style.height = bottomHeight;
-        console.log('tried to do it 2');
+        let topHeight = window.getComputedStyle(topRow, null).getPropertyValue('height'),
+        bottomHeight = window.getComputedStyle(bottomRow, null).getPropertyValue('height');
+
+        if ( topHeight > bottomHeight + 1 ) {
+          bottomRow.style.height = topHeight;
+        } else {
+          topRow.style.height = bottomHeight;
+        }
       }
     }
   }
@@ -192,7 +193,7 @@ export default {
     border-radius: $radius-large $radius-large 0 0
 
   .glass-body
-    padding: 1em 0.75em
+    padding: 1.25em 2.5em 1em 1.5em
     position: relative
     height: 100%
     margin-bottom: 0 !important
@@ -206,8 +207,8 @@ export default {
       opacity: 0.9
 
   .project-footer
-    padding: 0.75em
-    padding-top: 0.5em
+    padding: 1em
+    padding-top: 0.75em
     background: rgba($white, 0.9)
     border-radius: 0 0 $radius-large $radius-large
     color: $slate
@@ -221,8 +222,9 @@ export default {
   // Hover effects
 
   .hover-indicator
-    height: 0.25em
+    height: 5px
     position: relative
+    overflow: hidden
     span
       position: absolute
       left: 0
@@ -231,18 +233,18 @@ export default {
       top: 0
       background: $darkBlue
       transition: transform 0.4s ease
-      transform: translateX(-105%)
+      transform: translateY(105%)
 
   .glass
     &:hover, &:active
       .hover-indicator
         span
-          transform: translateX(0%)
+          transform: translateY(0%)
   .router-link-exact-active
     &:hover, &:active
       .hover-indicator
         span
-          transform: translateX(-105%)
+          transform: translateY(105%)
 
   .blue
     .hover-indicator

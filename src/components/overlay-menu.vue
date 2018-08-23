@@ -24,47 +24,14 @@
             </div>
           </div>
 
-          <template v-if="menuType === 'about-popup'">
-            <div class="hero-body">
-              <div id="about-content" class="content about-copy">
-                <h3>
-                  I help companies build useful and pleasing products
-                </h3>
-                <p>
-                  Over the past three years I’ve been working with <a href="https://www.toucanbox.com" target="_blank">toucanBox</a>, a
-                  subscription / <span>e-commerce</span> start-up based in London.
-                  I’ve just arrived in Berlin.
-                </p>
-                <p>
-                  This portfolio consists of five case studies, three from toucanBox
-                  and two side projects. It also includes an overview of select work
-                  dating from before 2016.
-                </p>
-                <h4>Product Design</h4>
-                <p>
-                  I use the design process to bring clarity to complex problems. I sketch and
-                  build prototypes to test hypotheses. I gather feedback and iterate.
-                </p>
-                <p>
-                  My training in human-centred product design, originally focussing on physical objects, helps
-                  me uncover users' fundamental needs and make systematic decisions.
-                </p>
-                <p>
-                  I work alongside developers, speaking their language, to ensure products ship with
-                  the highest possible level of polish.
-                </p>
-              </div>
-            </div>
-            </template>
-            <template v-else>
-              <div id="overlay-nav-menu" class="hero-body menu-container">
-                <Work
-                  :headers="false"
-                />
-              </div>
-            </template>
 
+          <div id="overlay-nav-menu" class="hero-body menu-container">
+            <Work
+              :headers="false"
+            />
           </div>
+
+        </div>
         </transition>
 
       </div>

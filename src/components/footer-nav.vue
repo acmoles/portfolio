@@ -26,7 +26,12 @@
           type="button"
         >
           <span class="icon is-large">
-            <img src="/img/homepage/grid.svg" alt="">
+            <template v-if="navColorScheme === 'dark'">
+              <img src="/img/homepage/grid-dark.svg" alt="">
+            </template>
+            <template v-else>
+              <img src="/img/homepage/grid.svg" alt="">
+            </template>
           </span>
         </button>
       </div>
@@ -51,7 +56,7 @@ export default {
     });
     this.$events.$on('navigate-project', (event) => {
       this.canGoHome = true;
-      if (event === '2016') {
+      if (event === '2016' || event === 'About') {
         this.navColorScheme = 'dark';
       } else {
         this.navColorScheme = 'light';

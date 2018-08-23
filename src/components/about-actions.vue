@@ -4,13 +4,12 @@
     <div class="column">
       <div class="dropdown is-left is-active">
         <div class="dropdown-trigger">
-          <button
+          <router-link
             class="button is-rounded about-button"
-            role="button"
-            @click="menuOpen"
+            :to="{ name: 'about', params: {} }"
           >
             About
-          </button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -110,7 +109,7 @@ export default {
 <style scoped lang="sass">
   @import '../sass/variables'
 
-  $slate-faded: rgba($silver, 0.4)
+  $slate-faded: rgba($slate, 0.2)
 
   .glass-body-actions
     max-width: 13em
