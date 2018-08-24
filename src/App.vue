@@ -58,11 +58,13 @@ export default {
     this.$events.$on('navigate-project', () => {
       if (this.backgroundReady) {
         this.background.animateObjects('up');
+        this.background.toggleCanvasFader();
       }
     });
     this.$events.$on('home-sequence', (callback) => {
       this.intro.slideLoader('in', true, () => {
         this.background.resetLayerHeight();
+        this.background.toggleCanvasFader();
         this.intro.fadeLoader('out');
         if (callback) {
           callback();
@@ -77,7 +79,7 @@ export default {
         // background ready callback
         this.intro.introSequence(() => {
           // sliders finished callback
-          if (!this.intro.firefox) {
+          if (!this.intro.firefox && this.$route.path === '/') {
             this.background.addFirstBatch();
             this.backgroundReady = true;
           } else {
@@ -112,11 +114,7 @@ export default {
 
 </script>
 
-<style lang="sass">
-// Shared styles
-@import './sass/styles'
-
-.scroll-lock
-  overflow-y: hidden
-
-</style>
+  <style lang="sass">
+  // Shared styles
+  @import './sass/styles'
+  </style>

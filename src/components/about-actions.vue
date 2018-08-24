@@ -109,7 +109,7 @@ export default {
 <style scoped lang="sass">
   @import '../sass/variables'
 
-  $slate-faded: rgba($slate, 0.2)
+  $slate-faded: rgba($slate, 0.4)
 
   .glass-body-actions
     max-width: 13em
@@ -120,10 +120,12 @@ export default {
     padding: 0.5em 0.75em
     .button
       width: 100%
-      background-color: transparent
-      border-color: $slate-faded
+      background-color: rgba($white, 0.75)
+      border-color: transparent
       &:active, &:hover
-        border-color: darken($slate-faded, 20%)
+        // border-color: darken($slate-faded, 20%)
+        transform: translateY(-0.1em)
+        background-color: rgba($white, 0.95)
         color: darken($slate-faded, 20%)
       &:focus
         box-shadow: 0 0 0 0.125em rgba($silver, 0.25)

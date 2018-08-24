@@ -14,11 +14,14 @@ export class ObjectPool {
     this.isGrey = false;
 
     if (window.innerWidth > 1500) {
-      this.objectsPerLayer = 8;
+      this.objectsPerLayer = 10;
+      this.objectsPerLargeLayer = 4;
     } else if (window.innerWidth < 600) {
       this.objectsPerLayer = 3;
+      this.objectsPerLargeLayer = 2;
     } else {
-      this.objectsPerLayer = 6;
+      this.objectsPerLayer = 7;
+      this.objectsPerLargeLayer = 3;
     }
     this.firstMake = true;
 
@@ -55,7 +58,7 @@ export class ObjectPool {
 
       if (index === 2) {
         // larger layer
-        amount = 2;
+        amount = this.objectsPerLargeLayer;
         large = true;
         scale = (index + 1) * 1.5;
       } else {

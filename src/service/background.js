@@ -10,6 +10,8 @@ export class Background {
   constructor() {
 
     this.canvas = document.getElementById('canvas');
+    this.canvasFader = document.getElementById('canvas-fader');
+    this.canvasFaderVisible = false;
 
     this.init();
 
@@ -69,6 +71,16 @@ export class Background {
         }
       }
     });
+  }
+
+  toggleCanvasFader() {
+    if (this.canvasFaderVisible) {
+      this.canvasFader.classList.remove('active');
+      this.canvasFaderVisible = false;
+    } else {
+      this.canvasFader.classList.add('active');
+      this.canvasFaderVisible = true;
+    }
   }
 
   // addBlurEffects() {

@@ -72,9 +72,9 @@ export default {
 
   .glass
     width: 100%
-    background: rgba($white, 0.35)
     @media screen and (min-width: $desktop)
       width: 13em
+      background: rgba($white, 0.35)
     display: flex
     flex-direction: column
     height: 100%
