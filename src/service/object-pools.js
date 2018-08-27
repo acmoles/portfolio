@@ -98,7 +98,7 @@ export class ObjectPool {
       color, // color
       this.types[anime.random(0, this.types.length - 1)], // type
       scale, // scale
-      anime.random(0, this.app.screen.width), // x
+      anime.random(-(this.app.screen.width / 4), this.app.screen.width), // x
       y, // y
       anime.random(1, Math.PI) // rotation
     );

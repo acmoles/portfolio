@@ -62,10 +62,24 @@ export default {
       }
     });
     this.$events.$on('home-sequence', (callback) => {
-      this.intro.slideLoader('in', true, () => {
+      // this.intro.slideLoader('in', true, () => {
+      //   this.background.resetLayerHeight();
+      //   this.background.toggleCanvasFader();
+      //   this.intro.fadeLoader('out', () => {
+      //     this.intro.resetLoaderBars();
+      //   });
+      //   if (callback) {
+      //     callback();
+      //   }
+      // });
+      this.intro.fadeLoader('in', () => {
         this.background.resetLayerHeight();
         this.background.toggleCanvasFader();
-        this.intro.fadeLoader('out');
+        setTimeout(() => {
+          this.intro.fadeLoader('out', () => {
+            // this.intro.resetLoaderBars();
+          });
+        }, 200);
         if (callback) {
           callback();
         }

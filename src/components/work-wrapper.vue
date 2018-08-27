@@ -93,14 +93,14 @@ export default {
 
   // Header
 
-  .page-header
-    @media screen and (min-width: $desktop)
-      height: 33.333vh
-      min-height: 33.333vh
-      .hero-body
-        padding: 0
-        display: flex
-        align-items: center
+  // .page-header
+  //   @media screen and (min-width: $desktop)
+  //     height: 33.333vh
+  //     min-height: 33.333vh
+  //     .hero-body
+  //       padding: 0
+  //       display: flex
+  //       align-items: center
 
   .titles
     padding: 0 0.75em
@@ -190,13 +190,13 @@ export default {
     transition: opacity 0.4s ease
     &.is-visible
       opacity: 1
-    @media screen and (min-width: $desktop)
-      height: 66.666vh
-      min-height: 66.666vh
-      .hero-body
-        padding: 0
-        display: flex
-        align-items: center
+    // @media screen and (min-width: $desktop)
+    //   height: 66.666vh
+    //   min-height: 66.666vh
+    //   .hero-body
+    //     padding: 0
+    //     display: flex
+    //     align-items: center
 
   .page-footer-container
     color: $white

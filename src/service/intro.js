@@ -5,8 +5,9 @@ export class Intro {
   constructor() {
     this.spinner = document.getElementById('spinner');
     this.canvasContainer = document.getElementById('canvas');
-    this.loader = document.getElementById('loader')
-    this.loaderBars = document.querySelectorAll('.loader-bar');
+    this.loader = document.getElementById('loader');
+    // this.loaderBars = document.querySelectorAll('.loader-bar');
+    this.loaderBars = document.getElementById('loader-bar');
     this.checkUserAgent();
     this.beginLoadIntro();
   }
@@ -27,7 +28,7 @@ export class Intro {
 
   addSoftwareBlur() {
     this.firefox = true;
-    this.canvasContainer.classList.add('background');
+    this.canvasContainer.classList.add('background-gradient');
   }
 
   beginLoadIntro() {
@@ -42,13 +43,21 @@ export class Intro {
   introSequence(callback) {
     this.spinner.classList.remove('active');
     setTimeout(() => {
-      this.slideLoader('out', true, () => {
-        // this.loader.classList.add('none');
-        this.spinner.classList.add('none');
-        if (callback) {
-          callback();
-        }
-      });
+      // TODO sliding bars
+      // this.slideLoader('out', true, () => {
+      //   this.spinner.classList.add('none');
+      //   if (callback) {
+      //     callback();
+      //   }
+      // });
+      this.fadeLoader('out', () => {
+          this.spinner.classList.add('none');
+          this.loaderBars.classList.add('background-gradient');
+          // TODO add gradient class
+          if (callback) {
+            callback();
+          }
+      })
     }, 400);
   }
 
@@ -77,7 +86,14 @@ export class Intro {
 
   }
 
-  fadeLoader(direction) {
+  resetLoaderBars() {
+    this.loaderBars.forEach((bar) => {
+      bar.style.opacity = 1;
+      bar.style.transform = 'translateX(-100%)'
+    });
+  }
+
+  fadeLoader(direction, callback) {
     let opacity = direction === 'in' ? '1' : '0';
 
     anime({
@@ -87,10 +103,9 @@ export class Intro {
       duration: 600,
       delay: 200,
       complete: () => {
-        this.loaderBars.forEach((bar) => {
-          bar.style.opacity = 1;
-          bar.style.transform = 'translateX(-100%)'
-        });
+        if (callback) {
+          callback();
+        }
       }
     });
   }

@@ -70,7 +70,7 @@ export default {
           color: 'blue',
           title: 'Refining the value proposition',
           route: 'onboarding',
-          description: 'An optimised homepage and sign up funnel which increased website conversion and contributed to record acquisition',
+          description: 'How we clarified what we offer, added details which built confidence and worked hard to make sign up effortless',
           client: 'toucanBox',
           date: 'Q3 2017'
         },
@@ -110,7 +110,7 @@ export default {
           color: 'purple',
           title: 'Adding value to a physical product with digital content',
           route: 'toucanoo',
-          description: 'Can we address customer concern regarding value for money without increasing operational cost?',
+          description: 'Can we address customer concern around value for money without increasing operational cost?',
           client: 'toucanBox',
           date: 'Q1 2017 (Q1 2018)'
         },
@@ -118,9 +118,9 @@ export default {
           index: 'more',
           icon: 'dots',
           color: 'yellow',
-          title: 'Travelling back in time to before 2016',
+          title: 'Looking back to before 2016',
           route: 'pre2016',
-          description: 'A selection of projects from the not too distant past',
+          description: 'What can we learn from a Product Designer\'s \'old\' work?',
           client: 'Various',
           date: 'X < 2016'
         }
