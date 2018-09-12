@@ -70,7 +70,7 @@ export default {
           color: 'blue',
           title: 'Refining the value proposition',
           route: 'onboarding',
-          description: 'How we clarified what we offer, added details which built confidence and worked hard to make sign up effortless',
+          description: 'When we clarified what we offer, added details which built confidence and worked hard to make signing up effortless',
           client: 'toucanBox',
           date: 'Q3 2017'
         },
@@ -80,7 +80,7 @@ export default {
           color: 'green',
           title: 'Increasing satisfaction with a personalised experience',
           route: 'personalisation',
-          description: 'When resources are tight, a dive into product strategy can identify the most promising opportunity and sketch a vision',
+          description: 'How strategic thinking enabled us to identify the most promising digital product opportunity and outline a vision',
           client: 'toucanBox',
           date: 'Q2-3 2018'
         },
