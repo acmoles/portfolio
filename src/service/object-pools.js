@@ -14,14 +14,14 @@ export class ObjectPool {
     this.isGrey = false;
 
     if (window.innerWidth > 1500) {
-      this.objectsPerLayer = 10;
-      this.objectsPerLargeLayer = 4;
+      this.objectsPerLayer = 12;
+      this.objectsPerLargeLayer = 5;
     } else if (window.innerWidth < 600) {
       this.objectsPerLayer = 3;
       this.objectsPerLargeLayer = 2;
     } else {
-      this.objectsPerLayer = 7;
-      this.objectsPerLargeLayer = 3;
+      this.objectsPerLayer = 6;
+      this.objectsPerLargeLayer = 2;
     }
     this.firstMake = true;
 

@@ -232,18 +232,18 @@
       <div class="container page-footer-container">
         <div class="columns">
           <div class="column content link-container">
-            <h3>Link title</h3>
-            <p>Cras in nibh lacinia, venenatis nisi et, auctor urna.</p>
+            <h3>toucanBox</h3>
+            <p>toucanBox homepage mirror from March 2018</p>
             <div class="links-container">
-              <a class="button is-primary is-rounded is-inverted is-outlined">
+              <a href="toucanwww.herokuapp.com" class="button is-primary is-rounded is-inverted is-outlined">
                 View site
                 <i class="icon-right-open-big full-opacity footer-icon"></i>
               </a>
-              <a class="other-link" href="#">View other site</a>
+              <a href="https://www.toucanbox.com" class="other-link">View current site</a>
             </div>
           </div>
           <div class="column is-three-quarters">
-            <figure class="image is-16by9"><img src="/img/projects/test-presentation.png"></figure>
+            <figure class="image is-16by9"><img class="lazyload" src="/img/project-presentations/combined_onboarding.png"></figure>
           </div>
         </div>
       </div>

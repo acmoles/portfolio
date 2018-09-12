@@ -48,7 +48,7 @@ export class Background {
     this.app = new PIXI.Application({
       autoStart: false,
       autoResize: true,
-      resolution: 0.2,
+      resolution: 0.5,
       // devicePixelRatio
       // transparent: true
     });

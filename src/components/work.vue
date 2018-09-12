@@ -80,7 +80,7 @@ export default {
           color: 'green',
           title: 'Increasing satisfaction with a personalised experience',
           route: 'personalisation',
-          description: 'How we identified ‘personalisation’ as our top product opportunity and baked it into the toucanBox experience',
+          description: 'When resources are tight, a dive into product strategy can identify the most promising opportunity and sketch a vision',
           client: 'toucanBox',
           date: 'Q2-3 2018'
         },
@@ -110,7 +110,7 @@ export default {
           color: 'purple',
           title: 'Adding value to a physical product with digital content',
           route: 'toucanoo',
-          description: 'Can we address customer concern around value for money without increasing operational cost?',
+          description: 'Can we address customer concern about value for money without increasing operational cost?',
           client: 'toucanBox',
           date: 'Q1 2017 (Q1 2018)'
         },
@@ -118,9 +118,9 @@ export default {
           index: 'more',
           icon: 'dots',
           color: 'yellow',
-          title: 'Looking back to before 2016',
+          title: 'Looking back before 2016',
           route: 'pre2016',
-          description: 'What can we learn from a Product Designer\'s \'old\' work?',
+          description: 'Take a look at a curated selection of my less recent work.',
           client: 'Various',
           date: 'X < 2016'
         }
@@ -168,10 +168,15 @@ export default {
 
   @import '../sass/variables'
 
-  .project-container
-    @media screen and (max-width: $desktop)
-      padding: 1.5em 0.75em 3em 0.75em
-      max-width: 20em
+  .column
+    padding: 1em
+    @media screen and (min-width: $largeformat)
+      padding: 1.5em
+
+  // .project-container
+  //   @media screen and (max-width: $desktop)
+  //     padding: 1.5em 0.75em 3em 0.75em
+  //     max-width: 20em
 
   .glass
     overflow: hidden
@@ -181,7 +186,6 @@ export default {
     flex-grow: 1
     height: 100%
     color: $white
-    transition: transform 0.4s ease
 
   .glass-header
     position: relative
@@ -194,6 +198,8 @@ export default {
 
   .glass-body
     padding: 1.25em 2.5em 1em 1.5em
+    @media screen and (min-width: $largeformat)
+      padding: 2em 4em 1.6em 2.4em
     position: relative
     height: 100%
     margin-bottom: 0 !important
@@ -222,7 +228,7 @@ export default {
   // Hover effects
 
   .hover-indicator
-    height: 5px
+    height: 6px
     position: relative
     overflow: hidden
     span

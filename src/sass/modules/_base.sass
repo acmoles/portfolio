@@ -29,11 +29,11 @@ body
   &.blur
     canvas
       transform: scale3D(1.1, 1.1, 1.1)
-      filter: blur(1em)
+      filter: blur(0.75em)
       @media screen and (min-width: $desktop)
+        filter: blur(1em)
+      @media screen and (min-width: $largeformat)
         filter: blur(1.5em)
-      @media screen and (min-width: $fullhd)
-        filter: blur(2em)
 
 .background-gradient
   background: linear-gradient($extraDarkSnow, $snow)

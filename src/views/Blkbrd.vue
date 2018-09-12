@@ -209,18 +209,17 @@
       <div class="container page-footer-container">
         <div class="columns">
           <div class="column content link-container">
-            <h3>Link title</h3>
-            <p>Cras in nibh lacinia, venenatis nisi et, auctor urna.</p>
+            <h3>Web app</h3>
+            <p>BLKBRD is built with the Ionic Framework, making it possible to deploy to the web as well as mobile devices</p>
             <div class="links-container">
-              <a class="button is-primary is-rounded is-inverted is-outlined">
-                View site
+              <a href="http://bit.ly/blkbrdapp" class="button is-primary is-rounded is-inverted is-outlined">
+                View app
                 <i class="icon-right-open-big full-opacity footer-icon"></i>
               </a>
-              <a class="other-link" href="#">View other site</a>
             </div>
           </div>
           <div class="column is-three-quarters">
-            <figure class="image is-16by9"><img src="/img/projects/test-presentation.png"></figure>
+            <figure class="image is-16by9"><img class="lazyload" src="/img/project-presentations/combined_blkbrd.png"></figure>
           </div>
         </div>
       </div>

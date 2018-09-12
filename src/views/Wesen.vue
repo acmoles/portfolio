@@ -218,18 +218,17 @@
       <div class="container page-footer-container">
         <div class="columns">
           <div class="column content link-container">
-            <h3>Link title</h3>
-            <p>Cras in nibh lacinia, venenatis nisi et, auctor urna.</p>
+            <h3>Wesen</h3>
+            <p>The MVP site is in Beta</p>
             <div class="links-container">
-              <a class="button is-primary is-rounded is-inverted is-outlined">
+              <a href="http://wesen.studio" class="button is-primary is-rounded is-inverted is-outlined">
                 View site
                 <i class="icon-right-open-big full-opacity footer-icon"></i>
               </a>
-              <a class="other-link" href="#">View other site</a>
             </div>
           </div>
           <div class="column is-three-quarters">
-            <figure class="image is-16by9"><img src="/img/projects/test-presentation.png"></figure>
+            <figure class="image is-16by9"><img class="lazyload" src="/img/project-presentations/combined_wesen.png"></figure>
           </div>
         </div>
       </div>
