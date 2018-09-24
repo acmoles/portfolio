@@ -1,13 +1,13 @@
 <template>
   <WorkWrapper
-    :project="'onboarding'"
-    :icon="'/img/homepage/project-icons/toucan.svg'"
-    :color="'blue'"
+    :project="'wesen'"
+    :icon="'/img/homepage/project-icons/wesen.svg'"
+    :color="'red'"
   >
     <template slot="titles">
       <div class="content">
-        <h1 class="project-title">Refining the value proposition</h1>
-        <p class="client">toucanBox chapter 1</p>
+        <h1 class="project-title">Building a jewellery brand with user generated products</h1>
+        <p class="client red">Wesen</p>
       </div>
     </template>
 
@@ -15,14 +15,9 @@
       <div class="page-glass-section first-section">
 
         <div class="content">
-
-          <p><strong>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</strong></p>
-          <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
           <h2>Second level</h2>
           <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
           <ul>
-            <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
-            <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
             <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
             <li>Ut non enim metus.</li>
           </ul>
@@ -55,15 +50,6 @@
           </div>
         </div>
 
-        <div class="figure-container">
-          <figure class="image is-16by9 single-image">
-            <img class="lazyload" data-src="https://bulma.io/images/placeholders/640x360.png">
-          </figure>
-          <figcaption>
-            Figure 1: Some beautiful placeholders
-          </figcaption>
-        </div>
-
         <div class="content">
           <h3>Third level</h3>
           <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="#">non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
@@ -85,114 +71,6 @@
       </div>
 
       <div class="page-glass-section">
-
-        <div class="columns">
-
-          <div class="column">
-            <div class="content">
-              <h4>Homepage information architecture</h4>
-            </div>
-            <ul class="tree">
-              <li> <a>Header</a>
-                <ul>
-                  <li><a>Brand</a></li>
-                  <li><a>Navigation Menu</a></li>
-                  <li><a>Login</a></li>
-                </ul>
-              </li>
-              <li> <a>'Main stage'</a>
-                <ul>
-                  <li><a>Main title and short description</a></li>
-                  <li><a>Lifestyle image</a></li>
-                  <li><a>Play video button</a></li>
-                  <li><a>CTA</a></li>
-                </ul>
-              </li>
-              <li> <a>Extended description</a>
-                <ul>
-                  <li><a>toucanBox in three headings</a></li>
-                </ul>
-              </li>
-              <li> <a>Product section</a>
-                <ul>
-                  <li> <a>Three box sizes</a>
-                    <ul>
-                      <li><a>Box details <strong>(see next tree)</strong></a></li>
-                      <li><a>Box size specific CTA</a></li>
-                      <li><a>Box specific discount code input</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li> <a>How it works</a> </li>
-              <li> <a>Look inside a box</a> </li>
-              <li> <a>Community</a>
-                <ul>
-                  <li><a>Testimonials</a></li>
-                  <li><a>Social media images</a></li>
-                  <li><a>Awards</a></li>
-                  <li><a>Featured in</a></li>
-                </ul>
-              </li>
-              <li> <a>Bottom CTA</a> </li>
-              <li> <a>Footer</a> </li>
-            </ul>
-          </div>
-
-          <div class="column">
-            <div class="content">
-              <h4>Craft box card detailed information architecture </h4>
-            </div>
-            <ul class="tree">
-              <li><a>Packshots</a></li>
-              <li><a>Box size names (Petite, Grande, Super)</a></li>
-              <li> <a>Main details</a>
-                <ul>
-                  <li><a>Number of craft activities</a></li>
-                  <li><a>Price and postage</a></li>
-                  <li> <a>Delivery frequency</a>
-                    <ul>
-                      <li><a>Fortnightly delivery</a></li>
-                      <li><a>Monthly delivery</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li> <a>Differentiated supporting details</a>
-                <ul>
-                  <li> <a>Petite</a>
-                    <ul>
-                      <li><a>Activity magazine</a></li>
-                      <li><a>Fits through the letterbox</a></li>
-                      <li><a>Bonus activity to reuse the box</a></li>
-                    </ul>
-                  </li>
-                  <li> <a>Grande</a>
-                    <ul>
-                      <li><a>A themed reading book</a></li>
-                      <li><a>Add a sibling to this box with extra materials</a></li>
-                    </ul>
-                  </li>
-                  <li> <a>Super</a>
-                    <ul>
-                      <li><a>A themed reading book</a></li>
-                      <li><a>Add a sibling to this box with extra materials</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li> <a>Non-differentiated supporting details</a>
-                <ul>
-                  <li><a>Illustrated instructions</a></li>
-                  <li><a>Stickers to collect</a></li>
-                  <li><a>The toucan-tracker to track educational progress</a></li>
-                  <li><a>A parent card with learning guides and ideas</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-
-        </div>
 
         <div class="content">
           <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
@@ -340,18 +218,17 @@
       <div class="container page-footer-container">
         <div class="columns">
           <div class="column content link-container">
-            <h3>toucanBox</h3>
-            <p>toucanBox homepage mirror from March 2018</p>
+            <h3>Wesen</h3>
+            <p>The MVP site is in Beta</p>
             <div class="links-container">
-              <a href="http://toucanwww.herokuapp.com" class="button is-primary is-rounded is-inverted is-outlined">
+              <a href="http://wesen.studio" class="button is-primary is-rounded is-inverted is-outlined">
                 View site
                 <i class="icon-right-open-big full-opacity footer-icon"></i>
               </a>
-              <a href="https://www.toucanbox.com" class="other-link">View current site</a>
             </div>
           </div>
           <div class="column is-three-quarters">
-            <figure class="image is-16by9"><img class="lazyload" src="/img/project-presentations/combined_onboarding.png"></figure>
+            <figure class="image is-16by9"><img class="lazyload" src="/img/project-presentations/combined_wesen.png"></figure>
           </div>
         </div>
       </div>
@@ -364,7 +241,7 @@
 import WorkWrapper from '@/components/work-wrapper.vue'
 
 export default {
-  name: 'Onboarding',
+  name: 'Wesen',
   components: {
     WorkWrapper
   }
@@ -374,6 +251,9 @@ export default {
 <style scoped lang="sass">
 
   @import '../sass/variables'
+
+  .button.is-primary.is-inverted.is-outlined:hover, .button.is-primary.is-inverted.is-outlined:focus
+    color: $red
 
 
 </style>

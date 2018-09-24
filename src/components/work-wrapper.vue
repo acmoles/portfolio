@@ -127,12 +127,12 @@ export default {
 
   .page-glass
     position: relative
-    top: -3em
+    top: -2em
     background: $white
     border-radius: $radius-large
     z-index: 1
     opacity: 0
-    transform: translateY(3em)
+    transform: translateY(2em)
     transition: opacity 0.2s, transform 2s cubic-bezier(0.19, 1, 0.22, 1)
     margin: 0 0.75em
     @media screen and (min-width: $desktop)
@@ -185,7 +185,7 @@ export default {
   // Footer
 
   .page-footer
-    margin-top: -6em
+    margin-top: -4em
     opacity: 0
     transition: opacity 0.4s ease
     &.is-visible
@@ -204,8 +204,8 @@ export default {
     padding: 5em 0.75em
     @media screen and (min-width: $tablet)
       padding: 1.5em
-      top: -2em
-      margin-bottom: -8em
+      top: -4em
+      margin-bottom: -10em
     .link-container
       text-align: center
       @media screen and (min-width: $tablet)

@@ -6,8 +6,8 @@
   >
     <template slot="titles">
       <div class="content">
-        <h1 class="project-title">Looking back to before 2016</h1>
-        <!-- <p class="client grey">Various</p> -->
+        <h1 class="project-title">A selection of projects prior to 2016</h1>
+        <p class="client grey">Various</p>
       </div>
     </template>
 
