@@ -54,7 +54,7 @@ export default {
   },
   data () {
     return {
-      contentVisible: false,
+      contentVisible: true, //TODO put back to false
       headerVisible: false
     }
   },
@@ -175,10 +175,10 @@ export default {
 
   .page-glass-divider
     padding: 1.5em 0.75em
+    border-top: 1px solid $snow
     @media screen and (min-width: $tablet)
       padding: 2em 1.5em
     h1
-      font-size: 2em
       color: $steel
       font-weight: 600
 

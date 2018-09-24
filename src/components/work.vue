@@ -70,7 +70,7 @@ export default {
           color: 'blue',
           title: 'Refining the value proposition',
           route: 'onboarding',
-          description: 'When we clarified what we offer, added details which built confidence and worked hard to make signing up effortless',
+          description: 'When we clarified what we offer, added details which built confidence and made signing up effortless',
           client: 'toucanBox',
           date: 'Q3 2017'
         },
@@ -112,7 +112,7 @@ export default {
           route: 'toucanoo',
           description: 'Can we address customer concern about value for money without increasing operational cost?',
           client: 'toucanBox',
-          date: 'Q1 2017 (Q1 2018)'
+          date: 'Q4 2016'
         },
         {
           index: 'more',
@@ -120,9 +120,9 @@ export default {
           color: 'yellow',
           title: 'Looking back before 2016',
           route: 'pre2016',
-          description: 'Take a look at a curated selection of my less recent work.',
+          description: 'A curated selection of my less recent work.',
           client: 'Various',
-          date: 'X < 2016'
+          date: 'x < 2016'
         }
       ],
     }

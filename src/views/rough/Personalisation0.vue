@@ -24,6 +24,93 @@
           <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
           <li>Ut non enim metus.</li>
         </ul>
+
+        <h4>Project team</h4>
+        <div class="columns">
+          <div class="column">
+            Product Designer (me)
+          </div>
+          <div class="column">
+            Full Stack Developer
+          </div>
+          <div class="column">
+            Stakeholders in Marketing and Creative
+          </div>
+        </div>
+
+        <h4>My role</h4>
+        <div class="columns is-multiline">
+          <div class="column is-one-third">
+            Planning and scoping
+          </div>
+          <div class="column is-one-third">
+            Customer insights and ideation
+          </div>
+          <div class="column is-one-third">
+            Prototyping and design iteration
+          </div>
+          <div class="column is-one-third">
+            Development coordination and oversight
+          </div>
+          <div class="column is-one-third">
+            Front-end development
+          </div>
+          <div class="column is-one-third">
+            Measurement and evaluation
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <table class="table is-clear">
+            <thead>
+              <tr>
+                <th>Project Team</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Product Designer (me)</td>
+              </tr>
+              <tr>
+                <td>Full Stack Developer</td>
+              </tr>
+              <tr>
+                <td>Stakeholders in Marketing and Creative</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="column">
+          <table class="table is-clear">
+            <thead>
+              <tr>
+                <th>My role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Planning and scoping</td>
+              </tr>
+              <tr>
+                <td>Customer insights and ideation</td>
+              </tr>
+              <tr>
+                <td>Prototyping and design iteration</td>
+              </tr>
+              <tr>
+                <td>Development coordination and oversight</td>
+              </tr>
+              <tr>
+                <td>Front-end development</td>
+              </tr>
+              <tr>
+                <td>Measurement and evaluation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
     </div>
