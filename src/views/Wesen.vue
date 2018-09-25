@@ -59,14 +59,14 @@
             <h3>Wesen</h3>
             <p>The MVP site is in Beta</p>
             <div class="links-container">
-              <a href="http://wesen.studio" class="button is-primary is-rounded is-inverted is-outlined">
+              <a href="http://wesen.studio" target="_blank" class="button is-primary is-rounded is-inverted is-outlined">
                 View site
                 <i class="icon-right-open-big full-opacity footer-icon"></i>
               </a>
             </div>
           </div>
           <div class="column is-three-quarters">
-            <figure class="image is-16by9"><img class="lazyload" src="/img/project-presentations/combined_wesen.png"></figure>
+            <figure class="image is-16by9"><img class="lazyload" data-src="/img/project-presentations/combined_wesen.png"></figure>
           </div>
         </div>
       </div>

@@ -56,7 +56,9 @@ export class Background {
   }
 
   appendCanvas(callback) {
-    this.canvas.appendChild(this.app.view);
+    // this.canvas.appendChild(this.app.view);
+    let fader = document.getElementById('canvas-fader');
+    this.canvas.insertBefore(this.app.view, fader);
     window.addEventListener('resize', this.resizeCanvas.bind(this));
 
     this.app.start();

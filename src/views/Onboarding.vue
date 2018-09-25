@@ -903,15 +903,15 @@
             <h3>toucanBox</h3>
             <p>toucanBox homepage snapshot from March 2018</p>
             <div class="links-container">
-              <a href="http://toucanwww.herokuapp.com" class="button is-primary is-rounded is-inverted is-outlined">
+              <a href="http://toucanwww.herokuapp.com" target="_blank" class="button is-primary is-rounded is-inverted is-outlined">
                 View site
                 <i class="icon-right-open-big full-opacity footer-icon"></i>
               </a>
-              <a href="https://www.toucanbox.com" class="other-link">View current site</a>
+              <a href="https://www.toucanbox.com" target="_blank" class="other-link">View current site</a>
             </div>
           </div>
           <div class="column is-three-quarters">
-            <figure class="image is-16by9"><img class="lazyload" src="/img/project-presentations/combined_onboarding.png"></figure>
+            <figure class="image is-16by9"><img class="lazyload" data-src="/img/project-presentations/combined_onboarding.png"></figure>
           </div>
         </div>
       </div>

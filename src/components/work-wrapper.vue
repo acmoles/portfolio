@@ -54,7 +54,7 @@ export default {
   },
   data () {
     return {
-      contentVisible: false, //TODO put back to false
+      contentVisible: true, //TODO put back to false
       headerVisible: false
     }
   },
@@ -70,9 +70,9 @@ export default {
     });
     this.$events.$emit('navigate-project', this.project);
 
-    setTimeout(() => {
-      this.fadeInContent();
-    }, 500);
+    // setTimeout(() => {
+    //   this.fadeInContent();
+    // }, 500);
     setTimeout(() => {
       this.$events.$emit('remove-all-background');
     }, 2000);
