@@ -2,28 +2,16 @@
 
 // Fade transition
 .fade-enter-active, .fade-leave-active
-  transition: opacity 0.4s ease-out
+  transition: opacity 0.4s ease
 
 .fade-enter, .fade-leave-to
   opacity: 0
 
 // router transition
-.fade-delay-enter-active, .fade-delay-reverse-enter-active
-  top: 0
-  transition: top 850ms $cubicTransition
-  position: relative
+.fade-delay-enter-active, .fade-delay-leave-active
+  transition: opacity 600ms ease
 
-.fade-delay-leave-active, .fade-delay-reverse-leave-active
-  transition: opacity 400ms ease
-  opacity: 1
-
-.fade-delay-enter
-  top: -100vh
-
-.fade-delay-reverse-enter
-  top: 100vh
-
-.fade-delay-leave-to, .fade-delay-reverse-leave-to
+.fade-delay-enter, .fade-delay-leave-to
   opacity: 0
 
 

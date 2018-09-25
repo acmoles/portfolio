@@ -1,6 +1,6 @@
 @import '../variables'
 
-.gradient-header, .flat-header, .color-header, .dark-header
+.gradient-header, .flat-header, .flat-header-project, .color-header, .dark-header
   position: absolute
   top: 0
   bottom: 0
@@ -34,6 +34,9 @@
   &.black
     opacity: 0.9
 
+.flat-header-project
+  opacity: 0.9
+
 a:hover, a:active
   .flat-header
     opacity: 1
@@ -41,7 +44,7 @@ a:hover, a:active
 .color-header
   mix-blend-mode: color
 
-.flat-header, .color-header
+.flat-header, .color-header, .flat-header-project
   background: $blue
   &.green
     background: $green

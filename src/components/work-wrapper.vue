@@ -2,8 +2,8 @@
   <div class="page">
 
     <section class="hero is-medium page-header">
-      <div class="color-header" :class="color"></div>
-      <div class="flat-header" :class="color"></div>
+      <!-- <div class="color-header" :class="color"></div> -->
+      <div class="flat-header-project" :class="color"></div>
       <div class="hero-body">
         <div class="container titles" :class="color">
           <slot name="titles">
@@ -22,8 +22,8 @@
     </section>
 
     <section class="hero is-large page-footer" :class="{ 'is-visible': contentVisible }">
-      <div class="color-header" :class="color"></div>
-      <div class="flat-header" :class="color"></div>
+      <!-- <div class="color-header" :class="color"></div> -->
+      <div class="flat-header-project" :class="color"></div>
       <div class="hero-body">
         <slot name="footer-content">
           This will only be displayed if there is no content
@@ -72,7 +72,7 @@ export default {
 
     setTimeout(() => {
       this.fadeInContent();
-    }, 900);
+    }, 300);
     setTimeout(() => {
       this.$events.$emit('remove-all-background');
     }, 2000);

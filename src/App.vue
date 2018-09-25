@@ -57,7 +57,6 @@ export default {
     });
     this.$events.$on('navigate-project', () => {
       if (this.backgroundReady) {
-        this.background.animateObjects('up');
         this.background.toggleCanvasFader('on');
       }
     });
@@ -73,7 +72,7 @@ export default {
       //   }
       // });
       this.intro.fadeLoader('in', () => {
-        this.background.resetLayerHeight();
+        // this.background.resetLayerHeight();
         this.background.toggleCanvasFader('off');
         setTimeout(() => {
           this.intro.fadeLoader('out', () => {
@@ -104,11 +103,7 @@ export default {
     })
   },
   methods: {
-    toggleReversibleTransition() {
-      this.transitionName = this.transitionName === 'fade-delay' ? 'fade-delay-reverse' : 'fade-delay';
-    },
     setBackwardTransition() {
-      // this.transitionName = 'fade-delay-reverse';
       this.transitionName = 'fade-delay-none';
     },
     setForwardTransition() {
