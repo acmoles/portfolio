@@ -162,25 +162,25 @@
 
           <p>This website includes five case studies, three from toucanBox and two side projects. I also include an overview of select projects dating from before 2016.</p>
           <ol>
-            <li>
-              toucanBox Chapter 1: Refining the value proposition<br>
-              Case study details
+            <li style="margin-bottom: 0.75em">
+              <router-link to="onboarding">toucanBox Chapter 1:</router-link> Refining the value proposition<br>
+              <p>A redesigned sign up funnel which optimised communication and useability, while adding details to build confidence</p>
             </li>
-            <li>
-              toucanBox Chapter 2: Increasing customer satisfaction with a personalised experience<br>
-              Case study details
+            <li style="margin-bottom: 0.75em">
+              <router-link to="/personalisation">toucanBox Chapter 2:</router-link> Increasing customer satisfaction with a personalised experience<br>
+              <p>How strategic thinking identified toucanBox’s most promising digital product opportunity and helped outline a vision</p>
             </li>
-            <li>
-              Wesen Jewellery: Building a jewellery brand with user generated products<br>
-              Case study details
+            <li style="margin-bottom: 0.75em">
+              <router-link to="/wesen">Wesen Jewellery:</router-link> Building a jewellery brand with user generated products<br>
+              <p>End-to-end design and development of a shopping experience that facilitates customer creativity</p>
             </li>
-            <li>
-              BLKBRD: Exploring a new dimension for messaging<br>
-              Case study details
+            <li style="margin-bottom: 0.75em">
+              <router-link to="/blkbrd">BLKBRD:</router-link> Exploring a new dimension for messaging<br>
+              <p>A mobile app which gives digital messages a location in the physical world</p>
             </li>
-            <li>
-              toucanBox R&amp;D: Adding value to a physical product with digital content<br>
-              Case study details
+            <li style="margin-bottom: 0.75em">
+              <router-link to="/toucanoo">toucanBox R&amp;D:</router-link> Adding value to a physical product with a digital game<br>
+              <p>A research and development project investigating the potential of online content to encourage trialists to become customers</p>
             </li>
           </ol>
 
@@ -192,7 +192,14 @@
     <template slot="footer-content">
       <div class="container page-footer-container">
         <h2>Let’s chat</h2>
-        <p>I’m always happy to meet new people and talk about opportunities so don’t hesitate to get in touch. <a>Copy email</a></p>
+        <p>I’m always happy to meet new people and talk about opportunities so don’t hesitate to get in touch.
+          <a
+            v-clipboard:copy="email"
+            v-clipboard:success="onCopy"
+            v-clipboard:error="onError"
+          >{{ copyTextMessage }}
+          </a>
+        </p>
       </div>
     </template>
   </WorkWrapper>
@@ -206,6 +213,23 @@ export default {
   name: 'About',
   components: {
     WorkWrapper
+  },
+  data () {
+    return {
+      email: 'info@acmoles.design',
+      copyTextMessage: 'Copy email'
+    }
+  },
+  methods: {
+    onCopy () {
+      this.copyTextMessage = 'Email copied';
+      setTimeout(() => {
+        this.copyTextMessage = 'Copy email';
+      }, 1500);
+    },
+    onError () {
+      this.copyTextMessage = 'Error';
+    }
   }
 }
 </script>

@@ -21,25 +21,6 @@
 
       <div class="page-glass-section">
 
-        <div class="columns">
-          <div class="column">
-            <figure class="image is-1by1">
-              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-            <figcaption>
-              Figure 1: Some beautiful placeholders
-            </figcaption>
-          </div>
-          <div class="column">
-            <figure class="image is-1by1">
-              <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-            <figcaption>
-              Figure 2: Some beautiful placeholders
-            </figcaption>
-          </div>
-        </div>
-
         <div class="content">
           <h3>Placeholder content</h3>
           <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="#">non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
@@ -47,6 +28,25 @@
             <li>Donec blandit a lorem id convallis.</li>
             <li>Cras gravida arcu at diam gravida gravida.</li>
           </ol>
+
+          <div class="columns">
+            <div class="column">
+              <figure class="image is-1by1">
+                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+              </figure>
+              <figcaption>
+                Figure 1: Some beautiful placeholders
+              </figcaption>
+            </div>
+            <div class="column">
+              <figure class="image is-1by1">
+                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+              </figure>
+              <figcaption>
+                Figure 2: Some beautiful placeholders
+              </figcaption>
+            </div>
+          </div>
         </div>
 
       </div>

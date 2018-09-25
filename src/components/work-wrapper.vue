@@ -54,7 +54,7 @@ export default {
   },
   data () {
     return {
-      contentVisible: true, //TODO put back to false
+      contentVisible: false, //TODO put back to false
       headerVisible: false
     }
   },
@@ -72,7 +72,7 @@ export default {
 
     setTimeout(() => {
       this.fadeInContent();
-    }, 800);
+    }, 900);
     setTimeout(() => {
       this.$events.$emit('remove-all-background');
     }, 2000);
@@ -133,7 +133,7 @@ export default {
     z-index: 1
     opacity: 0
     transform: translateY(2em)
-    transition: opacity 0.2s, transform 2s cubic-bezier(0.19, 1, 0.22, 1)
+    transition: opacity 0.4s, transform 0.8s 0.4s ease
     margin: 0 0.75em
     @media screen and (min-width: $desktop)
       margin: 0 auto

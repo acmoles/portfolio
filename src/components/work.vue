@@ -70,7 +70,7 @@ export default {
           color: 'blue',
           title: 'Refining the value proposition',
           route: 'onboarding',
-          description: 'When we clarified what we offer, added details which built confidence and made signing up effortless',
+          description: 'A redesigned sign up funnel which optimised communication and useability, while adding details to build confidence',
           client: 'toucanBox',
           date: 'Q3 2017'
         },
@@ -80,7 +80,7 @@ export default {
           color: 'green',
           title: 'Increasing satisfaction with a personalised experience',
           route: 'personalisation',
-          description: 'How strategic thinking enabled us to identify the most promising digital product opportunity and outline a vision',
+          description: 'How strategic thinking identified toucanBox’s most promising digital product opportunity and helped outline a vision',
           client: 'toucanBox',
           date: 'Q2-3 2018'
         },
@@ -90,7 +90,7 @@ export default {
           color: 'red',
           title: 'Building a jewellery brand with user generated products',
           route: 'wesen',
-          description: 'Will a compelling product creation experience be rewarded with a purchase decision?',
+          description: 'End-to-end design and development of a shopping experience that facilitates customer creativity',
           client: 'Wesen',
           date: 'Q1 2018'
         },
@@ -100,7 +100,7 @@ export default {
           color: 'black',
           title: 'Exploring a new dimension for messaging',
           route: 'blkbrd',
-          description: 'What meaning can we derive from digital messages with a location in the physical world?',
+          description: 'A mobile app which gives digital messages a location in the physical world',
           client: 'BLKBRD',
           date: 'Q3 2017'
         },
@@ -108,9 +108,9 @@ export default {
           index: 'toucanoo',
           icon: '/img/homepage/project-icons/toucanoo.svg',
           color: 'purple',
-          title: 'Adding value to a physical product with digital content',
+          title: 'Adding value to a physical product with a digital game',
           route: 'toucanoo',
-          description: 'Can we address customer concern about value for money without increasing operational cost?',
+          description: 'A research and development project investigating the potential of online content to encourage trialists to become customers',
           client: 'toucanBox',
           date: 'Q4 2016'
         },

@@ -12,7 +12,7 @@
       class="navbar-brand"
     >
       <button
-        @click="backHome('work')"
+        @click="backHome"
         class="navbar-item hamburger"
         type="button"
       >

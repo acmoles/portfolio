@@ -11,6 +11,7 @@ export class Background {
 
     this.canvas = document.getElementById('canvas');
     this.canvasFader = document.getElementById('canvas-fader');
+
     this.canvasFaderVisible = false;
 
     this.init();
@@ -73,8 +74,8 @@ export class Background {
     });
   }
 
-  toggleCanvasFader() {
-    if (this.canvasFaderVisible) {
+  toggleCanvasFader(onOff) {
+    if (onOff === 'off') {
       this.canvasFader.classList.remove('active');
       this.canvasFaderVisible = false;
     } else {
@@ -163,7 +164,7 @@ export class Background {
         targets: layer,
         y: amount,
         easing: 'easeInOutQuart',
-        duration: 750
+        duration: 850
       });
     });
   }

@@ -58,7 +58,7 @@ export default {
     this.$events.$on('navigate-project', () => {
       if (this.backgroundReady) {
         this.background.animateObjects('up');
-        this.background.toggleCanvasFader();
+        this.background.toggleCanvasFader('on');
       }
     });
     this.$events.$on('home-sequence', (callback) => {
@@ -74,7 +74,7 @@ export default {
       // });
       this.intro.fadeLoader('in', () => {
         this.background.resetLayerHeight();
-        this.background.toggleCanvasFader();
+        this.background.toggleCanvasFader('off');
         setTimeout(() => {
           this.intro.fadeLoader('out', () => {
             // this.intro.resetLoaderBars();

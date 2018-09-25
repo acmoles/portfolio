@@ -16,7 +16,7 @@
 
         <div class="content">
           <p>
-            <a href="http://www.toucanbox.com">toucanBox</a> is an award winning startup subscription service that provides arts and crafts activities for children aged 3 to 8 years old.
+            toucanBox is an award winning startup subscription service that provides arts and crafts activities for children aged 3 to 8 years old.
             Each box has the child’s name on the front and a personalised message printed inside.
             It has illustrated instructions, an activity magazine and all the required materials to make a craft project. It’s also delivered straight through the letterbox.
           </p>
@@ -141,13 +141,13 @@
             </div>
             <div class="media-content">
               <div class="content">
+                <strong style="margin-bottom: -0.5em; display: block;">I want my child to be happy</strong>
                 <ul>
-                  <strong style="margin-bottom: 0.5em; display: block;">I want my child to be happy</strong>
                   <li>They enjoy crafting <i>“We do crafts every weekend and they love it”</i></li>
                   <li>They want toucanBox <i>“They saw it on TV and asked me for it”</i></li>
                 </ul>
+                <strong style="margin-bottom: -0.5em; display: block;">I want to be a good parent</strong>
                 <ul>
-                  <strong style="margin-bottom: 0.5em; display: block;">I want to be a good parent</strong>
                   <li>I want to share positive experiences with my child, forming lasting memories <i>“I really value the time we spend together”</i></li>
                   <li>I want to support my child’s education and development <i>“If only it was easier to find things for my kids to do that support their education”</i></li>
                   <li>I want to be prepared <i>“I want to do more crafting with my kids but I’m not creative”</i></li>
@@ -166,8 +166,8 @@
             </div>
             <div class="media-content">
               <div class="content">
+                <strong style="margin-bottom: -0.5em; display: block;">I want to give a good gift</strong>
                 <ul>
-                  <strong style="margin-bottom: 0.5em; display: block;">I want to give a good gift</strong>
                   <li>I want to show how much I care <i>“Finding a gift that’s good enough can be hard”</i></li>
                   <li>I want it to be quick and easy, for me and the recipient <i>“A good gift doesn’t create any work for whoever I give it to”</i></li>
                 </ul>
@@ -185,8 +185,8 @@
             </div>
             <div class="media-content">
               <div class="content">
+                <strong style="margin-bottom: -0.5em; display: block;">I want to be entertained</strong>
                 <ul>
-                  <li>I want to be entertained</li>
                   <li>I want to do what I’ve seen my friends do / seen on TV (YouTube) / done at school</li>
                 </ul>
               </div>
@@ -238,7 +238,6 @@
             <dd><i>“I thought it was just a free craft box, why do you need my billing details?”</i></dd>
             <dd><i>“This is the sign up form, I’m not ready for that yet”</i></dd>
             <dd><i>“I can’t see whether the discount code is applied, that’s worrying”</i></dd>
-            <dt>Under some circumstances, users from paid marketing channels with URL embedded discount codes could lose it while browsing the site.</dt>
           </dl>
         </div>
 
@@ -613,7 +612,7 @@
 
           <br>
 
-          <h4>1. The ‘Main Stage’ and ‘Why toucanBox’ sections</h4>
+          <h4>1. The ‘Main Stage’</h4>
           <p>Having optimised the messaging, communicate it clearly and quickly.</p>
 
           <div class="figure-container">
@@ -698,10 +697,11 @@
 
           <div class="figure-container" style="margin-top: -2em">
             <figcaption>
-              A reassuring and customisable message that the trial offer is applied follows users through the homepage and details form steps of the funnel.
-              This is activated when they enter a valid discount code or if they arrived from a paid marketing source with a URL embedded code.
+              A reassuring and customisable message that the trial offer is applied follows users through the homepage and details form steps
             </figcaption>
           </div>
+
+          <p>Trialist mode is activated when the user enters a valid discount code or if they arrived from a paid marketing source with a URL embedded code.</p>
 
           <br>
 
@@ -752,7 +752,7 @@
                 <td>I had avoided this for expediency but quickly realised I wasn’t meeting an important user expectation for desktop website navigation</td>
               </tr>
               <tr>
-                <td>The view rate for the toucanBox promotional video did not increase, even though I had increased the prominence of the video button on the homepage.</td>
+                <td>The view rate for the toucanBox promotional video did not increase, even though I had increased the prominence of the video button.</td>
                 <td>I didn’t want to increase the prominence of the video button further because it risked competing for attention with the main call to action. For desktop, I added an autoplay looping montage video cut from the promotional video footage (to be loaded asynchronously)</td>
               </tr>
               <tr>
@@ -761,7 +761,7 @@
               </tr>
               <tr>
                 <td>“I’ll use the menu to learn more” A surprisingly high number of testers attempted to use the navigation menu to gain an understanding of the offering, rather than scrolling. They found the options unsatisfying or confusing</td>
-                <td>I added links to the main navigation which linked to separate pages mirroring content from the homepage</td>
+                <td>I added links to the main navigation, pointing at separate pages that mirrored content from the homepage</td>
               </tr>
             </tbody>
           </table>
@@ -782,11 +782,11 @@
               </tr>
               <tr>
                 <td>“I can’t be sure how much I’m paying.” Testers mentioned that it felt frightening to click the ‘authorise payment’ button on the details form</td>
-                <td>I added a mini order summary next to the payment button</td>
+                <td>I added a mini order summary next to the payment/paypal button</td>
               </tr>
               <tr>
                 <td>“If I wanted to send toucanBox to two different addresses, how would I do that?” It became clear that our system was not well suited to gifters. The copy, interface and even the back-end data model was not tailored to their needs</td>
-                <td>This is good feedback but the issue was out of the scope of this project. I made sure it was communicated to the Company leadership and suggested a future project to resolve the issue.</td>
+                <td>This was good feedback but the issue was out of the scope of this project. I made sure it was communicated to the Company leadership and suggested a future project to resolve the issue.</td>
               </tr>
               <tr>
                 <td>“I don’t remember making a password, now I need one to log in?” We were aware that by not requiring a password we were adding to customer service volume as approximately 15% of trialists didn’t make a password after completing sign up.</td>
@@ -819,18 +819,18 @@
           </blockquote>
 
           <p>
-            I worked closely with our developers to tune the input validations and feedback messages on the details form. We solved the issue of lost discount codes by switching from a URL embedded to a session-based system.
+            I worked closely with our developers to tune the input validations and feedback messages on the details form. Under some circumstances, users from paid marketing channels with URL embedded discount codes could lose it while browsing the site. We solved this issue by switching to a session-based system.
           </p>
 
 
-          <div class="figure-container">
+          <!-- <div class="figure-container">
             <figure class="image is-16by9 single-image">
               <img class="lazyload" data-src="https://bulma.io/images/placeholders/640x360.png">
             </figure>
             <figcaption>
               Abbreviated video of the acquisition funnel
             </figcaption>
-          </div>
+          </div> -->
 
           <p>
             Our custom Ruby codebase and the difficulty in recruiting Ruby developers in London combined to make developer resource the tightest bottleneck for toucanBox. Equally, our developers shared a relative weakness in front-end CSS and JS.
@@ -871,9 +871,9 @@
             Top three changes contributing most to the overall conversion rate increase:
           </p>
           <ol>
-            <li>Validation error and useability improvements in the details form (confidence)</li>
+            <li>Input validation and useability improvements in the details form (confidence)</li>
             <li>Header, navigation and ‘main stage’ design update (communication, value proposition)</li>
-            <li>Order summary before authorising payment (confidence)</li>
+            <li>Mini order summary before authorising payment (confidence)</li>
           </ol>
           <p>
             <strong>35%</strong> average drop in homepage load time - I introduced svg sprite-sheets, mobile-to-desktop enhancement and lazy loading.
