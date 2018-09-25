@@ -100,7 +100,7 @@ export class Intro {
       targets: this.loaderBars,
       opacity: opacity,
       easing: 'easeInOutQuad',
-      duration: 600,
+      duration: 400,
       delay: 200,
       complete: () => {
         if (callback) {

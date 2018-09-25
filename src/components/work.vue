@@ -169,14 +169,18 @@ export default {
   @import '../sass/variables'
 
   .column
-    padding: 1em
+    @media screen and (min-width: $desktop)
+      padding: 1em
     @media screen and (min-width: $largeformat)
       padding: 1.5em
 
-  // .project-container
-  //   @media screen and (max-width: $desktop)
-  //     padding: 1.5em 0.75em 3em 0.75em
-  //     max-width: 20em
+  .columns
+    margin: 0
+
+  .project-container
+    @media screen and (max-width: $desktop)
+      padding: 0.75em 0 2em 0
+      max-width: 20em
 
   .glass
     overflow: hidden

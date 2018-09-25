@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import './registerServiceWorker'
+// import './registerServiceWorker'
 import VueEvents from 'vue-events'
 // import VeeValidate from 'vee-validate'
 import VueClipboard from 'vue-clipboard2'

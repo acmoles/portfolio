@@ -72,7 +72,7 @@ export default {
 
     setTimeout(() => {
       this.fadeInContent();
-    }, 300);
+    }, 500);
     setTimeout(() => {
       this.$events.$emit('remove-all-background');
     }, 2000);
