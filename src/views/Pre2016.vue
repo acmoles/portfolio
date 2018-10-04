@@ -16,73 +16,14 @@
 
         <div class="content">
 
-          <h2>Second level</h2>
-          <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
-          <ul>
-            <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
-            <li>Ut non enim metus.</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="page-glass-divider">
-        <h1>Lego Dimensions</h1>
-      </div>
-
-      <div class="page-glass-section">
-
-        <div class="content">
-          <h3>Third level</h3>
-          <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="#">non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
-          <ol>
-            <li>Donec blandit a lorem id convallis.</li>
-            <li>Cras gravida arcu at diam gravida gravida.</li>
-            <li>Integer in volutpat libero.</li>
-            <li>Donec a diam tellus.</li>
-            <li>Aenean nec tortor orci.</li>
-            <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
-            <li>Vivamus maximus ultricies pulvinar.</li>
-          </ol>
-          <div class="columns">
-            <div class="column">
-              <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
-              </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
-            </div>
-            <div class="column">
-              <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
-              </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="page-glass-divider">
-        <h1>Makielab</h1>
-      </div>
-
-      <div class="page-glass-section">
-
-        <div class="content">
-          <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
-          <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum commodo.</p>
-          <dl>
-            <dt>Web</dt>
-            <dd>The part of the Internet that contains websites and web pages</dd>
-            <dt>HTML</dt>
-            <dd>A markup language for creating web pages</dd>
-            <dt>CSS</dt>
-            <dd>A technology to make HTML look better</dd>
-          </dl>
+          <h1>Makies</h1>
+          <h3 class="subtitle">Makielab</h3>
+          <p>
+            Makielab is a mobile games and e-commerce startup, founded in London and acquired by Disney in early 2016, relocating to LA. We created Makies, an award-winning customisable digital avatar, which could be ordered as a bespoke 3D printed toy.
+          </p>
+          <p>
+            I was part of a multi-disciplinary team, including 3D artists and developers, working on the web and app based customisation experience as well as the physical product.
+          </p>
 
           <div class="columns">
             <div class="column">
@@ -102,56 +43,13 @@
               </figcaption>
             </div>
           </div>
-        </div>
 
-        <div class="content">
-          <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet, mollis malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
-          <h4>Fourth level</h4>
-          <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus laoreet, at elementum ex efficitur.</p>
-        </div>
+          <h1>Lego Dimensions</h1>
+          <h3 class="subtitle">Lego / Design by Touch</h3>
+          <p>
+            I joined the Lego Dimensions Team as an outside consultant, working across disciplines at all stages of the design and development process; from concept and experience design to hardware and industrial design. All work-in-progress material is confidential to Lego.
+          </p>
 
-      </div>
-
-      <div class="page-glass-divider">
-        <h1>Nova</h1>
-      </div>
-
-      <div class="page-glass-section">
-
-        <div class="content">
-          <h6>Sixth level</h6>
-          <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
-          <div class="columns">
-            <div class="column">
-              <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/256x256.png">
-              </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
-            </div>
-            <div class="column">
-              <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/256x256.png">
-              </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="page-glass-divider">
-        <h1>Spaced</h1>
-      </div>
-
-      <div class="page-glass-section">
-
-        <div class="content">
-          <h6>Seventh</h6>
-          <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
           <div class="columns">
             <div class="column">
               <figure class="image is-1by1">
@@ -171,28 +69,12 @@
             </div>
           </div>
 
-          <div class="figure-container">
-            <figure class="image is-16by9 single-image">
-              <img class="lazyload" data-src="https://bulma.io/images/placeholders/640x360.png">
-            </figure>
-            <figcaption>
-              Figure 1: Some beautiful placeholders
-            </figcaption>
-          </div>
+          <h1>Nova</h1>
+          <h3 class="subtitle">Stompy Robot</h3>
+          <p>
+            Stompy Robot is an independent video games studio based in Edinburgh, of which I was a founding member and continue to be an occasional contributor. Our first game was Nova (2014), a squad-based action RPG for mobile, which specifically aims to leverage the interaction opportunities offered by touch screens. <a href="">Go to stompyrobot.co.uk →</a>
+          </p>
 
-        </div>
-
-      </div>
-
-      <div class="page-glass-divider">
-        <h1>Nita</h1>
-      </div>
-
-      <div class="page-glass-section">
-
-        <div class="content">
-          <h6>Seventh</h6>
-          <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
           <div class="columns">
             <div class="column">
               <figure class="image is-1by1">
@@ -211,19 +93,14 @@
               </figcaption>
             </div>
           </div>
-        </div>
 
-      </div>
 
-      <div class="page-glass-divider">
-        <h1>Random International</h1>
-      </div>
+          <h1>Nita</h1>
+          <h3 class="subtitle">Art Lebedev Studio</h3>
+          <p>
+            Art Lebedev Studio is the largest and most well known creative agency in Russia with over 200 designers. I worked with the Product Design Team on consulting projects for Russian and international clients. One such client was Nita, a Russian aviation company, which produces Air Traffic Control consoles (ATC). More details of the design process can be found on the Art Lebedev website. <a href="">Go to artlebedev.com/nita/process →</a>
+          </p>
 
-      <div class="page-glass-section">
-
-        <div class="content">
-          <h6>Seventh</h6>
-          <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
           <div class="columns">
             <div class="column">
               <figure class="image is-1by1">
@@ -242,47 +119,41 @@
               </figcaption>
             </div>
           </div>
+
+
+          <h1>Fly</h1>
+          <h3 class="subtitle">Random International</h3>
+          <p>
+            I was part of the team that developed the interactive digital/physical installation 'Fly' for exhibit at the 2011 Moscow Biennial of Art and Design. I helped define the creative concept and independently carried out the design detailing process; CAD, prototyping and sourcing.
+          </p>
+
+          <div class="columns">
+            <div class="column">
+              <figure class="image is-1by1">
+                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+              </figure>
+              <figcaption>
+                Figure 1: Some beautiful placeholders
+              </figcaption>
+            </div>
+            <div class="column">
+              <figure class="image is-1by1">
+                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+              </figure>
+              <figcaption>
+                Figure 1: Some beautiful placeholders
+              </figcaption>
+            </div>
+          </div>
+
+
+
         </div>
 
-      </div>
-
-      <div class="page-glass-divider">
-        <h1>Sprint</h1>
       </div>
 
       <div class="page-glass-section last-section">
-
-        <div class="content">
-          <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="#">non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
-          <ol>
-            <li>Donec blandit a lorem id convallis.</li>
-            <li>Cras gravida arcu at diam gravida gravida.</li>
-            <li>Integer in volutpat libero.</li>
-            <li>Donec a diam tellus.</li>
-            <li>Aenean nec tortor orci.</li>
-            <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
-            <li>Vivamus maximus ultricies pulvinar.</li>
-          </ol>
-          <div class="columns">
-            <div class="column">
-              <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
-              </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
-            </div>
-            <div class="column">
-              <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
-              </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
-            </div>
-          </div>
-        </div>
-
+        
       </div>
     </template>
 

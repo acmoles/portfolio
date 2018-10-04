@@ -34,6 +34,12 @@
   &.black
     opacity: 0.9
 
+.Other
+  .flat-header
+    opacity: 0.8
+    &.black
+      opacity: 0.9
+
 .flat-header-project
   opacity: 0.9
 
@@ -42,7 +48,12 @@ a:hover, a:active
     opacity: 1
 
 .color-header
-  mix-blend-mode: color
+  display: none
+
+.Chrome, .Firefox
+  .color-header
+    display: block
+    mix-blend-mode: color
 
 .flat-header, .color-header, .flat-header-project
   background: $blue

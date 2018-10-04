@@ -1,6 +1,7 @@
 <template>
   <div
     id="app"
+    :class="userAgent"
   >
     <Nav />
 
@@ -32,7 +33,7 @@ export default {
   },
   data () {
     return {
-      background: {},
+      userAgent: undefined,
       transitionName: 'fade-delay-none',
       backgroundReady: false,
       firstBatch: true
@@ -87,6 +88,7 @@ export default {
 
     this.$nextTick(function () {
       this.intro = new Intro();
+      this.userAgent = this.intro.userAgent;
       this.background = new Background();
       this.background.appendCanvas(() => {
         // background ready callback

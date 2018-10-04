@@ -17,7 +17,7 @@
         <div class="content">
 
           <p>
-            I help companies build useful and pleasing products. I use the design process to bring clarity to complex questions. I am determined to create products that promote positive relationships between people, technology and the environment.
+            <strong>I help companies build useful and pleasing products.</strong> I use the design process to bring clarity to complex questions. I am determined to create products that promote positive relationships between people, technology and the environment.
           </p>
           <p>
             To find the right opportunities, I employ user research, market research and data analysis. I work alongside developers, speaking their language, to ensure products ship with the highest possible level of polish.
@@ -160,7 +160,14 @@
 
           <h2>Portfolio</h2>
 
-          <p>This website includes five case studies, three from toucanBox and two side projects. I also include an overview of select projects dating from before 2016.</p>
+          <p>
+            This website includes five case studies, three from toucanBox and two side projects.
+            I also include an overview of select projects dating from before 2016.
+            Each case study is structured to follow my process, which is loosely based on the
+            <a href="https://www.designcouncil.org.uk/news-opinion/design-process-what-double-diamond" target="_blank">design methodology</a>
+            defined by the British Design Council.
+            I slightly modify and extend this approach to better fit in an agile context, working alongside developers.
+          </p>
           <ol>
             <li style="margin-bottom: 0.75em">
               <router-link to="onboarding">toucanBox Chapter 1:</router-link> Refining the value proposition<br>

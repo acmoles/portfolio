@@ -16,14 +16,16 @@
 
         <div class="content">
           <p>
+            <span class="first-letter"><i class="icon-info"></i></span>
             toucanBox is an award winning startup subscription service that provides arts and crafts activities for children aged 3 to 8 years old.
             Each box has the child’s name on the front and a personalised message printed inside.
             It has illustrated instructions, an activity magazine and all the required materials to make a craft project. It’s also delivered straight through the letterbox.
           </p>
-          <p style="margin-bottom: 1.75em;">
+          <p style="margin-bottom: 2.5em;">
             I worked with toucanBox from April 2016 to September 2018, initially as Research and Development Manager, later moving into a full time product role in the Technology Team.
             The Team was initially me and one developer. Over the course of a year we added four more developers.
           </p>
+
 
           <div class="figure-container max-80">
             <figure class="image is-16by9 single-image">
@@ -244,7 +246,7 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Define</h1>
+        <h1>Definition</h1>
       </div>
 
       <div class="page-glass-section">
@@ -333,7 +335,7 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Design</h1>
+        <h1>Iteration</h1>
       </div>
 
       <div class="page-glass-section">
@@ -591,17 +593,12 @@
             Our copywriter produced several options for the descriptive copy.  I facilitated feedback across the Company to select the version to test with customers.
           </p>
 
+          <br>
+
         </div>
 
-      </div>
-
-      <div class="page-glass-divider">
-        <h1>Prototyping</h1>
-      </div>
-
-      <div class="page-glass-section">
-
         <div class="content">
+          <h2>Prototyping</h2>
           <p>
             I sketched and iterated all sections of the acquisition funnel, applying the new information architecture and improving useability, consistency and visual design.
           </p>
@@ -752,7 +749,7 @@
                 <td>I had avoided this for expediency but quickly realised I wasn’t meeting an important user expectation for desktop website navigation</td>
               </tr>
               <tr>
-                <td>The view rate for the toucanBox promotional video did not increase, even though I had increased the prominence of the video button.</td>
+                <td>The view rate for the toucanBox promotional video did not increase, even though I had increased the prominence of the video button</td>
                 <td>I didn’t want to increase the prominence of the video button further because it risked competing for attention with the main call to action. For desktop, I added an autoplay looping montage video cut from the promotional video footage (to be loaded asynchronously)</td>
               </tr>
               <tr>

@@ -53,7 +53,9 @@ export class BackgroundObject {
 
   checkVisible() {
     return this.bounds.x >= 0 - this.bounds.width // visible if off screen left up to own width
-    && this.bounds.x <= this.app.screen.width;
+    && this.bounds.x <= this.app.screen.width
+    && this.bounds.y <= this.app.screen.height
+    && this.bounds.y >= 0 - this.bounds.height;
   }
 
   intro() {

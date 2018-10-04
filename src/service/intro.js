@@ -2,12 +2,15 @@ import anime from 'animejs'
 
 export class Intro {
 
+
   constructor() {
     this.spinner = document.getElementById('spinner');
     this.canvasContainer = document.getElementById('canvas');
     this.loader = document.getElementById('loader');
     // this.loaderBars = document.querySelectorAll('.loader-bar');
     this.loaderBars = document.getElementById('loader-bar');
+    this.userAgent = undefined;
+
     this.checkUserAgent();
     this.beginLoadIntro();
   }
@@ -17,8 +20,13 @@ export class Intro {
      //"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
      // TODO use pixi blur if firefox
      this.addSoftwareBlur();
-    } else {
+     this.userAgent = 'Firefox';
+   } else if (navigator.userAgent.indexOf('Chrome') > -1) {
+     this.addCanvasBlur();
+     this.userAgent = 'Chrome';
+   } else {
       this.addCanvasBlur();
+      this.userAgent = 'Other';
     }
   }
 
