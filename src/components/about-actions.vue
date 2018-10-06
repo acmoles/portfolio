@@ -5,7 +5,7 @@
       <div class="dropdown is-left is-active">
         <div class="dropdown-trigger">
           <router-link
-            class="button is-rounded about-button"
+            class="button white-button is-rounded about-button"
             :to="{ name: 'about', params: {} }"
           >
             About
@@ -17,7 +17,7 @@
       <div class="dropdown is-left is-active">
         <div class="dropdown-trigger">
           <button
-            class="button is-rounded options"
+            class="button white-button is-rounded options is-icon-button"
             @click="toggleOptions"
             role="button"
             aria-haspopup="true"
@@ -120,23 +120,13 @@ export default {
     padding: 0.5em 0.75em
     .button
       width: 100%
-      background-color: rgba($white, 0.75)
-      border-color: transparent
-      &:active, &:hover
-        // border-color: darken($slate-faded, 20%)
-        transform: translateY(-0.1em)
-        background-color: rgba($white, 0.95)
-        color: darken($slate-faded, 20%)
-      &:focus
-        box-shadow: 0 0 0 0.125em rgba($silver, 0.25)
     .about-button
       color: $slate
       &:active, &:hover
         color: $black
     .options
       color: $slate-faded
-      padding-left: 0.75em
-      padding-right: 0.75em
+      padding: 0 0.85em
       .icon
         i::before
           line-height: 0

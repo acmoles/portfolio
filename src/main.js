@@ -6,6 +6,7 @@ import VueEvents from 'vue-events'
 // import VeeValidate from 'vee-validate'
 import VueClipboard from 'vue-clipboard2'
 import lazySizes from 'lazysizes'
+import VModal from 'vue-js-modal'
 // Object.assign(lazySizes.cfg, {
 //     expand: 10
 // });
@@ -14,6 +15,7 @@ lazySizes.init();
 // Vue.use(VeeValidate, {
 //   events: 'change'
 // });
+Vue.use(VModal)
 Vue.use(VueEvents)
 Vue.use(VueClipboard)
 

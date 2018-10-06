@@ -93,7 +93,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Planning and scoping</td>
+                    <td>Planning and scope definition</td>
                   </tr>
                   <tr>
                     <td>Customer insights and ideation</td>
@@ -259,8 +259,9 @@
           </p>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
+            <figure class="image is-2by1 single-image zoomable" @click="showImage('./img/projects/onboarding/Analysis.png', 'is-2by1')">
               <img class="lazyload" data-src="./img/projects/onboarding/Analysis.png">
+              <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
             </figure>
             <figcaption>
               Pros and cons of the four pre-goal funnel stages; landing page, product choice, details form and review.
@@ -270,8 +271,9 @@
           <br>
 
           <div class="figure-container">
-            <figure class="image is-16by9 single-image">
+            <figure class="image is-16by9 single-image zoomable" @click="showImage('./img/projects/onboarding/Journey.png', 'is-2by1')">
               <img class="lazyload" data-src="./img/projects/onboarding/Journey.png">
+              <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
             </figure>
             <figcaption>
               Mapping the customer acquisition journey; yellow star indicators show potential areas of improvement
@@ -613,8 +615,9 @@
           <p>Having optimised the messaging, communicate it clearly and quickly.</p>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
+            <figure class="image is-2by1 single-image zoomable" @click="showImage('./img/projects/onboarding/Header.png', 'is-2by1')">
               <img class="lazyload" data-src="./img/projects/onboarding/Header.png">
+              <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
             </figure>
             <figcaption>
               Wireframes through to high fidelity sketches of the header and ‘main stage’
@@ -625,8 +628,9 @@
           <p>Enable comparison and emphasise the differences between each box.</p>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
+            <figure class="image is-2by1 single-image zoomable" @click="showImage('./img/projects/onboarding/Product-section.png', 'is-2by1')">
               <img class="lazyload" data-src="./img/projects/onboarding/Product-section.png">
+              <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
             </figure>
             <figcaption>
               Iteration of two design proposals for the mobile product section: tabbed view and compact cards (which would expand with a modal window)
@@ -838,8 +842,9 @@
           </p>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
+            <figure class="image is-2by1 single-image zoomable" @click="showImage('./img/projects/onboarding/Styles.png', 'is-2by1')">
               <img class="lazyload" data-src="./img/projects/onboarding/Styles.png">
+              <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
             </figure>
             <figcaption>
               To increase my efficiency and that of the whole team, I created and maintained a style guide of UI components and design guidelines (with corresponding html snippets) as I developed the front end.
@@ -894,7 +899,7 @@
     </template>
 
     <template slot="footer-content">
-      <div class="container page-footer-container">
+      <div class="container case-study page-footer-container">
         <div class="columns">
           <div class="column content link-container">
             <h3>toucanBox</h3>
@@ -924,6 +929,15 @@ export default {
   name: 'Onboarding',
   components: {
     WorkWrapper
+  },
+  methods: {
+    showImage (imageUrl, imageAspectClass) {
+      this.$modal.show('image-modal', { url: imageUrl, aspect: imageAspectClass })
+
+    },
+    hideImage () {
+      this.$modal.hide('image-modal');
+    }
   }
 }
 </script>

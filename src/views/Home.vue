@@ -42,6 +42,9 @@ export default {
 
   @import '../sass/variables'
 
+  .page
+    overflow-y: hidden
+
   .columns.is-gapless
     width: 100%
     min-height: 100vh

@@ -145,7 +145,8 @@ export default {
 
   .location
     font-size: 0.75em
-    color: $silver
+    color: $slate
+    opacity: 0.65
 
   .copywrite
     display: none

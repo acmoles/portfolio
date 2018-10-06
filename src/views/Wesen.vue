@@ -6,7 +6,7 @@
   >
     <template slot="titles">
       <div class="content">
-        <h1 class="project-title">Building a jewellery brand with user generated products</h1>
+        <h1 class="project-title">Building a jewellery creation experience</h1>
         <p class="client red">Wesen</p>
       </div>
     </template>
@@ -302,8 +302,8 @@
           </p>
 
           <div class="figure-container">
-            <figure class="image is-16by9 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Journey.png">
+            <figure class="image is-5by3 single-image">
+              <img class="lazyload" data-src="./img/projects/wesen/journey_characters.jpg">
             </figure>
             <figcaption>
               Three gifters faced with the problem of finding a thoughtful gift
@@ -313,14 +313,14 @@
           <article class="media">
             <div class="media-left is-quarter">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/128x128.png">
+                <img class="lazyload" data-src="./img/projects/wesen/j_research.jpg">
               </figure>
             </div>
             <div class="media-content">
               <div class="content">
-                <strong style="margin-bottom: -0.5em; display: block;">Research</strong>
+                <strong style="display: block;">Research</strong>
+                <p>Possible marketing messages:</p>
                 <ul>
-                  <li>Possible marketing messages:</li>
                   <li>“Give the most personal gift of all - a pendant necklace designed by you”</li>
                   <li>“Stop looking for the perfect gift, let us help you design it”</li>
                 </ul>
@@ -331,7 +331,7 @@
           <article class="media">
             <div class="media-left is-quarter">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/128x128.png">
+                <img class="lazyload" data-src="./img/projects/wesen/j_discovery.jpg">
               </figure>
             </div>
             <div class="media-content">
@@ -348,7 +348,7 @@
           <article class="media">
             <div class="media-left is-quarter">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/128x128.png">
+                <img class="lazyload" data-src="./img/projects/wesen/j_customise.jpg">
               </figure>
             </div>
             <div class="media-content">
@@ -366,7 +366,7 @@
           <article class="media">
             <div class="media-left is-quarter">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/128x128.png">
+                <img class="lazyload" data-src="./img/projects/wesen/j_convert.jpg">
               </figure>
             </div>
             <div class="media-content">
@@ -384,7 +384,7 @@
           <article class="media">
             <div class="media-left is-quarter">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/128x128.png">
+                <img class="lazyload" data-src="./img/projects/wesen/j_reflect.jpg">
               </figure>
             </div>
             <div class="media-content">
@@ -411,8 +411,8 @@
           <p>With this in mind I proposed a provisional purchase flow:</p>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Header.png">
+            <figure class="image is-3by1 single-image">
+              <img class="lazyload" data-src="./img/projects/wesen/Draft-journey-mvp.png">
             </figure>
             <figcaption>
               The red boundary illustrates which features are outsourced or removed for the MVP
@@ -534,9 +534,9 @@
             At first I was unsure what would result from combining these two tools. Blender, which has a built in radial array, proved useful for experimentation. Blender’s animation rig could approximate the functionality of a control geometry, where bones acted as control vertices. I tried several configurations, settling on a six pointed diamond-like shape. A future enhancement could offer the user a range of control geometries.
           </p>
 
-          <div class="figure-container">
+          <div class="figure-container is-50">
             <figure class="image is-1by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Header.png">
+              <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190700" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </figure>
             <figcaption>
               I attempted to test the Blender setup with users but this proved too low fidelity - testers would need to learn the Blender interface before I could gather useful feedback
@@ -547,9 +547,9 @@
             In order to test with users, I built a rough yet fully functional frontend prototype. I also took the opportunity to explore the possibility of Three.js as a library for simplifying the 3D graphics API in the web browser.
           </p>
 
-          <div class="figure-container">
+          <div class="figure-container is-50">
             <figure class="image is-1by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Header.png">
+              <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190664" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </figure>
             <figcaption>
               I was pleased to observe that testers automatically moved the control points and sometimes exclaimed ‘wow’ when doing so for the first time
@@ -567,8 +567,9 @@
           </p>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Header.png">
+            <figure class="image is-2by1 single-image zoomable" @click="showImage('./img/projects/wesen/Wireframes.png', 'is-2by1')">
+              <img class="lazyload" data-src="./img/projects/wesen/Wireframes.png">
+              <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
             </figure>
             <figcaption>
               Wireframe sketches, overlaying screenshots from Blender, detailing a user interface with two design modes (layout and shape) and a third eyelet mode
@@ -580,8 +581,8 @@
           </p>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Header.png">
+            <figure class="image is-5by4 single-image">
+              <img class="lazyload" data-src="./img/projects/wesen/Shaders.jpg">
             </figure>
             <figcaption>
               Experimenting with presentation and matcap shaders
@@ -593,8 +594,9 @@
           </p>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Header.png">
+            <figure class="image is-3by2 single-image zoomable" @click="showImage('./img/projects/wesen/Sketching.png', 'is-3by2')">
+              <img class="lazyload" data-src="./img/projects/wesen/Sketching.png">
+              <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
             </figure>
             <figcaption>
               Sketch iterations, evolving the interface while also exploring branding and visual design
@@ -602,8 +604,9 @@
           </div>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Header.png">
+            <figure class="image is-3by2 single-image zoomable" @click="showImage('./img/projects/wesen/Refining.png', 'is-3by2')">
+              <img class="lazyload" data-src="./img/projects/wesen/Refining.png">
+              <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
             </figure>
             <figcaption>
               I drew inspiration from the Airbnb Design System and Google Material Design 2.0, at the same time referencing the design language of fashion and jewellery brands
@@ -611,8 +614,8 @@
           </div>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Header.png">
+            <figure class="image is-3by2 single-image">
+              <img class="lazyload" data-src="./img/projects/wesen/Iconography.png">
             </figure>
             <figcaption>
               Detailing production assets - iconography
@@ -664,7 +667,7 @@
 
           <div class="figure-container">
             <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Header.png">
+              <img class="lazyload" data-src="./img/projects/wesen/Messages.png">
             </figure>
             <figcaption>
               The notification window, which begins by offering tips, later reporting geometry errors when appropriate
@@ -702,7 +705,7 @@
             <thead>
               <tr>
                 <th>Lesson from experience</th>
-                <th>Solution</th>
+                <th style="width: 50%;">Solution</th>
               </tr>
             </thead>
             <tbody>
@@ -763,8 +766,8 @@
           </table>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Header.png">
+            <figure class="image is-5by4 single-image">
+              <img class="lazyload" data-src="./img/projects/wesen/System-diagram.png">
             </figure>
             <figcaption>
               The Wesen system diagram, detailing user touchpoints and client/server/third-party API interactions
@@ -836,8 +839,8 @@
           </p>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Header.png">
+            <figure class="image is-16by9 single-image">
+              <img class="lazyload" data-src="./img/projects/wesen/Grid.jpg">
             </figure>
             <figcaption>
               The customisation tool is capable of infinite variation - this image shows a mixture of hand-made and randomly generated pendants
@@ -846,7 +849,7 @@
 
           <h3>Reflection on end-to-end</h3>
           <p>
-            Working independently to build all the touchpoints and systems required for a mass-customisation product has been an excellent learning experience. Surprisingly, or not so surprisingly, the main lesson has been in the value of the multidisciplinary team; of working with great people who are fast and efficient within their specialism. At several junctures I felt the lack of a collaborator, especially in backend engineering, but equally in shaping ideas.
+            Working independently to build all the touchpoints and systems required for a mass-customisation product has been an interesting learning experience. Surprisingly, or not so surprisingly, the main lesson has been in the value of the multidisciplinary team; of working with great people who are fast and efficient within their specialism. At several junctures I felt the lack of a collaborator, especially in backend engineering, but equally in shaping ideas.
           </p>
         </div>
 
@@ -885,6 +888,15 @@ export default {
   name: 'Wesen',
   components: {
     WorkWrapper
+  },
+  methods: {
+    showImage (imageUrl, imageAspectClass) {
+      this.$modal.show('image-modal', { url: imageUrl, aspect: imageAspectClass })
+
+    },
+    hideImage () {
+      this.$modal.hide('image-modal');
+    }
   }
 }
 </script>

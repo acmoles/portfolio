@@ -10,6 +10,7 @@
 body
   background: $snow
   overflow-y: hidden
+  font-size: 18px
   @media screen and (min-width: $fullhd)
     font-size: 1vw
   @media screen and (min-width: $largeformat)
@@ -71,18 +72,18 @@ a:focus, button:focus
 h1, h2, h3, h4, h5, h6
   font-family: $family-display
 
-h1
-  font-size: 2.75em
-
-.content h2
-  font-size: 2em
-
 .content h3
+  color: $silver
+
+.content h4
   color: $silver
 
 .content h5
   color: $slate
 
 
-p
-  opacity: 0.75
+p.light
+  color: $silver
+
+p.dark
+  color: $steel

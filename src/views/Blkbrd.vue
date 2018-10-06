@@ -147,8 +147,8 @@
           </ul>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Analysis.png">
+            <figure class="image is-3by1 single-image">
+              <img class="lazyload" data-src="./img/projects/blkbrd/Flow.png">
             </figure>
             <figcaption>
               The BLKBRD user journey
@@ -171,8 +171,9 @@
           </p>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Analysis.png">
+            <figure class="image is-2by1 single-image zoomable" @click="showImage('./img/projects/blkbrd/Typography-sketching.png', 'is-2by1')">
+              <img class="lazyload" data-src="./img/projects/blkbrd/Typography-sketching.png">
+              <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
             </figure>
             <figcaption>
               Early explorations relied exclusively on typography, eschewing all other interface elements such as buttons and dividers. I relaxed this constraint after receiving feedback that it made the app difficult to understand.
@@ -180,8 +181,9 @@
           </div>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Analysis.png">
+            <figure class="image is-2by1 single-image zoomable" @click="showImage('./img/projects/blkbrd/Further-sketching.png', 'is-2by1')">
+              <img class="lazyload" data-src="./img/projects/blkbrd/Further-sketching.png">
+              <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
             </figure>
             <figcaption>
               In further iteration I added buttons, structure, clear hierarchy and association. I signalled text inputs by inverting the scheme - wrapping them in a white box with black text.
@@ -190,7 +192,7 @@
 
           <div class="figure-container">
             <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Analysis.png">
+              <img class="lazyload" data-src="./img/projects/blkbrd/Context.jpg">
             </figure>
             <figcaption>
               Imagining BLKBRD in context
@@ -243,8 +245,8 @@
           </table>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Analysis.png">
+            <figure class="image is-16by9 single-image">
+              <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190758" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </figure>
             <figcaption>
               Background colour changing mode. Note the use of emoji, which proved just as popular on BLKBRD as other messaging apps
@@ -314,8 +316,8 @@
           </p>
 
           <div class="figure-container">
-            <figure class="image is-2by1 single-image">
-              <img class="lazyload" data-src="./img/projects/onboarding/Analysis.png">
+            <figure class="image is-9by16 single-image">
+              <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190729" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </figure>
             <figcaption>
               The onboarding flow: sign up, making a new channel, writing the first message and getting a reply. Motion design proved to be an important part of the BLKBRD design language
@@ -330,7 +332,7 @@
         <h1>Evaluation</h1>
       </div>
 
-      <div class="page-glass-section">
+      <div class="page-glass-section last-section">
 
         <div class="content">
 
@@ -379,14 +381,6 @@
 
       </div>
 
-
-
-
-
-
-
-      </div>
-
     </template>
 
     <template slot="footer-content">
@@ -394,7 +388,7 @@
         <div class="columns">
           <div class="column content link-container">
             <h3>Web app</h3>
-            <p>BLKBRD is built with the <a href="https://ionicframework.com/">Ionic Framework</a>, making it possible to deploy to the web as well as mobile devices</p>
+            <p>BLKBRD is built with the <a href="https://ionicframework.com/" target="_blank">Ionic Framework</a>, making it possible to deploy to the web as well as mobile devices</p>
             <div class="links-container">
               <a href="http://bit.ly/blkbrdapp" target="_blank" class="button is-primary is-rounded is-inverted is-outlined">
                 View app
@@ -419,6 +413,15 @@ export default {
   name: 'Blkbrd',
   components: {
     WorkWrapper
+  },
+  methods: {
+    showImage (imageUrl, imageAspectClass) {
+      this.$modal.show('image-modal', { url: imageUrl, aspect: imageAspectClass })
+
+    },
+    hideImage () {
+      this.$modal.hide('image-modal');
+    }
   }
 }
 </script>

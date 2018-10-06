@@ -5,7 +5,7 @@
       <!-- <div class="color-header" :class="color"></div> -->
       <div class="flat-header-project" :class="color"></div>
       <div class="hero-body">
-        <div class="container titles" :class="color">
+        <div class="container case-study titles" :class="color">
           <slot name="titles">
             This will only be displayed if there is no content
             to be distributed.
@@ -14,7 +14,7 @@
       </div>
     </section>
 
-    <section class="container page-glass" :class="{ 'is-visible': contentVisible }">
+    <section class="container case-study page-glass" :class="{ 'is-visible': contentVisible }">
       <slot name="content">
         This will only be displayed if there is no content
         to be distributed.
@@ -104,6 +104,9 @@ export default {
 
   .titles
     padding: 0 0.75em
+    p
+      color: $white
+      opacity: 0.75
     @media screen and (max-width: $desktop)
       padding: 4em 1.5em
     .client
@@ -179,6 +182,7 @@ export default {
     @media screen and (min-width: $tablet)
       padding: 2em 1.5em
     h1
+      font-size: 2.25em
       color: $steel
       font-weight: 600
 
@@ -208,6 +212,10 @@ export default {
       margin-bottom: -10em
     .link-container
       text-align: center
+      p
+        color: $white
+        opacity: 0.9
+        font-size: 0.95em
       @media screen and (min-width: $tablet)
         text-align: left
     h3

@@ -12,3 +12,14 @@
 
 .button
  font-size: 1em
+
+.button.white-button
+  background-color: rgba($white, 0.75)
+  border: none
+  &:active, &:hover
+    border: none
+    transform: translateY(-0.1em)
+    background-color: rgba($white, 0.95)
+    color: darken(rgba($slate, 0.4), 20%)
+  &:focus
+    box-shadow: 0 0 0 0.125em rgba($silver, 0.25)

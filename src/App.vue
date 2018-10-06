@@ -13,6 +13,8 @@
 
     <OverlayMenu />
 
+    <ImageModal />
+
   </div>
 </template>
 
@@ -23,18 +25,20 @@ import { Intro } from '@/service/intro.js'
 import Nav from '@/components/nav.vue'
 import FooterNav from '@/components/footer-nav.vue'
 import OverlayMenu from '@/components/overlay-menu.vue'
+import ImageModal from '@/components/image-modal.vue'
 
 export default {
   name: 'App',
   components: {
     Nav,
     FooterNav,
-    OverlayMenu
+    OverlayMenu,
+    ImageModal
   },
   data () {
     return {
       userAgent: undefined,
-      transitionName: 'fade-delay-none',
+      transitionName: 'fade-delay',
       backgroundReady: false,
       firstBatch: true
     }

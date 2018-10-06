@@ -1,13 +1,13 @@
 <template>
   <div class="container project-container">
 
-    <div class="columns is-multiline is-desktop">
+    <div class="columns is-multiline is-tablet">
 
       <div
         v-for="project in projects"
         :key="project.index"
         :id="project.index"
-        class="column is-one-third-desktop"
+        class="column is-one-third-tablet"
         :class="project.color"
       >
         <router-link
@@ -70,7 +70,7 @@ export default {
           color: 'blue',
           title: 'Refining the value proposition',
           route: 'onboarding',
-          description: 'A redesigned sign up funnel which optimised communication and useability, while adding details to build confidence',
+          description: 'A redesigned sign up funnel that optimised communication and useability, while adding details to build confidence',
           client: 'toucanBox',
           date: 'Q3 2017'
         },
@@ -80,7 +80,7 @@ export default {
           color: 'green',
           title: 'Increasing satisfaction with a personalised experience',
           route: 'personalisation',
-          description: 'How strategic thinking identified toucanBox’s most promising digital product opportunity and helped outline a vision',
+          description: 'A strategic design project to identify new ways to improve customer retention at toucanBox',
           client: 'toucanBox',
           date: 'Q2-3 2018'
         },
@@ -88,9 +88,9 @@ export default {
           index: 'wesen',
           icon: '/img/homepage/project-icons/wesen.svg',
           color: 'red',
-          title: 'Building a jewellery brand with user generated products',
+          title: 'Building a jewellery creation experience',
           route: 'wesen',
-          description: 'End-to-end design and development of a shopping experience that facilitates customer creativity',
+          description: 'End-to-end design and development of an e-commerce brand that facilitates customer creativity',
           client: 'Wesen',
           date: 'Q1 2018'
         },
@@ -110,7 +110,7 @@ export default {
           color: 'purple',
           title: 'Adding value to a physical product with a digital game',
           route: 'toucanoo',
-          description: 'A research and development project investigating the potential of online content to encourage trialists to become customers',
+          description: 'A research project investigating the potential for online content to encourage trialists to become customers',
           client: 'toucanBox',
           date: 'Q4 2016'
         },
@@ -120,7 +120,7 @@ export default {
           color: 'yellow',
           title: 'Looking back before 2016',
           route: 'pre2016',
-          description: 'A curated selection of my less recent work.',
+          description: 'A curated selection of less recent work.',
           client: 'Various',
           date: 'x < 2016'
         }
@@ -178,9 +178,10 @@ export default {
     margin: 0
 
   .project-container
+    @media screen and (max-width: $tablet)
+      max-width: 20em
     @media screen and (max-width: $desktop)
       padding: 0.75em 0 2em 0
-      max-width: 20em
 
   .glass
     overflow: hidden
@@ -215,16 +216,16 @@ export default {
       margin-bottom: 0.5em
     p
       opacity: 0.9
+      color: $white
 
   .project-footer
-    padding: 1em
-    padding-top: 0.75em
+    padding: 0.75em 1.5em 1em
     background: rgba($white, 0.9)
     border-radius: 0 0 $radius-large $radius-large
     color: $slate
     p
-      font-size: 0.75em
-      opacity: 0.5
+      font-size: 0.8em
+      opacity: 0.8
       display: inline-flex
       justify-content: space-between
       width: 100%

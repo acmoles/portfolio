@@ -28,19 +28,13 @@
           <div class="columns">
             <div class="column">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+                <img class="lazyload" data-src="./img/projects/2016/Makies-present.jpg">
               </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
             </div>
             <div class="column">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+                <iframe class="lazyload" data-src="http://www.youtube.com/embed/daBtHme2hP8" width="640" height="640" frameborder="0"></iframe>
               </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
             </div>
           </div>
 
@@ -53,15 +47,13 @@
           <div class="columns">
             <div class="column">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+                <img class="lazyload" data-src="./img/projects/2016/Lego-dimensions.jpg">
               </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
             </div>
             <div class="column">
               <figure class="image is-1by1">
                 <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+                <iframe class="lazyload" data-src="http://www.youtube.com/embed/aNnKBN5IqIU" width="640" height="640" frameborder="0"></iframe>
               </figure>
               <figcaption>
                 Figure 1: Some beautiful placeholders
@@ -72,25 +64,20 @@
           <h1>Nova</h1>
           <h3 class="subtitle">Stompy Robot</h3>
           <p>
-            Stompy Robot is an independent video games studio based in Edinburgh, of which I was a founding member and continue to be an occasional contributor. Our first game was Nova (2014), a squad-based action RPG for mobile, which specifically aims to leverage the interaction opportunities offered by touch screens. <a href="">Go to stompyrobot.co.uk →</a>
+            Stompy Robot is an independent video games studio based in Edinburgh, of which I was a founding member and continue to be an occasional contributor. Our first game was Nova (2014), a squad-based action RPG for mobile, which specifically aims to leverage the interaction opportunities offered by touch screens.
+            <a href="http://stompyrobot.co.uk" target="_blank">Go to stompyrobot.co.uk <i class="icon-right-open-big full-opacity footer-icon"></i></a>
           </p>
 
           <div class="columns">
             <div class="column">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+                <img class="lazyload" data-src="./img/projects/2016/Nova-present.jpg">
               </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
             </div>
             <div class="column">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+                <iframe class="lazyload" data-src="http://www.youtube.com/embed/xZELuhMO9es" width="640" height="640" frameborder="0"></iframe>
               </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
             </div>
           </div>
 
@@ -98,25 +85,20 @@
           <h1>Nita</h1>
           <h3 class="subtitle">Art Lebedev Studio</h3>
           <p>
-            Art Lebedev Studio is the largest and most well known creative agency in Russia with over 200 designers. I worked with the Product Design Team on consulting projects for Russian and international clients. One such client was Nita, a Russian aviation company, which produces Air Traffic Control consoles (ATC). More details of the design process can be found on the Art Lebedev website. <a href="">Go to artlebedev.com/nita/process →</a>
+            Art Lebedev Studio is the largest and most well known creative agency in Russia with over 200 designers. I worked with the Product Design Team on consulting projects for Russian and international clients. One such client was Nita, a Russian aviation company, which produces Air Traffic Control consoles (ATC). More details of the design process can be found on the Art Lebedev website.
+            <a href="https://www.artlebedev.ru/nita/process/" target="_blank">Go to artlebedev.com/nita/process <i class="icon-right-open-big full-opacity footer-icon"></i></a>
           </p>
 
           <div class="columns">
             <div class="column">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+                <img class="lazyload" data-src="./img/projects/2016/Nita-present.jpg">
               </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
             </div>
             <div class="column">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+                <img class="lazyload" data-src="./img/projects/2016/Nita-present-more.jpg">
               </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
             </div>
           </div>
 
@@ -130,19 +112,13 @@
           <div class="columns">
             <div class="column">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+                <img class="lazyload" data-src="./img/projects/2016/Fly-process.jpg">
               </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
             </div>
             <div class="column">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
+                <iframe class="lazyload" data-src="https://player.vimeo.com/video/30915879" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
             </div>
           </div>
 
@@ -150,10 +126,6 @@
 
         </div>
 
-      </div>
-
-      <div class="page-glass-section last-section">
-        
       </div>
     </template>
 
