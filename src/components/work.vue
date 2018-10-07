@@ -26,7 +26,7 @@
             >
               <div class="project-description">
                 <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
+                <p v-html="project.description"></p>
               </div>
             </div>
 
@@ -70,7 +70,7 @@ export default {
           color: 'blue',
           title: 'Refining the value proposition',
           route: 'onboarding',
-          description: 'A redesigned sign up funnel that optimised communication and useability, while adding details to build confidence',
+          description: 'A redesigned sign up funnel to improve communication, useability and confidence',
           client: 'toucanBox',
           date: 'Q3 2017'
         },
@@ -80,7 +80,7 @@ export default {
           color: 'green',
           title: 'Increasing satisfaction with a personalised experience',
           route: 'personalisation',
-          description: 'A strategic design project to identify new ways to improve customer retention at toucanBox',
+          description: 'A strategic design project to identify new ways to improve customer retention',
           client: 'toucanBox',
           date: 'Q2-3 2018'
         },
@@ -90,7 +90,7 @@ export default {
           color: 'red',
           title: 'Building a jewellery creation experience',
           route: 'wesen',
-          description: 'End-to-end design and development of an e-commerce brand that facilitates customer creativity',
+          description: 'End-to-end design and development of an <span>e-commerce</span> brand that facilitates customer creativity',
           client: 'Wesen',
           date: 'Q1 2018'
         },
@@ -108,9 +108,9 @@ export default {
           index: 'toucanoo',
           icon: '/img/homepage/project-icons/toucanoo.svg',
           color: 'purple',
-          title: 'Adding value to a physical product with a digital game',
+          title: 'Adding digital value to a physical product',
           route: 'toucanoo',
-          description: 'A research project investigating the potential for online content to encourage trialists to become customers',
+          description: 'An investigation into the potential for online content to encourage trialists to become customers',
           client: 'toucanBox',
           date: 'Q4 2016'
         },
@@ -120,7 +120,7 @@ export default {
           color: 'yellow',
           title: 'Looking back before 2016',
           route: 'pre2016',
-          description: 'A curated selection of less recent work.',
+          description: 'A curated selection of less recent work',
           client: 'Various',
           date: 'x < 2016'
         }
@@ -168,20 +168,28 @@ export default {
 
   @import '../sass/variables'
 
-  .column
+  .project-container
+    @media screen and (max-width: $tablet)
+      max-width: 20em
+    @media screen and (max-width: $desktop)
+      padding: 0.75em 0.75em 2em
+
     @media screen and (min-width: $desktop)
+      font-size: 16.5px
+    @media screen and (min-width: $fullhd)
+      font-size: 18px
+    @media screen and (min-width: $largeformat)
+      font-size: 20px
+
+  .column
+    @media screen and (min-width: $fullhd)
       padding: 1em
     @media screen and (min-width: $largeformat)
       padding: 1.5em
 
   .columns
     margin: 0
-
-  .project-container
-    @media screen and (max-width: $tablet)
-      max-width: 20em
-    @media screen and (max-width: $desktop)
-      padding: 0.75em 0 2em 0
+    margin-bottom: 0 !important
 
   .glass
     overflow: hidden
@@ -204,7 +212,7 @@ export default {
   .glass-body
     padding: 1.25em 2.5em 1em 1.5em
     @media screen and (min-width: $largeformat)
-      padding: 2em 4em 1.6em 2.4em
+      padding: 1.75em 3em 1.5em 2em
     position: relative
     height: 100%
     margin-bottom: 0 !important
@@ -220,6 +228,8 @@ export default {
 
   .project-footer
     padding: 0.75em 1.5em 1em
+    @media screen and (min-width: $largeformat)
+      padding: 0.75em 2em 1em
     background: rgba($white, 0.9)
     border-radius: 0 0 $radius-large $radius-large
     color: $slate

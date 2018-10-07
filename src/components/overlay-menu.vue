@@ -114,7 +114,9 @@ export default {
 
   .menu-container
     @media screen and (min-width: $desktop)
-      padding: 0 6.5em
+      padding: 0 6em
+    @media screen and (min-width: $fullhd)
+      padding: 0 7em
 
   .content
     color: $white

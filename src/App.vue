@@ -115,15 +115,15 @@ export default {
     setForwardTransition() {
       this.transitionName = 'fade-delay';
     },
-    toggleBodyClass(addRemoveClass, className) {
-      const el = document.body;
-
-      if (addRemoveClass === 'add-class') {
-        el.classList.add(className);
-      } else {
-        el.classList.remove(className);
-      }
-    },
+    // toggleBodyClass(addRemoveClass, className) {
+    //   const el = document.body;
+    //
+    //   if (addRemoveClass === 'add-class') {
+    //     el.classList.add(className);
+    //   } else {
+    //     el.classList.remove(className);
+    //   }
+    // },
   }
 }
 

@@ -55,9 +55,6 @@
                 <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
                 <iframe class="lazyload" data-src="http://www.youtube.com/embed/aNnKBN5IqIU" width="640" height="640" frameborder="0"></iframe>
               </figure>
-              <figcaption>
-                Figure 1: Some beautiful placeholders
-              </figcaption>
             </div>
           </div>
 
@@ -106,7 +103,7 @@
           <h1>Fly</h1>
           <h3 class="subtitle">Random International</h3>
           <p>
-            I was part of the team that developed the interactive digital/physical installation 'Fly' for exhibit at the 2011 Moscow Biennial of Art and Design. I helped define the creative concept and independently carried out the design detailing process; CAD, prototyping and sourcing.
+            I was part of the team that developed the interactive digital/physical installation 'Fly' for exhibit at the 2011 Moscow Biennial of Art and Design. I helped define the creative concept and independently carried out the design detailing process, including prototyping and sourcing.
           </p>
 
           <div class="columns">

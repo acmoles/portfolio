@@ -1,4 +1,4 @@
-<template>
+is-one-quarter<template>
   <WorkWrapper
     :project="'wesen'"
     :icon="'/img/homepage/project-icons/wesen.svg'"
@@ -14,14 +14,17 @@
     <template slot="content">
       <div class="page-glass-section first-section">
         <div class="content">
-          <p>
-            <span class="first-letter"><i class="icon-info"></i></span>
-            I remained interested in mass-customisation after Makielab was acquired by Disney. In particular, I wanted to explore the possibility of an open-ended creation experience which could generate infinite variations while being intuitive and fun to use. I decided to build a customisable product, from concept to through to production.
-          </p>
 
-          <p><i>
+          <p><em class="light">
             “Wesen is where craft meets technology and customers become creators. Easy-to-use tools enable you to customise a pendant necklace. You can express your creativity, whether you’re an experienced jewellery designer or a complete beginner. Then, order your unique pendant design, bespoke manufactured using a process that blends modern and traditional techniques.”
-          </i></p>
+          </em></p>
+
+          <p>
+            I remained interested in mass-customisation after Makielab was acquired by Disney. In particular, I wanted to explore the possibility of an 'open-ended' creation experience which could generate infinite variations while being intuitive and fun to use.
+          </p>
+          <p>
+            To test this concept, I decided to build a customisable product, from concept to through to production.
+          </p>
 
           <br>
           <blockquote>
@@ -36,7 +39,7 @@
         </div>
       </div>
 
-      <div class="page-glass-divider">
+      <div class="page-glass-divider is-borderless">
         <h1>Discovery</h1>
       </div>
 
@@ -50,7 +53,12 @@
             I used digital marketing tools to help choose a product category, gauge the market potential and understand what language and search terms potential customers might use.
           </p>
 
-          <h4>Category</h4>
+          <br class="extra">
+
+          <h5>Category</h5>
+
+          <br>
+
           <table class="table">
             <thead>
               <tr>
@@ -65,14 +73,16 @@
               </tr>
               <tr>
                 <td>Personalise, personalised, personalise my...</td>
-                <td>Gifts, baby gifts, mugs, phone case, medicine, necklace, keyring, football boots</td>
+                <td>Gifts, baby gifts, mugs, phone case, medicine, <strong>necklace</strong>, keyring, football boots</td>
               </tr>
               <tr>
                 <td>Design (or make) my (your) own...</td>
-                <td>Clothes, shoes, hoodie, t-shirt, logo, house, ring, engagement ring, cap, furniture</td>
+                <td>Clothes, shoes, hoodie, t-shirt, logo, house, <strong>ring, engagement ring,</strong> cap, furniture</td>
               </tr>
             </tbody>
           </table>
+
+          <br>
 
           <p>
             Customisation-related keywords are most commonly paired with the fashion and accessories category; products linked to <strong>personal appearance and self expression.</strong> Market leaders in this category already offered custom and personalised products. Notable brands include Nike and Farfetch/Unmade.
@@ -88,17 +98,23 @@
             <li>Some competitors are offering expressive design tools, but there is plenty of room for differentiation</li>
           </ul>
 
+          <br>
+
           <p>
             Jewellery is available at every price point. High-value, custom or personalised products tend to be <strong>gifts</strong>. I collected relevant data on gifting and purchase behaviour from Google Trends and Google Consumer Barometer:
           </p>
           <ul>
-            <li>Gifting is highly seasonal: Search activity for gifts begins to ramp up from 1st November, peaking on 17th December</li>
-            <li>Mobile is increasingly important for e-commerce: 40% of people say they prefer to complete their entire shopping journey on mobile - from research to purchase. 70% of these purchases are for personal fashion - clothes, shoes, accessories</li>
+            <li><strong>Gifting is highly seasonal:</strong> Search activity for gifts begins to ramp up from 1st November, peaking on 17th December</li>
+            <li><strong>Mobile is increasingly important for e-commerce:</strong> 40% of people say they prefer to complete their entire shopping journey on mobile - from research to purchase. 70% of these purchases are for personal fashion - clothes, shoes, accessories</li>
           </ul>
 
-          <h4>Market potential</h4>
+          <br class="extra">
+
+          <h5>Market potential</h5>
 
           <p>Search optimisation tools offered estimates of monthly keyword volume. The different UK and American English spellings, jewellery and jewelry, produced different data, so I narrowed my research to the UK market.</p>
+
+          <br>
 
           <table class="table">
             <thead>
@@ -137,21 +153,27 @@
             </tbody>
           </table>
 
+          <br>
+
           <p>
             Search results for personalisation typically offer engraved names or a choice of product attributes. In contrast, customisation is associated with unique designs or design services. Shoppers are typically not searching for services offering to help them design jewellery themselves.
           </p>
 
+          <br>
+
           <p>These results posed a challenge and a risk:</p>
           <dl>
-            <dt>Challenge:</dt>
+            <dt><strong>Challenge:</strong></dt>
             <dd>
               How to communicate in a manner that resonates with the desires and language of potential customers - open-ended customisation is somewhere between customisation and design, but it’s not personalisation.
             </dd>
-            <dt>Risk:</dt>
+            <dt><strong>Risk:</strong></dt>
             <dd>
               Right now, few shoppers are signalling a desire to be involved in the actual design of their purchases, rather to edit an existing design (customisation or personalisation). Open-ended customisation might not prove to be a value proposition with broad appeal.
             </dd>
           </dl>
+
+          <br class="extra">
 
           <h3>Qualitative</h3>
           <p>
@@ -159,13 +181,15 @@
           </p>
           <ul>
             <li>In three out of four cases it was an engagement ring, in the fourth a pendant necklace, given as a gift</li>
-            <li>“They found it so thoughtful”</li>
-            <li>“I couldn’t find anything exactly like what I had in mind”</li>
-            <li>“I sat with the designer and we moved gemstones into exactly the right place” (non-designer)</li>
-            <li>“It’s tricky to get the sizes right, I had to get the ring resized”</li>
-            <li>“I wasn’t confident to attach the gemstone myself so I used a professional jeweller”</li>
-            <li>“I feel like more and more people are doing it, now that you can order metal 3D prints online”</li>
+            <li><em>“They found it so thoughtful”</em></li>
+            <li><em>“I couldn’t find anything exactly like what I had in mind”</em></li>
+            <li><em>“I sat with the designer and we moved gemstones into exactly the right place”</em> (non-designer)</li>
+            <li><em>“It’s tricky to get the sizes right, I had to get the ring resized”</em></li>
+            <li><em>“I wasn’t confident to attach the gemstone myself so I used a professional jeweller”</em></li>
+            <li><em>“I feel like more and more people are doing it, now that you can order metal 3D prints online”</em></li>
           </ul>
+
+          <br class="extra">
 
           <h2>Business plan</h2>
 
@@ -183,42 +207,65 @@
             <li>Aim for web first - games and apps do not readily generate product sales</li>
           </ul>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Partners</th>
-                <th>Activities</th>
-                <th>Value proposition(s)</th>
-                <th>Customer relationship</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Manufacturers / 3D printing services (Shapeways, I-Materialize)</td>
-                <td>Software development and IT, Marketing and sales, Customer support, Logistics and fulfillment</td>
-                <td>Easily customise your own jewellery and order it, bespoke manufactured</td>
-                <td>Easy-to-use design tools,FAQ, Email (customer service)</td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Costs</th>
-                <th>Revenue</th>
-                <th>Customer segment</th>
-                <th>Channels</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>IT (Payments, hosting, email), Marketing, Cost of goods</td>
-                <td>Product sales (variable price according to size and metal selected)t</td>
-                <td>Gifters, Millennials, Designers and creatives, Tech enthusiasts</td>
-                <td>Website (storefront), Social networks, Search, Blogs, Influencers, Email (customer relationship management)</td>
-              </tr>
-            </tbody>
-          </table>
+          <br>
+
+          <div class="columns is-multiline">
+            <div class="column is-one-quarter" style="padding-bottom: 2em;">
+              <p><strong>Partners</strong></p>
+              <p>Manufacturers / <span>3D printing</span> services (Shapeways, <span>I-Materialize</span>)</p>
+            </div>
+            <div class="column is-one-quarter" style="padding-bottom: 2em;">
+              <p><strong>Activities</strong></p>
+              <dl>
+                <dt>Software development and IT</dt>
+                <dt>Marketing and sales</dt>
+                <dt>Customer support</dt>
+                <dt>Logistics and fulfillment</dt>
+              </dl>
+            </div>
+            <div class="column is-one-quarter" style="padding-bottom: 2em;">
+              <p><strong>Value proposition(s)</strong></p>
+              <p>Easily customise your own jewellery and order it, bespoke manufactured</p>
+            </div>
+            <div class="column is-one-quarter" style="padding-bottom: 2em;">
+              <p><strong>Customer relationship</strong></p>
+              <dl>
+                <dt>Easy-to-use design tools</dt>
+                <dt>FAQ</dt>
+                <dt>Email (customer service)</dt>
+              </dl>
+            </div>
+            <div class="column is-one-quarter">
+              <p><strong>Costs</strong></p>
+              <dl>
+                <dt>IT (Payments, hosting, email)</dt>
+                <dt>Marketing</dt>
+                <dt>Cost of goods</dt>
+              </dl>
+            </div>
+            <div class="column is-one-quarter">
+              <p><strong>Revenue</strong></p>
+              <p>Product sales (variable price according to size and metal selected)</p>
+            </div>
+            <div class="column is-one-quarter">
+              <p><strong>Customer segment</strong></p>
+              <dl>
+                <dt>Gifters</dt>
+                <dt>Millennials</dt>
+                <dt>Designers and creatives</dt>
+                <dt>Tech enthusiasts</dt>
+              </dl>
+            </div>
+            <div class="column is-one-quarter">
+              <p><strong>Channels</strong></p>
+              <dl>
+                <dt>Website (storefront)</dt>
+                <dt>Social networks, Search, Blogs, Influencers</dt>
+                <dt>Email (customer relationship management)</dt>
+              </dl>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -234,28 +281,35 @@
           <p>
             Focusing on a single type of jewellery would speed up design and development - a minimum viable product (MVP) approach. New types could be added in the event of a successful test. The choice lay between two candidates:
           </p>
-          <dl>
-            <dt>Rings / engagement rings</dt>
-              <dd>High interest (rings and engagement rings are search terms highly associated with the phrase ‘design my own’)</dd>
-              <dd>High value</dd>
-              <dd>Ring size would add a further personal aspect but might lead to increased errors and returns</dd>
-              <dd>High brand trust required due to expense and importance of the purchase, which is not possessed by a new brand</dd>
-              <dd>Fitting gemstones requires a professional jeweller</dd>
-            <dt>Pendant necklace</dt>
-              <dd>Pendants are a ‘blank canvas’ for an expressive creation experience</dd>
-              <dd>Necklace is a search term commonly associated with personalisation</dd>
-              <dd>High value but lower stakes gift</dd>
-              <dd>An eyelet to connect to the chain could prove a tricky constraint</dd>
-          </dl>
+          <p style="margin-top: 1.5em;"><strong>Rings / engagement rings</strong></p>
+          <ul class="plus-list">
+              <li>High interest (rings and engagement rings are search terms highly associated with the phrase ‘design my own’)</li>
+              <li>High value</li>
+              <li class="minus">Ring size would add a further personal aspect but might lead to increased errors and returns</li>
+              <li class="minus">High brand trust required due to expense and importance of the purchase, which is not possessed by a new brand</li>
+              <li class="minus">Fitting gemstones requires a professional jeweller</li>
+          </ul>
+          <p style="margin-top: 1.5em;"><strong>Pendant necklace</strong></p>
+          <ul class="plus-list">
+              <li>Pendants are a ‘blank canvas’ for an expressive creation experience</li>
+              <li>Necklace is a search term commonly associated with personalisation</li>
+              <li>High value but lower stakes gift</li>
+              <li class="minus">An eyelet to connect to the chain could prove a tricky constraint</li>
+          </ul>
+          <br>
           <p>
             Despite a potentially larger market for rings, I foresaw difficulties and the potential for deeply unsatisfied customers. For now, I decided to focus on pendants.
           </p>
+
+          <br class="extra">
 
           <h2>Story</h2>
 
           <p>
             Qualitative interviews suggested two main customer personas: gifters and enthusiasts. In some cases customers could be both.
           </p>
+
+          <br>
 
           <article class="media">
             <div class="media-left is-quarter">
@@ -264,13 +318,13 @@
             </div>
             <div class="media-content">
               <div class="content">
-                <strong style="margin-bottom: -0.5em; display: block;">I want to give a good gift</strong>
+                <h5>I want to give a good gift</h5>
                 <ul>
-                  <li>“I’m looking for something which will show them how much I care”</li>
-                  <li>“I want give something unique, which they couldn’t get anywhere else”</li>
-                  <li>“It takes ages to find the perfect gift”</li>
-                  <li>“A gift should be personal, something which reminds them of me”</li>
-                  <li>“I want to feel confident giving the gift”</li>
+                  <li><em>“I’m looking for something which will show them how much I care”</em></li>
+                  <li><em>“I want give something unique, which they couldn’t get anywhere else”</em></li>
+                  <li><em>“It takes ages to find the perfect gift”</em></li>
+                  <li><em>“A gift should be personal, something which reminds them of me”</em></li>
+                  <li><em>“I want to feel confident giving the gift”</em></li>
                 </ul>
               </div>
             </div>
@@ -283,25 +337,29 @@
             </div>
             <div class="media-content">
               <div class="content">
-                <strong style="margin-bottom: -0.5em; display: block;">I want to express myself</strong>
+                <h5>I want to express myself</h5>
                 <ul>
-                  <li>“I have a personal style and I carefully curate what I wear”</li>
-                  <li>“I want to jewellery no-one else has seen before”</li>
+                  <li><em>“I have a personal style and I carefully curate what I wear”</em></li>
+                  <li><em>“I want to jewellery no-one else has seen before”</em></li>
                 </ul>
-                <strong style="margin-bottom: -0.5em; display: block;">I want to have the latest thing</strong>
+                <h5>I want to have the latest thing</h5>
                 <ul>
-                  <li>“People expect me to find the next trend”</li>
-                  <li>“I like to experiment with new technologies”</li>
+                  <li><em>“People expect me to find the next trend”</em></li>
+                  <li><em>“I like to experiment with new technologies”</em></li>
                 </ul>
               </div>
             </div>
           </article>
 
+          <br class="extra">
+
           <p>
             Enthusiasts are typically a smaller segment, so I focussed on gifters. Additionally, I had previously observed that experiences tailored to gifters do not deter enthusiasts. I sketched a potential gifting journey, using cartoons to capture the emotional aspects.
           </p>
 
-          <div class="figure-container">
+          <br>
+
+          <div class="figure-container max-60">
             <figure class="image is-5by3 single-image">
               <img class="lazyload" data-src="./img/projects/wesen/journey_characters.jpg">
             </figure>
@@ -309,6 +367,8 @@
               Three gifters faced with the problem of finding a thoughtful gift
             </figcaption>
           </div>
+
+          <br>
 
           <article class="media">
             <div class="media-left is-quarter">
@@ -318,11 +378,11 @@
             </div>
             <div class="media-content">
               <div class="content">
-                <strong style="display: block;">Research</strong>
+                <h5>Research</h5>
                 <p>Possible marketing messages:</p>
                 <ul>
-                  <li>“Give the most personal gift of all - a pendant necklace designed by you”</li>
-                  <li>“Stop looking for the perfect gift, let us help you design it”</li>
+                  <li><em>“Give the most personal gift of all - a pendant necklace designed by you”</em></li>
+                  <li><em>“Stop looking for the perfect gift, let us help you design it”</em></li>
                 </ul>
               </div>
             </div>
@@ -336,10 +396,10 @@
             </div>
             <div class="media-content">
               <div class="content">
-                <strong style="margin-bottom: -0.5em; display: block;">Decision</strong>
+                <h5>Decision</h5>
                 <ul>
-                  <li>“This website is offering to help me design a pendant necklace like those shown, then I can order it”</li>
-                  <li>“I want to read a bit more about the company to see if I can trust them”</li>
+                  <li><em>“This website is offering to help me design a pendant necklace like those shown, then I can order it”</em></li>
+                  <li><em>“I want to read a bit more about the company to see if I can trust them”</em></li>
                 </ul>
               </div>
             </div>
@@ -353,11 +413,11 @@
             </div>
             <div class="media-content">
               <div class="content">
-                <strong style="margin-bottom: -0.5em; display: block;">Customisation</strong>
+                <h5>Customisation</h5>
                 <ul>
-                  <li>“I figured it out straight away”</li>
-                  <li>“This is fun, I’m pleased with what I’ve designed”</li>
-                  <li>“I found it too fiddly so I just gave up”</li>
+                  <li><em>“I figured it out straight away”</em></li>
+                  <li><em>“This is fun, I’m pleased with what I’ve designed”</em></li>
+                  <li><em>“I found it too fiddly so I just gave up”</em></li>
                 </ul>
               </div>
             </div>
@@ -371,11 +431,11 @@
             </div>
             <div class="media-content">
               <div class="content">
-                <strong style="margin-bottom: -0.5em; display: block;">Purchase</strong>
+                <h5>Purchase</h5>
                 <ul>
-                  <li>“This was a great experience, I trust this company”</li>
-                  <li>“I want to buy what I’ve designed”</li>
-                  <li>“I need assurance that my payment is secure”</li>
+                  <li><em>“This was a great experience, I trust this company”</em></li>
+                  <li><em>“I want to buy what I’ve designed”</em></li>
+                  <li><em>“I need assurance that my payment is secure”</em></li>
                 </ul>
               </div>
             </div>
@@ -389,15 +449,17 @@
             </div>
             <div class="media-content">
               <div class="content">
-                <strong style="margin-bottom: -0.5em; display: block;">Reflection</strong>
+                <h5>Reflection</h5>
                 <ul>
-                  <li>“I’m satisfied that I’ve bought a good gift”</li>
-                  <li>“I felt empowered by the experience”</li>
-                  <li>“I received an email confirming my order”</li>
+                  <li><em>“I’m satisfied that I’ve bought a good gift”</em></li>
+                  <li><em>“I felt empowered by the experience”</em></li>
+                  <li><em>“I received an email confirming my order”</em></li>
                 </ul>
               </div>
             </div>
           </article>
+
+          <br class="extra">
 
           <p>
             My earlier research raised the concern that gifters and other shoppers might not want to design the pendant themselves, or that they might lack the confidence to do so. I specified two strategies to mitigate this risk:
@@ -408,9 +470,11 @@
             <li>A collection of pre-designed products, which can be bought directly or customised before purchase</li>
           </ol>
 
+          <br>
+
           <p>With this in mind I proposed a provisional purchase flow:</p>
 
-          <div class="figure-container">
+          <div class="figure-container max-80">
             <figure class="image is-3by1 single-image">
               <img class="lazyload" data-src="./img/projects/wesen/Draft-journey-mvp.png">
             </figure>
@@ -419,7 +483,9 @@
             </figcaption>
           </div>
 
-          <p><strong>Design and development goals</strong></p>
+          <br>
+
+          <h2>Design and development goals</h2>
           <ul>
             <li>Develop a customisable pendant with suitable constraints but capable of infinite variations</li>
             <li>Design an intuitive interface that doesn’t require a tutorial</li>
@@ -427,6 +493,8 @@
             <li>Ensure operations can be automated and that manufacture can be fulfilled by a single service (such as Shapeways) with minimal or no post processing</li>
             <li>Minimise the technical overhead of storing personal and payment details by using third-party services</li>
           </ul>
+
+          <br>
 
         </div>
 
@@ -450,6 +518,8 @@
             <li>Expressiveness - a subjective measure of how free and open-ended a tool feels, higher is more expressive</li>
             <li>Implementation - the relative ease in building such a tool, higher is easier</li>
           </ul>
+
+          <br>
 
           <table class="table">
             <thead>
@@ -510,7 +580,7 @@
                 <td>1</td>
               </tr>
               <tr>
-                <td>On-surface ‘stamps’</td>
+                <td><span>On-surface</span> ‘stamps’</td>
                 <td>Decorate a curved or flat surface with smaller objects that ‘stick’ to it, ensuring contact</td>
                 <td>4</td>
                 <td>3</td>
@@ -524,17 +594,21 @@
             </tbody>
           </table>
 
+          <br>
+
           <p>
             I settled on two tools which scored highly and I found intuitive and enjoyed using: the radial array and control geometry. This combination seemed promising because both tools tended to produce fascinating, often pleasingly unexpected outcomes.
           </p>
 
+          <br class="extra">
+
           <h2>Prototyping</h2>
 
           <p>
-            At first I was unsure what would result from combining these two tools. Blender, which has a built in radial array, proved useful for experimentation. Blender’s animation rig could approximate the functionality of a control geometry, where bones acted as control vertices. I tried several configurations, settling on a six pointed diamond-like shape. A future enhancement could offer the user a range of control geometries.
+            At first I was unsure what would result from combining these two tools. Blender, which has a built in radial array, proved useful for experimentation. Blender’s animation rig could approximate the functionality of a control geometry, where bones acted as control vertices. I tried several configurations, settling on a six pointed diamond-like shape. A future enhancement could offer the user a range of control geometries (or cages to manipulate more complex geometry such as 3D scans).
           </p>
 
-          <div class="figure-container is-50">
+          <div class="figure-container max-50">
             <figure class="image is-1by1 single-image">
               <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190700" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </figure>
@@ -547,12 +621,12 @@
             In order to test with users, I built a rough yet fully functional frontend prototype. I also took the opportunity to explore the possibility of Three.js as a library for simplifying the 3D graphics API in the web browser.
           </p>
 
-          <div class="figure-container is-50">
+          <div class="figure-container max-50">
             <figure class="image is-1by1 single-image">
               <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190664" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </figure>
             <figcaption>
-              I was pleased to observe that testers automatically moved the control points and sometimes exclaimed ‘wow’ when doing so for the first time
+              I was pleased to observe that testers automatically moved the control points and sometimes exclaimed <em>"wow"</em> when doing so for the first time
             </figcaption>
           </div>
 
@@ -580,7 +654,7 @@
             Matcap shaders offered convincing metallic effects with a low performance overhead. My first instinct was for a dark background to pop out the pendent but I was surprised to find that the opposite was true.
           </p>
 
-          <div class="figure-container">
+          <div class="figure-container max-60">
             <figure class="image is-5by4 single-image">
               <img class="lazyload" data-src="./img/projects/wesen/Shaders.jpg">
             </figure>
@@ -613,7 +687,9 @@
             </figcaption>
           </div>
 
-          <div class="figure-container">
+          <br>
+
+          <div class="figure-container max-60">
             <figure class="image is-3by2 single-image">
               <img class="lazyload" data-src="./img/projects/wesen/Iconography.png">
             </figure>
@@ -622,7 +698,11 @@
             </figcaption>
           </div>
 
+          <br class="extra">
+
           <h2>Lessons from user testing</h2>
+
+          <br>
 
           <table class="table">
             <thead>
@@ -651,9 +731,11 @@
             </tbody>
           </table>
 
+          <br class="extra">
+
           <h3>Input validation for 3D geometry</h3>
 
-          <p>Offering users open-ended, expressive tools introduced a challenging problem - how to ensure what they create is valid geometry for manufacture by 3D printing? Through testing and development I identified four common error cases:</p>
+          <p>Offering users open-ended, expressive tools introduced a challenging problem - how to ensure what they create is valid geometry for manufacture by 3D printing? Through user testing during development I identified four common error cases:</p>
           <ol>
             <li>The radial segments do not connect, so that the necklace is not a single volume</li>
             <li>The eyelet does not connect to the pendant</li>
@@ -664,6 +746,8 @@
           <p>I developed a system to detect these problems and set an error state. Some edge cases remained, which were harder to detect (such as non-manifold or thin geometry). To reach MVP I chose not to address them at that time, adsorbing the risk that I would occasionally need to fix problem geometry manually.</p>
 
           <p>The next challenge was how and when to display this information to the user. At first I displayed an error message whenever a problem arose. Users can tap messages to dismiss them. They reappear if the next action doesn’t address the problem. On the basis of feedback I isolated error messages to the end of product creation, after users have signalled a desire to checkout.</p>
+
+          <br>
 
           <div class="figure-container">
             <figure class="image is-2by1 single-image">
@@ -687,24 +771,17 @@
 
         <div class="content">
           <p>In specifying production tools and technologies I re-referenced my project goals and drew on past experience:</p>
-
-          <div class="columns">
-            <div class="column">
-              <p class="pullout-quote is-left">
-                “Ensure that operations can be automated and that manufacture can be fulfilled by a single service (such as Shapeways) with minimal or no post processing”
-              </p>
-            </div>
-            <div class="column">
-              <p class="pullout-quote is-left">
-                “Minimise the technical overhead of storing personal and payment details by using third-party services”
-              </p>
-            </div>
-          </div>
+          <p class="pullout-quote is-left" style="font-size: 1.2em;">
+            “Ensure that operations can be automated and that manufacture can be fulfilled by a single service (such as Shapeways) with minimal or no post processing”
+          </p>
+          <p class="pullout-quote is-left" style="font-size: 1.2em;">
+            “Minimise the technical overhead of storing personal and payment details by using third-party services”
+          </p>
 
           <table class="table">
             <thead>
               <tr>
-                <th>Lesson from experience</th>
+                <th>Experience</th>
                 <th style="width: 50%;">Solution</th>
               </tr>
             </thead>
@@ -723,6 +800,8 @@
               </tr>
             </tbody>
           </table>
+
+          <br class="extra">
 
           <p>
             I chose to upgrade and extend the prototype toolchain for production:
@@ -774,6 +853,8 @@
             </figcaption>
           </div>
 
+          <br>
+
           <h3>Third-party integrations</h3>
 
           <p>Shapeways offer three tools that enable designers to remotely sell 3D prints of their designs:</p>
@@ -785,43 +866,31 @@
           </ol>
 
           <p>Additionally Shapeways stock necklace chains and presentation boxes which can be added to the basket, completing the product.</p>
-
+          <br>
           <p>There are two options for checkout and fulfillment:</p>
 
           <ol>
-            <li>
+            <li style="margin-top: 1.75em;">
               Checkout managed by Shapeways using the Upload and Order APIs
-              <dl>
-                <dd>
-                  + Shapeways handle details and payments
-                </dd>
-                <dd>
-                  - Brand dilution and reliance on one supplier
-                </dd>
-                <dd>
-                  - Order API isn’t particularly well supported
-                </dd>
-              </dl>
+              <ul class="plus-list">
+                <li>Shapeways handle details and payments</li>
+                <li class="minus">Brand dilution and reliance on one supplier</li>
+                <li class="minus">Order API isn’t particularly well supported</li>
+              </ul>
             </li>
 
-            <li>
+            <li style="margin-top: 1.75em;">
               Custom checkout, powered by a third-party payment provider (Stripe, Paypal) and the Upload API to automate uploading to a private Shapeways account
-              <dl>
-                <dd>
-                  + Full control over the checkout experience
-                </dd>
-                <dd>
-                  - Additional development
-                </dd>
-                <dd>
-                  - Semi-automatic rather than fully automatic, with manual involvement to finalise each order
-                </dd>
-                <dd>
-                  - Take on the risk of returns, delivery and quality issues
-                </dd>
-              </dl>
+              <ul class="plus-list">
+                <li>Full control over the checkout experience</li>
+                <li class="minus">Additional development</li>
+                <li class="minus">Semi-automatic rather than fully automatic, with manual involvement to finalise each order</li>
+                <li class="minus">Take on the risk of returns, delivery and quality issues</li>
+              </ul>
             </li>
           </ol>
+
+          <br class="extra">
 
         </div>
 
@@ -859,7 +928,7 @@
     </template>
 
     <template slot="footer-content">
-      <div class="container page-footer-container">
+      <div class="container case-study page-footer-container">
         <div class="columns">
           <div class="column content link-container">
             <h3>Wesen</h3>

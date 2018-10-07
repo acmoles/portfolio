@@ -45,9 +45,7 @@ export default {
   },
   methods: {
     beforeOpen (event) {
-      console.log('url ', event.params.url);
       this.imageUrl = event.params.url;
-      console.log('aspect ', event.params.aspect);
       this.imageAspectClass = event.params.aspect;
     }
   }
@@ -61,6 +59,13 @@ export default {
   // Modals override
   .v--modal-overlay
     background: rgba($steel, 0.8) !important
+
+  .v--modal-top-right
+    z-index: 99
+    top: -0.05em !important
+
+  .exit-modal
+    background: $steel
 
   .modal-inner
     background-color: $snow

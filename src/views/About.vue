@@ -2,7 +2,7 @@
   <WorkWrapper
     :project="'About'"
     :icon="'dots'"
-    :color="'grey'"
+    :color="'black'"
   >
     <template slot="titles">
       <div class="content">
@@ -33,27 +33,27 @@
 
           <h3>Core</h3>
           <div class="columns">
-            <div class="column">
+            <div class="column is-one-fifth">
               <div class="notification">
                 Human-centred research and design (UI/UX)
               </div>
             </div>
-            <div class="column">
+            <div class="column is-one-fifth">
               <div class="notification">
                 Product strategy
               </div>
             </div>
-            <div class="column">
+            <div class="column is-one-fifth">
               <div class="notification">
                 Ideation and sketching
               </div>
             </div>
-            <div class="column">
+            <div class="column is-one-fifth">
               <div class="notification">
                 Interactive prototypes
               </div>
             </div>
-            <div class="column">
+            <div class="column is-one-fifth">
               <div class="notification">
                 Visual design
               </div>
@@ -62,29 +62,29 @@
 
           <h3>Additional</h3>
           <div class="columns">
-            <div class="column">
+            <div class="column is-one-fifth">
               <div class="notification">
                 Product management
               </div>
             </div>
-            <div class="column">
+            <div class="column is-one-fifth">
               <div class="notification">
                 Motion graphics
               </div>
             </div>
-            <div class="column">
+            <div class="column is-one-fifth">
               <div class="notification">
                 Front-end coding
               </div>
             </div>
-            <div class="column">
+            <div class="column is-one-fifth">
               <div class="notification">
                 3D design, modelling, animation
               </div>
             </div>
-            <div class="column">
+            <div class="column is-one-fifth">
               <div class="notification">
-                Play experiences and game design
+                Play and game design
               </div>
             </div>
           </div>
@@ -197,7 +197,7 @@
     </template>
 
     <template slot="footer-content">
-      <div class="container page-footer-container">
+      <div class="container case-study page-footer-container">
         <h2>Let’s chat</h2>
         <p>I’m always happy to meet new people and talk about opportunities so don’t hesitate to get in touch.
           <a
@@ -250,17 +250,19 @@ export default {
 
   .notification
     height: 100%
+    font-weight: 600
+    font-size: 16px
+    padding: 1.5em 1em
+    text-align: center
 
   .work-block
     margin-bottom: 3em
 
   .page-footer-container
-    color: $steel
     h2
       font-size: 2em
       font-weight: 600
     a
-      color: $black
       font-weight: 600
 
 </style>

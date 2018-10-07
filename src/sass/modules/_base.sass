@@ -11,8 +11,6 @@ body
   background: $snow
   overflow-y: hidden
   font-size: 18px
-  @media screen and (min-width: $fullhd)
-    font-size: 1vw
   @media screen and (min-width: $largeformat)
     font-size: 20px
 
@@ -56,6 +54,7 @@ body
 .page
   position: relative
   overflow-x: hidden
+  overflow-y: hidden
 
 .none
   display: none
@@ -67,23 +66,34 @@ a, button
 a:focus, button:focus
   outline: none
 
+.content a
+  white-space: nowrap
+
+.content li a
+  white-space: normal
+
+span
+  white-space: nowrap
+
 // Typography
 
 h1, h2, h3, h4, h5, h6
   font-family: $family-display
 
 .content h3
+  font-size: 1.35em
   color: $silver
 
 .content h4
+  font-size: 1.15em
   color: $silver
 
 .content h5
   color: $slate
 
 
-p.light
+p.light, em.light, span.light
   color: $silver
 
-p.dark
-  color: $steel
+p.dark, em.dark, span.dark
+  color: $black

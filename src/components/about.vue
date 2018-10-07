@@ -73,8 +73,10 @@ export default {
   .glass
     width: 100%
     @media screen and (min-width: $desktop)
-      width: 13em
+      width: 12em
       background: rgba($white, 0.35)
+    @media screen and (min-width: $fullhd)
+      width: 14em
     display: flex
     flex-direction: column
     height: 100%
@@ -83,6 +85,8 @@ export default {
 
   .glass-header
     height: 7em
+    @media screen and (min-width: $fullhd)
+      height: 7.5em
     flex-grow: 0
 
   // Body content

@@ -179,6 +179,8 @@ export default {
   .page-glass-divider
     padding: 1.5em 0.75em
     border-top: 1px solid $snow
+    &.is-borderless
+      border-top: none
     @media screen and (min-width: $tablet)
       padding: 2em 1.5em
     h1

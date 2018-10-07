@@ -15,11 +15,12 @@
       <div class="page-glass-section first-section">
 
         <div class="content">
-          <p>
-            <span class="first-letter"><i class="icon-info"></i></span>
-            toucanBox is an award winning startup subscription service that provides arts and crafts activities for children aged 3 to 8 years old.
-            Each box has the child’s name on the front and a personalised message printed inside.
-            It has illustrated instructions, an activity magazine and all the required materials to make a craft project. It’s also delivered straight through the letterbox.
+          <p class="light">
+            <em>
+              "toucanBox is an award winning startup subscription service that provides arts and crafts activities for children aged 3 to 8 years old.
+              Each box has the child’s name on the front and a personalised message printed inside.
+              It has illustrated instructions, an activity magazine and all the required materials to make a craft project. It’s also delivered straight through the letterbox."
+            </em>
           </p>
           <p style="margin-bottom: 2.5em;">
             I worked with toucanBox from April 2016 to September 2018, initially as Research and Development Manager, later moving into a full time product role in the Technology Team.
@@ -32,7 +33,7 @@
               <img class="lazyload" data-src="./img/projects/onboarding/Hero.jpg">
             </figure>
             <figcaption>
-              Photography credit: toucanBox Creative Team (edited)
+              Photography credit: toucanBox Creative Team
             </figcaption>
           </div>
 
@@ -46,72 +47,45 @@
             New customers register through the website. They choose a box type for their child (or children) and create an account, providing relevant details (including email, delivery address and billing information).
             The first box is a free trial if they are acquired through paid marketing channels.
           </p>
-          <p>
-            <i class="faded">
+          <p class="light">
+            <em>
               I have omitted confidential information in this case study. All information and images are my own unless stated otherwise.
-            </i>
+            </em>
           </p>
-          <br>
-          <blockquote>
-            <p>
-              <strong>Product:</strong> Website and sign up web application
-            </p>
-            <p>
-              <strong>Brief:</strong> Increase funnel conversion rate
-            </p>
-          </blockquote>
 
           <br>
 
-          <div class="columns" style="margin-bottom: 0;">
+        </div>
+
+
+        <div class="content project-details">
+
+          <div class="columns">
             <div class="column">
-              <table class="table is-clear">
-                <thead>
-                  <tr>
-                    <th>Project team</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Product Designer (me)</td>
-                  </tr>
-                  <tr>
-                    <td>Full Stack Developer</td>
-                  </tr>
-                  <tr>
-                    <td>Stakeholders in Marketing and Creative</td>
-                  </tr>
-                </tbody>
-              </table>
+              <dl>
+                <dt><h5>Context</h5></dt>
+                <dt><span class="dark">Product:</span> Website and sign up web application</dt>
+                <dt><span class="dark">Brief:</span> Increase funnel conversion rate</dt>
+              </dl>
             </div>
             <div class="column">
-              <table class="table is-clear">
-                <thead>
-                  <tr>
-                    <th>My role</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Planning and scope definition</td>
-                  </tr>
-                  <tr>
-                    <td>Customer insights and ideation</td>
-                  </tr>
-                  <tr>
-                    <td>Prototyping and design iteration</td>
-                  </tr>
-                  <tr>
-                    <td>Development coordination and oversight</td>
-                  </tr>
-                  <tr>
-                    <td>Front-end development</td>
-                  </tr>
-                  <tr>
-                    <td>Measurement and evaluation</td>
-                  </tr>
-                </tbody>
-              </table>
+              <dl>
+                <dt><h5>Project team</h5></dt>
+                <dt>Full Stack Developer</dt>
+                <dt>Product Designer (me)</dt>
+                <dt>Stakeholders in Marketing and Creative</dt>
+              </dl>
+            </div>
+            <div class="column">
+              <dl>
+                <dt><h5>My role</h5></dt>
+                <dt>Planning and scope definition</dt>
+                <dt>Customer insights and ideation</dt>
+                <dt>Prototyping and design iteration</dt>
+                <dt>Development coordination and oversight</dt>
+                <dt>Front-end development</dt>
+                <dt>Measurement and evaluation</dt>
+              </dl>
             </div>
           </div>
 
@@ -119,7 +93,7 @@
 
       </div>
 
-      <div class="page-glass-divider">
+      <div class="page-glass-divider is-borderless">
         <h1>Discovery</h1>
       </div>
 
@@ -132,23 +106,24 @@
           </p>
 
           <br>
+          <br>
 
           <article class="media">
             <div class="media-left is-quarter">
               <h5>Parent</h5>
-              <p><i>'Buyer persona'</i></p>
+              <p class="light"><em>'Buyer persona'</em></p>
               <p>
                 In general it’s the parent who responds to our advertising and comms, makes the purchase, manages the subscription and engages with our customer care.
               </p>
             </div>
             <div class="media-content">
               <div class="content">
-                <strong style="margin-bottom: -0.5em; display: block;">I want my child to be happy</strong>
+                <h5>I want my child to be happy</h5>
                 <ul>
                   <li>They enjoy crafting <i>“We do crafts every weekend and they love it”</i></li>
                   <li>They want toucanBox <i>“They saw it on TV and asked me for it”</i></li>
                 </ul>
-                <strong style="margin-bottom: -0.5em; display: block;">I want to be a good parent</strong>
+                <h5>I want to be a good parent</h5>
                 <ul>
                   <li>I want to share positive experiences with my child, forming lasting memories <i>“I really value the time we spend together”</i></li>
                   <li>I want to support my child’s education and development <i>“If only it was easier to find things for my kids to do that support their education”</i></li>
@@ -161,14 +136,14 @@
           <article class="media">
             <div class="media-left is-quarter">
               <h5>Gifter</h5>
-              <p><i>'Buyer persona'</i></p>
+              <p class="light"><em>'Buyer persona'</em></p>
               <p>
                 A family friend or relative. Possibly an existing ‘parent’ customer.
               </p>
             </div>
             <div class="media-content">
               <div class="content">
-                <strong style="margin-bottom: -0.5em; display: block;">I want to give a good gift</strong>
+                <h5>I want to give a good gift</h5>
                 <ul>
                   <li>I want to show how much I care <i>“Finding a gift that’s good enough can be hard”</i></li>
                   <li>I want it to be quick and easy, for me and the recipient <i>“A good gift doesn’t create any work for whoever I give it to”</i></li>
@@ -180,14 +155,14 @@
           <article class="media">
             <div class="media-left is-quarter">
               <h5>Child</h5>
-              <p><i>'User persona'</i></p>
+              <p class="light"><em>'User persona'</em></p>
               <p>
                 The box experience is all about the children. If they enjoy it, this drives the decision to remain subscribed.
               </p>
             </div>
             <div class="media-content">
               <div class="content">
-                <strong style="margin-bottom: -0.5em; display: block;">I want to be entertained</strong>
+                <h5>I want to be entertained</h5>
                 <ul>
                   <li>I want to do what I’ve seen my friends do / seen on TV (YouTube) / done at school</li>
                 </ul>
@@ -212,25 +187,27 @@
           <p class="pullout-attribution">Paul Cook, toucanBox CMO</p> -->
           <p>
             This project focused on acquiring new customers. For that reason it primarily addresses the experience of adults.
-            Chapter 2 “Increasing satisfaction with a personalised experience” is concerned with retaining those new customers and addresses the needs of both adult and child.
-            <a href="/personalisation">See Chapter 2 <i class="icon-right-open-big full-opacity footer-icon"></i></a>
+            Chapter 2 <em>“Increasing satisfaction with a personalised experience”</em> is concerned with retaining those new customers and addresses the needs of both adult and child.
+            <router-link :to="{ name: 'personalisation', params: {} }">See Chapter 2 <i class="icon-right-open-big full-opacity footer-icon"></i></router-link>
           </p>
+
+          <br class="extra">
 
           <h2 class="subtitle ">Supporting data</h2>
 
-          <h4>Quantitative</h4>
+          <h3>Quantitative</h3>
           <dl>
             <dt>I gathered data from Google Analytics, Hotjar and customer service cases:</dt>
-            <dd>75% of users accessed the website on mobile (~5% on tablet and ~20% on desktop). This rose to 85% of users in Q3 2018</dd>
-            <dd>30 seconds was the average time spent on the homepage / landing page</dd>
-            <dd>75% of landing page users didn’t scroll far enough to see important information (detailed description, product packshot, price)</dd>
+            <dd><strong>75%</strong> of users accessed the website on mobile (~5% on tablet and ~20% on desktop). This rose to 85% of users in Q3 2018</dd>
+            <dd><strong>30 seconds</strong> was the average time spent on the homepage / landing page</dd>
+            <dd><strong>75%</strong> of landing page users didn’t scroll far enough to see important information (detailed description, product packshot, price)</dd>
             <dd>Existing customers would frequently route: search engine → homepage → log in to their accounts</dd>
-            <dd>Exit rates on the sign up form were unexpectedly high, a significant proportion of which occurred near the end of the form, at the payment section</dd>
-            <dd>Many of the exits from the sign up form went back to the homepage rather than dropping out entirely</dd>
-            <dd>A small but significant segment of trialists did not understand that toucanBox was a subscription service with ongoing deliveries</dd>
+            <dd><strong>Exit rates on the sign up form were unexpectedly high</strong>, a significant proportion of which occurred near the end of the form, at the payment section</dd>
+            <dd>Many of the exits from the sign up form went <strong>back to the homepage</strong> rather than dropping out entirely</dd>
+            <dd>A small but significant segment of trialists did not understand that toucanBox was <strong>a subscription service</strong> with ongoing deliveries</dd>
           </dl>
           <br>
-          <h4>Qualitative</h4>
+          <h3>Qualitative</h3>
           <dl>
             <dt>Interviewing customers provided me with further insight into their expectations and needs. I recorded standout and commonly occuring comments:</dt>
             <dd><i>“I want to see more of what’s inside the box”</i></dd>
@@ -242,6 +219,7 @@
             <dd><i>“I can’t see whether the discount code is applied, that’s worrying”</i></dd>
           </dl>
         </div>
+        <br>
 
       </div>
 
@@ -271,7 +249,7 @@
           <br>
 
           <div class="figure-container">
-            <figure class="image is-16by9 single-image zoomable" @click="showImage('./img/projects/onboarding/Journey.png', 'is-2by1')">
+            <figure class="image is-16by9 single-image zoomable" @click="showImage('./img/projects/onboarding/Journey.png', 'is-16by9')">
               <img class="lazyload" data-src="./img/projects/onboarding/Journey.png">
               <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
             </figure>
@@ -279,6 +257,8 @@
               Mapping the customer acquisition journey; yellow star indicators show potential areas of improvement
             </figcaption>
           </div>
+
+          <br>
 
           <h2>Goals</h2>
           <p class="pullout-quote is-left">
@@ -289,7 +269,7 @@
             I broke down the overarching project goal into six focus areas under two themes:
           </p>
 
-          <div class="columns" style="margin-bottom: 0;">
+          <div class="columns" style="margin-bottom: 1.5em;">
             <div class="column">
               <table class="table">
                 <thead>
@@ -344,8 +324,8 @@
 
         <div class="content">
           <h2>Ideation</h2>
-          <h4>Homepage and box information architecture</h4>
-          <p>Creating tree views of the homepage and craft boxes helped me to focus discussion on the hierarchy of content, iterate quickly and build consensus among internal stakeholders in the Marketing Team and Company leadership.</p>
+          <h3>Homepage and box information architecture</h3>
+          <p>Creating tree views of the homepage and craft boxes helped me to focus discussion on the hierarchy of content, iterate quickly and build consensus among internal stakeholders in the Marketing and Leadership teams.</p>
         </div>
 
         <div class="columns">
@@ -379,7 +359,7 @@
                 <ul>
                   <li> <a>Three box sizes</a>
                     <ul>
-                      <li><a>Box details <strong>(see next tree)</strong></a></li>
+                      <li><a><strong>Box details</strong></a></li>
                       <li><a>Box size specific CTA</a></li>
                       <li><a>Box specific discount code input</a></li>
                     </ul>
@@ -457,7 +437,7 @@
         </div>
 
         <div class="content">
-          <h4>Value proposition brainstorm</h4>
+          <h3>Value proposition brainstorm</h3>
 
           <p>I ran a collaborative process to pool our thinking and distill our value proposition into three digestible headings. We used our new mission statement as a starting point:</p>
 
@@ -595,12 +575,9 @@
             Our copywriter produced several options for the descriptive copy.  I facilitated feedback across the Company to select the version to test with customers.
           </p>
 
-          <br>
+          <br class="extra">
 
-        </div>
-
-        <div class="content">
-          <h2>Prototyping</h2>
+            <h2>Prototyping</h2>
           <p>
             I sketched and iterated all sections of the acquisition funnel, applying the new information architecture and improving useability, consistency and visual design.
           </p>
@@ -611,7 +588,7 @@
 
           <br>
 
-          <h4>1. The ‘Main Stage’</h4>
+          <h3>1. The ‘Main Stage’</h3>
           <p>Having optimised the messaging, communicate it clearly and quickly.</p>
 
           <div class="figure-container">
@@ -624,7 +601,7 @@
             </figcaption>
           </div>
 
-          <h4>2. The product section</h4>
+          <h3>2. The product section</h3>
           <p>Enable comparison and emphasise the differences between each box.</p>
 
           <div class="figure-container">
@@ -653,7 +630,7 @@
             </figcaption>
           </div> -->
 
-          <h4>3. Header and navigation</h4>
+          <h3>3. Header and navigation</h3>
           <p>Always visible login button, redesigned sitemap and navigation.</p>
 
           <div class="columns" style="width: 60%; margin-left: auto; margin-right: auto;">
@@ -675,7 +652,7 @@
           </div>
           <br>
 
-          <h4>4. Discount code status indicator</h4>
+          <h3>4. Discount code status indicator</h3>
           <p>Clear feedback of discount and price status.</p>
 
           <div class="columns">
@@ -757,11 +734,11 @@
                 <td>I didn’t want to increase the prominence of the video button further because it risked competing for attention with the main call to action. For desktop, I added an autoplay looping montage video cut from the promotional video footage (to be loaded asynchronously)</td>
               </tr>
               <tr>
-                <td>“How do I close this?” External testers expected the product details popup modal to have a close button at the top as well as the bottom</td>
+                <td><em>“How do I close this?”</em> External testers expected the product details popup modal to have a close button at the top as well as the bottom</td>
                 <td>In addition to the existing close button, I added one at the top of the modal</td>
               </tr>
               <tr>
-                <td>“I’ll use the menu to learn more” A surprisingly high number of testers attempted to use the navigation menu to gain an understanding of the offering, rather than scrolling. They found the options unsatisfying or confusing</td>
+                <td><em>“I’ll use the menu to learn more”</em> A surprisingly high number of testers attempted to use the navigation menu to gain an understanding of the offering, rather than scrolling. They found the options unsatisfying or confusing</td>
                 <td>I added links to the main navigation, pointing at separate pages that mirrored content from the homepage</td>
               </tr>
             </tbody>
@@ -778,19 +755,19 @@
             </thead>
             <tbody>
               <tr>
-                <td>“I expected siblings would always cost £1 extra?” Testers reported that the messaging regarding the trial offer for siblings (additional children) was unclear. The existing copy could imply that each additional child would always cost £1, not just for the first delivery</td>
+                <td><em>“I expected siblings would always cost £1 extra?”</em> Testers reported that the messaging regarding the trial offer for siblings (additional children) was unclear. The existing copy could imply that each additional child would always cost £1, not just for the first delivery</td>
                 <td>I worked with our copywriter to address this</td>
               </tr>
               <tr>
-                <td>“I can’t be sure how much I’m paying.” Testers mentioned that it felt frightening to click the ‘authorise payment’ button on the details form</td>
+                <td><em>“I can’t be sure how much I’m paying.”</em> Testers mentioned that it felt frightening to click the ‘authorise payment’ button on the details form</td>
                 <td>I added a mini order summary next to the payment/paypal button</td>
               </tr>
               <tr>
-                <td>“If I wanted to send toucanBox to two different addresses, how would I do that?” It became clear that our system was not well suited to gifters. The copy, interface and even the back-end data model was not tailored to their needs</td>
-                <td>This was good feedback but the issue was out of the scope of this project. I made sure it was communicated to the Company leadership and suggested a future project to resolve the issue.</td>
+                <td><em>“If I wanted to send toucanBox to two different addresses, how would I do that?”</em> It became clear that our system was not well suited to gifters. The copy, interface and even the back-end data model was not tailored to their needs</td>
+                <td>This was good feedback but the issue was out of the scope of this project. I made sure it was communicated to the Leadership Team and suggested a future project to resolve the issue.</td>
               </tr>
               <tr>
-                <td>“I don’t remember making a password, now I need one to log in?” We were aware that by not requiring a password we were adding to customer service volume as approximately 15% of trialists didn’t make a password after completing sign up.</td>
+                <td><em>“I don’t remember making a password, now I need one to log in?”</em> We were aware that by not requiring a password we were adding to customer service volume as approximately 15% of trialists didn’t make a password after completing sign up.</td>
                 <td>I recognised that detailed analysis would be needed to understand the conversion rate impact of moving the password field into the details form. In this project I decided not to change the password field location. However, I added a sister link to “forgotten your password?” on the login page - “Not created a password yet?”</td>
               </tr>
             </tbody>

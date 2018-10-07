@@ -1,10 +1,10 @@
 @import '../variables'
 
-.page-glass-section .first-letter
-  float: left
+br.extra
   font-size: 2em
-  opacity: 0.5
-  margin-right: 0.2em
+
+.first-letter
+  border-left: 5px solid $smoke
 
 .content h3.subtitle
   margin-top: -0.1em
@@ -40,11 +40,16 @@
     i
       line-height: 0
 
-.page-glass-section
-  span
-    color: $slate
-    opacity: 0.25
-    float: right
+// details section
+
+.project-details.content
+  background-color: $darkSnow
+  border-left: 5px solid $extraDarkSnow
+  // border-radius: $radius-large
+  padding: 0.25em 1.5em 1.5em
+  .columns
+    margin-top: 0
+    margin-bottom: 0
 
 .page-glass
   .columns, .figure-container
@@ -54,7 +59,6 @@
       background: $snow
     figcaption
       margin-top: -0.75em
-      font-size: 0.9em
       text-align: center
       position: relative
       color: $steel
@@ -75,12 +79,18 @@
 
 // Images max-width
 
-@media screen and (min-width: $desktop)
-  .max-80, .max-60, .max-50, .max-40
+@media screen and (min-width: $tablet)
+  .max-90, .max-80, .max-70, .max-60, .max-50, .max-40, .max-33
     margin: 0 auto 3em auto
+
+  .max-90
+    width: 90%
 
   .max-80
     width: 80%
+
+  .max-70
+    width: 70%
 
   .max-60
     width: 60%
@@ -91,11 +101,38 @@
   .max-40
     width: 40%
 
+  .max-33
+    width: 33%
+
 // Media overrides
 .media-left.is-quarter
  width: 28%
+
+.media-left.is-fifth
+ width: 20%
+
+.media + .media
+  padding-top: 2em
+  margin-top: 2em
 
 // .media-content
 
 .content dd, .content dt
   margin-top: 0.75em
+
+// Plus and minus lists
+
+ul.plus-list
+  list-style: none
+  position: relative
+  li
+    color: $steel
+    &::before
+      font-family: "icons"
+      content: "\e805"
+      left: -1.5em
+      position: absolute
+      color: $silver
+    &.minus::before
+      content: "\e808"
+      left: -1.4em

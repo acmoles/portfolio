@@ -43,12 +43,12 @@
                   <i class="icon-mail-squared full-opacity"></i>
                 </span> {{ copyTextMessage }}
               </a>
-              <a href="" target="_blank" class="dropdown-item">
+              <a href="https://linkedin.com/in/anthonymoles/" target="_blank" class="dropdown-item">
                 <span class="icon is-small">
                   <i class="icon-linkedin-squared full-opacity"></i>
                 </span> Linkedin
               </a>
-              <a href="" target="_blank" class="dropdown-item">
+              <a href="https://github.com/acmoles" target="_blank" class="dropdown-item">
                 <span class="icon is-small">
                   <i class="icon-github-squared full-opacity"></i>
                 </span> Github
