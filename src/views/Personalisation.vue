@@ -89,7 +89,7 @@
         </p>
 
         <div class="figure-container">
-          <figure class="image is-2by1 single-image zoomable" @click="showImage('./img/projects/personalisation/Design-principles.png', 'is-2by1')">
+          <figure class="image is-3by2 single-image zoomable" @click="showImage('./img/projects/personalisation/Design-principles.png', 'is-3by2')">
             <img class="lazyload" data-src="./img/projects/personalisation/Design-principles.png">
             <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
           </figure>
@@ -252,7 +252,7 @@
 
         <div class="figure-container max-33">
           <figure class="image is-9by16 single-image">
-            <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190532" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe v-if="showVideos" class="lazyload" data-src="https://player.vimeo.com/video/293190532" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           </figure>
           <figcaption>
             User testing a subscription plans design iteration
@@ -805,10 +805,19 @@ export default {
   components: {
     WorkWrapper
   },
+  data () {
+    return {
+      showVideos: false
+    }
+  },
+  mounted () {
+    setTimeout( () => {
+      this.showVideos = true;
+    }, 1000);
+  },
   methods: {
     showImage (imageUrl, imageAspectClass) {
-      this.$modal.show('image-modal', { url: imageUrl, aspect: imageAspectClass })
-
+      this.$modal.show('image-modal', { url: imageUrl, aspect: imageAspectClass });
     },
     hideImage () {
       this.$modal.hide('image-modal');

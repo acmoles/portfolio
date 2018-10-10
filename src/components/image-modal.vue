@@ -4,6 +4,7 @@
     classes="modal-inner"
     width="100%"
     height="auto"
+    scrollable="true"
     :adaptive="true"
     :reset="true"
     @before-open="beforeOpen"

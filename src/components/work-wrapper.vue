@@ -2,7 +2,6 @@
   <div class="page">
 
     <section class="hero is-medium page-header">
-      <!-- <div class="color-header" :class="color"></div> -->
       <div class="flat-header-project" :class="color"></div>
       <div class="hero-body">
         <div class="container case-study titles" :class="color">
@@ -14,15 +13,14 @@
       </div>
     </section>
 
-    <section class="container case-study page-glass" :class="{ 'is-visible': contentVisible }">
+    <section class="container case-study page-glass">
       <slot name="content">
         This will only be displayed if there is no content
         to be distributed.
       </slot>
     </section>
 
-    <section class="hero is-large page-footer" :class="{ 'is-visible': contentVisible }">
-      <!-- <div class="color-header" :class="color"></div> -->
+    <section class="hero is-large page-footer">
       <div class="flat-header-project" :class="color"></div>
       <div class="hero-body">
         <slot name="footer-content">
@@ -52,12 +50,6 @@ export default {
       default: 'blue'
     }
   },
-  data () {
-    return {
-      contentVisible: true, //TODO put back to false
-      headerVisible: false
-    }
-  },
   computed: {
     footerNavColor () {
       return (this.color === 'grey' ? 'is-dark' : 'is-light')
@@ -70,20 +62,9 @@ export default {
     });
     this.$events.$emit('navigate-project', this.project);
 
-    // setTimeout(() => {
-    //   this.fadeInContent();
-    // }, 500);
     setTimeout(() => {
       this.$events.$emit('remove-all-background');
     }, 2000);
-  },
-  methods: {
-    fadeInContent () {
-      this.contentVisible = true;
-    },
-    fadeInHeader () {
-      this.headerVisible = true;
-    }
   }
 }
 </script>
@@ -92,16 +73,7 @@ export default {
   @import '../sass/variables'
 
   // Header
-
-  // .page-header
-  //   @media screen and (min-width: $desktop)
-  //     height: 33.333vh
-  //     min-height: 33.333vh
-  //     .hero-body
-  //       padding: 0
-  //       display: flex
-  //       align-items: center
-
+  // <div class="color-header" :class="color"></div>
   .titles
     padding: 0 0.75em
     p
@@ -134,15 +106,9 @@ export default {
     background: $white
     border-radius: $radius-large
     z-index: 1
-    opacity: 0
-    transform: translateY(2em)
-    transition: opacity 0.4s, transform 0.8s 0.4s ease
     margin: 0 0.75em
     @media screen and (min-width: $desktop)
       margin: 0 auto
-    &.is-visible
-      transform: translateY(0)
-      opacity: 1
 
   .page-glass-divider, .page-glass-section
     display: flex
@@ -161,21 +127,6 @@ export default {
     &.last-section
       border-radius: 0 0 $radius-large $radius-large
 
-  // .overlap-filler
-    // border-radius: $radius-large $radius-large 0 0
-    // position: absolute
-    // top: 0
-    // left: 0
-    // right: 0
-    // height: 8em
-    // z-index: -1
-    // background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
-    // &.is-bottom
-    //   background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1))
-    //   top: auto
-    //   bottom: 0
-    //   border-radius: 0 0 $radius-large $radius-large
-
   .page-glass-divider
     padding: 1.5em 0.75em
     border-top: 1px solid $snow
@@ -192,17 +143,6 @@ export default {
 
   .page-footer
     margin-top: -4em
-    opacity: 0
-    transition: opacity 0.4s ease
-    &.is-visible
-      opacity: 1
-    // @media screen and (min-width: $desktop)
-    //   height: 66.666vh
-    //   min-height: 66.666vh
-    //   .hero-body
-    //     padding: 0
-    //     display: flex
-    //     align-items: center
 
   .page-footer-container
     color: $white

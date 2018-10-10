@@ -56,7 +56,7 @@ export default {
     });
     this.$events.$on('navigate-project', (event) => {
       this.canGoHome = true;
-      if (event === '2016' || event === 'About') {
+      if (event === '2016') {
         this.navColorScheme = 'dark';
       } else {
         this.navColorScheme = 'light';

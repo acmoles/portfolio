@@ -38,19 +38,24 @@ export default {
   data () {
     return {
       userAgent: undefined,
-      transitionName: 'fade-delay',
+      transitionName: 'fade-none',
       backgroundReady: false,
       firstBatch: true
     }
   },
   created () {
     this.$events.$on('remove-all-background', () => {
+
+      this.setBackwardTransition();
+
       if (this.backgroundReady) {
         this.background.removeAll();
       }
-      this.setBackwardTransition();
     });
     this.$events.$on('replace-all-background', () => {
+
+      this.setForwardTransition();
+
       if (this.firstBatch) {
         this.firstBatch = false;
       } else {
@@ -58,7 +63,6 @@ export default {
           this.background.replaceAll();
         }
       }
-      this.setForwardTransition();
     });
     this.$events.$on('navigate-project', () => {
       if (this.backgroundReady) {
@@ -66,28 +70,21 @@ export default {
       }
     });
     this.$events.$on('home-sequence', (callback) => {
-      // this.intro.slideLoader('in', true, () => {
-      //   this.background.resetLayerHeight();
-      //   this.background.toggleCanvasFader();
-      //   this.intro.fadeLoader('out', () => {
-      //     this.intro.resetLoaderBars();
-      //   });
+
+      // this.intro.fadeLoader('in', () => {
+      //   this.background.toggleCanvasFader('off');
+      //   setTimeout(() => {
+      //     this.intro.fadeLoader('out', () => {
+      //     });
+      //   }, 200);
       //   if (callback) {
       //     callback();
       //   }
       // });
-      this.intro.fadeLoader('in', () => {
-        // this.background.resetLayerHeight();
-        this.background.toggleCanvasFader('off');
-        setTimeout(() => {
-          this.intro.fadeLoader('out', () => {
-            // this.intro.resetLoaderBars();
-          });
-        }, 200);
-        if (callback) {
-          callback();
-        }
-      });
+
+      callback();
+
+
     });
 
     this.$nextTick(function () {
@@ -110,20 +107,12 @@ export default {
   },
   methods: {
     setBackwardTransition() {
-      this.transitionName = 'fade-delay-none';
+      this.transitionName = 'fade-none';
     },
     setForwardTransition() {
-      this.transitionName = 'fade-delay';
-    },
-    // toggleBodyClass(addRemoveClass, className) {
-    //   const el = document.body;
-    //
-    //   if (addRemoveClass === 'add-class') {
-    //     el.classList.add(className);
-    //   } else {
-    //     el.classList.remove(className);
-    //   }
-    // },
+      this.transitionName = 'fade';
+    }
+
   }
 }
 

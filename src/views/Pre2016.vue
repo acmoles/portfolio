@@ -33,10 +33,18 @@
             </div>
             <div class="column">
               <figure class="image is-1by1">
-                <iframe class="lazyload" data-src="http://www.youtube.com/embed/daBtHme2hP8" width="640" height="640" frameborder="0"></iframe>
+                <iframe v-if="showVideos" class="lazyload" data-src="https://www.youtube.com/embed/daBtHme2hP8" width="640" height="640" frameborder="0"></iframe>
               </figure>
             </div>
           </div>
+
+        </div>
+
+      </div>
+
+      <div class="page-glass-section">
+
+        <div class="content">
 
           <h1>Lego Dimensions</h1>
           <h3 class="subtitle">Lego / Design by Touch</h3>
@@ -52,11 +60,19 @@
             </div>
             <div class="column">
               <figure class="image is-1by1">
-                <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png">
-                <iframe class="lazyload" data-src="http://www.youtube.com/embed/aNnKBN5IqIU" width="640" height="640" frameborder="0"></iframe>
+                <iframe v-if="showVideos" class="lazyload" data-src="https://www.youtube.com/embed/aNnKBN5IqIU" width="640" height="640" frameborder="0"></iframe>
               </figure>
             </div>
           </div>
+
+        </div>
+
+      </div>
+
+      <div class="page-glass-section">
+
+        <div class="content">
+
 
           <h1>Nova</h1>
           <h3 class="subtitle">Stompy Robot</h3>
@@ -73,11 +89,18 @@
             </div>
             <div class="column">
               <figure class="image is-1by1">
-                <iframe class="lazyload" data-src="http://www.youtube.com/embed/xZELuhMO9es" width="640" height="640" frameborder="0"></iframe>
+                <iframe v-if="showVideos" class="lazyload" data-src="https://www.youtube.com/embed/xZELuhMO9es" width="640" height="640" frameborder="0"></iframe>
               </figure>
             </div>
           </div>
 
+        </div>
+
+      </div>
+
+      <div class="page-glass-section">
+
+        <div class="content">
 
           <h1>Nita</h1>
           <h3 class="subtitle">Art Lebedev Studio</h3>
@@ -99,6 +122,13 @@
             </div>
           </div>
 
+        </div>
+
+      </div>
+
+      <div class="page-glass-section last-section">
+
+        <div class="content">
 
           <h1>Fly</h1>
           <h3 class="subtitle">Random International</h3>
@@ -114,12 +144,10 @@
             </div>
             <div class="column">
               <figure class="image is-1by1">
-                <iframe class="lazyload" data-src="https://player.vimeo.com/video/30915879" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe v-if="showVideos" class="lazyload" data-src="https://player.vimeo.com/video/30915879" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               </figure>
             </div>
           </div>
-
-
 
         </div>
 
@@ -141,6 +169,16 @@ export default {
   name: 'Pre2016',
   components: {
     WorkWrapper
+  },
+  data () {
+    return {
+      showVideos: false
+    }
+  },
+  mounted () {
+    setTimeout( () => {
+      this.showVideos = true;
+    }, 1000);
   }
 }
 </script>

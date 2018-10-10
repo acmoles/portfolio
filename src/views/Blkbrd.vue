@@ -253,7 +253,7 @@
 
           <div class="figure-container max-60">
             <figure class="image is-16by9 single-image">
-              <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190758" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <iframe v-if="showVideos" class="lazyload" data-src="https://player.vimeo.com/video/293190758" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </figure>
             <figcaption>
               Background colour changing mode. Note the use of emoji, which proved just as popular on BLKBRD as other messaging apps
@@ -343,7 +343,7 @@
 
           <div class="figure-container max-33">
             <figure class="image is-9by16 single-image">
-              <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190729" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <iframe v-if="showVideos" class="lazyload" data-src="https://player.vimeo.com/video/293190729" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </figure>
             <figcaption>
               Motion design proved to be an important part of the BLKBRD design language
@@ -426,10 +426,19 @@ export default {
   components: {
     WorkWrapper
   },
+  data () {
+    return {
+      showVideos: false
+    }
+  },
+  mounted () {
+    setTimeout( () => {
+      this.showVideos = true;
+    }, 1000);
+  },
   methods: {
     showImage (imageUrl, imageAspectClass) {
-      this.$modal.show('image-modal', { url: imageUrl, aspect: imageAspectClass })
-
+      this.$modal.show('image-modal', { url: imageUrl, aspect: imageAspectClass });
     },
     hideImage () {
       this.$modal.hide('image-modal');

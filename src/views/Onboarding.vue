@@ -614,10 +614,24 @@
             </figcaption>
           </div>
 
-          <p>
-            The project specification called for mobile first design but I also considered the desktop and tablet experiences (~15-20% of users).
-            For the product section on desktop I used a three column layout, where the larger boxes had longer columns to emphasise their higher value.
-          </p>
+          <div class="columns" style="width: 80%; margin: 1em auto;">
+
+            <div class="column is-one-quarter">
+              <figure class="image is-1by1 single-image zoomable" @click="showImage('./img/projects/onboarding/Desktop-products.png', 'is-1by1')">
+                <img class="lazyload" data-src="./img/projects/onboarding/Desktop-products.png">
+                <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
+              </figure>
+            </div>
+
+            <div class="column">
+              <p>
+                The project specification called for mobile first design but I also considered the desktop and tablet experiences (~15-20% of users).
+                For the product section on desktop I used a three column layout, where the larger boxes had longer columns to emphasise their higher value.
+              </p>
+            </div>
+
+          </div>
+
           <br>
 
           <!-- <div class="figure-container max-40">
@@ -824,7 +838,7 @@
               <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
             </figure>
             <figcaption>
-              To increase my efficiency and that of the whole team, I created and maintained a style guide of UI components and design guidelines (with corresponding html snippets) as I developed the front end.
+              To increase my efficiency and that of the whole team, I created and maintained a style guide of UI components and design guidelines (with corresponding html snippets) as I developed the front end
             </figcaption>
           </div>
 

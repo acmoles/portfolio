@@ -613,7 +613,7 @@
           <article class="media">
             <div class="media-left is-quarter">
               <figure class="image is-1by1">
-                <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190847" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe v-if="showVideos" class="lazyload" data-src="https://player.vimeo.com/video/293190847" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               </figure>
             </div>
             <div class="media-content">
@@ -631,7 +631,7 @@
           <article class="media">
             <div class="media-left is-quarter">
               <figure class="image is-1by1">
-                <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190568" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe v-if="showVideos" class="lazyload" data-src="https://player.vimeo.com/video/293190568" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               </figure>
             </div>
             <div class="media-content">
@@ -649,7 +649,7 @@
           <article class="media">
             <div class="media-left is-quarter">
               <figure class="image is-9by16">
-                <iframe class="lazyload" data-src="https://player.vimeo.com/video/293400271" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe v-if="showVideos" class="lazyload" data-src="https://player.vimeo.com/video/293400271" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               </figure>
             </div>
             <div class="media-content">
@@ -700,7 +700,7 @@
             <div class="column">
               <div class="max-60">
                 <figure class="image is-9by16">
-                  <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190638" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  <iframe v-if="showVideos" class="lazyload" data-src="https://player.vimeo.com/video/293190638" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </figure>
                 <figcaption>
                   Low-fi prototype of the Toucanoo colouring sheet maker, used in early testing
@@ -710,7 +710,7 @@
             <div class="column">
               <div class="max-60">
                 <figure class="image is-9by16">
-                  <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190429" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  <iframe v-if="showVideos" class="lazyload" data-src="https://player.vimeo.com/video/293190429" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </figure>
                 <figcaption>
                   Useability testing a high fidelity iteration with children
@@ -836,7 +836,7 @@
             <div class="column">
               <div class="max-80">
                 <figure class="image is-1by1">
-                  <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190505" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  <iframe v-if="showVideos" class="lazyload" data-src="https://player.vimeo.com/video/293190505" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </figure>
                 <figcaption>
                   Toucanoo animation was achieved through a combination of tweens and sinusoidal functions. Tuning the motion sometimes created unexpected effects
@@ -941,10 +941,19 @@ export default {
   components: {
     WorkWrapper
   },
+  data () {
+    return {
+      showVideos: false
+    }
+  },
+  mounted () {
+    setTimeout( () => {
+      this.showVideos = true;
+    }, 1000);
+  },
   methods: {
     showImage (imageUrl, imageAspectClass) {
-      this.$modal.show('image-modal', { url: imageUrl, aspect: imageAspectClass })
-
+      this.$modal.show('image-modal', { url: imageUrl, aspect: imageAspectClass });
     },
     hideImage () {
       this.$modal.hide('image-modal');

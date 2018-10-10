@@ -19,6 +19,7 @@
           <p>
             <strong>I help companies build useful and pleasing products.</strong> I use the design process to bring clarity to complex questions. I am determined to create products that promote positive relationships between people, technology and the environment.
           </p>
+          <p class="pullout-quote is-left">"I make stuff to learn"</p>
           <p>
             To find the right opportunities, I employ user research, market research and data analysis. I work alongside developers, speaking their language, to ensure products ship with the highest possible level of polish.
           </p>
@@ -131,7 +132,7 @@
               Design consultancy, creating play experiences for the biggest kids brands in the world.
             </p>
             <ul>
-              <li>Stand-out project: Lego Dimensions. Partnered closely with the in-house team in research, interaction design and user testing</li>
+              <li>Stand-out project: <span class="dark">Lego Dimensions</span> <br>Partnered closely with the in-house team in research, interaction design and user testing</li>
             </ul>
           </div>
 
@@ -171,14 +172,14 @@
           <ol>
             <li style="margin-bottom: 0.75em">
               <router-link to="onboarding">toucanBox Chapter 1:</router-link> Refining the value proposition<br>
-              <p>A redesigned sign up funnel which optimised communication and useability, while adding details to build confidence</p>
+              <p>A redesigned sign up funnel to improve communication, useability and confidence</p>
             </li>
             <li style="margin-bottom: 0.75em">
               <router-link to="/personalisation">toucanBox Chapter 2:</router-link> Increasing customer satisfaction with a personalised experience<br>
-              <p>How strategic thinking identified toucanBox’s most promising digital product opportunity and helped outline a vision</p>
+              <p>A strategic design project to identify new ways to improve customer retention</p>
             </li>
             <li style="margin-bottom: 0.75em">
-              <router-link to="/wesen">Wesen Jewellery:</router-link> Building a jewellery brand with user generated products<br>
+              <router-link to="/wesen">Wesen Jewellery:</router-link> Building a jewellery creation experience<br>
               <p>End-to-end design and development of a shopping experience that facilitates customer creativity</p>
             </li>
             <li style="margin-bottom: 0.75em">
@@ -186,8 +187,8 @@
               <p>A mobile app which gives digital messages a location in the physical world</p>
             </li>
             <li style="margin-bottom: 0.75em">
-              <router-link to="/toucanoo">toucanBox R&amp;D:</router-link> Adding value to a physical product with a digital game<br>
-              <p>A research and development project investigating the potential of online content to encourage trialists to become customers</p>
+              <router-link to="/toucanoo">toucanBox R&amp;D:</router-link> Adding digital value to a physical product<br>
+              <p>An investigation into the potential for online content to encourage trialists to become customers</p>
             </li>
           </ol>
 
@@ -252,7 +253,7 @@ export default {
     height: 100%
     font-weight: 600
     font-size: 16px
-    padding: 1.5em 1em
+    padding: 1.5em 1em 1.75em
     text-align: center
 
   .work-block

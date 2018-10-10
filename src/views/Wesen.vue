@@ -504,7 +504,7 @@ is-one-quarter<template>
         <h1>Iteration</h1>
       </div>
 
-      <div class="page-glass-section last-section">
+      <div class="page-glass-section">
 
         <div class="content">
           <h2>Ideation</h2>
@@ -610,7 +610,7 @@ is-one-quarter<template>
 
           <div class="figure-container max-50">
             <figure class="image is-1by1 single-image">
-              <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190700" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <iframe v-if="showVideos" class="lazyload" data-src="https://player.vimeo.com/video/293190700" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </figure>
             <figcaption>
               I attempted to test the Blender setup with users but this proved too low fidelity - testers would need to learn the Blender interface before I could gather useful feedback
@@ -623,7 +623,7 @@ is-one-quarter<template>
 
           <div class="figure-container max-50">
             <figure class="image is-1by1 single-image">
-              <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190664" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <iframe v-if="showVideos" class="lazyload" data-src="https://player.vimeo.com/video/293190664" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </figure>
             <figcaption>
               I was pleased to observe that testers automatically moved the control points and sometimes exclaimed <em>"wow"</em> when doing so for the first time
@@ -760,14 +760,13 @@ is-one-quarter<template>
 
         </div>
 
-
       </div>
 
       <div class="page-glass-divider">
         <h1>Production</h1>
       </div>
 
-      <div class="page-glass-section last-section">
+      <div class="page-glass-section">
 
         <div class="content">
           <p>In specifying production tools and technologies I re-referenced my project goals and drew on past experience:</p>
@@ -920,11 +919,10 @@ is-one-quarter<template>
           <p>
             Working independently to build all the touchpoints and systems required for a mass-customisation product has been an interesting learning experience. Surprisingly, or not so surprisingly, the main lesson has been in the value of the multidisciplinary team; of working with great people who are fast and efficient within their specialism. At several junctures I felt the lack of a collaborator, especially in backend engineering, but equally in shaping ideas.
           </p>
+
+
         </div>
-
       </div>
-
-
     </template>
 
     <template slot="footer-content">
@@ -958,10 +956,19 @@ export default {
   components: {
     WorkWrapper
   },
+  data () {
+    return {
+      showVideos: false
+    }
+  },
+  mounted () {
+    setTimeout( () => {
+      this.showVideos = true;
+    }, 1000);
+  },
   methods: {
     showImage (imageUrl, imageAspectClass) {
-      this.$modal.show('image-modal', { url: imageUrl, aspect: imageAspectClass })
-
+      this.$modal.show('image-modal', { url: imageUrl, aspect: imageAspectClass });
     },
     hideImage () {
       this.$modal.hide('image-modal');
