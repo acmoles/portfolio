@@ -56,10 +56,6 @@ export default {
     }
   },
   mounted () {
-    this.$events.$emit('scroll-trigger', {
-      location: 'top',
-      smooth: false
-    });
     this.$events.$emit('navigate-project', this.project);
 
     setTimeout(() => {

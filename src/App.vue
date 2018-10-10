@@ -54,6 +54,10 @@ export default {
     });
     this.$events.$on('replace-all-background', () => {
 
+      if (this.backgroundReady) {
+        this.background.toggleCanvasFader('off');
+      }
+
       this.setForwardTransition();
 
       if (this.firstBatch) {
@@ -71,19 +75,15 @@ export default {
     });
     this.$events.$on('home-sequence', (callback) => {
 
-      // this.intro.fadeLoader('in', () => {
-      //   this.background.toggleCanvasFader('off');
-      //   setTimeout(() => {
-      //     this.intro.fadeLoader('out', () => {
-      //     });
-      //   }, 200);
-      //   if (callback) {
-      //     callback();
-      //   }
-      // });
-
-      callback();
-
+      this.intro.fadeLoader('in', () => {
+        setTimeout(() => {
+          this.intro.fadeLoader('out', () => {
+          });
+        }, 200);
+        if (callback) {
+          callback();
+        }
+      });
 
     });
 
@@ -103,7 +103,16 @@ export default {
           }
         });
       });
-    })
+
+      // Handle all back button usage as if navigating back from a project
+      window.addEventListener('popstate', () => {
+        this.$events.$emit('home-sequence');
+        console.log('home sequence please');
+      }, false);
+
+      console.log('attempting to add event');
+    });
+
   },
   methods: {
     setBackwardTransition() {

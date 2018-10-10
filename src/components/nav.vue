@@ -40,8 +40,6 @@
 
 <script>
 
-import * as smoothScroll from 'smoothscroll'
-
 export default {
   name: 'Nav',
   data () {
@@ -54,6 +52,7 @@ export default {
   },
   created () {
     this.$events.$on('navigate-project', (event) => {
+      window.scrollTo(0, 0);
       // Navigate to a project from anywhere
       setTimeout(() => {
         // Avoid popin mix layers
@@ -68,39 +67,17 @@ export default {
         this.navColorScheme = 'light';
       }
     });
-    this.$events.$on('scroll-trigger', (value) => {
-      // Get scroll events from any component
-      this.scrollTo(value);
+    this.$events.$on('cant-go-home', () => {
+      this.canGoHome = false;
     });
-    this.$events.$on('back-home-footer', () => {
-      // Navigate home events from footer nav
-      this.backHome();
+    this.$events.$on('back-home', () => {
+      // Navigate home events from UI
+      this.$events.$emit('home-sequence', () => {
+        this.$router.push('/');
+      });
     });
   },
   methods: {
-    scrollTo (event) {
-
-      this.currentScrollLocation = event.location;
-
-      let scrollTarget;
-      if (event.location === 'top') {
-        scrollTarget = 0;
-      } else {
-        scrollTarget = document.getElementById(event);
-      }
-      let time = 750;
-
-      if (event.smooth) {
-        smoothScroll(scrollTarget, time);
-      } else {
-        if (event.location === 'top') {
-          window.scrollTo(0, 0);
-        } else {
-          scrollTarget.scrollIntoView();
-        }
-      }
-
-    },
     ensureMenuDismiss() {
       // ensure menu is dismissed
       this.$events.$emit('toggle-overlay-off', {
@@ -114,11 +91,7 @@ export default {
       });
     },
     backHome () {
-      this.$events.$emit('home-sequence', () => {
-        this.canGoHome = false;
-        this.$events.$emit('cant-go-home');
-        this.$router.push('/');
-      });
+      this.$events.$emit('back-home');
     }
   }
 }

@@ -34,6 +34,7 @@ export default {
   },
   mounted () {
     this.$events.$emit('replace-all-background');
+    this.$events.$emit('cant-go-home');
   }
 }
 </script>

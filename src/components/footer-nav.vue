@@ -14,7 +14,7 @@
         class="navbar-brand"
       >
         <button
-          @click="navigate"
+          @click="backHome"
           class="navbar-item back-wrapper hamburger"
           type="button"
         >
@@ -67,8 +67,8 @@ export default {
     });
   },
   methods: {
-    navigate () {
-      this.$events.$emit('back-home-footer');
+    backHome () {
+      this.$events.$emit('back-home');
     },
     menuOpen () {
       this.$events.$emit('toggle-overlay-on', {

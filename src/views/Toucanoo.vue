@@ -171,7 +171,7 @@
                         <dt>Painting (malen)</dt>
                         <dt>Music (Musik)</dt>
                         <dt>Videos</dt>
-                        <dt>Fun (spa&szdtg;)</dt>
+                        <dt>Fun (spa&szlig;)</dt>
                         <dt>Knowledge (wissen)</dt>
                         <dt>Building (bauen)</dt>
                       </dl>
@@ -453,7 +453,11 @@
 
           <p>Development of a fully-fledged mobile app was out of scope for this test. I decided to play to our strengths - the experience should be online, built with web technologies and accessed via a printed URL or QR code in the box.</p>
 
-          <p>QR codes appeared to offer a way to reduce the friction of moving from printed media to online content. However, further investigation revealed that the IOS camera app had recently dropped support, effectively removing any advantage of this approach.</p>
+          <p>
+            QR codes appeared to offer a way to reduce the friction of moving from printed media to online content, especially on IOS where it's supported by the default camera app.
+            However, the majority of our website users are on Android (which typically requires a dedicated QR code reader app to be downloaded).
+            I was concerned this feature would actually increase friction for less technical users, so for the purpose of this test we opted to simply print the URL.
+          </p>
 
           <br class="extra">
 
@@ -812,7 +816,7 @@
           </blockquote>
 
           <p>
-            I chose html canvas as the foundational technology for both the low-fi prototype and the production build. My rationale was performance on low-spec mobile devices, which could lean on their graphics processor (GPU) to keep animation smooth. I relied on two libraries to speed up development:
+            I chose html canvas over DOM or SVG as the foundational technology for both the low-fi prototype and the production build. My rationale was performance on low-spec mobile devices, which could lean on their graphics processor (GPU) to keep animation smooth. I relied on two libraries to speed up development:
           </p>
 
           <ul>

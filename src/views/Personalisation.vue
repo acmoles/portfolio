@@ -576,7 +576,7 @@
 
           <div class="column">
             <div class="content">
-              <h6>Child preferences <em>'card'</em>:</h6>
+              <h6>Child preferences 'card'</h6>
             </div>
             <ul class="tree">
               <li><a>Children</a>
