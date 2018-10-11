@@ -18,8 +18,6 @@ export class Intro {
   checkUserAgent() {
     if (navigator.userAgent.indexOf('Firefox') > -1) {
      //"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
-     // TODO use pixi blur if firefox
-     this.addSoftwareBlur();
      this.userAgent = 'Firefox';
    } else if (navigator.userAgent.indexOf('Chrome') > -1) {
      this.addCanvasBlur();
@@ -34,8 +32,8 @@ export class Intro {
     this.canvasContainer.classList.add('blur');
   }
 
-  addSoftwareBlur() {
-    this.firefox = true;
+  addGradientBackground() {
+    // In case of no background at all
     this.canvasContainer.classList.add('background-gradient');
   }
 

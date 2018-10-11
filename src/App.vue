@@ -54,7 +54,7 @@ export default {
     });
     this.$events.$on('replace-all-background', () => {
 
-      if (this.backgroundReady) {
+      if (this.backgroundReady && window.innerWidth >= 1088) {
         this.background.toggleCanvasFader('off');
       }
 
@@ -88,14 +88,15 @@ export default {
     });
 
     this.$nextTick(function () {
+
       this.intro = new Intro();
       this.userAgent = this.intro.userAgent;
-      this.background = new Background();
+      this.background = new Background(this.userAgent);
       this.background.appendCanvas(() => {
         // background ready callback
         this.intro.introSequence(() => {
           // sliders finished callback
-          if (!this.intro.firefox && this.$route.path === '/') {
+          if (this.$route.path === '/') {
             this.background.addFirstBatch();
             this.backgroundReady = true;
           } else {
@@ -107,10 +108,15 @@ export default {
       // Handle all back button usage as if navigating back from a project
       window.addEventListener('popstate', () => {
         this.$events.$emit('home-sequence');
-        console.log('home sequence please');
       }, false);
 
-      console.log('attempting to add event');
+      // Phones and tablets always want the canvas fader
+      if (window.innerWidth >= 1088) {
+        this.background.toggleCanvasFader('off');
+      } else {
+        this.background.toggleCanvasFader('on');
+      }
+
     });
 
   },

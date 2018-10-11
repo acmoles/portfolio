@@ -1,5 +1,5 @@
 {
-  "name": "Anthony Moles Portfolio",
+  "name": "Anthony Moles | Portfolio",
   "short_name": "Portfolio",
   "icons": [
     {
@@ -15,6 +15,6 @@
   ],
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#000000",
+  "background_color": "#1F2D3D",
   "theme_color": "#E0E6ED"
 }
