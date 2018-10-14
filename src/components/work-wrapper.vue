@@ -88,6 +88,7 @@ export default {
     h1
       color: $white
       font-size: 2.5em
+      font-weight: 400
       @media screen and (max-width: $desktop)
         font-size: 2.25em
       margin-bottom: 0.1em

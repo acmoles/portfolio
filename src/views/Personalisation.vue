@@ -88,17 +88,6 @@
           writing a few database queries of my own).
         </p>
 
-        <div class="figure-container">
-          <figure class="image is-3by2 single-image zoomable" @click="showImage('./img/projects/personalisation/Design-principles.png', 'is-3by2')">
-            <img class="lazyload" data-src="./img/projects/personalisation/Design-principles.png">
-            <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
-          </figure>
-          <figcaption>
-            toucanBox design principles
-          </figcaption>
-        </div>
-
-
         <p>In a technique inspired by the product agency <a href="https://www.madebymany.com/" target="_blank">Made By Many</a>, I then summarised customer quotes and supporting data into six 'product Design Principles,' each with suggested ideation starting points:</p>
         <ol>
           <li>Easy</li>
@@ -108,6 +97,16 @@
           <li>Personalised</li>
           <li>Flexible</li>
         </ol>
+
+        <div class="figure-container">
+          <figure class="image is-3by2 single-image zoomable" @click="showImage('./img/projects/personalisation/Design-principles.png', 'is-3by2')">
+            <img class="lazyload" data-src="./img/projects/personalisation/Design-principles.png">
+            <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
+          </figure>
+          <figcaption>
+            toucanBox design principles
+          </figcaption>
+        </div>
 
         <p>In the previous year we had worked hard on four of the themes: Easy, Clear, Open and Trustworthy with an overhaul of the acquisition funnel and more help and information on the website. </p>
 
@@ -399,7 +398,7 @@
         <br>
 
         <h3>Testing our ideas with customers</h3>
-        <p>I turned our top ideas into five questions. This poll was served to all customers accessing their accounts (randomly ordered). 267 customers participated.</p>
+        <p>I turned our top ideas into five questions. This poll was served to all customers accessing their accounts for five days (randomly ordered). 267 customers participated.</p>
 
         <div class="columns" style="margin-bottom: 1em;">
           <div class="column is-two-thirds">

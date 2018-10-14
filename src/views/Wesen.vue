@@ -93,7 +93,7 @@ is-one-quarter<template>
           </p>
           <ul>
             <li>Creating small, high-value objects plays to the strengths of 3D printing</li>
-            <li>Customisation makes sense with personally significant objects for which being unique matters</li>
+            <li>Customisation and uniqueness make sense with personally significant objects</li>
             <li>Niche markets are typically suited to ‘cottage industry’ businesses</li>
             <li>Some competitors are offering expressive design tools, but there is plenty of room for differentiation</li>
           </ul>
@@ -165,7 +165,7 @@ is-one-quarter<template>
           <dl>
             <dt><strong>Challenge:</strong></dt>
             <dd>
-              How to communicate in a manner that resonates with the desires and language of potential customers - open-ended customisation is somewhere between customisation and design, but it’s not personalisation.
+              How to communicate in a manner that resonates with the desires and language of potential customers - <span>'open-ended'</span> customisation is somewhere between customisation and design, but it’s not personalisation.
             </dd>
             <dt><strong>Risk:</strong></dt>
             <dd>
@@ -340,7 +340,7 @@ is-one-quarter<template>
                 <h5>I want to express myself</h5>
                 <ul>
                   <li><em>“I have a personal style and I carefully curate what I wear”</em></li>
-                  <li><em>“I want to jewellery no-one else has seen before”</em></li>
+                  <li><em>“I want jewellery no-one else has seen before”</em></li>
                 </ul>
                 <h5>I want to have the latest thing</h5>
                 <ul>
@@ -528,68 +528,79 @@ is-one-quarter<template>
                 <th>Description</th>
                 <th>Expressiveness</th>
                 <th>Implementation</th>
+                <th>Total</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Linear array</td>
-                <td>Define a source geometry and choose how many times it repeats in an xy grid</td>
-                <td>2</td>
-                <td>5</td>
-              </tr>
               <tr>
                 <td>Radial array</td>
                 <td>Define a source geometry and choose how many times it repeats around a circle of a certain radius</td>
                 <td>4</td>
                 <td>5</td>
+                <td>9</td>
               </tr>
               <tr>
                 <td>Control geometry</td>
                 <td>Warp a source geometry by moving the vertices of a control geometry. The control shape is typically much simpler than the source</td>
                 <td>5</td>
                 <td>3</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>Linear array</td>
+                <td>Define a source geometry and choose how many times it repeats in an xy grid</td>
+                <td>2</td>
+                <td>5</td>
+                <td>7</td>
               </tr>
               <tr>
                 <td>Curve based bend</td>
                 <td>Bend a source geometry by manipulating the anchors of a bezier curve</td>
                 <td>3</td>
                 <td>4</td>
-              </tr>
-              <tr>
-                <td>Polar warp</td>
-                <td>‘Spin’ the vertices of a geometry around an arbitrary axis</td>
-                <td>2</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>Sinusoidal warp</td>
-                <td>Apply a sinusoidal waveform to a source geometry</td>
-                <td>2</td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>Extrude profile</td>
-                <td>Draw a flat sketch and extrude its boundary to form a 3D object</td>
-                <td>4</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>Sculpt submesh</td>
-                <td>Take a blob and push or pull the surface, sculpting like clay</td>
-                <td>5</td>
-                <td>1</td>
+                <td>7</td>
               </tr>
               <tr>
                 <td><span>On-surface</span> ‘stamps’</td>
                 <td>Decorate a curved or flat surface with smaller objects that ‘stick’ to it, ensuring contact</td>
                 <td>4</td>
                 <td>3</td>
+                <td>7</td>
               </tr>
               <tr>
                 <td>Boolean operations</td>
                 <td>Create new, more complex geometries by joining or subtracting source geometries</td>
                 <td>3</td>
                 <td>3</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>Sinusoidal warp</td>
+                <td>Apply a sinusoidal waveform to a source geometry</td>
+                <td>2</td>
+                <td>4</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>Extrude profile</td>
+                <td>Draw a flat sketch and extrude its boundary to form a 3D object</td>
+                <td>4</td>
+                <td>2</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>Sculpt submesh</td>
+                <td>Take a blob and push or pull the surface, sculpting like clay</td>
+                <td>5</td>
+                <td>1</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>Polar warp</td>
+                <td>‘Spin’ the vertices of a geometry around an arbitrary axis</td>
+                <td>2</td>
+                <td>3</td>
+                <td>5</td>
               </tr>
             </tbody>
           </table>

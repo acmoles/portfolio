@@ -129,7 +129,7 @@
             <h4>Design by Touch</h4>
             <p><em>Leamington Spa (UK) | MAY 2013 - APR 2015</em></p>
             <p>
-              Design consultancy, creating play experiences for the biggest kids brands in the world.
+              Design consultancy, creating play experiences for the biggest children's brands in the world.
             </p>
             <ul>
               <li>Stand-out project: <span class="dark">Lego Dimensions</span> <br>Partnered closely with the in-house team in research, interaction design and user testing</li>

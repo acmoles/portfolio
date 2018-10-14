@@ -24,7 +24,7 @@
           </p>
           <p style="margin-bottom: 2.5em;">
             I worked with toucanBox from April 2016 to September 2018, initially as Research and Development Manager, later moving into a full time product role in the Technology Team.
-            The Team was initially me and one developer. Over the course of a year we added four more developers.
+            This was initially composed of me and one developer. Over the course of a year we added four more developers.
           </p>
 
 
@@ -41,7 +41,7 @@
             2017 was a significant year for toucanBox. Having secured funding in the previous year, we were ready to expand the Company and transition into a growth phase.
           </p>
           <p>
-            As we are offering a product customers usually haven’t seen before, we knew that our communication and first impression must be flawless.
+            As we offer a product customers usually haven’t seen before, we knew that our communication and first impression must be flawless.
           </p>
           <p>
             New customers register through the website. They choose a box type for their child (or children) and create an account, providing relevant details (including email, delivery address and billing information).
@@ -113,7 +113,7 @@
               <h5>Parent</h5>
               <p class="light"><em>'Buyer persona'</em></p>
               <p>
-                In general it’s the parent who responds to our advertising and comms, makes the purchase, manages the subscription and engages with our customer care.
+                In general it’s the parent who responds to our advertising and comms, makes the purchase, manages the subscription and engages with our customer care
               </p>
             </div>
             <div class="media-content">
@@ -138,7 +138,7 @@
               <h5>Gifter</h5>
               <p class="light"><em>'Buyer persona'</em></p>
               <p>
-                A family friend or relative. Possibly an existing ‘parent’ customer.
+                A family friend or relative. Possibly an existing ‘parent’ customer
               </p>
             </div>
             <div class="media-content">
@@ -157,7 +157,7 @@
               <h5>Child</h5>
               <p class="light"><em>'User persona'</em></p>
               <p>
-                The box experience is all about the children. If they enjoy it, this drives the decision to remain subscribed.
+                The box experience is all about the children. If they enjoy it, this drives the decision to remain subscribed
               </p>
             </div>
             <div class="media-content">
@@ -740,20 +740,20 @@
             </thead>
             <tbody>
               <tr>
-                <td>Internal testers requested an always-visible main navigation on desktop (i.e. not behind a burger button)</td>
-                <td>I had avoided this for expediency but quickly realised I wasn’t meeting an important user expectation for desktop website navigation</td>
-              </tr>
-              <tr>
-                <td>The view rate for the toucanBox promotional video did not increase, even though I had increased the prominence of the video button</td>
-                <td>I didn’t want to increase the prominence of the video button further because it risked competing for attention with the main call to action. For desktop, I added an autoplay looping montage video cut from the promotional video footage (to be loaded asynchronously)</td>
-              </tr>
-              <tr>
                 <td><em>“How do I close this?”</em> External testers expected the product details popup modal to have a close button at the top as well as the bottom</td>
                 <td>In addition to the existing close button, I added one at the top of the modal</td>
               </tr>
               <tr>
                 <td><em>“I’ll use the menu to learn more”</em> A surprisingly high number of testers attempted to use the navigation menu to gain an understanding of the offering, rather than scrolling. They found the options unsatisfying or confusing</td>
                 <td>I added links to the main navigation, pointing at separate pages that mirrored content from the homepage</td>
+              </tr>
+              <tr>
+                <td>Internal testers requested an always-visible main navigation on desktop (i.e. not behind a burger button)</td>
+                <td>I had avoided this for expediency but quickly realised I wasn’t meeting an important user expectation for desktop website navigation</td>
+              </tr>
+              <tr>
+                <td>The view rate for the toucanBox promotional video did not increase, even though I had increased the prominence of the video button</td>
+                <td>I didn’t want to increase the prominence of the video button further because it risked competing for attention with the main call to action. For desktop, I added an autoplay looping montage video cut from the promotional video footage (to be loaded asynchronously)</td>
               </tr>
             </tbody>
           </table>
@@ -774,14 +774,14 @@
               </tr>
               <tr>
                 <td><em>“I can’t be sure how much I’m paying.”</em> Testers mentioned that it felt frightening to click the ‘authorise payment’ button on the details form</td>
-                <td>I added a mini order summary next to the payment/paypal button</td>
+                <td>I added a mini order summary next to the payment/paypal button titled 'What You're Paying Today'</td>
               </tr>
               <tr>
                 <td><em>“If I wanted to send toucanBox to two different addresses, how would I do that?”</em> It became clear that our system was not well suited to gifters. The copy, interface and even the back-end data model was not tailored to their needs</td>
                 <td>This was good feedback but the issue was out of the scope of this project. I made sure it was communicated to the Leadership Team and suggested a future project to resolve the issue.</td>
               </tr>
               <tr>
-                <td><em>“I don’t remember making a password, now I need one to log in?”</em> We were aware that by not requiring a password we were adding to customer service volume as approximately 15% of trialists didn’t make a password after completing sign up.</td>
+                <td><em>“I don’t remember making a password, now I need one to log in?”</em> We were aware that by not requiring a password we were adding to customer service volume as approximately 15% of trialists didn’t make a password after completing sign up</td>
                 <td>I recognised that detailed analysis would be needed to understand the conversion rate impact of moving the password field into the details form. In this project I decided not to change the password field location. However, I added a sister link to “forgotten your password?” on the login page - “Not created a password yet?”</td>
               </tr>
             </tbody>

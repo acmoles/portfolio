@@ -626,7 +626,7 @@
                 <p>Add 3D animated characters, enhancements and storytelling to a child’s finished craft project.</p>
                 <ul class="plus-list">
                   <li>Children found the concept very compelling</li>
-                  <li>We observed them using AR in creative ways we didnt foresee Look Ive got wings on my arm </li>
+                  <li>We observed them using AR in creative ways we didnt foresee <em>"Look I've got wings on my arm"</em></li>
                 </ul>
               </div>
             </div>

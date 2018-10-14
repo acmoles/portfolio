@@ -79,7 +79,7 @@ export class Background {
   addSoftwareBlurEffects() {
     // Global blur filter
     let filterAll = new filters.KawaseBlurFilter();
-    filterAll.blur = 20;
+    filterAll.blur = 13;
     filterAll.quality = 4;
     filterAll.padding = 50;
     this.app.stage.filters = [filterAll];
