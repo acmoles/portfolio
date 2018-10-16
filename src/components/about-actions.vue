@@ -69,7 +69,7 @@ export default {
   name: 'AboutActions',
   data () {
     return {
-      email: 'info@acmoles.design',
+      email: 'acmoles@gmail.com',
       copyTextMessage: 'Copy email',
       optionsDropdown: false,
     }

@@ -224,7 +224,7 @@ export default {
   },
   data () {
     return {
-      email: 'info@acmoles.design',
+      email: 'acmoles@gmail.com',
       copyTextMessage: 'Copy email'
     }
   },
@@ -262,7 +262,6 @@ export default {
   .page-footer-container
     h2
       font-size: 2em
-      font-weight: 600
     a
       font-weight: 600
 
