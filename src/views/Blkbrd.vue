@@ -210,55 +210,57 @@
             I informally tested throughout the prototyping and build phases, gathering feedback as the project progressed. Initially I showed static screens and verbally explained the concept. Later I simply stated that I was working on something and wanted feedback, without any further preamble.
           </p>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Observation</th>
-                <th>Remedy</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><em>“I would like to scroll through previous messages”</em></td>
-                <td>On the channel screen, I introduced vertical snap (paginated) scrolling, making it possible to swipe through previous messages</td>
-              </tr>
-              <tr>
-                <td><em>“I’ve made a mistake, is it possible to delete message?”</em></td>
-                <td>I added the ability to delete the previous message</td>
-              </tr>
-              <tr>
-                <td><em>“I’d like to set the name that appears under my message, rather than just my email”</em></td>
-                <td>I made it possible for users to add a custom screen name. However, this created a situation where the true identity of the message author could not reliably be known, leading to humorous impersonations</td>
-              </tr>
-              <tr>
-                <td><em>“Could you add a bit of colour?”</em></td>
-                <td>There was an effective way to add colour - in the background. I added a colour mode which replaces the black with a block colour, overlayed by the same white interface</td>
-              </tr>
-              <tr>
-                <td><em>“Is it possible to search for a specific channel?”</em></td>
-                <td>A good feature idea but not required to test the MVP</td>
-              </tr>
-              <tr>
-                <td><em>“It would be great if our existing Whatsapp group could show up on the screen - I just don’t have space in my life for another messaging app”</em></td>
-                <td>This comment encapsulated the stand-alone vs plugin decision earlier in the project. Sadly it wasn’t possible to develop an integration with Whatsapp</td>
-              </tr>
-              <tr>
-                <td><em>“I’d like to be able to favourite a channel and receive notifications when a new message is written in it”</em></td>
-                <td>Another good suggestion which I reasoned wasn’t necessary for the MVP (as discussed in the evaluation, this may have been an important feature for sustaining engagement)</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Observation</th>
+                  <th>Remedy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><em>“I would like to scroll through previous messages”</em></td>
+                  <td>On the channel screen, I introduced vertical snap (paginated) scrolling, making it possible to swipe through previous messages</td>
+                </tr>
+                <tr>
+                  <td><em>“I’ve made a mistake, is it possible to delete message?”</em></td>
+                  <td>I added the ability to delete the previous message</td>
+                </tr>
+                <tr>
+                  <td><em>“I’d like to set the name that appears under my message, rather than just my email”</em></td>
+                  <td>I made it possible for users to add a custom screen name. However, this created a situation where the true identity of the message author could not reliably be known, leading to humorous impersonations</td>
+                </tr>
+                <tr>
+                  <td><em>“Could you add a bit of colour?”</em></td>
+                  <td>There was an effective way to add colour - in the background. I added a colour mode which replaces the black with a block colour, overlayed by the same white interface</td>
+                </tr>
+                <tr>
+                  <td><em>“Is it possible to search for a specific channel?”</em></td>
+                  <td>A good feature idea but not required to test the MVP</td>
+                </tr>
+                <tr>
+                  <td><em>“It would be great if our existing Whatsapp group could show up on the screen - I just don’t have space in my life for another messaging app”</em></td>
+                  <td>This comment encapsulated the stand-alone vs plugin decision earlier in the project. Sadly it wasn’t possible to develop an integration with Whatsapp</td>
+                </tr>
+                <tr>
+                  <td><em>“I’d like to be able to favourite a channel and receive notifications when a new message is written in it”</em></td>
+                  <td>Another good suggestion which I reasoned wasn’t necessary for the MVP (as discussed in the evaluation, this may have been an important feature for sustaining engagement)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <br class="extra">
 
-          <div class="figure-container max-60">
+          <!-- <div class="figure-container max-60">
             <figure class="image is-16by9 single-image">
               <iframe v-if="showVideos" class="lazyload" data-src="https://player.vimeo.com/video/293190758" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </figure>
             <figcaption>
               Background colour changing mode. Note the use of emoji, which proved just as popular on BLKBRD as other messaging apps
             </figcaption>
-          </div>
+          </div> -->
 
         </div>
 

@@ -59,29 +59,30 @@ is-one-quarter<template>
 
           <br>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Google Keyword</th>
-                <th>Autocomplete Pairings</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Custom, customised, customise my...</td>
-                <td>Shoes, t-shirt, stickers, passport cover, phone, car, laptop, socks, PS4/Xbox controller</td>
-              </tr>
-              <tr>
-                <td>Personalise, personalised, personalise my...</td>
-                <td>Gifts, baby gifts, mugs, phone case, medicine, <strong>necklace</strong>, keyring, football boots</td>
-              </tr>
-              <tr>
-                <td>Design (or make) my (your) own...</td>
-                <td>Clothes, shoes, hoodie, t-shirt, logo, house, <strong>ring, engagement ring,</strong> cap, furniture</td>
-              </tr>
-            </tbody>
-          </table>
-
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Google Keyword</th>
+                  <th>Autocomplete Pairings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Custom, customised, customise my...</td>
+                  <td>Shoes, t-shirt, stickers, passport cover, phone, car, laptop, socks, PS4/Xbox controller</td>
+                </tr>
+                <tr>
+                  <td>Personalise, personalised, personalise my...</td>
+                  <td>Gifts, baby gifts, mugs, phone case, medicine, <strong>necklace</strong>, keyring, football boots</td>
+                </tr>
+                <tr>
+                  <td>Design (or make) my (your) own...</td>
+                  <td>Clothes, shoes, hoodie, t-shirt, logo, house, <strong>ring, engagement ring,</strong> cap, furniture</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <br>
 
           <p>
@@ -116,42 +117,44 @@ is-one-quarter<template>
 
           <br>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Search term</th>
-                <th>Moz Keyword Explorer</th>
-                <th>Google Keyword Planner</th>
-                <th>Estimated ranking difficulty</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Jewellery</td>
-                <td>~100K</td>
-                <td>~300K</td>
-                <td>Very high</td>
-              </tr>
-              <tr>
-                <td>Custom, customise, customised</td>
-                <td>~800</td>
-                <td>~2.5K</td>
-                <td>Low (Etsy listings, small competitors)</td>
-              </tr>
-              <tr>
-                <td>Personal, personalise, personalised</td>
-                <td>~3.5K</td>
-                <td>~15K</td>
-                <td>Medium (Etsy listings, large competitors)</td>
-              </tr>
-              <tr>
-                <td>Design (or make) your own</td>
-                <td>~200</td>
-                <td>Limited</td>
-                <td>Very low</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Search term</th>
+                  <th>Moz Keyword Explorer</th>
+                  <th>Google Keyword Planner</th>
+                  <th>Estimated ranking difficulty</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jewellery</td>
+                  <td>~100K</td>
+                  <td>~300K</td>
+                  <td>Very high</td>
+                </tr>
+                <tr>
+                  <td>Custom, customise, customised</td>
+                  <td>~800</td>
+                  <td>~2.5K</td>
+                  <td>Low (Etsy listings, small competitors)</td>
+                </tr>
+                <tr>
+                  <td>Personal, personalise, personalised</td>
+                  <td>~3.5K</td>
+                  <td>~15K</td>
+                  <td>Medium (Etsy listings, large competitors)</td>
+                </tr>
+                <tr>
+                  <td>Design (or make) your own</td>
+                  <td>~200</td>
+                  <td>Limited</td>
+                  <td>Very low</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <br>
 
@@ -332,7 +335,7 @@ is-one-quarter<template>
 
           <article class="media">
             <div class="media-left is-quarter">
-              <h5>Enthusiast</h5>
+              <h5 style="word-break: break-all;">Enthusiast</h5>
               <p><i>'Buyer persona'</i></p>
             </div>
             <div class="media-content">
@@ -521,89 +524,91 @@ is-one-quarter<template>
 
           <br>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Expressiveness</th>
-                <th>Implementation</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Radial array</td>
-                <td>Define a source geometry and choose how many times it repeats around a circle of a certain radius</td>
-                <td>4</td>
-                <td>5</td>
-                <td>9</td>
-              </tr>
-              <tr>
-                <td>Control geometry</td>
-                <td>Warp a source geometry by moving the vertices of a control geometry. The control shape is typically much simpler than the source</td>
-                <td>5</td>
-                <td>3</td>
-                <td>8</td>
-              </tr>
-              <tr>
-                <td>Linear array</td>
-                <td>Define a source geometry and choose how many times it repeats in an xy grid</td>
-                <td>2</td>
-                <td>5</td>
-                <td>7</td>
-              </tr>
-              <tr>
-                <td>Curve based bend</td>
-                <td>Bend a source geometry by manipulating the anchors of a bezier curve</td>
-                <td>3</td>
-                <td>4</td>
-                <td>7</td>
-              </tr>
-              <tr>
-                <td><span>On-surface</span> ‘stamps’</td>
-                <td>Decorate a curved or flat surface with smaller objects that ‘stick’ to it, ensuring contact</td>
-                <td>4</td>
-                <td>3</td>
-                <td>7</td>
-              </tr>
-              <tr>
-                <td>Boolean operations</td>
-                <td>Create new, more complex geometries by joining or subtracting source geometries</td>
-                <td>3</td>
-                <td>3</td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <td>Sinusoidal warp</td>
-                <td>Apply a sinusoidal waveform to a source geometry</td>
-                <td>2</td>
-                <td>4</td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <td>Extrude profile</td>
-                <td>Draw a flat sketch and extrude its boundary to form a 3D object</td>
-                <td>4</td>
-                <td>2</td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <td>Sculpt submesh</td>
-                <td>Take a blob and push or pull the surface, sculpting like clay</td>
-                <td>5</td>
-                <td>1</td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <td>Polar warp</td>
-                <td>‘Spin’ the vertices of a geometry around an arbitrary axis</td>
-                <td>2</td>
-                <td>3</td>
-                <td>5</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Expressiveness</th>
+                  <th>Implementation</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Radial array</td>
+                  <td>Define a source geometry and choose how many times it repeats around a circle of a certain radius</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>Control geometry</td>
+                  <td>Warp a source geometry by moving the vertices of a control geometry. The control shape is typically much simpler than the source</td>
+                  <td>5</td>
+                  <td>3</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>Linear array</td>
+                  <td>Define a source geometry and choose how many times it repeats in an xy grid</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>Curve based bend</td>
+                  <td>Bend a source geometry by manipulating the anchors of a bezier curve</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td><span>On-surface</span> ‘stamps’</td>
+                  <td>Decorate a curved or flat surface with smaller objects that ‘stick’ to it, ensuring contact</td>
+                  <td>4</td>
+                  <td>3</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>Boolean operations</td>
+                  <td>Create new, more complex geometries by joining or subtracting source geometries</td>
+                  <td>3</td>
+                  <td>3</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>Sinusoidal warp</td>
+                  <td>Apply a sinusoidal waveform to a source geometry</td>
+                  <td>2</td>
+                  <td>4</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>Extrude profile</td>
+                  <td>Draw a flat sketch and extrude its boundary to form a 3D object</td>
+                  <td>4</td>
+                  <td>2</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>Sculpt submesh</td>
+                  <td>Take a blob and push or pull the surface, sculpting like clay</td>
+                  <td>5</td>
+                  <td>1</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>Polar warp</td>
+                  <td>‘Spin’ the vertices of a geometry around an arbitrary axis</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <br>
 
@@ -715,32 +720,34 @@ is-one-quarter<template>
 
           <br>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Observation</th>
-                <th>Remedy</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>“These messages just get in my way” Error messages (further discussion below) broke the creative flow and led to a frustrating experience</td>
-                <td>I silenced all error messages until the user enters the eyelet mode for the first time, thereby signalling a desire to finish the necklace and checkout. It’s at this point that the messages actually become useful</td>
-              </tr>
-              <tr>
-                <td>“I wish I could go back to the way I had it before”</td>
-                <td>I implemented an undo feature and reorganised the interface to prominently accommodate the button</td>
-              </tr>
-              <tr>
-                <td>“I have no idea what size it is”</td>
-                <td>This is a problem common to all 3D design software. I added a subtle ruler to the interface and an introductory animation sequence, showing the pendant in context with a chain</td>
-              </tr>
-              <tr>
-                <td>“The first thing I wanted to do was push all the sliders to maximum” In some cases testers created the largest possible pendant</td>
-                <td>This signalled the need for another error condition - where the pendant design is unreasonably large - both too heavy to wear and very expensive. I also tried shrinking the design area but this felt constricting</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Observation</th>
+                  <th>Remedy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>“These messages just get in my way” Error messages (further discussion below) broke the creative flow and led to a frustrating experience</td>
+                  <td>I silenced all error messages until the user enters the eyelet mode for the first time, thereby signalling a desire to finish the necklace and checkout. It’s at this point that the messages actually become useful</td>
+                </tr>
+                <tr>
+                  <td>“I wish I could go back to the way I had it before”</td>
+                  <td>I implemented an undo feature and reorganised the interface to prominently accommodate the button</td>
+                </tr>
+                <tr>
+                  <td>“I have no idea what size it is”</td>
+                  <td>This is a problem common to all 3D design software. I added a subtle ruler to the interface and an introductory animation sequence, showing the pendant in context with a chain</td>
+                </tr>
+                <tr>
+                  <td>“The first thing I wanted to do was push all the sliders to maximum” In some cases testers created the largest possible pendant</td>
+                  <td>This signalled the need for another error condition - where the pendant design is unreasonably large - both too heavy to wear and very expensive. I also tried shrinking the design area but this felt constricting</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <br class="extra">
 
@@ -788,28 +795,30 @@ is-one-quarter<template>
             “Minimise the technical overhead of storing personal and payment details by using third-party services”
           </p>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Experience</th>
-                <th style="width: 50%;">Solution</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Unity would appear a natural choice of 3D framework. However, it’s not free and increases the complexity of the frontend build chain</td>
-                <td>Three.js is less fully-featured but perfectly serviceable for a simple 3D interface</td>
-              </tr>
-              <tr>
-                <td>Different 3D frameworks powering the frontend and backend processing can lead to duplicated work and discrepancies between what the user sees and what is actually manufactured</td>
-                <td>Three.js can run the same code in the browser and on a Node.js server</td>
-              </tr>
-              <tr>
-                <td>Hosting websites and backend processes on physical infrastructure requires constant maintenance</td>
-                <td>Node.js / Express server on cloud infrastructure (Heroku)</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Experience</th>
+                  <th style="width: 50%;">Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Unity would appear a natural choice of 3D framework. However, it’s not free and increases the complexity of the frontend build chain</td>
+                  <td>Three.js is less fully-featured but perfectly serviceable for a simple 3D interface</td>
+                </tr>
+                <tr>
+                  <td>Different 3D frameworks powering the frontend and backend processing can lead to duplicated work and discrepancies between what the user sees and what is actually manufactured</td>
+                  <td>Three.js can run the same code in the browser and on a Node.js server</td>
+                </tr>
+                <tr>
+                  <td>Hosting websites and backend processes on physical infrastructure requires constant maintenance</td>
+                  <td>Node.js / Express server on cloud infrastructure (Heroku)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <br class="extra">
 
@@ -817,42 +826,44 @@ is-one-quarter<template>
             I chose to upgrade and extend the prototype toolchain for production:
           </p>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Prototyping</th>
-                <th>Production</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>WebGL framework</td>
-                <td>Three.js</td>
-                <td>Three.js</td>
-              </tr>
-              <tr>
-                <td>Backend server</td>
-                <td>Harp.js</td>
-                <td>Node.js / Express / MongoDB</td>
-              </tr>
-              <tr>
-                <td>UI framework</td>
-                <td>Guify</td>
-                <td>Angular 2+ (Typescript)</td>
-              </tr>
-              <tr>
-                <td>CSS framework</td>
-                <td>None</td>
-                <td>Bulma</td>
-              </tr>
-              <tr>
-                <td>Email</td>
-                <td>None</td>
-                <td>Nodemailer / Sendgrid</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Prototyping</th>
+                  <th>Production</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>WebGL framework</td>
+                  <td>Three.js</td>
+                  <td>Three.js</td>
+                </tr>
+                <tr>
+                  <td>Backend server</td>
+                  <td>Harp.js</td>
+                  <td>Node.js / Express / MongoDB</td>
+                </tr>
+                <tr>
+                  <td>UI framework</td>
+                  <td>Guify</td>
+                  <td>Angular 2+ (Typescript)</td>
+                </tr>
+                <tr>
+                  <td>CSS framework</td>
+                  <td>None</td>
+                  <td>Bulma</td>
+                </tr>
+                <tr>
+                  <td>Email</td>
+                  <td>None</td>
+                  <td>Nodemailer / Sendgrid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <div class="figure-container">
             <figure class="image is-5by4 single-image">

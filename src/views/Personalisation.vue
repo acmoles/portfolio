@@ -117,114 +117,116 @@
 
         <br>
 
-        <table class="table">
-          <thead>
-            <tr>
-              <th>
-                <p>Theme</p>
-              </th>
-              <th>
-                <p>Description</p>
-              </th>
-              <th>
-                <p>Impact</p>
-              </th>
-              <th>
-                <p>Ease</p>
-              </th>
-              <th>
-                <p>Total</p>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <p>Flexibility</p>
-              </td>
-              <td>
-                <p>Subscription plans with different delivery frequencies and craft quantities</p>
-              </td>
-              <td>
-                <p>9</p>
-              </td>
-              <td>
-                <p>3</p>
-              </td>
-              <td>
-                <p>12</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Personalisation</p>
-              </td>
-              <td>
-                <p>Choice and preferences have an impact on the subscription experience</p>
-              </td>
-              <td>
-                <p>8</p>
-              </td>
-              <td>
-                <p>2</p>
-              </td>
-              <td>
-                <p>10</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Flexibility</p>
-              </td>
-              <td>
-                <p>Prepaid and time limited subscriptions</p>
-              </td>
-              <td>
-                <p>7</p>
-              </td>
-              <td>
-                <p>2</p>
-              </td>
-              <td>
-                <p>9</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Flexibility</p>
-              </td>
-              <td>
-                <p>Granular control over deliveries (pause, skip, subscription holidays, specific days or weeks)</p>
-              </td>
-              <td>
-                <p>5</p>
-              </td>
-              <td>
-                <p>2</p>
-              </td>
-              <td>
-                <p>7</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Flexibility</p>
-              </td>
-              <td>
-                <p>Improved gifting experience for giver and receiver</p>
-              </td>
-              <td>
-                <p>6</p>
-              </td>
-              <td>
-                <p>1</p>
-              </td>
-              <td>
-                <p>7</p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  <p>Theme</p>
+                </th>
+                <th>
+                  <p>Description</p>
+                </th>
+                <th>
+                  <p>Impact</p>
+                </th>
+                <th>
+                  <p>Ease</p>
+                </th>
+                <th>
+                  <p>Total</p>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <p>Flexibility</p>
+                </td>
+                <td>
+                  <p>Subscription plans with different delivery frequencies and craft quantities</p>
+                </td>
+                <td>
+                  <p>9</p>
+                </td>
+                <td>
+                  <p>3</p>
+                </td>
+                <td>
+                  <p>12</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Personalisation</p>
+                </td>
+                <td>
+                  <p>Choice and preferences have an impact on the subscription experience</p>
+                </td>
+                <td>
+                  <p>8</p>
+                </td>
+                <td>
+                  <p>2</p>
+                </td>
+                <td>
+                  <p>10</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Flexibility</p>
+                </td>
+                <td>
+                  <p>Prepaid and time limited subscriptions</p>
+                </td>
+                <td>
+                  <p>7</p>
+                </td>
+                <td>
+                  <p>2</p>
+                </td>
+                <td>
+                  <p>9</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Flexibility</p>
+                </td>
+                <td>
+                  <p>Granular control over deliveries (pause, skip, subscription holidays, specific days or weeks)</p>
+                </td>
+                <td>
+                  <p>5</p>
+                </td>
+                <td>
+                  <p>2</p>
+                </td>
+                <td>
+                  <p>7</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Flexibility</p>
+                </td>
+                <td>
+                  <p>Improved gifting experience for giver and receiver</p>
+                </td>
+                <td>
+                  <p>6</p>
+                </td>
+                <td>
+                  <p>1</p>
+                </td>
+                <td>
+                  <p>7</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <br>
 
@@ -698,58 +700,60 @@
         <h2>Feedback from internal wireframe testing</h2>
         <p>I used a simple click prototype built from wireframe screens (served from Sketch Cloud) to gather initial impressions from the project team.</p>
 
-        <table>
-          <thead>
-            <tr>
-              <th>
-                <p>Observation</p>
-              </th>
-              <th>
-                <p>Remedy</p>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <p>The age group preference </p>
-                <ul>
-                  <li>The name 'craft challenge' doesn't communicate the intent</li>
-                  <li>What's advanced or junior for a 2 year old isn't the same as for a 7 year old
-                  </li>
-                </ul>
-              </td>
-              <td>
-                <p>I changed the name to 'craft level' and dispensed with the 'Age appropriate' choice, leaving a binary choice between actual age ranges 3-5 and 5-8 years old
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Craft preferences should have an impact on the craft choices we show in the box builder screen</p>
-              </td>
-              <td>
-                <p>I added a preferences filter on the crafts presented in the box builder screen to the project specification</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>We could allow customers to build boxes several months into the future. There should be some way to move backwards and forwards through upcoming boxes.</p>
-              </td>
-              <td>
-                <p>I explored tabbed, paginated and scrolling interfaces in the next iterations</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Testers were unsure whether the craft or add-on they clicked was added to the box, often adding duplicates by mistake</p>
-              </td>
-              <td>
-                <p>I made the 'box contents' interface stick to the screen scroll context, so that the results of actions were always visible, including the price changes</p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <p>Observation</p>
+                </th>
+                <th>
+                  <p>Remedy</p>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <p>The age group preference </p>
+                  <ul>
+                    <li>The name 'craft challenge' doesn't communicate the intent</li>
+                    <li>What's advanced or junior for a 2 year old isn't the same as for a 7 year old
+                    </li>
+                  </ul>
+                </td>
+                <td>
+                  <p>I changed the name to 'craft level' and dispensed with the 'Age appropriate' choice, leaving a binary choice between actual age ranges 3-5 and 5-8 years old
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Craft preferences should have an impact on the craft choices we show in the box builder screen</p>
+                </td>
+                <td>
+                  <p>I added a preferences filter on the crafts presented in the box builder screen to the project specification</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>We could allow customers to build boxes several months into the future. There should be some way to move backwards and forwards through upcoming boxes.</p>
+                </td>
+                <td>
+                  <p>I explored tabbed, paginated and scrolling interfaces in the next iterations</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Testers were unsure whether the craft or add-on they clicked was added to the box, often adding duplicates by mistake</p>
+                </td>
+                <td>
+                  <p>I made the 'box contents' interface stick to the screen scroll context, so that the results of actions were always visible, including the price changes</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <br>
 

@@ -79,7 +79,9 @@ export default {
       padding: 4em 1.5em
     .client
       font-weight: 600
-      font-size: 1.5em
+      font-size: 1.1em
+      @media screen and (min-width: $desktop)
+        font-size: 1.5em
     color: $white
     &.grey
       color: $slate

@@ -731,61 +731,66 @@
 
           <h3>Homepage</h3>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Observation</th>
-                <th>Remedy</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><em>“How do I close this?”</em> External testers expected the product details popup modal to have a close button at the top as well as the bottom</td>
-                <td>In addition to the existing close button, I added one at the top of the modal</td>
-              </tr>
-              <tr>
-                <td><em>“I’ll use the menu to learn more”</em> A surprisingly high number of testers attempted to use the navigation menu to gain an understanding of the offering, rather than scrolling. They found the options unsatisfying or confusing</td>
-                <td>I added links to the main navigation, pointing at separate pages that mirrored content from the homepage</td>
-              </tr>
-              <tr>
-                <td>Internal testers requested an always-visible main navigation on desktop (i.e. not behind a burger button)</td>
-                <td>I had avoided this for expediency but quickly realised I wasn’t meeting an important user expectation for desktop website navigation</td>
-              </tr>
-              <tr>
-                <td>The view rate for the toucanBox promotional video did not increase, even though I had increased the prominence of the video button</td>
-                <td>I didn’t want to increase the prominence of the video button further because it risked competing for attention with the main call to action. For desktop, I added an autoplay looping montage video cut from the promotional video footage (to be loaded asynchronously)</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Observation</th>
+                  <th>Remedy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><em>“How do I close this?”</em> External testers expected the product details popup modal to have a close button at the top as well as the bottom</td>
+                  <td>In addition to the existing close button, I added one at the top of the modal</td>
+                </tr>
+                <tr>
+                  <td><em>“I’ll use the menu to learn more”</em> A surprisingly high number of testers attempted to use the navigation menu to gain an understanding of the offering, rather than scrolling. They found the options unsatisfying or confusing</td>
+                  <td>I added links to the main navigation, pointing at separate pages that mirrored content from the homepage</td>
+                </tr>
+                <tr>
+                  <td>Internal testers requested an always-visible main navigation on desktop (i.e. not behind a burger button)</td>
+                  <td>I had avoided this for expediency but quickly realised I wasn’t meeting an important user expectation for desktop website navigation</td>
+                </tr>
+                <tr>
+                  <td>The view rate for the toucanBox promotional video did not increase, even though I had increased the prominence of the video button</td>
+                  <td>I didn’t want to increase the prominence of the video button further because it risked competing for attention with the main call to action. For desktop, I added an autoplay looping montage video cut from the promotional video footage (to be loaded asynchronously)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h3>Funnel</h3>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Observation</th>
-                <th>Remedy</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><em>“I expected siblings would always cost £1 extra?”</em> Testers reported that the messaging regarding the trial offer for siblings (additional children) was unclear. The existing copy could imply that each additional child would always cost £1, not just for the first delivery</td>
-                <td>I worked with our copywriter to address this</td>
-              </tr>
-              <tr>
-                <td><em>“I can’t be sure how much I’m paying.”</em> Testers mentioned that it felt frightening to click the ‘authorise payment’ button on the details form</td>
-                <td>I added a mini order summary next to the payment/paypal button titled 'What You're Paying Today'</td>
-              </tr>
-              <tr>
-                <td><em>“If I wanted to send toucanBox to two different addresses, how would I do that?”</em> It became clear that our system was not well suited to gifters. The copy, interface and even the back-end data model was not tailored to their needs</td>
-                <td>This was good feedback but the issue was out of the scope of this project. I made sure it was communicated to the Leadership Team and suggested a future project to resolve the issue.</td>
-              </tr>
-              <tr>
-                <td><em>“I don’t remember making a password, now I need one to log in?”</em> We were aware that by not requiring a password we were adding to customer service volume as approximately 15% of trialists didn’t make a password after completing sign up</td>
-                <td>I recognised that detailed analysis would be needed to understand the conversion rate impact of moving the password field into the details form. In this project I decided not to change the password field location. However, I added a sister link to “forgotten your password?” on the login page - “Not created a password yet?”</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Observation</th>
+                  <th>Remedy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><em>“I expected siblings would always cost £1 extra?”</em> Testers reported that the messaging regarding the trial offer for siblings (additional children) was unclear. The existing copy could imply that each additional child would always cost £1, not just for the first delivery</td>
+                  <td>I worked with our copywriter to address this</td>
+                </tr>
+                <tr>
+                  <td><em>“I can’t be sure how much I’m paying.”</em> Testers mentioned that it felt frightening to click the ‘authorise payment’ button on the details form</td>
+                  <td>I added a mini order summary next to the payment/paypal button titled 'What You're Paying Today'</td>
+                </tr>
+                <tr>
+                  <td><em>“If I wanted to send toucanBox to two different addresses, how would I do that?”</em> It became clear that our system was not well suited to gifters. The copy, interface and even the back-end data model was not tailored to their needs</td>
+                  <td>This was good feedback but the issue was out of the scope of this project. I made sure it was communicated to the Leadership Team and suggested a future project to resolve the issue.</td>
+                </tr>
+                <tr>
+                  <td><em>“I don’t remember making a password, now I need one to log in?”</em> We were aware that by not requiring a password we were adding to customer service volume as approximately 15% of trialists didn’t make a password after completing sign up</td>
+                  <td>I recognised that detailed analysis would be needed to understand the conversion rate impact of moving the password field into the details form. In this project I decided not to change the password field location. However, I added a sister link to “forgotten your password?” on the login page - “Not created a password yet?”</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <br>
           <p>
             Shortly after the conclusion of this phase of testing, we introduced a £1 delivery fee for most trialists (previously totally free) - this allowed me to simplify our messaging by providing a natural reason for us to require payment information at sign up.

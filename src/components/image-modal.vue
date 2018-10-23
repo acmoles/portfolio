@@ -63,7 +63,6 @@ export default {
 
   .v--modal-top-right
     z-index: 99
-    top: -0.05em !important
 
   .exit-modal
     background: $steel

@@ -230,144 +230,146 @@
 
           <br>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th>
-                  <p>Digital content sources for children aged 3 - 8</p>
-                </th>
-                <th>
-                  <p>Age range</p>
-                </th>
-                <th>
-                  <p>Play patterns</p>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <p>Cbeebies</p>
-                </td>
-                <td>
-                  <p>2-6</p>
-                </td>
-                <td>
-                  <p>Creative, Learning, Visual stories</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Cowly Owl</p>
-                </td>
-                <td>
-                  <p>3-6</p>
-                </td>
-                <td>
-                  <p>Creative, Story / Adventure, Exploration, Learning, Cooperative</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Diy.org</p>
-                </td>
-                <td>
-                  <p>6-16</p>
-                </td>
-                <td>
-                  <p>Creative, learning, Exploration, Logic, Cooperative, Build / Manage</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Fox and the Sheep</p>
-                </td>
-                <td>
-                  <p>3-6 and 6-8</p>
-                </td>
-                <td>
-                  <p>Creative, Story / Adventure, Exploration, Roleplay, Nurture, Visual stories, Build / Manage, Rhythm</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>IDEO toy lab</p>
-                </td>
-                <td>
-                  <p>3-6</p>
-                </td>
-                <td>
-                  <p>Creative, Roleplay, Rhythm</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Sago Mini</p>
-                </td>
-                <td>
-                  <p>3-6</p>
-                </td>
-                <td>
-                  <p>Creative, Learning, Exploration, Rhythm, Roleplay</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Seedling</p>
-                </td>
-                <td>
-                  <p>2-12</p>
-                </td>
-                <td>
-                  <p>Creative, Learning, Nurture, Roleplay</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Tinybop</p>
-                </td>
-                <td>
-                  <p>4-8</p>
-                </td>
-                <td>
-                  <p>Creative, Exploration, Learning, Build / Manage</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>TocaBoca</p>
-                </td>
-                <td>
-                  <p>3-8</p>
-                </td>
-                <td>
-                  <p>Creative, Story / Adventure, Exploration, Roleplay, Cooperative, Experimental, Logic, Rhythm, Build / Manage, Racing</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Yatatoy</p>
-                </td>
-                <td>
-                  <p>2-6</p>
-                </td>
-                <td>
-                  <p>Rhythm, Creative</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>youTube Kids</p>
-                </td>
-                <td>
-                  <p>2-8</p>
-                </td>
-                <td>
-                  <p>Visual stories, Story / Adventure</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>
+                    <p>Digital content sources for children aged 3 - 8</p>
+                  </th>
+                  <th>
+                    <p>Age range</p>
+                  </th>
+                  <th>
+                    <p>Play patterns</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <p>Cbeebies</p>
+                  </td>
+                  <td>
+                    <p>2-6</p>
+                  </td>
+                  <td>
+                    <p>Creative, Learning, Visual stories</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Cowly Owl</p>
+                  </td>
+                  <td>
+                    <p>3-6</p>
+                  </td>
+                  <td>
+                    <p>Creative, Story / Adventure, Exploration, Learning, Cooperative</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Diy.org</p>
+                  </td>
+                  <td>
+                    <p>6-16</p>
+                  </td>
+                  <td>
+                    <p>Creative, learning, Exploration, Logic, Cooperative, Build / Manage</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Fox and the Sheep</p>
+                  </td>
+                  <td>
+                    <p>3-6 and 6-8</p>
+                  </td>
+                  <td>
+                    <p>Creative, Story / Adventure, Exploration, Roleplay, Nurture, Visual stories, Build / Manage, Rhythm</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>IDEO toy lab</p>
+                  </td>
+                  <td>
+                    <p>3-6</p>
+                  </td>
+                  <td>
+                    <p>Creative, Roleplay, Rhythm</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Sago Mini</p>
+                  </td>
+                  <td>
+                    <p>3-6</p>
+                  </td>
+                  <td>
+                    <p>Creative, Learning, Exploration, Rhythm, Roleplay</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Seedling</p>
+                  </td>
+                  <td>
+                    <p>2-12</p>
+                  </td>
+                  <td>
+                    <p>Creative, Learning, Nurture, Roleplay</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Tinybop</p>
+                  </td>
+                  <td>
+                    <p>4-8</p>
+                  </td>
+                  <td>
+                    <p>Creative, Exploration, Learning, Build / Manage</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>TocaBoca</p>
+                  </td>
+                  <td>
+                    <p>3-8</p>
+                  </td>
+                  <td>
+                    <p>Creative, Story / Adventure, Exploration, Roleplay, Cooperative, Experimental, Logic, Rhythm, Build / Manage, Racing</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Yatatoy</p>
+                  </td>
+                  <td>
+                    <p>2-6</p>
+                  </td>
+                  <td>
+                    <p>Rhythm, Creative</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>youTube Kids</p>
+                  </td>
+                  <td>
+                    <p>2-8</p>
+                  </td>
+                  <td>
+                    <p>Visual stories, Story / Adventure</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <br class="extra">
 
@@ -396,58 +398,60 @@
 
           <br>
 
-          <table class="table is-striped">
-            <thead>
-              <tr>
-                <th>
-                  <p>Method</p>
-                </th>
-                <th>
-                  <p>Description</p>
-                </th>
-                <th>
-                  <p>Pros / cons</p>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <p>toucanBox mobile app</p>
-                </td>
-                <td>
-                  <p>Content relevant to the current box is pushed to the app</p>
-                </td>
-                <td>
-                  <ul class="plus-list">
-                    <li>Easy to use</li>
-                    <li class="minus">High investment</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>URL or QR code printed in the box</p>
-                </td>
-                <td>
-                  <p>There are three possible print locations:</p>
-                  <ol>
-                    <li>The personalised in-box message (added at the address labelling stage)</li>
-                    <li>Activity magazine / instructions (added during assembly, printed in large numbers)</li>
-                    <li>Additional paper insert (added during assembly)</li>
-                  </ol>
-                  <br>
-                </td>
-                <td>
-                  <ul class="plus-list">
-                    <li class="minus">Typing a printed URL is tiresome (friction)</li>
-                    <li>A QR code could address this</li>
-                    <li>Low investment</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table is-striped">
+              <thead>
+                <tr>
+                  <th>
+                    <p>Method</p>
+                  </th>
+                  <th>
+                    <p>Description</p>
+                  </th>
+                  <th>
+                    <p>Pros / cons</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <p>toucanBox mobile app</p>
+                  </td>
+                  <td>
+                    <p>Content relevant to the current box is pushed to the app</p>
+                  </td>
+                  <td>
+                    <ul class="plus-list">
+                      <li>Easy to use</li>
+                      <li class="minus">High investment</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>URL or QR code printed in the box</p>
+                  </td>
+                  <td>
+                    <p>There are three possible print locations:</p>
+                    <ol>
+                      <li>The personalised in-box message (added at the address labelling stage)</li>
+                      <li>Activity magazine / instructions (added during assembly, printed in large numbers)</li>
+                      <li>Additional paper insert (added during assembly)</li>
+                    </ol>
+                    <br>
+                  </td>
+                  <td>
+                    <ul class="plus-list">
+                      <li class="minus">Typing a printed URL is tiresome (friction)</li>
+                      <li>A QR code could address this</li>
+                      <li>Low investment</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <br>
 
@@ -723,69 +727,71 @@
             </div>
           </div>
 
-          <table class="table">
-            <thead>
-              <tr>
-                <th>
-                  <p>Observation</p>
-                </th>
-                <th>
-                  <p>Remedy</p>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <p><em>"My Toucanoo is called Wendy"</em> Many children named their Toucanoos, even if they werent able to write the names</p>
-                </td>
-                <td>
-                  <p>I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p><em>"Theres no skirt!"</em> Several important accessories were clearly missing</p>
-                </td>
-                <td>
-                  <p>I added skirts, wellington boots and several other accessories</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>"<em>I dont want this one</em>" Children wanted to be able to delete accessories</p>
-                </td>
-                <td>
-                  <p>I observed children dragging items off the screen, attempting to delete them, which offered a natural interaction for this feature</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Certain types of accessory like hats, clothes and shoes quickly cluttered the screen and didnt make sense out of their intended positions</p>
-                </td>
-                <td>
-                  <p>I made new placements in specific categories (e.g. hair) remove the previous accessory of that type. This proved to be an intuitive limitation</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Parents found it hard to get printing to work. It depended a great deal on the device, configuration and their technical aptitude</p>
-                </td>
-                <td>
-                  <p>I added the possibility of saving directly as a PDF and a printing FAQ page</p>
-                  <p></p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Many adult testers requested that hand-held items move when the hand moves</p>
-                </td>
-                <td>
-                  <p>This feature would require detailed development work and was not essential for testing, so I decided not to include it for the test</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>
+                    <p>Observation</p>
+                  </th>
+                  <th>
+                    <p>Remedy</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <p><em>"My Toucanoo is called Wendy"</em> Many children named their Toucanoos, even if they werent able to write the names</p>
+                  </td>
+                  <td>
+                    <p>I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><em>"Theres no skirt!"</em> Several important accessories were clearly missing</p>
+                  </td>
+                  <td>
+                    <p>I added skirts, wellington boots and several other accessories</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>"<em>I dont want this one</em>" Children wanted to be able to delete accessories</p>
+                  </td>
+                  <td>
+                    <p>I observed children dragging items off the screen, attempting to delete them, which offered a natural interaction for this feature</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Certain types of accessory like hats, clothes and shoes quickly cluttered the screen and didnt make sense out of their intended positions</p>
+                  </td>
+                  <td>
+                    <p>I made new placements in specific categories (e.g. hair) remove the previous accessory of that type. This proved to be an intuitive limitation</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Parents found it hard to get printing to work. It depended a great deal on the device, configuration and their technical aptitude</p>
+                  </td>
+                  <td>
+                    <p>I added the possibility of saving directly as a PDF and a printing FAQ page</p>
+                    <p></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Many adult testers requested that hand-held items move when the hand moves</p>
+                  </td>
+                  <td>
+                    <p>This feature would require detailed development work and was not essential for testing, so I decided not to include it for the test</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <br>
 
