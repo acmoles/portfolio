@@ -758,7 +758,7 @@
         <br class="extra">
 
         <div class="figure-container">
-          <figure class="image is-2by1 single-image zoomable" @click="showImage('./img/projects/personalisation/High-fidelity-sketching.png', 'is-2by1')">
+          <figure class="image is-16by9 single-image zoomable" @click="showImage('./img/projects/personalisation/High-fidelity-sketching.png', 'is-16by9')">
             <img class="lazyload" data-src="./img/projects/personalisation/High-fidelity-sketching.png">
             <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
           </figure>
