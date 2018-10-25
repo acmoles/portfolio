@@ -755,6 +755,17 @@
           </table>
         </div>
 
+        <br class="extra">
+
+        <div class="figure-container">
+          <figure class="image is-2by1 single-image zoomable" @click="showImage('./img/projects/personalisation/High-fidelity-sketching.png', 'is-2by1')">
+            <img class="lazyload" data-src="./img/projects/personalisation/High-fidelity-sketching.png">
+            <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
+          </figure>
+          <figcaption>
+          </figcaption>
+        </div>
+
         <br>
 
         <h2>Work in progress</h2>
@@ -767,6 +778,24 @@
         </p>
 
         <p>We specified a rudimentary test, which would be manually fulfilled, avoiding the need for backend engineering. This involved A/B testing a craft choice interface at the end of sign up until the desired number of 200 testers had been reached.</p>
+
+        <div class="columns" style="margin-bottom: 0;">
+          <div class="column">
+            <figure class="image is-1by1">
+              <img class="lazyload" data-src="./img/projects/personalisation/user-testing-1.jpg">
+            </figure>
+          </div>
+          <div class="column">
+            <figure class="image is-1by1">
+              <img class="lazyload" data-src="./img/projects/personalisation/user-testing-2.jpg">
+            </figure>
+          </div>
+          <div class="column">
+            <figure class="image is-1by1">
+              <img class="lazyload" data-src="./img/projects/personalisation/user-testing-3.jpg">
+            </figure>
+          </div>
+        </div>
 
         <h3>Prototyping continues</h3>
         <p>The results of the MVP test are pending, prototyping continued in the meantime. Below is a preview of a high fidelity interactive prototype I created for further user testing.</p>
@@ -791,7 +820,7 @@
           </div>
         </div>
         <div class="column is-three-quarters">
-          <figure class="image is-16by9"><img class="lazyload" data-src="/img/project-presentations/combined_personalisation.png"></figure>
+          <figure class="image is-16by9"><img class="lazyload" data-src="/img/project-presentations/combined_personalisation2.png"></figure>
         </div>
       </div>
     </div>
