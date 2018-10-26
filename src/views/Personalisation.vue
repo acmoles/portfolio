@@ -763,6 +763,7 @@
             <button class="button white-button is-rounded image-zoomer" aria-haspopup="true"><span class="icon is-small"><i class="icon-zoom-in full-opacity"></i></span></button>
           </figure>
           <figcaption>
+            Moving into high fidelity sketching to test the concept with users
           </figcaption>
         </div>
 
