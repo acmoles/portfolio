@@ -202,4 +202,5 @@ export default {
         padding: 1em
       @media screen and (min-width: $fullhd)
         padding: 3em
+        padding-top: 1em
 </style>
