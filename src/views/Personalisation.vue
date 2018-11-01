@@ -677,7 +677,7 @@
     </div>
 
     <div class="page-glass-divider">
-      <h1>Production</h1>
+      <h1>Prototyping</h1>
     </div>
 
     <div class="page-glass-section last-section">
