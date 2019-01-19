@@ -230,7 +230,7 @@
       <div class="page-glass-section">
         <div class="content">
           <h2>Analysis</h2>
-          <p>
+          <!-- <p>
             Based on these insights and a study of similar websites, I mapped the pros and cons of our homepage and sign up flow.
             I also spoke with toucanBox’s previous freelance design and development team.
             Their feedback is incorporated in the analysis.
@@ -244,9 +244,9 @@
             <figcaption>
               Pros and cons of the four pre-goal funnel stages; landing page, product choice, details form and review.
             </figcaption>
-          </div>
+          </div> -->
 
-          <br>
+          <!-- <br> -->
 
           <div class="figure-container">
             <figure class="image is-16by9 single-image zoomable" @click="showImage('./img/projects/onboarding/Journey.png', 'is-16by9')">
