@@ -19,9 +19,8 @@
           <p>
             <strong>I help companies build useful and pleasing products.</strong> I use the design process to bring clarity to complex questions. I am determined to create products that promote positive relationships between people, technology and the environment.
           </p>
-          <p class="pullout-quote is-left">"I make stuff to learn"</p>
           <p>
-            To find the right opportunities, I employ user research, market research and data analysis. I work alongside developers, speaking their language, to ensure products ship with the highest possible level of polish.
+            To find the right opportunities, I employ user research, market research and data analysis. I build prototypes to test hypotheses. I work alongside developers, speaking their language, to ensure products ship with the highest possible level of polish.
           </p>
           <p>
             I see the role of product design as bridging the gap between the business strategy, the technology powering it and the customers it serves. It’s a combination of agile methodologies, lean startup practice and human-centred design.
