@@ -140,7 +140,7 @@ export default {
     position: relative
     top: -3.5em
   .title
-    font-size: 1.5em
+    font-size: 1.35em
     margin-top: 0.25em
 
   .subtitle
