@@ -290,7 +290,7 @@
     </div>
 
     <div class="page-glass-divider">
-      <h1>Definition</h1>
+      <h1 id="definition">Definition</h1>
     </div>
 
     <div class="page-glass-section">
@@ -357,13 +357,13 @@
     </div>
 
     <div class="page-glass-divider">
-      <h1>Iteration</h1>
+      <h1 id="iteration">Iteration</h1>
     </div>
 
     <div class="page-glass-section">
 
       <div class="content">
-        <h2>Ideation</h2>
+        <h2 id="ideation">Ideation</h2>
         <h3>What can be personalised?</h3>
         <p>Personalisation had been a topic of discussion for some time at toucanBox, in a range of projects and contexts. I employed two strategies to collate our ideas: brainstorming with representatives from each team and reviewing existing project specifications
           and documents.
@@ -677,7 +677,7 @@
     </div>
 
     <div class="page-glass-divider">
-      <h1>Prototyping</h1>
+      <h1 id="prototyping">Prototyping</h1>
     </div>
 
     <div class="page-glass-section last-section">

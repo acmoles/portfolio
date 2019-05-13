@@ -30,7 +30,7 @@
       </div>
 
       <div class="page-glass-divider is-borderless">
-        <h1>Discovery</h1>
+        <h1 id="discovery">Discovery</h1>
       </div>
 
       <div class="page-glass-section">
@@ -60,7 +60,7 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Definition</h1>
+        <h1 id="definition">Definition</h1>
       </div>
 
       <div class="page-glass-section">
@@ -163,7 +163,7 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Iteration</h1>
+        <h1 id="iteration">Iteration</h1>
       </div>
 
       <div class="page-glass-section">
@@ -267,7 +267,7 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Production</h1>
+        <h1 id="production">Production</h1>
       </div>
 
       <div class="page-glass-section">
@@ -330,7 +330,7 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Evaluation</h1>
+        <h1 id="evaluation">Evaluation</h1>
       </div>
 
       <div class="page-glass-section last-section">

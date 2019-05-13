@@ -40,7 +40,7 @@ is-one-quarter<template>
       </div>
 
       <div class="page-glass-divider is-borderless">
-        <h1>Discovery</h1>
+        <h1 id="discovery">Discovery</h1>
       </div>
 
       <div class="page-glass-section">
@@ -274,7 +274,7 @@ is-one-quarter<template>
       </div>
 
       <div class="page-glass-divider">
-        <h1>Definition</h1>
+        <h1 id="definition">Definition</h1>
       </div>
 
       <div class="page-glass-section last-section">
@@ -306,7 +306,7 @@ is-one-quarter<template>
 
           <br class="extra">
 
-          <h2>Story</h2>
+          <h2 id="story">Story</h2>
 
           <p>
             Qualitative interviews suggested two main customer personas: gifters and enthusiasts. In some cases customers could be both.
@@ -504,13 +504,13 @@ is-one-quarter<template>
       </div>
 
       <div class="page-glass-divider">
-        <h1>Iteration</h1>
+        <h1 id="iteration">Iteration</h1>
       </div>
 
       <div class="page-glass-section">
 
         <div class="content">
-          <h2>Ideation</h2>
+          <h2 id="ideation">Ideation</h2>
 
           <p>
             I assembled a list of 3D design tools for consideration in the context of jewellery customisation, further expanding it through conversations with fellow designers.
@@ -618,7 +618,7 @@ is-one-quarter<template>
 
           <br class="extra">
 
-          <h2>Prototyping</h2>
+          <h2 id="prototyping">Prototyping</h2>
 
           <p>
             At first I was unsure what would result from combining these two tools. Blender, which has a built in radial array, proved useful for experimentation. Blender’s animation rig could approximate the functionality of a control geometry, where bones acted as control vertices. I tried several configurations, settling on a six pointed diamond-like shape. A future enhancement could offer the user a range of control geometries (or cages to manipulate more complex geometry such as 3D scans).
@@ -633,7 +633,7 @@ is-one-quarter<template>
             </figcaption>
           </div>
 
-          <p>
+          <p id="testing">
             In order to test with users, I built a rough yet fully functional frontend prototype. I also took the opportunity to explore the possibility of Three.js as a library for simplifying the 3D graphics API in the web browser.
           </p>
 
@@ -781,7 +781,7 @@ is-one-quarter<template>
       </div>
 
       <div class="page-glass-divider">
-        <h1>Production</h1>
+        <h1 id="production">Production</h1>
       </div>
 
       <div class="page-glass-section">
@@ -865,7 +865,7 @@ is-one-quarter<template>
             </table>
           </div>
 
-          <div class="figure-container">
+          <div id="system-diagram" class="figure-container">
             <figure class="image is-5by4 single-image">
               <img class="lazyload" data-src="./img/projects/wesen/System-diagram.png">
             </figure>
@@ -918,7 +918,7 @@ is-one-quarter<template>
       </div>
 
       <div class="page-glass-divider">
-        <h1>Evaluation</h1>
+        <h1 id="evaluation">Evaluation</h1>
       </div>
 
       <div class="page-glass-section last-section">

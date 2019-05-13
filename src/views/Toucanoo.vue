@@ -73,7 +73,7 @@
       </div>
 
       <div class="page-glass-divider is-borderless">
-        <h1>Discovery</h1>
+        <h1 id="discovery">Discovery</h1>
       </div>
 
       <div class="page-glass-section">
@@ -387,7 +387,7 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Definition</h1>
+        <h1 id="definition">Definition</h1>
       </div>
 
       <div class="page-glass-section">
@@ -483,13 +483,13 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Iteration</h1>
+        <h1 id="iteration">Iteration</h1>
       </div>
 
       <div class="page-glass-section">
 
         <div class="content">
-          <h2>Ideation</h2>
+          <h2 id="ideation">Ideation</h2>
           <p>I facilitated a Creative Team brainstorm (including product designers (of the crafts), graphic designers, a copywriter and self-selecting individuals from across the company). We pooled our ideas and sources of inspiration. These ideas broadly split into two themes:</p>
 
 
@@ -615,7 +615,7 @@
 
           <br class="extra">
 
-          <h2>Prototyping</h2>
+          <h2 id="prototyping">Prototyping</h2>
           <p>I built four low-fi prototypes to test in-house with parents and children.</p>
           <br>
           <article class="media">
@@ -810,7 +810,7 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Production</h1>
+        <h1 id="production">Production</h1>
       </div>
 
       <div class="page-glass-section">
@@ -860,7 +860,7 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Evaluation</h1>
+        <h1 id="evaluation">Evaluation</h1>
       </div>
 
       <div class="page-glass-section last-section">

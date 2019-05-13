@@ -94,7 +94,7 @@
       </div>
 
       <div class="page-glass-divider is-borderless">
-        <h1>Discovery</h1>
+        <h1 id="discovery">Discovery</h1>
       </div>
 
       <div class="page-glass-section">
@@ -224,7 +224,7 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Definition</h1>
+        <h1 id="definition">Definition</h1>
       </div>
 
       <div class="page-glass-section">
@@ -317,13 +317,13 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Iteration</h1>
+        <h1 id="iteration">Iteration</h1>
       </div>
 
       <div class="page-glass-section">
 
         <div class="content">
-          <h2>Ideation</h2>
+          <h2 id="ideation">Ideation</h2>
           <h3>Homepage and box information architecture</h3>
           <p>Creating tree views of the homepage and craft boxes helped me to focus discussion on the hierarchy of content, iterate quickly and build consensus among internal stakeholders in the Marketing and Leadership teams.</p>
         </div>
@@ -577,7 +577,7 @@
 
           <br class="extra">
 
-            <h2>Prototyping</h2>
+            <h2 id="prototyping">Prototyping</h2>
           <p>
             I sketched and iterated all sections of the acquisition funnel, applying the new information architecture and improving useability, consistency and visual design.
           </p>
@@ -801,7 +801,7 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Production</h1>
+        <h1 id="production">Production</h1>
       </div>
 
       <div class="page-glass-section">
@@ -852,7 +852,7 @@
       </div>
 
       <div class="page-glass-divider">
-        <h1>Evaluation</h1>
+        <h1 id="evaluation">Evaluation</h1>
       </div>
 
       <div class="page-glass-section last-section">
