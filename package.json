@@ -1,60 +1,36 @@
 {
-  "name": "t",
-  "version": "0.1.0",
-  "private": true,
+  "name": "acmoles.com",
+  "version": "0.2.0",
+  "description": "Portfolio of Anthony Moles",
+  "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev portfolio",
+    "build": "vuepress build portfolio"
   },
-  "dependencies": {
-    "animejs": "^2.2.0",
-    "axios": "^0.18.0",
-    "bulma": "^0.7.1",
-    "lazysizes": "^4.0.4",
-    "pixi-filters": "^2.6.1",
-    "pixi.js": "^4.8.1",
-    "register-service-worker": "^1.0.0",
-    "smoothscroll": "^0.4.0",
-    "vee-validate": "^2.1.0-beta.6",
-    "vue": "^2.5.16",
-    "vue-clipboard2": "^0.2.1",
-    "vue-events": "^3.1.0",
-    "vue-js-modal": "^1.3.26",
-    "vue-loop": "^0.2.6",
-    "vue-router": "^3.0.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acmoles/portfolio.git"
   },
+  "author": "Anthony Moles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acmoles/portfolio/issues"
+  },
+  "homepage": "https://github.com/acmoles/portfolio#readme",
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-beta.15",
-    "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
-    "@vue/cli-plugin-pwa": "^3.0.0-beta.15",
-    "@vue/cli-service": "^3.0.0-beta.15",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.16"
+    "@vuepress/plugin-active-header-links": "^1.0.0-rc.1",
+    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
+    "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
+    "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
+    "@vuepress/plugin-pwa": "^1.0.0-rc.1",
+    "@vuepress/plugin-search": "^1.0.0-rc.1",
+    "autoprefixer": "^9.6.1",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "vuepress": "^1.0.4",
+    "vuepress-plugin-clean-urls": "^1.0.3",
+    "vuepress-plugin-reading-time": "^0.1.1"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "dependencies": {}
 }
