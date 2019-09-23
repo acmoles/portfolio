@@ -1,9 +1,12 @@
 ---
+title: Project 1
 sidebar: auto
 date: 2019-09-11
 prev: ./project1
 next: ./project2
 ---
+
+<ImageHero/>
 
 # Project 1
 

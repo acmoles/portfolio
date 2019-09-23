@@ -28,33 +28,5 @@ module.exports = {
       { text: 'Projects', link: '/projects/' },
       { text: 'External', link: 'https://google.com' },
     ],
-  },
-  plugins: [
-    '@vuepress/nprogress',
-    'vuepress-plugin-reading-time',
-    ['@vuepress/back-to-top', true],
-    ['@vuepress/pwa', {
-      serviceWorker: true,
-      updatePopup: true
-    }],
-    ['@vuepress/active-header-links', {
-      sidebarLinkSelector: '.sidebar-link',
-      headerAnchorSelector: '.header-anchor',
-      headerTopOffset: 120
-    }],
-    ['@vuepress/medium-zoom', true],
-    ['@vuepress/search', {
-       searchMaxSuggestions: 10
-     }],
-    ['clean-urls', {
-       normalSuffix: '/',
-       indexSuffix: '/',
-    }],
-  ],
-  postcss: {
-    plugins: [
-      require('autoprefixer'),
-    ],
-  },
-  evergreen: true,
+  }
 }

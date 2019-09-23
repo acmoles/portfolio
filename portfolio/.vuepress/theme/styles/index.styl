@@ -4,6 +4,8 @@
 @require './arrow'
 @require './wrapper'
 @require './toc'
+@require './nprogress'
+@require './animations'
 
 html, body
   padding 0
@@ -25,7 +27,6 @@ body, html, #app {
   padding-left $sidebarWidth
 
 .navbar
-  position fixed
   z-index 20
   top 0
   left 0
@@ -180,7 +181,7 @@ th, td
   border 1px solid #dfe2e5
   padding .6em 1em
 
-.theme-container
+.content
   &.sidebar-open
     .sidebar-mask
       display: block
@@ -195,7 +196,7 @@ th, td
 
 
 @media (min-width: ($MQMobile + 1px))
-  .theme-container.no-sidebar
+  .content.no-sidebar
     .sidebar
       display none
 

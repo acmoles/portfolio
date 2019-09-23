@@ -1,6 +1,6 @@
 <template>
   <div
-    class="theme-container"
+    class="content"
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd"
@@ -29,20 +29,16 @@
       />
     </Sidebar>
 
-    <Home v-if="$page.frontmatter.home"/>
+    <main class="page">
+      <Content slot-key="top"/>
 
-    <Page
-      v-else
-    >
-      <slot
-        name="page-top"
-        slot="top"
-      />
-      <slot
-        name="page-bottom"
-        slot="bottom"
-      />
-    </Page>
+      <Content/>
+
+      <PageNav/>
+
+      <Content slot-key="bottom"/>
+    </main>
+
     <Footer
       v-if="shouldShowNavbar"
     />
@@ -50,38 +46,37 @@
 </template>
 
 <script>
-import Home from '@theme/components/Home.vue'
+// v-on:content-loaded="onEnlargeText"
 import Navbar from '@theme/components/Navbar.vue'
 import Footer from '@theme/components/Footer.vue'
-import Page from '@theme/components/Page.vue'
+import PageNav from '@theme/components/PageNav.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
 import { resolveSidebarItems } from '../util'
 
 export default {
-  components: { Home, Page, Sidebar, Navbar, Footer },
+  components: { Sidebar, Navbar, Footer, PageNav },
 
   data () {
     return {
-      isSidebarOpen: false
     }
   },
 
   computed: {
+    pageLoadingStatus () {
+      return this.$store.state.pageLoadingStatus
+    },
+
+    sidebarStatus () {
+      return this.$store.state.isSidebarOpen
+    },
+
     shouldShowNavbar () {
-      const { themeConfig } = this.$site
       const { frontmatter } = this.$page
-      if (
-        frontmatter.navbar === false
-        || themeConfig.navbar === false) {
-        return false
+      if (frontmatter.navbar === false) {
+        return frontmatter.navbar
+      } else {
+        return true
       }
-      return (
-        this.$title
-        || themeConfig.logo
-        || themeConfig.repo
-        || themeConfig.nav
-        || this.$themeLocaleConfig.nav
-      )
     },
 
     shouldShowSidebar () {
@@ -107,32 +102,20 @@ export default {
       return [
         {
           'no-navbar': !this.shouldShowNavbar,
-          'sidebar-open': this.isSidebarOpen,
+          'sidebar-open': this.sidebarStatus,
           'no-sidebar': !this.shouldShowSidebar
         },
+        this.pageLoadingStatus,
         userPageClass
       ]
     },
 
-    projects () {
-      return this.$site.pages
-        .filter(x => x.path.startsWith('/projects/'))
-        .sort(
-          (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
-        )
-    },
-
-  },
-
-  mounted () {
-    this.$router.afterEach(() => {
-      this.isSidebarOpen = false
-    })
   },
 
   methods: {
     toggleSidebar (to) {
-      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
+      let status = typeof to === 'boolean' ? to : !this.sidebarStatus
+      this.$store.dispatch('setSidebarStatus', status)
     },
 
     // side swipe
@@ -154,6 +137,33 @@ export default {
         }
       }
     }
+
   }
 }
 </script>
+
+<style lang="stylus">
+
+@require '../styles/wrapper.styl';
+
+.page {
+  padding-bottom: 2rem;
+  display: block;
+}
+
+.content {
+    min-height: 100%;
+    transform: translateY(100vh);
+    animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+    &.revealing {
+      animation: animateIn $revealTime forwards;
+    }
+    &.finished {
+      transform: translateY(0vh);
+    }
+    &.covering {
+      animation: animateOut $revealTime forwards;
+    }
+}
+
+</style>

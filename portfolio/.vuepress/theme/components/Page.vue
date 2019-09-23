@@ -15,6 +15,9 @@ import PageNav from '@theme/components/PageNav.vue'
 
 export default {
   components: { PageNav },
+  mounted () {
+  },
+
 }
 </script>
 

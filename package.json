@@ -30,7 +30,16 @@
     "sass-loader": "^8.0.0",
     "vuepress": "^1.0.4",
     "vuepress-plugin-clean-urls": "^1.0.3",
-    "vuepress-plugin-reading-time": "^0.1.1"
+    "vuepress-plugin-reading-time": "^0.1.1",
+    "webpack": "^4.36.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "animejs": "^3.1.0",
+    "lazysizes": "^5.1.1",
+    "vue": "^2.6.10",
+    "vue-clipboard2": "^0.3.1",
+    "vue-events": "^3.1.0",
+    "vue-js-modal": "^1.3.31",
+    "vuex": "^3.1.1"
+  }
 }
