@@ -8,13 +8,15 @@
 
 <script>
 
+import { loadableHero } from '../mixins/loadableHero.js'
+
 export default {
 
-  components: {},
+  mixins: [loadableHero],
 
   data () {
     return {
-      title: 'Image'
+      title: 'Projects'
     }
   },
 
@@ -29,11 +31,7 @@ export default {
   },
 
   mounted() {
-    console.log('fake loading');
-    setTimeout(() => {
-      this.$store.dispatch('setLoadingPageContent', 'revealing')
-      // fake loading time
-    }, 1000)
+    this.doLoad()
   },
 
   methods: {

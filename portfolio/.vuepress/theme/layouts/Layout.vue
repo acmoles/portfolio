@@ -151,6 +151,8 @@ export default {
   display: block;
 }
 
+// TODO fix down page cover animation 
+
 .content {
     min-height: 100%;
     transform: translateY(100vh);
