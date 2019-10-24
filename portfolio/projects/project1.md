@@ -8,7 +8,15 @@ next: ./project2
 
 ::: slot top
 
-<ImageHero/>
+<ProjectStage>
+  <template v-slot:visual>
+    <ImageHero/>
+  </template>
+
+  <template v-slot:description>
+    <p>Here's a description</p>
+  </template>
+</ProjectStage>
 
 :::
 

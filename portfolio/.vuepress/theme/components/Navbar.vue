@@ -66,28 +66,28 @@ export default {
 
       if ( this.scrollPosition < this.lastScrollPosition && this.scrollDirection !== 'up' ) {
         this.scrollDirection = 'up';
-        if( this.scrollPosition >= this.navbarPosition ) {
+
+        if( this.scrollPosition >= ( this.navbarPosition + this.navbarHeight ) ) {
           this.cssPosition = 'absolute'
           this.cssTop = this.scrollPosition - this.navbarHeight
-          // h.css({'position':'absolute', 'top':st - hs})
         }
+
       }
 
       if ( this.scrollPosition <= this.navbarPosition ) {
         this.cssPosition = 'fixed'
         this.cssTop = 0
-        // h.css({'position':'fixed', 'top': '0px'})
       }
 
       if ( this.scrollPosition > this.lastScrollPosition && this.scrollDirection !== 'down') {
-        if ( this.navbarPosition < 0 ) return;
-        this.scrollDirection = 'down';
+        if ( this.navbarPosition < 0 ) return
 
         this.cssPosition = 'absolute'
         this.cssTop = this.navbarPosition
-        // h.css({'position':'absolute', 'top':ho});
+        this.scrollDirection = 'down';
       }
 
+      // TODO scrolled state for sticky header
       // if( this.scrollPosition > overlap height ) {
       //   Add overlap class
       // } else {
