@@ -8,7 +8,7 @@ export const loadableHero = {
       setTimeout(() => {
         this.$store.dispatch('setLoadingPageContent', 'revealing')
         // fake loading time
-      }, 1000)
+      }, 500)
     },
   }
 }

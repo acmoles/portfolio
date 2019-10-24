@@ -6,7 +6,11 @@ prev: ./project3
 next: ./project4
 ---
 
+::: slot top
+
 <ImageHero/>
+
+:::
 
 # Project 4
 

@@ -63,15 +63,14 @@ function resolvePageLink (
 
 .page-nav {
   @extend $wrapper;
-  padding-top: 1rem;
-  padding-bottom: 0;
+  padding: 18em 2em
 
   .inner {
+    font-size: 36px;
+    width: 100%;
     min-height: 2rem;
-    margin-top: 0;
-    border-top: 1px solid $borderColor;
-    padding-top: 1rem;
-    overflow: auto; // clear float
+    display: flex;
+    justify-content: space-between;
   }
 
   .next {

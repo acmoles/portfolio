@@ -12,7 +12,7 @@ module.exports = (options, ctx) => ({
        searchMaxSuggestions: 10
      }],
     'vuepress-plugin-reading-time',
-    require('./plugins/plugin-back-to-top/index.js'),
+    require('./plugins/plugin-outside-content/index.js'),
     require('./plugins/plugin-revealer/index.js'),
     ['@vuepress/pwa', {
       serviceWorker: true,
@@ -23,6 +23,7 @@ module.exports = (options, ctx) => ({
        normalSuffix: '/',
        indexSuffix: '/',
     }],
+    ['smooth-scroll']
   ],
   postcss: {
     plugins: [

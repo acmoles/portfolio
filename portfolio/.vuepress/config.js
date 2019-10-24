@@ -24,9 +24,16 @@ module.exports = {
   base: '/',
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Projects', link: '/projects/' },
+      { text: 'Home', ariaLabel: 'Home link', link: '/' },
+      { text: 'Projects', ariaLabel: 'Projects link', link: '/projects/' },
+      { text: 'About', ariaLabel: 'About link', link: '/about/' },
+      { text: 'Contact', ariaLabel: 'Contact menu', items: [
+          { text: 'Email', link: 'https://email.com' },
+          { text: 'Linkedin', link: 'https://linkedin.com' },
+          { text: 'Github', link: 'https://github.com' }
+      ] },
       { text: 'External', link: 'https://google.com' },
     ],
+    smoothScroll: true
   }
 }

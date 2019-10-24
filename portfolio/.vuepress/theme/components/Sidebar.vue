@@ -2,7 +2,7 @@
   <aside class="sidebar">
     <NavLinks/>
     <slot name="top"/>
-    <SidebarLinks :depth="0" :items="items"/>
+    <SidebarLinks :depth="0" :items="sidebarItems"/>
     <slot name="bottom"/>
   </aside>
 </template>
@@ -10,18 +10,37 @@
 <script>
 import SidebarLinks from '@theme/components/SidebarLinks.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
+import { resolveSidebarItems } from '../util'
 
 export default {
   name: 'Sidebar',
 
   components: { SidebarLinks, NavLinks },
 
-  props: ['items']
+  computed: {
+    sidebarItems () {
+      return resolveSidebarItems(
+        this.$page,
+        this.$page.regularPath,
+        this.$site,
+        this.$localePath
+      )
+    },
+  }
 }
 </script>
 
 <style lang="stylus">
+
+.layout.no-sidebar
+  .sidebar
+    display: none
+
 .sidebar
+  position: fixed
+  z-index: 20
+  top: 8em
+  background-color: $white
   ul
     padding 0
     margin 0
@@ -56,4 +75,40 @@ export default {
         top calc(1rem - 2px)
     & > .sidebar-links
       padding 1rem 0
+
+      $mobileSidebarWidth = $sidebarWidth * 0.82
+
+      // narrow desktop / iPad
+      @media (max-width: $MQNarrow)
+        .sidebar
+          font-size 15px
+          width $mobileSidebarWidth
+        .page
+          padding-left $mobileSidebarWidth
+
+      // wide mobile
+      @media (max-width: $MQMobile)
+        .sidebar
+          top 0
+          padding-top $navbarHeight
+          transform translateX(-100%)
+          transition transform .2s ease
+        .page
+          padding-left 0
+        .content
+          &.sidebar-open
+            .sidebar
+              transform translateX(0)
+          &.no-navbar
+            .sidebar
+              padding-top: 0
+
+      // narrow mobile
+      @media (max-width: $MQMobileNarrow)
+        h1
+          font-size 1.9rem
+        {$contentClass}
+          div[class*="language-"]
+            margin 0.85rem -1.5rem
+            border-radius 0
 </style>

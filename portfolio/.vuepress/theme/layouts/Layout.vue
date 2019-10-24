@@ -1,12 +1,11 @@
 <template>
   <div
-    class="content"
+    class="layout"
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd"
   >
     <Navbar
-      v-if="shouldShowNavbar"
       @toggle-sidebar="toggleSidebar"
     />
 
@@ -16,7 +15,6 @@
     ></div>
 
     <Sidebar
-      :items="sidebarItems"
       @toggle-sidebar="toggleSidebar"
     >
       <slot
@@ -29,7 +27,7 @@
       />
     </Sidebar>
 
-    <main class="page">
+    <main class="content">
       <Content slot-key="top"/>
 
       <Content/>
@@ -37,11 +35,8 @@
       <PageNav/>
 
       <Content slot-key="bottom"/>
+      <Footer/>
     </main>
-
-    <Footer
-      v-if="shouldShowNavbar"
-    />
   </div>
 </template>
 
@@ -51,7 +46,6 @@ import Navbar from '@theme/components/Navbar.vue'
 import Footer from '@theme/components/Footer.vue'
 import PageNav from '@theme/components/PageNav.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
-import { resolveSidebarItems } from '../util'
 
 export default {
   components: { Sidebar, Navbar, Footer, PageNav },
@@ -70,30 +64,11 @@ export default {
       return this.$store.state.isSidebarOpen
     },
 
-    shouldShowNavbar () {
-      const { frontmatter } = this.$page
-      if (frontmatter.navbar === false) {
-        return frontmatter.navbar
-      } else {
-        return true
-      }
-    },
-
     shouldShowSidebar () {
       const { frontmatter } = this.$page
       return (
         !frontmatter.home
         && frontmatter.sidebar !== false
-        && this.sidebarItems.length
-      )
-    },
-
-    sidebarItems () {
-      return resolveSidebarItems(
-        this.$page,
-        this.$page.regularPath,
-        this.$site,
-        this.$localePath
       )
     },
 
@@ -101,7 +76,6 @@ export default {
       const userPageClass = this.$page.frontmatter.pageClass
       return [
         {
-          'no-navbar': !this.shouldShowNavbar,
           'sidebar-open': this.sidebarStatus,
           'no-sidebar': !this.shouldShowSidebar
         },
@@ -146,26 +120,47 @@ export default {
 
 @require '../styles/wrapper.styl';
 
-.page {
-  padding-bottom: 2rem;
-  display: block;
-}
-
-// TODO fix down page cover animation 
-
 .content {
-    min-height: 100%;
+    padding-top: 6em
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
     transform: translateY(100vh);
     animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
-    &.revealing {
-      animation: animateIn $revealTime forwards;
+    .content__default {
+      padding: 0 2em;
+      flex-grow: 1;
     }
-    &.finished {
-      transform: translateY(0vh);
-    }
-    &.covering {
-      animation: animateOut $revealTime forwards;
-    }
+
+  }
+
+.revealing {
+  .content {
+    animation: animateIn $revealTime forwards;
+  }
+  .navbar, .sidebar {
+    opacity: 0;
+  }
+}
+
+.finished {
+  .content {
+    transform: translateY(0vh);
+  }
+  .navbar, .sidebar {
+    opacity: 1;
+  }
+}
+
+.covering {
+  .content {
+    transform: translateY(0vh);
+    // animation: animateOut $revealTime forwards;
+  }
+  .navbar, .sidebar {
+    opacity: 0;
+  }
 }
 
 </style>
