@@ -82,35 +82,35 @@ export default {
 
 </script>
 
-<style lang="stylus">
+<style lang="sass">
 
-.revealer {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    transform: translateY(0px);
-    background: #f3f3f3;
-    cursor: wait;
-    z-index: 20;
-}
+@import '../../styles/variables.sass'
 
-.revealer .revealer-page-title {
-    color: #0e0e0e;
-    text-align: center;
-    width: 80%;
-    cursor: wait;
-}
+.revealer
+  position: fixed
+  display: flex
+  justify-content: center
+  align-items: center
+  top: 0px
+  left: 0px
+  bottom: 0px
+  right: 0px
+  transform: translateY(0px)
+  background: #f3f3f3
+  cursor: wait
+  z-index: 20
 
-.revealer-animation-enter-active {
-  animation: animateIn $revealTime forwards;
-}
-.revealer-animation-leave-active {
-  animation: animateOut $revealTime forwards;
-}
+  .revealer-page-title
+    color: #0e0e0e
+    text-align: center
+    width: 80%
+    cursor: wait
+
+.revealer-animation-enter-active
+  animation: animateIn $revealTime forwards
+
+.revealer-animation-leave-active
+  animation: animateOut $revealTime forwards
+
 
 </style>

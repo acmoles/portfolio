@@ -35,5 +35,6 @@ module.exports = {
       { text: 'External', link: 'https://google.com' },
     ],
     smoothScroll: true
-  }
+  },
+  sass: { indentedSyntax: true }
 }

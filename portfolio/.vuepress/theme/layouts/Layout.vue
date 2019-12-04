@@ -116,51 +116,46 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="sass">
+@import "../styles/variables.sass"
 
-@require '../styles/wrapper.styl';
+.content
+  padding-top: 6em
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  align-content: space-between
+  transform: translateY(100vh)
+  animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1)
 
-.content {
-    padding-top: 6em
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    transform: translateY(100vh);
-    animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
-    .content__default {
-      padding: 0 2em;
-      flex-grow: 1;
-    }
+  &.content__default
+    padding: 0 2em
+    flex-grow: 1
 
-  }
 
-.revealing {
-  .content {
-    animation: animateIn $revealTime forwards;
-  }
-  .navbar, .sidebar {
-    opacity: 0;
-  }
-}
+.revealing
+  .content
+    animation: animateIn $revealTime forwards
 
-.finished {
-  .content {
-    transform: translateY(0vh);
-  }
-  .navbar, .sidebar {
-    opacity: 1;
-  }
-}
+  .navbar, .sidebar
+    opacity: 0
 
-.covering {
-  .content {
-    transform: translateY(0vh);
+
+.finished
+  .content
+    transform: translateY(0vh)
+
+  .navbar, .sidebar
+    opacity: 1
+
+
+.covering
+  .content
+    transform: translateY(0vh)
     // animation: animateOut $revealTime forwards;
-  }
-  .navbar, .sidebar {
-    opacity: 0;
-  }
-}
+
+  .navbar, .sidebar
+    opacity: 0
+
 
 </style>

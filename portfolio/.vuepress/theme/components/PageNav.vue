@@ -1,5 +1,5 @@
 <template>
-  <div class="page-nav" v-if="prev || next">
+  <div class="page-nav wrapper" v-if="prev || next">
     <p class="inner">
       <span v-if="prev" class="prev">
         ←
@@ -58,23 +58,20 @@ function resolvePageLink (
   }
 }
 </script>
-<style lang="stylus">
-@require '../styles/wrapper.styl';
+<style lang="sass">
+@import "../styles/variables.sass"
 
-.page-nav {
-  @extend $wrapper;
+.page-nav
   padding: 18em 2em
 
-  .inner {
-    font-size: 36px;
-    width: 100%;
-    min-height: 2rem;
-    display: flex;
-    justify-content: space-between;
-  }
+  .inner
+    font-size: 36px
+    width: 100%
+    min-height: 2rem
+    display: flex
+    justify-content: space-between
 
-  .next {
-    float: right;
-  }
-}
+  .next
+    float: right
+
 </style>

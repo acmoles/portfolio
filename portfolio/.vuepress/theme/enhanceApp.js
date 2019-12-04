@@ -1,3 +1,5 @@
+import './styles/index.sass'
+
 import Vuex from 'vuex'
 import VueEvents from 'vue-events'
 import VueClipboard from 'vue-clipboard2'

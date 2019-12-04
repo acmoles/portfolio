@@ -44,12 +44,13 @@ export default {
 
 </script>
 
-<style lang="stylus">
+<style lang="sass">
+@import "../styles/variables.sass"
 
 .footer
-  z-index 10
-  position relative
-  height 12em
-  background darkgrey
+  z-index: 10
+  position: relative
+  height: 12em
+  background: darkgrey
 
 </style>

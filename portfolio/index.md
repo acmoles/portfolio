@@ -14,7 +14,7 @@ meta:
 
 <Home/>
 
-# Hello world <Badge>Test</Badge>
+# Hello world
 
 ::: slot bottom
 Page footer

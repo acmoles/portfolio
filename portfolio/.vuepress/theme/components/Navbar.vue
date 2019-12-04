@@ -50,17 +50,21 @@ export default {
     }
   },
   mounted () {
+    // Read navbar height from html layout - needed for scroll animation
     this.navbarHeight = this.$refs.navbar.offsetHeight
     console.log('navbar height, ', this.navbarHeight);
     updateOnScroll(0, 1, progress => {
       this.handleScroll( progress )
     });
+
+    // TODO respond to page transitions (global store state) with fade-in-out animation
   },
   computed: {
 
   },
   methods: {
     handleScroll ( progress ) {
+      // NOTE auto page reloads makes this logic error
       this.scrollPosition = window.pageYOffset
       this.navbarPosition = offsetY(this.$refs.navbar)
 
@@ -109,51 +113,7 @@ function offsetY(el) {
 
 </script>
 
-<style lang="stylus">
-$navbar-vertical-padding = 0.7rem
-$navbar-horizontal-padding = 1.5rem
-.navbar
-  position: absolute;
-  z-index 20
-  top 0
-  left 0
-  right 0
-  height $navbarHeight
-  background-color #fff
-  box-sizing border-box
-  border-bottom 1px solid $borderColor
+<style lang="sass">
+@import "../styles/variables.sass"
 
-.navbar
-  padding $navbar-vertical-padding $navbar-horizontal-padding
-  line-height $navbarHeight - 1.4rem
-  a, span, img
-    display inline-block
-  .logo
-    height $navbarHeight - 1.4rem
-    min-width $navbarHeight - 1.4rem
-    margin-right 0.8rem
-    vertical-align top
-  .site-name
-    font-size 1.3rem
-    font-weight 600
-    color $textColor
-    position relative
-  .links
-    padding-left 1.5rem
-    box-sizing border-box
-    background-color white
-    white-space nowrap
-    font-size 0.9rem
-    position absolute
-    right $navbar-horizontal-padding
-    top $navbar-vertical-padding
-    display flex
-    .search-box
-      flex: 0 0 auto
-      vertical-align top
-@media (max-width: $MQMobile)
-  .navbar
-    padding-left 4rem
-    .links
-      padding-left 1.5rem
 </style>
