@@ -42,7 +42,7 @@ export default ({
       pageLoadingStatus: 'loading',
       revealerTitle: 'Anthony Moles',
       isSidebarOpen: false,
-      projectPosition: {rect: {}, scroll: 0, color: ''}
+      projectPosition: {child: {}, parent: {}, scroll: 0, color: ''}
     },
     mutations: {
       SET_LOADING_STATUS (state, status) {

@@ -1,7 +1,11 @@
 <template>
-  <div class="grid-wrapper">
+  <div
+    class="grid-wrapper"
+    ref="gridParent"
+  >
 
         <PortfolioItem
+          :uid="1"
           type="double-left"
           title="Wesen"
           subtitle="First double"
@@ -15,6 +19,7 @@
         </PortfolioItem>
 
         <PortfolioItem
+          :uid="2"
           type="single"
           title="First secondary"
           subtitle="In first row"
@@ -25,6 +30,7 @@
         </PortfolioItem>
 
         <PortfolioItem
+          :uid="3"
           type="single"
           title="Vertical tiles"
           subtitle="In first row"
@@ -35,6 +41,7 @@
         </PortfolioItem>
 
         <PortfolioItem
+          :uid="4"
           type="single"
           title="Vertical tiles"
           subtitle="In first row, inner-row 2"
@@ -45,6 +52,7 @@
         </PortfolioItem>
 
         <PortfolioItem
+          :uid="5"
           type="single"
           title="Vertical tiles"
           subtitle="In first row, inner-row 2"
@@ -55,6 +63,7 @@
         </PortfolioItem>
 
         <PortfolioItem
+          :uid="6"
           type="single"
           title="First in second row group"
           subtitle="Mid tile prop"
@@ -66,6 +75,7 @@
 
 
         <PortfolioItem
+          :uid="7"
           type="single"
           title="Second in second row group"
           subtitle="Mid tile prop 2"
@@ -76,6 +86,7 @@
         </PortfolioItem>
 
         <PortfolioItem
+          :uid="8"
           type="single"
           title="Second last in second row group"
           subtitle="Bottom tile prop"
@@ -86,6 +97,7 @@
         </PortfolioItem>
 
         <PortfolioItem
+          :uid="9"
           type="single"
           title="Last in second row group"
           subtitle="Bottom tile prop"
@@ -97,6 +109,7 @@
 
 
         <PortfolioItem
+          :uid="10"
           type="double-right"
           title="toucanBox"
           subtitle="Last in second row"
@@ -138,6 +151,7 @@ export default {
           return false
         }
         data['scroll'] = window.pageYOffset
+        data['parent'] = this.$refs.gridParent
         this.$store.dispatch('setProjectPosition', data)
         console.log(data)
       }

@@ -125,7 +125,7 @@ export default {
   display: flex
   flex-direction: column
   align-content: space-between
-  transform: translateY(100vh)
+  // transform: translateY(100vh)
   animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1)
 
   &.content__default
@@ -135,27 +135,27 @@ export default {
 
 .revealing
   .page-content
-    animation: animateIn $revealTime forwards
+    // animation: animateIn $revealTime forwards
 
   .navbar, .sidebar
-    opacity: 0
+    // opacity: 0
 
 
 .finished
   .page-content
-    transform: translateY(0vh)
+    // transform: translateY(0vh)
 
   .navbar, .sidebar
-    opacity: 1
+    // opacity: 1
 
 
 .covering
   .page-content
-    transform: translateY(0vh)
+    // transform: translateY(0vh)
     // animation: animateOut $revealTime forwards;
 
   .navbar, .sidebar
-    opacity: 0
+    // opacity: 0
 
 
 </style>

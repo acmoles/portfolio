@@ -8,6 +8,7 @@
       class="notification"
       :class="background"
       @click="emitBoundingRect($event)"
+      :ref="'article' + uid"
     >
       <slot></slot>
 
@@ -25,6 +26,7 @@
 export default {
 
   props: {
+    uid: Number,
     type: String,
     title: String,
     subtitle: String,
@@ -49,7 +51,7 @@ export default {
   methods: {
       emitBoundingRect(event) {
         const data = {
-          rect: event.target.getBoundingClientRect(),
+          child: this.$refs['article' + this.uid],
           color: this.background
         }
         this.$emit('project-click', data)

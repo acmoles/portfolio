@@ -6,7 +6,9 @@
   >
     <div
       v-if="show"
-      class="revealer"
+      class="revealer notification"
+      :class="revealerClass"
+      :style="{ transform: transformString, WebkitTransform: transformString }"
     >
       <h1 class="revealer-page-title">{{ title }}</h1>
     </div>
@@ -20,8 +22,10 @@ export default {
 
   data () {
     return {
-      show: true,
-      nextGuardCallback: null
+      show: false,
+      nextGuardCallback: null,
+      dummyClass: 'test',
+      transformString: ''
     }
   },
 
@@ -34,7 +38,7 @@ export default {
       return this.$store.state.revealerTitle
     },
 
-    project () {
+    projectPosition () {
       return this.$store.state.projectPosition
     }
   },
@@ -47,8 +51,10 @@ export default {
         this.show = false
       }
     },
-    project (latest, last) {
-
+    projectPosition (latest, last) {
+      this.show = true
+      this.revealerClass = latest.color
+      this.transformString = this.generateTransformString()
     }
   },
 
@@ -84,13 +90,26 @@ export default {
       }
 
     },
-    gridToFullscreen(event) {
-      const rect = event.target.getBoundingClientRect();
-      const viewSize = this.getViewSize();
+    generateTransformString() {
+      let translateX = this.projectPosition.child.offsetLeft
+      let translateY = this.projectPosition.child.offsetTop
+      let scaleX = this.projectPosition.child.offsetWidth / this.projectPosition.parent.offsetWidth
+      let scaleY = this.projectPosition.child.offsetHeight / this.getViewport('y')
 
+      return 'translate3D(' + translateX + 'px, ' + translateY + 'px, 0px) scale3d(' + scaleX + ',' + scaleY + ',1)'
     },
-    getViewSize() {
-      return { width: window.innerWidth, height: window.innerHeight };
+    getViewport( axis ) {
+      var client, inner
+      if( axis === 'x' ) {
+        client = window.document.documentElement['clientWidth']
+        inner = window['innerWidth']
+      }
+      else if( axis === 'y' ) {
+        client = window.document.documentElement['clientHeight']
+        inner = window['innerHeight']
+      }
+
+      return client < inner ? inner : client
     }
   }
 }
@@ -102,30 +121,22 @@ export default {
 @import '../../styles/variables.sass'
 
 .revealer
-  position: fixed
-  display: flex
-  justify-content: center
-  align-items: center
-  top: 0px
-  left: 0px
-  bottom: 0px
-  right: 0px
-  transform: translateY(0px)
-  background: #f3f3f3
-  cursor: wait
-  z-index: 20
-
-  .revealer-page-title
-    color: #0e0e0e
-    text-align: center
-    width: 80%
-    cursor: wait
+  // pointer-events: none
+  position: absolute
+  width: 100%
+  height: 100vh
+  z-index: 100
+  top: 0
+  left: 0
+  transform-origin: 0 0
 
 .revealer-animation-enter-active
-  animation: animateIn $revealTime forwards
+  // animation: animateIn $revealTime forwards
+  transition: transform $revealTime
+  animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1)
 
 .revealer-animation-leave-active
-  animation: animateOut $revealTime forwards
-
+  // animation: animateOut $revealTime forwards
+  transition: transform $revealTime
 
 </style>
