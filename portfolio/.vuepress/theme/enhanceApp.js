@@ -6,6 +6,7 @@ import VueClipboard from 'vue-clipboard2'
 import lazySizes from 'lazysizes'
 import nprogress from 'nprogress'
 import VModal from 'vue-js-modal'
+import PortalVue from 'portal-vue'
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -18,6 +19,7 @@ export default ({
   Vue.use(VModal)
   Vue.use(VueEvents)
   Vue.use(VueClipboard)
+  Vue.use(PortalVue)
   lazySizes.init()
   nprogress.configure({
     showSpinner: false,
@@ -39,7 +41,8 @@ export default ({
     state: {
       pageLoadingStatus: 'loading',
       revealerTitle: 'Anthony Moles',
-      isSidebarOpen: false
+      isSidebarOpen: false,
+      projectPosition: {rect: {}, scroll: 0, color: ''}
     },
     mutations: {
       SET_LOADING_STATUS (state, status) {
@@ -50,6 +53,9 @@ export default ({
       },
       SET_TITLE_STATUS (state, status) {
         state.revealerTitle = status
+      },
+      SET_PROJECT_POSITION (state, status) {
+        state.projectPosition = status
       }
     },
     actions: {
@@ -79,6 +85,9 @@ export default ({
         } else {
           context.commit('SET_TITLE_STATUS', payload)
         }
+      },
+      setProjectPosition (context, payload) {
+        context.commit('SET_PROJECT_POSITION', payload)
       }
     }
   })

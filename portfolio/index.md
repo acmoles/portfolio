@@ -10,8 +10,6 @@ meta:
 # Here might be a page title
 :::
 
-<ThreeHero/>
-
 <Home/>
 
 # Hello world

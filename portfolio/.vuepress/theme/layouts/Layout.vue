@@ -27,7 +27,7 @@
       />
     </Sidebar>
 
-    <main class="content">
+    <main class="page-content">
       <Content slot-key="top"/>
 
       <Content/>
@@ -119,7 +119,7 @@ export default {
 <style lang="sass">
 @import "../styles/variables.sass"
 
-.content
+.page-content
   padding-top: 6em
   min-height: 100vh
   display: flex
@@ -134,7 +134,7 @@ export default {
 
 
 .revealing
-  .content
+  .page-content
     animation: animateIn $revealTime forwards
 
   .navbar, .sidebar
@@ -142,7 +142,7 @@ export default {
 
 
 .finished
-  .content
+  .page-content
     transform: translateY(0vh)
 
   .navbar, .sidebar
@@ -150,7 +150,7 @@ export default {
 
 
 .covering
-  .content
+  .page-content
     transform: translateY(0vh)
     // animation: animateOut $revealTime forwards;
 

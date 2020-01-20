@@ -33,6 +33,10 @@ export default {
     title () {
       return this.$store.state.revealerTitle
     },
+
+    project () {
+      return this.$store.state.projectPosition
+    }
   },
 
   watch: {
@@ -42,6 +46,9 @@ export default {
       } else {
         this.show = false
       }
+    },
+    project (latest, last) {
+
     }
   },
 
@@ -76,6 +83,14 @@ export default {
         }
       }
 
+    },
+    gridToFullscreen(event) {
+      const rect = event.target.getBoundingClientRect();
+      const viewSize = this.getViewSize();
+
+    },
+    getViewSize() {
+      return { width: window.innerWidth, height: window.innerHeight };
     }
   }
 }

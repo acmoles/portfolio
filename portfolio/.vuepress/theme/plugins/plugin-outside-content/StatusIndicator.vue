@@ -20,7 +20,7 @@ export default {
 
 <style lang="stylus">
   .status-indicator {
-    display: none;
+    display: block;
     position: fixed;
     z-index: 1000;
     right: 0;

@@ -6,9 +6,10 @@ date: 2019-09-11
 
 ::: slot top
 
-<ImageHero/>
-
 :::
+
+<ThreeHero/>
+
 
 # About
 
