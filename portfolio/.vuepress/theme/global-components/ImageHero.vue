@@ -22,7 +22,9 @@ export default {
   },
 
   mounted() {
-    this.doLoad()
+    setTimeout(() => {
+      this.doLoad()
+    }, 1000)
   },
 
   methods: {

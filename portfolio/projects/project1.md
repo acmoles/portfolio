@@ -1,5 +1,9 @@
 ---
-title: Project 1
+uid: 1
+title: Wesen
+subtitle: Project 1
+type: double-left
+background: is-primary
 sidebar: auto
 date: 2019-09-11
 prev: ./project1

@@ -1,14 +1,15 @@
 <template>
   <transition
-    name="revealer-animation"
+    name="revealer-fade-animation"
     v-on:after-enter="finishedCovering"
     v-on:after-leave="finishedRevealing"
   >
     <div
       v-if="show"
       class="revealer notification"
-      :class="revealerClass"
+      :class="[revealerClass, backgroundClass]"
       :style="{ transform: transformString, WebkitTransform: transformString }"
+      ref="revealer"
     >
       <h1 class="revealer-page-title">{{ title }}</h1>
     </div>
@@ -17,14 +18,17 @@
 
 <script>
 import { resolvePage } from '../../util'
+import config from '../../config.js'
 
 export default {
 
   data () {
     return {
-      show: false,
+      show: true,
       nextGuardCallback: null,
-      dummyClass: 'test',
+      projectRoutingFlag: false,
+      backgroundClass: '',
+      revealerClass: 'revealer-fixed-active',
       transformString: ''
     }
   },
@@ -40,6 +44,10 @@ export default {
 
     projectPosition () {
       return this.$store.state.projectPosition
+    },
+
+    lastProject () {
+      return this.$store.state.lastProject
     }
   },
 
@@ -50,22 +58,46 @@ export default {
       } else {
         this.show = false
       }
+
+      if (latest === 'loading') {
+        this.revealerClass = 'revealer-fixed-active'
+        this.transformString = ''
+      }
     },
+
     projectPosition (latest, last) {
-      this.show = true
-      this.revealerClass = latest.color
-      this.transformString = this.generateTransformString()
+      this.projectRoutingFlag = true
+      this.revealerClass = 'revealer-cover-animation-active'
+      this.transformString = this.generateTransformStringPlacement()
+
+      setTimeout(() => {
+        this.transformString = 'translate3d(0px, ' + this.projectPosition.scroll + 'px, 0px)'
+      }, config.fadeTransitionTime / 2)
     }
   },
 
   mounted() {
-
     this.$router.beforeEach((to, from, next) => {
 
       if (to.path !== from.path) {
+
+        let pageFrontmatter = this.findPageFrontmatter(this.$site.pages, to.path)
+
+        if (to.path === '/' && this.lastProject.hasLastProject) {
+          // special last project behaviour
+          this.backgroundClass = this.lastProject.background
+        } else {
+          // regular behaviour
+          this.backgroundClass = pageFrontmatter.background
+        }
+
         this.$store.dispatch('setLoadingPageContent', 'covering')
-        let title = this.findPageTitle(this.$site.pages, to.path)
-        this.$store.dispatch('setTitleStatus', title)
+        this.$store.dispatch('setNavStyle', pageFrontmatter.navStyle)
+
+        // TODO remove title status?
+        this.$store.dispatch('setTitleStatus', pageFrontmatter.title)
+
+        // Hold up router until covering squence is finished, store for later use
         this.nextGuardCallback = next
       } else {
         next()
@@ -76,21 +108,48 @@ export default {
 
   methods: {
     finishedCovering() {
-      this.nextGuardCallback()
+      if (this.projectRoutingFlag) {
+
+        // route to project from homepage
+        this.projectRoutingFlag = false
+        // gains special back to homepage behaviour
+        this.$store.dispatch('setLastProject', {
+          hasLastProject: true,
+          background: this.backgroundClass
+        })
+        this.nextGuardCallback()
+        // setTimeout(() => {
+        //
+        // }, config.revealTransitionTime / 2) // start loading before covering transition is finished
+
+      } else {
+
+        // all other routing
+        this.nextGuardCallback()
+        // loses special back to homepage behaviour
+        this.$store.dispatch('setLastProject', {
+          hasLastProject: false,
+          background: ''
+        })
+
+      }
     },
+
     finishedRevealing() {
       this.$store.dispatch('setLoadingPageContent', 'finished')
+      this.revealerClass = 'revealer-fixed-active'
+      this.backgroundClass = ''
     },
-    findPageTitle(pages, path) {
 
+    findPageFrontmatter(pages, path) {
       for (let i = 0; i < pages.length; i++) {
         if (pages[i].path === path) {
-          return pages[i].title
+          return pages[i].frontmatter
         }
       }
-
     },
-    generateTransformString() {
+
+    generateTransformStringPlacement() {
       let translateX = this.projectPosition.child.offsetLeft
       let translateY = this.projectPosition.child.offsetTop
       let scaleX = this.projectPosition.child.offsetWidth / this.projectPosition.parent.offsetWidth
@@ -98,6 +157,7 @@ export default {
 
       return 'translate3D(' + translateX + 'px, ' + translateY + 'px, 0px) scale3d(' + scaleX + ',' + scaleY + ',1)'
     },
+
     getViewport( axis ) {
       var client, inner
       if( axis === 'x' ) {
@@ -130,13 +190,23 @@ export default {
   left: 0
   transform-origin: 0 0
 
-.revealer-animation-enter-active
+.revealer-cover-animation-active
   // animation: animateIn $revealTime forwards
   transition: transform $revealTime
-  animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1)
+  transition-timing-function: $cubicTransition
+
+.revealer-fixed-active
+  position: fixed
 
 .revealer-animation-leave-active
   // animation: animateOut $revealTime forwards
   transition: transform $revealTime
+
+
+.revealer-fade-animation-enter-active
+  animation: fadeIn $fadeTime forwards
+
+.revealer-fade-animation-leave-active
+  animation: fadeOut $fadeTime forwards
 
 </style>

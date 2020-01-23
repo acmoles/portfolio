@@ -5,121 +5,16 @@
   >
 
         <PortfolioItem
-          :uid="1"
-          type="double-left"
-          title="Wesen"
-          subtitle="First double"
-          background="is-primary"
+          v-for="project in projects"
+          :key="project.frontmatter.uid"
+          :uid="project.frontmatter.uid"
+          :path="project.path"
+          :type="project.frontmatter.type"
+          :title="project.frontmatter.title"
+          :subtitle="project.frontmatter.subtitle"
+          :background="project.frontmatter.background"
           v-on:project-click="handleProjectClick"
-        >
-          <div class="content-positioner">
-            <div></div>
-            <div></div>
-          </div>
-        </PortfolioItem>
-
-        <PortfolioItem
-          :uid="2"
-          type="single"
-          title="First secondary"
-          subtitle="In first row"
-          background="is-warning"
-          v-on:project-click="handleProjectClick"
-        >
-          <div>Image</div>
-        </PortfolioItem>
-
-        <PortfolioItem
-          :uid="3"
-          type="single"
-          title="Vertical tiles"
-          subtitle="In first row"
-          background="is-success"
-          v-on:project-click="handleProjectClick"
-        >
-          <div>Image</div>
-        </PortfolioItem>
-
-        <PortfolioItem
-          :uid="4"
-          type="single"
-          title="Vertical tiles"
-          subtitle="In first row, inner-row 2"
-          background="is-danger"
-          v-on:project-click="handleProjectClick"
-        >
-          <div>Image</div>
-        </PortfolioItem>
-
-        <PortfolioItem
-          :uid="5"
-          type="single"
-          title="Vertical tiles"
-          subtitle="In first row, inner-row 2"
-          background="is-primary"
-          v-on:project-click="handleProjectClick"
-        >
-          <div>Image</div>
-        </PortfolioItem>
-
-        <PortfolioItem
-          :uid="6"
-          type="single"
-          title="First in second row group"
-          subtitle="Mid tile prop"
-          background="is-warning"
-          v-on:project-click="handleProjectClick"
-        >
-          <div>Image</div>
-        </PortfolioItem>
-
-
-        <PortfolioItem
-          :uid="7"
-          type="single"
-          title="Second in second row group"
-          subtitle="Mid tile prop 2"
-          background="is-success"
-          v-on:project-click="handleProjectClick"
-        >
-          <div>Image</div>
-        </PortfolioItem>
-
-        <PortfolioItem
-          :uid="8"
-          type="single"
-          title="Second last in second row group"
-          subtitle="Bottom tile prop"
-          background="is-danger"
-          v-on:project-click="handleProjectClick"
-        >
-          <div>Image</div>
-        </PortfolioItem>
-
-        <PortfolioItem
-          :uid="9"
-          type="single"
-          title="Last in second row group"
-          subtitle="Bottom tile prop"
-          background="is-primary"
-          v-on:project-click="handleProjectClick"
-        >
-          <div>Image</div>
-        </PortfolioItem>
-
-
-        <PortfolioItem
-          :uid="10"
-          type="double-right"
-          title="toucanBox"
-          subtitle="Last in second row"
-          background="is-info"
-          v-on:project-click="handleProjectClick"
-        >
-          <figure class="image is-4by3">
-            <img src="https://bulma.io/images/placeholders/640x480.png">
-          </figure>
-        </PortfolioItem>
+        />
 
   </div>
 </template>
@@ -135,13 +30,22 @@ export default {
   mixins: [loadableHero],
 
   mounted() {
-    this.doLoad()
+    setTimeout(() => {
+      this.doLoad()
+    }, 200)
   },
 
   computed: {
     pageLoadingStatus () {
       return this.$store.state.pageLoadingStatus
-    }
+    },
+    projects () {
+      return this.$site.pages
+        .filter(x => x.path.startsWith('/projects/'))
+        .sort(
+          (a, b) => b.frontmatter.uid - a.frontmatter.uid
+        )
+    },
   },
 
   methods: {
@@ -153,7 +57,6 @@ export default {
         data['scroll'] = window.pageYOffset
         data['parent'] = this.$refs.gridParent
         this.$store.dispatch('setProjectPosition', data)
-        console.log(data)
       }
   }
 }

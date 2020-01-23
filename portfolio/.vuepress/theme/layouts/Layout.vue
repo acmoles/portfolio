@@ -157,5 +157,7 @@ export default {
   .navbar, .sidebar
     // opacity: 0
 
+.loading
+  display: none
 
 </style>

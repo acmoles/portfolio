@@ -1,9 +1,13 @@
 ---
-title: Project 4
+uid: 4
+title: toucanBox
+subtitle: Project 4
+type: single
+background: is-danger
 sidebar: auto
 date: 2019-09-11
 prev: ./project3
-next: ./project4
+next: ./project5
 ---
 
 ::: slot top

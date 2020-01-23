@@ -1,6 +1,6 @@
 <template>
   <router-link
-    :to="{ name: src, params: {animate: true} }"
+    :to="path"
     class="grid-item"
     :class="type"
   >
@@ -30,7 +30,7 @@ export default {
     type: String,
     title: String,
     subtitle: String,
-    src: String,
+    path: String,
     case1: String,
     case2: String,
     background: String
@@ -43,6 +43,9 @@ export default {
   },
 
   computed: {
+    pageLoadingStatus () {
+      return this.$store.state.pageLoadingStatus
+    }
   },
 
   mounted() {
@@ -52,7 +55,6 @@ export default {
       emitBoundingRect(event) {
         const data = {
           child: this.$refs['article' + this.uid],
-          color: this.background
         }
         this.$emit('project-click', data)
       }

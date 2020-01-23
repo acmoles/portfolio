@@ -1,13 +1,13 @@
 ---
-uid: 3
-title: Ecosia
-subtitle: Project 3
+uid: 6
+title: Stompy Robot
+subtitle: Project 6
 type: single
 background: is-info
 sidebar: auto
 date: 2019-09-12
-prev: ./project2
-next: ./project4
+prev: ./project5
+next: ./project7
 ---
 
 ::: slot top

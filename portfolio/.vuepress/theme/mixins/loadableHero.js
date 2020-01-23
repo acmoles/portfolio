@@ -1,6 +1,5 @@
 export const loadableHero = {
   created () {
-    console.log('mixin created')
   },
   methods: {
     doLoad(path) {

@@ -1,13 +1,13 @@
 ---
-uid: 3
-title: Ecosia
-subtitle: Project 3
-type: single
-background: is-info
+uid: 10
+title: toucanBox
+subtitle: Project 10
+type: double-right
+background: is-primary
 sidebar: auto
 date: 2019-09-12
-prev: ./project2
-next: ./project4
+prev: ./project9
+next: ./project1
 ---
 
 ::: slot top

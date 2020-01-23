@@ -1,12 +1,12 @@
 import './styles/index.sass'
 
-import Vuex from 'vuex'
 import VueEvents from 'vue-events'
 import VueClipboard from 'vue-clipboard2'
 import lazySizes from 'lazysizes'
-import nprogress from 'nprogress'
 import VModal from 'vue-js-modal'
 import PortalVue from 'portal-vue'
+import initStore from './store.js'
+import initRouting from './routing.js'
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -15,92 +15,12 @@ export default ({
   siteData // site metadata
 }) => {
   Vue.config.productionTip = false
-  Vue.use(Vuex)
+  const store = initStore(Vue)
+  Vue.mixin({store: store})
+  initRouting(router, store)
   Vue.use(VModal)
   Vue.use(VueEvents)
   Vue.use(VueClipboard)
   Vue.use(PortalVue)
   lazySizes.init()
-  nprogress.configure({
-    showSpinner: false,
-    trickleSpeed: 100
-  })
-
-  /*
-  Loading states:
-  covering = set by revealer
-  -- loading - set by globabl route guard
-  revealing - set by loaded loadable hero component
-  finished - set by revealer
-  */
-
-  // Start first load
-  nprogress.start()
-
-  const store = new Vuex.Store({
-    state: {
-      pageLoadingStatus: 'loading',
-      revealerTitle: 'Anthony Moles',
-      isSidebarOpen: false,
-      projectPosition: {child: {}, parent: {}, scroll: 0, color: ''}
-    },
-    mutations: {
-      SET_LOADING_STATUS (state, status) {
-        state.pageLoadingStatus = status
-      },
-      SET_SIDEBAR_STATUS (state, status) {
-        state.isSidebarOpen = status
-      },
-      SET_TITLE_STATUS (state, status) {
-        state.revealerTitle = status
-      },
-      SET_PROJECT_POSITION (state, status) {
-        state.projectPosition = status
-      }
-    },
-    actions: {
-      setLoadingPageContent (context, payload) {
-        if (payload === 'loading') {
-          nprogress.start()
-        } else {
-          nprogress.done()
-        }
-
-        if (payload === 'revealing') {
-          // More pleasing to have a pause before the reveal
-          setTimeout(() => {
-            context.commit('SET_LOADING_STATUS', payload)
-          }, 600)
-        } else {
-          context.commit('SET_LOADING_STATUS', payload)
-        }
-      },
-      setSidebarStatus (context, payload) {
-        context.commit('SET_SIDEBAR_STATUS', payload)
-      },
-      setTitleStatus (context, payload) {
-        if (payload === 'Home') {
-          console.log('found home');
-          context.commit('SET_TITLE_STATUS', 'Anthony Moles')
-        } else {
-          context.commit('SET_TITLE_STATUS', payload)
-        }
-      },
-      setProjectPosition (context, payload) {
-        context.commit('SET_PROJECT_POSITION', payload)
-      }
-    }
-  })
-
-  Vue.mixin({store: store})
-
-  router.beforeResolve((to, from, next) => {
-    if (to.path !== from.path) store.dispatch('setLoadingPageContent', 'loading')
-    next()
-  })
-  router.afterEach((to, from) => {
-    store.dispatch('setSidebarStatus', false)
-  })
-
-
 }

@@ -1,5 +1,9 @@
 ---
-title: Project 2
+uid: 2
+title: Ecosia
+subtitle: Project 2
+type: single
+background: is-warning
 sidebar: auto
 date: 2019-09-12
 prev: ./project1

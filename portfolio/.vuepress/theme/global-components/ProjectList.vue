@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-for="project in projects">
+    <li v-for="project in projects" v-bind:key="project.frontmatter.uid">
       <router-link :to="project.path">{{ project.title }}</router-link>
     </li>
   </ul>

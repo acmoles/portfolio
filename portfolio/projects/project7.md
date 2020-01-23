@@ -1,13 +1,13 @@
 ---
-uid: 3
-title: Ecosia
-subtitle: Project 3
+uid: 7
+title: Random
+subtitle: Project 7
 type: single
 background: is-info
 sidebar: auto
 date: 2019-09-12
-prev: ./project2
-next: ./project4
+prev: ./project6
+next: ./project8
 ---
 
 ::: slot top
@@ -16,7 +16,7 @@ next: ./project4
 
 :::
 
-# Project 3
+# Project 2
 
 ## First Title
 
@@ -27,14 +27,6 @@ Test paragraph
 ### Inner title
 
 ### Inner title
-
-## Second Title
-
-### Inner title
-
-### Inner title
-
-## Third Title
 ## Features
 
 **Built-in Markdown extensions**
@@ -95,6 +87,14 @@ Both are great projects and also Vue-powered. Except they are both fully runtime
 
 Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site. The biggest problem is that its theming system is static and string-based - we want to take advantage of Vue for both the layout and the interactivity. Also, Hexo’s Markdown rendering isn’t the most flexible to configure.
 
+
+## Second Title
+
+### Inner title
+
+### Inner title
+
+## Third Title
 
 ### Inner title
 
