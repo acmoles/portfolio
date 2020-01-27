@@ -4,8 +4,8 @@ import config from './config.js'
 
 /*
 Loading states:
-covering = set by revealer
--- loading - set by globabl route guard
+covering = set by globabl beforeEach route guard (next guard called by revealer after covering transition finishes)
+loading - set by globabl beforeResolve route guard
 revealing - set by loaded loadable hero component
 finished - set by revealer
 */
@@ -24,22 +24,30 @@ export default (Vue) => {
 
   return new Vuex.Store({
     state: {
+      isSidebarOpen: false,
       pageLoadingStatus: 'loading',
       revealerTitle: 'Anthony Moles',
-      isSidebarOpen: false,
+      revealerInitialised: false,
+      nextGuardCallback : null,
       projectPosition: {child: {}, parent: {}, scroll: 0},
       lastProject: {hasLastProject: false, background: ''},
       navStyle: 'blue' // blue, red, orange, white (outline)
     },
     mutations: {
-      SET_LOADING_STATUS (state, status) {
-        state.pageLoadingStatus = status
-      },
       SET_SIDEBAR_STATUS (state, status) {
         state.isSidebarOpen = status
       },
+      SET_LOADING_STATUS (state, status) {
+        state.pageLoadingStatus = status
+      },
       SET_TITLE_STATUS (state, status) {
         state.revealerTitle = status
+      },
+      SET_REVEALER_INIT (state, status) {
+        state.revealerInitialised = status
+      },
+      SET_NEXT_GUARD (state, status) {
+        state.nextGuardCallback = status
       },
       SET_PROJECT_POSITION (state, status) {
         state.projectPosition = status
@@ -52,6 +60,9 @@ export default (Vue) => {
       },
     },
     actions: {
+      setSidebarStatus (context, payload) {
+        context.commit('SET_SIDEBAR_STATUS', payload)
+      },
       setLoadingPageContent (context, payload) {
         if (payload === 'loading') {
           nprogress.start()
@@ -73,11 +84,14 @@ export default (Vue) => {
           document.documentElement.style.overflow = 'scroll'
         }
       },
-      setSidebarStatus (context, payload) {
-        context.commit('SET_SIDEBAR_STATUS', payload)
-      },
       setTitleStatus (context, payload) {
         context.commit('SET_TITLE_STATUS', payload)
+      },
+      setRevealerInit (context, payload) {
+        context.commit('SET_REVEALER_INIT', payload)
+      },
+      setNextGuardCallback (context, payload) {
+        context.commit('SET_NEXT_GUARD', payload)
       },
       setProjectPosition (context, payload) {
         context.commit('SET_PROJECT_POSITION', payload)

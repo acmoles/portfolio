@@ -25,7 +25,6 @@ export default {
   data () {
     return {
       show: true,
-      nextGuardCallback: null,
       projectRoutingFlag: false,
       backgroundClass: '',
       revealerClass: 'revealer-fixed-active',
@@ -48,6 +47,10 @@ export default {
 
     lastProject () {
       return this.$store.state.lastProject
+    },
+
+    nextGuardCallback () {
+      return this.$store.state.nextGuardCallback
     }
   },
 
@@ -55,6 +58,14 @@ export default {
     pageLoadingStatus (latest, last) {
       if (latest === 'covering' || latest === 'loading') {
         this.show = true
+      } else if (latest === 'revealing' && this.lastProject.hasLastProject) {
+        // TODO Do scale down
+        console.log('should scale');
+        this.revealerClass = 'revealer-cover-animation-active'
+        this.transformString = this.generateTransformStringPlacement()
+        setTimeout(() => {
+          this.show = false
+        }, config.revealTransitionTime)
       } else {
         this.show = false
       }
@@ -63,6 +74,7 @@ export default {
         this.revealerClass = 'revealer-fixed-active'
         this.transformString = ''
       }
+
     },
 
     projectPosition (latest, last) {
@@ -73,37 +85,16 @@ export default {
       setTimeout(() => {
         this.transformString = 'translate3d(0px, ' + this.projectPosition.scroll + 'px, 0px)'
       }, config.fadeTransitionTime / 2)
+    },
+
+    lastProject (latest, last) {
+        console.log('Has last project: ', latest);
     }
   },
 
   mounted() {
-    this.$router.beforeEach((to, from, next) => {
-
-      if (to.path !== from.path) {
-
-        let pageFrontmatter = this.findPageFrontmatter(this.$site.pages, to.path)
-
-        if (to.path === '/' && this.lastProject.hasLastProject) {
-          // special last project behaviour
-          this.backgroundClass = this.lastProject.background
-        } else {
-          // regular behaviour
-          this.backgroundClass = pageFrontmatter.background
-        }
-
-        this.$store.dispatch('setLoadingPageContent', 'covering')
-        this.$store.dispatch('setNavStyle', pageFrontmatter.navStyle)
-
-        // TODO remove title status?
-        this.$store.dispatch('setTitleStatus', pageFrontmatter.title)
-
-        // Hold up router until covering squence is finished, store for later use
-        this.nextGuardCallback = next
-      } else {
-        next()
-      }
-
-    })
+    console.log('Next guard callback in revealer: ', this.nextGuardCallback);
+    this.$store.dispatch('setRevealerInit', true)
   },
 
   methods: {
@@ -118,12 +109,7 @@ export default {
           background: this.backgroundClass
         })
         this.nextGuardCallback()
-        // setTimeout(() => {
-        //
-        // }, config.revealTransitionTime / 2) // start loading before covering transition is finished
-
       } else {
-
         // all other routing
         this.nextGuardCallback()
         // loses special back to homepage behaviour
@@ -139,14 +125,6 @@ export default {
       this.$store.dispatch('setLoadingPageContent', 'finished')
       this.revealerClass = 'revealer-fixed-active'
       this.backgroundClass = ''
-    },
-
-    findPageFrontmatter(pages, path) {
-      for (let i = 0; i < pages.length; i++) {
-        if (pages[i].path === path) {
-          return pages[i].frontmatter
-        }
-      }
     },
 
     generateTransformStringPlacement() {

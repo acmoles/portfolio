@@ -17,7 +17,7 @@ export default ({
   Vue.config.productionTip = false
   const store = initStore(Vue)
   Vue.mixin({store: store})
-  initRouting(router, store)
+  initRouting(router, store, siteData)
   Vue.use(VModal)
   Vue.use(VueEvents)
   Vue.use(VueClipboard)
