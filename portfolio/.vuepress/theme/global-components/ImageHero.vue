@@ -24,7 +24,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.doLoad()
-    }, 1000)
+    }, 200)
   },
 
   methods: {

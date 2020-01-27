@@ -1,6 +1,6 @@
 <template>
   <transition
-    name="revealer-fade-animation"
+    :name="transitionName"
     v-on:after-enter="finishedCovering"
     v-on:after-leave="finishedRevealing"
   >
@@ -25,7 +25,8 @@ export default {
   data () {
     return {
       show: true,
-      projectRoutingFlag: false,
+      transitionName: '',
+      homepageSpecialRoutingFlag: true,
       backgroundClass: '',
       revealerClass: 'revealer-fixed-active',
       transformString: ''
@@ -49,6 +50,10 @@ export default {
       return this.$store.state.lastProject
     },
 
+    useLastProject () {
+      return this.$store.state.useLastProject
+    },
+
     nextGuardCallback () {
       return this.$store.state.nextGuardCallback
     }
@@ -56,29 +61,48 @@ export default {
 
   watch: {
     pageLoadingStatus (latest, last) {
-      if (latest === 'covering' || latest === 'loading') {
-        this.show = true
-      } else if (latest === 'revealing' && this.lastProject.hasLastProject) {
-        // TODO Do scale down
-        console.log('should scale');
-        this.revealerClass = 'revealer-cover-animation-active'
-        this.transformString = this.generateTransformStringPlacement()
-        setTimeout(() => {
-          this.show = false
-        }, config.revealTransitionTime)
-      } else {
-        this.show = false
-      }
 
       if (latest === 'loading') {
         this.revealerClass = 'revealer-fixed-active'
         this.transformString = ''
       }
 
+      if (latest === 'covering' || latest === 'loading') {
+        this.show = true
+      }
+
+      else if (latest === 'revealing' && this.useLastProject) {
+        // activates special transition from projects
+
+        this.$nextTick(() => { // might need to replace with setTimout
+          this.revealerClass = ''
+          this.transformString = 'translate3d(0px, ' + this.projectPosition.scroll + 'px, 0px)'
+
+            setTimeout(() => {
+              // wait a fraction - DOM render if prioritised over setTimout callback
+              this.revealerClass = 'revealer-reveal-animation-active'
+              this.transformString = this.generateTransformStringPlacement()
+
+                setTimeout(() => {
+                  this.show = false
+                  this.$store.dispatch('useLastProject', false)
+                }, config.revealTransitionTime / 1.5) // transition time
+
+            }, 100)
+
+        })
+
+      }
+
+      else {
+        this.show = false
+      }
+
     },
 
     projectPosition (latest, last) {
-      this.projectRoutingFlag = true
+      // activates special transition to projects
+      // Vue detects the extra transition automatically and waits to call v-on:after-enter
       this.revealerClass = 'revealer-cover-animation-active'
       this.transformString = this.generateTransformStringPlacement()
 
@@ -88,50 +112,35 @@ export default {
     },
 
     lastProject (latest, last) {
-        console.log('Has last project: ', latest);
-    }
+      this.backgroundClass = latest.background
+    },
+
   },
 
   mounted() {
-    console.log('Next guard callback in revealer: ', this.nextGuardCallback);
-    this.$store.dispatch('setRevealerInit', true)
+    this.$nextTick(() => {
+      this.$store.dispatch('setRevealerInit', true)
+      this.transitionName = 'revealer-fade-animation'
+    })
   },
 
   methods: {
     finishedCovering() {
-      if (this.projectRoutingFlag) {
-
-        // route to project from homepage
-        this.projectRoutingFlag = false
-        // gains special back to homepage behaviour
-        this.$store.dispatch('setLastProject', {
-          hasLastProject: true,
-          background: this.backgroundClass
-        })
-        this.nextGuardCallback()
-      } else {
-        // all other routing
-        this.nextGuardCallback()
-        // loses special back to homepage behaviour
-        this.$store.dispatch('setLastProject', {
-          hasLastProject: false,
-          background: ''
-        })
-
-      }
+      this.nextGuardCallback()
     },
 
     finishedRevealing() {
       this.$store.dispatch('setLoadingPageContent', 'finished')
+      this.$store.dispatch('useLastProject', false)
       this.revealerClass = 'revealer-fixed-active'
-      this.backgroundClass = ''
+      this.transformString = ''
     },
 
     generateTransformStringPlacement() {
-      let translateX = this.projectPosition.child.offsetLeft
-      let translateY = this.projectPosition.child.offsetTop
-      let scaleX = this.projectPosition.child.offsetWidth / this.projectPosition.parent.offsetWidth
-      let scaleY = this.projectPosition.child.offsetHeight / this.getViewport('y')
+      let translateX = this.projectPosition.childOffsetLeft
+      let translateY = this.projectPosition.childOffsetTop
+      let scaleX = this.projectPosition.childOffsetWidth / this.projectPosition.parentOffsetWidth
+      let scaleY = this.projectPosition.childOffsetHeight / this.getViewport('y')
 
       return 'translate3D(' + translateX + 'px, ' + translateY + 'px, 0px) scale3d(' + scaleX + ',' + scaleY + ',1)'
     },
@@ -176,9 +185,10 @@ export default {
 .revealer-fixed-active
   position: fixed
 
-.revealer-animation-leave-active
+.revealer-reveal-animation-active
   // animation: animateOut $revealTime forwards
   transition: transform $revealTime
+  transition-timing-function: $cubicTransition
 
 
 .revealer-fade-animation-enter-active

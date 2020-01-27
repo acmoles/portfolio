@@ -29,8 +29,19 @@ export default (Vue) => {
       revealerTitle: 'Anthony Moles',
       revealerInitialised: false,
       nextGuardCallback : null,
-      projectPosition: {child: {}, parent: {}, scroll: 0},
-      lastProject: {hasLastProject: false, background: ''},
+      projectPosition: {
+        childOffsetLeft: null,
+        childOffsetTop: null,
+        childOffsetWidth: null,
+        childOffsetHeight: null,
+        parentOffsetWidth: null,
+        scroll: 0
+      },
+      lastProject: {
+        hasLastProject: false,
+        background: ''
+      },
+      useLastProject: false,
       navStyle: 'blue' // blue, red, orange, white (outline)
     },
     mutations: {
@@ -55,6 +66,9 @@ export default (Vue) => {
       SET_LAST_PROJECT (state, status) {
         state.lastProject = status
       },
+      USE_LAST_PROJECT (state, status) {
+        state.useLastProject = status
+      },
       SET_NAV_STYLE (state, status) {
         state.navStyle = status
       },
@@ -70,19 +84,22 @@ export default (Vue) => {
           nprogress.done()
         }
 
-        if (payload === 'revealing') {
-          setTimeout(() => {
-            context.commit('SET_LOADING_STATUS', payload)
-          }, config.fadeTransitionTime / 2) // More pleasing to have a pause before the reveal
-        } else {
-          context.commit('SET_LOADING_STATUS', payload)
+        if (payload === 'loading' || payload === 'covering') {
+          document.documentElement.style.overflow = 'hidden'
+          document.documentElement.style.scrollBehavior = 'auto'
         }
 
-        if (payload === 'loading' || payload === 'covering' || payload === 'revealing') {
-          document.documentElement.style.overflow = 'hidden'
-        } else {
+        else if (payload === 'revealing') {
           document.documentElement.style.overflow = 'scroll'
+          document.documentElement.style.scrollBehavior = 'auto'
         }
+
+        else {
+          document.documentElement.style.overflow = 'scroll'
+          document.documentElement.style.scrollBehavior = 'smooth'
+        }
+
+        context.commit('SET_LOADING_STATUS', payload)
       },
       setTitleStatus (context, payload) {
         context.commit('SET_TITLE_STATUS', payload)
@@ -98,6 +115,9 @@ export default (Vue) => {
       },
       setLastProject (context, payload) {
         context.commit('SET_LAST_PROJECT', payload)
+      },
+      useLastProject (context, payload) {
+        context.commit('USE_LAST_PROJECT', payload)
       },
       setNavStyle (context, payload) {
         context.commit('SET_NAV_STYLE', payload)

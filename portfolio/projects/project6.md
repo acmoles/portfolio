@@ -3,7 +3,7 @@ uid: 6
 title: Stompy Robot
 subtitle: Project 6
 type: single
-background: is-info
+background: is-warning
 sidebar: auto
 date: 2019-09-12
 prev: ./project5

@@ -32,20 +32,37 @@ export default {
   mounted() {
     setTimeout(() => {
       this.doLoad()
-    }, 200)
+    }, 100)
   },
 
   computed: {
     pageLoadingStatus () {
       return this.$store.state.pageLoadingStatus
     },
+    useLastProject () {
+      return this.$store.state.useLastProject
+    },
+    projectPosition () {
+      return this.$store.state.projectPosition
+    },
     projects () {
       return this.$site.pages
         .filter(x => x.path.startsWith('/projects/'))
+        .filter(x => !(x.relativePath.includes('index')))
         .sort(
           (a, b) => b.frontmatter.uid - a.frontmatter.uid
         )
     },
+  },
+
+  watch: {
+    pageLoadingStatus (latest, last) {
+      if (latest === 'revealing' && this.useLastProject) {
+        // scroll instantly to saved position
+        // better here than revealer - component is loaded
+        document.documentElement.scrollTop = this.projectPosition.scroll
+      }
+    }
   },
 
   methods: {
@@ -55,7 +72,7 @@ export default {
           return false
         }
         data['scroll'] = window.pageYOffset
-        data['parent'] = this.$refs.gridParent
+        data['parentOffsetWidth'] = this.$refs.gridParent.offsetWidth
         this.$store.dispatch('setProjectPosition', data)
       }
   }

@@ -3,7 +3,7 @@ uid: 7
 title: Random
 subtitle: Project 7
 type: single
-background: is-info
+background: is-link
 sidebar: auto
 date: 2019-09-12
 prev: ./project6

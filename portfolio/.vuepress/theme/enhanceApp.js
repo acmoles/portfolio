@@ -23,4 +23,9 @@ export default ({
   Vue.use(VueClipboard)
   Vue.use(PortalVue)
   lazySizes.init()
+
+  // fixes scroll jump in modern browsers
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
 }

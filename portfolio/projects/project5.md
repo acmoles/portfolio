@@ -3,7 +3,7 @@ uid: 5
 title: Makielab
 subtitle: Project 5
 type: single
-background: is-warning
+background: is-success
 sidebar: auto
 date: 2019-09-11
 prev: ./project4

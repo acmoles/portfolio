@@ -132,6 +132,8 @@ export default {
     padding: 0 2em
     flex-grow: 1
 
+.loading
+  display: none
 
 .revealing
   .page-content
@@ -148,7 +150,6 @@ export default {
   .navbar, .sidebar
     // opacity: 1
 
-
 .covering
   .page-content
     // transform: translateY(0vh)
@@ -156,8 +157,5 @@ export default {
 
   .navbar, .sidebar
     // opacity: 0
-
-.loading
-  display: none
 
 </style>

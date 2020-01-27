@@ -1,33 +1,35 @@
 <template>
-  <header
-    class="navbar"
-    ref="navbar"
-    :style="{ position: cssPosition, top: cssTop + 'px' }"
-  >
-    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
-
-    <router-link
-      :to="$localePath"
-      class="home-link"
+  <transition name="header-transition">
+    <header
+      class="navbar"
+      ref="navbar"
+      :style="{ position: cssPosition, top: cssTop + 'px' }"
     >
-      <img
-        class="logo"
-        v-if="$site.themeConfig.logo"
-        :src="$withBase($site.themeConfig.logo)"
-        :alt="$siteTitle"
-      >
-      <span
-        ref="siteName"
-        class="site-name"
-        v-if="$siteTitle"
-        :class="{ 'can-hide': $site.themeConfig.logo }"
-      >{{ $siteTitle }}</span>
-    </router-link>
+      <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
 
-    <div class="links">
-      <NavLinks/>
-    </div>
-  </header>
+      <router-link
+        :to="$localePath"
+        class="home-link"
+      >
+        <img
+          class="logo"
+          v-if="$site.themeConfig.logo"
+          :src="$withBase($site.themeConfig.logo)"
+          :alt="$siteTitle"
+        >
+        <span
+          ref="siteName"
+          class="site-name"
+          v-if="$siteTitle"
+          :class="{ 'can-hide': $site.themeConfig.logo }"
+        >{{ $siteTitle }}</span>
+      </router-link>
+
+      <div class="links">
+        <NavLinks/>
+      </div>
+    </header>
+  </transition>
 </template>
 
 <script>
@@ -44,29 +46,42 @@ export default {
       scrollPosition: 0,
       lastScrollPosition: 0,
       scrollDirection: 'down',
-      //
       cssPosition: 'absolute',
       cssTop: 0
     }
   },
   mounted () {
-    // Read navbar height from html layout - needed for scroll animation
-    this.navbarHeight = this.$refs.navbar.offsetHeight
-    console.log('navbar height, ', this.navbarHeight);
-    updateOnScroll(0, 1, progress => {
-      this.handleScroll( progress )
-    });
-
-    // TODO respond to page transitions (global store state) with fade-in-out animation
+    this.$nextTick(() => {
+      updateOnScroll(0, 1, progress => {
+        this.handleScroll( progress )
+      });
+    })
   },
+
   computed: {
-
+    pageLoadingStatus () {
+      return this.$store.state.pageLoadingStatus
+    },
+    navStyle () {
+      return this.$store.state.navStyle
+    },
   },
+
+  watch: {
+    pageLoadingStatus (latest, last) {
+      if (latest === 'covering' || latest === 'loading') {
+        this.show = false
+      } else {
+        this.show = true
+        this.navbarHeight = this.$refs.navbar.offsetHeight
+      }
+    }
+  },
+
   methods: {
     handleScroll ( progress ) {
-      // NOTE auto page reloads makes this logic error
       this.scrollPosition = window.pageYOffset
-      this.navbarPosition = offsetY(this.$refs.navbar)
+      this.navbarPosition = this.getOffsetY(this.$refs.navbar)
 
       if ( this.scrollPosition < this.lastScrollPosition && this.scrollDirection !== 'up' ) {
         this.scrollDirection = 'up';
@@ -100,15 +115,13 @@ export default {
 
       this.lastScrollPosition = this.scrollPosition
 
+    },
+    getOffsetY(el) {
+        var rect = el.getBoundingClientRect(),
+        scrollTop = window.pageYOffset;
+        return rect.top + scrollTop
     }
   }
-}
-
-// Utility
-function offsetY(el) {
-    var rect = el.getBoundingClientRect(),
-    scrollTop = window.pageYOffset;
-    return rect.top + scrollTop
 }
 
 </script>
@@ -116,4 +129,14 @@ function offsetY(el) {
 <style lang="sass">
 @import "../styles/variables.sass"
 
+.navbar
+  position: absolute
+  transform: translate3d(0px, -100%, 0px)
+  opacity: 0
+  transition: transform $fadeTime ease, opacity $fadeTime ease
+
+.finished
+  .navbar
+    opacity: 1
+    transform: translate3d(0px, 0px, 0px)
 </style>
