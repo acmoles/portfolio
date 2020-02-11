@@ -25,6 +25,7 @@ export default (Vue) => {
   return new Vuex.Store({
     state: {
       isSidebarOpen: false,
+      documentHeight: null,
       pageLoadingStatus: 'loading',
       revealerTitle: 'Anthony Moles',
       revealerInitialised: false,
@@ -47,6 +48,9 @@ export default (Vue) => {
     mutations: {
       SET_SIDEBAR_STATUS (state, status) {
         state.isSidebarOpen = status
+      },
+      SET_DOC_HEIGHT (state, status) {
+        state.documentHeight = status
       },
       SET_LOADING_STATUS (state, status) {
         state.pageLoadingStatus = status
@@ -76,6 +80,9 @@ export default (Vue) => {
     actions: {
       setSidebarStatus (context, payload) {
         context.commit('SET_SIDEBAR_STATUS', payload)
+      },
+      setDocumentHeight (context, payload) {
+        context.commit('SET_DOC_HEIGHT', payload)
       },
       setLoadingPageContent (context, payload) {
         if (payload === 'loading') {

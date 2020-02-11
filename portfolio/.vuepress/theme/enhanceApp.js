@@ -7,6 +7,7 @@ import VModal from 'vue-js-modal'
 import PortalVue from 'portal-vue'
 import initStore from './store.js'
 import initRouting from './routing.js'
+import VueForceNextTick from 'vue-force-next-tick'
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -18,6 +19,7 @@ export default ({
   const store = initStore(Vue)
   Vue.mixin({store: store})
   initRouting(router, store, siteData)
+  Vue.use(VueForceNextTick)
   Vue.use(VModal)
   Vue.use(VueEvents)
   Vue.use(VueClipboard)

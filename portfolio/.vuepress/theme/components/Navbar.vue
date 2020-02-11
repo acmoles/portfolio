@@ -4,30 +4,30 @@
       class="navbar"
       ref="navbar"
       :style="{ position: cssPosition, top: cssTop + 'px' }"
+      role="navigation"
+      aria-label="main navigation"
     >
-      <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
-
       <router-link
         :to="$localePath"
         class="home-link"
       >
         <img
           class="logo"
-          v-if="$site.themeConfig.logo"
-          :src="$withBase($site.themeConfig.logo)"
+          :src="$withBase('/images/icons/logo.svg')"
           :alt="$siteTitle"
         >
         <span
           ref="siteName"
           class="site-name"
-          v-if="$siteTitle"
-          :class="{ 'can-hide': $site.themeConfig.logo }"
         >{{ $siteTitle }}</span>
       </router-link>
 
       <div class="links">
         <NavLinks/>
       </div>
+
+      <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+
     </header>
   </transition>
 </template>
@@ -131,6 +131,7 @@ export default {
 
 .navbar
   position: absolute
+  z-index: 2
   transform: translate3d(0px, -100%, 0px)
   opacity: 0
   transition: transform $fadeTime ease, opacity $fadeTime ease

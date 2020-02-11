@@ -6,9 +6,17 @@ date: 2019-09-11
 
 ::: slot top
 
-:::
+<ProjectStage>
+  <template v-slot:visual>
+    <ThreeHero/>
+  </template>
 
-<ThreeHero/>
+  <template v-slot:description>
+    <p>Here's a description</p>
+  </template>
+</ProjectStage>
+
+:::
 
 
 # About

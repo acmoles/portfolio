@@ -9,11 +9,6 @@
       @toggle-sidebar="toggleSidebar"
     />
 
-    <div
-      class="sidebar-mask"
-      @click="toggleSidebar(false)"
-    ></div>
-
     <Sidebar
       @toggle-sidebar="toggleSidebar"
     >
@@ -30,12 +25,12 @@
     <main class="page-content">
       <Content slot-key="top"/>
 
-      <Content/>
+      <Content class="container is-fluid"/>
 
-      <PageNav/>
+      <PageNav class="container is-fluid"/>
 
-      <Content slot-key="bottom"/>
-      <Footer/>
+      <Content class="container is-fluid" slot-key="bottom"/>
+      <Footer class="container is-fluid"/>
     </main>
   </div>
 </template>
@@ -120,7 +115,6 @@ export default {
 @import "../styles/variables.sass"
 
 .page-content
-  padding-top: 6em
   min-height: 100vh
   display: flex
   flex-direction: column

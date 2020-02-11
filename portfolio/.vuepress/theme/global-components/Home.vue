@@ -1,21 +1,30 @@
 <template>
-  <div
-    class="grid-wrapper"
-    ref="gridParent"
-  >
+  <div class="container is-fluid is-home" ref="gridParent">
 
-        <PortfolioItem
-          v-for="project in projects"
-          :key="project.frontmatter.uid"
-          :uid="project.frontmatter.uid"
-          :path="project.path"
-          :type="project.frontmatter.type"
-          :title="project.frontmatter.title"
-          :subtitle="project.frontmatter.subtitle"
-          :background="project.frontmatter.background"
-          v-on:project-click="handleProjectClick"
-        />
+    <div class="home-intro content">
+      <div class="columns">
+        <div class="column">
+          <h1>First column</h1>
+        </div>
+        <div class="column">
+          <p>Second column</p>
+        </div>
+      </div>
+    </div>
 
+    <div class="grid-wrapper">
+          <PortfolioItem
+            v-for="project in projects"
+            :key="project.frontmatter.uid"
+            :uid="project.frontmatter.uid"
+            :path="project.path"
+            :type="project.frontmatter.type"
+            :title="project.frontmatter.title"
+            :subtitle="project.frontmatter.subtitle"
+            :background="project.frontmatter.background"
+            v-on:project-click="handleProjectClick"
+          />
+    </div>
   </div>
 </template>
 
@@ -36,15 +45,6 @@ export default {
   },
 
   computed: {
-    pageLoadingStatus () {
-      return this.$store.state.pageLoadingStatus
-    },
-    useLastProject () {
-      return this.$store.state.useLastProject
-    },
-    projectPosition () {
-      return this.$store.state.projectPosition
-    },
     projects () {
       return this.$site.pages
         .filter(x => x.path.startsWith('/projects/'))
@@ -53,16 +53,6 @@ export default {
           (a, b) => b.frontmatter.uid - a.frontmatter.uid
         )
     },
-  },
-
-  watch: {
-    pageLoadingStatus (latest, last) {
-      if (latest === 'revealing' && this.useLastProject) {
-        // scroll instantly to saved position
-        // better here than revealer - component is loaded
-        document.documentElement.scrollTop = this.projectPosition.scroll
-      }
-    }
   },
 
   methods: {
@@ -78,23 +68,41 @@ export default {
   }
 }
 
-// <h1 v-if="data.heroText !== null" id="main-title" aria-labelledby="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
-
 </script>
 
 <style lang="sass">
   @import "../styles/variables.sass"
 
-  .content-positioner
-    background-color: $darkBlue
-    width: 100%
-    height: 10em
-    display: flex
-    justify-content: space-around
-    align-items: center
-    div
-      width: 1em
-      height: 1em
-      background-color: $white-ter
+  .home-intro
+    padding: 6em 0
 
+  .grid-wrapper
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-auto-rows: 1fr
+    column-gap: 2em
+    row-gap: 2em
+
+  .grid-wrapper::before
+    content: ''
+    width: 0
+    padding-bottom: 100%
+    grid-row: 1 / 1
+    grid-column: 1 / 1
+
+  .grid-item
+    article
+      height: 100%
+
+  .double-left
+    grid-column-start: 1
+    grid-column-end: 3
+    grid-row-start: 1
+    grid-row-end: 3
+
+  .double-right
+    grid-column-start: 3
+    grid-column-end: 5
+    grid-row-start: 3
+    grid-row-end: 5
 </style>

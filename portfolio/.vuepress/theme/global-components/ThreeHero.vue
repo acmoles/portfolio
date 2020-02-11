@@ -1,7 +1,5 @@
 <template>
-  <div class="hero">
-    <h1 class="hero-title">{{ title }}</h1>
-  </div>
+<div class="project-background-three"></div>
 </template>
 
 <script>

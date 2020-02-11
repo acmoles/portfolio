@@ -75,6 +75,7 @@ export default {
         // activates special transition from projects
 
         this.$nextTick(() => { // might need to replace with setTimout
+          document.documentElement.scrollTop = this.projectPosition.scroll
           this.revealerClass = ''
           this.transformString = 'translate3d(0px, ' + this.projectPosition.scroll + 'px, 0px)'
 
@@ -177,6 +178,8 @@ export default {
   left: 0
   transform-origin: 0 0
 
+// revealer transition states
+
 .revealer-cover-animation-active
   // animation: animateIn $revealTime forwards
   transition: transform $revealTime
@@ -190,6 +193,7 @@ export default {
   transition: transform $revealTime
   transition-timing-function: $cubicTransition
 
+// revealer vue transition states
 
 .revealer-fade-animation-enter-active
   animation: fadeIn $fadeTime forwards
@@ -197,4 +201,5 @@ export default {
 .revealer-fade-animation-leave-active
   animation: fadeOut $fadeTime forwards
 
+// might put transform up animation here - swaps from fade
 </style>

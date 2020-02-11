@@ -47,10 +47,4 @@ export default {
 <style lang="sass">
 @import "../styles/variables.sass"
 
-.footer
-  z-index: 10
-  position: relative
-  height: 12em
-  background: darkgrey
-
 </style>

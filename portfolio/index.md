@@ -8,10 +8,8 @@ meta:
 ---
 
 ::: slot top
-# Here might be a page title
-:::
-
 <Home/>
+:::
 
 # Hello world
 
