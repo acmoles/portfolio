@@ -7,26 +7,26 @@
       role="navigation"
       aria-label="main navigation"
     >
-      <router-link
-        :to="$localePath"
-        class="home-link"
-      >
-        <img
-          class="logo"
-          :src="$withBase('/images/icons/logo.svg')"
-          :alt="$siteTitle"
+      <div class="navbar-brand">
+        <router-link
+          :to="$localePath"
+          class="home-link"
         >
-        <span
-          ref="siteName"
-          class="site-name"
-        >{{ $siteTitle }}</span>
-      </router-link>
+          <img
+            class="logo"
+            :src="$withBase('/images/icons/logo.svg')"
+            :alt="$siteTitle"
+          >
+          <!-- <span
+            ref="siteName"
+            class="site-name"
+          >{{ $siteTitle }}</span> -->
+        </router-link>
 
-      <div class="links">
-        <NavLinks/>
+        <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
       </div>
 
-      <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+      <NavLinks/>
 
     </header>
   </transition>
@@ -131,6 +131,7 @@ export default {
 
 .navbar
   position: absolute
+  width: 100%
   z-index: 2
   transform: translate3d(0px, -100%, 0px)
   opacity: 0
@@ -140,4 +141,11 @@ export default {
   .navbar
     opacity: 1
     transform: translate3d(0px, 0px, 0px)
+
+.home-link
+  width: 3em
+  height: 3em
+  border-radius: 50%
+  background-color: $blue
+  margin: 1.5em
 </style>

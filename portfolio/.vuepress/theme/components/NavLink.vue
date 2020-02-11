@@ -1,6 +1,6 @@
 <template>
   <router-link
-    class="nav-link"
+    class="navbar-item"
     :to="link"
     @focusout.native="focusoutAction"
     v-if="!isExternal(link)"
@@ -10,7 +10,7 @@
     v-else
     :href="link"
     @focusout="focusoutAction"
-    class="nav-link external"
+    class="navbar-item external"
     :target="isMailto(link) || isTel(link) ? null : '_blank'"
     :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
   >

@@ -1,22 +1,27 @@
 <template>
   <nav
-    class="nav-links"
+    class="navbar-menu"
     v-if="userLinks.length"
   >
+    <div class="navbar-end">
     <!-- user links -->
-    <div
-      class="nav-item"
-      v-for="item in userLinks"
-      :key="item.link"
-    >
-      <DropdownLink
-        v-if="item.type === 'links'"
-        :item="item"
-      />
-      <NavLink
-        v-else
-        :item="item"
-      />
+      <template
+        v-for="item in userLinks"
+      >
+
+        <DropdownLink
+          v-if="item.type === 'links'"
+          :item="item"
+          :key="item.link"
+        />
+
+        <NavLink
+          v-else
+          :item="item"
+          :key="item.link"
+        />
+
+      </template>
     </div>
   </nav>
 </template>
@@ -81,21 +86,5 @@ export default {
 <style lang="sass">
 @import "../styles/variables.sass"
 
-.nav-links
-  display: inline-block
-  a
-    line-height: 1.4rem
-    color: inherit
-    &:hover, &.router-link-active
-      color: $accentColor
-  .nav-item
-    position: relative
-    display: inline-block
-    margin-left: 1.5rem
-    line-height: 2rem
-    &:first-child
-      margin-left: 0
-  .repo-link
-    margin-left: 1.5rem
 
 </style>

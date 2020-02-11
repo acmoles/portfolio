@@ -1,60 +1,75 @@
 <template>
   <div
-    class="dropdown-wrapper"
-    :class="{ open }"
+    class="navbar-item has-dropdown is-hoverable"
+    :class="[open ? 'is-active' : null, ]"
+    aria-label="dropdown navigation"
   >
-    <button
-      class="dropdown-title"
-      type="button"
+    <a
+      class="navbar-link"
+      role="button"
       :aria-label="dropdownAriaLabel"
+      aria-haspopup="true"
+      aria-controls="dropdown-menu"
       @click="setOpen(!open)"
     >
-      <span class="title">{{ item.text }}</span>
-      <span
-        class="arrow"
-        :class="open ? 'down' : 'right'"
-      ></span>
-    </button>
+      <span class="link-text">{{ item.text }}</span>
+      <!-- <span
+      class="icon is-small arrow"
+      :class="[open ? 'down' : 'right']"
+      >
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span> -->
+    </a>
 
-    <ul
-      class="nav-dropdown"
+    <div
+      class="navbar-dropdown is-boxed"
+      role="menu"
       v-show="open"
     >
-      <li
-        class="dropdown-item"
-        :key="subItem.link || index"
-        v-for="(subItem, index) in item.items"
-      >
-        <h4 v-if="subItem.type === 'links'">{{ subItem.text }}</h4>
-
-        <ul
-          class="dropdown-subitem-wrapper"
-          v-if="subItem.type === 'links'"
-        >
-          <li
-            class="dropdown-subitem"
-            :key="childSubItem.link"
-            v-for="childSubItem in subItem.items"
-          >
-            <NavLink
-              @focusout="
-                isLastItemOfArray(childSubItem, subItem.items) &&
-                isLastItemOfArray(subItem, item.items) &&
-                setOpen(false)
-              "
-              :item="childSubItem"/>
-          </li>
-        </ul>
-
         <NavLink
-          v-else
           @focusout="isLastItemOfArray(subItem, item.items) && setOpen(false)"
+          v-for="(subItem, index) in item.items"
+          :key="subItem.link || index"
           :item="subItem"
         />
-      </li>
-    </ul>
+    </div>
   </div>
 </template>
+
+<!-- <div class="dropdown-trigger">
+  <button
+    type="button"
+    class="button"
+    :aria-label="dropdownAriaLabel"
+    aria-haspopup="true"
+    aria-controls="dropdown-menu"
+    @click="setOpen(!open)"
+  >
+    <span class="title">{{ item.text }}</span>
+    <span
+    class="icon is-small arrow"
+    :class="[open ? 'down' : 'right']"
+    >
+      <i class="fas fa-angle-down" aria-hidden="true"></i>
+    </span>
+  </button>
+</div>
+
+<div
+  class="dropdown-menu"
+  role="menu"
+  v-show="open"
+>
+  <div class="dropdown-content">
+    <NavLink
+      class="dropdown-item"
+      @focusout="isLastItemOfArray(subItem, item.items) && setOpen(false)"
+      v-for="(subItem, index) in item.items"
+      :key="subItem.link || index"
+      :item="subItem"
+    />
+  </div>
+</div> -->
 
 <script>
 import NavLink from '@theme/components/NavLink.vue'

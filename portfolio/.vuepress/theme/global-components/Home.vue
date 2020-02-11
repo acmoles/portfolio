@@ -4,7 +4,7 @@
     <div class="home-intro content">
       <div class="columns">
         <div class="column">
-          <h1>First column</h1>
+          <h1>Hello</h1>
         </div>
         <div class="column">
           <p>Second column</p>
@@ -74,7 +74,10 @@ export default {
   @import "../styles/variables.sass"
 
   .home-intro
-    padding: 6em 0
+    padding: 16em 0 9em 0
+    h1
+      font-size: 9em
+      margin-bottom: 0
 
   .grid-wrapper
     display: grid
