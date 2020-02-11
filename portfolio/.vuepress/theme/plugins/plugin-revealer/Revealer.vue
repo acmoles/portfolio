@@ -177,6 +177,7 @@ export default {
   top: 0
   left: 0
   transform-origin: 0 0
+  background-color: $steel
 
 // revealer transition states
 

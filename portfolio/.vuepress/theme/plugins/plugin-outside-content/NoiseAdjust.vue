@@ -12,7 +12,7 @@
 export default {
   data () {
     return {
-      noiseHeight: null,
+      noiseHeight: '100%',
       noisePosition: 'absolute',
     }
   },
@@ -28,7 +28,7 @@ export default {
   watch: {
     pageLoadingStatus (latest, last) {
       if (latest === 'loading') {
-        this.noiseHeight = null
+        this.noiseHeight = window.innerHeight + 'px'
       }
 
       if (latest === 'finished') {
@@ -36,12 +36,11 @@ export default {
         var height = Math.max( html.clientHeight, html.scrollHeight, html.offsetHeight )
 
         this.$store.dispatch('setDocumentHeight', height)
-        console.log('set height yo', height)
       }
     },
     pageHeight (latest, last) {
       if (latest === 0 || latest === null) {
-        this.noiseHeight = null
+        this.noiseHeight = window.innerHeight + 'px'
       } else {
         this.noiseHeight = latest + 'px'
       }
@@ -64,8 +63,8 @@ export default {
   animation: fadeIn 1.5s linear
   div
     @include cover-screen
-    background-image: url('bignoise-inverted.png')
-    background-size: 500px 500px
+    background-image: url('dark-noise.png')
+    background-size: 256px 256px
     animation: flip .3s steps(1) infinite
     mix-blend-mode: overlay
     opacity: .05
