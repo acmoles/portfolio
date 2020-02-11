@@ -1,6 +1,8 @@
 <template>
     <footer class="footer">
-
+      <div class="footer-content">
+        Footer content
+      </div>
       <div
         class="last-updated"
         v-if="lastUpdated"
@@ -8,18 +10,13 @@
         <span class="prefix">{{ lastUpdatedText }}: </span>
         <span class="time">{{ lastUpdated }}</span>
       </div>
-      <SearchBox v-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
-      <NavLinks class="can-hide"/>
     </footer>
 </template>
 
 <script>
-import SearchBox from '@SearchBox'
 import NavLinks from '@theme/components/NavLinks.vue'
 
 export default {
-
-  components: {NavLinks, SearchBox },
 
   computed: {
     lastUpdated () {

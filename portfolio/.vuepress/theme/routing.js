@@ -51,6 +51,7 @@ export default (router, store, siteData) => {
 
   router.afterEach((to, from) => {
     store.dispatch('setSidebarStatus', false)
+    store.dispatch('setSearchboxStatus', false)
   })
 }
 

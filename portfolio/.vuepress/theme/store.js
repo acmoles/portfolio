@@ -24,6 +24,7 @@ export default (Vue) => {
 
   return new Vuex.Store({
     state: {
+      isSearchboxOpen: false,
       isSidebarOpen: false,
       documentHeight: null,
       pageLoadingStatus: 'loading',
@@ -46,6 +47,9 @@ export default (Vue) => {
       navStyle: 'blue' // blue, red, orange, white (outline)
     },
     mutations: {
+      SET_SEARCHBOX_STATUS (state, status) {
+        state.isSearchboxOpen = status
+      },
       SET_SIDEBAR_STATUS (state, status) {
         state.isSidebarOpen = status
       },
@@ -78,6 +82,9 @@ export default (Vue) => {
       },
     },
     actions: {
+      setSearchboxStatus (context, payload) {
+        context.commit('SET_SEARCHBOX_STATUS', payload)
+      },
       setSidebarStatus (context, payload) {
         context.commit('SET_SIDEBAR_STATUS', payload)
       },

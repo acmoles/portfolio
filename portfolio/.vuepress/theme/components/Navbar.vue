@@ -1,5 +1,4 @@
 <template>
-  <transition name="header-transition">
     <header
       class="navbar"
       ref="navbar"
@@ -12,35 +11,40 @@
           :to="$localePath"
           class="home-link"
         >
-          <img
+          <!-- <img
             class="logo"
             :src="$withBase('/images/icons/logo.svg')"
             :alt="$siteTitle"
-          >
+          > -->
           <!-- <span
             ref="siteName"
             class="site-name"
           >{{ $siteTitle }}</span> -->
         </router-link>
-
-        <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+        <SidebarButton
+          v-if="navbarBurgered && !isSearchboxOpen"
+          @toggle-sidebar="toggleSidebar"
+        />
       </div>
 
-      <NavLinks/>
-
+      <NavLinks
+        :active="isSidebarOpen"
+        :burgered="navbarBurgered"
+      />
     </header>
-  </transition>
 </template>
 
 <script>
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 import updateOnScroll from 'uos'
+import debounce from 'lodash.debounce'
 
 export default {
   components: { SidebarButton, NavLinks },
   data () {
     return {
+      navbarBurgered: false,
       navbarHeight: 0,
       navbarPosition: 0,
       scrollPosition: 0,
@@ -53,7 +57,9 @@ export default {
   mounted () {
     this.$nextTick(() => {
       updateOnScroll(0, 1, progress => {
+
         this.handleScroll( progress )
+
       });
     })
   },
@@ -64,6 +70,13 @@ export default {
     },
     navStyle () {
       return this.$store.state.navStyle
+      // TODO respond to navStyle (also in nprogress)
+    },
+    isSidebarOpen () {
+      return this.$store.state.isSidebarOpen
+    },
+    isSearchboxOpen () {
+      return this.$store.state.isSearchboxOpen
     },
   },
 
@@ -74,13 +87,23 @@ export default {
       } else {
         this.show = true
         this.navbarHeight = this.$refs.navbar.offsetHeight
+        this.navbarBurgered = false
       }
     }
   },
 
   methods: {
+    toggleSidebar (to) {
+      let status = typeof to === 'boolean' ? to : !this.isSidebarOpen
+      this.$store.dispatch('setSidebarStatus', status)
+    },
     handleScroll ( progress ) {
-      this.scrollPosition = window.pageYOffset
+      if (progress > 0.1 && this.navbarBurgered === false) {
+        this.navbarBurgered = true
+      } else if (progress === 0) {
+        this.navbarBurgered = false
+      }
+      this.scrollPosition = this.getScrollTop()
       this.navbarPosition = this.getOffsetY(this.$refs.navbar)
 
       if ( this.scrollPosition < this.lastScrollPosition && this.scrollDirection !== 'up' ) {
@@ -113,6 +136,13 @@ export default {
       //   Remove overlap class
       // }
 
+
+      this.$events.fire('navScroll', {
+        scrollProgress: progress,
+        position: this.cssPosition,
+        navBarToViewport: this.cssTop === 0 ? 0 : this.cssTop - window.pageYOffset
+      });
+
       this.lastScrollPosition = this.scrollPosition
 
     },
@@ -120,7 +150,12 @@ export default {
         var rect = el.getBoundingClientRect(),
         scrollTop = window.pageYOffset;
         return rect.top + scrollTop
-    }
+    },
+    getScrollTop () {
+      return window.pageYOffset
+        || document.documentElement.scrollTop
+        || document.body.scrollTop || 0
+    },
   }
 }
 
@@ -132,7 +167,7 @@ export default {
 .navbar
   position: absolute
   width: 100%
-  z-index: 2
+  z-index: 3
   transform: translate3d(0px, -100%, 0px)
   opacity: 0
   transition: transform $fadeTime ease, opacity $fadeTime ease

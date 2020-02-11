@@ -15,16 +15,20 @@
 @keyframes fadeIn
   0%
     opacity: 0
+    filter: opacity(0%)
 
   100%
     opacity: 1
+    filter: opacity(100%)
 
 @keyframes fadeOut
   0%
     opacity: 1
+    filter: opacity(100%)
 
   100%
     opacity: 0
+    filter: opacity(0%)
 
 @keyframes flip
   0%
@@ -41,3 +45,11 @@
 
   100%
     transform: scaleX(-1) scaleY(1)
+
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity 0.3s
+
+
+.fade-enter, .fade-leave-to
+  opacity: 0

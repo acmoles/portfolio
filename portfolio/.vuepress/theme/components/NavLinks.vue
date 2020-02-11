@@ -1,6 +1,7 @@
 <template>
   <nav
-    class="navbar-menu"
+    class="navbar-menu is-flex-mobile is-flex-tablet"
+    :class="{ 'is-active': active, 'burgered': burgered }"
     v-if="userLinks.length"
   >
     <div class="navbar-end">
@@ -33,6 +34,11 @@ import NavLink from '@theme/components/NavLink.vue'
 
 export default {
   components: { NavLink, DropdownLink },
+
+  props: {
+    active: Boolean,
+    burgered: Boolean
+  },
 
   computed: {
     userNav () {
@@ -86,5 +92,17 @@ export default {
 <style lang="sass">
 @import "../styles/variables.sass"
 
+.navbar-menu
+  transition: opacity 0.4s ease
+  margin-right: 1.5em
 
+.navbar-menu.burgered
+  filter: opacity(0%)
+  opacity: 0
+  @media screen and (min-width: $desktop)
+    margin-right: 6em
+
+.navbar-menu.burgered.is-active
+  filter: opacity(100%)
+  opacity: 1
 </style>
