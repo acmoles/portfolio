@@ -113,7 +113,14 @@ export default (Vue) => {
           document.documentElement.style.scrollBehavior = 'smooth'
         }
 
-        context.commit('SET_LOADING_STATUS', payload)
+        if (payload === 'revealing') {
+          setTimeout(() => {
+            context.commit('SET_LOADING_STATUS', payload)
+            // wait for nprogress to finish before actually revealing
+          }, 400)
+        } else {
+          context.commit('SET_LOADING_STATUS', payload)
+        }
       },
       setTitleStatus (context, payload) {
         context.commit('SET_TITLE_STATUS', payload)

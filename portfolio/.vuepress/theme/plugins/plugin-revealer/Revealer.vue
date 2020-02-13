@@ -178,6 +178,7 @@ export default {
   left: 0
   transform-origin: 0 0
   background-color: $steel
+  filter: opacity(100%)
 
 // revealer transition states
 
@@ -191,7 +192,7 @@ export default {
 
 .revealer-reveal-animation-active
   // animation: animateOut $revealTime forwards
-  transition: transform $revealTime
+  transition: transform $revealTime 50ms
   transition-timing-function: $cubicTransition
 
 // revealer vue transition states
