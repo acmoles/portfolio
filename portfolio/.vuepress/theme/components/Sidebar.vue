@@ -4,16 +4,38 @@
       v-show="isSidebarOpen"
       class="modal-background sidebar-container"
       >
-      <aside class="sidebar">
-        <slot name="top"/>
-        <SidebarLinks :depth="0" :items="sidebarItems"/>
-        <slot name="bottom"/>
-      </aside>
+      <transition name="fade">
+        <aside
+          v-show="!isSearchboxOpen"
+          class="sidebar"
+          >
+          <slot name="top"/>
+          <SidebarLinks :depth="0" :items="sidebarItems"/>
+          <slot name="bottom"/>
+        </aside>
+      </transition>
+      <SidebarButton
+        purpose="search"
+        class="search-sidebar-button"
+        @sidebar-button-event="toggleSearch"
+      />
+      <SidebarButton
+        purpose="goto-top"
+        class="goto-top-sidebar-button"
+        @sidebar-button-event="gotoTop"
+      />
+      <transition name="fade">
+        <SearchboxContainer
+          v-show="isSearchboxOpen"
+        />
+      </transition>
     </div>
   </transition>
 </template>
 
 <script>
+import SearchboxContainer from '@theme/components/SearchboxContainer.vue'
+import SidebarButton from '@theme/components/SidebarButton.vue'
 import SidebarLinks from '@theme/components/SidebarLinks.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 import { resolveSidebarItems } from '../util'
@@ -21,11 +43,20 @@ import { resolveSidebarItems } from '../util'
 export default {
   name: 'Sidebar',
 
-  components: { SidebarLinks, NavLinks },
+  components: { SidebarLinks, NavLinks, SidebarButton, SearchboxContainer },
+
+  data () {
+    return {
+      searchPurpose: 'search'
+    }
+  },
 
   computed: {
     isSidebarOpen () {
       return this.$store.state.isSidebarOpen
+    },
+    isSearchboxOpen () {
+      return this.$store.state.isSearchboxOpen
     },
     sidebarItems () {
       return resolveSidebarItems(
@@ -35,6 +66,25 @@ export default {
         this.$localePath
       )
     },
+  },
+  methods: {
+    toggleSearch () {
+      this.$store.dispatch('setSearchboxStatus', !this.isSearchboxOpen)
+    },
+    gotoTop () {
+      const onScroll = function () {
+          if (window.pageYOffset === 0) {
+              window.removeEventListener('scroll', onScroll.bind(this))
+              this.$store.dispatch('setSidebarStatus', false)
+          }
+      }
+      window.addEventListener('scroll', onScroll.bind(this))
+      onScroll()
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      })
+    }
   }
 }
 </script>
@@ -80,4 +130,13 @@ export default {
     & > li:not(:first-child)
       margin-top: .75rem
 
+.search-sidebar-button
+  position: absolute
+  bottom: 0
+  left: 0
+
+.goto-top-sidebar-button
+  position: absolute
+  bottom: 0
+  right: 0
 </style>

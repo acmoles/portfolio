@@ -36,5 +36,7 @@ module.exports = {
     ],
     smoothScroll: true
   },
-  sass: { indentedSyntax: true }
+  sass: { indentedSyntax: true },
+  fadeTransitionTime: 400, // sass variable $fadeTime
+  revealTransitionTime: 600, // sass variable $revealTime
 }

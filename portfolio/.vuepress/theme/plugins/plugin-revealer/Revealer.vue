@@ -18,7 +18,7 @@
 
 <script>
 import { resolvePage } from '../../util'
-import config from '../../config.js'
+import config from '../../../config.js'
 
 export default {
 
@@ -192,7 +192,7 @@ export default {
 
 .revealer-reveal-animation-active
   // animation: animateOut $revealTime forwards
-  transition: transform $revealTime 50ms
+  transition: transform $revealTime
   transition-timing-function: $cubicTransition
 
 // revealer vue transition states

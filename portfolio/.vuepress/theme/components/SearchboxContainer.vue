@@ -1,13 +1,9 @@
 <template>
-  <transition name="fade">
     <div
-      class="modal-background search-box-container"
-      v-if="isSearchboxOpen"
+      class="search-box-container"
     >
-      <SearchBox/>
+      <SearchBox class="searchbox"/>
     </div>
-
-  </transition>
 </template>
 
 <script>
@@ -19,12 +15,6 @@ export default {
   data () {
     return {
       progress: 0,
-    }
-  },
-
-  computed: {
-    isSearchboxOpen () {
-      return this.$store.state.isSearchboxOpen
     }
   },
 
@@ -43,12 +33,17 @@ export default {
 </script>
 
 <style lang='sass' scoped>
-@import "../../styles/variables.sass"
-@import "../../styles/mixins.sass"
+@import "../styles/variables.sass"
+@import "../styles/mixins.sass"
 
 .search-box-container
   @include cover-screen
-  position: fixed
+  display: flex
+  align-items: center
+  justify-content: center
+  pointer-events: none
 
+.searchbox
+  pointer-events: all
 
 </style>

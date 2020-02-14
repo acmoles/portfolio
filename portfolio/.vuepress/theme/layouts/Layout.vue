@@ -44,20 +44,9 @@ export default {
       return this.$store.state.pageLoadingStatus
     },
 
-    shouldShowSidebar () {
-      const { frontmatter } = this.$page
-      return (
-        !frontmatter.home
-        && frontmatter.sidebar !== false
-      )
-    },
-
     pageClasses () {
       const userPageClass = this.$page.frontmatter.pageClass
       return [
-        {
-          'no-sidebar': !this.shouldShowSidebar
-        },
         this.pageLoadingStatus,
         userPageClass
       ]
@@ -89,23 +78,13 @@ export default {
   .page-content
     // animation: animateIn $revealTime forwards
 
-  .navbar, .sidebar
-    // opacity: 0
-
-
 .finished
   .page-content
     // transform: translateY(0vh)
-
-  .navbar, .sidebar
-    // opacity: 1
 
 .covering
   .page-content
     // transform: translateY(0vh)
     // animation: animateOut $revealTime forwards;
-
-  .navbar, .sidebar
-    // opacity: 0
 
 </style>

@@ -1,6 +1,6 @@
 import Vuex from 'vuex'
 import nprogress from 'nprogress'
-import config from './config.js'
+import config from '../config.js'
 
 /*
 Loading states:
@@ -86,6 +86,9 @@ export default (Vue) => {
         context.commit('SET_SEARCHBOX_STATUS', payload)
       },
       setSidebarStatus (context, payload) {
+        if (payload === false) {
+          context.commit('SET_SEARCHBOX_STATUS', payload)
+        }
         context.commit('SET_SIDEBAR_STATUS', payload)
       },
       setDocumentHeight (context, payload) {

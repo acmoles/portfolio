@@ -1,23 +1,55 @@
 <template>
   <button
-    class="hamburger hamburger--spin"
-    :class="{ 'is-active': isSidebarOpen }"
+    class="sidebar-button"
+    :class="{ 'hamburger hamburger--spin': purpose === 'menu' }"
     type="button"
-    aria-label="menu"
+    :aria-label="purpose"
     aria-expanded="false"
-    @click="$emit('toggle-sidebar')"
+    @click="$emit('sidebar-button-event')"
   >
-    <span aria-hidden="true" class="hamburger-box">
+
+    <span
+      v-if="purpose === 'menu'"
+      aria-hidden="true"
+      class="hamburger-box"
+      :class="{ 'is-active': isSidebarOpen }"
+    >
       <span aria-hidden="true" class="hamburger-inner"></span>
+    </span>
+
+    <span
+      v-else-if="purpose === 'search'"
+      aria-hidden="true"
+      class="button-box icon is-medium"
+      :class="{ 'is-active': isSearchboxOpen }"
+    >
+      <span aria-hidden="true" class="button-inner search-inner">Search</span>
+      <span aria-hidden="true" class="button-inner list-inner">List</span>
+    </span>
+
+    <span
+      v-else-if="purpose === 'goto-top'"
+      aria-hidden="true"
+      class="icon is-medium"
+    >
+      Gototop
     </span>
   </button>
 </template>
 
 <script>
   export default {
+    props: {
+      purpose: {
+        required: true
+      }
+    },
     computed: {
       isSidebarOpen () {
         return this.$store.state.isSidebarOpen
+      },
+      isSearchboxOpen () {
+        return this.$store.state.isSearchboxOpen
       }
     }
   }
@@ -35,9 +67,8 @@ $hamburger-active-layer-color: $white-ter
 
 $hamburger-hover-use-filter   : true
 $hamburger-hover-filter       : opacity(50%)
-$hamburger-active-hover-filter: $hamburger-hover-filter
 
-.hamburger
+.sidebar-button
   width: 6em
   height: 6em
   padding: 0
@@ -46,7 +77,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter
   align-items: center
   cursor: pointer
 
-  transition-property: opacity, filter
+  transition-property: filter
   transition-duration: 0.15s
   transition-timing-function: linear
 
@@ -59,16 +90,10 @@ $hamburger-active-hover-filter: $hamburger-hover-filter
   margin: 0
   overflow: visible
 
-  position: absolute
-  right: 0
-
   &:hover
     filter: $hamburger-hover-filter
 
-  &.is-active
-    &:hover
-      filter: $hamburger-active-hover-filter
-
+.hamburger
     // .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after
@@ -112,7 +137,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter
   &::after
     bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1
 
-.hamburger--spin
+.hamburger-box
     .hamburger-inner
       transition-duration: 0.22s
       transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
@@ -138,5 +163,26 @@ $hamburger-active-hover-filter: $hamburger-hover-filter
           bottom: 0
           transform: rotate(-90deg)
           transition: bottom 0.1s ease-out, transform 0.22s 0.1s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+.button-box
+  transition-duration: 0.22s
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  .search-inner, .list-inner
+    transition: filter 0.22s ease
+    position: absolute
+  .search-inner
+    filter: opacity(100%)
+  .list-inner
+    filter: opacity(0%)
+    transform: rotate(-180deg)
+
+  &.is-active
+    transform: rotate(180deg)
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    .search-inner
+      filter: opacity(0%)
+    .list-inner
+      filter: opacity(100%)
+
 
 </style>

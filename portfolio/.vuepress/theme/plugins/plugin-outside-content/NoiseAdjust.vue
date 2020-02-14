@@ -53,6 +53,17 @@ export default {
 @import '../../styles/mixins.sass'
 @import '../../styles/animations.sass'
 
+html::before
+  @include cover-screen
+  position: fixed
+  content: " "
+  display: block
+  background-image: url('dark-noise.png')
+  background-size: 256px 256px
+  background-position: 128px 128px
+  animation: flip .3s steps(1) infinite
+  opacity: .1
+
 .noise-adjust
   @include cover-screen
   position: fixed

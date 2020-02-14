@@ -5,5 +5,5 @@ module.exports = {
     path.resolve(__dirname, 'enhanceAppFile.js')
   ],
 
-  globalUIComponents: ['BottomNav', 'NoiseAdjust', 'SearchboxContainer']
+  globalUIComponents: ['NoiseAdjust']
 }

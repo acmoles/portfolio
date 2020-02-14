@@ -36,6 +36,8 @@
 <script>
 
 export default {
+  
+// TODO move bottom nav into sidebar overlay
 
   data () {
     return {

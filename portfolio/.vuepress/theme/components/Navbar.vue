@@ -22,8 +22,10 @@
           >{{ $siteTitle }}</span> -->
         </router-link>
         <SidebarButton
-          v-if="navbarBurgered && !isSearchboxOpen"
-          @toggle-sidebar="toggleSidebar"
+          purpose="menu"
+          class="nav-sidebar-button"
+          v-if="navbarBurgered"
+          @sidebar-button-event="toggleSidebar"
         />
       </div>
 
@@ -98,11 +100,18 @@ export default {
       this.$store.dispatch('setSidebarStatus', status)
     },
     handleScroll ( progress ) {
+      if (this.isSidebarOpen) {
+        this.cssPosition = 'fixed'
+        this.cssTop = 0
+        return
+      }
+
       if (progress > 0.1 && this.navbarBurgered === false) {
         this.navbarBurgered = true
       } else if (progress === 0) {
         this.navbarBurgered = false
       }
+
       this.scrollPosition = this.getScrollTop()
       this.navbarPosition = this.getOffsetY(this.$refs.navbar)
 
@@ -137,11 +146,11 @@ export default {
       // }
 
 
-      this.$events.fire('navScroll', {
-        scrollProgress: progress,
-        position: this.cssPosition,
-        navBarToViewport: this.cssTop === 0 ? 0 : this.cssTop - window.pageYOffset
-      });
+      // this.$events.fire('navScroll', {
+      //   scrollProgress: progress,
+      //   position: this.cssPosition,
+      //   navBarToViewport: this.cssTop === 0 ? 0 : this.cssTop - window.pageYOffset
+      // });
 
       this.lastScrollPosition = this.scrollPosition
 
@@ -161,7 +170,7 @@ export default {
 
 </script>
 
-<style lang="sass">
+<style scoped lang="sass">
 @import "../styles/variables.sass"
 
 .navbar
@@ -183,4 +192,8 @@ export default {
   border-radius: 50%
   background-color: $blue
   margin: 1.5em
+
+.nav-sidebar-button
+  position: absolute
+  right: 0
 </style>
