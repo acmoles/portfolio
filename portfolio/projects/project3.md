@@ -1,6 +1,6 @@
 ---
 uid: 3
-title: Ecosia
+title: Ecosia other
 subtitle: Project 3
 type: single
 background: is-info

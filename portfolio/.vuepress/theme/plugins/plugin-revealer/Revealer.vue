@@ -11,7 +11,9 @@
       :style="{ transform: transformString, WebkitTransform: transformString }"
       ref="revealer"
     >
-      <h1 class="revealer-page-title">{{ title }}</h1>
+      <div class="container is-fluid content">
+        <h1 class="main-title">{{ title }}</h1>
+      </div>
     </div>
   </transition>
 </template>
@@ -179,6 +181,10 @@ export default {
   transform-origin: 0 0
   background-color: $steel
   filter: opacity(100%)
+  .content
+    height: 100%
+    display: flex
+    align-items: center
 
 // revealer transition states
 

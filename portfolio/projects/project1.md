@@ -1,8 +1,8 @@
 ---
 uid: 1
-title: Wesen
+title: Ecosia
 subtitle: Project 1
-type: double-left
+type: single
 background: is-success
 sidebar: auto
 date: 2019-09-11

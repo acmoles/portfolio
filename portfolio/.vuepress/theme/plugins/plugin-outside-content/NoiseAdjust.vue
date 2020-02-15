@@ -53,7 +53,7 @@ export default {
 @import '../../styles/mixins.sass'
 @import '../../styles/animations.sass'
 
-html::before
+#app::before
   @include cover-screen
   position: fixed
   content: " "

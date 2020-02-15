@@ -1,8 +1,8 @@
 ---
 uid: 6
-title: Stompy Robot
+title: toucanBox main
 subtitle: Project 6
-type: single
+type: double-left
 background: is-warning
 sidebar: auto
 date: 2019-09-12
