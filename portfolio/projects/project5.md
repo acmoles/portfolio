@@ -1,6 +1,6 @@
 ---
 uid: 5
-title: Makielab
+title: toucanBox R&D
 subtitle: Project 5
 type: single
 background: is-success
@@ -14,7 +14,7 @@ next: ./project6
 
 <ProjectStage>
   <template v-slot:visual>
-    <ImageHero/>
+    <ImageHero imageKey="toucan-rnd"/>
   </template>
 
   <template v-slot:description>

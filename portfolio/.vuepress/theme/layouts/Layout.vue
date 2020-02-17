@@ -61,6 +61,8 @@ export default {
 
 <style lang="sass">
 @import "../styles/variables.sass"
+@import "../styles/mixins.sass"
+
 
 .page-content
   min-height: 100vh
@@ -74,8 +76,8 @@ export default {
     padding: 0 2em
     flex-grow: 1
 
-.loading
-  display: none
+// .loading
+//   display: none
 
 .revealing
   .page-content
@@ -89,5 +91,21 @@ export default {
   .page-content
     // transform: translateY(0vh)
     // animation: animateOut $revealTime forwards;
+
+.layout
+  &::after
+    @include cover-screen
+    position: fixed
+    content: " "
+    display: block
+    background: $black
+    transition: filter .4s linear
+    filter: opacity(0%)
+    pointer-events: none
+
+.layout.covering
+  &::after
+    filter: opacity(100%)
+
 
 </style>

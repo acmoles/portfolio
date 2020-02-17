@@ -20,15 +20,21 @@ export default (Vue) => {
   // Start first load
   nprogress.start()
 
+  // Set initial scroll styles
+  document.documentElement.style.overflowY = 'scroll'
+  document.documentElement.style.scrollBehavior = 'smooth'
+
   Vue.use(Vuex)
 
   return new Vuex.Store({
     state: {
       isSearchboxOpen: false,
       isSidebarOpen: false,
-      documentHeight: null,
       pageLoadingStatus: 'loading',
-      revealerTitle: 'Anthony Moles',
+      revealerTitle: {
+        title: '',
+        subtitle: ''
+      },
       revealerInitialised: false,
       nextGuardCallback : null,
       projectPosition: {
@@ -43,7 +49,10 @@ export default (Vue) => {
         background: ''
       },
       useLastProject: false,
-      navStyle: 'blue' // blue, red, orange, white (outline)
+      navStyle: {
+        logo: 'blue', // blue, red, orange, white (outline)
+        links: 'light' // dark
+      }
     },
     mutations: {
       SET_SEARCHBOX_STATUS (state, status) {
@@ -51,9 +60,6 @@ export default (Vue) => {
       },
       SET_SIDEBAR_STATUS (state, status) {
         state.isSidebarOpen = status
-      },
-      SET_DOC_HEIGHT (state, status) {
-        state.documentHeight = status
       },
       SET_LOADING_STATUS (state, status) {
         state.pageLoadingStatus = status
@@ -90,9 +96,6 @@ export default (Vue) => {
         }
         context.commit('SET_SIDEBAR_STATUS', payload)
       },
-      setDocumentHeight (context, payload) {
-        context.commit('SET_DOC_HEIGHT', payload)
-      },
       setLoadingPageContent (context, payload) {
         if (payload === 'loading') {
           nprogress.start()
@@ -100,29 +103,21 @@ export default (Vue) => {
           nprogress.done()
         }
 
-        if (payload === 'loading' || payload === 'covering') {
-          document.documentElement.style.overflow = 'hidden'
-          document.documentElement.style.scrollBehavior = 'auto'
-        }
-
-        else if (payload === 'revealing') {
-          document.documentElement.style.overflow = 'scroll'
-          document.documentElement.style.scrollBehavior = 'auto'
-        }
-
-        else {
-          document.documentElement.style.overflow = 'scroll'
-          document.documentElement.style.scrollBehavior = 'smooth'
+        if (payload === 'covering') {
+          // disallow scroll
+          document.documentElement.style.overflowY = 'hidden'
+        } else if (payload === 'finished') {
+          document.documentElement.style.overflowY = 'scroll'
         }
 
         if (payload === 'revealing') {
-          setTimeout(() => {
-            context.commit('SET_LOADING_STATUS', payload)
-            // wait for nprogress to finish before actually revealing
-          }, 400)
+          // ensure instant scroll
+          document.documentElement.style.scrollBehavior = 'auto'
         } else {
-          context.commit('SET_LOADING_STATUS', payload)
+          document.documentElement.style.scrollBehavior = 'smooth'
         }
+
+        context.commit('SET_LOADING_STATUS', payload)
       },
       setTitleStatus (context, payload) {
         context.commit('SET_TITLE_STATUS', payload)
@@ -147,4 +142,15 @@ export default (Vue) => {
       },
     }
   })
+}
+
+var lockScroll = false
+var yscroll = 0
+
+function noscroll() {
+  if(!lockScroll) {
+    lockScroll = true;
+    yscroll = window.pageYOffset
+  }
+  window.scrollTo(0, yscroll);
 }

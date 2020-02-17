@@ -14,7 +14,7 @@ next: ./project10
 
 <ProjectStage>
   <template v-slot:visual>
-    <ImageHero/>
+    <ImageHero imageKey="lego"/>
   </template>
 
   <template v-slot:description>

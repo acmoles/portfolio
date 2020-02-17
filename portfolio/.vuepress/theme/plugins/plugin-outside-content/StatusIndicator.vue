@@ -1,6 +1,10 @@
 <template>
   <div class="status-indicator">
-    {{ pageLoadingStatus }}
+    {{ pageLoadingStatus }} <br>
+    <hr>
+    {{ lastProject }} <br>
+    <hr>
+    Use last project? {{ useLastProject }} <br>
   </div>
 </template>
 
@@ -12,6 +16,18 @@ export default {
     pageLoadingStatus () {
       return this.$store.state.pageLoadingStatus
     },
+
+    projectPosition () {
+      return this.$store.state.projectPosition
+    },
+
+    lastProject () {
+      return this.$store.state.lastProject
+    },
+
+    useLastProject () {
+      return this.$store.state.useLastProject
+    },
   }
 
 }
@@ -20,7 +36,7 @@ export default {
 
 <style lang="stylus">
   .status-indicator {
-    display: block;
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;

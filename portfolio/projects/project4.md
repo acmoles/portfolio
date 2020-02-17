@@ -1,6 +1,6 @@
 ---
 uid: 4
-title: toucanBox
+title: BLKBRD
 subtitle: Project 4
 type: single
 background: is-danger
@@ -14,7 +14,7 @@ next: ./project5
 
 <ProjectStage>
   <template v-slot:visual>
-    <ImageHero/>
+    <ImageHero imageKey="blkbrd"/>
   </template>
 
   <template v-slot:description>

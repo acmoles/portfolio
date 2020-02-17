@@ -1,6 +1,6 @@
 ---
 uid: 8
-title: ATC
+title: Random International
 subtitle: Project 8
 type: single
 background: is-warning
@@ -14,7 +14,7 @@ next: ./project9
 
 <ProjectStage>
   <template v-slot:visual>
-    <ImageHero/>
+    <ImageHero imageKey="random"/>
   </template>
 
   <template v-slot:description>

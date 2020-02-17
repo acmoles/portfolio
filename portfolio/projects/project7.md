@@ -1,6 +1,6 @@
 ---
 uid: 7
-title: Random
+title: Makielab
 subtitle: Project 7
 type: single
 background: is-link
@@ -14,7 +14,7 @@ next: ./project8
 
 <ProjectStage>
   <template v-slot:visual>
-    <ImageHero/>
+    <ImageHero imageKey="makielab"/>
   </template>
 
   <template v-slot:description>

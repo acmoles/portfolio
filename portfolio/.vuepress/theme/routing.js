@@ -16,6 +16,7 @@ export default (router, store, siteData) => {
 
       } else if (from.path === '/' && to.path !== '/about/') {
         // homepage to project - gains special last project behaviour
+
         store.dispatch('setLastProject', {
           hasLastProject: true,
           background: toPageFrontmatter.background
@@ -29,9 +30,12 @@ export default (router, store, siteData) => {
         })
       }
 
-      // Could be combined into current/upcoming page data
+      // Could be combined together into current/upcoming page data
       store.dispatch('setNavStyle', toPageFrontmatter.navStyle)
-      store.dispatch('setTitleStatus', toPageFrontmatter.title)
+      store.dispatch('setTitleStatus', {
+        title: toPageFrontmatter.title,
+        subtitle: toPageFrontmatter.subtitle
+      })
 
       // Hold up router until covering squence is finished
       // Store for later use in revealer component

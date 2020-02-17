@@ -11,37 +11,31 @@
       :style="{ transform: transformString, WebkitTransform: transformString }"
       ref="revealer"
     >
-      <div class="container is-fluid content">
-        <h1 class="main-title">{{ title }}</h1>
-      </div>
-    </div>
+  </div>
   </transition>
 </template>
 
 <script>
-import { resolvePage } from '../../util'
 import config from '../../../config.js'
+import IncomingTitle from './IncomingTitle.vue'
 
 export default {
+
+  // components: { IncomingTitle },
 
   data () {
     return {
       show: true,
       transitionName: '',
-      homepageSpecialRoutingFlag: true,
       backgroundClass: '',
       revealerClass: 'revealer-fixed-active',
-      transformString: ''
+      transformString: 'translate3D(0, 0, 0) scale3d(1, 1, 1)'
     }
   },
 
   computed: {
     pageLoadingStatus () {
       return this.$store.state.pageLoadingStatus
-    },
-
-    title () {
-      return this.$store.state.revealerTitle
     },
 
     projectPosition () {
@@ -64,13 +58,16 @@ export default {
   watch: {
     pageLoadingStatus (latest, last) {
 
-      if (latest === 'loading') {
-        this.revealerClass = 'revealer-fixed-active'
-        this.transformString = ''
+      if (latest === last) {
+        return
       }
 
       if (latest === 'covering' || latest === 'loading') {
         this.show = true
+        if (latest === 'loading') {
+          this.revealerClass = 'revealer-fixed-active'
+          this.transformString = 'translate3D(0, 0, 0) scale3d(1, 1, 1)'
+        }
       }
 
       else if (latest === 'revealing' && this.useLastProject) {
@@ -79,7 +76,7 @@ export default {
         this.$nextTick(() => { // might need to replace with setTimout
           document.documentElement.scrollTop = this.projectPosition.scroll
           this.revealerClass = ''
-          this.transformString = 'translate3d(0px, ' + this.projectPosition.scroll + 'px, 0px)'
+          this.transformString = 'translate3d(0px, ' + this.projectPosition.scroll + 'px, 0px) scale3d(1, 1, 1)'
 
             setTimeout(() => {
               // wait a fraction - DOM render if prioritised over setTimout callback
@@ -89,9 +86,9 @@ export default {
                 setTimeout(() => {
                   this.show = false
                   this.$store.dispatch('useLastProject', false)
-                }, config.revealTransitionTime / 1.5) // transition time
+                }, config.fadeTransitionTime / 2) // transition time
 
-            }, 100)
+            }, config.fadeTransitionTime)
 
         })
 
@@ -110,7 +107,7 @@ export default {
       this.transformString = this.generateTransformStringPlacement()
 
       setTimeout(() => {
-        this.transformString = 'translate3d(0px, ' + this.projectPosition.scroll + 'px, 0px)'
+        this.transformString = 'translate3d(0px, ' + this.projectPosition.scroll + 'px, 0px) scale3d(1, 1, 1)'
       }, config.fadeTransitionTime / 2)
     },
 
@@ -136,14 +133,13 @@ export default {
       this.$store.dispatch('setLoadingPageContent', 'finished')
       this.$store.dispatch('useLastProject', false)
       this.revealerClass = 'revealer-fixed-active'
-      this.transformString = ''
+      this.transformString = 'translate3D(0, 0, 0) scale3d(1, 1, 1)'
     },
 
     generateTransformStringPlacement() {
       let translateX = this.projectPosition.childLeft
       let translateY = this.projectPosition.childTop
       let scaleX = this.projectPosition.childWidth / this.getViewport('x')
-      console.log('scale X: ', scaleX);
       let scaleY = this.projectPosition.childHeight / this.getViewport('y')
 
       return 'translate3D(' + translateX + 'px, ' + translateY + 'px, 0px) scale3d(' + scaleX + ',' + scaleY + ',1)'
@@ -170,38 +166,36 @@ export default {
 <style lang="sass">
 
 @import '../../styles/variables.sass'
+@import '../../styles/mixins.sass'
 
 .revealer
   // pointer-events: none
-  position: absolute
-  width: 100%
-  height: 100vh
-  z-index: 100
-  top: 0
-  left: 0
+  @include cover-screen
+  @include make3d
+  z-index: 99
   transform-origin: 0 0
-  background-color: $steel
+  background-color: $black
   filter: opacity(100%)
   border-radius: 0
-  .content
-    height: 100%
-    display: flex
-    align-items: center
+
 
 // revealer transition states
 
 .revealer-cover-animation-active
-  // animation: animateIn $revealTime forwards
   transition: transform $revealTime
   transition-timing-function: $cubicTransition
 
 .revealer-fixed-active
   position: fixed
 
+.revealer-absolute-active
+  position: absolute
+  // this fixes initial text flicker
+
 .revealer-reveal-animation-active
-  // animation: animateOut $revealTime forwards
   transition: transform $revealTime
   transition-timing-function: $cubicTransition
+
 
 // revealer vue transition states
 
@@ -209,7 +203,5 @@ export default {
   animation: fadeIn $fadeTime forwards
 
 .revealer-fade-animation-leave-active
-  animation: fadeOut $fadeTime forwards
-
-// might put transform up animation here - swaps from fade
+  animation: fadeOut $fadeTime $fadeTime forwards
 </style>

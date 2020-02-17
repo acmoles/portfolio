@@ -1,6 +1,6 @@
 ---
 uid: 3
-title: Ecosia other
+title: Stompy Robot
 subtitle: Project 3
 type: single
 background: is-info
@@ -14,7 +14,7 @@ next: ./project4
 
 <ProjectStage>
   <template v-slot:visual>
-    <ImageHero/>
+    <ImageHero imageKey="stompy-robot"/>
   </template>
 
   <template v-slot:description>

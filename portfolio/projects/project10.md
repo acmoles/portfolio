@@ -1,6 +1,6 @@
 ---
 uid: 10
-title: Stompy Robot
+title: Art Lebedev Studio
 subtitle: Project 10
 type: single
 background: is-primary
@@ -14,7 +14,7 @@ next: ./project1
 
 <ProjectStage>
   <template v-slot:visual>
-    <ImageHero/>
+    <ImageHero imageKey="als"/>
   </template>
 
   <template v-slot:description>

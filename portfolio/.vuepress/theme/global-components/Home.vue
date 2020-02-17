@@ -46,7 +46,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.doLoad()
-    }, 10)
+    }, 1)
   },
 
   computed: {

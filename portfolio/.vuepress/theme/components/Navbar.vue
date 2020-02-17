@@ -106,6 +106,7 @@ export default {
         return
       }
 
+      // TODO test for burgered when loading status reveals nav
       if (progress > 0.1 && this.navbarBurgered === false) {
         this.navbarBurgered = true
       } else if (progress === 0) {

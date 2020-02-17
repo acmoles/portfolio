@@ -1,5 +1,5 @@
 ---
-title: Anthony Moles
+title: 
 home: true
 navbar: true
 meta:

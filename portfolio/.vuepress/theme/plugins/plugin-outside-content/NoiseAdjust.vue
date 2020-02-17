@@ -9,44 +9,10 @@
 <script>
 
 export default {
-  data () {
-    return {
-      noiseHeight: '100%',
-      noisePosition: 'absolute',
-    }
-  },
 
-  computed: {
-    pageLoadingStatus () {
-      return this.$store.state.pageLoadingStatus
-    },
-    pageHeight () {
-      return this.$store.state.documentHeight
-    }
-  },
-  watch: {
-    pageLoadingStatus (latest, last) {
-      if (latest === 'loading') {
-        this.noiseHeight = window.innerHeight + 'px'
-      }
-
-      if (latest === 'revealing') {
-        this.$nextTick(() => {
-            var html = document.documentElement
-            var height = Math.max( html.clientHeight, html.scrollHeight, html.offsetHeight )
-
-            this.$store.dispatch('setDocumentHeight', height)
-        })
-      }
-    },
-    pageHeight (latest, last) {
-        this.noiseHeight = latest + 'px'
-    }
-  }
 }
 
 </script>
-<!-- :style="{ height: noiseHeight, position: noisePosition }" -->
 
 <style lang="sass">
 @import '../../styles/variables.sass'
@@ -57,7 +23,7 @@ export default {
   @include cover-screen
   position: fixed
   content: " "
-  display: block
+  display: none
   background-image: url('dark-noise.png')
   background-size: 256px 256px
   background-position: 128px 128px
@@ -66,6 +32,7 @@ export default {
   pointer-events: none
 
 .noise-adjust
+  display: none
   @include cover-screen
   position: fixed
   transform: translate3d(0,0,0)

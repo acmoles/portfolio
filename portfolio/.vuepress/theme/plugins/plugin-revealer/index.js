@@ -5,5 +5,5 @@ module.exports = {
     path.resolve(__dirname, 'enhanceAppFile.js')
   ],
 
-  globalUIComponents: 'Revealer'
+  globalUIComponents: ['Revealer']
 }

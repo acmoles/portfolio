@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   dest: './dist',
   title: 'Anthony Moles Portfolio',
@@ -38,5 +40,12 @@ module.exports = {
   },
   sass: { indentedSyntax: true },
   fadeTransitionTime: 400, // sass variable $fadeTime
-  revealTransitionTime: 600, // sass variable $revealTime
+  revealTransitionTime: 800, // sass variable $revealTime
+  configureWebpack: {
+    resolve: {
+      alias: {
+        "@assets": path.resolve(__dirname, '../assets')
+      }
+    }
+  },
 }

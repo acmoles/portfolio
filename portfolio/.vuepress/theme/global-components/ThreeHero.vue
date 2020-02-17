@@ -20,7 +20,10 @@ export default {
   },
 
   mounted() {
-    this.doLoad()
+    setTimeout(() => {
+      this.doLoad()
+    }, 5000)
+
   },
 
   methods: {
