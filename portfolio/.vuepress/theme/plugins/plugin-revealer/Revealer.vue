@@ -140,10 +140,11 @@ export default {
     },
 
     generateTransformStringPlacement() {
-      let translateX = this.projectPosition.childOffsetLeft
-      let translateY = this.projectPosition.childOffsetTop
-      let scaleX = this.projectPosition.childOffsetWidth / this.projectPosition.parentOffsetWidth
-      let scaleY = this.projectPosition.childOffsetHeight / this.getViewport('y')
+      let translateX = this.projectPosition.childLeft
+      let translateY = this.projectPosition.childTop
+      let scaleX = this.projectPosition.childWidth / this.getViewport('x')
+      console.log('scale X: ', scaleX);
+      let scaleY = this.projectPosition.childHeight / this.getViewport('y')
 
       return 'translate3D(' + translateX + 'px, ' + translateY + 'px, 0px) scale3d(' + scaleX + ',' + scaleY + ',1)'
     },
@@ -181,6 +182,7 @@ export default {
   transform-origin: 0 0
   background-color: $steel
   filter: opacity(100%)
+  border-radius: 0
   .content
     height: 100%
     display: flex

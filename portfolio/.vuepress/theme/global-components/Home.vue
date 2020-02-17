@@ -1,15 +1,11 @@
 <template>
-  <div class="container is-fluid is-home" ref="gridParent">
+  <div class="container is-home">
 
     <div class="home-intro content">
-      <div class="columns">
-        <div class="column">
-          <h1 class="home-title">Hello</h1>
-        </div>
-        <div class="column is-two-thirds">
-          <p class="tagline">I’m a multidisciplinary designer creating useful and playful experiences with people in mind</p>
-        </div>
-      </div>
+        <h1 class="home-title">Hello</h1>
+        <p class="tagline home-tagline">
+            I’m a multidisciplinary designer creating useful and playful experiences with people in mind
+        </p>
     </div>
 
     <div class="grid-wrapper">
@@ -30,8 +26,17 @@
 
 <script>
 import { loadableHero } from '../mixins/loadableHero.js'
-
 import PortfolioItem from '@theme/components/PortfolioItem.vue'
+
+/*
+
+426.66
+/
+1344 = .317
+
+actually want .23
+
+*/
 
 export default {
   components: { PortfolioItem },
@@ -62,7 +67,6 @@ export default {
           return false
         }
         data['scroll'] = window.pageYOffset
-        data['parentOffsetWidth'] = this.$refs.gridParent.offsetWidth
         this.$store.dispatch('setProjectPosition', data)
       }
   }
@@ -75,8 +79,14 @@ export default {
 
   .home-intro
     padding: 11em 0 5em 0
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    column-gap: 2em
     h1, p
       margin: 0 0 0 1.5rem
+    .home-tagline
+      grid-column-start: 2
+      grid-column-end: 4
 
   .grid-wrapper
     display: grid

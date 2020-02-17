@@ -63,6 +63,7 @@ export default {
   background-position: 128px 128px
   animation: flip .3s steps(1) infinite
   opacity: .1
+  pointer-events: none
 
 .noise-adjust
   @include cover-screen

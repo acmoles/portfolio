@@ -19,17 +19,20 @@
     <main class="page-content">
       <Content slot-key="top"/>
 
-      <Content class="container is-fluid"/>
+      <Content class="container"/>
 
-      <PageNav class="container is-fluid"/>
+      <PageNav class="container"/>
 
-      <Content class="container is-fluid" slot-key="bottom"/>
-      <Footer class="container is-fluid"/>
+      <Content class="container" slot-key="bottom"/>
+      <Footer class="container"/>
     </main>
   </div>
 </template>
 
 <script>
+// // TODO: overall container for layout?
+
+
 // v-on:content-loaded="onEnlargeText"
 import Navbar from '@theme/components/Navbar.vue'
 import Footer from '@theme/components/Footer.vue'

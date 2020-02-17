@@ -32,11 +32,10 @@ export default (Vue) => {
       revealerInitialised: false,
       nextGuardCallback : null,
       projectPosition: {
-        childOffsetLeft: null,
-        childOffsetTop: null,
-        childOffsetWidth: null,
-        childOffsetHeight: null,
-        parentOffsetWidth: null,
+        childLeft: null,
+        childTop: null,
+        childWidth: null,
+        childHeight: null,
         scroll: 0
       },
       lastProject: {

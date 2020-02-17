@@ -53,12 +53,12 @@ export default {
 
   methods: {
       emitBoundingRect(event) {
-        let child = this.$refs['article' + this.uid]
+        let child = this.$refs['article' + this.uid].getBoundingClientRect()
         const data = {
-          childOffsetLeft: child.offsetLeft,
-          childOffsetTop: child.offsetTop,
-          childOffsetWidth: child.offsetWidth,
-          childOffsetHeight: child.offsetHeight,
+          childLeft: child.x,
+          childTop: child.y,
+          childWidth: child.width,
+          childHeight: child.height,
         }
         this.$emit('project-click', data)
       }
