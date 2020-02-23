@@ -1,5 +1,7 @@
 <template>
+  <transition name="navbar-transition">
     <header
+      v-show="show"
       class="navbar"
       ref="navbar"
       :style="{ position: cssPosition, top: cssTop + 'px' }"
@@ -34,6 +36,7 @@
         :burgered="navbarBurgered"
       />
     </header>
+  </transition>
 </template>
 
 <script>
@@ -46,8 +49,9 @@ export default {
   components: { SidebarButton, NavLinks },
   data () {
     return {
+      show: false,
       navbarBurgered: false,
-      navbarHeight: 0,
+      navbarHeight: 16 * 6,
       navbarPosition: 0,
       scrollPosition: 0,
       lastScrollPosition: 0,
@@ -59,9 +63,7 @@ export default {
   mounted () {
     this.$nextTick(() => {
       updateOnScroll(0, 1, progress => {
-
         this.handleScroll( progress )
-
       });
     })
   },
@@ -84,12 +86,11 @@ export default {
 
   watch: {
     pageLoadingStatus (latest, last) {
-      if (latest === 'covering' || latest === 'loading') {
-        this.show = false
-      } else {
+      if (latest === 'finished') {
         this.show = true
-        this.navbarHeight = this.$refs.navbar.offsetHeight
-        this.navbarBurgered = false
+        // this.navbarHeight = this.$refs.navbar.offsetHeight
+      } else {
+        this.show = false
       }
     }
   },
@@ -106,7 +107,6 @@ export default {
         return
       }
 
-      // TODO test for burgered when loading status reveals nav
       if (progress > 0.1 && this.navbarBurgered === false) {
         this.navbarBurgered = true
       } else if (progress === 0) {
@@ -146,13 +146,6 @@ export default {
       //   Remove overlap class
       // }
 
-
-      // this.$events.fire('navScroll', {
-      //   scrollProgress: progress,
-      //   position: this.cssPosition,
-      //   navBarToViewport: this.cssTop === 0 ? 0 : this.cssTop - window.pageYOffset
-      // });
-
       this.lastScrollPosition = this.scrollPosition
 
     },
@@ -171,21 +164,26 @@ export default {
 
 </script>
 
-<style scoped lang="sass">
+<style lang="sass">
 @import "../styles/variables.sass"
 
 .navbar
+  pointer-events: none
   position: absolute
   width: 100%
   z-index: 3
   transform: translate3d(0px, -100%, 0px)
-  opacity: 0
-  transition: transform $fadeTime ease, opacity $fadeTime ease
+  transform: translate3d(0px, 0px, 0px)
 
-.finished
-  .navbar
-    opacity: 1
-    transform: translate3d(0px, 0px, 0px)
+.navbar-transition-enter-active, .navbar-transition-leave-active
+  // transition: transform $fadeTime ease, opacity $fadeTime ease
+  transition: opacity $fadeTime ease
+
+.navbar-transition-enter, .navbar-transition-leave-to
+  opacity: 0
+  // transform: translate3d(0px, -100%, 0px)
+
+
 
 .home-link
   width: 3em
@@ -197,4 +195,8 @@ export default {
 .nav-sidebar-button
   position: absolute
   right: 0
+
+.home-link, .sidebar-button
+  pointer-events: all
+
 </style>

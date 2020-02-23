@@ -95,14 +95,17 @@ export default {
 .navbar-menu
   transition: opacity 0.4s ease
   margin-right: 1.5em
+  pointer-events: all
 
 .navbar-menu.burgered
   filter: opacity(0%)
   opacity: 0
+  pointer-events: none
   @media screen and (min-width: $desktop)
     margin-right: 6em
 
 .navbar-menu.burgered.is-active
   filter: opacity(100%)
   opacity: 1
+  pointer-events: all
 </style>

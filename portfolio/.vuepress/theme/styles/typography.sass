@@ -1,24 +1,29 @@
 @import 'variables'
 
-.content
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: $family-display
+  font-weight: normal
+  text-rendering: geometricPrecision
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6
-    font-family: $family-display
-    font-weight: normal
+h1
+  letter-spacing: .88px
 
-  .home-title
-    font-size: 6em
-    line-height: 1
+h2
+  font-size: 1.75em
+  line-height: 1.25
+  letter-spacing: .13px
 
-  .main-title
-    font-size: 3em
+h2.subtitle
+  font-size: 1.75em
+  font-family: $family-sans-serif
+  letter-spacing: .31px
 
-  .tagline
-    font-size: 1.75em
-    line-height: 1.75
-    letter-spacing: 0.25em
+p.small-title
+  font-size: 1em
+  text-transform: uppercase
+  margin-bottom: 1em

@@ -1,7 +1,6 @@
 ---
-title: 
 home: true
-navbar: true
+hasFooter: true
 meta:
   - title: description
     content: hello
@@ -11,8 +10,5 @@ meta:
 <Home/>
 :::
 
-# Hello world
-
 ::: slot bottom
-Page footer
 :::

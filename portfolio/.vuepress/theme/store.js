@@ -103,18 +103,16 @@ export default (Vue) => {
           nprogress.done()
         }
 
-        if (payload === 'covering') {
-          // disallow scroll
-          document.documentElement.style.overflowY = 'hidden'
-        } else if (payload === 'finished') {
+        // disallow scroll & ensure instant scroll
+        if (payload === 'finished') {
           document.documentElement.style.overflowY = 'scroll'
-        }
-
-        if (payload === 'revealing') {
-          // ensure instant scroll
+          document.documentElement.style.scrollBehavior = 'smooth'
+        } else if (payload === 'revealing') {
+          document.documentElement.style.overflowY = 'scroll'
           document.documentElement.style.scrollBehavior = 'auto'
         } else {
-          document.documentElement.style.scrollBehavior = 'smooth'
+          document.documentElement.style.overflowY = 'hidden'
+          document.documentElement.style.scrollBehavior = 'auto'
         }
 
         context.commit('SET_LOADING_STATUS', payload)
@@ -142,15 +140,4 @@ export default (Vue) => {
       },
     }
   })
-}
-
-var lockScroll = false
-var yscroll = 0
-
-function noscroll() {
-  if(!lockScroll) {
-    lockScroll = true;
-    yscroll = window.pageYOffset
-  }
-  window.scrollTo(0, yscroll);
 }

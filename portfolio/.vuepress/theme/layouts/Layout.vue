@@ -24,7 +24,7 @@
       <PageNav class="container"/>
 
       <Content class="container" slot-key="bottom"/>
-      <Footer class="container"/>
+      <Footer v-if="hasFooter"/>
     </main>
   </div>
 </template>
@@ -55,6 +55,10 @@ export default {
       ]
     },
 
+    hasFooter () {
+      return this.$page.frontmatter.hasFooter
+    }
+
   }
 }
 </script>
@@ -65,12 +69,13 @@ export default {
 
 
 .page-content
+  height: 100%
   min-height: 100vh
   display: flex
   flex-direction: column
   align-content: space-between
   // transform: translateY(100vh)
-  animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1)
+  // animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1)
 
   &.content__default
     padding: 0 2em

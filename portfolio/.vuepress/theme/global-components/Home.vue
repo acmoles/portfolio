@@ -1,11 +1,11 @@
 <template>
-  <div class="container is-home">
+  <div class="container is-fullhd is-home">
 
-    <div class="home-intro content">
-        <h1 class="home-title">Hello</h1>
-        <p class="tagline home-tagline">
+    <div class="home-intro">
+        <h1 class="title is-spaced home-title">Hello</h1>
+        <h2 class="subtitle home-subtitle">
             I’m a multidisciplinary designer creating useful and playful experiences with people in mind
-        </p>
+        </h2>
     </div>
 
     <div class="grid-wrapper">
@@ -17,6 +17,8 @@
             :type="project.frontmatter.type"
             :title="project.frontmatter.title"
             :subtitle="project.frontmatter.subtitle"
+            :case1="project.frontmatter.case1"
+            :case2="project.frontmatter.case2"
             :background="project.frontmatter.background"
             v-on:project-click="handleProjectClick"
           />
@@ -66,7 +68,7 @@ export default {
           // prevent clicks during covering
           return false
         }
-        data['scroll'] = window.pageYOffset
+        data['scroll'] = document.documentElement.scrollTop
         this.$store.dispatch('setProjectPosition', data)
       }
   }
@@ -78,15 +80,19 @@ export default {
   @import "../styles/variables.sass"
 
   .home-intro
-    padding: 11em 0 5em 0
+    padding: 11em 0 3.5em 0
     display: grid
     grid-template-columns: repeat(3, 1fr)
     column-gap: 2em
-    h1, p
+    h1, h2
       margin: 0 0 0 1.5rem
-    .home-tagline
+    h1.home-title
+      font-size: 5em
+      line-height: 1
+    h2.home-subtitle
       grid-column-start: 2
       grid-column-end: 4
+
 
   .grid-wrapper
     display: grid
@@ -94,6 +100,7 @@ export default {
     grid-auto-rows: 1fr
     column-gap: 2em
     row-gap: 2em
+    padding-bottom: 10em
 
   .grid-wrapper::before
     content: ' '

@@ -1,16 +1,22 @@
 <template>
   <transition
-    :name="transitionName"
-    v-on:after-enter="finishedCovering"
+    name="revealer-fade-animation"
     v-on:after-leave="finishedRevealing"
+    v-on:after-enter="finishedCovering"
   >
     <div
+      class="revealer-container"
       v-if="show"
-      class="revealer notification"
-      :class="[revealerClass, backgroundClass]"
-      :style="{ transform: transformString, WebkitTransform: transformString }"
-      ref="revealer"
+      :class="[revealerParentClass]"
+      ref="revealerParent"
     >
+      <div
+        class="revealer notification"
+        :class="[revealerClass, backgroundClass]"
+        :style="{ transform: transformString, WebkitTransform: transformString }"
+        ref="revealer"
+      >
+    </div>
   </div>
   </transition>
 </template>
@@ -26,9 +32,9 @@ export default {
   data () {
     return {
       show: true,
-      transitionName: '',
       backgroundClass: '',
-      revealerClass: 'revealer-fixed-active',
+      revealerParentClass: 'revealer-fixed-active',
+      revealerClass: '',
       transformString: 'translate3D(0, 0, 0) scale3d(1, 1, 1)'
     }
   },
@@ -65,21 +71,22 @@ export default {
       if (latest === 'covering' || latest === 'loading') {
         this.show = true
         if (latest === 'loading') {
-          this.revealerClass = 'revealer-fixed-active'
+          this.revealerParentClass = 'revealer-fixed-active'
+          this.revealerClass = ''
           this.transformString = 'translate3D(0, 0, 0) scale3d(1, 1, 1)'
         }
       }
 
       else if (latest === 'revealing' && this.useLastProject) {
         // activates special transition from projects
-
-        this.$nextTick(() => { // might need to replace with setTimout
+        this.$forceNextTick(() => {
           document.documentElement.scrollTop = this.projectPosition.scroll
+          this.revealerParentClass = 'revealer-absolute-active'
           this.revealerClass = ''
           this.transformString = 'translate3d(0px, ' + this.projectPosition.scroll + 'px, 0px) scale3d(1, 1, 1)'
 
             setTimeout(() => {
-              // wait a fraction - DOM render if prioritised over setTimout callback
+              // wait a fraction - DOM render if prioritised over setTimout callback - nprogress finished
               this.revealerClass = 'revealer-reveal-animation-active'
               this.transformString = this.generateTransformStringPlacement()
 
@@ -89,7 +96,6 @@ export default {
                 }, config.fadeTransitionTime / 2) // transition time
 
             }, config.fadeTransitionTime)
-
         })
 
       }
@@ -103,6 +109,7 @@ export default {
     projectPosition (latest, last) {
       // activates special transition to projects
       // Vue detects the extra transition automatically and waits to call v-on:after-enter
+      this.revealerParentClass = 'revealer-absolute-active'
       this.revealerClass = 'revealer-cover-animation-active'
       this.transformString = this.generateTransformStringPlacement()
 
@@ -120,7 +127,6 @@ export default {
   mounted() {
     this.$nextTick(() => {
       this.$store.dispatch('setRevealerInit', true)
-      this.transitionName = 'revealer-fade-animation'
     })
   },
 
@@ -132,7 +138,8 @@ export default {
     finishedRevealing() {
       this.$store.dispatch('setLoadingPageContent', 'finished')
       this.$store.dispatch('useLastProject', false)
-      this.revealerClass = 'revealer-fixed-active'
+      this.revealerParentClass = 'revealer-fixed-active'
+      this.revealerClass = ''
       this.transformString = 'translate3D(0, 0, 0) scale3d(1, 1, 1)'
     },
 
@@ -168,33 +175,34 @@ export default {
 @import '../../styles/variables.sass'
 @import '../../styles/mixins.sass'
 
-.revealer
+.revealer-container
   // pointer-events: none
   @include cover-screen
-  @include make3d
   z-index: 99
+  filter: opacity(100%)
+
+.revealer
+  @include cover-screen
+  @include make3d
   transform-origin: 0 0
   background-color: $black
-  filter: opacity(100%)
   border-radius: 0
+  transition-property: transform
 
 
 // revealer transition states
 
-.revealer-cover-animation-active
-  transition: transform $revealTime
+.revealer-cover-animation-active, .revealer-reveal-animation-active
+  transition-duration: $revealTime
   transition-timing-function: $cubicTransition
+
+// fixed position toggle
 
 .revealer-fixed-active
   position: fixed
 
 .revealer-absolute-active
   position: absolute
-  // this fixes initial text flicker
-
-.revealer-reveal-animation-active
-  transition: transform $revealTime
-  transition-timing-function: $cubicTransition
 
 
 // revealer vue transition states

@@ -23,7 +23,6 @@ export default {
   @include cover-screen
   position: fixed
   content: " "
-  display: none
   background-image: url('dark-noise.png')
   background-size: 256px 256px
   background-position: 128px 128px
@@ -32,7 +31,6 @@ export default {
   pointer-events: none
 
 .noise-adjust
-  display: none
   @include cover-screen
   position: fixed
   transform: translate3d(0,0,0)

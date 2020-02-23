@@ -1,14 +1,21 @@
 <template>
-    <footer class="footer">
+    <footer class="footer container is-fullhd">
       <div class="footer-content">
-        Footer content
+        <i class="icon"></i>
+        <h3 class="footer-title">
+          Anthony Moles
+        </h3>
+        <a
+          class="footer-contact-links"
+          v-for="item in userContact"
+          :href="item.link"
+          target="_blank"
+        >
+          {{ item.text }}
+        </a>
       </div>
-      <div
-        class="last-updated"
-        v-if="lastUpdated"
-      >
-        <span class="prefix">{{ lastUpdatedText }}: </span>
-        <span class="time">{{ lastUpdated }}</span>
+      <div class="copy">
+        © Anthony Moles {{ getYear }}
       </div>
     </footer>
 </template>
@@ -19,19 +26,26 @@ import NavLinks from '@theme/components/NavLinks.vue'
 export default {
 
   computed: {
-    lastUpdated () {
-      return this.$page.lastUpdated
+    getYear () {
+      const date = new Date()
+      return date.getFullYear()
     },
 
-    lastUpdatedText () {
-      if (typeof this.$themeLocaleConfig.lastUpdated === 'string') {
-        return this.$themeLocaleConfig.lastUpdated
-      }
-      if (typeof this.$site.themeConfig.lastUpdated === 'string') {
-        return this.$site.themeConfig.lastUpdated
-      }
-      return 'Last Updated'
+    userNav () {
+      return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || []
     },
+
+    userContact () {
+      let contactItems
+      this.userNav.forEach(link => {
+        if (link.text === 'Contact') {
+          console.log(link);
+          contactItems = link.items
+        }
+      })
+      return contactItems
+    }
+
 
   },
 
@@ -43,5 +57,28 @@ export default {
 
 <style lang="sass">
 @import "../styles/variables.sass"
+
+.footer
+  height: 12em
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .footer-content, .copy
+    padding: 0 1.5em
+    display: inline-flex
+    align-items: center
+  .footer-title
+    font-size: 1.25em
+    font-family: $family-display
+    margin-right: 1em
+  i
+    background: $white-ter
+    margin-right: 1em
+  .footer-contact-links, .copy
+    color: $silver
+    margin-left: 1em
+    &:hover
+      color: $slate
 
 </style>
