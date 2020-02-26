@@ -115,8 +115,8 @@ function renderExternal (h, to, text) {
       color: $grey-lighter
     &.active
       font-weight: 600
-      color: $accentColor
-      border-left-color: $accentColor
+      color: $blue
+      border-left-color: $blue
     .sidebar-group &
       padding-left: 2rem
     .sidebar-sub-headers &

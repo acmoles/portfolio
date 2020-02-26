@@ -39,7 +39,6 @@ export default {
       let contactItems
       this.userNav.forEach(link => {
         if (link.text === 'Contact') {
-          console.log(link);
           contactItems = link.items
         }
       })
@@ -60,7 +59,6 @@ export default {
 
 .footer
   height: 12em
-  width: 100%
   display: flex
   justify-content: space-between
   align-items: center

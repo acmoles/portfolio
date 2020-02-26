@@ -20,6 +20,8 @@
 </template>
 
 <script>
+// TODO customise OutboundLink
+
 import { isExternal, isMailto, isTel, ensureExt } from '../util'
 
 export default {
@@ -52,3 +54,16 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+@import "../styles/variables.sass"
+
+.navbar-item
+  height: fit-content
+  border-bottom: 2px transparent solid
+
+
+.navbar-item.router-link-active
+  border-bottom: 2px $white-ter solid
+
+</style>

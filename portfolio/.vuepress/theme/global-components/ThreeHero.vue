@@ -22,7 +22,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.doLoad()
-    }, 5000)
+    }, 100)
 
   },
 

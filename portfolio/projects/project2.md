@@ -19,10 +19,16 @@ next: ./project3
   </template>
 
   <template v-slot:description>
-    <p>Here's a description</p>
+    <p class="stage-description">
+      Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables easy customisation of a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.
+    </p>
+    <ul class="stage-details">
+      <li>Test item</li>
+      <li>Test item</li>
+    </ul>
+    <ProjectExternalLink href="#"/>
   </template>
 </ProjectStage>
-
 :::
 
 # Project 2

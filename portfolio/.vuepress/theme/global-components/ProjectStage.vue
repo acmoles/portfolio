@@ -30,7 +30,7 @@ export default {
   height: 100vh
 
 .description
-  background-color: $snow
+  background-color: $slate
 
 
 </style>

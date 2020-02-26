@@ -1,5 +1,5 @@
 <template>
-  <div class="page-nav wrapper" v-if="prev || next">
+  <div class="page-nav container is-fullhd" v-if="prev || next">
     <p class="inner">
       <span v-if="prev" class="prev">
         ←

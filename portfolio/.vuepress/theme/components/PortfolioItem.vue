@@ -3,20 +3,26 @@
     :to="path"
     class="grid-item"
     :class="type"
+    @mouseleave.native.stop="mouseLeave"
+    @mousemove.native.stop="mouseMove"
+    :ref="'base' + uid"
   >
     <article
       class="notification"
       :class="background"
-      @click="emitBoundingRect($event)"
       :ref="'article' + uid"
+      @click="emitBoundingRect($event)"
     >
       <slot></slot>
 
-      <p class="small-title">{{ title }}</p>
-      <h2 v-if="subtitle">{{ subtitle }}</h2>
+      <div :ref="'caption' + uid" class="item-caption">
+        <p class="small-title">{{ title }}</p>
+        <h2 v-if="subtitle">{{ subtitle }}</h2>
 
-      <p class="case" v-if="case1">{{ case1 }}</p>
-      <p class="case" v-if="case2">{{ case2 }}</p>
+        <p class="case" v-if="case1">{{ case1 }}</p>
+        <p class="case" v-if="case2">{{ case2 }}</p>
+      </div>
+
     </article>
   </router-link>
 </template>
@@ -38,7 +44,16 @@ export default {
 
   data () {
     return {
-      transfer: false
+      base: {},
+      animatables: {},
+      options: {
+        article: {
+    			rotation : {x: -5, y: 5, z: 0},
+        },
+        caption: {
+          translation : {x: 10, y: 10, z: 0},
+        },
+      }
     }
   },
 
@@ -49,19 +64,96 @@ export default {
   },
 
   mounted() {
+    this.base = this.$refs['base' + this.uid].$el
+    this.animatables.article = this.$refs['article' + this.uid]
+    this.animatables.caption = this.$refs['caption' + this.uid]
   },
 
   methods: {
       emitBoundingRect(event) {
-        const child = this.$refs['article' + this.uid]
-        const rect = child.getBoundingClientRect()
+        const rect = this.base.getBoundingClientRect()
         const data = {
           childLeft: rect.x,
-          childTop: child.offsetTop,
+          childTop: this.base.offsetTop,
           childWidth: rect.width,
           childHeight: rect.height,
         }
+        console.log(data);
         this.$emit('project-click', data)
+      },
+      getMousePosition(event) {
+        var posx = 0, posy = 0
+      		if (event.pageX || event.pageY) 	{
+      			posx = event.pageX
+      			posy = event.pageY
+      		}
+      		else if (event.clientX || event.clientY) 	{
+      			posx = event.clientX + document.body.scrollLeft + document.documentElement.scrollLeft
+      			posy = event.clientY + document.body.scrollTop + document.documentElement.scrollTop
+      		}
+      		return { x : posx, y : posy }
+      },
+      mouseMove(event) {
+        // layout on mouse move
+        requestAnimationFrame(() => {
+          this.layout(event)
+        })
+      },
+      mouseLeave(event) {
+        // reverse animation
+        requestAnimationFrame(() => {
+          for(var key in this.animatables) {
+            this.animatables[key].style.WebkitTransform = this.animatables[key].style.transform = 'translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1)'
+  				}
+        })
+      },
+      layout(event) {
+        // mouse position relative to the document
+        const mousePosition = this.getMousePosition(event)
+        // Document scrolls.
+    		const	documentScrolls = {left : document.body.scrollLeft + document.documentElement.scrollLeft, top : document.body.scrollTop + document.documentElement.scrollTop}
+
+        const	bounds = this.base.getBoundingClientRect()
+
+        // Mouse position relative to the main element (this.DOM.el).
+    		const	relativeMousePosition = { x : mousePosition.x - bounds.left - documentScrolls.left, y : mousePosition.y - bounds.top - documentScrolls.top }
+
+          // Movement settings for the animatable elements.
+      		for(var key in this.animatables) {
+      			if( this.animatables[key] == undefined || this.options[key] == undefined ) {
+      				continue
+      			}
+      			var t = this.options[key] != undefined ? this.options[key].translation || {x:0,y:0,z:0} : {x:0,y:0,z:0}
+    				var r = this.options[key] != undefined ? this.options[key].rotation || {x:0,y:0,z:0} : {x:0,y:0,z:0},
+    				setRange = function (obj) {
+    					for(var k in obj) {
+    						if( obj[k] == undefined ) {
+    							obj[k] = [0,0];
+    						}
+    						else if( typeof obj[k] === 'number' ) {
+    							obj[k] = [-1*obj[k],obj[k]];
+    						}
+    					}
+    				}
+
+      			setRange(t)
+      			setRange(r)
+
+      			var transforms = {
+      				translation : {
+      					x: (t.x[1]-t.x[0])/bounds.width*relativeMousePosition.x + t.x[0],
+      					y: (t.y[1]-t.y[0])/bounds.height*relativeMousePosition.y + t.y[0],
+      					z: (t.z[1]-t.z[0])/bounds.height*relativeMousePosition.y + t.z[0],
+      				},
+      				rotation : {
+      					x: (r.x[1]-r.x[0])/bounds.height*relativeMousePosition.y + r.x[0],
+      					y: (r.y[1]-r.y[0])/bounds.width*relativeMousePosition.x + r.y[0],
+      					z: (r.z[1]-r.z[0])/bounds.width*relativeMousePosition.x + r.z[0]
+      				}
+      			}
+
+      			this.animatables[key].style.WebkitTransform = this.animatables[key].style.transform = 'translateX(' + transforms.translation.x + 'px) translateY(' + transforms.translation.y + 'px) translateZ(' + transforms.translation.z + 'px) rotateX(' + transforms.rotation.x + 'deg) rotateY(' + transforms.rotation.y + 'deg) rotateZ(' + transforms.rotation.z + 'deg) scale3d(1, 1, 1)'
+      		}
       }
   }
 }
@@ -70,41 +162,71 @@ export default {
 
 <style lang="sass">
 @import "../styles/variables.sass"
+@import "../styles/mixins.sass"
 
 .notification
+  @include make3d
+  transform: translate3D(0, 0, 0) scale3d(1, 1, 1)
+  background-image: $gradient
+  background-size: 250%
+  background-blend-mode: overlay
   &.orange
+    &::after
+      box-shadow: 0 0 2em 0 rgba($orange, 0.42)
     background-color: $orange
   &.dark
     background-color: $steel
+    background-image: $gradientSubtle
   &.stompy-robot
     background-color: $steel
   &.green
+    &::after
+      box-shadow: 0 0 2em 0 rgba($green, 0.42)
     background-color: $green
   &.purple
+    &::after
+      box-shadow: 0 0 2em 0 rgba($purple, 0.42)
     background-color: $purple
   &.blue
+    &::after
+      box-shadow: 0 0 2em 0 rgba($blue, 0.42)
     background-color: $blue
   &.yellow
+    &::after
+      box-shadow: 0 0 2em 0 rgba($yellow, 0.42)
     background-color: $darkYellow
   &.random
     background-color: $extraDarkSmoke
   &.pink
+    &::after
+      box-shadow: 0 0 2em 0 rgba($pink, 0.42)
     background-color: $pink
   &.als
     background-color: $silver
 
+.grid-item .notification::after
+  @include pseudo-full
+  border-radius: 3px
+  opacity: 0
+  transition: opacity 0.3s ease-out
+
+.grid-item:hover .notification::after
+  opacity: 1
+
+// .grid-item .notification.orange::after
+
 .grid-item
-  box-shadow: 0 2.67em 1.34em 0 rgba($pitch,0.16)
+  position: relative
+  perspective: 1000px
+  *
+    transition: transform 0.2s ease-out
   .notification
+    box-shadow: $element-shadow
     color: $white-ter
-  &:hover
-    .notification
-      color: $grey-light
-    .case
-      background: rgba($white, 0.2)
   &.double-right, &.double-left
     .small-title, h2
       width: 42%
+
 
 .case
   display: inline-flex

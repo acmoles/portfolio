@@ -166,6 +166,7 @@ export default {
 
 <style lang="sass">
 @import "../styles/variables.sass"
+@import "../styles/mixins.sass"
 
 .navbar
   pointer-events: none
@@ -186,11 +187,28 @@ export default {
 
 
 .home-link
+  position: relative
   width: 3em
   height: 3em
   border-radius: 50%
   background-color: $blue
   margin: 1.5em
+  box-shadow: $element-shadow
+  transition: transform 0.3s ease-out
+
+.home-link:hover
+  transform: translateY(-0.25em)
+
+.home-link::after
+  @include pseudo-full
+  border-radius: 50%
+  box-shadow: 0 0.5em 2em 0 rgba($blue, 0.42)
+  opacity: 0
+  transition: opacity 0.3s ease-in-out
+
+.home-link:hover::after
+  opacity: 1
+
 
 .nav-sidebar-button
   position: absolute
@@ -198,5 +216,8 @@ export default {
 
 .home-link, .sidebar-button
   pointer-events: all
+
+.navbar-end
+  align-items: center
 
 </style>

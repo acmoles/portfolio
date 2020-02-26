@@ -19,11 +19,10 @@
     <main class="page-content">
       <Content slot-key="top"/>
 
-      <Content class="container"/>
+      <Content class="container is-fullhd"/>
 
-      <PageNav class="container"/>
+      <PageNav/>
 
-      <Content class="container" slot-key="bottom"/>
       <Footer v-if="hasFooter"/>
     </main>
   </div>
@@ -69,7 +68,8 @@ export default {
 
 
 .page-content
-  height: 100%
+  // TODO fix timing - ensuring height 100% shows next page behind the transition
+  // height: 100%
   min-height: 100vh
   display: flex
   flex-direction: column
