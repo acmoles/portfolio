@@ -1,5 +1,6 @@
 ---
 home: true
+pageClass: home
 hasFooter: true
 meta:
   - title: description

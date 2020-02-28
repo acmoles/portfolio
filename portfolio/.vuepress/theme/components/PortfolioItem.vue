@@ -8,7 +8,7 @@
     :ref="'base' + uid"
   >
     <article
-      class="notification"
+      class="project-panel notification"
       :class="background"
       :ref="'article' + uid"
       @click="emitBoundingRect($event)"
@@ -165,42 +165,45 @@ export default {
 @import "../styles/mixins.sass"
 
 .notification
-  @include make3d
-  transform: translate3D(0, 0, 0) scale3d(1, 1, 1)
-  background-image: $gradient
   background-size: 250%
   background-blend-mode: overlay
   &.orange
-    &::after
+    &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($orange, 0.42)
     background-color: $orange
+    background-image: $gradient
   &.dark
     background-color: $steel
     background-image: $gradientSubtle
   &.stompy-robot
     background-color: $steel
   &.green
-    &::after
+    &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($green, 0.42)
     background-color: $green
+    background-image: $gradient
   &.purple
-    &::after
+    &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($purple, 0.42)
     background-color: $purple
+    background-image: $gradient
   &.blue
-    &::after
+    &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($blue, 0.42)
     background-color: $blue
+    background-image: $gradient
   &.yellow
-    &::after
+    &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($yellow, 0.42)
     background-color: $darkYellow
+    background-image: $gradient
   &.random
     background-color: $extraDarkSmoke
   &.pink
-    &::after
+    &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($pink, 0.42)
     background-color: $pink
+    background-image: $gradient
   &.als
     background-color: $silver
 
@@ -213,14 +216,14 @@ export default {
 .grid-item:hover .notification::after
   opacity: 1
 
-// .grid-item .notification.orange::after
 
 .grid-item
   position: relative
   perspective: 1000px
   *
     transition: transform 0.2s ease-out
-  .notification
+  .project-panel
+    @include make3d
     box-shadow: $element-shadow
     color: $white-ter
   &.double-right, &.double-left

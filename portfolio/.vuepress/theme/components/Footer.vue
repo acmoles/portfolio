@@ -1,7 +1,7 @@
 <template>
     <footer class="footer container is-fullhd">
       <div class="footer-content">
-        <i class="icon"></i>
+        <i class="icon"><Logo/></i>
         <h3 class="footer-title">
           Anthony Moles
         </h3>
@@ -21,9 +21,11 @@
 </template>
 
 <script>
-import NavLinks from '@theme/components/NavLinks.vue'
+import Logo from '@theme/components/Logo.vue'
 
 export default {
+
+  components: { Logo },
 
   computed: {
     getYear () {
@@ -65,18 +67,21 @@ export default {
   .footer-content, .copy
     padding: 0 1.5em
     display: inline-flex
-    align-items: center
+    align-items: flex-end
   .footer-title
     font-size: 1.25em
+    line-height: 1.3em
     font-family: $family-display
     margin-right: 1em
   i
-    background: $white-ter
-    margin-right: 1em
+    margin-right: 0.75em
+    .logo-svg
+      transform: scale(1.24)
   .footer-contact-links, .copy
     color: $silver
     margin-left: 1em
-    &:hover
-      color: $slate
+    transition: opacity 0.3s ease
+  .footer-contact-links:hover
+    opacity: 0.64
 
 </style>

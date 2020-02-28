@@ -57,10 +57,11 @@
 
 <style lang="sass">
 @import "../styles/variables.sass"
+@import "../styles/mixins.sass"
 
-$hamburger-layer-width         : 1.5em
+$hamburger-layer-width         : 1.25em
 $hamburger-layer-height        : 2px
-$hamburger-layer-spacing       : 4px
+$hamburger-layer-spacing       : 3px
 $hamburger-layer-color         : $white-ter
 $hamburger-layer-border-radius : 0px
 $hamburger-active-layer-color: $white-ter
@@ -81,14 +82,7 @@ $hamburger-hover-filter       : opacity(50%)
   transition-duration: 0.15s
   transition-timing-function: linear
 
-  // Normalize (<button>)
-  font: inherit
-  color: inherit
-  text-transform: none
-  background-color: transparent
-  border: 0
-  margin: 0
-  overflow: visible
+  @include button-override
 
   &:hover
     filter: $hamburger-hover-filter

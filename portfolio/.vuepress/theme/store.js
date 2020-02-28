@@ -121,6 +121,7 @@ export default (Vue) => {
         context.commit('SET_TITLE_STATUS', payload)
       },
       setRevealerInit (context, payload) {
+        document.documentElement.classList.add('ready')
         context.commit('SET_REVEALER_INIT', payload)
       },
       setNextGuardCallback (context, payload) {

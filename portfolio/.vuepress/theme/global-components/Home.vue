@@ -2,7 +2,7 @@
   <div class="container is-fullhd is-home">
 
     <div class="home-intro">
-        <h1 class="title is-spaced home-title">Hello</h1>
+        <h1 class="title is-spaced home-title">Hello <WavingHand/></h1>
         <h2 class="subtitle home-subtitle">
             I’m a multidisciplinary designer creating useful and playful experiences with people in mind
         </h2>
@@ -29,19 +29,13 @@
 <script>
 import { loadableHero } from '../mixins/loadableHero.js'
 import PortfolioItem from '@theme/components/PortfolioItem.vue'
+import WavingHand from '@theme/components/WavingHand.vue'
 
-/*
-
-426.66
-/
-1344 = .317
-
-actually want .23
-
-*/
+// TODO fix width issue of tiles on smaller desktop screens
+// TODO mobile view
 
 export default {
-  components: { PortfolioItem },
+  components: { PortfolioItem, WavingHand },
 
   mixins: [loadableHero],
 

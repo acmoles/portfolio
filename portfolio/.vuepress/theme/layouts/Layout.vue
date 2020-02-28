@@ -29,8 +29,6 @@
 </template>
 
 <script>
-// // TODO: overall container for layout?
-
 
 // v-on:content-loaded="onEnlargeText"
 import Navbar from '@theme/components/Navbar.vue'
@@ -70,12 +68,10 @@ export default {
 .page-content
   // TODO fix timing - ensuring height 100% shows next page behind the transition
   // height: 100%
-  min-height: 100vh
+  min-height: 100%
   display: flex
   flex-direction: column
   align-content: space-between
-  // transform: translateY(100vh)
-  // animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1)
 
   &.content__default
     padding: 0 2em
@@ -84,31 +80,22 @@ export default {
 // .loading
 //   display: none
 
-.revealing
+.revealing, .covering, .loading
   .page-content
-    // animation: animateIn $revealTime forwards
-
-.finished
-  .page-content
-    // transform: translateY(0vh)
-
-.covering
-  .page-content
-    // transform: translateY(0vh)
-    // animation: animateOut $revealTime forwards;
+    overflow: hidden
 
 .layout
   &::after
     @include cover-screen
     position: fixed
-    content: " "
+    content: ' '
     display: block
     background: $black
     transition: filter .4s linear
     filter: opacity(0%)
     pointer-events: none
 
-.layout.covering
+.layout.covering, .layout.loading
   &::after
     filter: opacity(100%)
 

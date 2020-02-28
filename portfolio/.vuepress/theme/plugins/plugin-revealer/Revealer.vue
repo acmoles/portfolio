@@ -23,7 +23,7 @@
 
 <script>
 import config from '../../../config.js'
-import IncomingTitle from './IncomingTitle.vue'
+// import IncomingTitle from './IncomingTitle.vue'
 
 export default {
 
@@ -108,7 +108,7 @@ export default {
 
     projectPosition (latest, last) {
       // activates special transition to projects
-      // Vue detects the extra transition automatically and waits to call v-on:after-enter
+      // TODO Vue doesn't detect the extra transition automatically and waits to call v-on:after-enter
       this.revealerParentClass = 'revealer-absolute-active'
       this.revealerClass = 'revealer-cover-animation-active'
       this.transformString = this.generateTransformStringPlacement()
@@ -176,7 +176,7 @@ export default {
 @import '../../styles/mixins.sass'
 
 .revealer-container
-  // pointer-events: none
+  pointer-events: none
   @include cover-screen
   z-index: 99
   filter: opacity(100%)
@@ -185,10 +185,8 @@ export default {
   @include cover-screen
   @include make3d
   transform-origin: 0 0
-  background-color: $black
   border-radius: 0
   transition-property: transform
-
 
 // revealer transition states
 

@@ -13,15 +13,9 @@
           :to="$localePath"
           class="home-link"
         >
-          <!-- <img
-            class="logo"
-            :src="$withBase('/images/icons/logo.svg')"
-            :alt="$siteTitle"
-          > -->
-          <!-- <span
-            ref="siteName"
-            class="site-name"
-          >{{ $siteTitle }}</span> -->
+          <div class="home-link-circle">
+            <Logo/>
+          </div>
         </router-link>
         <SidebarButton
           purpose="menu"
@@ -40,16 +34,19 @@
 </template>
 
 <script>
+// TODO add tilt effect to nav-link-circle
+
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
+import Logo from '@theme/components/Logo.vue'
 import updateOnScroll from 'uos'
 import debounce from 'lodash.debounce'
 
 export default {
-  components: { SidebarButton, NavLinks },
+  components: { SidebarButton, NavLinks, Logo },
   data () {
     return {
-      show: false,
+      show: true,
       navbarBurgered: false,
       navbarHeight: 16 * 6,
       navbarPosition: 0,
@@ -86,12 +83,12 @@ export default {
 
   watch: {
     pageLoadingStatus (latest, last) {
-      if (latest === 'finished') {
-        this.show = true
-        // this.navbarHeight = this.$refs.navbar.offsetHeight
-      } else {
-        this.show = false
-      }
+      // if (latest === 'finished') {
+      //   this.show = true
+      //   // this.navbarHeight = this.$refs.navbar.offsetHeight
+      // } else {
+      //   this.show = false
+      // }
     }
   },
 
@@ -185,28 +182,35 @@ export default {
   // transform: translate3d(0px, -100%, 0px)
 
 
-
 .home-link
   position: relative
-  width: 3em
-  height: 3em
-  border-radius: 50%
-  background-color: $blue
-  margin: 1.5em
-  box-shadow: $element-shadow
-  transition: transform 0.3s ease-out
+  width: 6em
+  height: 6em
+  display: flex
+  align-items: center
+  justify-content: center
+  .home-link-circle
+    width: 3em
+    height: 3em
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $blue
+    box-shadow: $element-shadow
+    transition: transform 0.3s ease-out
 
-.home-link:hover
+.home-link:hover .home-link-circle
   transform: translateY(-0.25em)
 
-.home-link::after
+.home-link-circle::after
   @include pseudo-full
   border-radius: 50%
-  box-shadow: 0 0.5em 2em 0 rgba($blue, 0.42)
+  box-shadow: 0 0.5em 1.25em 0 rgba($blue, 0.42)
   opacity: 0
   transition: opacity 0.3s ease-in-out
 
-.home-link:hover::after
+.home-link:hover .home-link-circle::after
   opacity: 1
 
 
