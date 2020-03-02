@@ -78,7 +78,6 @@ export default {
           childWidth: rect.width,
           childHeight: rect.height,
         }
-        console.log(data);
         this.$emit('project-click', data)
       },
       getMousePosition(event) {
