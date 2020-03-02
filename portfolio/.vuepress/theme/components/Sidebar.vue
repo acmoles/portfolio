@@ -22,6 +22,7 @@
       <SidebarButton
         purpose="goto-top"
         class="goto-top-sidebar-button"
+        :disabled="disableGotoTop"
         @sidebar-button-event="scrollToTop"
       />
       <transition name="fade">
@@ -48,7 +49,8 @@ export default {
 
   data () {
     return {
-      searchPurpose: 'search'
+      searchPurpose: 'search',
+      disableGotoTop: true
     }
   },
 
@@ -84,7 +86,9 @@ export default {
     handleScroll (progress) {
       if (progress === 0) {
         this.$store.dispatch('setSidebarStatus', false)
-        return
+        this.disableGotoTop = true
+      } else {
+        this.disableGotoTop = false
       }
     },
     scrollToTop () {

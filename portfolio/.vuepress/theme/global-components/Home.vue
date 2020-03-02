@@ -5,7 +5,7 @@
         <h1 class="title is-spaced home-title">Hello <WavingHand/></h1>
         <h2 class="subtitle home-subtitle">
             I’m a multidisciplinary designer creating useful and playful experiences with people in mind
-            <ArrowIcon/>
+            <router-link to="/about"><ArrowIcon/></router-link>
         </h2>
     </div>
 
@@ -74,6 +74,7 @@ export default {
 
 <style lang="sass">
   @import "../styles/variables.sass"
+  @import "../styles/mixins.sass"
 
   .home-intro
     padding: 11em 0 3.5em 0
@@ -92,6 +93,11 @@ export default {
         position: relative
         top: 0.1em
         left: 0.1em
+        filter: opacity(100%)
+        @include opacity-filter-transition
+      a:hover
+        .icon
+          filter: opacity(50%)
 
 
   .grid-wrapper

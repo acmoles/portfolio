@@ -1,9 +1,10 @@
 <template>
   <button
     class="sidebar-button"
-    :class="{ 'hamburger hamburger--spin': purpose === 'menu' }"
+    :class="{ 'hamburger hamburger--spin': purpose === 'menu', 'disabled': disabled }"
     type="button"
     :aria-label="purpose"
+    :disabled="disabled"
     aria-expanded="false"
     @click="$emit('sidebar-button-event')"
   >
@@ -48,7 +49,8 @@
     props: {
       purpose: {
         required: true
-      }
+      },
+      disabled: false
     },
     computed: {
       isSidebarOpen () {
@@ -86,7 +88,11 @@ $hamburger-active-layer-color  : $white-ter
 
   @include button-override
 
-  &:hover, &:focus
+  &.disabled
+    cursor: not-allowed
+    filter: $hover-filter
+
+  &:hover
     filter: $hover-filter
 
 .hamburger

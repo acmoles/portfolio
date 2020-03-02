@@ -164,6 +164,7 @@ export default {
 @import "../styles/mixins.sass"
 
 .navbar
+  user-select: none
   text-rendering: geometricPrecision
   pointer-events: none
   position: absolute
@@ -190,8 +191,13 @@ export default {
   justify-content: center
   @include opacity-filter-transition
 
-.home-link:hover
-  filter: $hover-filter
+.layout.home
+  .home-link
+    pointer-events: none
+
+.layout:not(.home)
+  .home-link:hover
+    filter: $hover-filter
 
 .nav-sidebar-button
   position: absolute
