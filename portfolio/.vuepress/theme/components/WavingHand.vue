@@ -313,7 +313,7 @@ export default {
     opacity: 0
 
 .hand-button.animate::after
-  animation: handGlow 6s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  animation: handGlow 6s 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86)
   transition: opacity 0.6s ease
 
 .hand-button.animate:hover::after
@@ -324,11 +324,7 @@ export default {
     transform: translateX(-48px) scale(0.5)
     opacity: 0
 
-  10%
-    transform: translateX(-48px) scale(0.5)
-    opacity: 1
-
-  22%
+  13%
     transform: translateX(0) scale(1)
     opacity: 1
 

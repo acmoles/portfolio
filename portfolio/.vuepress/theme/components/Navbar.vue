@@ -13,9 +13,7 @@
           :to="$localePath"
           class="home-link"
         >
-          <div class="home-link-circle">
-            <Logo/>
-          </div>
+          <Logo/>
         </router-link>
         <SidebarButton
           purpose="menu"
@@ -38,7 +36,7 @@
 
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
-import Logo from '@theme/components/Logo.vue'
+import Logo from '@theme/components/icons/Logo.vue'
 import updateOnScroll from 'uos'
 import debounce from 'lodash.debounce'
 
@@ -47,7 +45,7 @@ export default {
   data () {
     return {
       show: true,
-      navbarBurgered: false,
+      navbarBurgered: true,
       navbarHeight: 16 * 6,
       navbarPosition: 0,
       scrollPosition: 0,
@@ -104,11 +102,11 @@ export default {
         return
       }
 
-      if (progress > 0.1 && this.navbarBurgered === false) {
-        this.navbarBurgered = true
-      } else if (progress === 0) {
-        this.navbarBurgered = false
-      }
+      // if (progress > 0.1 && this.navbarBurgered === false) {
+      //   this.navbarBurgered = true
+      // } else if (progress === 0) {
+      //   this.navbarBurgered = false
+      // }
 
       this.scrollPosition = this.getScrollTop()
       this.navbarPosition = this.getOffsetY(this.$refs.navbar)
@@ -166,6 +164,7 @@ export default {
 @import "../styles/mixins.sass"
 
 .navbar
+  text-rendering: geometricPrecision
   pointer-events: none
   position: absolute
   width: 100%
@@ -189,30 +188,10 @@ export default {
   display: flex
   align-items: center
   justify-content: center
-  .home-link-circle
-    width: 3em
-    height: 3em
-    border-radius: 50%
-    display: flex
-    align-items: center
-    justify-content: center
-    background-color: $blue
-    box-shadow: $element-shadow
-    transition: transform 0.3s ease-out
+  @include opacity-filter-transition
 
-.home-link:hover .home-link-circle
-  transform: translateY(-0.25em)
-
-.home-link-circle::after
-  @include pseudo-full
-  border-radius: 50%
-  box-shadow: 0 0.5em 1.25em 0 rgba($blue, 0.42)
-  opacity: 0
-  transition: opacity 0.3s ease-in-out
-
-.home-link:hover .home-link-circle::after
-  opacity: 1
-
+.home-link:hover
+  filter: $hover-filter
 
 .nav-sidebar-button
   position: absolute

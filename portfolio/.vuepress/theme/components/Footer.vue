@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Logo from '@theme/components/Logo.vue'
+import Logo from '@theme/components/icons/Logo.vue'
 
 export default {
 
@@ -60,6 +60,7 @@ export default {
 @import "../styles/variables.sass"
 
 .footer
+  text-rendering: geometricPrecision
   height: 12em
   display: flex
   justify-content: space-between
@@ -75,8 +76,6 @@ export default {
     margin-right: 1em
   i
     margin-right: 0.75em
-    .logo-svg
-      transform: scale(1.24)
   .footer-contact-links, .copy
     color: $silver
     margin-left: 1em

@@ -34,6 +34,7 @@ export default {
 .logo-svg
   position: relative
   bottom: 1px
+  transform: scale(1.08)
   transition: transform 0.3s ease
   transform-origin: 50% 54%
   #rectangle
@@ -41,9 +42,9 @@ export default {
     transform-origin: 50% 50%
 
 .layout:not(.home)
-  .home-link:hover
+  .home-link:hover, .home-link:focus
     .logo-svg
-      transform: rotateZ(-90deg) translateY(-0.05em)
+      transform: rotateZ(-90deg) translateY(-0.05em) scale(1.16)
       #rectangle
-        transform: scale(2) rotate(-31deg) translate(0, 0.36em)
+        transform: scale(2.2) rotate(-31deg) translate(0, 0.36em)
 </style>

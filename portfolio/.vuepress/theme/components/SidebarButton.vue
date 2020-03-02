@@ -17,28 +17,34 @@
       <span aria-hidden="true" class="hamburger-inner"></span>
     </span>
 
-    <span
+    <i
       v-else-if="purpose === 'search'"
       aria-hidden="true"
-      class="button-box icon is-medium"
+      class="button-box icon"
       :class="{ 'is-active': isSearchboxOpen }"
     >
-      <span aria-hidden="true" class="button-inner search-inner">Search</span>
-      <span aria-hidden="true" class="button-inner list-inner">List</span>
-    </span>
+      <SearchIcon aria-hidden="true" class="button-inner search-inner"/>
+      <ListIcon aria-hidden="true" class="button-inner list-inner"/>
+    </i>
 
-    <span
+    <i
       v-else-if="purpose === 'goto-top'"
       aria-hidden="true"
-      class="icon is-medium"
+      class="icon"
     >
-      Gototop
-    </span>
+      <TopIcon/>
+    </i>
   </button>
 </template>
 
 <script>
+  import ListIcon from '@theme/components/icons/ListIcon.vue'
+  import SearchIcon from '@theme/components/icons/SearchIcon.vue'
+  import TopIcon from '@theme/components/icons/TopIcon.vue'
+
   export default {
+    components: { ListIcon, SearchIcon, TopIcon },
+
     props: {
       purpose: {
         required: true
@@ -64,10 +70,8 @@ $hamburger-layer-height        : 2px
 $hamburger-layer-spacing       : 3px
 $hamburger-layer-color         : $white-ter
 $hamburger-layer-border-radius : 0px
-$hamburger-active-layer-color: $white-ter
+$hamburger-active-layer-color  : $white-ter
 
-$hamburger-hover-use-filter   : true
-$hamburger-hover-filter       : opacity(50%)
 
 .sidebar-button
   width: 6em
@@ -78,14 +82,12 @@ $hamburger-hover-filter       : opacity(50%)
   align-items: center
   cursor: pointer
 
-  transition-property: filter
-  transition-duration: 0.15s
-  transition-timing-function: linear
+  @include opacity-filter-transition
 
   @include button-override
 
-  &:hover
-    filter: $hamburger-hover-filter
+  &:hover, &:focus
+    filter: $hover-filter
 
 .hamburger
     // .hamburger-inner,
@@ -159,11 +161,16 @@ $hamburger-hover-filter       : opacity(50%)
           transition: bottom 0.1s ease-out, transform 0.22s 0.1s cubic-bezier(0.215, 0.61, 0.355, 1)
 
 .button-box
+  position: relative
   transition-duration: 0.22s
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
   .search-inner, .list-inner
     transition: filter 0.22s ease
     position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
   .search-inner
     filter: opacity(100%)
   .list-inner
@@ -172,7 +179,7 @@ $hamburger-hover-filter       : opacity(50%)
 
   &.is-active
     transform: rotate(180deg)
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    transition-timing-function: ease-out
     .search-inner
       filter: opacity(0%)
     .list-inner

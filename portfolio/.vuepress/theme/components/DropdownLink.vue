@@ -1,6 +1,6 @@
 <template>
   <div
-    class="navbar-item has-dropdown is-hoverable"
+    class="navbar-item has-dropdown"
     :class="[open ? 'is-active' : null, ]"
     aria-label="dropdown navigation"
   >
@@ -13,20 +13,13 @@
       @click="setOpen(!open)"
     >
       <span class="link-text">{{ item.text }}</span>
-      <!-- <span
-      class="icon is-small arrow"
-      :class="[open ? 'down' : 'right']"
-      >
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span> -->
     </a>
-
     <div
       class="navbar-dropdown is-boxed"
       role="menu"
-      v-show="open"
     >
         <NavLink
+          @focusin="setOpen(true)"
           @focusout="isLastItemOfArray(subItem, item.items) && setOpen(false)"
           v-for="(subItem, index) in item.items"
           :key="subItem.link || index"
@@ -58,7 +51,10 @@ export default {
   computed: {
     dropdownAriaLabel () {
       return this.item.ariaLabel || this.item.text
-    }
+    },
+    isSidebarOpen () {
+      return this.$store.state.isSidebarOpen
+    },
   },
 
   methods: {
@@ -74,6 +70,9 @@ export default {
   watch: {
     $route () {
       this.open = false
+    },
+    isSidebarOpen (latest, last) {
+      this.open = false
     }
   }
 }
@@ -81,5 +80,31 @@ export default {
 
 <style lang="sass">
 @import "../styles/variables.sass"
+@import "../styles/mixins.sass"
+
+.navbar-item.has-dropdown
+  height: fit-content
+  transition: opacity 0.3s ease, transform 0.3s ease
+  .link-text
+    @include opacity-filter-transition
+  &:hover, &:focus
+    .link-text
+      filter: opacity(64%)
+  &.is-active
+    opacity: 1
+
+.navbar-link:not(.is-arrowless)::after
+    border-width: 2px
+    border-radius: 0
+    width: 0.5em
+    height: 0.5em
+    right: 1.25em
+    opacity: 0.64
+    transition: opacity 0.6s ease
+    transform-origin: 50% 55%
+
+.navbar-item.has-dropdown.is-active
+    .navbar-link:not(.is-arrowless)::after
+      opacity: 0.16
 
 </style>

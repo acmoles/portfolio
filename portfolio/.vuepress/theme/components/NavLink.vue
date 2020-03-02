@@ -1,6 +1,6 @@
 <template>
   <router-link
-    class="navbar-item"
+    class="navbar-item single"
     :to="link"
     @focusout.native="focusoutAction"
     v-if="!isExternal(link)"
@@ -15,7 +15,6 @@
     :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
   >
     {{ item.text }}
-    <OutboundLink/>
   </a>
 </template>
 
@@ -57,13 +56,16 @@ export default {
 
 <style lang="sass">
 @import "../styles/variables.sass"
+@import "../styles/mixins.sass"
 
-.navbar-item
+
+.navbar-item.single
   height: fit-content
-  border-bottom: 2px transparent solid
+  @include opacity-filter-transition
+  &:hover, &:focus
+    filter: opacity(64%)
 
-
-.navbar-item.router-link-active
-  border-bottom: 2px $white-ter solid
+.navbar-item.single.router-link-active
+  color: $white
 
 </style>

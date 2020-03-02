@@ -5,6 +5,7 @@
         <h1 class="title is-spaced home-title">Hello <WavingHand/></h1>
         <h2 class="subtitle home-subtitle">
             I’m a multidisciplinary designer creating useful and playful experiences with people in mind
+            <ArrowIcon/>
         </h2>
     </div>
 
@@ -30,12 +31,13 @@
 import { loadableHero } from '../mixins/loadableHero.js'
 import PortfolioItem from '@theme/components/PortfolioItem.vue'
 import WavingHand from '@theme/components/WavingHand.vue'
+import ArrowIcon from '@theme/components/icons/ArrowIcon.vue'
 
 // TODO fix width issue of tiles on smaller desktop screens
 // TODO mobile view
 
 export default {
-  components: { PortfolioItem, WavingHand },
+  components: { PortfolioItem, WavingHand, ArrowIcon },
 
   mixins: [loadableHero],
 
@@ -86,6 +88,10 @@ export default {
     h2.home-subtitle
       grid-column-start: 2
       grid-column-end: 4
+      .icon
+        position: relative
+        top: 0.1em
+        left: 0.1em
 
 
   .grid-wrapper

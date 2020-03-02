@@ -221,8 +221,8 @@ export default {
   perspective: 1000px
   *
     transition: transform 0.2s ease-out
-  .project-panel
     @include make3d
+  .project-panel
     box-shadow: $element-shadow
     color: $white-ter
   &.double-right, &.double-left

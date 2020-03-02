@@ -34,7 +34,6 @@ module.exports = {
           { text: 'Linkedin', link: 'https://linkedin.com' },
           { text: 'Github', link: 'https://github.com' }
       ] },
-      { text: 'External', link: 'https://google.com' },
     ],
     smoothScroll: true
   },

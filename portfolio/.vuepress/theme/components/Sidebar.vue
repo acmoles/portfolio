@@ -22,7 +22,7 @@
       <SidebarButton
         purpose="goto-top"
         class="goto-top-sidebar-button"
-        @sidebar-button-event="gotoTop"
+        @sidebar-button-event="scrollToTop"
       />
       <transition name="fade">
         <SearchboxContainer
@@ -39,6 +39,7 @@ import SidebarButton from '@theme/components/SidebarButton.vue'
 import SidebarLinks from '@theme/components/SidebarLinks.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 import { resolveSidebarItems } from '../util'
+import updateOnScroll from 'uos'
 
 export default {
   name: 'Sidebar',
@@ -67,19 +68,26 @@ export default {
       )
     },
   },
+
+  mounted () {
+    this.$nextTick(() => {
+      updateOnScroll(0, 1, progress => {
+        this.handleScroll( progress )
+      });
+    })
+  },
+
   methods: {
     toggleSearch () {
       this.$store.dispatch('setSearchboxStatus', !this.isSearchboxOpen)
     },
-    gotoTop () {
-      const onScroll = function () {
-          if (window.pageYOffset === 0) {
-              window.removeEventListener('scroll', onScroll.bind(this))
-              this.$store.dispatch('setSidebarStatus', false)
-          }
+    handleScroll (progress) {
+      if (progress === 0) {
+        this.$store.dispatch('setSidebarStatus', false)
+        return
       }
-      window.addEventListener('scroll', onScroll.bind(this))
-      onScroll()
+    },
+    scrollToTop () {
       window.scrollTo({
           top: 0,
           behavior: 'smooth'
