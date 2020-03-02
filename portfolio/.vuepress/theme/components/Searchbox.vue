@@ -1,51 +1,64 @@
 <template>
-  <div class="search-box">
-    <input
-      @input="query = $event.target.value"
-      aria-label="Search"
-      :value="query"
-      :class="{ 'focused': focused }"
-      :placeholder="placeholder"
-      autocomplete="off"
-      spellcheck="false"
-      @focus="focused = true"
-      @blur="focused = false"
-      @keyup.enter="go(focusIndex)"
-      @keyup.up="onUp"
-      @keyup.down="onDown"
-      ref="input"
-    >
-    <ul
-      class="suggestions"
-      v-if="showSuggestions"
-      :class="{ 'align-right': alignRight }"
-      @mouseleave="unfocus"
-    >
-      <li
-        class="suggestion"
-        v-for="(s, i) in suggestions"
-        :class="{ focused: i === focusIndex }"
-        @mousedown="go(i)"
-        @mouseenter="focus(i)"
+<div class="search-box-container">
+  <div class="container is-fullhd">
+    <div class="search-box">
+      <input
+        @input="query = $event.target.value"
+        aria-label="Search"
+        :value="query"
+        :class="{ 'focused': focused }"
+        placeholder="Search headings"
+        autocomplete="off"
+        spellcheck="false"
+        @focus="focused = true"
+        @blur="focused = false"
+        @keyup.enter="go(focusIndex)"
+        @keyup.up="onUp"
+        @keyup.down="onDown"
+        ref="input"
       >
-        <a :href="s.path" @click.prevent>
-          <span class="page-title">{{ s.title || s.path }}</span>
-          <span v-if="s.header" class="header">&gt; {{ s.header.title }}</span>
-        </a>
-      </li>
-    </ul>
+      <i class="icon">
+        <SearchIcon/>
+      </i>
+      <ul
+        class="suggestions"
+        v-if="showSuggestions"
+        :class="{ 'align-right': alignRight }"
+        @mouseleave="unfocus"
+      >
+        <li
+          class="suggestion"
+          v-for="(s, i) in suggestions"
+          :class="{ focused: i === focusIndex }"
+          @mousedown="go(i)"
+          @mouseenter="focus(i)"
+        >
+          <a :href="s.path" @click.prevent>
+            <span class="page-title">{{ s.title || s.path }}</span>
+            <span v-if="s.header" class="header">&gt; {{ s.header.title }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
+</div>
 </template>
 
 <script>
-/* global SEARCH_MAX_SUGGESTIONS, SEARCH_PATHS, SEARCH_HOTKEYS */
+import SearchIcon from '@theme/components/icons/SearchIcon.vue'
+
 export default {
+
+  components: { SearchIcon },
+
   data () {
     return {
       query: '',
       focused: false,
       focusIndex: 0,
-      placeholder: undefined
+      searchMaxSuggestions: 5,
+      searchPaths: null,
+      searchHotkeys: ['s', '/'],
     }
   },
 
@@ -74,7 +87,7 @@ export default {
       }
 
       const { pages } = this.$site
-      const max = this.$site.themeConfig.searchMaxSuggestions || SEARCH_MAX_SUGGESTIONS
+      const max = this.searchMaxSuggestions
       const localePath = this.$localePath
       const matches = item => (
         item
@@ -132,7 +145,7 @@ export default {
     },
 
     isSearchable (page) {
-      let searchPaths = SEARCH_PATHS
+      let searchPaths = this.searchPaths
 
       // all paths searchables
       if (searchPaths === null) { return true }
@@ -145,7 +158,7 @@ export default {
     },
 
     onHotkey (event) {
-      if (event.srcElement === document.body && SEARCH_HOTKEYS.includes(event.key)) {
+      if (event.srcElement === document.body && this.searchHotkeys.includes(event.key)) {
         this.$refs.input.focus()
         event.preventDefault()
       }
@@ -191,92 +204,84 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="sass">
+@import "../styles/variables.sass"
+@import "../styles/mixins.sass"
+
+.search-box-container
+  @include cover-screen
+  display: flex
+  align-items: center
+  justify-content: center
+  pointer-events: none
+
 .search-box
-  display inline-block
-  position relative
-  margin-right 1rem
+  pointer-events: all
+  display: flex
+  position: relative
+  width: 100%
+  justify-content: center
+  align-items: center
   input
-    cursor text
-    width 10rem
-    height: 2rem
-    color lighten($textColor, 25%)
-    display inline-block
-    border 1px solid darken($borderColor, 10%)
-    border-radius 2rem
-    font-size 0.9rem
-    line-height 2rem
-    padding 0 0.5rem 0 2rem
-    outline none
-    transition all .2s ease
-    background #fff url(search.svg) 0.6rem 0.5rem no-repeat
-    background-size 1rem
+    text-rendering: geometricPrecision
+    background-color: transparent
+    cursor: text
+    width: 100%
+    max-width: 16em
+    color: $white-ter
+    display: flex
+    border: none
+    border-bottom: 2px solid $slate
+    font-size: 1.25em
+    line-height: 2em
+    outline: none
+    &::placeholder
+      color: lighten($silver, 10%)
+      @include opacity-filter-transition
     &:focus
-      cursor auto
-      border-color $accentColor
+      cursor: auto
+    &:focus::placeholder
+      filter: opacity(10%)
+  .icon
+    cursor: pointer
+    position: relative
+    right: 1.5em
+    @include opacity-filter-transition
+    &:hover
+      filter: opacity(50%)
   .suggestions
-    background #fff
-    width 20rem
-    position absolute
-    top 1.5rem
-    border 1px solid darken($borderColor, 10%)
-    border-radius 6px
-    padding 0.4rem
-    list-style-type none
+    background: transparent
+    width: 20rem
+    list-style-type: none
     &.align-right
-      right 0
+      right: 0
   .suggestion
-    line-height 1.4
-    padding 0.4rem 0.6rem
-    border-radius 4px
-    cursor pointer
+    line-height: 1.4
+    padding: 0.4rem 0.6rem
+    border-radius: $radius-small
+    cursor: pointer
     a
-      white-space normal
-      color lighten($textColor, 35%)
+      white-space: normal
+      color: lighten($white-ter, 35%)
       .page-title
-        font-weight 600
+        font-weight: 600
       .header
-        font-size 0.9em
-        margin-left 0.25em
+        font-size: 0.9em
+        margin-left: 0.25em
     &.focused
-      background-color #f3f4f5
+      background-color: $slate
       a
-        color $accentColor
+        color: $blue
 
-@media (max-width: $MQNarrow)
+@media (max-width: $tablet)
   .search-box
     input
-      cursor pointer
-      width 0
-      border-color transparent
-      position relative
+      cursor: pointer
+      width: 0
+      border-color: transparent
+      position: relative
       &:focus
-        cursor text
-        left 0
-        width 10rem
-
-// Match IE11
-@media all and (-ms-high-contrast: none)
-  .search-box input
-    height 2rem
-
-@media (max-width: $MQNarrow) and (min-width: $MQMobile)
-  .search-box
-    .suggestions
-      left 0
-
-@media (max-width: $MQMobile)
-  .search-box
-    margin-right 0
-    input
-      left 1rem
-    .suggestions
-      right 0
-
-@media (max-width: $MQMobileNarrow)
-  .search-box
-    .suggestions
-      width calc(100vw - 4rem)
-    input:focus
-      width 8rem
+        cursor: text
+        left: 0
+        width: 10rem
 </style>

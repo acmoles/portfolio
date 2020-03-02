@@ -8,9 +8,6 @@ module.exports = (options, ctx) => ({
   },
   plugins: [
     ['@vuepress/active-header-links', options.activeHeaderLinks],
-    ['@vuepress/search', {
-       searchMaxSuggestions: 10
-     }],
     'vuepress-plugin-reading-time',
     require('./plugins/plugin-outside-content/index.js'),
     require('./plugins/plugin-revealer/index.js'),

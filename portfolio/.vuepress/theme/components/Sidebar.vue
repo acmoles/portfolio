@@ -7,7 +7,7 @@
       <transition name="fade">
         <aside
           v-show="!isSearchboxOpen"
-          class="sidebar"
+          class="container is-fullhd sidebar"
           >
           <slot name="top"/>
           <SidebarLinks :depth="0" :items="sidebarItems"/>
@@ -26,7 +26,7 @@
         @sidebar-button-event="scrollToTop"
       />
       <transition name="fade">
-        <SearchboxContainer
+        <Searchbox
           v-show="isSearchboxOpen"
         />
       </transition>
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import SearchboxContainer from '@theme/components/SearchboxContainer.vue'
+import Searchbox from '@theme/components/Searchbox.vue'
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import SidebarLinks from '@theme/components/SidebarLinks.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
@@ -45,12 +45,13 @@ import updateOnScroll from 'uos'
 export default {
   name: 'Sidebar',
 
-  components: { SidebarLinks, NavLinks, SidebarButton, SearchboxContainer },
+  components: { SidebarLinks, NavLinks, SidebarButton, Searchbox },
 
   data () {
     return {
       searchPurpose: 'search',
-      disableGotoTop: true
+      disableGotoTop: true,
+      clickScrollFlag: false,
     }
   },
 
@@ -85,13 +86,17 @@ export default {
     },
     handleScroll (progress) {
       if (progress === 0) {
-        this.$store.dispatch('setSidebarStatus', false)
         this.disableGotoTop = true
+        if (this.clickScrollFlag) {
+          this.$store.dispatch('setSidebarStatus', false)
+          this.clickScrollFlag = false
+        }
       } else {
         this.disableGotoTop = false
       }
     },
     scrollToTop () {
+      this.clickScrollFlag = true
       window.scrollTo({
           top: 0,
           behavior: 'smooth'
