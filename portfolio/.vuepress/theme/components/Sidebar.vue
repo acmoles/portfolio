@@ -119,8 +119,8 @@ export default {
     display: none
 
 .sidebar
-  padding: 0 0 0 6em
-  background-color: transparent
+  display: flex
+  align-items: center
   ul
     padding: 0
     margin: 0
@@ -131,8 +131,6 @@ export default {
     display: none
     border-bottom: 1px solid $white-ter
     padding: 0.5rem 0 0.75rem 0
-    a
-      font-weight: 600
     .nav-item, .repo-link
       display: block
       line-height: 1.25rem
@@ -143,7 +141,6 @@ export default {
     & > li > a.sidebar-link
       font-size: 1.1em
       line-height: 1.7
-      font-weight: bold
     & > li:not(:first-child)
       margin-top: .75rem
 

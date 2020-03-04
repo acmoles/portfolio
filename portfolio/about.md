@@ -2,6 +2,10 @@
 title: About
 sidebar: auto
 date: 2019-09-11
+navStyle:
+  style: light
+  links: blue
+  progress: light
 ---
 
 ::: slot top

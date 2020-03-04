@@ -7,18 +7,25 @@
           <use xlink:href="#path" overflow="visible"/>
         </clipPath>
 
-        <linearGradient x1="25%" y1="50%" x2="89.5%" y2="88%" id="linearGradient">
+        <linearGradient x1="25%" y1="50%" x2="89.5%" y2="88%" id="linearGradientLight">
             <stop stop-color="#FFFFFF" offset="0%"></stop>
             <stop stop-color="#FFFFFF" offset="24%"></stop>
-            <stop stop-color="#FAFAFA" stop-opacity="0" offset="25%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="25%"></stop>
             <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+
+        <linearGradient x1="25%" y1="50%" x2="89.5%" y2="88%" id="linearGradientDark">
+            <stop stop-color="#1F2D3D" offset="0%"></stop>
+            <stop stop-color="#1F2D3D" offset="24%"></stop>
+            <stop stop-color="#1F2D3D" stop-opacity="0" offset="25%"></stop>
+            <stop stop-color="#1F2D3D" stop-opacity="0" offset="100%"></stop>
         </linearGradient>
 
       </defs>
       <g id="logo" clip-path="url(#clip)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <rect id="rectangle" fill="url(#linearGradient)" x="0" y="0" width="24" height="24"></rect>
+          <rect id="rectangle" fill="url(#linearGradientLight)" x="0" y="0" width="24" height="24"></rect>
       </g>
-      <use xlink:href="#path" stroke="#FFFFFF" stroke-width="1.5" fill="none" fill-rule="evenodd" />
+      <use id="outline" xlink:href="#path" stroke="#FFFFFF" stroke-width="1.5" fill="none" fill-rule="evenodd" />
   </svg>
 </template>
 
@@ -38,6 +45,8 @@ export default {
 </script>
 
 <style lang="sass">
+@import "../../styles/variables.sass"
+
 .logo-svg
   position: relative
   bottom: 1px
@@ -54,4 +63,13 @@ export default {
       transform: rotateZ(-90deg) translateY(-0.05em) scale(1.16)
       #rectangle
         transform: scale(3) rotate(-31deg) translate(0, 0.36em)
+
+.dark:not(.force)
+  #outline
+    stroke: $black
+
+.dark:not(.force)
+  #rectangle
+    fill: url(#linearGradientDark)
+
 </style>

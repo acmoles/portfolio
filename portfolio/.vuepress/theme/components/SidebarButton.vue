@@ -72,7 +72,6 @@ $hamburger-layer-height        : 2px
 $hamburger-layer-spacing       : 3px
 $hamburger-layer-color         : $white-ter
 $hamburger-layer-border-radius : 0px
-$hamburger-active-layer-color  : $white-ter
 
 
 .sidebar-button
@@ -92,14 +91,16 @@ $hamburger-active-layer-color  : $white-ter
     cursor: not-allowed
     filter: $hover-filter
 
-  &:hover
-    filter: $hover-filter
-
 .hamburger
-    // .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after
-      background-color: $hamburger-active-layer-color
+      background-color: $hamburger-layer-color
+
+.dark:not(.force)
+  .hamburger
+      .hamburger-inner::before,
+      .hamburger-inner::after
+        background-color: $black
 
 .hamburger-box
   width: $hamburger-layer-width
@@ -118,7 +119,6 @@ $hamburger-active-layer-color  : $white-ter
   &::after
     width: $hamburger-layer-width
     height: $hamburger-layer-height
-    background-color: $hamburger-layer-color
     border-radius: $hamburger-layer-border-radius
     position: absolute
     transition-property: transform
@@ -159,12 +159,13 @@ $hamburger-active-layer-color  : $white-ter
         &::before
           top: 0
           transition: top 0.1s ease-out
-
+          background-color: $hamburger-layer-color
 
         &::after
           bottom: 0
           transform: rotate(-90deg)
           transition: bottom 0.1s ease-out, transform 0.22s 0.1s cubic-bezier(0.215, 0.61, 0.355, 1)
+          background-color: $hamburger-layer-color
 
 .button-box
   position: relative

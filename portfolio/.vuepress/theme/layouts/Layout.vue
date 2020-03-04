@@ -46,8 +46,10 @@ export default {
 
     pageClasses () {
       const userPageClass = this.$page.frontmatter.pageClass
+      const linkStyle = this.$page.frontmatter.navStyle.links
       return [
         this.pageLoadingStatus,
+        linkStyle,
         userPageClass
       ]
     },

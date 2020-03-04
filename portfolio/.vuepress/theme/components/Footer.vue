@@ -1,7 +1,7 @@
 <template>
     <footer class="footer container is-fullhd">
       <div class="footer-content">
-        <i class="icon"><Logo/></i>
+        <!-- <i class="icon"><Logo/></i> -->
         <h3 class="footer-title">
           Anthony Moles
         </h3>
@@ -15,7 +15,7 @@
         </a>
       </div>
       <div class="copy">
-        © Anthony Moles {{ getYear }}
+        © {{ getYear }}
       </div>
     </footer>
 </template>

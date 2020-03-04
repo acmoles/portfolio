@@ -18,7 +18,6 @@ export default {
   @import "../../styles/variables.sass"
 
   #ListIcon
-    transform: scale(0.9)
     path
       fill: $white-ter
 </style>

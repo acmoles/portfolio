@@ -48,7 +48,7 @@ export default {
       animatables: {},
       options: {
         article: {
-    			rotation : {x: -5, y: 5, z: 0},
+    			rotation : {x: -3, y: 3, z: 0},
         },
         caption: {
           translation : {x: 10, y: 10, z: 0},
@@ -67,6 +67,11 @@ export default {
     this.base = this.$refs['base' + this.uid].$el
     this.animatables.article = this.$refs['article' + this.uid]
     this.animatables.caption = this.$refs['caption' + this.uid]
+
+    if (this.type === 'double-left' || this.type === 'double-right') {
+      this.options.article.rotation = {x: -2, y: 2, z: 0}
+      this.options.caption.translation = {x: 8, y: 8, z: 0}
+    }
   },
 
   methods: {

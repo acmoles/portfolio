@@ -30,8 +30,6 @@ export default (router, store, siteData) => {
         })
       }
 
-      // Could be combined together into current/upcoming page data
-      store.dispatch('setNavStyle', toPageFrontmatter.navStyle)
       store.dispatch('setTitleStatus', {
         title: toPageFrontmatter.title,
         subtitle: toPageFrontmatter.subtitle

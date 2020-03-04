@@ -3,6 +3,7 @@ uid: 5
 title: toucanBox R&D
 subtitle: Mixing digital and physical play
 type: single
+nav: light
 background: purple
 sidebar: auto
 date: 2019-09-11

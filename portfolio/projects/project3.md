@@ -3,6 +3,7 @@ uid: 3
 title: Stompy Robot
 subtitle: Co-founding an indie games studio
 type: single
+nav: light
 background: stompy-robot
 sidebar: auto
 date: 2019-09-12

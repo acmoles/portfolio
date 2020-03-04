@@ -3,6 +3,7 @@ uid: 2
 title: Wesen
 subtitle: Turning customers into creators
 type: double-right
+nav: dark
 background: dark
 case1: Case study
 sidebar: auto
@@ -19,10 +20,13 @@ next: ./project3
   </template>
 
   <template v-slot:description>
-    <p class="stage-description">
+    <p class="stage-description subtitle">
       Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables easy customisation of a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.
     </p>
-    <ul class="stage-details">
+  </template>
+
+  <template v-slot:descriptionDetails>
+    <ul class="stage-details column">
       <li>Test item</li>
       <li>Test item</li>
     </ul>

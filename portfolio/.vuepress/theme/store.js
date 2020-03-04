@@ -49,10 +49,6 @@ export default (Vue) => {
         background: ''
       },
       useLastProject: false,
-      navStyle: {
-        logo: 'blue', // blue, red, orange, white (outline)
-        links: 'light' // dark
-      }
     },
     mutations: {
       SET_SEARCHBOX_STATUS (state, status) {
@@ -81,10 +77,7 @@ export default (Vue) => {
       },
       USE_LAST_PROJECT (state, status) {
         state.useLastProject = status
-      },
-      SET_NAV_STYLE (state, status) {
-        state.navStyle = status
-      },
+      }
     },
     actions: {
       setSearchboxStatus (context, payload) {
@@ -135,10 +128,7 @@ export default (Vue) => {
       },
       useLastProject (context, payload) {
         context.commit('USE_LAST_PROJECT', payload)
-      },
-      setNavStyle (context, payload) {
-        context.commit('SET_NAV_STYLE', payload)
-      },
+      }
     }
   })
 }

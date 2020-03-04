@@ -95,10 +95,6 @@ export default {
         left: 0.1em
         filter: opacity(100%)
         @include opacity-filter-transition
-      a:hover
-        .icon
-          filter: opacity(50%)
-
 
   .grid-wrapper
     display: grid

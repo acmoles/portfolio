@@ -5,6 +5,10 @@ hasFooter: true
 meta:
   - title: description
     content: hello
+navStyle:
+  style: light
+  links: light
+  progress: light
 ---
 
 ::: slot top

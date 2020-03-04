@@ -97,32 +97,24 @@ function renderExternal (h, to, text) {
   @import "../styles/variables.sass"
   @import "../styles/mixins.sass"
 
-  .sidebar .sidebar-sub-headers
-    padding-left: 1rem
-    font-size: 0.95em
-
   a.sidebar-link
-    font-size: 1em
-    font-weight: 400
     display: inline-block
     color: $white-ter
-    border-left: 0.25rem solid transparent
-    padding: 0.35rem 1rem 0.35rem 1.25rem
+    padding: 0.5rem 1rem 0.5rem 0
     line-height: 1.4
     width: 100%
-    box-sizing: border-box
+    @include opacity-filter-transition
+    filter: opacity(100%)
     &:hover
-      color: $grey-lighter
+      filter: opacity(50%)
     &.active
-      font-weight: 600
       color: $blue
       border-left-color: $blue
-    .sidebar-group &
-      padding-left: 2rem
     .sidebar-sub-headers &
+      font-size: 0.875em
+      color: $silver
       padding-top: 0.25rem
       padding-bottom: 0.25rem
-      border-left: none
       &.active
-        font-weight: 500
+        color: $blue
 </style>

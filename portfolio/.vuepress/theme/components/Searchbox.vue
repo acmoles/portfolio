@@ -1,7 +1,7 @@
 <template>
 <div class="search-box-container">
-  <div class="container is-fullhd">
-    <div class="search-box">
+  <div class="container is-fullhd columns">
+    <div class="search-box column">
       <input
         @input="query = $event.target.value"
         aria-label="Search"
@@ -17,13 +17,17 @@
         @keyup.down="onDown"
         ref="input"
       >
-      <i class="icon">
+      <i
+        class="icon"
+        @mousedown="go(focusIndex)"
+      >
         <SearchIcon/>
       </i>
+    </div>
+    <div class="column is-two-thirds">
       <ul
         class="suggestions"
         v-if="showSuggestions"
-        :class="{ 'align-right': alignRight }"
         @mouseleave="unfocus"
       >
         <li
@@ -35,7 +39,7 @@
         >
           <a :href="s.path" @click.prevent>
             <span class="page-title">{{ s.title || s.path }}</span>
-            <span v-if="s.header" class="header">&gt; {{ s.header.title }}</span>
+            <span v-if="s.header" class="header">{{ s.header.title }}</span>
           </a>
         </li>
       </ul>
@@ -54,9 +58,9 @@ export default {
   data () {
     return {
       query: '',
-      focused: false,
+      focused: true,
       focusIndex: 0,
-      searchMaxSuggestions: 5,
+      searchMaxSuggestions: 9,
       searchPaths: null,
       searchHotkeys: ['s', '/'],
     }
@@ -124,13 +128,6 @@ export default {
         }
       }
       return res
-    },
-
-    // make suggestions align right when there are not enough items
-    alignRight () {
-      const navCount = (this.$site.themeConfig.nav || []).length
-      const repo = this.$site.repo ? 1 : 0
-      return navCount + repo <= 2
     }
   },
 
@@ -214,27 +211,28 @@ export default {
   align-items: center
   justify-content: center
   pointer-events: none
+  *
+    text-rendering: geometricPrecision
+  .container.columns
+    height: 100%
+    align-items: center
 
 .search-box
   pointer-events: all
-  display: flex
   position: relative
-  width: 100%
-  justify-content: center
+  display: flex
   align-items: center
   input
-    text-rendering: geometricPrecision
     background-color: transparent
     cursor: text
-    width: 100%
-    max-width: 16em
     color: $white-ter
-    display: flex
+    display: inline-flex
     border: none
     border-bottom: 2px solid $slate
     font-size: 1.25em
     line-height: 2em
-    outline: none
+    margin-right: 2em
+    width: 100%
     &::placeholder
       color: lighten($silver, 10%)
       @include opacity-filter-transition
@@ -245,33 +243,28 @@ export default {
   .icon
     cursor: pointer
     position: relative
-    right: 1.5em
+    right: 4em
     @include opacity-filter-transition
-    &:hover
-      filter: opacity(50%)
-  .suggestions
-    background: transparent
-    width: 20rem
-    list-style-type: none
-    &.align-right
-      right: 0
-  .suggestion
-    line-height: 1.4
-    padding: 0.4rem 0.6rem
-    border-radius: $radius-small
-    cursor: pointer
+.suggestions
+  pointer-events: all
+  background: transparent
+  list-style-type: none
+.suggestion
+  line-height: 1.4
+  padding: 0.4rem 0.6rem
+  border-radius: $radius-small
+  cursor: pointer
+  a
+    white-space: normal
+    .page-title
+      color: $white
+    .header
+      color: $silver
+      margin-left: 0.5em
+  &.focused
+    background-color: $slate
     a
-      white-space: normal
-      color: lighten($white-ter, 35%)
-      .page-title
-        font-weight: 600
-      .header
-        font-size: 0.9em
-        margin-left: 0.25em
-    &.focused
-      background-color: $slate
-      a
-        color: $blue
+      color: $blue
 
 @media (max-width: $tablet)
   .search-box

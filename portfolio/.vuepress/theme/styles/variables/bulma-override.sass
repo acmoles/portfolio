@@ -29,13 +29,16 @@ $radius-large: 0.6em
 $radius-rounded: 290486px
 $button-border-width: 0.1em
 
+$button-custom-text-color: lighten($silver, 10%)
+$button-custom-hover-color: lighten($slate, 5%)
+
 // Footer
 $footer-background-color: transparent
 $footer-padding: 0
 
 // Navbar
-$navbar-item-color: lighten($silver, 10%)
-$navbar-item-hover-color: lighten($silver, 10%)
+$navbar-item-color: $button-custom-text-color
+$navbar-item-hover-color: $button-custom-text-color
 $navbar-item-hover-background-color: transparent
 $navbar-item-active-color: $white
 $navbar-background-color: transparent
@@ -49,7 +52,7 @@ $input-arrow: $grey
 
 $navbar-dropdown-offset: 0.5em
 $navbar-dropdown-background-color: $slate
-$navbar-dropdown-item-hover-background-color: lighten($slate, 5%)
+$navbar-dropdown-item-hover-background-color: $button-custom-hover-color
 $navbar-dropdown-item-hover-color: $grey-light
 $navbar-dropdown-boxed-shadow: $button-shadow
 

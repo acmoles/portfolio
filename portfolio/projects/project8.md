@@ -3,6 +3,7 @@ uid: 8
 title: Random International
 subtitle: Fabricating an artwork
 type: single
+nav: dark
 background: random
 sidebar: auto
 date: 2019-09-11

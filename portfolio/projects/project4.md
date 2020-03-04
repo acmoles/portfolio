@@ -3,6 +3,7 @@ uid: 4
 title: BLKBRD
 subtitle: Envisioning messages with location
 type: single
+nav: light
 background: green
 sidebar: auto
 date: 2019-09-11

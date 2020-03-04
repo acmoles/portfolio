@@ -3,6 +3,7 @@
     <header
       v-show="show"
       class="navbar"
+      :class="[navStyle, { force: forceLight }]"
       ref="navbar"
       :style="{ position: cssPosition, top: cssTop + 'px' }"
       role="navigation"
@@ -32,13 +33,22 @@
 </template>
 
 <script>
-// TODO add tilt effect to nav-link-circle
 
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 import Logo from '@theme/components/icons/Logo.vue'
 import updateOnScroll from 'uos'
 import debounce from 'lodash.debounce'
+
+import { getScrollTop, getOffsetY } from '../util'
+
+// navStyle: {
+//   style: 'light', // dark
+//   links: 'blue', // blue, red, orange, green, purple, yellow, pink, white
+//   progress: 'light' // ?
+// }
+// TODO respond to navStyle (also in nprogress)
+
 
 export default {
   components: { SidebarButton, NavLinks, Logo },
@@ -67,16 +77,18 @@ export default {
     pageLoadingStatus () {
       return this.$store.state.pageLoadingStatus
     },
-    navStyle () {
-      return this.$store.state.navStyle
-      // TODO respond to navStyle (also in nprogress)
-    },
     isSidebarOpen () {
       return this.$store.state.isSidebarOpen
     },
     isSearchboxOpen () {
       return this.$store.state.isSearchboxOpen
     },
+    navStyle () {
+      return this.$page.frontmatter.navStyle.style
+    },
+    forceLight () {
+      return this.$store.state.isSidebarOpen || this.scrollPosition >= (window.innerHeight - 48)
+    }
   },
 
   watch: {
@@ -108,8 +120,8 @@ export default {
       //   this.navbarBurgered = false
       // }
 
-      this.scrollPosition = this.getScrollTop()
-      this.navbarPosition = this.getOffsetY(this.$refs.navbar)
+      this.scrollPosition = getScrollTop()
+      this.navbarPosition = getOffsetY(this.$refs.navbar)
 
       if ( this.scrollPosition < this.lastScrollPosition && this.scrollDirection !== 'up' ) {
         this.scrollDirection = 'up';
@@ -143,17 +155,7 @@ export default {
 
       this.lastScrollPosition = this.scrollPosition
 
-    },
-    getOffsetY(el) {
-        var rect = el.getBoundingClientRect(),
-        scrollTop = window.pageYOffset;
-        return rect.top + scrollTop
-    },
-    getScrollTop () {
-      return window.pageYOffset
-        || document.documentElement.scrollTop
-        || document.body.scrollTop || 0
-    },
+    }
   }
 }
 
@@ -195,9 +197,11 @@ export default {
   .home-link
     pointer-events: none
 
-.layout:not(.home)
-  .home-link:hover
-    filter: $hover-filter
+// .layout.home
+//   .home-link:hover
+//     filter: $hover-filter
+//   .home-link:active
+//     filter: $active-filter
 
 .nav-sidebar-button
   position: absolute

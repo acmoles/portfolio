@@ -185,6 +185,18 @@ export function resolveNavLinkItem (linkItem) {
   })
 }
 
+export function getScrollTop () {
+  return window.pageYOffset
+    || document.documentElement.scrollTop
+    || document.body.scrollTop || 0
+}
+
+export function getOffsetY (el) {
+    var rect = el.getBoundingClientRect(),
+    scrollTop = window.pageYOffset;
+    return rect.top + scrollTop
+}
+
 /**
  * @param { Route } route
  * @param { Array<string|string[]> | Array<SidebarGroup> | [link: string]: SidebarConfig } config
