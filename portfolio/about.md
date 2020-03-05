@@ -4,13 +4,14 @@ sidebar: auto
 date: 2019-09-11
 navStyle:
   style: light
-  links: blue
+  links: light
   progress: light
 ---
 
 ::: slot top
 
 <ProjectStage>
+
   <template v-slot:visual>
     <ThreeHero/>
   </template>

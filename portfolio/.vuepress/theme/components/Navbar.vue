@@ -40,7 +40,7 @@ import Logo from '@theme/components/icons/Logo.vue'
 import updateOnScroll from 'uos'
 import debounce from 'lodash.debounce'
 
-import { getScrollTop, getOffsetY } from '../util'
+import { getScrollTop, getOffsetY, getViewport } from '../util'
 
 // navStyle: {
 //   style: 'light', // dark
@@ -55,6 +55,7 @@ export default {
   data () {
     return {
       show: true,
+      windowHeight: null,
       navbarBurgered: true,
       navbarHeight: 16 * 6,
       navbarPosition: 0,
@@ -67,9 +68,13 @@ export default {
   },
   mounted () {
     this.$nextTick(() => {
+
+      this.windowHeight = getViewport('y') // SSR
+
       updateOnScroll(0, 1, progress => {
         this.handleScroll( progress )
-      });
+      })
+
     })
   },
 
@@ -87,7 +92,7 @@ export default {
       return this.$page.frontmatter.navStyle.style
     },
     forceLight () {
-      return this.$store.state.isSidebarOpen || this.scrollPosition >= (window.innerHeight - 48)
+      return this.$store.state.isSidebarOpen || this.scrollPosition >= (this.windowHeight - 48)
     }
   },
 

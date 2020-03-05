@@ -3,7 +3,10 @@ uid: 10
 title: Art Lebedev Studio
 subtitle: Channelling the personality of a renowned studio
 type: single
-nav: light
+navStyle:
+  style: light
+  links: light
+  progress: light
 background: als
 sidebar: auto
 date: 2019-09-12

@@ -2,7 +2,7 @@ export default (router, store, siteData) => {
 
   // Page transition hooks
   router.beforeEach((to, from, next) => {
-    window.vueState = store.state
+    // window.vueState = store.state
 
     if (to.path !== from.path && store.state.revealerInitialised) {
       store.dispatch('setLoadingPageContent', 'covering')

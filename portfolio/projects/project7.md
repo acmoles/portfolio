@@ -3,7 +3,10 @@ uid: 7
 title: Makielab
 subtitle: Pioneering customisable childrens toys
 type: single
-nav: dark
+navStyle:
+  style: dark
+  links: light
+  progress: light
 background: yellow
 sidebar: auto
 date: 2019-09-12

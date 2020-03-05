@@ -1,31 +1,11 @@
 <template>
-<div class="project-background-three">
-  <div class="presentation noise-background">
-
-  </div>
-  <script type="module">
-    import { Hand } from './js/hand.js'
-    import { NoiseLayer } from './js/noiseLayer.js'
-    import { ThreeComposition } from './js/threeComposition.js'
-
-    const presentation = document.getElementsByClassName('presentation')[0];
-    var threeComposition = new ThreeComposition(presentation);
-
-    var noiseLayer = new NoiseLayer();
-
-    threeComposition.addEventListener('comp-loaded', () => {
-      console.log('loaded');
-    });
-
-    threeComposition.init();
-
-  </script>
-</div>
+<div ref="presentation" class="project-background-three"></div>
 </template>
 
 <script>
 
 import { loadableHero } from '../mixins/loadableHero.js'
+import { ThreeComposition } from '../application/three/threeComposition.js'
 
 export default {
 
@@ -33,7 +13,7 @@ export default {
 
   data () {
     return {
-      title: 'Three'
+      threeComposition: null
     }
   },
 
@@ -41,6 +21,14 @@ export default {
   },
 
   mounted() {
+    this.threeComposition = new ThreeComposition(this.$refs.presentation)
+
+    this.threeComposition.addEventListener('comp-loaded', () => {
+      console.log('loaded');
+    })
+
+    this.threeComposition.init()
+
     setTimeout(() => {
       this.doLoad()
     }, 100)

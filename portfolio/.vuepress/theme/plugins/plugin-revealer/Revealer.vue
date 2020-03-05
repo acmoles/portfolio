@@ -22,7 +22,9 @@
 </template>
 
 <script>
+import nprogress from 'nprogress'
 import config from '../../../config.js'
+import { getViewport, getScrollTop } from '../../util'
 // import IncomingTitle from './IncomingTitle.vue'
 
 export default {
@@ -63,10 +65,31 @@ export default {
 
   watch: {
     pageLoadingStatus (latest, last) {
-
       if (latest === last) {
         return
       }
+
+      if (latest === 'loading') {
+        nprogress.start()
+      } else {
+        nprogress.done()
+      }
+
+      // disallow scroll & ensure instant scroll
+      if (latest === 'finished') {
+        document.documentElement.style.overflowY = 'scroll'
+        document.documentElement.style.scrollBehavior = 'smooth'
+      } else if (latest === 'revealing') {
+        document.documentElement.style.overflowY = 'scroll'
+        document.documentElement.style.scrollBehavior = 'auto'
+      } else {
+        document.documentElement.style.overflowY = 'hidden'
+        document.documentElement.style.scrollBehavior = 'auto'
+      }
+
+
+
+      //// revealer state
 
       if (latest === 'covering' || latest === 'loading') {
         this.show = true
@@ -125,7 +148,20 @@ export default {
   },
 
   mounted() {
+    nprogress.configure({
+      showSpinner: false,
+      trickleSpeed: 100
+    })
+
+    // Start first load
+    nprogress.start()
+
+    // Set initial scroll styles
+    document.documentElement.style.overflowY = 'scroll'
+    document.documentElement.style.scrollBehavior = 'smooth'
+
     this.$nextTick(() => {
+      document.documentElement.classList.add('ready')
       this.$store.dispatch('setRevealerInit', true)
     })
   },
@@ -137,7 +173,7 @@ export default {
 
     finishedRevealing() {
       this.$store.dispatch('setLoadingPageContent', 'finished')
-      this.$store.dispatch('useLastProject', false)
+      this.$store.dispatch('useLastProject', false)       // TODO is this needed?
       this.revealerParentClass = 'revealer-fixed-active'
       this.revealerClass = ''
       this.transformString = 'translate3D(0, 0, 0) scale3d(1, 1, 1)'
@@ -146,24 +182,10 @@ export default {
     generateTransformStringPlacement() {
       let translateX = this.projectPosition.childLeft
       let translateY = this.projectPosition.childTop
-      let scaleX = this.projectPosition.childWidth / this.getViewport('x')
-      let scaleY = this.projectPosition.childHeight / this.getViewport('y')
+      let scaleX = this.projectPosition.childWidth / getViewport('x')
+      let scaleY = this.projectPosition.childHeight / getViewport('y')
 
       return 'translate3D(' + translateX + 'px, ' + translateY + 'px, 0px) scale3d(' + scaleX + ',' + scaleY + ',1)'
-    },
-
-    getViewport( axis ) {
-      var client, inner
-      if( axis === 'x' ) {
-        client = window.document.documentElement['clientWidth']
-        inner = window['innerWidth']
-      }
-      else if( axis === 'y' ) {
-        client = window.document.documentElement['clientHeight']
-        inner = window['innerHeight']
-      }
-
-      return client < inner ? inner : client
     }
   }
 }

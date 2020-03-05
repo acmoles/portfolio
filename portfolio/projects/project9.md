@@ -3,7 +3,10 @@ uid: 9
 title: Lego
 subtitle: Building a uniquely Lego gaming experience
 type: single
-nav: light
+navStyle:
+  style: light
+  links: light
+  progress: light
 background: pink
 sidebar: auto
 date: 2019-09-12

@@ -3,7 +3,10 @@ uid: 2
 title: Wesen
 subtitle: Turning customers into creators
 type: double-right
-nav: dark
+navStyle:
+  style: dark
+  links: light
+  progress: light
 background: dark
 case1: Case study
 sidebar: auto

@@ -53,6 +53,7 @@ export default {
   },
 
   mounted() {
+
     this.timeline = anime.timeline({
       autoplay: false,
       loop: false,

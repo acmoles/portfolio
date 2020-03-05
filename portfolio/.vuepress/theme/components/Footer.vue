@@ -71,8 +71,10 @@ export default {
     align-items: flex-end
   .footer-title
     font-size: 1.25em
+
     line-height: 1.3em
     font-family: $family-display
+    letter-spacing: .5px
     margin-right: 1em
   i
     margin-right: 0.75em

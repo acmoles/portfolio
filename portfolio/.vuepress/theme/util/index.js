@@ -197,6 +197,22 @@ export function getOffsetY (el) {
     return rect.top + scrollTop
 }
 
+export function getViewport( axis ) {
+  if (window) {
+    var client, inner
+    if( axis === 'x' ) {
+      client = window.document.documentElement['clientWidth']
+      inner = window['innerWidth']
+    }
+    else if( axis === 'y' ) {
+      client = window.document.documentElement['clientHeight']
+      inner = window['innerHeight']
+    }
+
+    return client < inner ? inner : client
+  }
+}
+
 /**
  * @param { Route } route
  * @param { Array<string|string[]> | Array<SidebarGroup> | [link: string]: SidebarConfig } config

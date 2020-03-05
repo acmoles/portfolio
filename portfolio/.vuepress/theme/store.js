@@ -1,5 +1,4 @@
 import Vuex from 'vuex'
-import nprogress from 'nprogress'
 import config from '../config.js'
 
 /*
@@ -11,18 +10,6 @@ finished - set by revealer
 */
 
 export default (Vue) => {
-
-  nprogress.configure({
-    showSpinner: false,
-    trickleSpeed: 100
-  })
-
-  // Start first load
-  nprogress.start()
-
-  // Set initial scroll styles
-  document.documentElement.style.overflowY = 'scroll'
-  document.documentElement.style.scrollBehavior = 'smooth'
 
   Vue.use(Vuex)
 
@@ -90,31 +77,12 @@ export default (Vue) => {
         context.commit('SET_SIDEBAR_STATUS', payload)
       },
       setLoadingPageContent (context, payload) {
-        if (payload === 'loading') {
-          nprogress.start()
-        } else {
-          nprogress.done()
-        }
-
-        // disallow scroll & ensure instant scroll
-        if (payload === 'finished') {
-          document.documentElement.style.overflowY = 'scroll'
-          document.documentElement.style.scrollBehavior = 'smooth'
-        } else if (payload === 'revealing') {
-          document.documentElement.style.overflowY = 'scroll'
-          document.documentElement.style.scrollBehavior = 'auto'
-        } else {
-          document.documentElement.style.overflowY = 'hidden'
-          document.documentElement.style.scrollBehavior = 'auto'
-        }
-
         context.commit('SET_LOADING_STATUS', payload)
       },
       setTitleStatus (context, payload) {
         context.commit('SET_TITLE_STATUS', payload)
       },
       setRevealerInit (context, payload) {
-        document.documentElement.classList.add('ready')
         context.commit('SET_REVEALER_INIT', payload)
       },
       setNextGuardCallback (context, payload) {

@@ -21,17 +21,16 @@
   "homepage": "https://github.com/acmoles/portfolio#readme",
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "^1.2.0",
-    "@vuepress/plugin-back-to-top": "^1.2.0",
     "@vuepress/plugin-medium-zoom": "^1.2.0",
     "@vuepress/plugin-nprogress": "^1.2.0",
     "@vuepress/plugin-pwa": "^1.2.0",
-    "@vuepress/plugin-search": "^1.2.0",
     "autoprefixer": "^9.7.4",
     "node-sass": "^4.13.1",
     "sass-loader": "^7.3.1",
     "vuepress": "^1.2.0",
     "vuepress-plugin-clean-urls": "^1.1.1",
     "vuepress-plugin-reading-time": "^0.1.1",
+    "@vuepress/plugin-google-analytics": "^1.3.1",
     "webpack": "^4.41.5"
   },
   "dependencies": {
@@ -45,7 +44,6 @@
     "uos": "^1.2.0",
     "vue": "^2.6.11",
     "vue-clipboard2": "^0.3.1",
-    "vue-events": "^3.1.0",
     "vue-force-next-tick": "^1.1.0",
     "vue-js-modal": "^1.3.31",
     "vuex": "^3.1.2"

@@ -15,9 +15,9 @@
 </template>
 
 <script>
-import anime from 'animejs'
+// import anime from 'animejs'
 import updateOnScroll from 'uos'
-import { getScrollTop } from '../../util'
+import { getScrollTop, getViewport } from '../../util'
 
 
 const startYdown = 10;
@@ -53,7 +53,7 @@ export default {
       this.toggle(this.down)
 
       updateOnScroll(0, 1, progress => {
-        if (getScrollTop() > (window.innerHeight / 2)) {
+        if (getScrollTop() > (getViewport('y') / 2)) {
           this.show = false
         } else {
           this.show = true

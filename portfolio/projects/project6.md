@@ -3,7 +3,10 @@ uid: 6
 title: toucanBox
 subtitle: Refining the value proposition and personalising the experience
 type: double-left
-nav: light
+navStyle:
+  style: light
+  links: light
+  progress: light
 background: blue
 case1: Case study
 case2: Two parts
