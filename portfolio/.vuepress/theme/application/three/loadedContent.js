@@ -13,7 +13,7 @@ export class LoadedContent extends EventTarget {
     this.animations = [];
     this.interactables = [];
 
-    this.LOADPATH = 'three/characters.glb';
+    this.LOADPATH = window.location.origin + '/three/characters.glb';
 
     this.models = [
       { name: 'Ant',
@@ -123,6 +123,7 @@ export class LoadedContent extends EventTarget {
 
   equipMesh( meshobject, child ) {
     meshobject.mesh = child;
+    meshobject.mesh.material.metalness = 0;
     this.interactables.push(meshobject.mesh);
 
     if (meshobject.actionSequence[0] !== null) {
@@ -254,6 +255,7 @@ export class LoadedContent extends EventTarget {
     // Instantiate a loader
     var loader = new GLTFLoader();
 
+    console.log('attempting loadpath: ', this.LOADPATH);
     // Load a glTF resource
     loader.load(
       // resource URL

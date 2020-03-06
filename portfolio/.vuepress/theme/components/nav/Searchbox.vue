@@ -202,8 +202,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../styles/variables.sass"
-@import "../styles/mixins.sass"
+@import "../../styles/variables.sass"
+@import "../../styles/mixins.sass"
 
 .search-box-container
   @include cover-screen

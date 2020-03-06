@@ -35,11 +35,11 @@
 </template>
 
 <script>
-import Searchbox from '@theme/components/Searchbox.vue'
-import SidebarButton from '@theme/components/SidebarButton.vue'
-import SidebarLinks from '@theme/components/SidebarLinks.vue'
-import NavLinks from '@theme/components/NavLinks.vue'
-import { resolveSidebarItems } from '../util'
+import Searchbox from '@theme/components/nav/Searchbox.vue'
+import SidebarButton from '@theme/components/nav/SidebarButton.vue'
+import SidebarLinks from '@theme/components/nav/SidebarLinks.vue'
+import NavLinks from '@theme/components/nav/NavLinks.vue'
+import { resolveSidebarItems } from '../../util'
 import updateOnScroll from 'uos'
 
 export default {
@@ -74,6 +74,7 @@ export default {
 
   mounted () {
     this.$nextTick(() => {
+      // TODO check how many scroll handlers uos actually makes
       updateOnScroll(0, 1, progress => {
         this.handleScroll( progress )
       });
@@ -107,8 +108,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../styles/variables.sass"
-@import "../styles/mixins.sass"
+@import "../../styles/variables.sass"
+@import "../../styles/mixins.sass"
 
 .sidebar-container
   @include cover-screen

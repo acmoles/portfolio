@@ -52,6 +52,7 @@ export default {
 
 <style lang="sass">
 @import "../styles/variables.sass"
+@import "../styles/mixins.sass"
 
 .visual, .info-box
   display: flex

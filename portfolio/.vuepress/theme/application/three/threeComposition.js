@@ -56,6 +56,10 @@ export class ThreeComposition extends EventTarget {
 
     this.configRenderer();
     this.configScene();
+
+    // Test
+    // this.configTestGeometry();
+    // this.animate();
   }
 
   init() {
@@ -112,10 +116,13 @@ export class ThreeComposition extends EventTarget {
     let width = this.container.offsetWidth;
     let height = this.container.offsetHeight;
 
-    this.renderer.setClearColor( 0x273444, 0 );
+    // this.renderer.setClearColor( 0x273444, 0 );
     this.renderer.setPixelRatio( window.devicePixelRatio );
     this.renderer.setSize( width, height );
+    // this.renderer.physicallyCorrectLights = true;
     this.renderer.outputEncoding = THREE.sRGBEncoding;
+    this.renderer.gammaFactor = 2;
+    this.renderer.gammaOutput = true;
 
     this.composer = new EffectComposer( this.renderer, this.renderTarget);
 
@@ -141,8 +148,8 @@ export class ThreeComposition extends EventTarget {
     this.worldScene.background = null;
 
     this.onWindowResize();
-    // var axesHelper = new THREE.AxesHelper( 5 );
-    // worldScene.add( axesHelper );
+    var axesHelper = new THREE.AxesHelper( 5 );
+    this.worldScene.add( axesHelper );
 
     // TODO add these to restrict user camera
     let maxAngle = (7 / 20) * Math.PI;
@@ -173,6 +180,18 @@ export class ThreeComposition extends EventTarget {
     this.camera.bottom = height / - this.camFactor;
 
     this.camera.updateProjectionMatrix();
+  }
+
+  configTestGeometry() {
+    let material = new THREE.MeshBasicMaterial({
+      // color: 0xC0CCDA
+      // color: 0x0B1421
+      color: 0x060B13
+    });
+
+    let mesh = new THREE.Mesh(new THREE.BoxGeometry(1,1,1), material);
+
+    this.worldScene.add(mesh);
   }
 
 }

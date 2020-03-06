@@ -31,10 +31,10 @@
 <script>
 
 // v-on:content-loaded="onEnlargeText"
-import Navbar from '@theme/components/Navbar.vue'
-import Footer from '@theme/components/Footer.vue'
-import PageNav from '@theme/components/PageNav.vue'
-import Sidebar from '@theme/components/Sidebar.vue'
+import Navbar from '@theme/components/nav/Navbar.vue'
+import Footer from '@theme/components/home/Footer.vue'
+import PageNav from '@theme/components/nav/PageNav.vue'
+import Sidebar from '@theme/components/nav/Sidebar.vue'
 
 export default {
   components: { Sidebar, Navbar, Footer, PageNav },

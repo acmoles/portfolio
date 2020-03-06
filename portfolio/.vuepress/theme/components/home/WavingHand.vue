@@ -288,10 +288,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../styles/mixins.sass"
-@import "../styles/variables.sass"
-
-// TODO hand overlay gradient and glow
+@import "../../styles/variables.sass"
+@import "../../styles/mixins.sass"
 
 .hand-button
   @include button-override

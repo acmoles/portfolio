@@ -21,7 +21,9 @@
 <script>
 // TODO customise OutboundLink
 
-import { isExternal, isMailto, isTel, ensureExt } from '../util'
+// TODO isMailto, then use copy component
+
+import { isExternal, isMailto, isTel, ensureExt } from '../../util'
 
 export default {
   props: {
@@ -55,8 +57,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../styles/variables.sass"
-@import "../styles/mixins.sass"
+@import "../../styles/variables.sass"
+@import "../../styles/mixins.sass"
 
 
 .navbar-item.single

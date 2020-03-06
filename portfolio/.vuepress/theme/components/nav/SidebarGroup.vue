@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { isActive } from '../util'
+import { isActive } from '../../util'
 
 export default {
   name: 'SidebarGroup',
@@ -40,7 +40,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../styles/variables.sass"
+@import "../../styles/variables.sass"
+@import "../../styles/mixins.sass"
 
 .sidebar-group-items
   overflow: hidden

@@ -1,5 +1,5 @@
 <script>
-import { isActive, hashRE, groupHeaders } from '../util'
+import { isActive, hashRE, groupHeaders } from '../../util'
 
 export default {
   functional: true,
@@ -94,8 +94,8 @@ function renderExternal (h, to, text) {
 </script>
 
 <style lang="sass">
-  @import "../styles/variables.sass"
-  @import "../styles/mixins.sass"
+  @import "../../styles/variables.sass"
+  @import "../../styles/mixins.sass"
 
   a.sidebar-link
     display: inline-block

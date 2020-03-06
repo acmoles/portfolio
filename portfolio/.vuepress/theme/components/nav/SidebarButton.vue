@@ -64,8 +64,8 @@
 </script>
 
 <style lang="sass">
-@import "../styles/variables.sass"
-@import "../styles/mixins.sass"
+@import "../../styles/variables.sass"
+@import "../../styles/mixins.sass"
 
 $hamburger-layer-width         : 1.25em
 $hamburger-layer-height        : 2px

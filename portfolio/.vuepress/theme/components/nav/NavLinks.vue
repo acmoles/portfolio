@@ -28,9 +28,9 @@
 </template>
 
 <script>
-import DropdownLink from '@theme/components/DropdownLink.vue'
-import { resolveNavLinkItem } from '../util'
-import NavLink from '@theme/components/NavLink.vue'
+import DropdownLink from '@theme/components/nav/DropdownLink.vue'
+import { resolveNavLinkItem } from '../../util'
+import NavLink from '@theme/components/nav/NavLink.vue'
 
 export default {
   components: { NavLink, DropdownLink },
@@ -90,7 +90,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../styles/variables.sass"
+@import "../../styles/variables.sass"
+@import "../../styles/mixins.sass"
 
 .navbar-menu
   transition: opacity 0.4s ease

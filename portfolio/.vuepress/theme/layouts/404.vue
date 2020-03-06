@@ -16,6 +16,8 @@ const msgs = [
   `Looks like we've got some broken links.`
 ]
 
+// TODO make 404 page work
+
 export default {
   methods: {
     getMsg () {

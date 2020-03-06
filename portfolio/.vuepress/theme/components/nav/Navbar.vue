@@ -34,13 +34,13 @@
 
 <script>
 
-import SidebarButton from '@theme/components/SidebarButton.vue'
-import NavLinks from '@theme/components/NavLinks.vue'
+import SidebarButton from '@theme/components/nav/SidebarButton.vue'
+import NavLinks from '@theme/components/nav/NavLinks.vue'
 import Logo from '@theme/components/icons/Logo.vue'
 import updateOnScroll from 'uos'
 import debounce from 'lodash.debounce'
 
-import { getScrollTop, getOffsetY, getViewport } from '../util'
+import { getScrollTop, getOffsetY, getViewport } from '../../util'
 
 // navStyle: {
 //   style: 'light', // dark
@@ -167,8 +167,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../styles/variables.sass"
-@import "../styles/mixins.sass"
+@import "../../styles/variables.sass"
+@import "../../styles/mixins.sass"
 
 .navbar
   user-select: none

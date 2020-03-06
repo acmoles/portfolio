@@ -12,14 +12,15 @@ module.exports = (options, ctx) => ({
     require('./plugins/plugin-outside-content/index.js'),
     require('./plugins/plugin-revealer/index.js'),
     ['@vuepress/pwa', {
-      serviceWorker: true,
-      updatePopup: true
+      serviceWorker: false,
+      updatePopup: false
     }],
     ['@vuepress/medium-zoom', true],
     ['clean-urls', {
        normalSuffix: '/',
        indexSuffix: '/',
     }],
+    // ['register-components', { componentsDir: '.vuepress/theme/components') }],
     ['smooth-scroll']
   ],
   postcss: {

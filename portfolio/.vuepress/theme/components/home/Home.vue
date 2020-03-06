@@ -28,9 +28,9 @@
 </template>
 
 <script>
-import { loadableHero } from '../mixins/loadableHero.js'
-import PortfolioItem from '@theme/components/PortfolioItem.vue'
-import WavingHand from '@theme/components/WavingHand.vue'
+import { loadableHero } from '../../mixins/loadableHero.js'
+import PortfolioItem from '@theme/components/home/PortfolioItem.vue'
+import WavingHand from '@theme/components/home/WavingHand.vue'
 import ArrowIcon from '@theme/components/icons/ArrowIcon.vue'
 
 // TODO fix width issue of tiles on smaller desktop screens
@@ -73,8 +73,8 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../styles/variables.sass"
-  @import "../styles/mixins.sass"
+  @import "../../styles/variables.sass"
+  @import "../../styles/mixins.sass"
 
   .home-intro
     padding: 11em 0 3.5em 0

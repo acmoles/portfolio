@@ -9,6 +9,8 @@ import lazySizes from 'lazysizes'
 // import VModal from 'vue-js-modal/dist/ssr.index'
 // import PortalVue from 'portal-vue'
 
+import Home from './components/home/Home.vue'
+
 export default ({
   Vue, // the version of Vue being used in the VuePress app
   options, // the options for the root Vue instance
@@ -19,6 +21,9 @@ export default ({
   const store = initStore(Vue)
   Vue.mixin({store: store})
   initRouting(router, store, siteData)
+
+  // Regster the home component separately for clearer directory structure
+  Vue.component('Home', Home)
 
   if (typeof document !== 'undefined' && typeof window !== 'undefined') {
     Vue.use(VueForceNextTick)

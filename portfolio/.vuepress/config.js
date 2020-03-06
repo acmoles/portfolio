@@ -2,6 +2,7 @@ const path = require('path')
 
 module.exports = {
   dest: './dist',
+  // temp: './tmp',
   title: 'Anthony Moles Portfolio',
   locales: {
       '/': {

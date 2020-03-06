@@ -15,7 +15,7 @@
 <script>
 import isString from 'lodash/isString'
 import isNil from 'lodash/isNil'
-import { resolvePage } from '../util'
+import { resolvePage } from '../../util'
 
 export default {
   name: 'PageNav',
@@ -58,8 +58,10 @@ function resolvePageLink (
   }
 }
 </script>
+
 <style lang="sass">
-@import "../styles/variables.sass"
+@import "../../styles/variables.sass"
+@import "../../styles/mixins.sass"
 
 .page-nav
   padding: 18em 2em

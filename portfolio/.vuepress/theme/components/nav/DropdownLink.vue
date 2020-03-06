@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import NavLink from '@theme/components/NavLink.vue'
+import NavLink from '@theme/components/nav/NavLink.vue'
 import last from 'lodash/last'
 
 export default {
@@ -79,8 +79,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../styles/variables.sass"
-@import "../styles/mixins.sass"
+@import "../../styles/variables.sass"
+@import "../../styles/mixins.sass"
 
 .navbar-item.has-dropdown
   height: fit-content
