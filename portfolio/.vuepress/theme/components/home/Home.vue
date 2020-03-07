@@ -42,9 +42,11 @@ export default {
   mixins: [loadableHero],
 
   mounted() {
+
     setTimeout(() => {
       this.doLoad()
     }, 1)
+
   },
 
   computed: {
@@ -76,8 +78,14 @@ export default {
   @import "../../styles/variables.sass"
   @import "../../styles/mixins.sass"
 
+  // .layout.home::before
+  //   @include pseudo-full
+  //   height: 32em
+  //   z-index: 0
+  //   background: linear-gradient(345deg, rgba($pink,0) 0%, rgba($pink,0) 50%, rgba($pink,0.24) 100%)
+
   .home-intro
-    padding: 11em 0 3.5em 0
+    padding: 10em 0 2em 0
     display: grid
     grid-template-columns: repeat(3, 1fr)
     column-gap: 2em

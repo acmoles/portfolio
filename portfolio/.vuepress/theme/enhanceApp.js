@@ -10,6 +10,7 @@ import lazySizes from 'lazysizes'
 // import PortalVue from 'portal-vue'
 
 import Home from './components/home/Home.vue'
+import HomeDeco from './components/home/HomeDeco.vue'
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -24,6 +25,7 @@ export default ({
 
   // Regster the home component separately for clearer directory structure
   Vue.component('Home', Home)
+  Vue.component('HomeDeco', HomeDeco)
 
   if (typeof document !== 'undefined' && typeof window !== 'undefined') {
     Vue.use(VueForceNextTick)

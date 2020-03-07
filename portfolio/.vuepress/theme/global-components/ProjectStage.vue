@@ -6,7 +6,7 @@
     </div>
 
     <div class="info-box">
-      <ToggleIcon :down="toggleDown" @toggle-click="toggleArrow" />
+      <ToggleIcon/>
 
       <div class="container is-fullhd">
 
@@ -32,19 +32,7 @@ import ToggleIcon from '@theme/components/icons/ToggleIcon.vue'
 
 export default {
 
-  components: { ToggleIcon },
-
-  data () {
-    return {
-        toggleDown: null,
-    }
-  },
-
-  methods: {
-    toggleArrow() {
-      this.toggleDown = !this.toggleDown
-    }
-  }
+  components: { ToggleIcon }
 
 }
 
@@ -59,6 +47,7 @@ export default {
   align-items: center
   justify-content: center
   width: 100%
+  position: relative
 
 .visual
   height: 100vh

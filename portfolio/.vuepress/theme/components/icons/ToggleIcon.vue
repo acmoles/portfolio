@@ -1,17 +1,23 @@
 <template>
-  <transition name="fade">
-    <button v-show="show" @click="$emit('toggle-click')" class="toggle-arrow-container">
-        <svg height="24" viewBox="0 0 32 24" width="32" xmlns="http://www.w3.org/2000/svg">
+    <button
+      @click="goDown()"
+      class="toggle-arrow-container"
+    >
+        <svg
+          :style="{ filter: opacityString }"
+          height="24"
+          viewBox="0 0 40 24"
+          width="40"
+          xmlns="http://www.w3.org/2000/svg"
+        >
         <path
-          v-bind:d="'m3 ' + startY + ' 13 ' + centreY + ' 13 ' + endY"
+          v-bind:d="'m4 ' + startY + ' 16 ' + centreY + ' 16 ' + endY"
           fill="none"
-          stroke="#8492A6"
           stroke-linejoin="round"
-          stroke-width="2"
+          stroke-width="4"
         />
         </svg>
     </button>
-  </transition>
 </template>
 
 <script>
@@ -28,50 +34,68 @@ const centreYup = -4;
 const endYup = 4;
 const duration = 1500;
 
+const startYbase = 12;
+const centreYbase = 0;
+const endYbase = 0;
+
 export default {
 
-  props: {
-    down: Boolean,
-  },
   data () {
     return {
-        show: true,
-        startY: 12,
-        centreY: 0,
-        endY: 0,
+        direction: null,
+        opacityString: 'opacity(100%)',
+        startY: startYbase,
+        centreY: centreYbase,
+        endY: endYbase,
         startTime: null
     }
   },
-  watch: {
-    down (boolean) {
-        this.toggle(boolean);
+
+  computed: {
+    pageLoadingStatus () {
+      return this.$store.state.pageLoadingStatus
     },
+  },
+
+  watch: {
+    pageLoadingStatus (latest, last) {
+      // TODO tidy animation logic and use animejs
+      if (latest === 'finished') {
+        setTimeout(() => {
+          this.toggle('down')
+        }, 1000)
+      }
+    }
   },
 
   mounted () {
     this.$nextTick(() => {
-      this.toggle(this.down)
 
-      updateOnScroll(0, 1, progress => {
-        if (getScrollTop() > (getViewport('y') / 2)) {
-          this.show = false
-        } else {
-          this.show = true
-        }
+      updateOnScroll(0, (getViewport('y') / 2), progress => {
+        this.opacityString = 'opacity(' + (1 - progress)*100 + '%)'
       })
+
     })
   },
 
   methods: {
-    toggle(boolean) {
-        if (boolean) {
+    goDown() {
+      console.log('click')
+      this.toggle('none')
+      window.scrollTo({
+          top: window.innerHeight,
+          behavior: 'smooth'
+      })
+    },
+    toggle(command) {
+        if (command === 'down') {
             // down true, content active
             this.startAnimation(startYdown, centreYdown, endYdown);
-            console.log('inactive - active');
-        } else {
+        } else if (command === 'up') {
             // down false (up), content inactive
             this.startAnimation(startYup, centreYup, endYup);
-            console.log('active - inactive');
+        } else {
+            this.startAnimation(startYbase, centreYbase, endYbase);
         }
     },
     startAnimation(targetStartY, targetCentreY, targetEndY) {
@@ -121,4 +145,6 @@ export default {
     height: 1.5em
     left: 0
     top: -1px
+    path
+      stroke: lighten($slate, 10%)
 </style>

@@ -26,7 +26,7 @@ export class ThreeComposition extends EventTarget {
     this.renderer = new THREE.WebGLRenderer( { alpha: true } );
     // Custom framerate for noise
     this.now; this.delta; this.fixedDelta; this.then = Date.now();
-    this.interval = 1000/10;
+    this.interval = 1000/15;
 
     this.worldScene = new THREE.Scene();
 
@@ -101,7 +101,7 @@ export class ThreeComposition extends EventTarget {
       }
     }
 
-    this.customPass.uniforms['amount'].value = 0.1;
+    this.customPass.uniforms['amount'].value = 0.05;
     this.composer.render();
 
     if (this.fixedDelta > this.interval) {
@@ -116,11 +116,11 @@ export class ThreeComposition extends EventTarget {
     let width = this.container.offsetWidth;
     let height = this.container.offsetHeight;
 
-    // this.renderer.setClearColor( 0x273444, 0 );
+    this.renderer.setClearColor( 0x273444, 0 );
     this.renderer.setPixelRatio( window.devicePixelRatio );
     this.renderer.setSize( width, height );
     // this.renderer.physicallyCorrectLights = true;
-    this.renderer.outputEncoding = THREE.sRGBEncoding;
+    // this.renderer.outputEncoding = THREE.sRGBEncoding;
     this.renderer.gammaFactor = 2;
     this.renderer.gammaOutput = true;
 
@@ -137,7 +137,7 @@ export class ThreeComposition extends EventTarget {
     this.composer.addPass( this.fxaaPass );
 
     this.container.appendChild( this.renderer.domElement );
-    this.container.appendChild( this.stats.dom );
+    // this.container.appendChild( this.stats.dom );
   }
 
   configScene() {
@@ -145,11 +145,11 @@ export class ThreeComposition extends EventTarget {
     this.controls.target.set( 0, 5.5, 0 );
 
     //dark
-    this.worldScene.background = null;
+    // this.worldScene.background = null;
 
     this.onWindowResize();
-    var axesHelper = new THREE.AxesHelper( 5 );
-    this.worldScene.add( axesHelper );
+    // var axesHelper = new THREE.AxesHelper( 5 );
+    // this.worldScene.add( axesHelper );
 
     // TODO add these to restrict user camera
     let maxAngle = (7 / 20) * Math.PI;

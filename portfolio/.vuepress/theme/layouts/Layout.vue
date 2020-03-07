@@ -87,6 +87,7 @@ export default {
     overflow: hidden
 
 .layout
+  position: relative
   &::after
     @include cover-screen
     position: fixed
