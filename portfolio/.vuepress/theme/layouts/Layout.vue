@@ -19,7 +19,7 @@
     <main class="page-content">
       <Content slot-key="top"/>
 
-      <Content class="container is-fullhd"/>
+      <Content class="main"/>
 
       <PageNav/>
 
@@ -66,7 +66,6 @@ export default {
 @import "../styles/variables.sass"
 @import "../styles/mixins.sass"
 
-
 .page-content
   // TODO fix timing - ensuring height 100% shows next page behind the transition
   // height: 100%
@@ -78,6 +77,20 @@ export default {
   &.content__default
     padding: 0 2em
     flex-grow: 1
+
+  .main.container.content
+    padding-top: 8em
+
+  .header-anchor
+    position: absolute
+    left: -1em
+    filter: opacity(0)
+    @include opacity-filter-transition
+    &:hover
+      filter: opacity(100%)
+
+
+// Page transitions
 
 // .loading
 //   display: none

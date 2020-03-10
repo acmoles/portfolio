@@ -1,41 +1,31 @@
 ---
-uid: 2
-title: Wesen
-subtitle: Turning customers into creators
-type: double-right
+uid: 7
+title: Makielab
+subtitle: Pioneering customisable childrens toys
+type: single
 navStyle:
   style: dark
   links: light
   progress: light
-background: dark
-case1: Case study
+background: yellow
 sidebar: auto
 date: 2019-09-12
-prev: ./project1
-next: ./project3
+prev: ./toucanbox
+next: ./random-international
 ---
 
 ::: slot top
 
 <ProjectStage>
   <template v-slot:visual>
-    <ImageHero imageKey="wesen"/>
+    <ImageHero imageKey="makielab"/>
   </template>
 
   <template v-slot:description>
-    <p class="stage-description subtitle">
-      Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables easy customisation of a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.
-    </p>
-  </template>
-
-  <template v-slot:descriptionDetails>
-    <ul class="stage-details column">
-      <li>Test item</li>
-      <li>Test item</li>
-    </ul>
-    <ProjectExternalLink href="#"/>
+    <p>Here's a description</p>
   </template>
 </ProjectStage>
+
 :::
 
 # Project 2
@@ -122,8 +112,6 @@ Hexo has been serving the Vue docs well - in fact, we are probably still a long 
 
 ### Inner title
 
-### Inner title
-
 # FAQ
 
 ## Why can’t `palette.styl` and `index.styl` merge into one API?
@@ -186,5 +174,7 @@ module.exports = (options, ctx) => ({
 **Example:**
 
 - [@vuepress/plugin-blog](https://github.com/vuepressjs/vuepress-plugin-blog/blob/master/src/node/index.ts#L208): Using compile-time metadata to generate some dynamic blog-related modules and initialize them on the client-side by using `enhanceAppFiles`.
+
+### Inner title
 
 ### Inner title

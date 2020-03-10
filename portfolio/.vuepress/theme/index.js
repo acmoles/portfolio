@@ -21,7 +21,7 @@ module.exports = (options, ctx) => ({
        indexSuffix: '/',
     }],
     // ['register-components', { componentsDir: '.vuepress/theme/components') }],
-    ['smooth-scroll']
+    // ['smooth-scroll']
   ],
   postcss: {
     plugins: [

@@ -5,6 +5,8 @@ import { ObjectPool } from './object-pools.js'
 
 export class Background {
 
+  // TODO could see how performance is when interaction is turned off - seemed to be a drain
+
   constructor(canvas) {
 
     this.canvas = canvas;
@@ -35,6 +37,7 @@ export class Background {
       autoResize: true,
       resolution: 0.5,
       backgroundColor: 0x1F2D3D,
+      interactive: false,
       // devicePixelRatio
       // transparent: true
     });

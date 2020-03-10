@@ -27,8 +27,8 @@ module.exports = {
   base: '/',
   themeConfig: {
     nav: [
-      { text: 'Home', ariaLabel: 'Home link', link: '/' },
-      { text: 'Projects', ariaLabel: 'Projects link', link: '/projects/' },
+      // { text: 'Home', ariaLabel: 'Home link', link: '/' },
+      // { text: 'Projects', ariaLabel: 'Projects link', link: '/projects/' },
       { text: 'About', ariaLabel: 'About link', link: '/about/' },
       { text: 'Contact', ariaLabel: 'Contact menu', items: [
           { text: 'Email', link: 'https://email.com' },

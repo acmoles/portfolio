@@ -4,7 +4,7 @@
     <div class="home-intro">
         <h1 class="title is-spaced home-title">Hello <WavingHand/></h1>
         <h2 class="subtitle home-subtitle">
-            I’m a multidisciplinary designer creating useful and playful experiences with people in mind
+            Anthony Moles is a multidisciplinary designer creating useful and playful experiences with people at the centre
             <router-link to="/about"><ArrowIcon/></router-link>
         </h2>
     </div>
@@ -22,7 +22,29 @@
             :case2="project.frontmatter.case2"
             :background="project.frontmatter.background"
             v-on:project-click="handleProjectClick"
-          />
+          >
+            <ItemImageDouble
+              v-if="project.frontmatter.uid === 2"
+              type="wesen"
+            />
+            <ItemImageDouble
+              v-else-if="project.frontmatter.uid === 6"
+              type="toucanbox"
+            />
+            <ItemImageBackground
+              v-else-if="project.frontmatter.uid === 3"
+              type="stompy-robot"
+            />
+            <ItemImageBackground
+              v-else-if="project.frontmatter.uid === 8"
+              type="random"
+            />
+            <ItemImageBackground
+              v-else-if="project.frontmatter.uid === 10"
+              type="art-lebedev"
+            />
+
+          </PortfolioItem>
     </div>
   </div>
 </template>
@@ -33,11 +55,14 @@ import PortfolioItem from '@theme/components/home/PortfolioItem.vue'
 import WavingHand from '@theme/components/home/WavingHand.vue'
 import ArrowIcon from '@theme/components/icons/ArrowIcon.vue'
 
+import ItemImageDouble from '@theme/components/home/ItemImageDouble.vue'
+import ItemImageBackground from '@theme/components/home/ItemImageBackground.vue'
+
 // TODO fix width issue of tiles on smaller desktop screens
 // TODO mobile view
 
 export default {
-  components: { PortfolioItem, WavingHand, ArrowIcon },
+  components: { PortfolioItem, WavingHand, ArrowIcon, ItemImageDouble, ItemImageBackground },
 
   mixins: [loadableHero],
 
@@ -78,6 +103,8 @@ export default {
   @import "../../styles/variables.sass"
   @import "../../styles/mixins.sass"
 
+  $columnGap: 2em
+
   // .layout.home::before
   //   @include pseudo-full
   //   height: 32em
@@ -85,10 +112,10 @@ export default {
   //   background: linear-gradient(345deg, rgba($pink,0) 0%, rgba($pink,0) 50%, rgba($pink,0.24) 100%)
 
   .home-intro
-    padding: 10em 0 2em 0
+    padding: 8em 0 1.5em 0
     display: grid
     grid-template-columns: repeat(3, 1fr)
-    column-gap: 2em
+    column-gap: $columnGap
     h1, h2
       margin: 0 0 0 1.5rem
     h1.home-title
@@ -108,9 +135,9 @@ export default {
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-auto-rows: 1fr
-    column-gap: 2em
-    row-gap: 2em
-    padding-bottom: 10em
+    column-gap: $columnGap
+    row-gap: $columnGap
+    padding-bottom: 2em
 
   .grid-wrapper::before
     content: ' '

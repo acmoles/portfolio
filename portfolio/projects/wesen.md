@@ -1,31 +1,41 @@
 ---
-uid: 9
-title: Lego
-subtitle: Building a uniquely Lego gaming experience
-type: single
+uid: 2
+title: Wesen
+subtitle: Turning customers into creators
+type: double-right
 navStyle:
-  style: light
+  style: dark
   links: light
   progress: light
-background: pink
+background: dark
+case1: Case study
 sidebar: auto
 date: 2019-09-12
-prev: ./project8
-next: ./project10
+prev: ./ecosia
+next: ./stompy-robot
 ---
 
 ::: slot top
 
 <ProjectStage>
   <template v-slot:visual>
-    <ImageHero imageKey="lego"/>
+    <ImageHero imageKey="wesen"/>
   </template>
 
   <template v-slot:description>
-    <p>Here's a description</p>
+    <p class="stage-description subtitle">
+      Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.
+    </p>
+  </template>
+
+  <template v-slot:descriptionDetails>
+    <ul class="stage-details">
+      <li>Responsive web application</li>
+      <li>2018</li>
+    </ul>
+    <ProjectExternalLink label="wesen.studio" href="#"/>
   </template>
 </ProjectStage>
-
 :::
 
 # Project 2
@@ -110,6 +120,10 @@ Hexo has been serving the Vue docs well - in fact, we are probably still a long 
 
 ### Inner title
 
+### Inner title
+
+### Inner title
+
 # FAQ
 
 ## Why can’t `palette.styl` and `index.styl` merge into one API?
@@ -172,9 +186,5 @@ module.exports = (options, ctx) => ({
 **Example:**
 
 - [@vuepress/plugin-blog](https://github.com/vuepressjs/vuepress-plugin-blog/blob/master/src/node/index.ts#L208): Using compile-time metadata to generate some dynamic blog-related modules and initialize them on the client-side by using `enhanceAppFiles`.
-
-### Inner title
-
-### Inner title
 
 ### Inner title

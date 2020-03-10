@@ -15,10 +15,10 @@
         </linearGradient>
 
         <linearGradient x1="25%" y1="50%" x2="89.5%" y2="88%" id="linearGradientDark">
-            <stop stop-color="#1F2D3D" offset="0%"></stop>
-            <stop stop-color="#1F2D3D" offset="24%"></stop>
-            <stop stop-color="#1F2D3D" stop-opacity="0" offset="25%"></stop>
-            <stop stop-color="#1F2D3D" stop-opacity="0" offset="100%"></stop>
+            <stop stop-color="#273444" offset="0%"></stop>
+            <stop stop-color="#273444" offset="24%"></stop>
+            <stop stop-color="#273444" stop-opacity="0" offset="25%"></stop>
+            <stop stop-color="#273444" stop-opacity="0" offset="100%"></stop>
         </linearGradient>
 
       </defs>
@@ -66,7 +66,7 @@ export default {
 
 .dark:not(.force)
   #outline
-    stroke: $black
+    stroke: $steel
 
 .dark:not(.force)
   #rectangle

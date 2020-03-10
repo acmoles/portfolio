@@ -1,24 +1,24 @@
 ---
-uid: 4
-title: BLKBRD
-subtitle: Envisioning messages with location
+uid: 8
+title: Random International
+subtitle: Fabricating an artwork
 type: single
 navStyle:
-  style: light
+  style: dark
   links: light
   progress: light
-background: green
+background: random
 sidebar: auto
 date: 2019-09-11
-prev: ./project3
-next: ./project5
+prev: ./makielab
+next: ./lego
 ---
 
 ::: slot top
 
 <ProjectStage>
   <template v-slot:visual>
-    <ImageHero imageKey="blkbrd"/>
+    <ImageHero imageKey="random"/>
   </template>
 
   <template v-slot:description>
@@ -28,7 +28,7 @@ next: ./project5
 
 :::
 
-# Project 4
+# Project 1
 
 VuePress is composed of two parts: a [minimalistic static site generator](https://github.com/vuejs/vuepress/tree/master/packages/%40vuepress/core) with a Vue-powered [theming system](../theme/README.md) and [Plugin API](../plugin/README.md), and a [default theme](../theme/default-theme-config.md) optimized for writing technical documentation. It was created to support the documentation needs of Vue’s own sub projects.
 
@@ -168,3 +168,9 @@ module.exports = (options, ctx) => ({
 **Example:**
 
 - [@vuepress/plugin-blog](https://github.com/vuepressjs/vuepress-plugin-blog/blob/master/src/node/index.ts#L208): Using compile-time metadata to generate some dynamic blog-related modules and initialize them on the client-side by using `enhanceAppFiles`.
+
+::: slot bottom
+
+Bottom
+
+:::

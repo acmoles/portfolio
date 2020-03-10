@@ -6,16 +6,14 @@
     </div>
 
     <div class="info-box">
-      <ToggleIcon/>
-
       <div class="container is-fullhd">
 
         <div class="columns">
-          <div class="column is-two-thirds">
+          <div class="column is-two-thirds stage-description-column">
             <slot name="description"></slot>
           </div>
 
-          <div class="column">
+          <div class="column stage-details-column">
             <slot name="descriptionDetails"></slot>
           </div>
         </div>
@@ -27,12 +25,12 @@
 </template>
 
 <script>
-
-import ToggleIcon from '@theme/components/icons/ToggleIcon.vue'
+// <ToggleIcon/>
+// import ToggleIcon from '@theme/components/icons/ToggleIcon.vue'
 
 export default {
 
-  components: { ToggleIcon }
+  // components: { ToggleIcon }
 
 }
 
@@ -54,7 +52,7 @@ export default {
 
 .info-box
   position: relative
-  top: -1.5em
+  // top: -1.5em
   background-color: $steel
   box-shadow: $info-box-shadow
   padding: 5em 0
@@ -63,5 +61,20 @@ export default {
     text-rendering: geometricPrecision
     padding-right: 3em
 
+  .stage-details-column
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+  .stage-details
+    margin-top: 0.5em
+    position: relative
+    li
+      margin-left: 1.25em
+      margin-bottom: 0.75em
+      &::before
+        content: "¬"
+        position: absolute
+        left: 0
 
 </style>

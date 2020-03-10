@@ -12,7 +12,7 @@ navStyle:
 ---
 
 ::: slot top
-<HomeDeco/>
+<!-- <HomeDeco/> -->
 <Home/>
 :::
 

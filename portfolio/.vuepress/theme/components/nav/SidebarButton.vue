@@ -89,7 +89,7 @@ $hamburger-layer-border-radius : 0px
 
   &.disabled
     cursor: not-allowed
-    filter: $hover-filter
+    filter: opacity(25%)
 
 .hamburger
     .hamburger-inner::before,
@@ -100,7 +100,7 @@ $hamburger-layer-border-radius : 0px
   .hamburger
       .hamburger-inner::before,
       .hamburger-inner::after
-        background-color: $black
+        background-color: $steel
 
 .hamburger-box
   width: $hamburger-layer-width

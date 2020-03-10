@@ -13,7 +13,6 @@
       :ref="'article' + uid"
       @click="emitBoundingRect($event)"
     >
-      <slot></slot>
 
       <div :ref="'caption' + uid" class="item-caption">
         <p class="small-title">{{ title }}</p>
@@ -22,6 +21,8 @@
         <p class="case" v-if="case1">{{ case1 }}</p>
         <p class="case" v-if="case2">{{ case2 }}</p>
       </div>
+
+      <slot></slot>
 
     </article>
   </router-link>
@@ -200,7 +201,7 @@ export default {
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($yellow, 0.42)
     background-color: $darkYellow
-    background-image: $gradient
+    background-image: $gradientDark
   &.random
     background-color: $extraDarkSmoke
   &.pink
@@ -213,7 +214,9 @@ export default {
 
 .grid-item .notification::after
   @include pseudo-full
-  border-radius: 3px
+  // TODO remove
+  pointer-events: none
+  border-radius: $notification-radius
   opacity: 0
   transition: opacity 0.3s ease-out
 

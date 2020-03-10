@@ -34,6 +34,8 @@
 
 <script>
 
+// TODO switch to in-project back button 
+
 import SidebarButton from '@theme/components/nav/SidebarButton.vue'
 import NavLinks from '@theme/components/nav/NavLinks.vue'
 import Logo from '@theme/components/icons/Logo.vue'
@@ -41,14 +43,6 @@ import updateOnScroll from 'uos'
 import debounce from 'lodash.debounce'
 
 import { getScrollTop, getOffsetY, getViewport } from '../../util'
-
-// navStyle: {
-//   style: 'light', // dark
-//   links: 'blue', // blue, red, orange, green, purple, yellow, pink, white
-//   progress: 'light' // ?
-// }
-// TODO respond to navStyle (also in nprogress)
-
 
 export default {
   components: { SidebarButton, NavLinks, Logo },
@@ -92,7 +86,7 @@ export default {
       return this.$page.frontmatter.navStyle.style
     },
     forceLight () {
-      return this.$store.state.isSidebarOpen || this.scrollPosition >= (this.windowHeight - 48)
+      return this.$store.state.isSidebarOpen || this.scrollPosition >= (this.windowHeight - 64)
     }
   },
 

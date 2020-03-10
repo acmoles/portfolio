@@ -6,8 +6,6 @@ navStyle:
   progress: light
 ---
 
-# List of projects
-
-projects here
+## List of projects
 
 <ProjectList/>
