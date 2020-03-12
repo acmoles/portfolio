@@ -3,17 +3,18 @@
     name="revealer-fade-animation"
     v-on:after-leave="finishedRevealing"
     v-on:after-enter="finishedCovering"
+    :duration="{ enter: 640, leave: 800 }"
   >
     <div
       class="revealer-container"
-      v-if="show"
+      v-show="show"
       :class="[revealerParentClass]"
       ref="revealerParent"
     >
       <div
         class="revealer notification"
         :class="[revealerClass, backgroundClass]"
-        :style="{ transform: transformString, WebkitTransform: transformString }"
+        :style="{ transform: transformString, WebkitTransform: transformString, borderRadius: radiusString }"
         ref="revealer"
       >
     </div>
@@ -37,7 +38,8 @@ export default {
       backgroundClass: '',
       revealerParentClass: 'revealer-fixed-active',
       revealerClass: '',
-      transformString: 'translate3D(0, 0, 0) scale3d(1, 1, 1)'
+      transformString: 'translate3D(0, 0, 0) scale3d(1, 1, 1)',
+      radiusString: '0px'
     }
   },
 
@@ -112,6 +114,7 @@ export default {
               // wait a fraction - DOM render if prioritised over setTimout callback - nprogress finished
               this.revealerClass = 'revealer-reveal-animation-active'
               this.transformString = this.generateTransformStringPlacement()
+              this.radiusString = this.generateRadiusString()
 
                 setTimeout(() => {
                   this.show = false
@@ -135,9 +138,11 @@ export default {
       this.revealerParentClass = 'revealer-absolute-active'
       this.revealerClass = 'revealer-cover-animation-active'
       this.transformString = this.generateTransformStringPlacement()
+      this.radiusString = this.generateRadiusString()
 
       setTimeout(() => {
         this.transformString = 'translate3d(0px, ' + this.projectPosition.scroll + 'px, 0px) scale3d(1, 1, 1)'
+        this.radiusString = '0px'
       }, config.fadeTransitionTime / 2)
     },
 
@@ -180,12 +185,19 @@ export default {
     },
 
     generateTransformStringPlacement() {
-      let translateX = this.projectPosition.childLeft
-      let translateY = this.projectPosition.childTop
-      let scaleX = this.projectPosition.childWidth / getViewport('x')
-      let scaleY = this.projectPosition.childHeight / getViewport('y')
+      const translateX = this.projectPosition.childLeft
+      const translateY = this.projectPosition.childTop
+      const scaleX = this.projectPosition.childWidth / getViewport('x')
+      const scaleY = this.projectPosition.childHeight / getViewport('y')
 
       return 'translate3D(' + translateX + 'px, ' + translateY + 'px, 0px) scale3d(' + scaleX + ',' + scaleY + ',1)'
+    },
+
+    generateRadiusString() {
+      const scaleX = this.projectPosition.childWidth / getViewport('x')
+      const scaleY = this.projectPosition.childHeight / getViewport('y')
+
+      return (10/scaleX) + 'px / ' + (10/scaleY) + 'px'
     }
   }
 }
@@ -208,11 +220,16 @@ export default {
   @include make3d
   transform-origin: 0 0
   border-radius: 0
-  transition-property: transform
+  transition-property: transform, radius
 
 // revealer transition states
 
-.revealer-cover-animation-active, .revealer-reveal-animation-active
+.revealer-cover-animation-active
+  transition-duration: $revealTime + 200ms
+  transition-timing-function: $cubicTransition
+
+
+.revealer-reveal-animation-active
   transition-duration: $revealTime
   transition-timing-function: $cubicTransition
 
