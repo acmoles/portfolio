@@ -1,6 +1,6 @@
 <template>
   <div
-    class="layout"
+    class="layout noise-heavy"
     :class="pageClasses"
   >
     <Navbar/>
