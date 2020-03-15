@@ -1,5 +1,5 @@
 ---
-uid: 3
+uid: 5
 title: Stompy Robot
 subtitle: Co-founding an indie games studio
 type: single

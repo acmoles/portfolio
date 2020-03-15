@@ -1,8 +1,8 @@
 ---
-uid: 6
+uid: 7
 title: toucanBox
 subtitle: Refining the value proposition and personalising the experience
-type: double-left
+type: double-right-bottom
 navStyle:
   style: light
   links: light

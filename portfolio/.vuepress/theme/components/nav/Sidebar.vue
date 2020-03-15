@@ -2,54 +2,42 @@
   <transition name="fade">
     <div
       v-show="isSidebarOpen"
-      class="modal-background sidebar-container"
+      class="modal-background sidebar-container noise-heavy"
       >
-      <transition name="fade">
-        <aside
-          v-show="!isSearchboxOpen"
-          class="container is-fullhd sidebar"
-          >
-          <slot name="top"/>
-          <SidebarLinks :depth="0" :items="sidebarItems"/>
-          <slot name="bottom"/>
-        </aside>
-      </transition>
-      <SidebarButton
-        purpose="search"
-        class="search-sidebar-button"
-        @sidebar-button-event="toggleSearch"
-      />
+
+      <aside
+        class="container is-fullhd sidebar"
+        >
+        <slot name="top"/>
+        <SidebarLinks :depth="0" :items="sidebarItems"/>
+        <slot name="bottom"/>
+      </aside>
+
       <SidebarButton
         purpose="goto-top"
         class="goto-top-sidebar-button"
         :disabled="disableGotoTop"
         @sidebar-button-event="scrollToTop"
       />
-      <transition name="fade">
-        <Searchbox
-          v-show="isSearchboxOpen"
-        />
-      </transition>
     </div>
   </transition>
 </template>
 
 <script>
-import Searchbox from '@theme/components/nav/Searchbox.vue'
 import SidebarButton from '@theme/components/nav/SidebarButton.vue'
 import SidebarLinks from '@theme/components/nav/SidebarLinks.vue'
 import NavLinks from '@theme/components/nav/NavLinks.vue'
+
 import { resolveSidebarItems } from '../../util'
 import updateOnScroll from 'uos'
 
 export default {
   name: 'Sidebar',
 
-  components: { SidebarLinks, NavLinks, SidebarButton, Searchbox },
+  components: { SidebarLinks, NavLinks, SidebarButton },
 
   data () {
     return {
-      searchPurpose: 'search',
       disableGotoTop: true,
       clickScrollFlag: false,
     }
@@ -58,9 +46,6 @@ export default {
   computed: {
     isSidebarOpen () {
       return this.$store.state.isSidebarOpen
-    },
-    isSearchboxOpen () {
-      return this.$store.state.isSearchboxOpen
     },
     sidebarItems () {
       return resolveSidebarItems(
@@ -82,9 +67,6 @@ export default {
   },
 
   methods: {
-    toggleSearch () {
-      this.$store.dispatch('setSearchboxStatus', !this.isSearchboxOpen)
-    },
     handleScroll (progress) {
       if (progress === 0) {
         this.disableGotoTop = true
@@ -145,10 +127,11 @@ export default {
     & > li:not(:first-child)
       margin-top: .75rem
 
-.search-sidebar-button
-  position: absolute
-  bottom: 0
-  left: 0
+//TODO remove search sidebar button
+// .search-sidebar-button
+//   position: absolute
+//   bottom: 0
+//   left: 0
 
 .goto-top-sidebar-button
   position: absolute

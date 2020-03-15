@@ -2,9 +2,10 @@
     <footer class="footer container is-fullhd">
       <div class="footer-content">
         <!-- <i class="icon"><Logo/></i> -->
-        <h3 class="footer-title">
+        <strong class="footer-title">
           Anthony Moles
-        </h3>
+        </strong>
+        <router-link class="footer-contact-links footer-about" to="/about">About</router-link>
         <a
           class="footer-contact-links"
           v-for="item in userContact"
@@ -72,18 +73,16 @@ export default {
     align-items: flex-end
   .footer-title
     font-size: 1.25em
-
-    line-height: 1.3em
-    font-family: $family-display
-    letter-spacing: .5px
     margin-right: 1em
   i
     margin-right: 0.75em
   .footer-contact-links, .copy
     color: $silver
     margin-left: 1em
-    transition: opacity 0.3s ease
-  .footer-contact-links:hover
-    opacity: 0.64
+  .footer-about
+    &::after
+      content: "|"
+      margin-left: 1em
+      filter: opacity(25%)
 
 </style>

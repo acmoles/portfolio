@@ -8,21 +8,21 @@
     :ref="'base' + uid"
   >
     <article
-      class="project-panel notification"
+      class="project-panel notification noise-light"
       :class="background"
       :ref="'article' + uid"
       @click="emitBoundingRect($event)"
     >
+
+      <slot></slot>
 
       <div :ref="'caption' + uid" class="item-caption">
         <p class="small-title">{{ title }}</p>
         <h2 v-if="subtitle">{{ subtitle }}</h2>
 
         <p class="case" v-if="case1">{{ case1 }}</p>
-        <p class="case" v-if="case2">{{ case2 }}</p>
+        <!-- <p class="case" v-if="case2">{{ case2 }}</p> -->
       </div>
-
-      <slot></slot>
 
     </article>
   </router-link>
@@ -184,17 +184,17 @@ export default {
     background-color: $steel
   &.green
     &.project-panel::after
-      box-shadow: 0 0 2em 0 rgba($green, 0.42)
+      box-shadow: 0 0 2em 0 rgba($green, 0.56)
     background-color: $green
     background-image: $gradient
   &.purple
     &.project-panel::after
-      box-shadow: 0 0 2em 0 rgba($purple, 0.42)
+      box-shadow: 0 0 2em 0 rgba($purple, 0.64)
     background-color: $purple
     background-image: $gradient
   &.blue
     &.project-panel::after
-      box-shadow: 0 0 2em 0 rgba($blue, 0.42)
+      box-shadow: 0 0 2em 0 rgba($blue, 0.56)
     background-color: $blue
     background-image: $gradient
   &.yellow
@@ -203,18 +203,18 @@ export default {
     background-color: $darkYellow
     background-image: $gradientDark
   &.random
-    background-color: $extraDarkSmoke
+    background-color: $silver
   &.pink
     &.project-panel::after
-      box-shadow: 0 0 2em 0 rgba($pink, 0.42)
+      box-shadow: 0 0 2em 0 rgba($pink, 0.56)
     background-color: $pink
     background-image: $gradient
   &.als
-    background-color: $silver
+    background-color: $slate
 
 .grid-item .notification::after
   @include pseudo-full
-  // TODO remove
+  // TODO remove in order to block pointer events
   pointer-events: none
   border-radius: $notification-radius
   opacity: 0
@@ -233,7 +233,7 @@ export default {
   .project-panel
     box-shadow: $element-shadow
     color: $white-ter
-  &.double-right, &.double-left
+  &.double-right-top, &.double-right-bottom, &.double-left-top, &.double-left-bottom
     .small-title, h2
       width: 42%
 

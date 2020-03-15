@@ -3,7 +3,7 @@
     name="revealer-fade-animation"
     v-on:after-leave="finishedRevealing"
     v-on:after-enter="finishedCovering"
-    :duration="{ enter: 640, leave: 800 }"
+    :duration="{ enter: enterTime, leave: 800 }"
   >
     <div
       class="revealer-container"
@@ -12,7 +12,7 @@
       ref="revealerParent"
     >
       <div
-        class="revealer notification"
+        class="revealer notification noise-light"
         :class="[revealerClass, backgroundClass]"
         :style="{ transform: transformString, WebkitTransform: transformString, borderRadius: radiusString }"
         ref="revealer"
@@ -39,7 +39,8 @@ export default {
       revealerParentClass: 'revealer-fixed-active',
       revealerClass: '',
       transformString: 'translate3D(0, 0, 0) scale3d(1, 1, 1)',
-      radiusString: '0px'
+      radiusString: '0px',
+      enterTime: 400
     }
   },
 
@@ -73,6 +74,8 @@ export default {
 
       if (latest === 'loading') {
         nprogress.start()
+      } else if (latest === 'loading-increment') {
+        nprogress.inc()
       } else {
         nprogress.done()
       }
@@ -119,14 +122,15 @@ export default {
                 setTimeout(() => {
                   this.show = false
                   this.$store.dispatch('useLastProject', false)
-                }, config.fadeTransitionTime / 2) // transition time
+                }, 400) // delay fade out
 
-            }, config.fadeTransitionTime)
+            }, 400) // pause before reveal animation
         })
 
       }
 
       else {
+        this.radiusString = '0px'
         this.show = false
       }
 
@@ -134,7 +138,7 @@ export default {
 
     projectPosition (latest, last) {
       // activates special transition to projects
-      // TODO Vue doesn't detect the extra transition automatically and waits to call v-on:after-enter
+      this.enterTime = 800
       this.revealerParentClass = 'revealer-absolute-active'
       this.revealerClass = 'revealer-cover-animation-active'
       this.transformString = this.generateTransformStringPlacement()
@@ -143,7 +147,8 @@ export default {
       setTimeout(() => {
         this.transformString = 'translate3d(0px, ' + this.projectPosition.scroll + 'px, 0px) scale3d(1, 1, 1)'
         this.radiusString = '0px'
-      }, config.fadeTransitionTime / 2)
+        this.enterTime = 400
+      }, 200)
     },
 
     lastProject (latest, last) {
@@ -155,7 +160,7 @@ export default {
   mounted() {
     nprogress.configure({
       showSpinner: false,
-      trickleSpeed: 100
+      trickleSpeed: 100,
     })
 
     // Start first load
@@ -220,18 +225,19 @@ export default {
   @include make3d
   transform-origin: 0 0
   border-radius: 0
-  transition-property: transform, radius
+  transition-property: transform, border-radius
 
 // revealer transition states
 
 .revealer-cover-animation-active
-  transition-duration: $revealTime + 200ms
-  transition-timing-function: $cubicTransition
+  // transition-duration: $revealTime + 200ms
+  transition-duration: $revealTime - 200ms
+  transition-timing-function: $coverTransition
 
 
 .revealer-reveal-animation-active
-  transition-duration: $revealTime
-  transition-timing-function: $cubicTransition
+  transition-duration: $revealTime + 200ms
+  transition-timing-function: $revealTransition
 
 // fixed position toggle
 

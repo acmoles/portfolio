@@ -1,8 +1,8 @@
 ---
-uid: 2
+uid: 1
 title: Wesen
 subtitle: Turning customers into creators
-type: double-right
+type: double-left-top
 navStyle:
   style: dark
   links: light
@@ -37,6 +37,8 @@ next: ./stompy-robot
   </template>
 </ProjectStage>
 :::
+
+<div class="container is-fullhd content">
 
 # Project 2
 
@@ -188,3 +190,5 @@ module.exports = (options, ctx) => ({
 - [@vuepress/plugin-blog](https://github.com/vuepressjs/vuepress-plugin-blog/blob/master/src/node/index.ts#L208): Using compile-time metadata to generate some dynamic blog-related modules and initialize them on the client-side by using `enhanceAppFiles`.
 
 ### Inner title
+
+</div>

@@ -24,6 +24,7 @@
           v-for="(subItem, index) in item.items"
           :key="subItem.link || index"
           :item="subItem"
+          class="dropdown-item"
         />
     </div>
   </div>
@@ -60,6 +61,19 @@ export default {
   methods: {
     setOpen (value) {
       this.open = value
+
+      if (value && typeof value === 'boolean') {
+        setTimeout(() => {
+          document.getElementById('app').addEventListener('click', this.setOpen, false)
+        }, 250)
+      } else {
+        this.open = false
+        document.getElementById('app').removeEventListener('click', this.setOpen, false)
+      }
+    },
+
+    unfocus (value) {
+      this.open = value
     },
 
     isLastItemOfArray (item, array) {
@@ -84,14 +98,9 @@ export default {
 
 .navbar-item.has-dropdown
   height: fit-content
-  transition: opacity 0.3s ease, transform 0.3s ease
-  .link-text
-    @include opacity-filter-transition
-  &:hover, &:focus
-    .link-text
-      filter: opacity(64%)
+  transition: filter 0.3s ease, transform 0.3s ease
   &.is-active
-    opacity: 1
+    filter: opacity(100%)
 
 .navbar-link:not(.is-arrowless)::after
     border-width: 2px
@@ -99,12 +108,12 @@ export default {
     width: 0.5em
     height: 0.5em
     right: 1.25em
-    opacity: 0.64
-    transition: opacity 0.6s ease
+    filter: opacity(64%)
+    transition: filter 0.3s ease
     transform-origin: 50% 55%
 
 .navbar-item.has-dropdown.is-active
     .navbar-link:not(.is-arrowless)::after
-      opacity: 0.16
+      filter: opacity(0%)
 
 </style>

@@ -14,8 +14,22 @@
           :to="$localePath"
           class="home-link"
         >
-          <Logo/>
+            <!-- <Logo
+              class="logo-site-tilogtle"
+              :class="{ burgered: navbarBurgered }"
+            /> -->
+            <ArrowIcon
+              class="back-arrow"
+              :class="{ burgered: navbarBurgered }"
+            />
+            <!-- <strong
+              class="text-site-title"
+              :class="{ burgered: navbarBurgered }"
+            >
+              Anthony Moles
+            </strong> -->
         </router-link>
+
         <SidebarButton
           purpose="menu"
           class="nav-sidebar-button"
@@ -34,23 +48,25 @@
 
 <script>
 
-// TODO switch to in-project back button 
+// TODO switch to in-project back button
 
 import SidebarButton from '@theme/components/nav/SidebarButton.vue'
 import NavLinks from '@theme/components/nav/NavLinks.vue'
 import Logo from '@theme/components/icons/Logo.vue'
+import ArrowIcon from '@theme/components/icons/ArrowIcon.vue'
+
 import updateOnScroll from 'uos'
 import debounce from 'lodash.debounce'
 
 import { getScrollTop, getOffsetY, getViewport } from '../../util'
 
 export default {
-  components: { SidebarButton, NavLinks, Logo },
+  components: { SidebarButton, NavLinks, Logo, ArrowIcon },
   data () {
     return {
       show: true,
       windowHeight: null,
-      navbarBurgered: true,
+      navbarBurgered: false,
       navbarHeight: 16 * 6,
       navbarPosition: 0,
       scrollPosition: 0,
@@ -79,9 +95,6 @@ export default {
     isSidebarOpen () {
       return this.$store.state.isSidebarOpen
     },
-    isSearchboxOpen () {
-      return this.$store.state.isSearchboxOpen
-    },
     navStyle () {
       return this.$page.frontmatter.navStyle.style
     },
@@ -90,16 +103,16 @@ export default {
     }
   },
 
-  watch: {
-    pageLoadingStatus (latest, last) {
-      // if (latest === 'finished') {
-      //   this.show = true
-      //   // this.navbarHeight = this.$refs.navbar.offsetHeight
-      // } else {
-      //   this.show = false
-      // }
-    }
-  },
+  // watch: {
+  //   pageLoadingStatus (latest, last) {
+  //     // if (latest === 'finished') {
+  //     //   this.show = true
+  //     //   // this.navbarHeight = this.$refs.navbar.offsetHeight
+  //     // } else {
+  //     //   this.show = false
+  //     // }
+  //   }
+  // },
 
   methods: {
     toggleSidebar (to) {
@@ -113,11 +126,11 @@ export default {
         return
       }
 
-      // if (progress > 0.1 && this.navbarBurgered === false) {
-      //   this.navbarBurgered = true
-      // } else if (progress === 0) {
-      //   this.navbarBurgered = false
-      // }
+      if (progress > 0.1 && this.navbarBurgered === false) {
+        this.navbarBurgered = true
+      } else if (progress === 0) {
+        this.navbarBurgered = false
+      }
 
       this.scrollPosition = getScrollTop()
       this.navbarPosition = getOffsetY(this.$refs.navbar)
@@ -190,7 +203,6 @@ export default {
   display: flex
   align-items: center
   justify-content: center
-  @include opacity-filter-transition
 
 .layout.home
   .home-link
@@ -209,7 +221,38 @@ export default {
 .home-link, .sidebar-button
   pointer-events: all
 
-.navbar-end
+.navbar-end, .navbar-start
   align-items: center
+
+
+// TODO styles for no site title or logo, back arrow
+
+.layout.home
+  .back-arrow
+    display: none
+
+.back-arrow
+  transform: rotate(180deg)
+
+
+
+// TODO styles for text site title:
+
+.logo-site-title
+  filter: opacity(0%)
+  &.burgered
+    filter: opacity(100%)
+
+.text-site-title
+  position: absolute
+  font-size: 1.25em
+  color: $white-ter
+  left: 1.75em
+  width: 8em
+  filter: opacity(100%)
+  transition: filter 0.15s ease
+  &.burgered
+    filter: opacity(0%)
+
 
 </style>

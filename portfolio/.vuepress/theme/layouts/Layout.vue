@@ -106,7 +106,7 @@ export default {
     position: fixed
     content: ' '
     display: block
-    background: $black
+    background: darken($black, 2%)
     transition: filter .4s linear
     filter: opacity(0%)
     pointer-events: none

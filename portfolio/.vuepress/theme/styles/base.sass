@@ -1,4 +1,5 @@
 @import 'variables'
+@import 'mixins'
 
 *, ::before, ::after
   -webkit-tap-highlight-color: transparent
@@ -8,11 +9,11 @@
 *:focus, *:hover
   outline: none
 
-p
-  font-size: 1.125em
-
 .container
   width: 100%
   padding: 0 1em
   @media screen and (min-width: $desktop)
     padding: 0 $gap
+
+a:not(.grid-item):not(.dropdown-item):not(.search-result)
+  @include opacity-filter-transition

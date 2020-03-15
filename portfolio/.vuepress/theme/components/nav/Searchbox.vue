@@ -1,10 +1,15 @@
 <template>
-<div class="search-box-container">
-  <div class="container is-fullhd columns">
-    <div class="search-box column">
+  <div
+    class="navbar-item has-dropdown search-dropdown"
+    :class="[showSuggestions ? 'is-active' : null, ]"
+    aria-label="dropdown navigation"
+  >
+    <div class="navbar-link is-arrowless search-box">
       <input
         @input="query = $event.target.value"
         aria-label="Search"
+        aria-haspopup="true"
+        aria-controls="dropdown-menu"
         :value="query"
         :class="{ 'focused': focused }"
         placeholder="Search headings"
@@ -21,23 +26,27 @@
         class="icon"
         @mousedown="go(focusIndex)"
       >
-        <SearchIcon/>
+        <SmallSearchIcon/>
       </i>
     </div>
-    <div class="column is-two-thirds">
+
+    <div
+      class="navbar-dropdown is-boxed search-results"
+      role="combobox"
+      @mouseleave="unfocus"
+    >
       <ul
         class="suggestions"
         v-if="showSuggestions"
-        @mouseleave="unfocus"
       >
         <li
-          class="suggestion"
+          class="suggestion dropdown-item"
           v-for="(s, i) in suggestions"
           :class="{ focused: i === focusIndex }"
           @mousedown="go(i)"
           @mouseenter="focus(i)"
         >
-          <a :href="s.path" @click.prevent>
+          <a :href="s.path" @click.prevent class="search-result">
             <span class="page-title">{{ s.title || s.path }}</span>
             <span v-if="s.header" class="header">{{ s.header.title }}</span>
           </a>
@@ -45,22 +54,22 @@
       </ul>
     </div>
   </div>
-</div>
 </template>
 
 <script>
-import SearchIcon from '@theme/components/icons/SearchIcon.vue'
+import SmallSearchIcon from '@theme/components/icons/SmallSearchIcon.vue'
 
 export default {
 
-  components: { SearchIcon },
+  components: { SmallSearchIcon },
 
   data () {
     return {
+      open: false,
       query: '',
       focused: true,
       focusIndex: 0,
-      searchMaxSuggestions: 9,
+      searchMaxSuggestions: 5,
       searchPaths: null,
       searchHotkeys: ['s', '/'],
     }
@@ -76,6 +85,7 @@ export default {
   },
 
   computed: {
+
     showSuggestions () {
       return (
         this.focused
@@ -132,6 +142,7 @@ export default {
   },
 
   methods: {
+
     getPageLocalePath (page) {
       for (const localePath in this.$site.locales || {}) {
         if (localePath !== '/' && page.path.indexOf(localePath) === 0) {
@@ -205,64 +216,47 @@ export default {
 @import "../../styles/variables.sass"
 @import "../../styles/mixins.sass"
 
-.search-box-container
-  @include cover-screen
-  display: flex
-  align-items: center
-  justify-content: center
-  pointer-events: none
-  *
-    text-rendering: geometricPrecision
-  .container.columns
-    height: 100%
-    align-items: center
+.navbar-start
+  padding-left: 1.5em
+
+.search-dropdown.is-active .icon
+  filter: opacity(0%)
 
 .search-box
-  pointer-events: all
-  position: relative
-  display: flex
-  align-items: center
   input
+    color: $button-custom-text-color
+    text-rendering: geometricPrecision
     background-color: transparent
     cursor: text
-    color: $white-ter
-    display: inline-flex
     border: none
-    border-bottom: 2px solid $slate
-    font-size: 1.25em
-    line-height: 2em
-    margin-right: 2em
+    margin-left: 0.25em
     width: 100%
+    font-size: 1em
+    padding: 0px
     &::placeholder
-      color: lighten($silver, 10%)
+      color: $button-custom-text-color
       @include opacity-filter-transition
     &:focus
       cursor: auto
     &:focus::placeholder
-      filter: opacity(10%)
+      filter: opacity(25%)
   .icon
-    cursor: pointer
-    position: relative
-    right: 4em
+    position: absolute
+    left: -0.75em
+    filter: opacity(64%)
     @include opacity-filter-transition
 .suggestions
-  pointer-events: all
-  background: transparent
   list-style-type: none
 .suggestion
-  line-height: 1.4
-  padding: 0.4rem 0.6rem
-  border-radius: $radius-small
-  cursor: pointer
   a
     white-space: normal
     .page-title
       color: $white
     .header
-      color: $silver
+      color: $button-custom-text-color
       margin-left: 0.5em
   &.focused
-    background-color: $slate
+    background-color: $button-custom-hover-color
     a
       color: $blue
 

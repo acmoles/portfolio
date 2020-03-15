@@ -8,35 +8,39 @@
         </clipPath>
 
         <linearGradient x1="25%" y1="50%" x2="89.5%" y2="88%" id="linearGradientLight">
-            <stop stop-color="#FFFFFF" offset="0%"></stop>
-            <stop stop-color="#FFFFFF" offset="24%"></stop>
-            <stop stop-color="#FFFFFF" stop-opacity="0" offset="25%"></stop>
-            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+          <stop stop-color="#FFFFFF" offset="0%"></stop>
+          <stop stop-color="#FFFFFF" offset="31%"></stop>
+          <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="32%"></stop>
+          <stop stop-color="#FFFFFF" offset="100%"></stop>
         </linearGradient>
 
         <linearGradient x1="25%" y1="50%" x2="89.5%" y2="88%" id="linearGradientDark">
-            <stop stop-color="#273444" offset="0%"></stop>
-            <stop stop-color="#273444" offset="24%"></stop>
-            <stop stop-color="#273444" stop-opacity="0" offset="25%"></stop>
-            <stop stop-color="#273444" stop-opacity="0" offset="100%"></stop>
+          <stop stop-color="#273444" offset="0%"></stop>
+          <stop stop-color="#273444" offset="31%"></stop>
+          <stop stop-color="#273444" stop-opacity="0.5" offset="32%"></stop>
+          <stop stop-color="#273444" offset="100%"></stop>
         </linearGradient>
 
       </defs>
       <g id="logo" clip-path="url(#clip)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <rect id="rectangle" fill="url(#linearGradientLight)" x="0" y="0" width="24" height="24"></rect>
       </g>
-      <use id="outline" xlink:href="#path" stroke="#FFFFFF" stroke-width="1.5" fill="none" fill-rule="evenodd" />
+      <!-- <use id="outline" xlink:href="#path" stroke="#FFFFFF" stroke-width="1.5" fill="none" fill-rule="evenodd" /> -->
   </svg>
 </template>
 
 <script>
 // TODO outline logo?
-// <linearGradient x1="25%" y1="50%" x2="89.5%" y2="88%" id="linearGradient">
-//     <stop stop-color="#FFFFFF" offset="0%"></stop>
-//     <stop stop-color="#FFFFFF" offset="31%"></stop>
-//     <stop stop-color="#FAFAFA" stop-opacity="0.5" offset="32%"></stop>
-//     <stop stop-color="#FFFFFF" offset="100%"></stop>
-// </linearGradient>
+// <stop stop-color="#FFFFFF" offset="0%"></stop>
+// <stop stop-color="#FFFFFF" offset="24%"></stop>
+// <stop stop-color="#FFFFFF" stop-opacity="0" offset="25%"></stop>
+// <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+
+// <stop stop-color="#273444" offset="0%"></stop>
+// <stop stop-color="#273444" offset="24%"></stop>
+// <stop stop-color="#273444" stop-opacity="0" offset="25%"></stop>
+// <stop stop-color="#273444" stop-opacity="0" offset="100%"></stop>
+
 
 export default {
 
@@ -50,7 +54,7 @@ export default {
 .logo-svg
   position: relative
   bottom: 1px
-  transform: scale(1.08)
+  transform: scale(1.2)
   transition: transform 0.3s ease
   transform-origin: 50% 54%
   #rectangle
@@ -60,7 +64,7 @@ export default {
 .layout:not(.home)
   .home-link:hover, .home-link:focus
     .logo-svg
-      transform: rotateZ(-90deg) translateY(-0.05em) scale(1.16)
+      transform: rotateZ(-90deg) translateY(-0.05em) scale(1.2)
       #rectangle
         transform: scale(3) rotate(-31deg) translate(0, 0.36em)
 

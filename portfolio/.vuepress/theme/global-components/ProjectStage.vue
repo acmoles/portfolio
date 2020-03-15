@@ -5,7 +5,7 @@
       <slot name="visual"></slot>
     </div>
 
-    <div class="info-box">
+    <div class="info-box noise-heavy">
       <div class="container is-fullhd">
 
         <div class="columns">
@@ -39,6 +39,9 @@ export default {
 <style lang="sass">
 @import "../styles/variables.sass"
 @import "../styles/mixins.sass"
+
+.stage
+  margin-bottom: 8em
 
 .visual, .info-box
   display: flex

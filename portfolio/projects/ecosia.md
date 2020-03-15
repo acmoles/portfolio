@@ -1,5 +1,5 @@
 ---
-uid: 1
+uid: 2
 title: Ecosia
 subtitle: Leading the mobile apps team
 type: single
@@ -28,6 +28,9 @@ image:
 </ProjectStage>
 
 :::
+
+
+<div class="container is-fullhd content">
 
 ## Introduction
 
@@ -188,6 +191,8 @@ module.exports = (options, ctx) => ({
 **Example:**
 
 - [@vuepress/plugin-blog](https://github.com/vuepressjs/vuepress-plugin-blog/blob/master/src/node/index.ts#L208): Using compile-time metadata to generate some dynamic blog-related modules and initialize them on the client-side by using `enhanceAppFiles`.
+
+</div>
 
 ::: slot bottom
 

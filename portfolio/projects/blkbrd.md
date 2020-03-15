@@ -1,6 +1,6 @@
 ---
-uid: 4
-title: BLKBRD
+uid: 3
+title: blkbrd
 subtitle: Envisioning messages with location
 type: single
 navStyle:

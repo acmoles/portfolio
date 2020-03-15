@@ -4,6 +4,9 @@
     :class="{ 'is-active': active, 'burgered': burgered }"
     v-if="userLinks.length"
   >
+    <div v-if="isSidebarOpen" class="navbar-start">
+      <Searchbox/>
+    </div>
     <div class="navbar-end">
     <!-- user links -->
       <template
@@ -28,12 +31,15 @@
 </template>
 
 <script>
-import DropdownLink from '@theme/components/nav/DropdownLink.vue'
+
 import { resolveNavLinkItem } from '../../util'
+
 import NavLink from '@theme/components/nav/NavLink.vue'
+import DropdownLink from '@theme/components/nav/DropdownLink.vue'
+import Searchbox from '@theme/components/nav/Searchbox.vue'
 
 export default {
-  components: { NavLink, DropdownLink },
+  components: { NavLink, DropdownLink, Searchbox },
 
   props: {
     active: Boolean,
@@ -41,6 +47,10 @@ export default {
   },
 
   computed: {
+    isSidebarOpen () {
+      return this.$store.state.isSidebarOpen
+    },
+
     userNav () {
       return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || []
     },
@@ -94,7 +104,7 @@ export default {
 @import "../../styles/mixins.sass"
 
 .navbar-menu
-  transition: opacity 0.4s ease
+  transition: filter 0.4s ease
   margin-right: 1.5em
   pointer-events: all
 

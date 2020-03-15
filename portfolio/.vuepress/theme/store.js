@@ -5,7 +5,8 @@ import config from '../config.js'
 Loading states:
 covering = set by globabl beforeEach route guard (next guard called by revealer after covering transition finishes)
 loading - set by globabl beforeResolve route guard
-revealing - set by loaded loadable hero component
+loading-increment - set by loaded loadable hero mixin
+revealing - set by loaded loadable hero mixin
 finished - set by revealer
 */
 
@@ -15,7 +16,6 @@ export default (Vue) => {
 
   return new Vuex.Store({
     state: {
-      isSearchboxOpen: false,
       isSidebarOpen: false,
       pageLoadingStatus: 'loading',
       revealerTitle: {
@@ -38,9 +38,6 @@ export default (Vue) => {
       useLastProject: false,
     },
     mutations: {
-      SET_SEARCHBOX_STATUS (state, status) {
-        state.isSearchboxOpen = status
-      },
       SET_SIDEBAR_STATUS (state, status) {
         state.isSidebarOpen = status
       },
@@ -67,13 +64,7 @@ export default (Vue) => {
       }
     },
     actions: {
-      setSearchboxStatus (context, payload) {
-        context.commit('SET_SEARCHBOX_STATUS', payload)
-      },
       setSidebarStatus (context, payload) {
-        if (payload === false) {
-          context.commit('SET_SEARCHBOX_STATUS', payload)
-        }
         context.commit('SET_SIDEBAR_STATUS', payload)
       },
       setLoadingPageContent (context, payload) {
