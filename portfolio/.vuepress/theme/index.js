@@ -15,7 +15,17 @@ module.exports = (options, ctx) => ({
       serviceWorker: false,
       updatePopup: false
     }],
-    ['@vuepress/medium-zoom', true],
+    [
+      '@vuepress/medium-zoom',
+      {
+        selector: '.zoom-wrapper img',
+        delay: 1000,
+        options: {
+          margin: 24,
+          background: '#0C1014',
+        },
+      },
+    ],
     ['clean-urls', {
        normalSuffix: '/',
        indexSuffix: '/',

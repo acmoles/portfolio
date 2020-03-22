@@ -31,6 +31,8 @@ import NavLinks from '@theme/components/nav/NavLinks.vue'
 import { resolveSidebarItems } from '../../util'
 import updateOnScroll from 'uos'
 
+//TODO if has case study headings 
+
 export default {
   name: 'Sidebar',
 

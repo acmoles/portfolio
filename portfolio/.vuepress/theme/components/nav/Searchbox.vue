@@ -1,7 +1,7 @@
 <template>
   <div
     class="navbar-item has-dropdown search-dropdown"
-    :class="[showSuggestions ? 'is-active' : null, ]"
+    :class="[focused ? 'hide-icon' : null, showSuggestions ? 'is-active' : null]"
     aria-label="dropdown navigation"
   >
     <div class="navbar-link is-arrowless search-box">
@@ -37,7 +37,6 @@
     >
       <ul
         class="suggestions"
-        v-if="showSuggestions"
       >
         <li
           class="suggestion dropdown-item"
@@ -53,11 +52,15 @@
         </li>
       </ul>
     </div>
+
   </div>
 </template>
 
 <script>
 import SmallSearchIcon from '@theme/components/icons/SmallSearchIcon.vue'
+
+// Use vue transition rather than Bulma dropdown
+// :class="[showSuggestions ? 'is-active' : null, ]"
 
 export default {
 
@@ -67,7 +70,7 @@ export default {
     return {
       open: false,
       query: '',
-      focused: true,
+      focused: false,
       focusIndex: 0,
       searchMaxSuggestions: 5,
       searchPaths: null,
@@ -217,12 +220,13 @@ export default {
 @import "../../styles/mixins.sass"
 
 .navbar-start
-  padding-left: 1.5em
+  padding-left: 1.25em
 
-.search-dropdown.is-active .icon
+.search-dropdown.hide-icon .icon
   filter: opacity(0%)
 
 .search-box
+  width: 20em
   input
     color: $button-custom-text-color
     text-rendering: geometricPrecision
@@ -271,4 +275,14 @@ export default {
         cursor: text
         left: 0
         width: 10rem
+
+  // Redo Bulma dropdown transition
+  .bulma-dropdown-enter-active, .bulma-dropdown-leave-active
+    transition-property: opacity, transform
+    transition-duration: 400ms
+
+
+  .bulma-dropdown-enter, .bulma-dropdown-leave-to
+    opacity: 0
+    transform: translateY(-5px)
 </style>

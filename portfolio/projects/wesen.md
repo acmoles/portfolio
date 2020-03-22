@@ -16,10 +16,9 @@ next: ./stompy-robot
 ---
 
 ::: slot top
-
 <ProjectStage>
   <template v-slot:visual>
-    <ImageHero imageKey="wesen"/>
+    <ImageHero name="wesen" src="/images/wesen/grid.jpg" alt="Wesen Studio examples" :noise="true"/>
   </template>
 
   <template v-slot:description>
@@ -45,6 +44,8 @@ next: ./stompy-robot
 ## First Title
 
 Test paragraph
+
+![An image](~@assets/images/content/wesen/grid.jpg)
 
 ### Inner title
 

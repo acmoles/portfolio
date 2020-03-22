@@ -1,7 +1,6 @@
 <template>
   <figure class="image double-comp">
-    <img v-if="type === 'wesen'" src="~@assets/images/content/homepage/wesen-mock-baked.jpg"  alt="Wesen Studio">
-    <img v-else-if="type === 'toucanbox'" src="~@assets/images/content/homepage/toucan-baked.jpg"  alt="toucanBox">
+    <img :data-src="imgData.url"  :alt="imgData.alt" loading="lazy" class="lazy" width="780" height="380">
   </figure>
 </template>
 
@@ -12,6 +11,24 @@ export default {
 
   props: {
     type: String
+  },
+
+  computed: {
+    imgData () {
+      if (this.type === 'wesen') {
+        return {
+          url: '/images/homepage/wesen-mock-baked.jpg',
+          url2x: '',
+          alt: 'Wesen Studio'
+        }
+      } else if (this.type === 'toucanbox') {
+        return {
+          url: '/images/homepage/toucan-baked.jpg',
+          url2x: '',
+          alt: 'toucanBox'
+        }
+      }
+    },
   }
 
 }

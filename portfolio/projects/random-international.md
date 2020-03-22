@@ -8,7 +8,7 @@ navStyle:
   links: light
   progress: light
 background: random
-sidebar: auto
+sidebar: false
 date: 2019-09-11
 prev: ./makielab
 next: ./lego

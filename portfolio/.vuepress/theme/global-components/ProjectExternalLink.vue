@@ -1,5 +1,5 @@
 <template>
-<button class="button is-dark project-external-link">{{ label }}
+<button class="button is-dark project-external-link noise-light">{{ label }}
   <span class="icon">
     <ExternalIcon/>
   </span>

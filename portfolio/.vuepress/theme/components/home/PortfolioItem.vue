@@ -77,6 +77,7 @@ export default {
 
   methods: {
       emitBoundingRect(event) {
+        this.mouseLeave(event)
         const rect = this.base.getBoundingClientRect()
         const data = {
           childLeft: rect.x,

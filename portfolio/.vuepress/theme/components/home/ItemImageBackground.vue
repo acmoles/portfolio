@@ -1,8 +1,6 @@
 <template>
   <figure class="image is-square single-comp">
-    <img v-if="type === 'stompy-robot'" src="~@assets/images/content/homepage/stompy-robot-tile.jpg"  alt="Stompy Robot">
-    <img v-else-if="type === 'random'" src="~@assets/images/content/homepage/random-tile.jpg"  alt="Random International">
-    <img v-else-if="type === 'art-lebedev'" src="~@assets/images/content/homepage/art-lebedev-tile.jpg"  alt="Art Lebedev Studio">
+    <img :data-src="imgData.url"  :alt="imgData.alt" loading="lazy" class="lazy" width="256" height="256">
   </figure>
 </template>
 
@@ -13,6 +11,30 @@ export default {
 
   props: {
     type: String
+  },
+
+  computed: {
+    imgData () {
+      if (this.type === 'stompy-robot') {
+        return {
+          url: '/images/homepage/stompy-robot-tile.jpg',
+          url2x: '/images/homepage/stompy-robot-tile-2x.jpg',
+          alt: 'Stompy Robot'
+        }
+      } else if (this.type === 'random') {
+        return {
+          url: '/images/homepage/random-tile.jpg',
+          url2x: '/images/homepage/random-tile-2x.jpg',
+          alt: 'Random International'
+        }
+      } else if (this.type === 'art-lebedev') {
+        return {
+          url: '/images/homepage/art-lebedev-tile.jpg',
+          url2x: '/images/homepage/art-lebedev-tile-2x.jpg',
+          alt: 'Art Lebedev Studio'
+        }
+      }
+    },
   }
 
 }

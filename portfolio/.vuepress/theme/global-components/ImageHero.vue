@@ -1,22 +1,16 @@
 <template>
   <div
     class="project-background-image"
-    :class="[imageKey]"
+    :class="[name, {'noise-light': noise}]"
+    :style="{backgroundImage: backgroundSrc}"
   >
-    <img :ref="imageKey" v-if="imageKey === 'wesen'" src="~@assets/images/content/wesen/grid.jpg" alt="">
-    <img :ref="imageKey" v-else-if="imageKey === 'ecosia'" src="~@assets/images/content/wesen/grid.jpg" alt="">
-    <img :ref="imageKey" v-else-if="imageKey === 'stompy-robot'" src="~@assets/images/content/wesen/grid.jpg" alt="">
-    <img :ref="imageKey" v-else-if="imageKey === 'blkbrd'" src="~@assets/images/content/wesen/grid.jpg" alt="">
-    <img :ref="imageKey" v-else-if="imageKey === 'toucan-rnd'" src="~@assets/images/content/wesen/grid.jpg" alt="">
-    <img :ref="imageKey" v-else-if="imageKey === 'toucan'" src="~@assets/images/content/wesen/grid.jpg" alt="">
-    <img :ref="imageKey" v-else-if="imageKey === 'makielab'" src="~@assets/images/content/wesen/grid.jpg" alt="">
-    <img :ref="imageKey" v-else-if="imageKey === 'random'" src="~@assets/images/content/wesen/grid.jpg" alt="">
-    <img :ref="imageKey" v-else-if="imageKey === 'lego'" src="~@assets/images/content/wesen/grid.jpg" alt="">
-    <img :ref="imageKey" v-else-if="imageKey === 'als'" src="~@assets/images/content/wesen/grid.jpg" alt="">
+    <img :ref="name"  :src="src" :alt="alt">
   </div>
 </template>
 
 <script>
+
+// TODO enable floating png images on background
 
 import { loadableHero } from '../mixins/loadableHero.js'
 
@@ -25,21 +19,29 @@ export default {
   mixins: [loadableHero],
 
   props: {
-    imageKey: {
-      required: true
+    name: String,
+    noise: Boolean,
+    src: String,
+    alt: String,
+    floating: Boolean
+  },
+
+  computed: {
+    backgroundSrc () {
+      return 'url("' + this.src + '")'
     }
   },
 
   mounted() {
-    this.loadImage(this.imageKey)
+    this.loadImage(this.name)
   },
 
   methods: {
-    loadImage(imageKey) {
-      this.$refs[imageKey].onload = () => {
+    loadImage(name) {
+      this.$refs[name].onload = () => {
         this.doLoad()
       };
-      this.$refs[imageKey].onerror = (err) => {console.error(err)}
+      this.$refs[name].onerror = (err) => {console.error(err)}
     }
   }
 }
@@ -59,25 +61,25 @@ export default {
       visibility: hidden
 
     &.wesen
-      background-image: url("~@assets/images/content/wesen/grid.jpg")
+
     &.ecosia
-      background-image: url("~@assets/images/content/wesen/grid.jpg")
+      background-color: $orange
     &.stompy-robot
-      background-image: url("~@assets/images/content/wesen/grid.jpg")
+
     &.blkbrd
-      background-image: url("~@assets/images/content/wesen/grid.jpg")
-    &.toucan-rnd
-      background-image: url("~@assets/images/content/wesen/grid.jpg")
-    &.toucan
-      background-image: url("~@assets/images/content/wesen/grid.jpg")
+
+    &.toucanbox-rnd
+
+    &.toucanbox
+      background-color: $blue
     &.makielab
-      background-image: url("~@assets/images/content/wesen/grid.jpg")
+
     &.random
-      background-image: url("~@assets/images/content/wesen/grid.jpg")
+
     &.lego
-      background-image: url("~@assets/images/content/wesen/grid.jpg")
+
     &.als
-      background-image: url("~@assets/images/content/wesen/grid.jpg")
+
 
 
 </style>

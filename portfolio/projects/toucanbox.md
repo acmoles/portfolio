@@ -20,7 +20,7 @@ next: ./project7
 
 <ProjectStage>
   <template v-slot:visual>
-    <ImageHero imageKey="toucan"/>
+    <ImageHero name="toucanbox" src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage" :noise="true"/>
   </template>
 
   <template v-slot:description>

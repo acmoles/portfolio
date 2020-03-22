@@ -8,7 +8,7 @@ navStyle:
   links: light
   progress: light
 background: pink
-sidebar: auto
+sidebar: false
 date: 2019-09-12
 prev: ./random-international
 next: ./art-lebedev-studio

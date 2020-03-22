@@ -8,7 +8,7 @@ navStyle:
   links: light
   progress: light
 background: green
-sidebar: auto
+sidebar: false
 date: 2019-09-11
 prev: ./stompy-robot
 next: ./toucan-research

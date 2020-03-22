@@ -8,7 +8,7 @@ navStyle:
   links: light
   progress: light
 background: yellow
-sidebar: auto
+sidebar: false
 date: 2019-09-12
 prev: ./toucanbox
 next: ./random-international

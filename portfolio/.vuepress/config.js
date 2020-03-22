@@ -36,7 +36,6 @@ module.exports = {
           { text: 'Github', link: 'https://github.com' }
       ] },
     ],
-    smoothScroll: true
   },
   sass: { indentedSyntax: true },
   fadeTransitionTime: 400, // sass variable $fadeTime
@@ -48,4 +47,9 @@ module.exports = {
       }
     }
   },
+  markdown: {
+    extendMarkdown: md => {
+      md.use(require('markdown-it-attrs'))
+    }
+  }
 }

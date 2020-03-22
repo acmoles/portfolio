@@ -71,6 +71,7 @@ export default {
 
   .stage-details
     margin-top: 0.5em
+    margin-bottom: 3em
     position: relative
     li
       margin-left: 1.25em

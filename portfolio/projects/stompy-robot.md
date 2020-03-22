@@ -8,7 +8,7 @@ navStyle:
   links: light
   progress: light
 background: stompy-robot
-sidebar: auto
+sidebar: false
 date: 2019-09-12
 prev: ./stompy-robot
 next: ./blkbrd

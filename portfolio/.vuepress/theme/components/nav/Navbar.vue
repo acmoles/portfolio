@@ -9,7 +9,7 @@
       role="navigation"
       aria-label="main navigation"
     >
-      <div class="navbar-brand">
+      <div class="navbar-brand" :class="{ burgered: navbarBurgered }">
         <router-link
           :to="$localePath"
           class="home-link"
@@ -18,10 +18,7 @@
               class="logo-site-tilogtle"
               :class="{ burgered: navbarBurgered }"
             /> -->
-            <ArrowIcon
-              class="back-arrow"
-              :class="{ burgered: navbarBurgered }"
-            />
+            <ArrowIcon class="back-arrow"/>
             <!-- <strong
               class="text-site-title"
               :class="{ burgered: navbarBurgered }"
@@ -80,7 +77,6 @@ export default {
     this.$nextTick(() => {
 
       this.windowHeight = getViewport('y') // SSR
-
       updateOnScroll(0, 1, progress => {
         this.handleScroll( progress )
       })
@@ -99,7 +95,7 @@ export default {
       return this.$page.frontmatter.navStyle.style
     },
     forceLight () {
-      return this.$store.state.isSidebarOpen || this.scrollPosition >= (this.windowHeight - 64)
+      return this.$store.state.isSidebarOpen || this.scrollPosition >= (this.windowHeight - 48)
     }
   },
 
@@ -227,13 +223,30 @@ export default {
 
 // TODO styles for no site title or logo, back arrow
 
+.dark:not(.force)
+  .back-arrow
+    #ArrowIcon
+      polygon
+        fill: $steel
+
 .layout.home
   .back-arrow
     display: none
+  .navbar-brand
+    width: 1.5em
 
 .back-arrow
   transform: rotate(180deg)
+  display: none
 
+.home-link
+  pointer-events: none
+
+.burgered
+  .home-link
+    pointer-events: all
+  .back-arrow
+    display: block
 
 
 // TODO styles for text site title:

@@ -3,7 +3,7 @@
     <div class="intro-container">
       <h1>Anthony Moles</h1>
       <p class="small-title">
-          A multidisciplinary designer creating useful and playful experiences centred on people <WavingHand/>
+          Multidisciplinary designer creating useful and playful experiences centred on people.
       </p>
     </div>
   </div>
@@ -11,12 +11,11 @@
 
 <script>
 import WavingHand from '@theme/components/home/WavingHand.vue'
-import ArrowIcon from '@theme/components/icons/ArrowIcon.vue'
 
 
 export default {
-
-  components: { WavingHand, ArrowIcon }
+// <WavingHand/>
+  components: { WavingHand }
 
 }
 

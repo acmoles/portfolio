@@ -8,7 +8,7 @@ navStyle:
   links: light
   progress: light
 background: als
-sidebar: auto
+sidebar: false
 date: 2019-09-12
 prev: ./project9
 next: ./project1

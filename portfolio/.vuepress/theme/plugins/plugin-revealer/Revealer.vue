@@ -236,8 +236,8 @@ export default {
 
 
 .revealer-reveal-animation-active
-  transition-duration: $revealTime + 200ms
-  transition-timing-function: $revealTransition
+  transition-duration: $revealTime
+  transition-timing-function: $coverTransition
 
 // fixed position toggle
 

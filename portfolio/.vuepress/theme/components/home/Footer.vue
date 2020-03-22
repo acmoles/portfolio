@@ -74,6 +74,7 @@ export default {
   .footer-title
     font-size: 1.25em
     margin-right: 1em
+    line-height: 1.25em
   i
     margin-right: 0.75em
   .footer-contact-links, .copy

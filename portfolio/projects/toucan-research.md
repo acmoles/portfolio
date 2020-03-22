@@ -8,7 +8,7 @@ navStyle:
   links: light
   progress: light
 background: purple
-sidebar: auto
+sidebar: false
 date: 2019-09-11
 prev: ./blkbrd
 next: ./toucanbox
