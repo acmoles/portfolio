@@ -1,17 +1,19 @@
 <template>
-  <div class="container is-fullhd content project-section">
-    <div class="columns">
+  <section class="section">
+    <div class="container is-fullhd content project-section">
+      <div class="columns">
 
-      <div
-      v-for="(m, i) in metrics"
-      class="column"
-      >
-        <span class="metric">{{ m.metric }}</span>
-        <p class="metric-description">{{ m.description }}</p>
+        <div
+        v-for="(m, i) in metrics"
+        class="column"
+        >
+          <span class="metric">{{ m.metric }}</span>
+          <p class="metric-description">{{ m.description }}</p>
+        </div>
+
       </div>
-
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

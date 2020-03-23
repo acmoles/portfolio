@@ -1,19 +1,21 @@
 <template>
-  <div class="container is-fullhd content project-section">
-    <div class="columns is-multiline">
+  <section class="section">
+    <div class="container is-fullhd content project-section">
+      <div class="columns is-multiline">
 
-      <div
-      v-for="(p, i) in points"
-      class="column is-one-third point"
-      >
+        <div
+        v-for="(p, i) in points"
+        class="column is-one-third point"
+        >
 
-        <i class="icon is-large point-icon"><ExternalIcon/></i>
-        <p class="point-description">{{ p.description }}</p>
+          <i class="icon is-large point-icon"><ExternalIcon/></i>
+          <p class="point-description">{{ p.description }}</p>
+
+        </div>
 
       </div>
-
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

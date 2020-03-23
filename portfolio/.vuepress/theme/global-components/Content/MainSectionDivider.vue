@@ -1,9 +1,11 @@
 <template>
-  <div class="container is-fullhd">
-    <div class="notification">
-      <h2>Section divider</h2>
+  <section class="section">
+    <div class="container is-fullhd">
+      <div class="notification">
+        <h2>Section divider</h2>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

@@ -4,17 +4,17 @@
 
         <div class="columns">
 
-          <div class="column is-two-thirds content">
-            <slot></slot>
-          </div>
-
-          <div class="column">
-            <figure class="image is-square zoom-wrapper">
-              <img :data-src="url" :alt="alt" loading="lazy" class="lazyload" width="256" height="256">
+          <div class="column is-two-thirds">
+            <figure class="image is-16by9 zoom-wrapper">
+              <img :data-src="url" :alt="alt" loading="lazy" class="lazyload" width="1920" height="1080">
             </figure>
             <figcaption>
               {{ caption }}
             </figcaption>
+          </div>
+
+          <div class="column content">
+            <slot></slot>
           </div>
 
         </div>

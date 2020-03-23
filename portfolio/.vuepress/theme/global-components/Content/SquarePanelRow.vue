@@ -1,7 +1,9 @@
 <template>
-  <div class="container is-fullhd">
+  <section class="section">
+    <div class="container is-fullhd">
 
-  </div>
+    </div>
+  </section>
 </template>
 
 <script>

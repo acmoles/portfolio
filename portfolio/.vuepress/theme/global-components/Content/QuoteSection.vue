@@ -1,5 +1,5 @@
 <template>
-  <div class="quote-background">
+  <section class="section quote-background">
     <div class="container is-fullhd content">
       <div class="columns">
         <div class="column is-two-thirds">
@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
