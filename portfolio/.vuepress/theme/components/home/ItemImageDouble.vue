@@ -1,6 +1,6 @@
 <template>
   <figure class="image double-comp">
-    <img :data-src="imgData.url"  :alt="imgData.alt" loading="lazy" class="lazy" width="780" height="380">
+    <img :data-src="imgData.url"  :alt="imgData.alt" loading="lazy" class="lazyload" width="780" height="380">
   </figure>
 </template>
 
