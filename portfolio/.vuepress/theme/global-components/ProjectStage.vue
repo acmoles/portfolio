@@ -84,6 +84,7 @@ export default {
     position: relative
 
   .visual
+    // TODO transition delay doesn't seem to work coming from home
     transition-delay: 0.3s
     &::before
       content: ' '

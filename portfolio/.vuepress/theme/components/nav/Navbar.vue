@@ -19,12 +19,15 @@
               :class="{ burgered: navbarBurgered }"
             /> -->
             <ArrowIcon class="back-arrow"/>
-            <!-- <strong
-              class="text-site-title"
-              :class="{ burgered: navbarBurgered }"
-            >
-              Anthony Moles
-            </strong> -->
+            <transition name="fade-fast">
+              <span
+                class="text-site-title"
+                :class="{ burgered: navbarBurgered }"
+                v-show="!navbarBurgered"
+              >
+                <strong>Anthony Moles</strong><span>design, product and technology</span>
+              </span>
+            </transition>
         </router-link>
 
         <SidebarButton
@@ -178,6 +181,7 @@ export default {
   text-rendering: geometricPrecision
   pointer-events: none
   position: absolute
+  height: 6em
   width: 100%
   z-index: 3
   transform: translate3d(0px, -100%, 0px)
@@ -191,37 +195,25 @@ export default {
   opacity: 0
   // transform: translate3d(0px, -100%, 0px)
 
-
 .home-link
-  position: relative
-  width: 6em
-  height: 6em
   display: flex
   align-items: center
   justify-content: center
-
-.layout.home
-  .home-link
-    pointer-events: none
-
-// .layout.home
-//   .home-link:hover
-//     filter: $hover-filter
-//   .home-link:active
-//     filter: $active-filter
+  white-space: nowrap
+  pointer-events: all
+  min-width: 6em
 
 .nav-sidebar-button
   position: absolute
   right: 0
-
-.home-link, .sidebar-button
   pointer-events: all
 
 .navbar-end, .navbar-start
   align-items: center
 
 
-// TODO styles for no site title or logo, back arrow
+
+// Light/dark
 
 .dark:not(.force)
   .back-arrow
@@ -229,27 +221,32 @@ export default {
       polygon
         fill: $steel
 
+.light
+  .text-site-title
+    span
+      color: $white
+  .navbar-item, .navbar-link
+    color: $white
+  .navbar-link:not(.is-arrowless)::after
+    border-color: $white
+
+
 .layout.home
   .back-arrow
     display: none
-  .navbar-brand
-    width: 1.5em
+  .home-link
+    pointer-events: none
 
 .back-arrow
   transform: rotate(180deg)
-  // display: none
+  display: none
 
-// .home-link
-//   pointer-events: none
+.burgered
+  .home-link
+    pointer-events: all
+  .back-arrow
+    display: block
 
-// .burgered
-//   .home-link
-//     pointer-events: all
-  // .back-arrow
-  //   display: block
-
-
-// TODO styles for text site title:
 
 .logo-site-title
   filter: opacity(0%)
@@ -257,15 +254,12 @@ export default {
     filter: opacity(100%)
 
 .text-site-title
-  position: absolute
-  font-size: 1.25em
   color: $white-ter
   left: 1.75em
-  width: 8em
-  filter: opacity(100%)
-  transition: filter 0.15s ease
-  &.burgered
-    filter: opacity(0%)
+  margin-left: 2.25em
+  span
+    margin-left: 1em
+    color: $button-custom-text-color
 
 
 </style>

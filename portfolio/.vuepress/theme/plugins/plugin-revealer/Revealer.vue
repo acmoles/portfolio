@@ -228,6 +228,7 @@ export default {
   @include make3d
   transform-origin: 0 0
   border-radius: 0
+  // TODO border-radius transition doesn't work on webkit - slows down things in general - any way to spoof?
   transition-property: transform, border-radius
   // transition-property: transform
 

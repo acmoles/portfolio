@@ -14,20 +14,16 @@
 
 @keyframes fadeIn
   0%
-    opacity: 0
     filter: opacity(0%)
 
   100%
-    opacity: 1
     filter: opacity(100%)
 
 @keyframes fadeOut
   0%
-    opacity: 1
     filter: opacity(100%)
 
   100%
-    opacity: 0
     filter: opacity(0%)
 
 @keyframes flip
@@ -65,12 +61,23 @@
   100%
     transform: scaleX(1) scaleY(1) rotate(0deg)
 
+
 .fade-enter-active, .fade-leave-active
   transition: opacity 0.3s
 
 
 .fade-enter, .fade-leave-to
   opacity: 0
+
+.fade-fast-enter-active, .fade-fast-leave-active
+  transition: opacity 0.15s
+
+
+.fade-fast-enter, .fade-fast-leave-to
+  opacity: 0
+
+
+// Intersection Observer animations
 
 html:not(.disable-motion) .to-appear
   // filter: opacity(0%)

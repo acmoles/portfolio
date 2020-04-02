@@ -67,7 +67,7 @@ export default {
           translation : {x: 0, y: 0, z: 1},
         },
         caption: {
-          translation : {x: 10, y: 10, z: 2},
+          translation : {x: 10, y: 10, z: 0},
         },
       }
     }
@@ -88,9 +88,9 @@ export default {
   mounted() {
     this.base = this.$refs['base' + this.uid].$el
     this.animatables.article = this.$refs['article' + this.uid]
-    if (this.src) {
-      this.animatables.image = this.$refs['image' + this.uid]
-    }
+    // if (this.src) {
+    //   this.animatables.image = this.$refs['image' + this.uid]
+    // }
     this.animatables.caption = this.$refs['caption' + this.uid]
 
     if (this.type === 'double-left' || this.type === 'double-right') {
@@ -256,7 +256,7 @@ html:not(.disable-motion)
 .grid-item
   position: relative
   perspective: 1000px
-  .item-caption, .image, .notification
+  .item-caption, .notification
     transition: transform 0.2s ease-out
     @include make3d
   .project-panel

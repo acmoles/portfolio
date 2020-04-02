@@ -4,7 +4,6 @@
       <img src="/images/homepage/background-xl.png" alt="">
     </picture>
     <!-- <div v-for="n in 5" :class="'test-blur test-blur-' + n"></div> -->
-    <HomeIntroSmall/>
 
     <div class="grid-wrapper" :style="{ paddingTop: paddingTop }">
           <PortfolioItem
@@ -34,7 +33,7 @@ import HomeIntroSmall from '@theme/components/home/HomeIntroSmall.vue'
 
 // TODO fix width issue of tiles on smaller desktop screens
 // TODO mobile view
-
+//     <HomeIntroSmall/>
 
 export default {
   components: { PortfolioItem, HomeIntroLarge, HomeIntroSmall },
@@ -52,9 +51,9 @@ export default {
     // TODO wait for project images to load before signalling ready (remove lazy load)
 
     // TODO keep minimal intro?
-    // const x = this.$refs.container.getBoundingClientRect().left
-    // const padding = 96
-    // this.paddingTop = Math.min( (x + padding), 192 ) + 'px'
+    const x = this.$refs.container.getBoundingClientRect().left
+    const padding = 96
+    this.paddingTop = Math.min( (x + padding), 240 ) + 'px'
 
     setTimeout(() => {
       this.doLoad()
@@ -100,7 +99,7 @@ export default {
     left: 0
     top: 0
     z-index: -1
-    opacity: 0.42
+    opacity: 0.4
 
   .test-blur
     position: absolute
