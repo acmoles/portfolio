@@ -12,6 +12,7 @@ case1: Case study
 case2: Two parts
 sidebar: auto
 date: 2019-09-12
+src: /images/homepage/toucan-baked.jpg
 prev: ./project5
 next: ./project7
 ---

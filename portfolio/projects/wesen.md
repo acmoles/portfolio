@@ -11,6 +11,7 @@ background: dark
 case1: Case study
 sidebar: auto
 date: 2019-09-12
+src: /images/homepage/wesen-mock-baked.jpg
 prev: ./ecosia
 next: ./stompy-robot
 ---
@@ -45,7 +46,7 @@ next: ./stompy-robot
 
 Test paragraph
 
-![An image](~@assets/images/content/wesen/grid.jpg)
+![An image](/images/wesen/grid.jpg)
 
 ### Inner title
 

@@ -1,10 +1,11 @@
-// Only one loadable hero per page
-
 export const fadeUpInLoad = {
 
   data () {
     return {
+      observer: null,
       visible: false,
+      intersected: false,
+      interval: null,
     }
   },
 
@@ -16,10 +17,30 @@ export const fadeUpInLoad = {
 
   watch: {
     pageLoadingStatus (latest, last) {
-      if (latest === 'finished') {
+      if (latest === 'finished' && this.intersected) {
         this.visible = true
       }
     }
   },
+
+  mounted() {
+  this.observer = new IntersectionObserver(entries => {
+    const node = entries[0]
+    if (node.isIntersecting) {
+        this.intersected = true
+        this.observer.disconnect()
+
+        if (this.pageLoadingStatus === 'finished') {
+          this.visible = true
+        }
+      }
+  });
+
+    this.observer.observe(this.$el)
+  },
+
+  destroyed() {
+    this.observer.disconnect()
+  }
 
 }

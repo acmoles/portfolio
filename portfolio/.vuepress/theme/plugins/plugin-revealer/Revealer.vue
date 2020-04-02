@@ -12,7 +12,7 @@
       ref="revealerParent"
     >
       <div
-        class="revealer notification noise-light"
+        class="revealer notification"
         :class="[revealerClass, backgroundClass]"
         :style="{ transform: transformString, WebkitTransform: transformString, borderRadius: radiusString }"
         ref="revealer"
@@ -31,7 +31,7 @@ import { getViewport, getScrollTop } from '../../util'
 export default {
 
   // TODO fix timing issues which depend on js speed
-  // TODO slower fade on fade out 
+  // TODO slower fade on fade out
 
   // components: { IncomingTitle },
 
@@ -229,6 +229,7 @@ export default {
   transform-origin: 0 0
   border-radius: 0
   transition-property: transform, border-radius
+  // transition-property: transform
 
 // revealer transition states
 

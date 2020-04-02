@@ -1,5 +1,5 @@
 <template>
-  <div class="stage notification noise-light" :class="background">
+  <div class="stage notification" :class="background">
 
     <div class="info-box" :class="lightClass">
       <div class="container is-fullhd">

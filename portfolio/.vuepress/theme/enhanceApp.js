@@ -5,7 +5,6 @@ import initRouting from './routing.js'
 
 import VueForceNextTick from 'vue-force-next-tick'
 import VueClipboard from 'vue-clipboard2'
-import lazySizes from 'lazysizes'
 
 import Home from './components/home/Home.vue'
 // import HomeDeco from './components/home/HomeDeco.vue'
@@ -28,9 +27,6 @@ export default ({
   if (typeof document !== 'undefined' && typeof window !== 'undefined') {
     Vue.use(VueForceNextTick)
     Vue.use(VueClipboard)
-
-    // lazySizes.cfg.expand = 200
-    lazySizes.init()
 
     // fixes scroll jump in modern browsers
     if ('scrollRestoration' in window.history) {

@@ -18,30 +18,9 @@
             :case1="project.frontmatter.case1"
             :case2="project.frontmatter.case2"
             :background="project.frontmatter.background"
+            :src="project.frontmatter.src"
             v-on:project-click="handleProjectClick"
-          >
-            <ItemImageDouble
-              v-if="project.frontmatter.title === 'Wesen'"
-              type="wesen"
-            />
-            <ItemImageDouble
-              v-else-if="project.frontmatter.title === 'toucanBox'"
-              type="toucanbox"
-            />
-            <ItemImageBackground
-              v-else-if="project.frontmatter.title === 'Stompy Robot'"
-              type="stompy-robot"
-            />
-            <ItemImageBackground
-              v-else-if="project.frontmatter.title === 'Random International'"
-              type="random"
-            />
-            <ItemImageBackground
-              v-else-if="project.frontmatter.title === 'Art Lebedev Studio'"
-              type="art-lebedev"
-            />
-
-          </PortfolioItem>
+          />
     </div>
   </div>
 </template>
@@ -49,9 +28,6 @@
 <script>
 import { loadableHero } from '../../mixins/loadableHero.js'
 import PortfolioItem from '@theme/components/home/PortfolioItem.vue'
-
-import ItemImageDouble from '@theme/components/home/ItemImageDouble.vue'
-import ItemImageBackground from '@theme/components/home/ItemImageBackground.vue'
 
 import HomeIntroLarge from '@theme/components/home/HomeIntroLarge.vue'
 import HomeIntroSmall from '@theme/components/home/HomeIntroSmall.vue'
@@ -61,7 +37,7 @@ import HomeIntroSmall from '@theme/components/home/HomeIntroSmall.vue'
 
 
 export default {
-  components: { PortfolioItem, ItemImageDouble, ItemImageBackground, HomeIntroLarge, HomeIntroSmall },
+  components: { PortfolioItem, HomeIntroLarge, HomeIntroSmall },
 
   mixins: [loadableHero],
 
@@ -121,10 +97,10 @@ export default {
 
   .test-background
     position: absolute
-    left: -5em
+    left: 0
     top: 0
     z-index: -1
-    opacity: 0.5
+    opacity: 0.42
 
   .test-blur
     position: absolute

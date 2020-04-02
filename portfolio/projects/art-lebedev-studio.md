@@ -10,6 +10,7 @@ navStyle:
 background: als
 sidebar: false
 date: 2019-09-12
+src: /images/homepage/art-lebedev-tile.jpg
 prev: ./project9
 next: ./project1
 ---

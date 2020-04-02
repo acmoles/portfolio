@@ -8,13 +8,20 @@
     :ref="'base' + uid"
   >
     <article
-      class="project-panel notification noise-light"
+      class="project-panel notification"
       :class="background"
       :ref="'article' + uid"
       @click="emitBoundingRect($event)"
     >
 
-      <slot></slot>
+      <figure
+        v-if="src"
+        :ref="'image' + uid"
+        class="image"
+        :class="imageClass"
+      >
+        <img :src="src"  :alt="title">
+      </figure>
 
       <div :ref="'caption' + uid" class="item-caption">
         <p class="small-title">{{ title }}</p>
@@ -43,6 +50,7 @@ export default {
     case1: String,
     case2: String,
     background: String,
+    src: String
   },
 
   mixins: [fadeUpInLoad],
@@ -55,8 +63,11 @@ export default {
         article: {
     			rotation : {x: -3, y: 3, z: 0},
         },
+        image: {
+          translation : {x: 0, y: 0, z: 1},
+        },
         caption: {
-          translation : {x: 10, y: 10, z: 0},
+          translation : {x: 10, y: 10, z: 2},
         },
       }
     }
@@ -65,12 +76,21 @@ export default {
   computed: {
     homeFadeUpMotion () {
       return this.$store.state.homeFadeUpMotion
+    },
+    imageClass () {
+      return {
+        'double-comp': this.type.includes('double'),
+        'is-square single-comp': this.type.includes('single')
+      }
     }
   },
 
   mounted() {
     this.base = this.$refs['base' + this.uid].$el
     this.animatables.article = this.$refs['article' + this.uid]
+    if (this.src) {
+      this.animatables.image = this.$refs['image' + this.uid]
+    }
     this.animatables.caption = this.$refs['caption' + this.uid]
 
     if (this.type === 'double-left' || this.type === 'double-right') {
@@ -184,7 +204,7 @@ html:not(.disable-motion)
   background-blend-mode: overlay
   &.orange
     &.project-panel::after
-      box-shadow: 0 0 2em 0 rgba($orange, 0.42)
+      box-shadow: 0 0 2em 0 rgba($orange, 0.56)
     background-color: $orange
     background-image: $gradient
   &.dark
@@ -194,29 +214,29 @@ html:not(.disable-motion)
     background-color: $steel
   &.green
     &.project-panel::after
-      box-shadow: 0 0 2em 0 rgba($green, 0.56)
+      box-shadow: 0 0 2em 0 rgba($green, 0.64)
     background-color: $green
     background-image: $gradient
   &.purple
     &.project-panel::after
-      box-shadow: 0 0 2em 0 rgba($purple, 0.64)
+      box-shadow: 0 0 2em 0 rgba($purple, 0.76)
     background-color: $purple
     background-image: $gradient
   &.blue
     &.project-panel::after
-      box-shadow: 0 0 2em 0 rgba($blue, 0.56)
+      box-shadow: 0 0 2em 0 rgba($blue, 0.64)
     background-color: $blue
     background-image: $gradient
   &.yellow
     &.project-panel::after
-      box-shadow: 0 0 2em 0 rgba($yellow, 0.42)
+      box-shadow: 0 0 2em 0 rgba($yellow, 0.56)
     background-color: $darkYellow
     background-image: $gradientDark
   &.random
     background-color: $silver
   &.pink
     &.project-panel::after
-      box-shadow: 0 0 2em 0 rgba($pink, 0.56)
+      box-shadow: 0 0 2em 0 rgba($pink, 0.64)
     background-color: $pink
     background-image: $gradient
   &.als
@@ -224,24 +244,23 @@ html:not(.disable-motion)
 
 .grid-item .notification::after
   @include pseudo-full
-  // TODO remove in order to block pointer events
-  pointer-events: none
+  // pointer-events: none
   border-radius: $notification-radius
-  opacity: 0
-  transition: opacity 0.3s ease-out
+  filter: opacity(0%)
+  transition: filter 0.3s ease-out
 
 .grid-item:hover .notification::after
-  opacity: 1
+  filter: opacity(100%)
 
 
 .grid-item
   position: relative
   perspective: 1000px
-  *
+  .item-caption, .image, .notification
     transition: transform 0.2s ease-out
     @include make3d
   .project-panel
-    box-shadow: $element-shadow
+    // box-shadow: $element-shadow
     color: $white-ter
   &.double-right-top, &.double-right-bottom, &.double-left-top, &.double-left-bottom
     .small-title, h2
@@ -259,5 +278,20 @@ html:not(.disable-motion)
 .blue
   .case
     background: rgba($white, 0.2)
+
+
+.double-comp, .single-comp
+  position: absolute
+  width: 100%
+  height: 100%
+  right: 0
+  top: 0
+  border-radius: $notification-radius
+  overflow: hidden
+  z-index: -1
+  img
+    position: absolute
+    top: 0
+    right: 0
 
 </style>

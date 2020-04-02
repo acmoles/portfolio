@@ -10,6 +10,7 @@ navStyle:
 background: random
 sidebar: false
 date: 2019-09-11
+src: /images/homepage/random-tile.jpg
 prev: ./makielab
 next: ./lego
 ---
