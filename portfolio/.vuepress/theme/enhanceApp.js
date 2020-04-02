@@ -29,7 +29,7 @@ export default ({
     Vue.use(VueForceNextTick)
     Vue.use(VueClipboard)
 
-    lazySizes.cfg.expand = 200
+    // lazySizes.cfg.expand = 200
     lazySizes.init()
 
     // fixes scroll jump in modern browsers

@@ -2,7 +2,7 @@
   <router-link
     :to="path"
     class="grid-item"
-    :class="type"
+    :class="[type, {'in-view': visible}, {'appear-fade-up': homeFadeUpMotion}]"
     @mouseleave.native.stop="mouseLeave"
     @mousemove.native.stop="mouseMove"
     :ref="'base' + uid"
@@ -30,6 +30,8 @@
 
 <script>
 
+import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
+
 export default {
 
   props: {
@@ -40,8 +42,10 @@ export default {
     path: String,
     case1: String,
     case2: String,
-    background: String
+    background: String,
   },
+
+  mixins: [fadeUpInLoad],
 
   data () {
     return {
@@ -59,8 +63,8 @@ export default {
   },
 
   computed: {
-    pageLoadingStatus () {
-      return this.$store.state.pageLoadingStatus
+    homeFadeUpMotion () {
+      return this.$store.state.homeFadeUpMotion
     }
   },
 
@@ -169,6 +173,11 @@ export default {
 <style lang="sass">
 @import "../../styles/variables.sass"
 @import "../../styles/mixins.sass"
+
+html:not(.disable-motion)
+  @for $i from 1 through 10
+    .grid-item:nth-child(2n + #{$i})
+      transition-delay: 0.1s + ($i * .1s)
 
 .notification
   background-size: 250%

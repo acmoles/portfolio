@@ -1,16 +1,17 @@
 <template>
-  <div
-    class="project-background-image"
+  <figure
+    class="project-background-image image is-16by9"
     :class="[name, {'noise-light': noise}]"
-    :style="{backgroundImage: backgroundSrc}"
   >
     <img :ref="name"  :src="src" :alt="alt">
-  </div>
+  </figure>
 </template>
 
 <script>
 
 // TODO enable floating png images on background
+
+//     :style="{backgroundImage: backgroundSrc}"
 
 import { loadableHero } from '../mixins/loadableHero.js'
 
@@ -53,12 +54,13 @@ export default {
   @import "../styles/mixins.sass"
 
   .project-background-image
-    @include cover-screen
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: center
-    img
-      visibility: hidden
+    width: 100%
+    // @include cover-screen
+    // background-size: cover
+    // background-repeat: no-repeat
+    // background-position: center
+    // img
+    //   visibility: hidden
 
     &.wesen
 

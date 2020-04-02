@@ -237,16 +237,16 @@ export default {
 
 .back-arrow
   transform: rotate(180deg)
-  display: none
+  // display: none
 
-.home-link
-  pointer-events: none
+// .home-link
+//   pointer-events: none
 
-.burgered
-  .home-link
-    pointer-events: all
-  .back-arrow
-    display: block
+// .burgered
+//   .home-link
+//     pointer-events: all
+  // .back-arrow
+  //   display: block
 
 
 // TODO styles for text site title:

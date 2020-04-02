@@ -30,6 +30,9 @@ import { getViewport, getScrollTop } from '../../util'
 
 export default {
 
+  // TODO fix timing issues which depend on js speed
+  // TODO slower fade on fade out 
+
   // components: { IncomingTitle },
 
   data () {

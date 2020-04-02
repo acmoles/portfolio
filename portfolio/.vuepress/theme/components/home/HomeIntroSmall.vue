@@ -1,5 +1,8 @@
 <template>
-  <div class="home-intro">
+  <div
+    class="home-intro"
+    :class="[{'in-view': visible}, {'appear-fade-up': homeFadeUpMotion}]"
+  >
     <div class="intro-container">
       <h1>Anthony Moles</h1>
       <p class="small-title">
@@ -12,10 +15,19 @@
 <script>
 import WavingHand from '@theme/components/home/WavingHand.vue'
 
+import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
 
 export default {
 // <WavingHand/>
-  components: { WavingHand }
+  // components: { WavingHand },
+
+  mixins: [fadeUpInLoad],
+
+  computed: {
+    homeFadeUpMotion () {
+      return this.$store.state.homeFadeUpMotion
+    }
+  }
 
 }
 
@@ -27,7 +39,7 @@ export default {
   @import "../../styles/mixins.sass"
 
   .home-intro
-    padding: 4em 0 2.5em 0
+    padding: 6em 0 2.5em 0
     display: grid
     grid-template-columns: repeat(3, 1fr)
     column-gap: $columnGap

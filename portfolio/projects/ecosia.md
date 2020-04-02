@@ -4,7 +4,7 @@ title: Ecosia
 subtitle: Leading the mobile apps team
 type: single
 navStyle:
-  style: dark
+  style: light
   links: orange
   progress: light
 background: orange
@@ -18,22 +18,20 @@ image:
 
 ::: slot top
 <ProjectStage>
+
+  <template v-slot:description>
+    <h1>Ecosia</h1>
+    <p class="small-title stage-description">
+      Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables easy customisation of a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.
+    </p>
+    <a href="#" class="stage-link">ecosia.org</a>
+  </template>
+
   <template v-slot:visual>
     <ImageHero name="ecosia" src="/images/ecosia/Refining.png" alt="Ecosia mobile devices" :noise="false"/>
   </template>
 
-  <template v-slot:description>
-    <p class="stage-description subtitle">
-      Ecosia is the search engine that uses 80% of its profits to plant trees around the world, where they're needed most.
-    </p>
-  </template>
-
   <template v-slot:descriptionDetails>
-    <ul class="stage-details">
-      <li>iOS and Android apps</li>
-      <li>2018-2020</li>
-    </ul>
-    <ProjectExternalLink label="ecosia.org" href="#"/>
   </template>
 </ProjectStage>
 :::

@@ -1,6 +1,9 @@
 <template>
   <div ref="container" class="container is-fullhd is-home">
-
+    <picture class="test-background">
+      <img src="/images/homepage/background-xl.png" alt="">
+    </picture>
+    <!-- <div v-for="n in 5" :class="'test-blur test-blur-' + n"></div> -->
     <HomeIntroSmall/>
 
     <div class="grid-wrapper" :style="{ paddingTop: paddingTop }">
@@ -70,6 +73,8 @@ export default {
 
   mounted() {
 
+    // TODO wait for project images to load before signalling ready (remove lazy load)
+
     // TODO keep minimal intro?
     // const x = this.$refs.container.getBoundingClientRect().left
     // const padding = 96
@@ -100,6 +105,10 @@ export default {
         }
         data['scroll'] = document.documentElement.scrollTop
         this.$store.dispatch('setProjectPosition', data)
+
+        // Fade up in only for first load of homepage
+        this.$store.dispatch('setHomeMotion', false)
+
       }
   }
 }
@@ -109,6 +118,61 @@ export default {
 <style lang="sass">
   @import "../../styles/variables.sass"
   @import "../../styles/mixins.sass"
+
+  .test-background
+    position: absolute
+    left: -5em
+    top: 0
+    z-index: -1
+    opacity: 0.5
+
+  .test-blur
+    position: absolute
+    // animation: pulse 10s ease-in-out infinite
+
+  .test-blur-1
+    width: 16em
+    height: 24em
+    right: 8em
+    top: 16em
+    background-color: rgba($orange, 0.08)
+    box-shadow: 0 0 4em 4em rgba($orange, 0.08)
+
+  .test-blur-2
+    width: 16em
+    height: 16em
+    right: 16em
+    top: 24em
+    background-color: rgba($purple, 0.16)
+    box-shadow: 0 0 4em 4em rgba($purple, 0.16)
+    animation-delay: 1s
+
+  .test-blur-3
+    width: 16em
+    height: 16em
+    left: 8em
+    top: 40em
+    background-color: rgba($green, 0.16)
+    box-shadow: 0 0 4em 4em rgba($green, 0.16)
+    animation-delay: 2s
+
+  .test-blur-4
+    width: 4em
+    height: 16em
+    left: 12em
+    top: -4em
+    background-color: rgba($silver, 0.04)
+    box-shadow: 0 0 3em 3em rgba($silver, 0.04)
+    animation-delay: 3s
+
+  .test-blur-5
+    width: 0.1em
+    height: 8em
+    right: 12em
+    top: -4em
+    background-color: rgba($silver, 0.06)
+    box-shadow: 0 0 3em 3em rgba($silver, 0.06)
+    animation-delay: 3s
 
   .grid-wrapper
     display: grid
