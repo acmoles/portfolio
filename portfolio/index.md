@@ -6,8 +6,8 @@ meta:
   - title: description
     content: hello
 navStyle:
-  style: light
-  links: light
+  style: dark
+  tint: regular-tint
   progress: light
 ---
 

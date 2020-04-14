@@ -2,7 +2,7 @@
 title: List of projects
 navStyle:
   style: light
-  links: light
+  tint: regular-tint
   progress: light
 ---
 

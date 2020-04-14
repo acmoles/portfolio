@@ -16,6 +16,7 @@
         fill-rule="evenodd"
       />
     </svg>
+    <div class="hitbox"></div>
   </button>
 </template>
 
@@ -74,7 +75,7 @@ export default {
       autoplay: false,
       loop: false,
       complete: () => {
-        this.restartRandom();
+        // this.restartRandom();
       }
     });
 
@@ -297,22 +298,32 @@ export default {
 
 .hand-button
   @include button-override
+  display: inline
+  width: 1em
+  height: 1em
+  bottom: 0.83em
+  left: 0.35em
+  vertical-align: bottom
   padding: 0
   position: relative
   transform-origin: 0 100%
-  transform: scale(0.64)
-  &::after
-    content: ' '
-    position: absolute
-    z-index: 1
-    width: 1px
-    height: 1px
-    left: 36%
-    top: 42%
-    border-radius: 50%
-    background: $pink
-    box-shadow: 0 0 0.64em 0.32em rgba($pink, 0.76)
-    filter: opacity(0%)
+  transform: scale(0.24)
+  @media screen and (min-width: $largeformat)
+    transform: scale(0.3)
+    bottom: 0.85em
+    left: 0.45em
+  // &::after
+  //   content: ' '
+  //   position: absolute
+  //   z-index: 1
+  //   width: 1px
+  //   height: 1px
+  //   left: 36%
+  //   top: 42%
+  //   border-radius: 50%
+  //   background: $pink
+  //   box-shadow: 0 0 0.64em 0.32em rgba($pink, 0.76)
+  //   filter: opacity(0%)
 
 .hand-button.animate::after
   animation: handGlow 6s 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86)
@@ -320,6 +331,12 @@ export default {
 
 .hand-button.animate:hover::after
   filter: opacity(100%)
+
+.hitbox
+  position: absolute
+  @include cover-screen
+  transform: scale(4)
+  cursor: pointer
 
 @keyframes handGlow
   0%
@@ -337,7 +354,6 @@ export default {
 #hand-container
   cursor: pointer
   position: relative
-  bottom: 38px
   transform-origin: 29px 82px
   display: inline-block
   vertical-align: middle

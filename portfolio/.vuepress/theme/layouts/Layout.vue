@@ -1,6 +1,6 @@
 <template>
   <div
-    class="layout noise-heavy"
+    class="layout background-noise"
     :class="pageClasses"
   >
     <Navbar/>
@@ -46,10 +46,10 @@ export default {
 
     pageClasses () {
       const userPageClass = this.$page.frontmatter.pageClass
-      const linkStyle = this.$page.frontmatter.navStyle.links
+      const tintStyle = this.$page.frontmatter.navStyle.tint
       return [
         this.pageLoadingStatus,
-        linkStyle,
+        tintStyle,
         userPageClass
       ]
     },

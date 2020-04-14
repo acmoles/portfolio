@@ -5,7 +5,7 @@ subtitle: Fabricating an artwork
 type: single
 navStyle:
   style: dark
-  links: light
+  tint: regular-tint
   progress: light
 background: random
 sidebar: false

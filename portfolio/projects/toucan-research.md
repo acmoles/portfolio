@@ -1,11 +1,11 @@
 ---
 uid: 4
-title: toucanBox R&D
+title: toucanBox
 subtitle: Mixing digital and physical play
 type: single
 navStyle:
   style: light
-  links: light
+  tint: purple-tint
   progress: light
 background: purple
 sidebar: false

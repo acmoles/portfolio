@@ -3,8 +3,8 @@ title: About
 sidebar: auto
 date: 2019-09-11
 navStyle:
-  style: light
-  links: light
+  style: dark
+  tint: regular-tint
   progress: light
 ---
 

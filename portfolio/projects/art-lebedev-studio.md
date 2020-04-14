@@ -4,8 +4,8 @@ title: Art Lebedev Studio
 subtitle: Channelling the personality of a renowned studio
 type: single
 navStyle:
-  style: light
-  links: light
+  style: dark
+  tint: regular-tint
   progress: light
 background: als
 sidebar: false

@@ -5,7 +5,7 @@ subtitle: Building a uniquely Lego gaming experience
 type: single
 navStyle:
   style: light
-  links: light
+  tint: pink-tint
   progress: light
 background: pink
 sidebar: false

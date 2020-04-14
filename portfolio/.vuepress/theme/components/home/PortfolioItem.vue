@@ -9,7 +9,7 @@
   >
     <article
       class="project-panel notification"
-      :class="background"
+      :class="[background, {'noise-light': notColorTile}]"
       :ref="'article' + uid"
       @click="emitBoundingRect($event)"
     >
@@ -82,6 +82,9 @@ export default {
         'double-comp': this.type.includes('double'),
         'is-square single-comp': this.type.includes('single')
       }
+    },
+    notColorTile () {
+      return !(this.background === 'dark' || this.background === 'stompy' || this.background === 'als' || this.background === 'random')
     }
   },
 
@@ -210,8 +213,12 @@ html:not(.disable-motion)
   &.dark
     background-color: $steel
     background-image: $gradientSubtle
-  &.stompy-robot
+    &.project-panel::after
+      content: none
+  &.stompy
     background-color: $steel
+    &.project-panel::after
+      content: none
   &.green
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($green, 0.64)
@@ -234,6 +241,8 @@ html:not(.disable-motion)
     background-image: $gradientDark
   &.random
     background-color: $silver
+    &.project-panel::after
+      content: none
   &.pink
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($pink, 0.64)
@@ -241,10 +250,21 @@ html:not(.disable-motion)
     background-image: $gradient
   &.als
     background-color: $slate
+    &.project-panel::after
+      content: none
+
+.revealer.notification
+  &.orange
+    background-image: $gradientMid
+
+.stage.notification
+  &.orange
+    background-image: $gradientMid
+
 
 .grid-item .notification::after
   @include pseudo-full
-  // pointer-events: none
+  pointer-events: none
   border-radius: $notification-radius
   filter: opacity(0%)
   transition: filter 0.3s ease-out
@@ -288,7 +308,7 @@ html:not(.disable-motion)
   top: 0
   border-radius: $notification-radius
   overflow: hidden
-  z-index: -1
+  // z-index: -1
   img
     position: absolute
     top: 0

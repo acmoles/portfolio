@@ -96,12 +96,6 @@ $hamburger-layer-border-radius : 0px
     .hamburger-inner::after
       background-color: $hamburger-layer-color
 
-.dark:not(.force)
-  .hamburger
-      .hamburger-inner::before,
-      .hamburger-inner::after
-        background-color: $steel
-
 .hamburger-box
   width: $hamburger-layer-width
   height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2

@@ -4,13 +4,22 @@
 .noise-heavy::before, .noise-light::before
   @include cover-screen
   content: ' '
-  background-image: url('../plugins/plugin-outside-content/dark-noise.png')
   background-size: 256px 256px
   background-position: 128px 128px
   pointer-events: none
 
 .noise-heavy::before
-  filter: opacity(6%)
+  // filter: opacity(6%)
+  background-image: url('../plugins/plugin-outside-content/dark-noise-heavy.png')
 
 .noise-light::before
-  filter: opacity(3%)
+  // filter: opacity(3%)
+  background-image: url('../plugins/plugin-outside-content/dark-noise-light.png')
+
+// .layout.noise-heavy
+//   z-index: 0
+
+.background-noise
+  background-size: 256px 256px
+  background-position: 128px 128px
+  background-image: url('../plugins/plugin-outside-content/dark-noise-heavy.png')

@@ -119,10 +119,4 @@ export default {
   filter: opacity(100%)
   opacity: 1
   pointer-events: all
-
-.dark:not(.force)
-  .navbar-item:not(.dropdown-item), .navbar-link
-    color: $slate
-  .navbar-link:not(.is-arrowless)::after
-    border-color: $slate
 </style>

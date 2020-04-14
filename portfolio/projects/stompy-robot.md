@@ -4,10 +4,10 @@ title: Stompy Robot
 subtitle: Co-founding an indie games studio
 type: single
 navStyle:
-  style: light
-  links: light
+  style: dark
+  tint: regular-tint
   progress: light
-background: stompy-robot
+background: stompy
 sidebar: false
 date: 2019-09-12
 src: /images/homepage/stompy-robot-tile.jpg

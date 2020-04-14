@@ -5,7 +5,7 @@ subtitle: Envisioning messages with location
 type: single
 navStyle:
   style: light
-  links: light
+  tint: green-tint
   progress: light
 background: green
 sidebar: false

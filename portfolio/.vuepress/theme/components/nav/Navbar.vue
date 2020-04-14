@@ -9,13 +9,14 @@
       role="navigation"
       aria-label="main navigation"
     >
-      <div class="navbar-brand" :class="{ burgered: navbarBurgered }">
-        <router-link
-          :to="$localePath"
-          class="home-link"
-        >
+      <!-- <div class="container is-fullhd"> -->
+        <div class="navbar-brand" :class="{ burgered: navbarBurgered }">
+          <router-link
+            :to="$localePath"
+            class="home-link"
+          >
             <!-- <Logo
-              class="logo-site-tilogtle"
+              class="logo-site-title"
               :class="{ burgered: navbarBurgered }"
             /> -->
             <ArrowIcon class="back-arrow"/>
@@ -25,23 +26,25 @@
                 :class="{ burgered: navbarBurgered }"
                 v-show="!navbarBurgered"
               >
-                <strong>Anthony Moles</strong><span>design, product and technology</span>
+                <strong>Anthony Moles</strong>
+                <!-- <span>design, product and technology</span> -->
               </span>
             </transition>
         </router-link>
 
-        <SidebarButton
-          purpose="menu"
-          class="nav-sidebar-button"
-          v-if="navbarBurgered"
-          @sidebar-button-event="toggleSidebar"
-        />
-      </div>
+          <SidebarButton
+            purpose="menu"
+            class="nav-sidebar-button"
+            v-if="navbarBurgered"
+            @sidebar-button-event="toggleSidebar"
+          />
+        </div>
 
-      <NavLinks
-        :active="isSidebarOpen"
-        :burgered="navbarBurgered"
-      />
+        <NavLinks
+          :active="isSidebarOpen"
+          :burgered="navbarBurgered"
+        />
+      <!-- </div> -->
     </header>
   </transition>
 </template>
@@ -211,15 +214,29 @@ export default {
 .navbar-end, .navbar-start
   align-items: center
 
+// .container.is-fullhd > .navbar-brand
+//   margin-left: 0
 
 
 // Light/dark
 
-.dark:not(.force)
-  .back-arrow
-    #ArrowIcon
-      polygon
-        fill: $steel
+// .dark:not(.force)
+//   .back-arrow
+//     #ArrowIcon
+//       polygon
+//         fill: $steel
+
+// .dark:not(.force)
+//   .hamburger
+//       .hamburger-inner::before,
+//       .hamburger-inner::after
+//         background-color: $steel
+
+// .dark:not(.force)
+//   .navbar-item:not(.dropdown-item), .navbar-link
+//     color: $slate
+//   .navbar-link:not(.is-arrowless)::after
+//     border-color: $slate
 
 .light
   .text-site-title
@@ -255,7 +272,7 @@ export default {
 
 .text-site-title
   color: $white-ter
-  left: 1.75em
+  left: 2em
   margin-left: 2.25em
   span
     margin-left: 1em

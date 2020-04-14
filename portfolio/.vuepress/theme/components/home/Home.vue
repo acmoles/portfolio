@@ -1,11 +1,12 @@
 <template>
   <div ref="container" class="container is-fullhd is-home">
-    <picture class="test-background">
+    <picture class="test-background noise-heavy">
       <img src="/images/homepage/background-xl.png" alt="">
     </picture>
     <!-- <div v-for="n in 5" :class="'test-blur test-blur-' + n"></div> -->
+    <HomeIntroQuote/>
 
-    <div class="grid-wrapper" :style="{ paddingTop: paddingTop }">
+    <div class="grid-wrapper">
           <PortfolioItem
             v-for="project in projects"
             :key="project.frontmatter.uid"
@@ -30,30 +31,19 @@ import PortfolioItem from '@theme/components/home/PortfolioItem.vue'
 
 import HomeIntroLarge from '@theme/components/home/HomeIntroLarge.vue'
 import HomeIntroSmall from '@theme/components/home/HomeIntroSmall.vue'
+import HomeIntroQuote from '@theme/components/home/HomeIntroQuote.vue'
 
 // TODO fix width issue of tiles on smaller desktop screens
 // TODO mobile view
-//     <HomeIntroSmall/>
 
 export default {
-  components: { PortfolioItem, HomeIntroLarge, HomeIntroSmall },
+  components: { PortfolioItem, HomeIntroLarge, HomeIntroSmall, HomeIntroQuote },
 
   mixins: [loadableHero],
-
-  data () {
-    return {
-      paddingTop: null
-    }
-  },
 
   mounted() {
 
     // TODO wait for project images to load before signalling ready (remove lazy load)
-
-    // TODO keep minimal intro?
-    const x = this.$refs.container.getBoundingClientRect().left
-    const padding = 96
-    this.paddingTop = Math.min( (x + padding), 240 ) + 'px'
 
     setTimeout(() => {
       this.doLoad()
@@ -98,7 +88,6 @@ export default {
     position: absolute
     left: 0
     top: 0
-    z-index: -1
     opacity: 0.4
 
   .test-blur

@@ -1,5 +1,5 @@
 <template>
-  <div class="stage notification" :class="background">
+  <div class="stage notification noise-light" :class="background">
 
     <div class="info-box" :class="lightClass">
       <div class="container is-fullhd">
@@ -72,6 +72,7 @@ export default {
 @import "../styles/mixins.sass"
 
 .stage.notification
+  height: 100vh
   margin-bottom: 8em
   padding: 0
   border-radius: 0

@@ -5,7 +5,7 @@ subtitle: Refining the value proposition and personalising the experience
 type: double-right-bottom
 navStyle:
   style: light
-  links: light
+  tint: blue-tint
   progress: light
 background: blue
 case1: Case study

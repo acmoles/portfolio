@@ -5,7 +5,7 @@ subtitle: Leading the mobile apps team
 type: single
 navStyle:
   style: light
-  links: orange
+  tint: orange-tint
   progress: light
 background: orange
 sidebar: false

@@ -12,7 +12,7 @@
       ref="revealerParent"
     >
       <div
-        class="revealer notification"
+        class="revealer notification noise-light"
         :class="[revealerClass, backgroundClass]"
         :style="{ transform: transformString, WebkitTransform: transformString, borderRadius: radiusString }"
         ref="revealer"
@@ -229,20 +229,23 @@ export default {
   transform-origin: 0 0
   border-radius: 0
   // TODO border-radius transition doesn't work on webkit - slows down things in general - any way to spoof?
-  transition-property: transform, border-radius
+  // transition-property: transform, border-radius
   // transition-property: transform
 
 // revealer transition states
 
 .revealer-cover-animation-active
   // transition-duration: $revealTime + 200ms
-  transition-duration: $revealTime - 200ms
-  transition-timing-function: $coverTransition
+  // transition-duration: $revealTime - 200ms
+  // transition-timing-function: $coverTransition
+  transition: border-radius 100ms linear, transform $revealTime - 200ms $coverTransition
 
+  // transition: bottom 0.1s ease-out, transform 0.22s 0.1s cubic-bezier(0.215, 0.61, 0.355, 1)
 
 .revealer-reveal-animation-active
-  transition-duration: $revealTime
-  transition-timing-function: $coverTransition
+  // transition-duration: $revealTime
+  // transition-timing-function: $coverTransition
+  transition: border-radius 100ms $revealTime - 200ms linear, transform $revealTime $coverTransition
 
 // fixed position toggle
 

@@ -5,7 +5,7 @@ subtitle: Pioneering customisable childrens toys
 type: single
 navStyle:
   style: dark
-  links: light
+  tint: yellow-tint
   progress: light
 background: yellow
 sidebar: false
