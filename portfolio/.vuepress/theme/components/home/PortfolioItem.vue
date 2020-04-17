@@ -8,7 +8,7 @@
     :ref="'base' + uid"
   >
     <article
-      class="project-panel notification"
+      class="project-panel project-card"
       :class="[background, {'noise-light': notColorTile}]"
       :ref="'article' + uid"
       @click="emitBoundingRect($event)"
@@ -202,14 +202,19 @@ html:not(.disable-motion)
     .grid-item:nth-child(2n + #{$i})
       transition-delay: 0.1s + ($i * .1s)
 
-.notification
+.project-card
+  background-color: $black
   background-size: 250%
   background-blend-mode: overlay
+  &.project-panel
+    border-radius: $radius
+    padding: 2rem 4rem 2rem 2rem
+    position: relative
   &.orange
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($orange, 0.56)
     background-color: $orange
-    background-image: $gradient
+    background-image: $gradientMid
   &.dark
     background-color: $steel
     background-image: $gradientSubtle
@@ -253,30 +258,30 @@ html:not(.disable-motion)
     &.project-panel::after
       content: none
 
-.revealer.notification
+.revealer.project-card
   &.orange
     background-image: $gradientMid
 
-.stage.notification
+.stage.project-card
   &.orange
     background-image: $gradientMid
 
 
-.grid-item .notification::after
+.grid-item .project-card::after
   @include pseudo-full
   pointer-events: none
-  border-radius: $notification-radius
+  border-radius: $radius
   filter: opacity(0%)
   transition: filter 0.3s ease-out
 
-.grid-item:hover .notification::after
+.grid-item:hover .project-card::after
   filter: opacity(100%)
 
 
 .grid-item
   position: relative
   perspective: 1000px
-  .item-caption, .notification
+  .item-caption, .project-card
     transition: transform 0.2s ease-out
     @include make3d
   .project-panel
@@ -306,7 +311,7 @@ html:not(.disable-motion)
   height: 100%
   right: 0
   top: 0
-  border-radius: $notification-radius
+  border-radius: $radius
   overflow: hidden
   // z-index: -1
   img

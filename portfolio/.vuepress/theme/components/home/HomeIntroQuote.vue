@@ -6,7 +6,8 @@
   >
     <div ref="container" class="intro-container">
       <p class="subtitle">
-          I'm a multidisciplinary designer creating useful and playful experiences centred on people<WavingHand/>
+          I'm a multidisciplinary designer creating useful and playful experiences centred on people
+          <!-- <WavingHand/> -->
       </p>
     </div>
   </div>
@@ -16,25 +17,12 @@
 import WavingHand from '@theme/components/home/WavingHand.vue'
 
 import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
+import { topPadding } from '@theme/mixins/topPadding.js'
 
 export default {
   components: { WavingHand },
 
-  mixins: [fadeUpInLoad],
-
-  data () {
-    return {
-      paddingTop: null
-    }
-  },
-
-  mounted () {
-    // TODO keep minimal intro?
-    const x = this.$refs.container.getBoundingClientRect().left
-    // const padding = this.$refs.gridWrapper
-    // console.log(this.$refs.article1);
-    this.paddingTop = Math.max( 168, Math.min( x, 240 ) ) + 'px'
-  },
+  mixins: [fadeUpInLoad, topPadding],
 
   computed: {
     homeFadeUpMotion () {

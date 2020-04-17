@@ -12,7 +12,7 @@
       ref="revealerParent"
     >
       <div
-        class="revealer notification noise-light"
+        class="revealer project-card noise-light"
         :class="[revealerClass, backgroundClass]"
         :style="{ transform: transformString, WebkitTransform: transformString, borderRadius: radiusString }"
         ref="revealer"

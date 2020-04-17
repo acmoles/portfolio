@@ -1,10 +1,5 @@
 <template>
-  <figure
-    class="project-background-image image is-16by9"
-    :class="[name, {'noise-light': noise}]"
-  >
-    <img :ref="name"  :src="src" :alt="alt">
-  </figure>
+    <img :ref="name" :src="src" :alt="alt">
 </template>
 
 <script>
@@ -21,10 +16,8 @@ export default {
 
   props: {
     name: String,
-    noise: Boolean,
     src: String,
-    alt: String,
-    floating: Boolean
+    alt: String
   },
 
   computed: {
@@ -52,36 +45,5 @@ export default {
 <style lang="sass">
   @import "../styles/variables.sass"
   @import "../styles/mixins.sass"
-
-  .project-background-image
-    width: 100%
-    // @include cover-screen
-    // background-size: cover
-    // background-repeat: no-repeat
-    // background-position: center
-    // img
-    //   visibility: hidden
-
-    &.wesen
-
-    &.ecosia
-      background-color: $orange
-    &.stompy-robot
-
-    &.blkbrd
-
-    &.toucanbox-rnd
-
-    &.toucanbox
-      background-color: $blue
-    &.makielab
-
-    &.random
-
-    &.lego
-
-    &.als
-
-
 
 </style>

@@ -17,26 +17,52 @@ next: ./stompy-robot
 ---
 
 ::: slot top
-<ProjectStage>
-  <template v-slot:visual>
-    <ImageHero name="wesen" src="/images/wesen/grid.jpg" alt="Wesen Studio examples" :noise="true"/>
+<ProjectVisual>
+  <template v-slot:visual-background>
+    <ImageHero name="wesen" src="/images/wesen/wesen-grid-render.jpg" alt="Wesen Studio examples" :noise="true"/>
   </template>
+</ProjectVisual>
 
-  <template v-slot:description>
-    <p class="stage-description subtitle">
-      Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.
-    </p>
-  </template>
+<ProjectStage ctaLabel="wesen.studio" ctaUrl="http://www.wesen.studio"
+description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="false">
 
-  <template v-slot:descriptionDetails>
-    <ul class="stage-details">
-      <li>Responsive web application</li>
-      <li>2018</li>
-    </ul>
-    <ProjectExternalLink label="wesen.studio" href="#"/>
-  </template>
+<template v-slot:visual-grid>
+  <!-- <figure class="image">
+    <ImageHero name="toucanbox" src="/images/toucanbox/combined_onboarding.png" alt="toucanBox"/>
+  </figure> -->
+</template>
+
 </ProjectStage>
 :::
+
+<!-- <li>Responsive web application</li>
+<li>2018</li> -->
+
+<Content-ContextSection>
+
+<template v-slot:main>
+
+## Context
+
+The rise of affordable 3D printers popularised the notion of mass customisation → . However, relatively high prices and lacklustre product creation experiences left its promises largely unrealised.
+
+At that time I was working on customisable children’s toys at Makielab → . We enjoyed modest success, catching the attention of Disney who eventually bought the company. In this project I resolved to draw on some lessons learnt there.
+
+Foremost, I wanted to explore the possibility of an unrestricted creation experience, able to generate infinite variations while being intuitive and fun to use. I also intended to fully automate and outsource the fulfillment process.
+
+</template>
+
+<template v-slot:side>
+
+**Reading time**
+12 minutes
+
+**Team composition**
+CTO, product designer, two full-stack developers
+
+</template>
+
+</Content-ContextSection>
 
 <div class="container is-fullhd content">
 

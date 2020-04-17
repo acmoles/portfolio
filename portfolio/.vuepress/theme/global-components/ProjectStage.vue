@@ -1,54 +1,54 @@
 <template>
-  <div class="stage notification noise-light" :class="background">
 
-    <div class="info-box" :class="lightClass">
-      <div class="container is-fullhd">
+  <div class="stage" :class="lightClass" :style="{ paddingTop: paddingTop, paddingBottom: paddingTop }">
+    <div ref="container" class="container is-fullhd">
 
-        <div class="columns">
-          <div
-            class="column is-two-thirds stage-description-column appear-fade-up"
-            :class="{'in-view': visible}"
-          >
-            <slot name="description"></slot>
-          </div>
-
-          <div
-            class="column stage-details-column appear-fade-up"
-          >
-            <slot name="descriptionDetails"></slot>
-          </div>
+      <div class="columns">
+        <div
+          class="column stage-description-column appear-fade-up"
+          :class="{'in-view': visible}"
+        >
+          <p class="subtitle appear-fade-up" :class="{'in-view': visible}">
+            {{ description }}
+          </p>
+          <ProjectExternalLink :label="ctaLabel" :href="ctaUrl"/>
         </div>
 
+        <div class="column stage-details-column">
+          <div
+            class="visual-grid"
+            :class="[{'in-view': (visible && fadeUpHero)}, {'appear-fade-up': fadeUpHero}]"
+          >
+            <slot name="visual-grid"></slot>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div
-      class="visual appear-fade-up"
-      :class="{'in-view': visible}"
-    >
-      <slot name="visual"></slot>
     </div>
-
   </div>
+
 </template>
 
 <script>
-// <ToggleIcon/>
-// import ToggleIcon from '@theme/components/icons/ToggleIcon.vue'
+import ProjectExternalLink from '@theme/global-components/ProjectExternalLink.vue'
 
 import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
+import { topPadding } from '@theme/mixins/topPadding.js'
 
 export default {
+  components: { ProjectExternalLink },
 
-  // components: { ToggleIcon }
+  props: {
+    ctaLabel: String,
+    ctaUrl: String,
+    description: String,
+    fadeUpHero: Boolean
+  },
 
-  mixins: [fadeUpInLoad],
+  mixins: [fadeUpInLoad, topPadding],
 
   computed: {
-
-    background () {
-      return this.$page.frontmatter.background
-    },
+    // TODO make description slot pull from page metadata? Could also be used for SEO
 
     lightDark () {
       return this.$page.frontmatter.navStyle.style
@@ -71,61 +71,37 @@ export default {
 @import "../styles/variables.sass"
 @import "../styles/mixins.sass"
 
-.stage.notification
-  height: 100vh
-  margin-bottom: 8em
-  padding: 0
-  border-radius: 0
+.stage
+  min-height: calc(100vh / 1.618)
+  display: flex
+  align-items: center
+  &.light
+    color: $white
 
-  .visual, .info-box
+  .stage-description
+    text-rendering: geometricPrecision
+    padding-right: 3em
+
+  // TODO want this?
+  // .stage-description-column
+  //   margin-left: 1.75em
+
+
+  .stage-details-column
     display: flex
-    align-items: center
-    justify-content: center
-    width: 100%
+    flex-direction: column
+    justify-content: space-between
+
+  .stage-details
+    margin-top: 0.5em
+    margin-bottom: 3em
     position: relative
-
-  .visual
-    // TODO transition delay doesn't seem to work coming from home
-    transition-delay: 0.3s
-    &::before
-      content: ' '
-      position: absolute
-      width: 100%
-      height: 1.5em
-      background-image: linear-gradient(360deg, $steel 0%, rgba($steel,0.42) 40%, rgba($steel,0.00) 100%)
-      top: -1.5em
-      opacity: 0.08
-
-  .info-box
-    position: relative
-    // top: -1.5em
-    padding: 6em 0 7em 0
-    &.light
-      color: $white
-
-    .stage-description
-      text-rendering: geometricPrecision
-      padding-right: 3em
-
-    .stage-description-column
-      margin-left: 1.75em
-
-
-    .stage-details-column
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-
-    .stage-details
-      margin-top: 0.5em
-      margin-bottom: 3em
-      position: relative
-      li
-        margin-left: 1.25em
-        margin-bottom: 0.75em
-        &::before
-          content: "¬"
-          position: absolute
-          left: 0
+    li
+      margin-left: 1.25em
+      margin-bottom: 0.75em
+      &::before
+        content: "¬"
+        position: absolute
+        left: 0
 
 </style>
