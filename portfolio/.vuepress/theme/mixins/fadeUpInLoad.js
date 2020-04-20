@@ -28,6 +28,7 @@ export const fadeUpInLoad = {
     const node = entries[0]
     if (node.isIntersecting) {
         this.intersected = true
+        this.$store.dispatch('incrementFadeCount')
         this.observer.disconnect()
 
         if (this.pageLoadingStatus === 'finished') {

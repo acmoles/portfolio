@@ -1,30 +1,15 @@
 <template>
   <div
     class="navbar-item has-dropdown search-dropdown"
-    :class="[open ? 'is-active' : null, ]"
+    :class="[focused ? 'hide-icon' : null, showSuggestions ? 'is-active' : null]"
     aria-label="dropdown navigation"
   >
-    <div class="navbar-link is-arrowless">
-      <i
-        class="icon"
-        @click="setOpen(!open)"
-        aria-label="Search dropdown"
-        role="button"
-        aria-haspopup="true"
-        aria-controls="dropdown-menu"
-      >
-        <MediumSearchIcon/>
-      </i>
-    </div>
-
-    <div
-      class="navbar-dropdown is-boxed search-box"
-      role="combobox"
-      @mouseleave="unfocus"
-    >
+    <div class="navbar-link is-arrowless search-box">
       <input
         @input="query = $event.target.value"
         aria-label="Search"
+        aria-haspopup="true"
+        aria-controls="dropdown-menu"
         :value="query"
         :class="{ 'focused': focused }"
         placeholder="Search headings"
@@ -37,9 +22,21 @@
         @keyup.down="onDown"
         ref="input"
       >
+      <i
+        class="icon"
+        @mousedown="go(focusIndex)"
+      >
+        <SmallSearchIcon/>
+      </i>
+    </div>
+
+    <div
+      class="navbar-dropdown is-boxed search-results"
+      role="combobox"
+      @mouseleave="unfocus"
+    >
       <ul
         class="suggestions"
-        v-if="showSuggestions"
       >
         <li
           class="suggestion dropdown-item"
@@ -60,11 +57,14 @@
 </template>
 
 <script>
-import MediumSearchIcon from '@theme/components/icons/MediumSearchIcon.vue'
+import SmallSearchIcon from '@theme/components/icons/SmallSearchIcon.vue'
+
+// Use vue transition rather than Bulma dropdown
+// :class="[showSuggestions ? 'is-active' : null, ]"
 
 export default {
 
-  components: { MediumSearchIcon },
+  components: { SmallSearchIcon },
 
   data () {
     return {
@@ -72,7 +72,7 @@ export default {
       query: '',
       focused: false,
       focusIndex: 0,
-      searchMaxSuggestions: 10,
+      searchMaxSuggestions: 5,
       searchPaths: null,
       searchHotkeys: ['s', '/'],
     }
@@ -90,16 +90,12 @@ export default {
   computed: {
 
     showSuggestions () {
-      // return true
+      return true
       // return (
       //   this.focused
       //   && this.suggestions
       //   && this.suggestions.length
       // )
-      return (
-        this.suggestions
-        && this.suggestions.length
-      )
     },
 
     suggestions () {
@@ -150,26 +146,6 @@ export default {
   },
 
   methods: {
-
-    setOpen (value) {
-      this.open = value
-
-      if (value && typeof value === 'boolean') {
-        this.$refs.input.focus()
-        setTimeout(() => {
-          document.getElementById('app').addEventListener('click', this.handleDismiss, false)
-        }, 250)
-      } else {
-        this.open = false
-        document.getElementById('app').removeEventListener('click', this.handleDismiss, false)
-      }
-    },
-
-    handleDismiss () {
-      if (!this.focused) {
-        this.setOpen()
-      }
-    },
 
     getPageLocalePath (page) {
       for (const localePath in this.$site.locales || {}) {
@@ -244,77 +220,70 @@ export default {
 @import "../../styles/variables.sass"
 @import "../../styles/mixins.sass"
 
-.search-dropdown
-  .icon
-    filter: opacity(64%)
-    @include opacity-filter-transition
+.navbar-start
+  padding-left: 1.25em
+
+.search-dropdown.hide-icon .icon
+  filter: opacity(0%)
 
 .search-box
   width: 20em
-  left: auto
-  padding: 0
-  right: 0
   input
     color: $button-custom-text-color
     text-rendering: geometricPrecision
     background-color: transparent
     cursor: text
     border: none
-    height: 3.25em
-    display: flex
-    align-items: center
-    padding: 0.375rem 1rem
+    margin-left: 0.25em
     width: 100%
     font-size: 1em
+    padding: 0px
     &::placeholder
-      color: $silver
-      // @include opacity-filter-transition
+      color: $button-custom-text-color
+      @include opacity-filter-transition
     &:focus
       cursor: auto
-    // &:focus::placeholder
-    //   filter: opacity(25%)
-
+    &:focus::placeholder
+      filter: opacity(25%)
+  .icon
+    position: absolute
+    left: -0.75em
+    filter: opacity(64%)
+    @include opacity-filter-transition
 .suggestions
   list-style-type: none
-  padding: 0.5rem 0
-  border-top: 1px solid $black
 .suggestion
-  cursor: pointer
   a
     white-space: normal
-    transition: $button-transition
-    color: $grey-light
+    .page-title
+      color: $white
     .header
-      transition: color 200ms ease
       color: $button-custom-text-color
       margin-left: 0.5em
   &.focused
     background-color: $button-custom-hover-color
     a
-      color: $white
-      .header
-        color: $grey-light
+      color: $blue
 
 @media (max-width: $tablet)
   .search-box
-    cursor: pointer
-    width: 0
-    border-color: transparent
-    position: relative
-    &:focus
-      cursor: text
-      left: 0
-      width: 10rem
+    input
+      cursor: pointer
+      width: 0
+      border-color: transparent
+      position: relative
+      &:focus
+        cursor: text
+        left: 0
+        width: 10rem
+
+  // Redo Bulma dropdown transition
+  .bulma-dropdown-enter-active, .bulma-dropdown-leave-active
+    transition-property: opacity, transform
+    transition-duration: 400ms
 
 
-
-  // TODO or remove? Redo Bulma dropdown transition
-  // .bulma-dropdown-enter-active, .bulma-dropdown-leave-active
-  //   transition-property: opacity, transform
-  //   transition-duration: 400ms
-  //
-  //
-  // .bulma-dropdown-enter, .bulma-dropdown-leave-to
-  //   opacity: 0
-  //   transform: translateY(-5px)
+  .bulma-dropdown-enter, .bulma-dropdown-leave-to
+    opacity: 0
+    transform: translateY(-5px)
 </style>

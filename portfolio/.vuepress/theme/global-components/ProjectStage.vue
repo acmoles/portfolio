@@ -14,12 +14,12 @@
           >
             {{ description }}
           </p>
-          <ProjectExternalLink
-            class="project-cta appear-fade-up"
-            :class="{'in-view': visible}"
-            :label="ctaLabel"
-            :href="ctaUrl"
-          />
+          <div class="project-cta appear-fade-up" :class="{'in-view': visible}">
+            <ProjectExternalLink
+              :label="ctaLabel"
+              :href="ctaUrl"
+            />
+          </div>
         </div>
 
         <div
@@ -88,10 +88,13 @@ export default {
   min-height: calc(100vh / 1.618)
   display: flex
   align-items: center
-  &.light
-    color: $white
   .subtitle
     margin-bottom: 2rem
+  &.light
+    color: $white
+    .subtitle
+      color: $white
+      filter: opacity(70%)
 
 .stage-column
   padding-right: 8em
@@ -103,6 +106,7 @@ export default {
   margin: -4em
   display: flex
   align-items: center
+
 
 html:not(.disable-motion)
   .subtitle

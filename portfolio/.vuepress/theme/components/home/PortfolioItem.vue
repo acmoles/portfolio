@@ -199,12 +199,7 @@ export default {
 @import "../../styles/variables.sass"
 @import "../../styles/mixins.sass"
 
-// TODO make transition delays dependent on which elements have already been seen 
-
-html:not(.disable-motion)
-  @for $i from 1 through 10
-    .grid-item:nth-child(2n + #{$i})
-      transition-delay: 0.1s + ($i * .1s)
+// TODO make transition delays dependent on which elements have already been seen
 
 .project-card
   background-color: $black

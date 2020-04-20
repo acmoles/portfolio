@@ -2,6 +2,7 @@ export default (router, store, siteData) => {
 
   // Page transition hooks
   router.beforeEach((to, from, next) => {
+    // TODO used for debug since vue devtools cause issues with vuepress
     // window.vueState = store.state
 
     if (to.path !== from.path && store.state.revealerInitialised) {
@@ -30,10 +31,13 @@ export default (router, store, siteData) => {
         })
       }
 
+      // TODO still using global page title store?
       store.dispatch('setTitleStatus', {
         title: toPageFrontmatter.title,
         subtitle: toPageFrontmatter.subtitle
       })
+
+      store.dispatch('resetFadeCount')
 
       // Hold up router until covering squence is finished
       // Store for later use in revealer component

@@ -242,10 +242,13 @@ export default {
 
 .light
   .text-site-title
-    span
-      color: $white
-  .navbar-item, .navbar-link
     color: $white
+    filter: opacity(90%)
+  a.navbar-item:not(.dropdown-item), a.navbar-link:not(.dropdown-item)
+    filter: opacity(75%)
+    color: $white
+    &:hover
+      color: $white
   .navbar-link:not(.is-arrowless)::after
     border-color: $white
 
@@ -274,11 +277,8 @@ export default {
 
 .text-site-title
   color: $white-ter
-  left: 2em
-  margin-left: 2.25em
-  span
-    margin-left: 1em
-    color: $button-custom-text-color
+  margin-left: 2.5em
+
 
 
 </style>

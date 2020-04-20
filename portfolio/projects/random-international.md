@@ -1,7 +1,7 @@
 ---
 uid: 8
 title: Random International
-subtitle: Fabricating an artwork
+subtitle: Making an artwork
 type: single
 navStyle:
   style: dark

@@ -46,7 +46,6 @@ export default {
       const availableOffset = 96
       let animationValue = (window.pageYOffset * 0.15) // speed factor
       if (animationValue <= availableOffset && animationValue >= 0) {
-        console.log('animating')
         this.transform = `translate3d(0, ${animationValue}px ,0)`
       }
     },

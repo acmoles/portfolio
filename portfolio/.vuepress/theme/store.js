@@ -37,6 +37,7 @@ export default (Vue) => {
         background: ''
       },
       useLastProject: false,
+      fadeCount: 0
     },
     mutations: {
       SET_SIDEBAR_STATUS (state, status) {
@@ -65,6 +66,12 @@ export default (Vue) => {
       },
       USE_LAST_PROJECT (state, status) {
         state.useLastProject = status
+      },
+      INCREMENT_FADE_COUNT (state, status) {
+        state.fadeCount++
+      },
+      RESET_FADE_COUNT (state, status) {
+        state.fadeCount = 0
       }
     },
     actions: {
@@ -94,7 +101,13 @@ export default (Vue) => {
       },
       useLastProject (context, payload) {
         context.commit('USE_LAST_PROJECT', payload)
-      }
+      },
+      incrementFadeCount (context, payload) {
+        context.commit('INCREMENT_FADE_COUNT')
+      },
+      resetFadeCount (context, payload) {
+        context.commit('RESET_FADE_COUNT')
+      },
     }
   })
 }

@@ -23,8 +23,8 @@ next: ./stompy-robot
   </template>
 </ProjectVisual>
 
-<ProjectStage ctaLabel="wesen.studio" ctaUrl="http://www.wesen.studio"
-description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="false">
+<ProjectStage ctaLabel="www.wesen.studio" ctaUrl="http://www.wesen.studio"
+description="Wesen asks the question; can customers be creators? It enables anyone to create a pendant necklace, which can be manufactured on demand by a blend of traditional and modern techniques." :fadeUpHero="false">
 
 <template v-slot:visual-grid>
   <!-- <figure class="image">

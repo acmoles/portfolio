@@ -5,7 +5,7 @@
     aria-label="dropdown navigation"
   >
     <a
-      class="navbar-link"
+      class="navbar-link is-arrowless"
       role="button"
       :aria-label="dropdownAriaLabel"
       aria-haspopup="true"
@@ -98,9 +98,9 @@ export default {
 
 .navbar-item.has-dropdown
   height: fit-content
-  transition: filter 0.3s ease, transform 0.3s ease
   &.is-active
-    filter: opacity(100%)
+    .navbar-link
+      filter: opacity(50%)
 
 .navbar-link:not(.is-arrowless)::after
     border-width: 2px
@@ -115,5 +115,8 @@ export default {
 .navbar-item.has-dropdown.is-active
     .navbar-link:not(.is-arrowless)::after
       filter: opacity(0%)
+
+.dropdown-item
+  transition: $button-transition
 
 </style>

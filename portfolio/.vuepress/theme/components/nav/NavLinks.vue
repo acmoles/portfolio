@@ -4,9 +4,6 @@
     :class="{ 'is-active': active, 'burgered': burgered }"
     v-if="userLinks.length"
   >
-    <div v-if="isSidebarOpen" class="navbar-start">
-      <Searchbox/>
-    </div>
     <div class="navbar-end">
     <!-- user links -->
       <template
@@ -26,6 +23,7 @@
         />
 
       </template>
+      <Searchbox/>
     </div>
   </nav>
 </template>
@@ -105,7 +103,7 @@ export default {
 
 .navbar-menu
   transition: filter 0.4s ease
-  margin-right: 1.5em
+  margin-right: 2em
   pointer-events: all
 
 .navbar-menu.burgered

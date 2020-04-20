@@ -25,7 +25,7 @@ image:
   </template>
 </ProjectVisual>
 
-<ProjectStage ctaLabel="ecosia.org" ctaUrl="https://www.ecosia.org"
+<ProjectStage ctaLabel="www.ecosia.org" ctaUrl="https://www.ecosia.org"
 description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="false">
 
 <template v-slot:visual-grid>
