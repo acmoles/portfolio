@@ -1,13 +1,11 @@
 <template>
-<button class="button is-dark project-external-link noise-light">{{ label }}
-  <span class="icon">
+  <button class="button is-dark project-external-link noise-light">{{ label }}
     <ExternalIcon/>
-  </span>
-</button>
+  </button>
 </template>
 
 <script>
-
+// TODO thicker icon lines 2px
 import ExternalIcon from '@theme/components/icons/ExternalIcon.vue'
 
 export default {
@@ -35,7 +33,6 @@ export default {
   @import "../styles/mixins.sass"
 
   button.project-external-link.is-dark
-    margin-bottom: 0.5em
     max-width: 16em
     justify-content: space-between
     background-color: $slate
@@ -45,4 +42,6 @@ export default {
     box-shadow: $button-shadow
     &:hover
       background-color: $button-custom-hover-color
+    .icon
+      margin-left: 2.5em
 </style>

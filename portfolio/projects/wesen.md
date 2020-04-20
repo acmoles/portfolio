@@ -64,7 +64,7 @@ CTO, product designer, two full-stack developers
 
 </Content-ContextSection>
 
-<div class="container is-fullhd content">
+<Content-TextSection>
 
 # Project 2
 
@@ -219,4 +219,4 @@ module.exports = (options, ctx) => ({
 
 ### Inner title
 
-</div>
+</Content-TextSection>

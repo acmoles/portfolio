@@ -19,17 +19,48 @@ next: ./project7
 
 ::: slot top
 
-<ProjectStage>
-  <template v-slot:visual>
-    <ImageHero name="toucanbox" src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage" :noise="true"/>
-  </template>
+<ProjectVisual/>
 
-  <template v-slot:description>
-    <p>Here's a description</p>
-  </template>
+<ProjectStage ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com"
+description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="true">
+
+<template v-slot:visual-grid>
+  <figure class="image">
+    <ImageHero name="toucanbox" src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage"/>
+  </figure>
+</template>
+
 </ProjectStage>
 
 :::
+
+<Content-ContextSection :fadeUpHero="true">
+
+<template v-slot:main>
+
+## Context
+
+The rise of affordable 3D printers popularised the notion of mass customisation → . However, relatively high prices and lacklustre product creation experiences left its promises largely unrealised.
+
+At that time I was working on customisable children’s toys at Makielab → . We enjoyed modest success, catching the attention of Disney who eventually bought the company. In this project I resolved to draw on some lessons learnt there.
+
+Foremost, I wanted to explore the possibility of an unrestricted creation experience, able to generate infinite variations while being intuitive and fun to use. I also intended to fully automate and outsource the fulfillment process.
+
+</template>
+
+<template v-slot:side>
+
+**Reading time**
+12 minutes
+
+**Team composition**
+CTO, product designer, two full-stack developers
+
+</template>
+
+</Content-ContextSection>
+
+<Content-TextSection>
 
 # Project 3
 
@@ -181,3 +212,5 @@ module.exports = (options, ctx) => ({
 - [@vuepress/plugin-blog](https://github.com/vuepressjs/vuepress-plugin-blog/blob/master/src/node/index.ts#L208): Using compile-time metadata to generate some dynamic blog-related modules and initialize them on the client-side by using `enhanceAppFiles`.
 
 ### Inner title
+
+</Content-TextSection>

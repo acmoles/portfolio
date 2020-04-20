@@ -59,7 +59,7 @@ import Logo from '@theme/components/icons/Logo.vue'
 import ArrowIcon from '@theme/components/icons/ArrowIcon.vue'
 
 import updateOnScroll from 'uos'
-import debounce from 'lodash.debounce'
+// import debounce from 'lodash.debounce'
 
 import { getScrollTop, getOffsetY, getViewport } from '../../util'
 
@@ -84,7 +84,9 @@ export default {
 
       this.windowHeight = getViewport('y') // SSR
       updateOnScroll(0, 1, progress => {
-        this.handleScroll( progress )
+        window.requestAnimationFrame(() => {
+          this.handleScroll( progress )
+        })
       })
 
     })

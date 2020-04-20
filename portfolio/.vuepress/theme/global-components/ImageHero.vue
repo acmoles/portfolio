@@ -1,5 +1,5 @@
 <template>
-    <img :ref="name" :src="src" :alt="alt">
+    <img :ref="name" :src="src" :alt="alt" :class="{'noise-light': noise}">
 </template>
 
 <script>
@@ -17,7 +17,8 @@ export default {
   props: {
     name: String,
     src: String,
-    alt: String
+    alt: String,
+    noise: Boolean
   },
 
   computed: {

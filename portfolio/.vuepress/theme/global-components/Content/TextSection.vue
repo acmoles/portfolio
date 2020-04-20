@@ -3,7 +3,7 @@
     <div class="container is-fullhd content">
       <div class="columns">
 
-        <div class="column is-two-thirds">
+        <div class="column is-two-thirds text-column">
           <slot></slot>
         </div>
 
@@ -29,5 +29,6 @@ export default {
   @import "../../styles/variables.sass"
   @import "../../styles/mixins.sass"
 
-
+  .text-column
+    padding-right: 6em
 </style>

@@ -102,6 +102,8 @@ export default {
     }
   },
 
+  // TODO could optimise https://codepen.io/andymerskin/pen/XNMWvQ OR https://aminerman.com/playground/vuejs-mouse-parallax/
+
   methods: {
       emitBoundingRect(event) {
         this.mouseLeave(event)
@@ -197,6 +199,8 @@ export default {
 @import "../../styles/variables.sass"
 @import "../../styles/mixins.sass"
 
+// TODO make transition delays dependent on which elements have already been seen 
+
 html:not(.disable-motion)
   @for $i from 1 through 10
     .grid-item:nth-child(2n + #{$i})
@@ -210,6 +214,7 @@ html:not(.disable-motion)
     border-radius: $radius
     padding: 2rem 4rem 2rem 2rem
     position: relative
+    box-shadow: $element-shadow
   &.orange
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($orange, 0.56)
@@ -257,14 +262,6 @@ html:not(.disable-motion)
     background-color: $slate
     &.project-panel::after
       content: none
-
-.revealer.project-card
-  &.orange
-    background-image: $gradientMid
-
-.stage.project-card
-  &.orange
-    background-image: $gradientMid
 
 
 .grid-item .project-card::after

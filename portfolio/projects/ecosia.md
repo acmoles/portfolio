@@ -17,23 +17,25 @@ image:
 
 
 ::: slot top
-<ProjectStage>
 
-  <template v-slot:description>
-    <h1>Ecosia</h1>
-    <p class="small-title stage-description">
-      Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables easy customisation of a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.
-    </p>
-    <a href="#" class="stage-link">ecosia.org</a>
+<ProjectVisual>
+  <template v-slot:visual-background>
+    <!-- <ImageHero name="ecosia" src="/images/ecosia/Refining.png" alt="Ecosia mobile devices" :noise="true"/> -->
+    <VideoHero name="ecosia" src="/images/ecosia/Refining.png" alt="Ecosia mobile devices" :noise="true"/>
   </template>
+</ProjectVisual>
 
-  <template v-slot:visual>
-    <ImageHero name="ecosia" src="/images/ecosia/Refining.png" alt="Ecosia mobile devices" :noise="false"/>
-  </template>
+<ProjectStage ctaLabel="ecosia.org" ctaUrl="https://www.ecosia.org"
+description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="false">
 
-  <template v-slot:descriptionDetails>
-  </template>
+<template v-slot:visual-grid>
+  <!-- <figure class="image">
+    <ImageHero name="toucanbox" src="/images/toucanbox/combined_onboarding.png" alt="toucanBox"/>
+  </figure> -->
+</template>
+
 </ProjectStage>
+
 :::
 
 

@@ -1,27 +1,34 @@
 <template>
 
-  <div class="stage" :class="lightClass" :style="{ paddingTop: paddingTop, paddingBottom: paddingTop }">
+  <div class="stage" :class="lightClass" :style="{ paddingTop: paddingTop, paddingBottom: paddingBottom }">
     <div ref="container" class="container is-fullhd">
 
       <div class="columns">
         <div
-          class="column stage-description-column appear-fade-up"
-          :class="{'in-view': visible}"
+          class="column stage-column is-two-thirds"
+          :class="{'hero-grid': fadeUpHero}"
         >
-          <p class="subtitle appear-fade-up" :class="{'in-view': visible}">
+          <p
+            class="subtitle appear-fade-up"
+            :class="{'in-view': visible}"
+          >
             {{ description }}
           </p>
-          <ProjectExternalLink :label="ctaLabel" :href="ctaUrl"/>
+          <ProjectExternalLink
+            class="project-cta appear-fade-up"
+            :class="{'in-view': visible}"
+            :label="ctaLabel"
+            :href="ctaUrl"
+          />
         </div>
 
-        <div class="column stage-details-column">
-          <div
-            class="visual-grid"
-            :class="[{'in-view': (visible && fadeUpHero)}, {'appear-fade-up': fadeUpHero}]"
-          >
-            <slot name="visual-grid"></slot>
-          </div>
+        <div
+          class="column visual-grid"
+          :class="[{'in-view': (visible && fadeUpHero)}, {'appear-fade-up': fadeUpHero}]"
+        >
+          <slot name="visual-grid"></slot>
         </div>
+
       </div>
 
     </div>
@@ -34,6 +41,9 @@ import ProjectExternalLink from '@theme/global-components/ProjectExternalLink.vu
 
 import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
 import { topPadding } from '@theme/mixins/topPadding.js'
+
+// :class="{'is-two-thirds': !istoucanBox}"
+
 
 export default {
   components: { ProjectExternalLink },
@@ -58,9 +68,12 @@ export default {
       return {
         'light': this.lightDark === 'light'
       }
+    },
+
+    istoucanBox () {
+      // TODO want this?
+      return this.$page.frontmatter.title === 'toucanBox'
     }
-
-
   }
 
 }
@@ -77,31 +90,28 @@ export default {
   align-items: center
   &.light
     color: $white
+  .subtitle
+    margin-bottom: 2rem
 
-  .stage-description
-    text-rendering: geometricPrecision
-    padding-right: 3em
+.stage-column
+  padding-right: 8em
+  &.hero-grid
+    padding-right: 10em
 
-  // TODO want this?
-  // .stage-description-column
-  //   margin-left: 1.75em
+.visual-grid
+  padding: 0
+  margin: -4em
+  display: flex
+  align-items: center
 
+html:not(.disable-motion)
+  .subtitle
+    transition-delay: $base-project-delay
 
-  .stage-details-column
-    display: flex
-    flex-direction: column
-    justify-content: space-between
+  .project-cta
+    transition-delay: $base-project-delay + 0.2s
 
-  .stage-details
-    margin-top: 0.5em
-    margin-bottom: 3em
-    position: relative
-    li
-      margin-left: 1.25em
-      margin-bottom: 0.75em
-      &::before
-        content: "¬"
-        position: absolute
-        left: 0
+  .visual-grid
+    transition-delay: $base-project-delay + 0.4s
 
 </style>
