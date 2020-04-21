@@ -25,7 +25,7 @@
 
       <div :ref="'caption' + uid" class="item-caption">
         <p class="small-title">{{ title }}</p>
-        <h2 v-if="subtitle">{{ subtitle }}</h2>
+        <h2 class="item-title" v-if="subtitle">{{ subtitle }}</h2>
 
         <p class="case" v-if="case1">{{ case1 }}</p>
         <!-- <p class="case" v-if="case2">{{ case2 }}</p> -->

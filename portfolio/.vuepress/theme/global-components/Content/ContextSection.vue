@@ -1,16 +1,25 @@
 <template>
   <section
-    class="section context background-noise appear-fade-up"
-    :class="[ {'in-view': visible}, darkClass, {'delay-hero': fadeUpHero} ]"
-    :style="{ paddingTop: paddingBottom, paddingBottom: paddingBottom }"
+    class="section context background-noise"
+    :class="[ {'in-view': visible}, darkClass, {'delay-hero': fadeUpHero}, {'wipe-up': doFade && readyForWipe} ]"
+    :style="{ paddingTop: paddingBottom, paddingBottom: paddingBottom, transform: 'translateY(' + displacement + 'px)' }"
   >
-    <div ref="container" class="container is-fullhd content">
+    <div
+      ref="container"
+      class="container is-fullhd content"
+    >
 
       <div class="columns">
-        <div class="column is-two-thirds text-column">
+        <div
+          class="column is-two-thirds text-column appear-fade-up"
+          :class="[ {'in-view': visible}, {'delay-hero-inner': fadeUpHero} ]"
+          >
           <slot name="main"></slot>
         </div>
-        <div class="column aside">
+        <div
+          class="column aside appear-fade-up"
+          :class="[ {'in-view': visible}, {'delay-hero-inner': fadeUpHero} ]"
+        >
           <slot name="side"></slot>
         </div>
       </div>
@@ -24,12 +33,46 @@
 import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
 import { topPadding } from '@theme/mixins/topPadding.js'
 
+import { getScrollTop, getViewport } from '../../util'
+
 export default {
   name: 'ContextSection',
   mixins: [fadeUpInLoad, topPadding],
 
   props: {
     fadeUpHero: Boolean
+  },
+
+  data () {
+    return {
+      doFade: false,
+      readyForWipe: false,
+      displacement: null
+    }
+  },
+
+  mounted () {
+
+    this.applyPadding()
+
+    if (getScrollTop() === 0) {
+      this.doFade = true
+
+      this.$forceNextTick(() => {
+        this.displacement = getViewport('y') - this.$el.getBoundingClientRect().y
+      })
+    }
+  },
+
+  watch: {
+    pageLoadingStatus (latest, last) {
+      if (latest === 'finished') {
+        this.readyForWipe = true
+        this.$nextTick(() => {
+          this.displacement = 0
+        })
+      }
+    }
   },
 
   computed: {
@@ -54,7 +97,7 @@ export default {
   @import "../../styles/variables.sass"
   @import "../../styles/mixins.sass"
 
-  .section.context
+  .context
     background-color: $black
     position: relative
     &::before
@@ -66,7 +109,7 @@ export default {
       top: -3em
       opacity: 0.08
 
-  .section.context.dark
+  .context.dark
     background-color: $steel
     &::after
       content: ' '
@@ -77,23 +120,52 @@ export default {
       bottom: -6em
       opacity: 0.16
 
-  .section.context
+  .context
     .aside
-      margin-top: 0.5em
-      margin-bottom: 3em
       position: relative
+      &::before
+        content: '#'
+        visibility: hidden
+        font-size: 1.75em
+        margin-bottom: 0.5714em
+        line-height: 1.125
+        display: block
       li
         margin-left: 1.25em
         margin-bottom: 0.75em
         &::before
-          content: "¬"
+          content: '¬'
           position: absolute
           left: 0
 
+
+  // .context-grid
+  //   display: grid
+  //   grid-template-columns: repeat(12, 1fr)
+  //   grid-column-gap: 1em
+  //   width: 100%
+  //   grid-column: span 12/auto
+  //   .context-column
+
+      // type grid inspiration https://www.milieugrotesque.com/info/
+
+
+
   html:not(.disable-motion)
-    .context.appear-fade-up
-      transition-delay: $base-project-delay + 0.4s
-      &.delay-hero
-        transition-delay: $base-project-delay + 0.6s
+    .context.wipe-up
+      transition: transform 1.4s cubic-bezier(0.83, 0, 0.17, 1)
+      // cubic-bezier(.215,.61,.355,1)
+      transition-delay: $base-project-delay
+
+    .context
+      .text-column.appear-fade-up
+        transition-delay: $base-project-delay + 1.4s
+        &.delay-hero-inner
+          transition-delay: $base-project-delay + 1.6s
+      .aside.appear-fade-up
+        transition-delay: $base-project-delay + 1.6s
+        &.delay-hero-inner
+          transition-delay: $base-project-delay + 1.8s
+
 
 </style>

@@ -18,7 +18,9 @@ export const fadeUpInLoad = {
   watch: {
     pageLoadingStatus (latest, last) {
       if (latest === 'finished' && this.intersected) {
-        this.visible = true
+        this.$forceNextTick(() => {
+          this.visible = true
+        })
       }
     }
   },
@@ -32,7 +34,9 @@ export const fadeUpInLoad = {
         this.observer.disconnect()
 
         if (this.pageLoadingStatus === 'finished') {
-          this.visible = true
+          this.$forceNextTick(() => {
+            this.visible = true
+          })
         }
       }
   });

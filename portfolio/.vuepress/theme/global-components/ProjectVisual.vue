@@ -1,6 +1,13 @@
 <template>
-  <div ref="parent" class="visual project-card noise-light" :class="background">
-    <div ref="parallax" class="parallax" :style="{transform: transform}">
+  <div
+    ref="parent"
+    class="visual project-card noise-light"
+    :class="background">
+    <div
+      ref="parallax"
+      class="parallax"
+      :class="{'initial-parallax': readyForInitial}"
+      :style="{transform: transform}">
       <slot name="visual-background"></slot>
     </div>
   </div>
@@ -10,6 +17,7 @@
 
 import updateOnScroll from 'uos'
 // import debounce from 'lodash.debounce'
+import { getScrollTop, getViewport } from '../util'
 
 export default {
 
@@ -17,12 +25,16 @@ export default {
     background () {
       return this.$page.frontmatter.background
     },
+    pageLoadingStatus () {
+      return this.$store.state.pageLoadingStatus
+    },
   },
 
   data () {
     return {
       el: null,
-      transform: ''
+      transform: `translate3d(0, 0 ,0)`,
+      readyForInitial: false,
     }
   },
 
@@ -36,24 +48,41 @@ export default {
         }
       })
     })
+
+    if (getScrollTop() === 0) {
+      this.transform = `translate3d(0, 0, 0) scale3d(1.025, 1.025, 1)`
+    }
+  },
+
+  watch: {
+    pageLoadingStatus (latest, last) {
+      if (latest === 'finished') {
+        this.readyForInitial = true
+        this.$nextTick(() => {
+          this.transform = `translate3d(0, 0, 0) scale3d(1, 1, 1)`
+          setTimeout(() => {
+            this.readyForInitial = false
+            // TODO remove initial
+          }, 1400)
+        })
+      }
+    }
   },
 
   methods: {
     animateElement () {
-      // const parentHeight = this.$refs.parent.offsetHeight
-      // const parallaxHeight = this.$refs.parallax.offsetHeight
-      // const availableOffset = parallaxHeight - parentHeight
       const availableOffset = 96
-      let animationValue = (window.pageYOffset * 0.15) // speed factor
+      let animationValue = (getScrollTop() * 0.15) // speed factor
       if (animationValue <= availableOffset && animationValue >= 0) {
         this.transform = `translate3d(0, ${animationValue}px ,0)`
       }
     },
     isInView (el) {
+      // TODO // OPTIMIZE: with IntersectionObserver
       let rect = el.getBoundingClientRect()
       return (
         rect.bottom >= 0 &&
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+        rect.top <= getViewport('y')
       )
     },
   }
@@ -79,6 +108,9 @@ export default {
       right: 0
       top: 0
       bottom: 0
+      &.initial-parallax
+        transition: transform 1.4s cubic-bezier(0.83, 0, 0.17, 1)
+        transition-delay: $base-project-delay
     img
       object-fit: cover
       max-width: none

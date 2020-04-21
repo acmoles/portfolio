@@ -97,7 +97,7 @@ export default {
       filter: opacity(70%)
 
 .stage-column
-  padding-right: 8em
+  padding-right: 10em
   &.hero-grid
     padding-right: 10em
 
@@ -110,12 +110,12 @@ export default {
 
 html:not(.disable-motion)
   .subtitle
-    transition-delay: $base-project-delay
+    transition-delay: $base-project-delay + 1s
 
   .project-cta
-    transition-delay: $base-project-delay + 0.2s
+    transition-delay: $base-project-delay + 1.2s
 
   .visual-grid
-    transition-delay: $base-project-delay + 0.4s
+    transition-delay: $base-project-delay + 1.4s
 
 </style>

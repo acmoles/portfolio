@@ -14,15 +14,6 @@ export default {
 
   props: {
     label: String
-  },
-
-  computed: {
-  },
-
-  mounted() {
-  },
-
-  methods: {
   }
 }
 
@@ -56,7 +47,7 @@ button.project-external-link.is-dark
       path
         opacity: 1
   .icon
-    margin-left: 0.75em
+    margin-left: 0.25em
 
 .light
   button.project-external-link.is-dark

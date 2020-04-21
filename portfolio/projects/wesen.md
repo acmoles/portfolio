@@ -24,7 +24,7 @@ next: ./stompy-robot
 </ProjectVisual>
 
 <ProjectStage ctaLabel="www.wesen.studio" ctaUrl="http://www.wesen.studio"
-description="Wesen asks the question; can customers be creators? It enables anyone to create a pendant necklace, which can be manufactured on demand by a blend of traditional and modern techniques." :fadeUpHero="false">
+description="Can customers be creators? Wesen enables anyone to create a pendant necklace that can be manufactured on demand by a blend of modern and traditional techniques." :fadeUpHero="false">
 
 <template v-slot:visual-grid>
   <!-- <figure class="image">
@@ -54,11 +54,20 @@ Foremost, I wanted to explore the possibility of an unrestricted creation experi
 
 <template v-slot:side>
 
-**Reading time**
-12 minutes
+**Product**
+Responsive web application
+
+**Sector**
+E-commerce
+
+**Timeframe**
+2018
 
 **Team composition**
-CTO, product designer, two full-stack developers
+Personal project
+
+**Reading time**
+12 minutes
 
 </template>
 

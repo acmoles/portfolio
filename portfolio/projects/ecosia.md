@@ -21,7 +21,7 @@ image:
 <ProjectVisual>
   <template v-slot:visual-background>
     <!-- <ImageHero name="ecosia" src="/images/ecosia/Refining.png" alt="Ecosia mobile devices" :noise="true"/> -->
-    <VideoHero name="ecosia" src="/images/ecosia/Refining.png" alt="Ecosia mobile devices" :noise="true"/>
+    <ImageHero name="ecosia" src="/images/ecosia/ecosia-comp.png" alt="Ecosia mobile devices" :noise="true"/>
   </template>
 </ProjectVisual>
 
