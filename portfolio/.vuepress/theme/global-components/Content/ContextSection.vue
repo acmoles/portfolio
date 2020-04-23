@@ -52,16 +52,13 @@ export default {
   },
 
   mounted () {
-
     this.applyPadding()
-
-    if (getScrollTop() === 0) {
-      this.doFade = true
-
-      this.$forceNextTick(() => {
+    this.$forceNextTick(() => {
+      if (getScrollTop() === 0) {
+        this.doFade = true
         this.displacement = getViewport('y') - this.$el.getBoundingClientRect().y
-      })
-    }
+      }
+    })
   },
 
   watch: {
@@ -153,7 +150,7 @@ export default {
 
   html:not(.disable-motion)
     .context.wipe-up
-      transition: transform 1.4s cubic-bezier(0.83, 0, 0.17, 1)
+      transition: transform 1.4s $projectWipeTransition
       // cubic-bezier(.215,.61,.355,1)
       transition-delay: $base-project-delay
 

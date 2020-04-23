@@ -19,18 +19,18 @@ next: ./project7
 
 ::: slot top
 
-<ProjectVisual/>
+<Stage-ProjectVisual/>
 
-<ProjectStage ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com"
+<Stage-ProjectStage ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com"
 description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="true">
 
 <template v-slot:visual-grid>
   <figure class="image">
-    <ImageHero name="toucanbox" src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage"/>
+    <Heros-ImageHero name="toucanbox" src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage"/>
   </figure>
 </template>
 
-</ProjectStage>
+</Stage-ProjectStage>
 
 :::
 

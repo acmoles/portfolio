@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import ProjectExternalLink from '@theme/global-components/ProjectExternalLink.vue'
+import ProjectExternalLink from '@theme/components/ProjectExternalLink.vue'
 
 import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
 import { topPadding } from '@theme/mixins/topPadding.js'
@@ -81,8 +81,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../styles/variables.sass"
-@import "../styles/mixins.sass"
+@import "../../styles/variables.sass"
+@import "../../styles/mixins.sass"
 
 .stage
   min-height: calc(100vh / 1.618)

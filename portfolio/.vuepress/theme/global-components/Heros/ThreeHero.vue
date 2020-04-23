@@ -4,7 +4,7 @@
 
 <script>
 
-import { loadableHero } from '../mixins/loadableHero.js'
+import { loadableHero } from '../../mixins/loadableHero.js'
 // import { ThreeComposition } from '../application/three/threeComposition.js'
 
 export default {
@@ -22,7 +22,7 @@ export default {
 
   mounted() {
 
-    import('../application/three/threeComposition.js').then(module => {
+    import('../../application/three/threeComposition.js').then(module => {
       this.threeComposition = new module.ThreeComposition(this.$refs.presentation)
 
       this.threeComposition.addEventListener('comp-loaded', () => {
@@ -43,8 +43,8 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../styles/variables.sass"
-  @import "../styles/mixins.sass"
+  @import "../../styles/variables.sass"
+  @import "../../styles/mixins.sass"
 
   .presentation
     height: 100%

@@ -17,13 +17,13 @@ next: ./stompy-robot
 ---
 
 ::: slot top
-<ProjectVisual>
+<Stage-ProjectVisual>
   <template v-slot:visual-background>
-    <ImageHero name="wesen" src="/images/wesen/wesen-grid-render.jpg" alt="Wesen Studio examples" :noise="true"/>
+    <Heros-ImageHero name="wesen" src="/images/wesen/wesen-grid-render.jpg" alt="Wesen Studio examples" :noise="true"/>
   </template>
-</ProjectVisual>
+</Stage-ProjectVisual>
 
-<ProjectStage ctaLabel="www.wesen.studio" ctaUrl="http://www.wesen.studio"
+<Stage-ProjectStage ctaLabel="www.wesen.studio" ctaUrl="http://www.wesen.studio"
 description="Can customers be creators? Wesen enables anyone to create a pendant necklace that can be manufactured on demand by a blend of modern and traditional techniques." :fadeUpHero="false">
 
 <template v-slot:visual-grid>
@@ -32,7 +32,7 @@ description="Can customers be creators? Wesen enables anyone to create a pendant
   </figure> -->
 </template>
 
-</ProjectStage>
+</Stage-ProjectStage>
 :::
 
 <!-- <li>Responsive web application</li>

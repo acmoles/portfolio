@@ -16,13 +16,13 @@ next: ./toucan-research
 
 ::: slot top
 
-<ProjectVisual>
+<Stage-ProjectVisual>
   <template v-slot:visual-background>
-    <VideoHero name="ecosia" src="/images/ecosia/Refining.png" alt="Ecosia mobile devices" :noise="true"/>
+    <Heros-VideoHero name="ecosia" src="/images/ecosia/Refining.png" alt="Ecosia mobile devices" :noise="true"/>
   </template>
-</ProjectVisual>
+</Stage-ProjectVisual>
 
-<ProjectStage ctaLabel="blkbrd.com" ctaUrl="#"
+<Stage-ProjectStage ctaLabel="blkbrd.com" ctaUrl="#"
 description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="false">
 
 <template v-slot:visual-grid>
@@ -31,7 +31,7 @@ description="Wesen is an experiment in turning customers into creators and build
   </figure> -->
 </template>
 
-</ProjectStage>
+</Stage-ProjectStage>
 :::
 
 <Content-ContextSection>

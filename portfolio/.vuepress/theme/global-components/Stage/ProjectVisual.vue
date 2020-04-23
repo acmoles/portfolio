@@ -17,7 +17,7 @@
 
 import updateOnScroll from 'uos'
 // import debounce from 'lodash.debounce'
-import { getScrollTop, getViewport } from '../util'
+import { getScrollTop, getViewport } from '../../util'
 
 export default {
 
@@ -43,15 +43,18 @@ export default {
 
     updateOnScroll(0, 1, progress => {
       window.requestAnimationFrame(() => {
-        if (this.isInView(this.el)) {
+        if (this.isInView(this.el) && !this.readyForInitial) {
           this.animateElement()
         }
       })
     })
 
-    if (getScrollTop() === 0) {
-      this.transform = `translate3d(0, 0, 0) scale3d(1.025, 1.025, 1)`
-    }
+    this.$forceNextTick(() => {
+      if (getScrollTop() === 0) {
+        this.transform = `translate3d(0, 0, 0) scale3d(1.025, 1.025, 1)`
+      }
+    })
+
   },
 
   watch: {
@@ -63,7 +66,7 @@ export default {
           setTimeout(() => {
             this.readyForInitial = false
             // TODO remove initial
-          }, 1400)
+          }, 1900)
         })
       }
     }
@@ -71,9 +74,8 @@ export default {
 
   methods: {
     animateElement () {
-      const availableOffset = 96
-      let animationValue = (getScrollTop() * 0.15) // speed factor
-      if (animationValue <= availableOffset && animationValue >= 0) {
+      let animationValue = (getScrollTop() * 0.2) // speed factor
+      if (animationValue >= 0) {
         this.transform = `translate3d(0, ${animationValue}px ,0)`
       }
     },
@@ -93,8 +95,8 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../styles/variables.sass"
-  @import "../styles/mixins.sass"
+  @import "../../styles/variables.sass"
+  @import "../../styles/mixins.sass"
 
   .visual.project-card
     height: 100vh
@@ -109,7 +111,7 @@ export default {
       top: 0
       bottom: 0
       &.initial-parallax
-        transition: transform 1.4s cubic-bezier(0.83, 0, 0.17, 1)
+        transition: transform 1.8s $projectWipeTransition
         transition-delay: $base-project-delay
     img
       object-fit: cover
