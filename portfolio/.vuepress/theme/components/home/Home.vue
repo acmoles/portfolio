@@ -1,8 +1,8 @@
 <template>
   <div ref="container" class="container is-fullhd is-home">
-    <picture class="test-background noise-heavy">
+    <!-- <picture class="test-background noise-heavy">
       <img src="/images/homepage/background-xl.png" alt="">
-    </picture>
+    </picture> -->
     <!-- <div v-for="n in 5" :class="'test-blur test-blur-' + n"></div> -->
     <HomeIntroQuote/>
 
@@ -71,7 +71,6 @@ export default {
       return this.$store.state.fadeCount
     },
     rowClass () {
-      console.log(this.rowNumber)
       switch (true) {
         case this.rowNumber <= 3:
           return 'row-1'

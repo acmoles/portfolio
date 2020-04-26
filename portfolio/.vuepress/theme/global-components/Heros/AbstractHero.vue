@@ -1,7 +1,5 @@
 <template>
-<div class="abstract-background">
-  <canvas id="canvas" width="300" height="300"></canvas>
-</div>
+  <div ref="presentation" class="presentation noise-light"></div>
 </template>
 
 <script>
@@ -12,13 +10,15 @@ export default {
 
   // https://codepen.io/alexkulagin/pen/zPEvQY
   // https://codepen.io/alexandrejosephdev/pen/Rpveye
+
+  // grid dots interactive
   // https://codepen.io/heyitsolivia/pen/mNEPbx
 
   mixins: [loadableHero],
 
   data () {
     return {
-      title: 'Video'
+      abstract: null
     }
   },
 
@@ -26,11 +26,23 @@ export default {
   },
 
   mounted() {
-    this.doLoad()
+    import('../../application/abstract/abstract.js').then(module => {
+      this.abstract = new module.Abstract(this.$refs.presentation)
+
+      this.abstract.addEventListener('abstract-loaded', () => {
+        console.log('abstract scene ready')
+        this.doLoad()
+      })
+
+      this.abstract.init()
+    })
   },
 
-  methods: {
-  }
+  destroyed() {
+    this.abstract.destroy()
+    console.log('destroyed')
+  },
+
 }
 
 </script>

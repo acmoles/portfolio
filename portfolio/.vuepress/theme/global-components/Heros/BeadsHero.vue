@@ -70,7 +70,7 @@ $colors: #583C87, #E45A84, #FFACAC
     @for $i from 1 through $amount
       &:nth-child(#{$i})
         $heightModifier: (random() + 0.5) * 0.8
-        $widthModifier: (random() + 0.5) * 0.8
+        $widthModifier: (random() + 0.5) * 2
         width: $particleWidth * $widthModifier
         height: $particleHeight * $heightModifier
         top: (random(75) - 10) * 1%
@@ -79,7 +79,7 @@ $colors: #583C87, #E45A84, #FFACAC
         $backgroundImage: if(random() > 0.5, '/images/makielab/bead-sag.svg', '/images/makielab/bead.svg')
         background: url($backgroundImage)
         background-size: $particleWidth * $widthModifier $particleHeight * $heightModifier
-        opacity: random(32) * 0.01 + 0.02
+        opacity: random(42) * 0.01 + 0.05
         animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s
         animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s
         // color: nth($colors, random(length($colors)))

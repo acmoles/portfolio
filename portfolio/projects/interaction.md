@@ -1,7 +1,7 @@
 ---
 uid: 3
-title: blkbrd
-subtitle: Envisioning messages with location
+title: Experiments
+subtitle: Envisioning new interactions
 type: single
 navStyle:
   style: light
@@ -18,11 +18,11 @@ next: ./toucan-research
 
 <Stage-ProjectVisual>
   <template v-slot:visual-background>
-    <Heros-VideoHero name="ecosia" src="/images/ecosia/Refining.png" alt="Ecosia mobile devices" :noise="true"/>
+    <Heros-AbstractHero :noise="false"/>
   </template>
 </Stage-ProjectVisual>
 
-<Stage-ProjectStage ctaLabel="blkbrd.com" ctaUrl="#"
+<Stage-ProjectStage ctaLabel="none" ctaUrl="#"
 description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="false">
 
 <template v-slot:visual-grid>

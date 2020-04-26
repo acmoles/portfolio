@@ -1,8 +1,8 @@
 <template>
   <div
     ref="parent"
-    class="visual project-card noise-light"
-    :class="background">
+    class="visual project-card"
+    :class="[background, {'noise-light': noise}]">
     <div
       ref="parallax"
       class="parallax"
@@ -20,6 +20,10 @@ import updateOnScroll from 'uos'
 import { getScrollTop, getViewport } from '../../util'
 
 export default {
+
+  props: {
+    noise: Boolean
+  },
 
   computed: {
     background () {
@@ -112,9 +116,10 @@ export default {
       bottom: 0
       &.initial-parallax
         transition: transform 1.8s $projectWipeTransition
-        transition-delay: $base-project-delay
+        transition-delay: $base-project-delay - 0.1s
     img
       object-fit: cover
+      width: 100%
       max-width: none
       height: 100%
       // top: 0px

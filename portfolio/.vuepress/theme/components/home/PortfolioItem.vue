@@ -37,6 +37,8 @@
 
 <script>
 
+// TODO multi resolution card images (and high resolution for landscape format)
+
 import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
 
 export default {
