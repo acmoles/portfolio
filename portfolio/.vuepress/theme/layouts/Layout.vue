@@ -99,7 +99,7 @@ export default {
   .page-content
     overflow: hidden
 
-.layout
+.layout.home
   position: relative
   &::after
     @include cover-screen
@@ -111,7 +111,7 @@ export default {
     filter: opacity(0%)
     pointer-events: none
 
-.layout.covering, .layout.loading
+.layout.home.covering, .layout.home.loading
   &::after
     filter: opacity(100%)
 

@@ -1,7 +1,7 @@
 <template>
   <section
     class="section context background-noise"
-    :class="[ {'in-view': visible}, darkClass, {'delay-hero': fadeUpHero}, {'wipe-up': doFade && readyForWipe} ]"
+    :class="[ {'in-view': visible}, darkClass, lightClass, {'delay-hero': fadeUpHero}, {'wipe-up': doFade && readyForWipe} ]"
     :style="{ paddingTop: paddingBottom, paddingBottom: paddingBottom, transform: 'translateY(' + displacement + 'px)' }"
   >
     <div
@@ -40,7 +40,8 @@ export default {
   mixins: [fadeUpInLoad, topPadding],
 
   props: {
-    fadeUpHero: Boolean
+    fadeUpHero: Boolean,
+    lightClass: String
   },
 
   data () {
@@ -123,7 +124,7 @@ export default {
       &::before
         content: '#'
         visibility: hidden
-        font-size: 1.75em
+        font-size: 2em
         margin-bottom: 0.5714em
         line-height: 1.125
         display: block

@@ -1,21 +1,25 @@
 <template>
-  <div class="page-nav container is-fullhd" v-if="prev || next">
-    <p class="inner">
-      <span v-if="prev" class="prev">
-        ←
-        <router-link v-if="prev" class="prev" :to="prev.path">{{ prev.title || prev.path }}</router-link>
-      </span>
+  <section v-if="next" class="page-nav project-card noise-light" :class="next.frontmatter.background || 'dark'">
 
-      <span v-if="next" class="next">
-        <router-link v-if="next" :to="next.path">{{ next.title || next.path }}</router-link>→
-      </span>
-    </p>
-  </div>
+        <div class="container is-fullhd content" v-if="prev || next">
+          <router-link :to="next.path">
+            <p class="small-title">Next project</p>
+            <h1>{{ next.title || next.path }}</h1>
+          </router-link>
+        </div>
+
+  </section>
 </template>
+
 <script>
 import isString from 'lodash/isString'
 import isNil from 'lodash/isNil'
 import { resolvePage } from '../../util'
+
+// <span v-if="prev" class="prev">
+//   ←
+//   <router-link v-if="prev" class="prev" :to="prev.path">{{ prev.title || prev.path }}</router-link>
+// </span>
 
 export default {
   name: 'PageNav',
@@ -26,6 +30,10 @@ export default {
 
     next () {
       return resolvePageLink(LINK_TYPES.NEXT, this)
+    },
+
+    background () {
+      return this.$page.frontmatter.background
     }
   }
 }
@@ -64,16 +72,10 @@ function resolvePageLink (
 @import "../../styles/mixins.sass"
 
 .page-nav
-  padding: 18em 2em
+  height: 100vh
+  display: flex
+  align-items: center
+  .project-card
 
-  .inner
-    font-size: 36px
-    width: 100%
-    min-height: 2rem
-    display: flex
-    justify-content: space-between
-
-  .next
-    float: right
 
 </style>

@@ -1,19 +1,28 @@
 <template>
-  <section class="section">
+  <section class="section" :class="padding">
     <div class="container is-fullhd content project-section">
-      <div class="columns is-multiline">
 
+      <div v-if="content" class="columns">
+        <div class="column is-two-thirds content">
+          <slot name="content"></slot>
+          <br>
+        </div>
+      </div>
+
+      <div class="columns is-multiline">
         <div
         v-for="(p, i) in points"
         class="column is-one-third point"
         >
 
           <i class="icon is-large point-icon"><ExternalIcon/></i>
-          <p class="point-description">{{ p.description }}</p>
-
+          <slot v-if="p.slot" :name="p.slot"></slot>
+          <template v-else>
+            <p>{{ p.description }}</p>
+          </template>
         </div>
-
       </div>
+
     </div>
   </section>
 </template>
@@ -27,17 +36,12 @@ export default {
   components: { ExternalIcon },
 
   props: {
-    points: Array
+    points: Array,
+    padding: String,
+    content: Boolean
   },
 
-  computed: {
-  },
 
-  mounted() {
-  },
-
-  methods: {
-  }
 }
 
 </script>

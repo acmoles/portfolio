@@ -1,11 +1,12 @@
 <template>
-  <img :src="srcImage" />
+  <iframe v-if="iframe" ref="loadIframe" class="lazyload" :class="{'lazyloaded': loaded}" :src="srcImage" :width="x" :height="y" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <img v-else ref="loadImage" class="lazyload" :class="{'lazyloaded': loaded}" :src="srcImage" :alt="alt" loading="lazy" :width="x" :height="y"/>
 </template>
 
 <script>
 export default {
-  props: ['src'],
-  data: () => ({ observer: null, intersected: false }),
+  props: ['src', 'alt', 'iframe', 'x', 'y'],
+  data: () => ({ observer: null, intersected: false, loaded: false }),
   computed: {
     srcImage() {
       return this.intersected ? this.src : '';
@@ -13,11 +14,15 @@ export default {
   },
   mounted() {
     this.observer = new IntersectionObserver(entries => {
+      this.load(this.iframe);
+
       const image = entries[0];
       if (image.isIntersecting) {
-        // TODO add fade-in animation class 
         this.intersected = true;
         this.observer.disconnect();
+        if (this.iframe) {
+          console.log('observed iframe');
+        }
       }
     });
 
@@ -25,6 +30,21 @@ export default {
   },
   destroyed() {
     this.observer.disconnect();
+  },
+  methods: {
+    load(iframe) {
+      let name;
+      if (iframe) {
+        name = 'loadIframe';
+      } else {
+        name = 'loadImage';
+      }
+      this.$refs[name].onload = () => {
+        this.loaded = true;
+        console.log('loaded ', name);
+      };
+      this.$refs[name].onerror = (err) => {console.error(err)}
+    }
   }
 }
 </script>

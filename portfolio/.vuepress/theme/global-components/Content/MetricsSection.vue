@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section" :class="padding">
     <div class="container is-fullhd content project-section">
       <div class="columns">
 
@@ -21,17 +21,10 @@
 export default {
 
   props: {
-    metrics: Array
-  },
-
-  computed: {
-  },
-
-  mounted() {
-  },
-
-  methods: {
+    metrics: Array,
+    padding: String
   }
+
 }
 
 </script>

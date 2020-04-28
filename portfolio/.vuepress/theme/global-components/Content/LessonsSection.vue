@@ -12,15 +12,10 @@
         <div class="columns">
 
           <div class="column is-two-thirds">
-            <figure class="image is-16by9 zoom-wrapper">
-              <LazyImage :src="url" :alt="alt" :iframe="false" x="1920" y="1080"/>
-            </figure>
-            <figcaption v-if="!aside">
-              {{ caption }}
-            </figcaption>
+            <slot></slot>
           </div>
 
-          <div v-if="aside" class="column content">
+          <div v-if="aside" class="column table-spacer">
             <slot name="aside"></slot>
           </div>
 
@@ -31,16 +26,10 @@
 </template>
 
 <script>
-import LazyImage from '@theme/global-components/content/Lazyimage.vue'
 
 export default {
 
-  components: { LazyImage },
-
   props: {
-    url: String,
-    alt: String,
-    caption: String,
     content: Boolean,
     aside: Boolean,
     padding: String,
@@ -51,8 +40,16 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../../../styles/variables.sass"
-  @import "../../../styles/mixins.sass"
+  @import "../../styles/variables.sass"
+  @import "../../styles/mixins.sass"
 
+  .table-spacer
+    position: relative
+    &::before
+      content: '#'
+      visibility: hidden
+      font-size: 1.25em
+      padding: $table-cell-padding
+      display: block
 
 </style>

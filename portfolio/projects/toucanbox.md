@@ -117,6 +117,43 @@ Test paragraph
 * [Documentation](https://vuepress-theme-blog.ulivz.com/)
 * [Live Example](https://ulivz.com/)
 
+</Content-TextSection>
+
+
+<Content-ImageFrames-SquareImagesRow :images="[
+{ url:'https://bulma.io/images/placeholders/256x256.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1' },
+{ url:'https://bulma.io/images/placeholders/256x256.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2' },
+{ url:'https://bulma.io/images/placeholders/256x256.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3' },
+]">
+
+<template slot="slot1">
+
+**Reading time**
+12 minutes
+
+</template>
+
+<template slot="slot2">
+
+**Team composition**
+CTO, product designer, two full-stack developers
+
+</template>
+
+<template slot="slot3">
+
+**My role**
+Designer
+
+</template>
+
+</Content-ImageFrames-SquareImagesRow>
+
+
+
+
+
+<Content-TextSection>
 
 **Plugin**
 

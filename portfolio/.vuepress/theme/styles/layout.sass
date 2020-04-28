@@ -1,0 +1,31 @@
+@import 'variables'
+@import 'mixins'
+
+.container
+  width: 100%
+  padding: 0 1em
+  position: static
+  @media screen and (min-width: $desktop)
+    padding: 0 $gap
+  @media screen and (min-width: $largeformat)
+    padding: 0
+
+section
+  position: relative
+
+.section.neg-top
+  margin-top: -5em
+
+.section.neg-bottom
+  margin-bottom: -5em
+
+.section
+  figure
+    background-color: rgba($pitch, 0.2)
+
+.content figure
+  margin-left: 0
+  margin-right: 0
+
+figcaption
+  margin-top: 2em

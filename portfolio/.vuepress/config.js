@@ -50,6 +50,7 @@ module.exports = {
   markdown: {
     extendMarkdown: md => {
       md.use(require('markdown-it-attrs'))
+      md.use(require('markdown-it-deflist'))
     }
   }
 }

@@ -1,33 +1,27 @@
 <template>
-  <section class="section">
-    <div class="container is-fullhd">
-      <div class="notification">
-        <h2>Section divider</h2>
-      </div>
+  <section class="section is-large project-card noise-light" :class="[background]">
+    <div class="container is-fullhd content">
+      <p class="small-title">{{ aside }}</p>
+      <h1>{{ title }}</h1>
     </div>
   </section>
 </template>
 
 <script>
 
-import ExternalIcon from '@theme/components/icons/ExternalIcon.vue'
-
 export default {
 
-  components: { ExternalIcon },
-
   props: {
-    label: String
+    aside: String,
+    title: String,
   },
 
   computed: {
-  },
-
-  mounted() {
-  },
-
-  methods: {
+    background () {
+      return this.$page.frontmatter.background
+    },
   }
+
 }
 
 </script>
@@ -35,6 +29,9 @@ export default {
 <style lang="sass">
   @import "../../styles/variables.sass"
   @import "../../styles/mixins.sass"
+
+  .project-card .content h1
+    margin-top: 0
 
 
 </style>

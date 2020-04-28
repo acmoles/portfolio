@@ -1,14 +1,26 @@
 <template>
   <section class="section" :class="padding">
     <div class="container is-fullhd content">
+
+      <div v-if="content" class="columns">
+        <div class="column is-two-thirds">
+          <slot name="content"></slot>
+          <br>
+        </div>
+      </div>
+
       <div class="columns">
 
-        <div class="column is-two-thirds text-column">
-          <slot></slot>
+        <div class="column">
+          <slot name="column1"></slot>
         </div>
 
         <div class="column">
-          <slot name="aside"></slot>
+          <slot name="column2"></slot>
+        </div>
+
+        <div class="column">
+          <slot name="column3"></slot>
         </div>
 
       </div>
@@ -22,7 +34,8 @@
 export default {
 
   props: {
-    padding: String
+    content: Boolean,
+    padding: String,
   },
 
 }
@@ -33,6 +46,4 @@ export default {
   @import "../../styles/variables.sass"
   @import "../../styles/mixins.sass"
 
-  .text-column
-    padding-right: 6em
 </style>
