@@ -15,7 +15,7 @@
         class="column is-one-third point"
         >
 
-          <i class="icon is-large point-icon"><ExternalIcon/></i>
+          <i class="icon is-large point-icon"><img :src="p.src" :alt="p.alt"/></i>
           <slot v-if="p.slot" :name="p.slot"></slot>
           <template v-else>
             <p>{{ p.description }}</p>
@@ -29,11 +29,7 @@
 
 <script>
 
-import ExternalIcon from '@theme/components/icons/ExternalIcon.vue'
-
 export default {
-
-  components: { ExternalIcon },
 
   props: {
     points: Array,
@@ -51,7 +47,7 @@ export default {
   @import "../../styles/mixins.sass"
 
   .point-icon
-    border: 1px solid $white-ter
+    border: 1.5px solid $silver
     border-radius: 50%
     margin-bottom: 2em
 

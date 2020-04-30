@@ -1,40 +1,39 @@
 <template>
-    <section class="section is-medium">
+  <section class="section" :class="padding">
       <div class="container is-fullhd">
+
+        <div v-if="content" class="columns">
+          <div class="column is-two-thirds content">
+            <slot name="content"></slot>
+            <br>
+          </div>
+        </div>
+
         <div class="figure-container max-80">
-          <figure class="image is-16by9 zoom-wrapper">
-
-          <img data-src="/images/wesen/grid.jpg" loading="lazy" class="lazyload" width="1920" height="1080">
-
+          <figure class="image" :class="$imageClass">
+            <img class="lazyload medium-zoom" :data-src="url" :alt="alt">
           </figure>
           <figcaption>
-            Photography credit: toucanBox Creative Team
+            {{ caption }}
           </figcaption>
         </div>
+
       </div>
     </section>
 </template>
 
 <script>
 
-import ExternalIcon from '@theme/components/icons/ExternalIcon.vue'
-
 export default {
 
-  components: { ExternalIcon },
-
   props: {
-    label: String
+    url: String,
+    alt: String,
+    caption: String,
+    content: Boolean,
+    padding: String,
+    imageClass: String,
   },
-
-  computed: {
-  },
-
-  mounted() {
-  },
-
-  methods: {
-  }
 }
 
 </script>

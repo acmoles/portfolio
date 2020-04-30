@@ -18,11 +18,10 @@ module.exports = (options, ctx) => ({
     [
       '@vuepress/medium-zoom',
       {
-        selector: '.zoom-wrapper img',
-        delay: 1000,
+        selector: 'img.medium-zoom',
         options: {
           margin: 24,
-          background: '#0C1014',
+          background: 'rgba(12, 16, 20, 0.64)',
         },
       },
     ],

@@ -15,7 +15,8 @@
           v-for="(image, i) in images"
         >
           <figure class="image is-square">
-            <LazyImage :src="image.url" :alt="image.alt" :iframe="image.iframe" x="256" y="256"/>
+            <iframe v-if="image.iframe" class="lazyload" :data-src="image.url" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <img v-else class="lazyload" :data-src="image.url" :alt="image.alt">
           </figure>
           <figcaption class="content">
             <slot v-if="image.slot" :name="image.slot"></slot>

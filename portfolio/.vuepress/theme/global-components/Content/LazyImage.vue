@@ -1,11 +1,16 @@
 <template>
-  <iframe v-if="iframe" ref="loadIframe" class="lazyload" :class="{'lazyloaded': loaded}" :src="srcImage" :width="x" :height="y" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  <img v-else ref="loadImage" class="lazyload" :class="{'lazyloaded': loaded}" :src="srcImage" :alt="alt" loading="lazy" :width="x" :height="y"/>
+  <iframe v-if="iframe" ref="loadIframe" class="lazyload" :class="{'lazyloaded': loaded}" :src="srcImage" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <img v-else ref="loadImage" class="lazyload" :class="[{'lazyloaded': loaded}, {'medium-zoom': zoom}]" :src="srcImage" :alt="alt"/>
 </template>
 
 <script>
+
+// NOT USED - interferes with medium zoom package somehow
+
+// Swapped for lazy sizes 
+
 export default {
-  props: ['src', 'alt', 'iframe', 'x', 'y'],
+  props: ['src', 'alt', 'iframe', 'zoom'],
   data: () => ({ observer: null, intersected: false, loaded: false }),
   computed: {
     srcImage() {

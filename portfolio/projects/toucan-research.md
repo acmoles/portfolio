@@ -113,12 +113,12 @@ Planning and management
 
 
 <Content-PointsSection :content="true" :points="[
-{ icon:'40', description:'Projects completed for small businesses and startups.' },
-{ icon:'02', description:'If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.' },
-{ icon:'103', description:'Years experience working for clients like Google and Amazon.' },
-{ icon:'40', description:'VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.' },
-{ icon:'02', description:'Award winning team members.' },
-{ icon:'103', description:'Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site.' },
+{ src:'/svg-icons/icon_sad.svg', alt:'sad face', description:'Projects completed for small businesses and startups.' },
+{ src:'/svg-icons/icon_time.svg', alt:'clock', description:'If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.' },
+{ src:'/svg-icons/icon_idea.svg', alt:'lightbulb', description:'Years experience working for clients like Google and Amazon.' },
+{ src:'/svg-icons/icon_search.svg', alt:'search', description:'VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.' },
+{ src:'/svg-icons/icon_docs.svg', alt:'documents', description:'Award winning team members.' },
+{ src:'/svg-icons/icon_device.svg', alt:'device', description:'Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site.' },
 ]">
 
 <template v-slot:content>
@@ -139,7 +139,7 @@ Customer acquisition and retention were two of the most discussed performance me
 
 
 
-<Content-ImageFrames-MainImageSection url="https://bulma.io/images/placeholders/640x360.png" alt="placeholder" :aside="true" :content="true">
+<Content-ImageFrames-MainImageSection url="/images/toucan-rnd/process.jpg" alt="placeholder" :aside="true" :content="true">
 
 <template v-slot:content>
 
@@ -151,9 +151,27 @@ Customer acquisition and retention were two of the most discussed performance me
 
 <template v-slot:aside>
 
-#### Idea generating session
+<div class="columns is-gapless">
+
+<div class="column is-two-thirds">
+
+<figure class="image is-square">
+
+<img class="lazyload" data-src="/images/toucan-rnd/page.jpg" alt="magazine page which links to digital content">
+
+</figure>
+
+</div>
+
+</div>
+
+<figcaption>
+
+#### Magazine
 
 his project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+
+</figcaption>
 
 </template>
 
@@ -163,7 +181,7 @@ his project however, focused on an equally important but somewhat subtler metric
 <Content-ImageFrames-SquareImagesRow :content="true" :images="[
 { url:'https://player.vimeo.com/video/412315835', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:true },
 { url:'https://player.vimeo.com/video/412315982', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:true },
-{ url:'https://player.vimeo.com/video/293190568', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:true },
+{ url:'/images/toucan-rnd/colouring.jpg', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
 ]">
 
 <template slot="content">
@@ -184,8 +202,9 @@ Customer acquisition and retention were two of the most discussed performance me
 
 his project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
 
-- This prototype excited children the least
-- The interruption in the story broke the children's attention
+- This prototype excited children the least{ .check }
+- The interruption in the story broke the children's attention{ .cross }
+{ .check-list }
 
 </template>
 
@@ -195,8 +214,9 @@ his project however, focused on an equally important but somewhat subtler metric
 
 his project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
 
-- This prototype excited children the least
-- The interruption in the story broke the children's attention
+- This prototype excited children the least{ .cross }
+- The interruption in the story broke the children's attention{ .cross }
+{ .check-list }
 
 </template>
 
@@ -206,8 +226,9 @@ his project however, focused on an equally important but somewhat subtler metric
 
 his project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
 
-- This prototype excited children the least
-- The interruption in the story broke the children's attention
+- This prototype excited children the least{ .check }
+- The interruption in the story broke the children's attention{ .cross }
+{ .check-list }
 
 </template>
 
@@ -242,7 +263,7 @@ Many adult testers requested that hand-held items move when the hand moves | Thi
 <template slot="aside">
 
 <figure class="image is-9by16">
-  <Content-LazyImage src="https://bulma.io/images/placeholders/360x640.png" alt="alt" :iframe="false" x="360" y="640"/>
+  <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190638" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </figure>
 <figcaption>
 
@@ -262,7 +283,7 @@ This project however, focused on an equally important but somewhat subtler metri
 
 
 
-<Content-ImageFrames-MainImageSection url="https://bulma.io/images/placeholders/640x360.png" alt="placeholder" :aside="true" :content="true">
+<Content-ImageFrames-MainImageSection imageClass="is-5by3" url="/images/toucan-rnd/colouring-design.png" alt="placeholder" :aside="true" :content="true">
 
 <template v-slot:content>
 
@@ -279,7 +300,7 @@ Customer acquisition and retention were two of the most discussed performance me
 <div class="column is-two-thirds">
 
 <figure class="image is-square">
-<Content-LazyImage src="https://bulma.io/images/placeholders/480x480.png" alt="alt" x="256" y="256"/>
+  <img class="lazyload" data-src="/images/toucan-rnd/magazine-cover-en.jpg" alt="toucanBox magazines">
 </figure>
 
 </div>
@@ -318,7 +339,7 @@ Customer acquisition and retention were two of the most discussed performance me
 <template v-slot:column1>
 
 <figure class="image is-square">
-  <Content-LazyImage src="https://bulma.io/images/placeholders/480x480.png" alt="alt" :iframe="false" x="256" y="256"/>
+  <img class="lazyload" data-src="/images/toucan-rnd/production-assets.jpg" alt="tile map of image assets">
 </figure>
 
 <figcaption>
@@ -332,7 +353,7 @@ Establish to what extent digital content linked to the trial box can increase ac
 <template v-slot:column2>
 
 <figure class="image is-square">
-  <Content-LazyImage src="https://bulma.io/images/placeholders/480x480.png" alt="alt" :iframe="false" x="256" y="256"/>
+  <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190505" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </figure>
 
 <figcaption>
@@ -393,7 +414,7 @@ Must resonate with the core value proposition (hands-on crafting and creativity)
 <template slot="aside">
 
 <figure class="image is-9by16">
-  <Content-LazyImage src="https://bulma.io/images/placeholders/360x640.png" alt="alt" :iframe="false" x="360" y="640"/>
+  <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190429" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </figure>
 <figcaption>
 

@@ -1,5 +1,5 @@
 <template>
-    <section class="section">
+  <section class="section" :class="padding">
       <div class="container is-fullhd">
 
         <div class="columns">
@@ -9,8 +9,8 @@
           </div>
 
           <div class="column">
-            <figure class="image is-square zoom-wrapper">
-              <img :data-src="url" :alt="alt" loading="lazy" class="lazyload" width="256" height="256">
+            <figure class="image" :class="$imageClass">
+              <img class="lazyload medium-zoom" :data-src="url" :alt="alt">
             </figure>
             <figcaption>
               {{ caption }}
@@ -32,6 +32,8 @@ export default {
     url: String,
     alt: String,
     caption: String,
+    padding: String,
+    imageClass: String,
   }
 
 }

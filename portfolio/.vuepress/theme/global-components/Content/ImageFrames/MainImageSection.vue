@@ -12,8 +12,9 @@
         <div class="columns">
 
           <div class="column is-two-thirds">
-            <figure class="image is-16by9 zoom-wrapper">
-              <LazyImage :src="url" :alt="alt" :iframe="false" x="1920" y="1080"/>
+            <figure class="image" :class="$imageClass">
+              <img class="lazyload medium-zoom" :data-src="url" :alt="alt">
+              <!-- <LazyImage :src="url" :alt="alt" :iframe="false" :zoom="true"/> -->
             </figure>
             <figcaption v-if="!aside">
               {{ caption }}
@@ -31,11 +32,11 @@
 </template>
 
 <script>
-import LazyImage from '@theme/global-components/content/Lazyimage.vue'
+// import LazyImage from '@theme/global-components/content/Lazyimage.vue'
 
 export default {
 
-  components: { LazyImage },
+  // components: { LazyImage },
 
   props: {
     url: String,
@@ -44,6 +45,17 @@ export default {
     content: Boolean,
     aside: Boolean,
     padding: String,
+    imageClass: String,
+  },
+
+  computed: {
+    $imageClass () {
+      if (this.imageClass) {
+        return this.imageClass
+      } else {
+        return 'is-16by9'
+      }
+    }
   }
 
 }
