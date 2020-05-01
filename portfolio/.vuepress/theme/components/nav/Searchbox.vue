@@ -227,6 +227,7 @@ export default {
       this.$router.push(this.suggestions[i].path)
       this.query = ''
       this.focusIndex = 0
+      this.setOpen()
     },
 
     focus (i) {
@@ -280,6 +281,7 @@ export default {
   border-top: 1px solid $black
 .suggestion
   cursor: pointer
+  padding: 0.375rem 1rem
   a
     white-space: normal
     transition: $button-transition

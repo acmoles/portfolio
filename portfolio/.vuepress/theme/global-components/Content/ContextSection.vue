@@ -102,10 +102,14 @@ export default {
       content: ' '
       position: absolute
       width: 100%
-      height: 3em
+      height: 4em
       background-image: linear-gradient(360deg, $pitch 0%, rgba($pitch,0.42) 40%, rgba($pitch,0.00) 100%)
-      top: -3em
-      opacity: 0.08
+      top: -4em
+      opacity: 0.1
+
+  .dark .context
+    &::before
+      opacity: 0.16
 
   .context.dark
     background-color: $steel

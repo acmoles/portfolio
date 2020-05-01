@@ -5,7 +5,7 @@ subtitle: Turning customers into creators
 type: double-left-top
 navStyle:
   style: dark
-  tint: red-tint
+  tint: dark
   progress: light
 background: dark
 case1: Case study

@@ -31,10 +31,6 @@ export default {
     next () {
       return resolvePageLink(LINK_TYPES.NEXT, this)
     },
-
-    background () {
-      return this.$page.frontmatter.background
-    }
   }
 }
 

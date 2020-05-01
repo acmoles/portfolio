@@ -7,7 +7,8 @@ module.exports = (options, ctx) => ({
     return path.resolve(__dirname, 'noopModule.js')
   },
   plugins: [
-    ['@vuepress/active-header-links', options.activeHeaderLinks],
+    // ['@vuepress/active-header-links'],
+    // , options.activeHeaderLinks
     'vuepress-plugin-reading-time',
     require('./plugins/plugin-outside-content/index.js'),
     require('./plugins/plugin-revealer/index.js'),
@@ -38,4 +39,5 @@ module.exports = (options, ctx) => ({
     ],
   },
   evergreen: true,
+  disableScrollBehavior: true,
 })

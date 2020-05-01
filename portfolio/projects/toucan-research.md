@@ -8,7 +8,7 @@ navStyle:
   tint: purple-tint
   progress: light
 background: purple
-sidebar: false
+sidebar: auto
 date: 2019-09-11
 prev: ./interaction
 next: ./toucanbox
@@ -37,11 +37,11 @@ description="Create by toucanBox explores whether adding digital value to the ph
 
 A toucanBox subscription craft box contains all the materials needed to complete a craft project, with illustrated instructions, stickers to collect and an activity magazine.
 
-In my hybrid role as digital product designer and R&D manager, I was given a broad remit to tackle projects across the customer journey. I set strict criteria - setting up a 'Project Passport' to ensure we were laser focussed on key metrics.
+In my hybrid role as digital product designer and R&D manager, I was given a broad remit to tackle projects across the customer journey. I set strict criteria - setting up a _Project Passport_ to ensure we were laser focussed on key metrics.
 
-Consequently, some initiatives aimed to improve the experience for children, some for parents and often both benefited. The _other toucanBox case study_ covers two projects focussing on parents.
+Consequently, some initiatives aimed to improve the experience for children, some for parents and often both benefited. The [other toucanBox case study](/toucanbox) covers two projects focussing on parents.
 
-Create by toucanBox aims to move the needle on customer activation - the rate at which trialists convert to fully paying subscribers. We knew the top two reasons for cancellation in trial were 'affordability' and 'value for money'. My hypothesis was that exclusive digital content could help address this, without increasing the variable cost of the box.
+Create by toucanBox aims to move the needle for _customer activation_ - the rate at which trialists convert to fully paying subscribers. We knew the top two reasons for cancellation in trial were _affordability_ and _value for money._ My hypothesis was that exclusive digital content could help address this, without increasing the variable cost of the box.
 
 </template>
 
@@ -145,7 +145,7 @@ Customer acquisition and retention were two of the most discussed performance me
 
 ## User journey and ideation
 
-Customer acquisition and retention were two of the most discussed performance metrics at toucanBox. This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+Customer acquisition and retention were two of the most discussed performance metrics at toucanBox. [User profiles, detailed in the other case study](/toucanbox) this project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
 
 </template>
 

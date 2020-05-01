@@ -23,6 +23,7 @@ export default (Vue) => {
         subtitle: ''
       },
       revealerInitialised: false,
+      firstLoad: true,
       homeFadeUpMotion: true,
       nextGuardCallback : null,
       projectPosition: {
@@ -51,6 +52,9 @@ export default (Vue) => {
       },
       SET_REVEALER_INIT (state, status) {
         state.revealerInitialised = status
+      },
+      SET_FIRST_LOAD (state, status) {
+        state.firstLoad = status
       },
       SET_HOME_MOTION (state, status) {
         state.homeFadeUpMotion = status
@@ -86,6 +90,9 @@ export default (Vue) => {
       },
       setRevealerInit (context, payload) {
         context.commit('SET_REVEALER_INIT', payload)
+      },
+      setFirstLoad (context, payload) {
+        context.commit('SET_FIRST_LOAD', payload)
       },
       setHomeMotion (context, payload) {
         context.commit('SET_HOME_MOTION', payload)

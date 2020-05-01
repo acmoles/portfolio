@@ -36,12 +36,18 @@ import Footer from '@theme/components/home/Footer.vue'
 import PageNav from '@theme/components/nav/PageNav.vue'
 import Sidebar from '@theme/components/nav/Sidebar.vue'
 
+import config from '../../config.js'
+
 export default {
   components: { Sidebar, Navbar, Footer, PageNav },
 
   computed: {
     pageLoadingStatus () {
       return this.$store.state.pageLoadingStatus
+    },
+
+    firstLoad () {
+      return this.$store.state.firstLoad
     },
 
     pageClasses () {
@@ -57,8 +63,25 @@ export default {
     hasFooter () {
       return this.$page.frontmatter.hasFooter
     }
+  },
 
+  watch: {
+    pageLoadingStatus (latest, last) {
+      if (latest === 'revealing' && this.firstLoad) {
+        // Needed to navigate to anchors in first load cases
+        const anchor = this.$router.currentRoute.hash
+        const split = anchor.substr(1)
+
+        this.$nextTick( () => {
+          if (anchor && document.getElementById(split)) {
+            this.$store.dispatch('setFirstLoad', false)
+            location.href = anchor
+          }
+        });
+      }
+    }
   }
+
 }
 </script>
 

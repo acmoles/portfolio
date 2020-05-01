@@ -13,13 +13,13 @@ case2: Two parts
 sidebar: auto
 date: 2019-09-12
 src: /images/homepage/toucan-baked.jpg
-prev: ./project5
-next: ./project7
+prev: ./interaction
+next: ./random-international
 ---
 
 ::: slot top
 
-<Stage-ProjectVisual/>
+<Stage-ProjectVisual :noise="true"/>
 
 <Stage-ProjectStage ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com"
 description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="true">
@@ -34,7 +34,7 @@ description="Wesen is an experiment in turning customers into creators and build
 
 :::
 
-<Content-ContextSection :fadeUpHero="true">
+<Content-ContextSection :fadeUpHero="true" lightClass="dark">
 
 <template v-slot:main>
 
