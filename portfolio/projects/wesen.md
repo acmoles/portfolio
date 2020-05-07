@@ -38,7 +38,7 @@ description="Can customers be creators? Wesen enables anyone to create a pendant
 <!-- <li>Responsive web application</li>
 <li>2018</li> -->
 
-<Content-ContextSection>
+<Content-ContextSection lightClass="dark">
 
 <template v-slot:main>
 

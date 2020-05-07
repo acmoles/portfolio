@@ -34,6 +34,16 @@ export default {
     caption: String,
     padding: String,
     imageClass: String,
+  },
+
+  computed: {
+    $imageClass () {
+      if (this.imageClass) {
+        return this.imageClass
+      } else {
+        return 'is-square'
+      }
+    }
   }
 
 }

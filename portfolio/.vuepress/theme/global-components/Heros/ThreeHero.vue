@@ -1,5 +1,7 @@
 <template>
-<div ref="presentation" class="presentation"></div>
+  <div class="container is-fullhd presentation-wrapper">
+      <div ref="presentation" class="presentation"></div>
+  </div>
 </template>
 
 <script>
@@ -46,9 +48,19 @@ export default {
   @import "../../styles/variables.sass"
   @import "../../styles/mixins.sass"
 
+  .presentation-wrapper
+    display: flex
+    justify-content: flex-end
+
   .presentation
-    height: 100%
-    width: 100%
+    padding-top: 75%
+    width: 960px
     position: relative
+    top: -3em
+    right: -20%
+    canvas
+      position: absolute
+      top: 0
+      left: 0
 
 </style>

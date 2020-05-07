@@ -34,6 +34,17 @@ export default {
     padding: String,
     imageClass: String,
   },
+
+  computed: {
+    $imageClass () {
+      if (this.imageClass) {
+        return this.imageClass
+      } else {
+        return 'is-16by9'
+      }
+    }
+  }
+  
 }
 
 </script>

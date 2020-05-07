@@ -37,7 +37,7 @@ description="Wesen is an experiment in turning customers into creators and build
 
 
 
-<Content-ContextSection>
+<Content-ContextSection lightClass="dark">
 
 <template v-slot:main>
 
@@ -64,6 +64,8 @@ CTO, product designer, two full-stack developers
 </Content-ContextSection>
 
 
+
+
 <Content-TextSection>
 
 # Project 2
@@ -76,7 +78,7 @@ CTO, product designer, two full-stack developers
 
 ##### Fourth title
 
-###### Fifth title 
+###### Fifth title
 
 Test paragraph
 

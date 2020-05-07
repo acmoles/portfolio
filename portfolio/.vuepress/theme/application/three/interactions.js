@@ -9,6 +9,7 @@ export class Interactions extends EventTarget {
     super();
     this.camera = camera;
     this.container = container;
+    this.containerRect = container.getBoundingClientRect();
     this.interactables = interactables;
     this.gridElements = gridElements;
 
@@ -55,8 +56,10 @@ export class Interactions extends EventTarget {
 
   updateMouse( event ) {
     event.preventDefault();
-    this.mouse.x = ( event.clientX / this.container.offsetWidth ) * 2 - 1;
-    this.mouse.y = - ( event.clientY / this.container.offsetHeight ) * 2 + 1;
+    const relativeX = event.clientX - this.containerRect.left;
+    const relativeY = event.clientY - this.containerRect.top;
+    this.mouse.x = ( relativeX / this.container.offsetWidth ) * 2 - 1;
+    this.mouse.y = - ( relativeY / this.container.offsetHeight ) * 2 + 1;
     if (this.hasEvents) {
       this.checkForIntersect();
     }

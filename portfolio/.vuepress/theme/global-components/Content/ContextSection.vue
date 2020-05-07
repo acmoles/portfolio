@@ -100,6 +100,7 @@ export default {
     position: relative
     &::before
       content: ' '
+      pointer-events: none
       position: absolute
       width: 100%
       height: 4em

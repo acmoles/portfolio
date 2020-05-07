@@ -16,17 +16,50 @@ next: ./art-lebedev-studio
 
 ::: slot top
 
-<ProjectStage>
-  <template v-slot:visual>
-    <ImageHero imageKey="lego"/>
+<Stage-ProjectVisual>
+  <template v-slot:visual-background>
+    <Heros-ImageHero name="ecosia" src="/images/ecosia/ecosia-comp.png" alt="Ecosia mobile devices" :noise="true"/>
   </template>
+</Stage-ProjectVisual>
 
-  <template v-slot:description>
-    <p>Here's a description</p>
-  </template>
-</ProjectStage>
+<Stage-ProjectStage ctaLabel="www.ecosia.org" ctaUrl="https://www.ecosia.org"
+description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="false">
+
+</Stage-ProjectStage>
 
 :::
+
+
+<Content-ContextSection lightClass="dark">
+
+<template v-slot:main>
+
+## Context
+
+The rise of affordable 3D printers popularised the notion of mass customisation → . However, relatively high prices and lacklustre product creation experiences left its promises largely unrealised.
+
+At that time I was working on customisable children’s toys at Makielab → . We enjoyed modest success, catching the attention of Disney who eventually bought the company. In this project I resolved to draw on some lessons learnt there.
+
+Foremost, I wanted to explore the possibility of an unrestricted creation experience, able to generate infinite variations while being intuitive and fun to use. I also intended to fully automate and outsource the fulfillment process.
+
+</template>
+
+<template v-slot:side>
+
+**Reading time**
+12 minutes
+
+**Team composition**
+CTO, product designer, two full-stack developers
+
+</template>
+
+</Content-ContextSection>
+
+
+
+
+<Content-TextSection>
 
 # Project 2
 
@@ -178,3 +211,5 @@ module.exports = (options, ctx) => ({
 ### Inner title
 
 ### Inner title
+
+</Content-TextSection>

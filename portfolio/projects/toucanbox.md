@@ -71,6 +71,9 @@ _I have omitted confidential information in this case study. All information and
 
 </Content-ContextSection>
 
+
+
+
 <Content-TextSection>
 
 # Project 3

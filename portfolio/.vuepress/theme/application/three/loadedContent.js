@@ -3,12 +3,16 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { EventTarget } from 'event-target-shim';
 import anime from 'animejs';
 
+import { SharedShader } from './sharedMaterialShader.js'
+
 export class LoadedContent extends EventTarget {
 
   constructor(worldScene) {
     super();
     this.worldScene = worldScene;
-    this.gltfScene = null;
+    this.gltfScene;
+    this.enhancedMaterial = false;
+    this.shaderMaterial;
     this.TRANSITION = 1;
     this.animations = [];
     this.interactables = [];
@@ -80,6 +84,7 @@ export class LoadedContent extends EventTarget {
       this.gltfScene.traverse( ( child ) => {
 
         if ( child.isMesh ) {
+          this.enhanceMaterial(child.material);
 
           if (child.name === 'Whiteboard') {
             this.equipMesh( this.getModelByName('Whiteboard'), child );
@@ -123,13 +128,36 @@ export class LoadedContent extends EventTarget {
 
   equipMesh( meshobject, child ) {
     meshobject.mesh = child;
-    meshobject.mesh.material.metalness = 0;
     this.interactables.push(meshobject.mesh);
 
     if (meshobject.actionSequence[0] !== null) {
       meshobject.mesh.animations = this.animations; // Set to stored extracted animations
       let mixer = this.startAnimation( meshobject.mesh, meshobject.actions, meshobject.startAction );
       meshobject.mixer = mixer;
+    }
+  }
+
+  enhanceMaterial(material) {
+    if (!this.enhancedMaterial) {
+
+      this.enhancedMaterial = true;
+      material.onBeforeCompile = ( shader ) => {
+        shader.uniforms.time = { value: 0 };
+        shader.vertexShader = 'varying float vY;\n' + shader.vertexShader;
+
+        shader.vertexShader = shader.vertexShader.replace(
+          '#include <fog_vertex>', SharedShader.vertexShader
+        );
+
+        shader.fragmentShader = 'uniform float time;\nvarying float vY;\n' + SharedShader.randomFunction + SharedShader.blendFunction + shader.fragmentShader;
+
+        shader.fragmentShader = shader.fragmentShader.replace(
+          '#include <specularmap_fragment>', SharedShader.fragmentShaderOutput
+        );
+
+        this.shaderMaterial = shader;
+      }
+
     }
   }
 
@@ -255,7 +283,6 @@ export class LoadedContent extends EventTarget {
     // Instantiate a loader
     var loader = new GLTFLoader();
 
-    console.log('attempting loadpath: ', this.LOADPATH);
     // Load a glTF resource
     loader.load(
       // resource URL

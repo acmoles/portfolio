@@ -23,6 +23,7 @@
         </div>
 
         <div
+          v-if="hasVisulGridSlot"
           class="column visual-grid"
           :class="[{'in-view': (visible && fadeUpHero)}, {'appear-fade-up': fadeUpHero}]"
         >
@@ -68,6 +69,10 @@ export default {
       return {
         'light': this.lightDark === 'light'
       }
+    },
+
+    hasVisulGridSlot () {
+      return !!this.$slots['visual-grid']
     },
 
     istoucanBox () {

@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 import anime from 'animejs';
 
+import { SharedShader } from './sharedMaterialShader.js'
+
 export class Grid {
 
   constructor(worldScene, loadedContent) {
@@ -19,6 +21,9 @@ export class Grid {
 
     this.scrollAnimation;
     this.clickAnimation;
+
+    this.gridShader;
+    this.gridMaterial;
 
     this.worldScene = worldScene;
     this.loadedContent = loadedContent;
@@ -40,7 +45,30 @@ export class Grid {
       // color: 0xC0CCDA
       // color: 0x0B1421
       color: 0x060B13
+      // color: 0x273444
     });
+
+    this.gridMaterial.onBeforeCompile = ( shader ) => {
+      shader.uniforms.time = { value: 0 };
+
+      shader.vertexShader = 'varying float vY;\n' + shader.vertexShader;
+
+      shader.vertexShader = shader.vertexShader.replace(
+        '#include <fog_vertex>', SharedShader.vertexShaderGrid
+      );
+
+
+      shader.fragmentShader = 'uniform float time;\nvarying float vY;\n' + SharedShader.randomFunction + SharedShader.blendFunction + shader.fragmentShader;
+
+      shader.fragmentShader = shader.fragmentShader.replace(
+        '#include <specularmap_fragment>', SharedShader.fragmentShaderOutputGrid
+      );
+
+      this.gridShader = shader;
+
+    }
+
+
 
     for (var c=0; c<this.col; c++) {
         for (var r=0; r<this.row; r++) {
@@ -219,7 +247,7 @@ export class Grid {
 
     var loader = new THREE.FontLoader();
 
-    loader.load( 'three/examples/fonts/helvetiker_regular.typeface.json', ( font ) => {
+    loader.load( '../node_modules/three/examples/fonts/helvetiker_regular.typeface.json', ( font ) => {
 
       for (var c=0; c < this.col; c++) {
           for (var r=0; r < this.row; r++) {
