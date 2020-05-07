@@ -25,6 +25,7 @@ export default {
 @import "../styles/mixins.sass"
 
 button.project-external-link.is-dark
+  position: relative
   text-rendering: geometricPrecision
   font-size: 1.125em
   color: $button-custom-text-color
@@ -32,23 +33,31 @@ button.project-external-link.is-dark
   justify-content: space-between
   background-color: $slate
   height: auto
-  padding-left: 1.125em
-  padding-right: .75em
+  padding-left: 2em
+  padding-right: 2em
   box-shadow: $button-shadow
   transition: $button-transition
+  .icon
+    position: absolute
+    right: 1em
+    transform: translateX(0.75em)
+  .icon, span
+    transition: transform 300ms ease
   #ExternalIcon
     path
       transition: opacity 200ms ease
       fill: $button-custom-text-color
-      opacity: 0.64
+      opacity: 0
   &:hover
     background-color: $button-custom-hover-color
     color: $grey-light
+    .icon
+      transform: translateX(0)
+    span
+      transform: translateX(-0.75em)
     #ExternalIcon
       path
         opacity: 1
-  .icon
-    margin-left: 0.25em
 
 .light
   button.project-external-link.is-dark
@@ -59,14 +68,12 @@ button.project-external-link.is-dark
     #ExternalIcon
       path
         fill: $white
-        opacity: 0.64
+        opacity: 0
     &:hover
       background-color: rgba($white, 0.3)
       #ExternalIcon
         path
           fill: $white
           opacity: 0.8
-
-// TODO add slight fade transition to all button type elements?
 
 </style>
