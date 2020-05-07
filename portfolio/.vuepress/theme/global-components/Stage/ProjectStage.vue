@@ -102,10 +102,15 @@ export default {
     padding-right: 10em
 
 .visual-grid
-  padding: 0
-  margin: -4em
+  // padding: 0
+  // margin: -4em
+  position: relative
   display: flex
   align-items: center
+  .image
+    position: absolute
+    left: 0
+    width: 200%
 
 
 html:not(.disable-motion)

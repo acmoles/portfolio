@@ -1,7 +1,7 @@
 ---
 uid: 2
 title: Ecosia
-subtitle: Leading the mobile apps team
+subtitle: Leading the native apps team
 type: single
 navStyle:
   style: light
@@ -45,11 +45,11 @@ description="Wesen is an experiment in turning customers into creators and build
 
 ## Context
 
-The rise of affordable 3D printers popularised the notion of mass customisation → . However, relatively high prices and lacklustre product creation experiences left its promises largely unrealised.
+toucanBox is an award winning startup subscription service that provides arts and crafts activities for children aged 3 to 8 years old. Each box has the child’s name on the front and a personalised message printed inside. It has illustrated instructions, an activity magazine and all the required materials to make a craft project. It’s also delivered straight through the letterbox.
 
-At that time I was working on customisable children’s toys at Makielab → . We enjoyed modest success, catching the attention of Disney who eventually bought the company. In this project I resolved to draw on some lessons learnt there.
+As we offer a product customers usually haven’t seen before, we knew that our communication and first impression must be flawless.
 
-Foremost, I wanted to explore the possibility of an unrestricted creation experience, able to generate infinite variations while being intuitive and fun to use. I also intended to fully automate and outsource the fulfillment process.
+New customers register through the website. They choose a box type for their child (or children) and create an account, providing relevant details (including email, delivery address and billing information). The first box is a free trial if they are acquired through paid marketing channels.
 
 </template>
 

@@ -22,7 +22,7 @@ next: ./random-international
 <Stage-ProjectVisual :noise="true"/>
 
 <Stage-ProjectStage ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com"
-description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="true">
+description="A redesigned sign up funnel to improve communication, useability and confidence and a strategic design project to identify new ways to improve customer retention" :fadeUpHero="true">
 
 <template v-slot:visual-grid>
   <figure class="image">
@@ -40,21 +40,32 @@ description="Wesen is an experiment in turning customers into creators and build
 
 ## Context
 
-The rise of affordable 3D printers popularised the notion of mass customisation → . However, relatively high prices and lacklustre product creation experiences left its promises largely unrealised.
+toucanBox is an award winning startup subscription service that provides arts and crafts activities for children aged 3 to 8 years old. Each box has the child’s name on the front and a personalised message printed inside. It has illustrated instructions, an activity magazine and all the required materials to make a craft project. It’s also delivered straight through the letterbox.
 
-At that time I was working on customisable children’s toys at Makielab → . We enjoyed modest success, catching the attention of Disney who eventually bought the company. In this project I resolved to draw on some lessons learnt there.
+2017 was a significant year for toucanBox. Having secured funding in the previous year, we were ready to expand the Company and transition into a growth phase.
 
-Foremost, I wanted to explore the possibility of an unrestricted creation experience, able to generate infinite variations while being intuitive and fun to use. I also intended to fully automate and outsource the fulfillment process.
+As we offer a product customers usually haven’t seen before, we knew that our communication and first impression must be flawless.
+
+New customers register through the website. They choose a box type for their child (or children) and create an account, providing relevant details (including email, delivery address and billing information). The first box is a free trial if they are acquired through paid marketing channels.
 
 </template>
 
 <template v-slot:side>
 
-**Reading time**
-12 minutes
+**Product**
+Responsive landing page and signup web application
+
+**Sector**
+Subscription e-commerce
+
+**Timeframe**
+2017
 
 **Team composition**
-CTO, product designer, two full-stack developers
+CTO, product designer*, two full-stack developers, stakeholders in Marketing and Creative
+
+_I have omitted confidential information in this case study. All information and images are my own unless stated otherwise._
+
 
 </template>
 
