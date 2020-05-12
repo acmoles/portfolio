@@ -1,6 +1,10 @@
 <template>
   <div class="container is-fullhd presentation-wrapper">
-      <div ref="presentation" class="presentation"></div>
+    <div class="columns">
+      <div class="column is-one-third">
+        <div ref="presentation" class="presentation"></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -37,8 +41,9 @@ export default {
 
   },
 
-  methods: {
-
+  beforeDestroy() {
+    this.threeComposition.destroy()
+    console.log('destroyed')
   },
 }
 
@@ -49,15 +54,20 @@ export default {
   @import "../../styles/mixins.sass"
 
   .presentation-wrapper
-    display: flex
-    justify-content: flex-end
+    height: 100%
+    .columns
+      height: 100%
+      justify-content: flex-end
+    .column
+      height: 100%
 
   .presentation
-    padding-top: 75%
-    width: 960px
+    padding-top: 160%
+    width: 920px
     position: relative
-    top: -3em
-    right: -20%
+    top: 3em
+    margin-left: 50%
+    transform: translateX(-50%)
     canvas
       position: absolute
       top: 0

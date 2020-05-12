@@ -1,6 +1,6 @@
 import * as THREE from 'three/build/three.module.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import Stats from 'three/examples/jsm/libs/stats.module.js';
+// import Stats from 'three/examples/jsm/libs/stats.module.js';
 import { EventTarget } from 'event-target-shim/dist/event-target-shim.mjs';
 
 import { LoadedContent } from './LoadedContent.js'
@@ -29,7 +29,7 @@ export class ThreeComposition extends EventTarget {
 
     this.container = domParent;
     this.clock = new THREE.Clock();
-    this.stats = new Stats();
+    // this.stats = new Stats();
 
     this.configRenderer();
     this.configScene();
@@ -81,7 +81,7 @@ export class ThreeComposition extends EventTarget {
   }
 
   animate() {
-    requestAnimationFrame( () => { this.animate(); } );
+    this.animationFrame = requestAnimationFrame( () => { this.animate(); } );
     this.delta = this.clock.getDelta();
 
     for ( var i = 0; i < this.content.models.length; ++ i ) {
@@ -92,7 +92,7 @@ export class ThreeComposition extends EventTarget {
 
     this.renderer.render( this.worldScene, this.camera );
 
-    this.stats.update();
+    // this.stats.update();
   }
 
   configRenderer() {
@@ -106,7 +106,7 @@ export class ThreeComposition extends EventTarget {
     this.renderer.gammaFactor = 2;
 
     this.container.appendChild( this.renderer.domElement );
-    this.container.appendChild( this.stats.dom );
+    // this.container.appendChild( this.stats.dom );
   }
 
   configScene() {
@@ -129,7 +129,9 @@ export class ThreeComposition extends EventTarget {
 
     this.controls.update();
 
-    window.addEventListener( 'resize', () => { this.onWindowResize(); }, false );
+    const ref = () => { this.onWindowResize(); };
+    this.ref = ref;
+    window.addEventListener( 'resize', ref, false );
   }
 
 
@@ -145,6 +147,39 @@ export class ThreeComposition extends EventTarget {
     this.camera.bottom = height / - this.camFactor;
 
     this.camera.updateProjectionMatrix();
+  }
+
+  destroy() {
+    cancelAnimationFrame( this.animationFrame );
+    window.removeEventListener('resize', this.ref, false);
+
+    this.worldScene.remove(this.content.gltfScene);
+    this.content.animations = [];
+    this.content.interactables = [];
+    this.content.models.forEach((model) => {
+      this.content.gltfScene.remove(model.mesh);
+      model.mesh.material.dispose();
+      model.mesh.geometry.dispose();
+      model = null;
+    });
+    this.content.gltfScene = null;
+
+    this.worldScene.remove(this.grid.gridContainer);
+    this.grid.gridContainer.children.forEach((child) => {
+      this.grid.gridContainer.remove(child);
+      child.material.dispose();
+      child.geometry.dispose();
+    });
+    this.grid.gridContainer = null;
+
+    this.worldScene.dispose();
+    this.worldScene = null;
+    this.controls.dispose();
+    this.camera = null;
+    this.renderer.renderLists.dispose();
+    this.renderer.dispose();
+    this.renderer.domElement = null
+    this.renderer = null;
   }
 
 }

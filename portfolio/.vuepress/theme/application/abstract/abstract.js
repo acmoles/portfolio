@@ -81,8 +81,9 @@ export class Abstract extends EventTarget {
 
     this.scene.add(this.camera);
 
-    this.onWindowResize();
-    window.addEventListener( 'resize', () => { this.onWindowResize(); }, false );
+    const ref = () => { this.onWindowResize(); };
+    this.ref = ref;
+    window.addEventListener( 'resize', ref, false );
   }
 
   // getCamera() {
@@ -138,6 +139,8 @@ export class Abstract extends EventTarget {
 
   destroy() {
     cancelAnimationFrame( this.animationFrame );
+    window.removeEventListener('resize', this.ref, false);
+
     this.scene.remove(this.sphere);
     this.geometry.dispose();
     this.material.dispose();

@@ -6,8 +6,8 @@
     <div
       ref="parallax"
       class="parallax"
-      :class="{'initial-parallax': readyForInitial}"
-      :style="{transform: transform}">
+      :class="[{'initial-parallax': readyForInitial}]"
+      :style="{transform: transform, opacity: opacity}">
       <slot name="visual-background"></slot>
     </div>
   </div>
@@ -24,6 +24,7 @@ export default {
   props: {
     noise: Boolean
   },
+  // TODO only do parallax and show div if needed (slot)
 
   computed: {
     background () {
@@ -38,6 +39,7 @@ export default {
     return {
       el: null,
       transform: `translate3d(0, 0 ,0)`,
+      opacity: 0,
       readyForInitial: false,
     }
   },
@@ -66,11 +68,11 @@ export default {
       if (latest === 'finished') {
         this.readyForInitial = true
         this.$nextTick(() => {
+          this.opacity = 1
           this.transform = `translate3d(0, 0, 0) scale3d(1, 1, 1)`
           setTimeout(() => {
             this.readyForInitial = false
-            // TODO remove initial
-          }, 1900)
+          }, 8000)
         })
       }
     }
@@ -114,9 +116,11 @@ export default {
       right: 0
       top: 0
       bottom: 0
+      opacity: 0
       &.initial-parallax
-        transition: transform 1.8s $projectWipeTransition
-        transition-delay: $base-project-delay - 0.1s
+        transition: $project-image-transition
+        transition-delay: $project-image-delay
+
     img
       object-fit: cover
       width: 100%

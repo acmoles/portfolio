@@ -4,5 +4,11 @@ $revealTime: 800ms
 $cubicTransitionBoth: cubic-bezier(0.645, 0.045, 0.355, 1)
 $revealTransition: cubic-bezier(0.075, 0.82, 0.165, 1)
 $coverTransition: cubic-bezier(0.8, 0, 0.2, 1)
-$projectWipeTransition: cubic-bezier(0.83, 0, 0.17, 1)
-$base-project-delay: 0.4s
+// $projectWipeTransition: cubic-bezier(0.83, 0, 0.17, 1)
+$fadeUpTransition: cubic-bezier(.215,.61,.355,1)
+$base-project-delay: 0s
+$first-mover-delay: 0.2s
+$project-wipe-time: 1.4s
+
+$project-image-transition: transform 3.2s $fadeUpTransition, opacity 3.2s $fadeUpTransition
+$project-image-delay: $base-project-delay + $project-wipe-time + $first-mover-delay - 0.4s

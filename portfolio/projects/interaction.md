@@ -38,11 +38,9 @@ description="Wesen is an experiment in turning customers into creators and build
 
 <template v-slot:main>
 
-## Context
+## Dawn of mainstream 3D computing
 
-The rise of affordable 3D printers popularised the notion of mass customisation → . However, relatively high prices and lacklustre product creation experiences left its promises largely unrealised.
-
-At that time I was working on customisable children’s toys at Makielab → . We enjoyed modest success, catching the attention of Disney who eventually bought the company. In this project I resolved to draw on some lessons learnt there.
+An entire generation of computer users who grew up playing 3D games is poised to join the computing mainstream. They are hungry for novel and innovative application of 3D-related technologies to increase their productivity and improve their daily computing experience. Also in this decade, a vast amount of research capital is being poured into big data visualization technology, 3D scanning, and 3D printing — perhaps legitimizing computing in 3D for the first time in history. Combine this trend with the ever-increasing 3D hardware rendering power of today’s mobile devices — and the ability to harness this power simply and effectively using WebGL — and JavaScript developers are now at the forefront of an exciting wave.
 
 Foremost, I wanted to explore the possibility of an unrestricted creation experience, able to generate infinite variations while being intuitive and fun to use. I also intended to fully automate and outsource the fulfillment process.
 

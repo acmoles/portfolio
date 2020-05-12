@@ -156,19 +156,20 @@ export default {
 
   html:not(.disable-motion)
     .context.wipe-up
-      transition: transform 1.4s $projectWipeTransition
+      transition: transform $project-wipe-time $coverTransition
       // cubic-bezier(.215,.61,.355,1)
       transition-delay: $base-project-delay
 
     .context
       .text-column.appear-fade-up
-        transition-delay: $base-project-delay + 1.4s
+        transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + .6s
         &.delay-hero-inner
-          transition-delay: $base-project-delay + 1.6s
+          transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + .8s
       .aside.appear-fade-up
-        transition-delay: $base-project-delay + 1.6s
+        transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + .8s
         &.delay-hero-inner
-          transition-delay: $base-project-delay + 1.8s
+          transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + 1.0s
+
 
 
 </style>

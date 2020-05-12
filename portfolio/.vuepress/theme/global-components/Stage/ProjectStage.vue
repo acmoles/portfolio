@@ -120,12 +120,14 @@ export default {
 
 html:not(.disable-motion)
   .subtitle
-    transition-delay: $base-project-delay + 1s
+    transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + 0.2s
 
   .project-cta
-    transition-delay: $base-project-delay + 1.2s
+    transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + 0.4s
 
   .visual-grid
-    transition-delay: $base-project-delay + 1.4s
+    transition: $project-image-transition
+    transform: translate3d(0, 0, 0) scale3d(1.025, 1.025, 1)
+    transition-delay: $project-image-delay
 
 </style>

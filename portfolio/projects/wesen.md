@@ -22,9 +22,9 @@ next: ./stompy-robot
     <Heros-ImageHero name="wesen" src="/images/wesen/wesen-grid-render.jpg" alt="Wesen Studio examples" :noise="true"/>
   </template>
 </Stage-ProjectVisual>
-
+<!-- Can customers be creators? -->
 <Stage-ProjectStage ctaLabel="www.wesen.studio" ctaUrl="http://www.wesen.studio"
-description="Can customers be creators? Wesen enables anyone to create a pendant necklace that can be manufactured on demand by a blend of modern and traditional techniques." :fadeUpHero="false">
+description="Wesen enables anyone to create a unique pendant necklace which can be manufactured on demand by a blend of modern and traditional techniques." :fadeUpHero="false">
 
 <template v-slot:visual-grid>
   <!-- <figure class="image">

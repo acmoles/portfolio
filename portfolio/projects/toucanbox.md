@@ -27,6 +27,13 @@ description="A redesigned sign up funnel to improve communication, useability an
 <template v-slot:visual-grid>
   <figure class="image">
     <Heros-ImageHero name="toucanbox" src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage"/>
+    <!-- <b class="decoration svg-bee"/> -->
+    <!-- <b class="decoration svg-confetti-red"/> -->
+    <b class="decoration svg-confetti-yellow"/>
+    <b class="decoration svg-flash-blue"/>
+    <!-- <b class="decoration svg-flash-yellow"/> -->
+    <b class="decoration svg-yellow-splat"/>
+    <!-- <b class="decoration svg-pencil-parachute"/> -->
   </figure>
 </template>
 
