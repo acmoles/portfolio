@@ -1,7 +1,7 @@
 ---
 uid: 8
 title: Random International
-subtitle: Making an artwork
+subtitle: Making an installation
 type: single
 navStyle:
   style: dark

@@ -1,7 +1,7 @@
 ---
 uid: 3
 title: Experiments
-subtitle: Envisioning new interactions
+subtitle: Learning the tools of the future
 type: single
 navStyle:
   style: light
