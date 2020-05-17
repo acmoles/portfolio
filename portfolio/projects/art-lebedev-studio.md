@@ -1,7 +1,7 @@
 ---
 uid: 10
 title: Art Lebedev Studio
-subtitle: Channelling the personality of a renowned studio
+subtitle: Channelling an agency style
 type: single
 navStyle:
   style: dark
