@@ -1,7 +1,7 @@
 <template>
   <section
     class="section context background-noise"
-    :class="[ {'in-view': visible}, darkClass, lightClass, {'delay-hero': fadeUpHero}, {'wipe-up': doFade && readyForWipe} ]"
+    :class="[ {'in-view': visible}, {'has-shadow': box}, {'wipe-up': doFade && readyForWipe} ]"
     :style="{ paddingTop: paddingBottom, paddingBottom: paddingBottom, transform: 'translateY(' + displacement + 'px)' }"
   >
     <div
@@ -12,13 +12,13 @@
       <div class="columns">
         <div
           class="column is-two-thirds text-column appear-fade-up"
-          :class="[ {'in-view': visible}, {'delay-hero-inner': fadeUpHero} ]"
+          :class="{'in-view': visible}"
           >
           <slot name="main"></slot>
         </div>
         <div
           class="column aside appear-fade-up"
-          :class="[ {'in-view': visible}, {'delay-hero-inner': fadeUpHero} ]"
+          :class="{'in-view': visible}"
         >
           <slot name="side"></slot>
         </div>
@@ -40,8 +40,7 @@ export default {
   mixins: [fadeUpInLoad, topPadding],
 
   props: {
-    fadeUpHero: Boolean,
-    lightClass: String
+    box: Boolean
   },
 
   data () {
@@ -51,7 +50,7 @@ export default {
       displacement: null
     }
   },
-
+  // TODO only animate if scroll position = 0 ??
   mounted () {
     this.applyPadding()
     this.$forceNextTick(() => {
@@ -75,17 +74,6 @@ export default {
 
   computed: {
     // TODO make description slot pull from page metadata? Could also be used for SEO
-
-    lightDark () {
-      return this.$page.frontmatter.navStyle.style
-    },
-
-    darkClass () {
-      return {
-        'dark': this.lightDark === 'dark'
-      }
-    },
-
   }
 }
 
@@ -112,7 +100,7 @@ export default {
     &::before
       opacity: 0.16
 
-  .context.dark
+  .context.has-shadow
     background-color: $steel
     &::after
       content: ' '
@@ -162,13 +150,10 @@ export default {
 
     .context
       .text-column.appear-fade-up
-        transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + .6s
-        &.delay-hero-inner
-          transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + .8s
+        transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + .1s
+
       .aside.appear-fade-up
-        transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + .8s
-        &.delay-hero-inner
-          transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + 1.0s
+        transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + .2s
 
 
 

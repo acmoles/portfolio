@@ -38,7 +38,7 @@ description="Wesen enables anyone to create a unique pendant necklace which can 
 <!-- <li>Responsive web application</li>
 <li>2018</li> -->
 
-<Content-ContextSection lightClass="dark">
+<Content-ContextSection :box="true">
 
 <template v-slot:main>
 

@@ -30,7 +30,7 @@ description="Wesen is an experiment in turning customers into creators and build
 :::
 
 
-<Content-ContextSection lightClass="dark">
+<Content-ContextSection :box="true">
 
 <template v-slot:main>
 
@@ -67,11 +67,26 @@ CTO, product designer, two full-stack developers
 
 Test paragraph
 
-### Inner title
+### Industrial design
 
-### Inner title
+Nice sketches and pictures.
 
-### Inner title
+### Interaction design?
+
+Digital -> physical cross-over
+
+### Reflections
+
+Lots of toys with a digital component:
+
+* Games consoles
+* Wearables
+* Video and music players
+* AR/VR concepts
+* Coding educational
+
+Where we were involved in the concept phase and detailing the industrial design. Would have been nice to develop the interactivity further.
+
 ## Features
 
 **Built-in Markdown extensions**

@@ -16,7 +16,7 @@ next: ./toucan-research
 
 ::: slot top
 
-<Stage-ProjectVisual>
+<Stage-ProjectVisual :fadeless="true">
   <template v-slot:visual-background>
     <Heros-AbstractHero :noise="false"/>
   </template>
@@ -34,7 +34,7 @@ description="Wesen is an experiment in turning customers into creators and build
 </Stage-ProjectStage>
 :::
 
-<Content-ContextSection lightClass="dark">
+<Content-ContextSection :box="true">
 
 <template v-slot:main>
 

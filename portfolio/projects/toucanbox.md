@@ -41,7 +41,7 @@ description="A redesigned sign up funnel to improve communication, useability an
 
 :::
 
-<Content-ContextSection :fadeUpHero="true" lightClass="dark">
+<Content-ContextSection :box="true">
 
 <template v-slot:main>
 

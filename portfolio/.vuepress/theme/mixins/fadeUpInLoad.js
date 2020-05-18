@@ -6,6 +6,7 @@ export const fadeUpInLoad = {
       visible: false,
       intersected: false,
       interval: null,
+      oneTime: true,
     }
   },
 
@@ -31,13 +32,18 @@ export const fadeUpInLoad = {
     if (node.isIntersecting) {
         this.intersected = true
         this.$store.dispatch('incrementFadeCount')
-        this.observer.disconnect()
+
+        if (this.oneTime) {
+          this.observer.disconnect()
+        }
 
         if (this.pageLoadingStatus === 'finished') {
           this.$forceNextTick(() => {
             this.visible = true
           })
         }
+      } else {
+        this.visible = false
       }
   });
 
