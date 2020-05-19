@@ -33,7 +33,7 @@ description="Wesen is an experiment in turning customers into creators and build
 :::
 
 
-<Content-ContextSection lightClass="dark">
+<Content-ContextSection :box="true">
 
 <template v-slot:main>
 

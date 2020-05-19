@@ -5,27 +5,22 @@
 
       <div class="columns">
         <div
-          class="column stage-column is-two-thirds"
-          :class="{'hero-grid': fadeUpHero}"
+          class="column stage-column is-two-thirds appear-fade-up"
+          :class="{'in-view': visible}"
         >
-          <p
-            class="subtitle appear-fade-up"
-            :class="{'in-view': visible}"
-          >
+          <p class="subtitle">
             {{ description }}
           </p>
-          <div class="project-cta appear-fade-up" :class="{'in-view': visible}">
-            <ProjectExternalLink
-              :label="ctaLabel"
-              :href="ctaUrl"
-            />
-          </div>
+          <ProjectExternalLink
+            :label="ctaLabel"
+            :href="ctaUrl"
+          />
         </div>
 
         <div
           v-if="hasVisulGridSlot"
-          class="column visual-grid"
-          :class="[{'in-view': (visible && fadeUpHero)}, {'appear-fade-up': fadeUpHero}]"
+          class="column visual-grid appear-fade-up"
+          :class="{'in-view': visible}"
         >
           <slot name="visual-grid"></slot>
         </div>
@@ -53,7 +48,6 @@ export default {
     ctaLabel: String,
     ctaUrl: String,
     description: String,
-    fadeUpHero: Boolean
   },
 
   mixins: [fadeUpInLoad, topPadding],
@@ -119,15 +113,14 @@ export default {
 
 
 html:not(.disable-motion)
-  .subtitle
-    transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + 0.2s
-
-  .project-cta
-    transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + 0.4s
+  .stage-column
+    transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay
 
   .visual-grid
-    transition: $project-image-transition
-    transform: translate3d(0, 0, 0) scale3d(1.025, 1.025, 1)
-    transition-delay: $project-image-delay
+    transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + 0.4s
+
+    // transition: $project-image-transition
+    // transform: translate3d(0, 0, 0) scale3d(1.025, 1.025, 1)
+    // transition-delay: $project-image-delay
 
 </style>

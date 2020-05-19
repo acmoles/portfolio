@@ -6,8 +6,8 @@
     <div
       ref="parallax"
       class="parallax"
-      :class="[{'initial-parallax': readyForInitial}]"
-      :style="{transform: transform, opacity: opacity}">
+      :class="[{'in-view': visible}, {'appear-fade-up': animating && !fadeless}]"
+      :style="{transform: transform}">
       <slot name="visual-background"></slot>
     </div>
   </div>
@@ -18,64 +18,59 @@
 import updateOnScroll from 'uos'
 // import debounce from 'lodash.debounce'
 import { getScrollTop, getViewport } from '../../util'
+import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
 
 export default {
 
   props: {
-    noise: Boolean
+    noise: Boolean,
+    fadeless: Boolean
   },
   // TODO only do parallax and show div if needed (slot)
+  // TODO some comps want to be present at first e.g. abstract
+
+  mixins: [fadeUpInLoad],
 
   computed: {
     background () {
       return this.$page.frontmatter.background
     },
-    pageLoadingStatus () {
-      return this.$store.state.pageLoadingStatus
+    hasSlot () {
+      return !!this.$slots['visual-background']
     },
   },
 
   data () {
     return {
       el: null,
-      transform: `translate3d(0, 0 ,0)`,
-      opacity: 0,
-      readyForInitial: false,
+      transform: ``,
+      oneTime: false,
+      animating: true,
     }
   },
 
   mounted () {
-    this.el = this.$refs.parallax
+    // if (this.hasSlot) {
 
-    updateOnScroll(0, 1, progress => {
-      window.requestAnimationFrame(() => {
-        if (this.isInView(this.el) && !this.readyForInitial) {
-          this.animateElement()
-        }
-      })
-    })
-
-    this.$forceNextTick(() => {
-      if (getScrollTop() === 0) {
-        this.transform = `translate3d(0, 0, 0) scale3d(1.025, 1.025, 1)`
-      }
-    })
-
-  },
-
-  watch: {
-    pageLoadingStatus (latest, last) {
-      if (latest === 'finished') {
-        this.readyForInitial = true
-        this.$nextTick(() => {
-          this.opacity = 1
-          this.transform = `translate3d(0, 0, 0) scale3d(1, 1, 1)`
-          setTimeout(() => {
-            this.readyForInitial = false
-          }, 8000)
+      updateOnScroll(0, 1, progress => {
+        window.requestAnimationFrame(() => {
+          if (this.visible) {
+            this.animateElement()
+          }
         })
-      }
-    }
+      })
+
+      this.$nextTick(() => {
+
+        this.el = this.$refs.parallax
+        this.el.addEventListener('transitionend', () => {
+          console.log('Transition ended - listener')
+          this.animating = false
+        })
+
+      })
+
+    // }
   },
 
   methods: {
@@ -84,14 +79,6 @@ export default {
       if (animationValue >= 0) {
         this.transform = `translate3d(0, ${animationValue}px ,0)`
       }
-    },
-    isInView (el) {
-      // TODO // OPTIMIZE: with IntersectionObserver
-      let rect = el.getBoundingClientRect()
-      return (
-        rect.bottom >= 0 &&
-        rect.top <= getViewport('y')
-      )
     },
   }
 
@@ -110,16 +97,11 @@ export default {
     position: absolute
     overflow: hidden
     .parallax
-      left: 0
+      height: 100vh
+      width: 100%
       position: absolute
       will-change: transform
-      right: 0
-      top: 0
-      bottom: 0
-      opacity: 0
-      &.initial-parallax
-        transition: $project-image-transition
-        transition-delay: $project-image-delay
+      top: -24px
 
     img
       object-fit: cover
@@ -138,5 +120,9 @@ export default {
       // min-height: 100%
       // min-width: 100%
 
+  html:not(.disable-motion)
+    .parallax.appear-fade-up
+      transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + 0.4s
+      transition-duration: 2s
 
 </style>

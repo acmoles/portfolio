@@ -29,7 +29,7 @@ description="Create by toucanBox explores whether adding digital value to the ph
 
 :::
 
-<Content-ContextSection lightClass="dark">
+<Content-ContextSection :box="true">
 
 <template v-slot:main>
 

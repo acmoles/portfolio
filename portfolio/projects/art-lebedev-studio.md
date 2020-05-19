@@ -23,7 +23,7 @@ next: ./lego
   </template>
 </Stage-ProjectVisual>
 
-<Stage-ProjectStage ctaLabel="www.ecosia.org" ctaUrl="https://www.ecosia.org"
+<Stage-ProjectStage ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/id/"
 description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="false">
 
 </Stage-ProjectStage>
@@ -33,7 +33,7 @@ description="Wesen is an experiment in turning customers into creators and build
 
 
 
-<Content-ContextSection lightClass="dark">
+<Content-ContextSection :box="true">
 
 <template v-slot:main>
 
@@ -76,17 +76,31 @@ _I have omitted confidential information in this case study. All information and
 
 # Project 3
 
+https://unsplash.com/photos/L4jrg4c7928
+
+https://www.artlebedev.ru/anthony/
+
 ## First Title
 
 Test paragraph
 
-### Inner title
+https://www.artlebedev.ru/nita/
 
 ### Inner title
 
+https://www.artlebedev.com/veloparkus/8/process/
+
 ### Inner title
+
+https://www.artlebedev.ru/oktopus/
+
+### Inner title
+
+https://www.artlebedev.ru/scout/exterior/
 
 ## Second Title
+
+https://www.artlebedev.ru/ironlogic/
 
 ### Inner title
 
