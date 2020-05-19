@@ -64,7 +64,6 @@ export default {
 
         this.el = this.$refs.parallax
         this.el.addEventListener('transitionend', () => {
-          console.log('Transition ended - listener')
           this.animating = false
         })
 

@@ -1,25 +1,9 @@
 <template>
-  <section class="section" :class="padding">
-      <div class="container is-fullhd">
-
-        <div v-if="content" class="columns">
-          <div class="column is-two-thirds content">
-            <slot name="content"></slot>
-            <br>
-          </div>
-        </div>
-
-        <div class="figure-container max-80">
-          <figure class="image" :class="$imageClass">
-            <img class="lazyload medium-zoom" :data-src="url" :alt="alt">
-          </figure>
-          <figcaption>
-            {{ caption }}
-          </figcaption>
-        </div>
-
-      </div>
-    </section>
+  <section class="section full-image">
+    <figure class="image is-2by1">
+      <img class="lazyload medium-zoom" :data-src="url" :alt="alt">
+    </figure>
+  </section>
 </template>
 
 <script>
@@ -29,22 +13,8 @@ export default {
   props: {
     url: String,
     alt: String,
-    caption: String,
-    content: Boolean,
-    padding: String,
-    imageClass: String,
-  },
-
-  computed: {
-    $imageClass () {
-      if (this.imageClass) {
-        return this.imageClass
-      } else {
-        return 'is-16by9'
-      }
-    }
   }
-  
+
 }
 
 </script>
@@ -53,5 +23,7 @@ export default {
   @import "../../../styles/variables.sass"
   @import "../../../styles/mixins.sass"
 
+  .section.full-image
+    padding: 0
 
 </style>

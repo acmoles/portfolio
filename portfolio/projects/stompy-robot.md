@@ -4,7 +4,7 @@ title: Stompy Robot
 subtitle: Co-founding an indie games studio
 type: single
 navStyle:
-  style: dark
+  style: light
   tint: regular-tint
   progress: light
 background: stompy
@@ -69,158 +69,99 @@ _I have omitted confidential information in this case study. All information and
 
 
 
-<Content-TextSection>
+<Content-ImageFrames-MainImageSection imageClass="is-16by9" url="https://bulma.io/images/placeholders/640x360.png" alt="placeholder" :aside="true" :content="true">
 
-# Project 3
+<template v-slot:content>
 
-## First Title
+## Nova
 
-Test paragraph
+<p class="subtitle">
+  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
+</p>
 
-### Inner title
+In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 
-### Inner title
+Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
-### Inner title
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
 
-## Second Title
+</template>
 
-### Inner title
+<template v-slot:aside>
 
-### Inner title
+Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
-## Third Title
-## Features
+</template>
 
-**Built-in Markdown extensions**
-
-* [Table of Contents](../guide/markdown.md#table-of-contents)
-* [Custom Containers](../guide/markdown.md#custom-containers)
-* [Line Highlighting](../guide/markdown.md#line-highlighting-in-code-blocks)
-* [Line Numbers](../guide/markdown.md#line-numbers)
-* [Import Code Snippets](../guide/markdown.md#import-code-snippets)
-
-**Using Vue in Markdown**
-
-* [Templating](../guide/using-vue.md#templating)
-* [Using Components](../guide/using-vue.md#using-components)
-
-**Vue-powered custom theme system**
-
-* [Metadata](../theme/writing-a-theme.md#site-and-page-metadata)
-* [Content Excerpt](../theme/writing-a-theme.md#content-excerpt)
-
-**Default theme**
-
-* Responsive layout
-* [Optional Homepage](../theme/default-theme-config.md#homepage)
-* [Simple out-of-the-box header-based search](../theme/default-theme-config.md#built-in-search)
-* Customizable [navbar](../theme/default-theme-config.md#navbar) and [sidebar](../theme/default-theme-config.md#sidebar)
-* [Auto-generated GitHub link and page edit links](../theme/default-theme-config.md#git-repo-and-edit-links)
-* [PWA: Popup UI to refresh contents](../theme/default-theme-config.md#popup-ui-to-refresh-contents)
-* [Last Updated](../theme/default-theme-config.md#last-updated)
-* [Multi-Language Support](../guide/i18n.md)
-
-**Blog theme**
-
-* [Documentation](https://vuepress-theme-blog.ulivz.com/)
-* [Live Example](https://ulivz.com/)
+</Content-ImageFrames-MainImageSection>
 
 
-**Plugin**
-
-* [Powerful Plugin API](../plugin/README.md)
-* [Blog Plugin](https://vuepress-plugin-blog.ulivz.com/)
-* [Search Plugin](../plugin/official/plugin-search.md)
-* [PWA Plugin](../plugin/official/plugin-pwa.md)
-* [Google Analytics Plugin](../plugin/official/plugin-google-analytics.md)
-* ...
-
-## Why Not ...?
-
-### Nuxt
-
-Nuxt is capable of doing what VuePress does, but it’s designed for building applications. VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.
-
-### Docsify / Docute
-
-Both are great projects and also Vue-powered. Except they are both fully runtime-driven and therefore not SEO-friendly. If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.
-
-### Hexo
-
-Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site. The biggest problem is that its theming system is static and string-based - we want to take advantage of Vue for both the layout and the interactivity. Also, Hexo’s Markdown rendering isn’t the most flexible to configure.
 
 
-### Inner title
 
-# FAQ
+<Content-ImageFrames-SquareImagesRow :content="true" :images="[
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+]">
 
-## Why can’t `palette.styl` and `index.styl` merge into one API?
+<template slot="content">
 
-The `palette.styl` is responsible for global color settings. During compilation, theme color constants should be resolved by the preprocessor first and then be applied to the global context.
+## Spaced
 
-But for `index.styl`, its job is to override the default styles of application. According to the priority principle of CSS, the later style has a higher priority, so it should be generated at the end of the CSS file.
+<p class="subtitle">
+  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
+</p>
 
-A simple diagram describing the Stylus compiler’s compilation order as follows:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
 
-@flowstart
-stage1=>operation: palette.styl
-stage2=>operation: default app styles
-stage3=>operation: index.styl
+</template>
 
-stage1->stage2->stage3
-@flowend
+<template slot="slot1">
 
-<br>
+Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
 
-## What’s the differences between the `clientDynamicModules` and `enhanceAppFiles`?
+</template>
 
-Let’s take a look back first, both `clientDynamicModules` and `enhanceAppFiles` can generate modules with dynamic JavaScript code during compile time.
+<template slot="slot2">
 
-The difference is that the files generated by `enhanceAppFiles` will be loaded and applied automatically when the application is initialized on the client-side, while the files generated by `clientDynamicModules` need to be imported as `@dynamic/xxx` by the users themselves.
+Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
 
-```js
-module.exports = (options, ctx) => ({
-  // Import by entry file automatically.
-  enhanceAppFiles: {
-    name: 'constans-a',
-    content: `...`
-  },
+</template>
 
-  // Need to use via: import '@dynamic/constans-b'
-  clientDynamicModules() {
-    return {
-      name: 'constans-b',
-      content: `...`
-    }
-  }
-})
-```
+<template slot="slot3">
 
-## When do I need to use `enhanceAppFiles`?
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis.
 
-1. I want to execute some code on the client-side automatically.
-2. I don’t need to reuse this module.
+</template>
 
-**Example:**
-
-- [@vuepress/plugin-register-components](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/plugin-register-components/index.js#L24): Automatically registering components on the client-side.
-- [@vuepress/plugin-google-analytics](https://github.com/vuejs/vuepress/blob/master/packages/@vuepress/plugin-google-analytics/enhanceAppFile.js): Automatically set up Google Analytics.
-
-## When do I need to use `clientDynamicModules`?
-
-1. I want to generate a dynamic module that needs to be invoked at a specific time.
-2. I want to use this module in different modules.
-
-**Example:**
-
-- [@vuepress/plugin-blog](https://github.com/vuepressjs/vuepress-plugin-blog/blob/master/src/node/index.ts#L208): Using compile-time metadata to generate some dynamic blog-related modules and initialize them on the client-side by using `enhanceAppFiles`.
-
-### Inner title
-
-### Inner title
-
-### Inner title
+</Content-ImageFrames-SquareImagesRow>
 
 
-</Content-TextSection>
+
+
+<Content-ImageFrames-SquareImagesRow class="section-last-child" padding="is-medium" :content="false" :images="[
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+]">
+
+<template slot="slot1">
+
+Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
+
+</template>
+
+<template slot="slot2">
+
+Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+
+</template>
+
+<template slot="slot3">
+
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
+
+</template>
+
+</Content-ImageFrames-SquareImagesRow>

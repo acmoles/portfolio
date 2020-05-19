@@ -1,38 +1,27 @@
 <template>
-  <section class="section quote-background">
+  <section class="section is-large project-card noise-light" :class="[background]">
     <div class="container is-fullhd content">
-      <div class="columns">
-        <div class="column is-two-thirds">
-          <slot name="main"></slot>
-        </div>
-        <div class="column">
-          <slot name="side"></slot>
-        </div>
-      </div>
+      <p class="subtitle">{{ quote }}</p>
+      <p class="attribute">{{ attribute }}</p>
     </div>
   </section>
 </template>
 
 <script>
 
-import ExternalIcon from '@theme/components/icons/ExternalIcon.vue'
-
 export default {
 
-  components: { ExternalIcon },
-
   props: {
-    label: String
+    quote: String,
+    attribute: String,
   },
 
   computed: {
-  },
-
-  mounted() {
-  },
-
-  methods: {
+    background () {
+      return this.$page.frontmatter.background
+    },
   }
+
 }
 
 </script>
@@ -40,6 +29,5 @@ export default {
 <style lang="sass">
   @import "../../styles/variables.sass"
   @import "../../styles/mixins.sass"
-
 
 </style>

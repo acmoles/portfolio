@@ -18,6 +18,7 @@
           <i class="icon is-large point-icon"><img :src="p.src" :alt="p.alt"/></i>
           <slot v-if="p.slot" :name="p.slot"></slot>
           <template v-else>
+            <h4>{{ p.title }}</h4>
             <p>{{ p.description }}</p>
           </template>
         </div>

@@ -86,19 +86,15 @@ export default {
   .context
     background-color: $black
     position: relative
-    &::before
-      content: ' '
-      pointer-events: none
-      position: absolute
-      width: 100%
-      height: 4em
-      background-image: linear-gradient(360deg, $pitch 0%, rgba($pitch,0.42) 40%, rgba($pitch,0.00) 100%)
-      top: -4em
-      opacity: 0.1
-
-  .dark .context
-    &::before
-      opacity: 0.16
+    // &::before
+    //   content: ' '
+    //   pointer-events: none
+    //   position: absolute
+    //   width: 100%
+    //   height: 4em
+    //   background-image: linear-gradient(360deg, $pitch 0%, rgba($pitch,0.42) 40%, rgba($pitch,0.00) 100%)
+    //   top: -4em
+    //   opacity: 0.1
 
   .context.has-shadow
     background-color: $steel

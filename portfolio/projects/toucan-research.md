@@ -114,11 +114,11 @@ Planning and management
 
 <Content-PointsSection :content="true" :points="[
 { src:'/svg-icons/icon_sad.svg', alt:'sad face', description:'Projects completed for small businesses and startups.' },
-{ src:'/svg-icons/icon_time.svg', alt:'clock', description:'If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.' },
-{ src:'/svg-icons/icon_idea.svg', alt:'lightbulb', description:'Years experience working for clients like Google and Amazon.' },
-{ src:'/svg-icons/icon_search.svg', alt:'search', description:'VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.' },
-{ src:'/svg-icons/icon_docs.svg', alt:'documents', description:'Award winning team members.' },
-{ src:'/svg-icons/icon_device.svg', alt:'device', description:'Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site.' },
+{ src:'/svg-icons/icon_time.svg', alt:'clock', title:'title', description:'If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.' },
+{ src:'/svg-icons/icon_idea.svg', alt:'lightbulb', title:'title', description:'Years experience working for clients like Google and Amazon.' },
+{ src:'/svg-icons/icon_search.svg', alt:'search', title:'title', description:'VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.' },
+{ src:'/svg-icons/icon_docs.svg', alt:'documents', title:'title', description:'Award winning team members.' },
+{ src:'/svg-icons/icon_device.svg', alt:'device', title:'title', description:'Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site.' },
 ]">
 
 <template v-slot:content>
@@ -152,17 +152,11 @@ Customer acquisition and retention were two of the most discussed performance me
 <template v-slot:aside>
 
 <div class="columns is-gapless">
-
-<div class="column is-two-thirds">
-
-<figure class="image is-square">
-
-<img class="lazyload" data-src="/images/toucan-rnd/page.jpg" alt="magazine page which links to digital content">
-
-</figure>
-
-</div>
-
+  <div class="column is-two-thirds">
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/toucan-rnd/page.jpg" alt="magazine page which links to digital content">
+    </figure>
+  </div>
 </div>
 
 <figcaption>
@@ -236,7 +230,7 @@ his project however, focused on an equally important but somewhat subtler metric
 
 
 
-<Content-LessonsSection padding="is-large" :content="true" :aside="true">
+<Content-MainAsideSection padding="is-large" :content="true" :aside="true">
 
 <template slot="content">
 
@@ -273,9 +267,7 @@ This project however, focused on an equally important but somewhat subtler metri
 
 </template>
 
-
-
-</Content-LessonsSection>
+</Content-MainAsideSection>
 
 
 

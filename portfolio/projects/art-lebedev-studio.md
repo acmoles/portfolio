@@ -72,298 +72,40 @@ _I have omitted confidential information in this case study. All information and
 
 
 
-<Content-TextSection>
+<Content-ImageFrames-SquareImagesRow padding="is-large" :content="true" :images="[
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+]">
 
-# Project 3
+<template slot="content">
 
-https://unsplash.com/photos/L4jrg4c7928
+## Highlights
 
-https://www.artlebedev.ru/anthony/
+</template>
 
-## First Title
+<template slot="slot1">
 
-Test paragraph
+#### NITA air traffic control
 
-https://www.artlebedev.ru/nita/
+Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
 
-### Inner title
+</template>
 
-https://www.artlebedev.com/veloparkus/8/process/
+<template slot="slot2">
 
-### Inner title
+#### Oktopus toilet plunger
 
-https://www.artlebedev.ru/oktopus/
+Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
 
-### Inner title
+</template>
 
-https://www.artlebedev.ru/scout/exterior/
+<template slot="slot3">
 
-## Second Title
+#### Scout helicopter
 
-https://www.artlebedev.ru/ironlogic/
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis.
 
-### Inner title
+</template>
 
-### Inner title
-
-## Third Title
-## Features
-
-**Built-in Markdown extensions**
-
-* [Table of Contents](../guide/markdown.md#table-of-contents)
-* [Custom Containers](../guide/markdown.md#custom-containers)
-* [Line Highlighting](../guide/markdown.md#line-highlighting-in-code-blocks)
-* [Line Numbers](../guide/markdown.md#line-numbers)
-* [Import Code Snippets](../guide/markdown.md#import-code-snippets)
-
-**Using Vue in Markdown**
-
-* [Templating](../guide/using-vue.md#templating)
-* [Using Components](../guide/using-vue.md#using-components)
-
-**Vue-powered custom theme system**
-
-* [Metadata](../theme/writing-a-theme.md#site-and-page-metadata)
-* [Content Excerpt](../theme/writing-a-theme.md#content-excerpt)
-
-**Default theme**
-
-* Responsive layout
-* [Optional Homepage](../theme/default-theme-config.md#homepage)
-* [Simple out-of-the-box header-based search](../theme/default-theme-config.md#built-in-search)
-* Customizable [navbar](../theme/default-theme-config.md#navbar) and [sidebar](../theme/default-theme-config.md#sidebar)
-* [Auto-generated GitHub link and page edit links](../theme/default-theme-config.md#git-repo-and-edit-links)
-* [PWA: Popup UI to refresh contents](../theme/default-theme-config.md#popup-ui-to-refresh-contents)
-* [Last Updated](../theme/default-theme-config.md#last-updated)
-* [Multi-Language Support](../guide/i18n.md)
-
-**Blog theme**
-
-* [Documentation](https://vuepress-theme-blog.ulivz.com/)
-* [Live Example](https://ulivz.com/)
-
-
-**Plugin**
-
-* [Powerful Plugin API](../plugin/README.md)
-* [Blog Plugin](https://vuepress-plugin-blog.ulivz.com/)
-* [Search Plugin](../plugin/official/plugin-search.md)
-* [PWA Plugin](../plugin/official/plugin-pwa.md)
-* [Google Analytics Plugin](../plugin/official/plugin-google-analytics.md)
-* ...
-
-## Why Not ...?
-
-### Nuxt
-
-Nuxt is capable of doing what VuePress does, but it’s designed for building applications. VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.
-
-### Docsify / Docute
-
-Both are great projects and also Vue-powered. Except they are both fully runtime-driven and therefore not SEO-friendly. If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.
-
-### Hexo
-
-Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site. The biggest problem is that its theming system is static and string-based - we want to take advantage of Vue for both the layout and the interactivity. Also, Hexo’s Markdown rendering isn’t the most flexible to configure.
-
-
-### Inner title
-
-# FAQ
-
-## Why can’t `palette.styl` and `index.styl` merge into one API?
-
-The `palette.styl` is responsible for global color settings. During compilation, theme color constants should be resolved by the preprocessor first and then be applied to the global context.
-
-But for `index.styl`, its job is to override the default styles of application. According to the priority principle of CSS, the later style has a higher priority, so it should be generated at the end of the CSS file.
-
-A simple diagram describing the Stylus compiler’s compilation order as follows:
-
-@flowstart
-stage1=>operation: palette.styl
-stage2=>operation: default app styles
-stage3=>operation: index.styl
-
-stage1->stage2->stage3
-@flowend
-
-<br>
-
-## What’s the differences between the `clientDynamicModules` and `enhanceAppFiles`?
-
-Let’s take a look back first, both `clientDynamicModules` and `enhanceAppFiles` can generate modules with dynamic JavaScript code during compile time.
-
-The difference is that the files generated by `enhanceAppFiles` will be loaded and applied automatically when the application is initialized on the client-side, while the files generated by `clientDynamicModules` need to be imported as `@dynamic/xxx` by the users themselves.
-
-```js
-module.exports = (options, ctx) => ({
-  // Import by entry file automatically.
-  enhanceAppFiles: {
-    name: 'constans-a',
-    content: `...`
-  },
-
-  // Need to use via: import '@dynamic/constans-b'
-  clientDynamicModules() {
-    return {
-      name: 'constans-b',
-      content: `...`
-    }
-  }
-})
-```
-
-## When do I need to use `enhanceAppFiles`?
-
-1. I want to execute some code on the client-side automatically.
-2. I don’t need to reuse this module.
-
-**Example:**
-
-- [@vuepress/plugin-register-components](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/plugin-register-components/index.js#L24): Automatically registering components on the client-side.
-- [@vuepress/plugin-google-analytics](https://github.com/vuejs/vuepress/blob/master/packages/@vuepress/plugin-google-analytics/enhanceAppFile.js): Automatically set up Google Analytics.
-
-## When do I need to use `clientDynamicModules`?
-
-1. I want to generate a dynamic module that needs to be invoked at a specific time.
-2. I want to use this module in different modules.
-
-**Example:**
-
-- [@vuepress/plugin-blog](https://github.com/vuepressjs/vuepress-plugin-blog/blob/master/src/node/index.ts#L208): Using compile-time metadata to generate some dynamic blog-related modules and initialize them on the client-side by using `enhanceAppFiles`.
-
-### Inner title
-
-# FAQ
-
-## Why can’t `palette.styl` and `index.styl` merge into one API?
-
-The `palette.styl` is responsible for global color settings. During compilation, theme color constants should be resolved by the preprocessor first and then be applied to the global context.
-
-But for `index.styl`, its job is to override the default styles of application. According to the priority principle of CSS, the later style has a higher priority, so it should be generated at the end of the CSS file.
-
-A simple diagram describing the Stylus compiler’s compilation order as follows:
-
-@flowstart
-stage1=>operation: palette.styl
-stage2=>operation: default app styles
-stage3=>operation: index.styl
-
-stage1->stage2->stage3
-@flowend
-
-<br>
-
-## What’s the differences between the `clientDynamicModules` and `enhanceAppFiles`?
-
-Let’s take a look back first, both `clientDynamicModules` and `enhanceAppFiles` can generate modules with dynamic JavaScript code during compile time.
-
-The difference is that the files generated by `enhanceAppFiles` will be loaded and applied automatically when the application is initialized on the client-side, while the files generated by `clientDynamicModules` need to be imported as `@dynamic/xxx` by the users themselves.
-
-```js
-module.exports = (options, ctx) => ({
-  // Import by entry file automatically.
-  enhanceAppFiles: {
-    name: 'constans-a',
-    content: `...`
-  },
-
-  // Need to use via: import '@dynamic/constans-b'
-  clientDynamicModules() {
-    return {
-      name: 'constans-b',
-      content: `...`
-    }
-  }
-})
-```
-
-## When do I need to use `enhanceAppFiles`?
-
-1. I want to execute some code on the client-side automatically.
-2. I don’t need to reuse this module.
-
-**Example:**
-
-- [@vuepress/plugin-register-components](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/plugin-register-components/index.js#L24): Automatically registering components on the client-side.
-- [@vuepress/plugin-google-analytics](https://github.com/vuejs/vuepress/blob/master/packages/@vuepress/plugin-google-analytics/enhanceAppFile.js): Automatically set up Google Analytics.
-
-## When do I need to use `clientDynamicModules`?
-
-1. I want to generate a dynamic module that needs to be invoked at a specific time.
-2. I want to use this module in different modules.
-
-**Example:**
-
-- [@vuepress/plugin-blog](https://github.com/vuepressjs/vuepress-plugin-blog/blob/master/src/node/index.ts#L208): Using compile-time metadata to generate some dynamic blog-related modules and initialize them on the client-side by using `enhanceAppFiles`.
-
-### Inner title
-
-# FAQ
-
-## Why can’t `palette.styl` and `index.styl` merge into one API?
-
-The `palette.styl` is responsible for global color settings. During compilation, theme color constants should be resolved by the preprocessor first and then be applied to the global context.
-
-But for `index.styl`, its job is to override the default styles of application. According to the priority principle of CSS, the later style has a higher priority, so it should be generated at the end of the CSS file.
-
-A simple diagram describing the Stylus compiler’s compilation order as follows:
-
-@flowstart
-stage1=>operation: palette.styl
-stage2=>operation: default app styles
-stage3=>operation: index.styl
-
-stage1->stage2->stage3
-@flowend
-
-<br>
-
-## What’s the differences between the `clientDynamicModules` and `enhanceAppFiles`?
-
-Let’s take a look back first, both `clientDynamicModules` and `enhanceAppFiles` can generate modules with dynamic JavaScript code during compile time.
-
-The difference is that the files generated by `enhanceAppFiles` will be loaded and applied automatically when the application is initialized on the client-side, while the files generated by `clientDynamicModules` need to be imported as `@dynamic/xxx` by the users themselves.
-
-```js
-module.exports = (options, ctx) => ({
-  // Import by entry file automatically.
-  enhanceAppFiles: {
-    name: 'constans-a',
-    content: `...`
-  },
-
-  // Need to use via: import '@dynamic/constans-b'
-  clientDynamicModules() {
-    return {
-      name: 'constans-b',
-      content: `...`
-    }
-  }
-})
-```
-
-## When do I need to use `enhanceAppFiles`?
-
-1. I want to execute some code on the client-side automatically.
-2. I don’t need to reuse this module.
-
-**Example:**
-
-- [@vuepress/plugin-register-components](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/plugin-register-components/index.js#L24): Automatically registering components on the client-side.
-- [@vuepress/plugin-google-analytics](https://github.com/vuejs/vuepress/blob/master/packages/@vuepress/plugin-google-analytics/enhanceAppFile.js): Automatically set up Google Analytics.
-
-## When do I need to use `clientDynamicModules`?
-
-1. I want to generate a dynamic module that needs to be invoked at a specific time.
-2. I want to use this module in different modules.
-
-**Example:**
-
-- [@vuepress/plugin-blog](https://github.com/vuepressjs/vuepress-plugin-blog/blob/master/src/node/index.ts#L208): Using compile-time metadata to generate some dynamic blog-related modules and initialize them on the client-side by using `enhanceAppFiles`.
-
-### Inner title
-
-
-</Content-TextSection>
+</Content-ImageFrames-SquareImagesRow>

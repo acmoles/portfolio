@@ -26,6 +26,7 @@ $link-visited: $darkPurple
 
 $border: $silver
 $scheme-main: $black
+$hr-background-color: $slate
 
 // Buttons
 $radius-small: 3px
@@ -40,6 +41,12 @@ $button-transition: background-color 200ms ease, color 200ms ease
 
 $button-custom-text-color: lighten($silver, 10%)
 $button-custom-hover-color: lighten($slate, 5%)
+
+// Box
+$box-background-color: $steel
+$box-radius: $radius-small
+$box-shadow: $button-shadow
+$box-padding: 2em
 
 // Footer
 $footer-background-color: transparent
@@ -69,7 +76,6 @@ $navbar-dropdown-boxed-shadow: $button-shadow
 $speed: 200ms
 
 // Responsive
-
 $gap: 96px
 $tablet: 769px
 $desktop: 960px + (2 * $gap)
@@ -78,10 +84,10 @@ $fullhd: 1344px + (2 * $gap)
 $largeformat: 1600px
 
 // Sections
-
-$section-padding: 12rem 0 0 0
-$section-padding-medium: 10rem 0
-$section-padding-large: 12rem 0
+$section-base-padding: 13rem
+$section-padding: $section-base-padding 0 0 0
+$section-padding-medium: 7rem 0 0 0
+$section-padding-large: $section-base-padding 0 14rem 0
 
 // Columns
 $column-gap: 2em

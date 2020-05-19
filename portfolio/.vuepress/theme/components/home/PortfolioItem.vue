@@ -218,12 +218,12 @@ export default {
     background-color: $orange
     background-image: $gradientMid
   &.dark
-    background-color: $steel
+    background-color: $slate
     background-image: $gradientSubtle
     &.project-panel::after
       content: none
   &.stompy
-    background-color: $steel
+    background-color: $silver
     &.project-panel::after
       content: none
   &.green

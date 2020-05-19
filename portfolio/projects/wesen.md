@@ -4,7 +4,7 @@ title: Wesen
 subtitle: Turning customers into creators
 type: double-left-top
 navStyle:
-  style: dark
+  style: light
   tint: dark
   progress: light
 background: dark
@@ -73,159 +73,538 @@ Personal project
 
 </Content-ContextSection>
 
+
+
+
+<Content-ThreeColumnSection padding="is-large">
+
+<template v-slot:column1>
+
+###  The challenge
+
+Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat.
+
+</template>
+
+<template v-slot:column2>
+
+### The outcome
+
+Donec suscipit pretium ipsum eget dapibus. Nunc commodo metus sit amet nunc sagittis, ac sodales leo ornare. Sed vel augue vitae arcu pulvinar dapibus. Mauris quis magna vitae massa gravida vestibulum.
+
+
+</template>
+
+<template v-slot:column3>
+
+### My role
+
+Proin eget porttitor neque:
+~ Customer research and user testing
+~ Prototyping and design iteration
+~ Frontend development
+~ Analysis and evaluation
+
+</template>
+
+</Content-ThreeColumnSection>
+
+
+
+
+<Content-MainSectionDivider aside="Section 1 of 3" title="Discovery"/>
+
+
+
+
+<Content-PointsSection :content="true" :points="[
+{ src:'/svg-icons/icon_sad.svg', alt:'sad face', description:'Projects completed for small businesses and startups.' },
+{ src:'/svg-icons/icon_time.svg', alt:'clock', title:'title', description:'If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.' },
+{ src:'/svg-icons/icon_idea.svg', alt:'lightbulb', title:'title', description:'Years experience working for clients like Google and Amazon.' },
+{ src:'/svg-icons/icon_search.svg', alt:'search', title:'title', description:'VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.' },
+{ src:'/svg-icons/icon_docs.svg', alt:'documents', title:'title', description:'Award winning team members.' },
+{ src:'/svg-icons/icon_device.svg', alt:'device', title:'title', description:'Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site.' },
+]">
+
+<template v-slot:content>
+
+## Research
+
+<p class="subtitle">
+  Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+</p>
+
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat.
+
+</template>
+
+</Content-PointsSection>
+
+
+
+
+<Content-ThreeColumnSection :content="true">
+
+<template v-slot:content>
+
+## User profiles
+
+Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+
+</template>
+
+<template v-slot:column1>
+
+####  Gifter
+
+---
+
+*Buyer persona*
+
+Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
+
+**Suspendisse ornare et**
+
+Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis.
+
+Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
+
+Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
+
+Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+
+</template>
+
+<template v-slot:column2>
+
+#### Enthusiast
+
+---
+
+*Buyer persona*
+
+Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
+
+**Aenean et nunc tortor**
+
+Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+**Aenean et nunc tortor**
+
+Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+</template>
+
+<template v-slot:column3>
+
+<figure class="image is-9by16">
+  <img class="lazyload" data-src="https://bulma.io/images/placeholders/360x640.png" alt="#">
+</figure>
+
+</template>
+
+</Content-ThreeColumnSection>
+
+
+
+
+
+<Content-ThreeColumnSection padding="is-large" :content="true">
+
+<template v-slot:content>
+
+## Scope and objectives
+
+Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis.
+
+</template>
+
+<template v-slot:column1>
+
+####  Gifter friendly
+
+---
+
+Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
+
+Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis.
+
+Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
+
+Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
+
+
+</template>
+
+<template v-slot:column2>
+
+#### End-to-end (place and order)
+
+---
+
+Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+</template>
+
+<template v-slot:column3>
+
+<figure class="image is-5by3">
+  <img class="lazyload" data-src="https://bulma.io/images/placeholders/800x480.png" alt="#">
+</figure>
+<figcaption>
+
+Nulla at arcu sagittis, egestas libero ut, finibus massa.
+
+</figcaption>
+
+</template>
+
+</Content-ThreeColumnSection>
+
+
+
+
+<Content-ImageFrames-FullImageSection url="https://bulma.io/images/placeholders/640x320.png" alt="#"/>
+
+
+
+
+<Content-ImageFrames-SquareImagesRow :content="true" :images="[
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+]">
+
+<template slot="content">
+
+## Low-fi Prototyping
+
+<p class="subtitle">
+  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
+</p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
+
+</template>
+
+<template slot="slot1">
+
+#### Blender rigging test
+
+Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
+
+Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
+
+</template>
+
+<template slot="slot2">
+
+#### WebGL basic interactive
+
+Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
+
+</template>
+
+<template slot="slot3">
+
+#### WebGL feasibility
+
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
+
+</template>
+
+</Content-ImageFrames-SquareImagesRow>
+
+
+
+
+<Content-MainAsideSection padding="is-large" :content="true" :aside="true">
+
+<template slot="content">
+
+## Lessons from user testing
+
+Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper. Integer id aliquam quam. Pellentesque purus libero, mollis id ante nec, euismod fermentum justo. In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+
+</template>
+
+<template>
+
+**Observation** | **Remedy** |
+--- | --- |
+Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout |
+Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added skirts, wellington boots and several other accessories |
+Cras mollis sodales urna, eu ultrices nibh lobortis ut. Fusce eu pellentesque nulla. | I observed children dragging items off the screen, attempting to delete them, so made that actually work |
+Certain types of accessory like hats, clothes and shoes quickly cluttered the screen and didnt make sense out of their intended positions | I made new placements in specific categories (e.g. hair) remove the previous accessory of that type. This proved to be an intuitive limitation |
+{.table .is-fullwidth}
+
+</template>
+
+<template slot="aside">
+
+<div class="columns is-gapless">
+  <div class="column is-two-thirds">
+    <figure class="image is-square">
+      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="toucanBox magazines">
+    </figure>
+  </div>
+</div>
+
+</template>
+
+</Content-MainAsideSection>
+
+
+
+
+<Content-ImageFrames-FullImageSection url="https://bulma.io/images/placeholders/640x320.png" alt="#"/>
+
+
+
+
+<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="https://bulma.io/images/placeholders/640x360.png" alt="placeholder" :aside="true" :content="true">
+
+<template v-slot:content>
+
+## E-commerce experience
+
+<p class="subtitle">
+  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
+</p>
+
+In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+
+### Input validation for 3D geometry
+
+Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis.
+
+Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
+
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+
+</template>
+
+<template v-slot:aside>
+
+<div class="box">
+
+Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
+
+</div>
+
+
+**Platform**
+Responsive web application
+
+**Engine**
+E-commerce
+
+**Styling**
+2018
+
+**Input**
+Personal project
+
+**Animation**
+12 minutes
+
+</template>
+
+</Content-ImageFrames-MainImageSection>
+
+
+
+
+<Content-MainSectionDivider aside="Section 2 of 3" title="Delivery"/>
+
+
+
+
+<Content-ImageFrames-SquareImagesRow :content="true" :images="[
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+]">
+
+<template slot="content">
+
+## Production assets
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
+
+</template>
+
+<template slot="slot1">
+
+Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
+
+</template>
+
+<template slot="slot2">
+
+Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+
+</template>
+
+<template slot="slot3">
+
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis.
+
+</template>
+
+</Content-ImageFrames-SquareImagesRow>
+
+
+
+
+
+<Content-ThreeColumnSection :content="true">
+
+<template v-slot:content>
+
+## Development
+
+<p class="subtitle">
+  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
+</p>
+
+Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+
+</template>
+
+<template v-slot:column1>
+
+#### Experience
+
+---
+
+Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
+
+Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis.
+
+Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
+
+Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
+
+Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+
+</template>
+
+<template v-slot:column2>
+
+#### Solution
+
+---
+
+Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
+
+Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+</template>
+
+<template v-slot:column3>
+
+<div class="box">
+
+#### Techstack
+
+**Platform**
+Responsive web application
+
+**Engine**
+E-commerce
+
+**Styling**
+2018
+
+**Input**
+Personal project
+
+**Animation**
+12 minutes
+
+</div>
+
+</template>
+
+</Content-ThreeColumnSection>
+
+
+<Content-ImageFrames-MainImageSection padding="is-large" url="https://bulma.io/images/placeholders/600x480.png" alt="placeholder" imageClass="is-5by4" :aside="false" :content="false" caption="Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa."/>
+
+
+
+
+
+<Content-MainSectionDivider aside="Section 3 of 3" title="Evaluation"/>
+
+
+
+
+
 <Content-TextSection>
 
-# Project 2
+<p class="subtitle">
+  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur.
+</p>
 
-## First Title
-
-Test paragraph
-
-![An image](/images/wesen/grid.jpg)
-
-### Inner title
-
-### Inner title
-
-### Inner title
-## Features
-
-**Built-in Markdown extensions**
-
-* [Table of Contents](../guide/markdown.md#table-of-contents)
-* [Custom Containers](../guide/markdown.md#custom-containers)
-* [Line Highlighting](../guide/markdown.md#line-highlighting-in-code-blocks)
-* [Line Numbers](../guide/markdown.md#line-numbers)
-* [Import Code Snippets](../guide/markdown.md#import-code-snippets)
-
-**Using Vue in Markdown**
-
-* [Templating](../guide/using-vue.md#templating)
-* [Using Components](../guide/using-vue.md#using-components)
-
-**Vue-powered custom theme system**
-
-* [Metadata](../theme/writing-a-theme.md#site-and-page-metadata)
-* [Content Excerpt](../theme/writing-a-theme.md#content-excerpt)
-
-**Default theme**
-
-* Responsive layout
-* [Optional Homepage](../theme/default-theme-config.md#homepage)
-* [Simple out-of-the-box header-based search](../theme/default-theme-config.md#built-in-search)
-* Customizable [navbar](../theme/default-theme-config.md#navbar) and [sidebar](../theme/default-theme-config.md#sidebar)
-* [Auto-generated GitHub link and page edit links](../theme/default-theme-config.md#git-repo-and-edit-links)
-* [PWA: Popup UI to refresh contents](../theme/default-theme-config.md#popup-ui-to-refresh-contents)
-* [Last Updated](../theme/default-theme-config.md#last-updated)
-* [Multi-Language Support](../guide/i18n.md)
-
-**Blog theme**
-
-* [Documentation](https://vuepress-theme-blog.ulivz.com/)
-* [Live Example](https://ulivz.com/)
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
 
 
-**Plugin**
+### What went well
 
-* [Powerful Plugin API](../plugin/README.md)
-* [Blog Plugin](https://vuepress-plugin-blog.ulivz.com/)
-* [Search Plugin](../plugin/official/plugin-search.md)
-* [PWA Plugin](../plugin/official/plugin-pwa.md)
-* [Google Analytics Plugin](../plugin/official/plugin-google-analytics.md)
-* ...
+Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
 
-## Why Not ...?
+### What didn't go well
 
-### Nuxt
+Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
 
-Nuxt is capable of doing what VuePress does, but it’s designed for building applications. VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.
+### Going forward
 
-### Docsify / Docute
-
-Both are great projects and also Vue-powered. Except they are both fully runtime-driven and therefore not SEO-friendly. If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.
-
-### Hexo
-
-Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site. The biggest problem is that its theming system is static and string-based - we want to take advantage of Vue for both the layout and the interactivity. Also, Hexo’s Markdown rendering isn’t the most flexible to configure.
+Maecenas porttitor congue enim, at tempus tellus volutpat ut. In ultricies, justo nec rhoncus rhoncus, ipsum libero tempus est, at pellentesque mi ligula vitae eros. Cras sodales ut nunc et volutpat. Proin eget porttitor neque, consectetur ullamcorper ipsum. Donec porta nisl id sem varius malesuada.
 
 
-## Second Title
+<template slot="aside">
 
-### Inner title
+<div class="columns is-gapless">
+  <div class="column is-two-thirds">
+    <figure class="image is-square">
+      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="toucanBox magazines">
+    </figure>
+  </div>
+</div>
 
-### Inner title
+<figcaption>
 
-## Third Title
+This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
 
-### Inner title
+</figcaption>
 
-### Inner title
+</template>
 
-### Inner title
-
-# FAQ
-
-## Why can’t `palette.styl` and `index.styl` merge into one API?
-
-The `palette.styl` is responsible for global color settings. During compilation, theme color constants should be resolved by the preprocessor first and then be applied to the global context.
-
-But for `index.styl`, its job is to override the default styles of application. According to the priority principle of CSS, the later style has a higher priority, so it should be generated at the end of the CSS file.
-
-A simple diagram describing the Stylus compiler’s compilation order as follows:
-
-@flowstart
-stage1=>operation: palette.styl
-stage2=>operation: default app styles
-stage3=>operation: index.styl
-
-stage1->stage2->stage3
-@flowend
-
-<br>
-
-## What’s the differences between the `clientDynamicModules` and `enhanceAppFiles`?
-
-Let’s take a look back first, both `clientDynamicModules` and `enhanceAppFiles` can generate modules with dynamic JavaScript code during compile time.
-
-The difference is that the files generated by `enhanceAppFiles` will be loaded and applied automatically when the application is initialized on the client-side, while the files generated by `clientDynamicModules` need to be imported as `@dynamic/xxx` by the users themselves.
-
-```js
-module.exports = (options, ctx) => ({
-  // Import by entry file automatically.
-  enhanceAppFiles: {
-    name: 'constans-a',
-    content: `...`
-  },
-
-  // Need to use via: import '@dynamic/constans-b'
-  clientDynamicModules() {
-    return {
-      name: 'constans-b',
-      content: `...`
-    }
-  }
-})
-```
-
-## When do I need to use `enhanceAppFiles`?
-
-1. I want to execute some code on the client-side automatically.
-2. I don’t need to reuse this module.
-
-**Example:**
-
-- [@vuepress/plugin-register-components](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/plugin-register-components/index.js#L24): Automatically registering components on the client-side.
-- [@vuepress/plugin-google-analytics](https://github.com/vuejs/vuepress/blob/master/packages/@vuepress/plugin-google-analytics/enhanceAppFile.js): Automatically set up Google Analytics.
-
-## When do I need to use `clientDynamicModules`?
-
-1. I want to generate a dynamic module that needs to be invoked at a specific time.
-2. I want to use this module in different modules.
-
-**Example:**
-
-- [@vuepress/plugin-blog](https://github.com/vuepressjs/vuepress-plugin-blog/blob/master/src/node/index.ts#L208): Using compile-time metadata to generate some dynamic blog-related modules and initialize them on the client-side by using `enhanceAppFiles`.
-
-### Inner title
 
 </Content-TextSection>
+
+
+
+<Content-MetricsSection padding="is-large" :metrics="[
+{ metric:'40', description:'Projects completed for small businesses and startups.' },
+{ metric:'02', description:'Award winning team members.' },
+{ metric:'103', description:'Years experience working for clients like Google and Amazon.' },
+]"/>
