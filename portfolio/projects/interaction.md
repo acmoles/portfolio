@@ -16,20 +16,12 @@ next: ./toucan-research
 
 ::: slot top
 
-<Stage-ProjectVisual :fadeless="true">
+<Stage-ProjectStage :noise="true" :fadeless="true" ctaLabel="none" ctaUrl="#"
+description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
+
   <template v-slot:visual-background>
     <Heros-AbstractHero :noise="false"/>
   </template>
-</Stage-ProjectVisual>
-
-<Stage-ProjectStage ctaLabel="none" ctaUrl="#"
-description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="false">
-
-<template v-slot:visual-grid>
-  <!-- <figure class="image">
-    <ImageHero name="toucanbox" src="/images/toucanbox/combined_onboarding.png" alt="toucanBox"/>
-  </figure> -->
-</template>
 
 </Stage-ProjectStage>
 :::

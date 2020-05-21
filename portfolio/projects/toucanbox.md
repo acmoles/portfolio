@@ -19,25 +19,24 @@ next: ./random-international
 
 ::: slot top
 
-<Stage-ProjectVisual :noise="true"/>
+<Stage-ProjectStage :noise="true" ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com"
+description="A redesigned sign up funnel to improve communication, useability and confidence and a strategic design project to identify new ways to improve customer retention">
 
-<Stage-ProjectStage ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com"
-description="A redesigned sign up funnel to improve communication, useability and confidence and a strategic design project to identify new ways to improve customer retention" :fadeUpHero="true">
-
-<template v-slot:visual-grid>
-  <figure class="image">
-    <Heros-ImageHero name="toucanbox" src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage"/>
-    <!-- <b class="decoration svg-bee"/> -->
-    <!-- <b class="decoration svg-confetti-red"/> -->
-    <b class="decoration svg-confetti-yellow"/>
-    <b class="decoration svg-flash-blue"/>
-    <!-- <b class="decoration svg-flash-yellow"/> -->
-    <b class="decoration svg-yellow-splat"/>
-    <!-- <b class="decoration svg-pencil-parachute"/> -->
-  </figure>
-</template>
+  <template v-slot:visual-column>
+    <figure class="toucan-image">
+      <b class="decoration svg-yellow-splat"/>
+      <Heros-ImageHero src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage" style="position: relative"/>
+      <!-- <b class="decoration svg-bee"/> -->
+      <!-- <b class="decoration svg-confetti-red"/> -->
+      <b class="decoration svg-confetti-yellow"/>
+      <b class="decoration svg-flash-blue"/>
+      <!-- <b class="decoration svg-flash-yellow"/> -->
+      <!-- <b class="decoration svg-pencil-parachute"/> -->
+    </figure>
+  </template>
 
 </Stage-ProjectStage>
+
 
 :::
 

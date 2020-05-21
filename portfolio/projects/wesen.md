@@ -17,22 +17,20 @@ next: ./stompy-robot
 ---
 
 ::: slot top
-<Stage-ProjectVisual>
-  <template v-slot:visual-background>
-    <Heros-ImageHero name="wesen" src="/images/wesen/wesen-grid-render.jpg" alt="Wesen Studio examples" :noise="true"/>
-  </template>
-</Stage-ProjectVisual>
-<!-- Can customers be creators? -->
-<Stage-ProjectStage ctaLabel="www.wesen.studio" ctaUrl="http://www.wesen.studio"
-description="Wesen enables anyone to create a unique pendant necklace which can be manufactured on demand by a blend of modern and traditional techniques." :fadeUpHero="false">
 
-<template v-slot:visual-grid>
-  <!-- <figure class="image">
-    <ImageHero name="toucanbox" src="/images/toucanbox/combined_onboarding.png" alt="toucanBox"/>
-  </figure> -->
-</template>
+<!-- Can customers be creators? -->
+<Stage-ProjectStage :noise="true" ctaLabel="www.wesen.studio" ctaUrl="http://www.wesen.studio"
+description="Wesen enables anyone to create a unique pendant necklace which can be manufactured on demand by a blend of modern and traditional techniques.">
+
+  <template v-slot:visual-background>
+    <figure class="full-screen">
+      <Heros-ImageHero src="/images/wesen/wesen-grid-render.jpg" alt="Wesen Studio examples"/>
+    </figure>
+  </template>
 
 </Stage-ProjectStage>
+
+
 :::
 
 <!-- <li>Responsive web application</li>

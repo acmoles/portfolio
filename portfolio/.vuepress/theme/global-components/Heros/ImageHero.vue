@@ -1,5 +1,5 @@
 <template>
-    <img :ref="name" :src="src" :alt="alt" :class="{'noise-light': noise}">
+    <img ref="image" :src="src" :alt="alt" :class="{'noise-light': noise}">
 </template>
 
 <script>
@@ -15,7 +15,6 @@ export default {
   mixins: [loadableHero],
 
   props: {
-    name: String,
     src: String,
     alt: String,
     noise: Boolean
@@ -23,6 +22,7 @@ export default {
 
   computed: {
     backgroundSrc () {
+      // TODO not used - remove?
       return 'url("' + this.src + '")'
     }
   },
@@ -33,10 +33,10 @@ export default {
 
   methods: {
     loadImage(name) {
-      this.$refs[name].onload = () => {
+      this.$refs['image'].onload = () => {
         this.doLoad()
       };
-      this.$refs[name].onerror = (err) => {console.error(err)}
+      this.$refs['image'].onerror = (err) => {console.error(err)}
     }
   }
 }

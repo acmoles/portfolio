@@ -1,5 +1,5 @@
 <template>
-  <section v-if="next" class="page-nav project-card noise-light" :class="next.frontmatter.background || 'dark'">
+  <section v-if="next" class="page-nav project-card" :class="next.frontmatter.background || 'dark'">
 
         <div class="container is-fullhd content" v-if="prev || next">
           <router-link :to="next.path">

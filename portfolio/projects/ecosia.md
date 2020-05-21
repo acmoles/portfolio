@@ -18,15 +18,14 @@ image:
 
 ::: slot top
 
-<Stage-ProjectVisual>
-  <template v-slot:visual-background>
-    <!-- <ImageHero name="ecosia" src="/images/ecosia/Refining.png" alt="Ecosia mobile devices" :noise="true"/> -->
-    <Heros-ImageHero name="ecosia" src="/images/ecosia/ecosia-comp.png" alt="Ecosia mobile devices" :noise="true"/>
-  </template>
-</Stage-ProjectVisual>
+<Stage-ProjectStage :noise="true" ctaLabel="www.ecosia.org" ctaUrl="https://www.ecosia.org"
+description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
 
-<Stage-ProjectStage ctaLabel="www.ecosia.org" ctaUrl="https://www.ecosia.org"
-description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="false">
+  <template v-slot:visual-background>
+    <figure class="full-screen">
+      <Heros-ImageHero src="/images/ecosia/ecosia-comp.png" alt="Ecosia mobile devices"/>
+    </figure>
+  </template>
 
 </Stage-ProjectStage>
 

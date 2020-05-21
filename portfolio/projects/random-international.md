@@ -17,14 +17,14 @@ next: ./lego
 
 ::: slot top
 
-<Stage-ProjectVisual>
-  <template v-slot:visual-background>
-    <Heros-ImageHero name="ecosia" src="/images/ecosia/ecosia-comp.png" alt="Ecosia mobile devices" :noise="true"/>
-  </template>
-</Stage-ProjectVisual>
+<Stage-ProjectStage :noise="true" ctaLabel="www.random-international.com" ctaUrl="#"
+description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
 
-<Stage-ProjectStage ctaLabel="www.ecosia.org" ctaUrl="https://www.ecosia.org"
-description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="false">
+  <template v-slot:visual-background>
+    <figure class="full-screen">
+      <Heros-ImageHero src="/images/random-international/header.jpg" alt="Ecosia mobile devices"/>
+    </figure>
+  </template>
 
 </Stage-ProjectStage>
 
@@ -71,9 +71,9 @@ _I have omitted confidential information in this case study. All information and
 
 
 <Content-ImageFrames-SquareImagesRow :content="false" :images="[
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'/images/random-international/fly-inner.jpg', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'/images/random-international/fly-close.jpg', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'/images/random-international/fly-dark.jpg', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
 ]"/>
 
 

@@ -10,20 +10,18 @@ navStyle:
 
 ::: slot top
 
-<Stage-ProjectVisual>
+<Stage-ProjectStage :noise="true" ctaLabel="none" ctaUrl="#"
+description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
+
   <template v-slot:visual-background>
     <Heros-ThreeHero/>
   </template>
-</Stage-ProjectVisual>
-
-<Stage-ProjectStage ctaLabel="none" ctaUrl="#"
-description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques." :fadeUpHero="false">
 
 </Stage-ProjectStage>
 
 :::
 
-<Content-ContextSection lightClass="dark">
+<Content-ContextSection :box="true">
 
 <template v-slot:main>
 

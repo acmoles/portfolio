@@ -1,6 +1,6 @@
 <template>
   <div class="container is-fullhd presentation-wrapper">
-    <div class="columns">
+    <div class="columns visual-columns">
       <div class="column is-one-third">
         <div ref="presentation" class="presentation"></div>
       </div>
@@ -55,11 +55,10 @@ export default {
 
   .presentation-wrapper
     height: 100%
-    .columns
-      height: 100%
-      justify-content: flex-end
-    .column
-      height: 100%
+
+  .columns.visual-columns
+    height: 100%
+    justify-content: flex-end
 
   .presentation
     padding-top: 160%

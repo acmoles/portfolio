@@ -1,5 +1,5 @@
 <template>
-  <section class="section is-large project-card noise-light" :class="[background]">
+  <section class="section is-large background-noise">
     <div class="container is-fullhd content">
       <p class="subtitle">{{ quote }}</p>
       <p class="attribute">{{ attribute }}</p>
@@ -15,12 +15,6 @@ export default {
     quote: String,
     attribute: String,
   },
-
-  computed: {
-    background () {
-      return this.$page.frontmatter.background
-    },
-  }
 
 }
 

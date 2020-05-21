@@ -1,12 +1,26 @@
 <template>
 
-  <div class="stage" :class="lightClass" :style="{ paddingTop: paddingTop, paddingBottom: paddingBottom }">
-    <div ref="container" class="container is-fullhd">
+  <div class="stage" :class="navStyle" :style="{ paddingTop: paddingTop, paddingBottom: paddingBottom }">
 
+    <div
+      ref="parent"
+      class="visual project-card"
+      :class="background">
+      <div
+        ref="parallax"
+        v-if="!hasVisulColumnSlot"
+        class="parallax"
+        :class="[{'in-view': visible}, {'appear-fade': animating && !fadeless}]"
+        :style="{transform: transform}">
+        <slot name="visual-background"></slot>
+      </div>
+    </div>
+
+    <div ref="container" class="container is-fullhd">
       <div class="columns">
         <div
-          class="column stage-column is-two-thirds appear-fade-up"
-          :class="{'in-view': visible}"
+          class="column stage-column is-two-thirds"
+          :class="[{'in-view': visible}, {'appear-fade-up': animating}]"
         >
           <p class="subtitle">
             {{ description }}
@@ -16,18 +30,18 @@
             :href="ctaUrl"
           />
         </div>
-
         <div
-          v-if="hasVisulGridSlot"
-          class="column visual-grid appear-fade-up"
-          :class="{'in-view': visible}"
+          ref="column-parallax"
+          v-if="hasVisulColumnSlot"
+          class="column visual-column"
+          :class="[{'in-view': visible}, {'appear-fade': animating}]"
+          :style="{transform: transform}">
         >
-          <slot name="visual-grid"></slot>
+            <slot name="visual-column"></slot>
         </div>
-
       </div>
-
     </div>
+
   </div>
 
 </template>
@@ -37,9 +51,9 @@ import ProjectExternalLink from '@theme/components/ProjectExternalLink.vue'
 
 import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
 import { topPadding } from '@theme/mixins/topPadding.js'
-
-// :class="{'is-two-thirds': !istoucanBox}"
-
+import updateOnScroll from 'uos'
+// import debounce from 'lodash.debounce'
+import { getScrollTop, getViewport } from '../../util'
 
 export default {
   components: { ProjectExternalLink },
@@ -48,31 +62,69 @@ export default {
     ctaLabel: String,
     ctaUrl: String,
     description: String,
+    noise: Boolean,
+    fadeless: Boolean
   },
 
   mixins: [fadeUpInLoad, topPadding],
 
+  data () {
+    return {
+      el: null,
+      transform: ``,
+      oneTime: false,
+      animating: true,
+    }
+  },
+
   computed: {
     // TODO make description slot pull from page metadata? Could also be used for SEO
 
-    lightDark () {
+    navStyle () {
       return this.$page.frontmatter.navStyle.style
     },
 
-    lightClass () {
-      return {
-        'light': this.lightDark === 'light'
+    hasVisulColumnSlot () {
+      return !!this.$slots['visual-column']
+    },
+
+    background () {
+      return this.$page.frontmatter.background
+    },
+  },
+
+  mounted () {
+    this.$nextTick(() => {
+
+        updateOnScroll(0, 1, progress => {
+          window.requestAnimationFrame(() => {
+            if (this.visible) {
+              this.animateElement()
+            }
+          })
+        })
+
+        if (this.hasVisulColumnSlot) {
+          this.el = this.$refs['column-parallax']
+        } else {
+          this.el = this.$refs.parallax
+        }
+
+        this.el.addEventListener('transitionend', () => {
+          this.animating = false
+          console.log('end transition');
+        })
+
+    })
+  },
+
+  methods: {
+    animateElement () {
+      let animationValue = (getScrollTop() * 0.2) // speed factor
+      if (animationValue >= 0) {
+        this.transform = `translate3d(0, ${animationValue}px ,0)`
       }
     },
-
-    hasVisulGridSlot () {
-      return !!this.$slots['visual-grid']
-    },
-
-    istoucanBox () {
-      // TODO want this?
-      return this.$page.frontmatter.title === 'toucanBox'
-    }
   }
 
 }
@@ -82,6 +134,8 @@ export default {
 <style lang="sass">
 @import "../../styles/variables.sass"
 @import "../../styles/mixins.sass"
+
+// Stage
 
 .stage
   min-height: calc(100vh / 1.618)
@@ -97,30 +151,66 @@ export default {
 
 .stage-column
   padding-right: 10em
-  &.hero-grid
-    padding-right: 10em
+  position: relative
 
-.visual-grid
+
+// Background
+
+.visual.project-card
+  top: 0
+  height: 100vh
+  width: 100%
+  position: absolute
+  overflow: hidden
+  .parallax
+    height: 100vh
+    width: 100%
+    position: absolute
+    will-change: transform
+    // top: -24px
+
+    .figure.full-screen
+      img
+        object-fit: cover
+        width: 100%
+        max-width: none
+        height: 100%
+        // top: 0px
+        // right: 0px
+        //
+        // // width: auto
+        // // height: 100vh
+        // //
+        // // max-height: none
+        // // max-width: none
+        //
+        // min-height: 100%
+        // min-width: 100%
+
+
+// In-column hero
+
+.column.visual-column
   // padding: 0
   // margin: -4em
   position: relative
+  will-change: transform
   display: flex
   align-items: center
-  .image
+  .toucan-image
     position: absolute
     left: 0
     width: 200%
 
 
+// Animations
+
 html:not(.disable-motion)
   .stage-column
     transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay
 
-  .visual-grid
+  .parallax.appear-fade, .visual-column.appear-fade
     transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + 0.4s
-
-    // transition: $project-image-transition
-    // transform: translate3d(0, 0, 0) scale3d(1.025, 1.025, 1)
-    // transition-delay: $project-image-delay
+    transition-duration: 2s
 
 </style>

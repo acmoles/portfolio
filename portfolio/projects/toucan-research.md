@@ -16,14 +16,14 @@ next: ./toucanbox
 
 ::: slot top
 
-<Stage-ProjectVisual :noise="true">
-  <template v-slot:visual-background>
-    <Heros-ImageHero name="toucan-rnd" src="/images/toucan-rnd/all-together4.jpg" alt="Ecosia mobile devices" :noise="true"/>
-  </template>
-</Stage-ProjectVisual>
+<Stage-ProjectStage :noise="true" ctaLabel="create.toucanbox.com" ctaUrl="https://create.toucanbox.com"
+description="Create by toucanBox explores whether adding digital value to the physical craft box can lift activation rate at a critical point in the first box experience.">
 
-<Stage-ProjectStage ctaLabel="create.toucanbox.com" ctaUrl="https://create.toucanbox.com"
-description="Create by toucanBox explores whether adding digital value to the physical craft box can lift activation rate at a critical point in the first box experience." :fadeUpHero="false">
+  <template v-slot:visual-background>
+    <figure class="full-screen">
+      <Heros-ImageHero src="/images/toucan-rnd/all-together4.jpg" alt="Ecosia mobile devices"/>
+    </figure>
+  </template>
 
 </Stage-ProjectStage>
 

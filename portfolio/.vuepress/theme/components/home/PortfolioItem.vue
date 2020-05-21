@@ -9,7 +9,7 @@
   >
     <article
       class="project-panel project-card"
-      :class="[background, {'noise-light': notColorTile}]"
+      :class="background"
       :ref="'article' + uid"
       @click="emitBoundingRect($event)"
     >
@@ -204,8 +204,8 @@ export default {
 // TODO make transition delays dependent on which elements have already been seen
 
 .project-card
-  background-color: $black
-  background-size: 250%
+  background: $black
+  background-size: 250%, 256px 256px
   background-blend-mode: overlay
   &.project-panel
     border-radius: $radius
@@ -216,47 +216,50 @@ export default {
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($orange, 0.56)
     background-color: $orange
-    background-image: $gradientMid
+    background-image: $gradientMid, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
   &.dark
     background-color: $slate
-    background-image: $gradientSubtle
+    background-image: $gradientSubtle, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
     &.project-panel::after
       content: none
   &.stompy
     background-color: $silver
+    background-image: $gradientSubtle, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
     &.project-panel::after
       content: none
   &.green
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($green, 0.64)
     background-color: $green
-    background-image: $gradient
+    background-image: $gradient, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
   &.purple
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($purple, 0.76)
     background-color: $purple
-    background-image: $gradient
+    background-image: $gradient, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
   &.blue
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($blue, 0.64)
     background-color: $blue
-    background-image: $gradient
+    background-image: $gradient, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
   &.yellow
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($yellow, 0.56)
     background-color: $darkYellow
-    background-image: $gradientDark
+    background-image: $gradientDark, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
   &.random
     background-color: $silver
+    background-image: $gradientSubtle, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
     &.project-panel::after
       content: none
   &.pink
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($pink, 0.64)
     background-color: $pink
-    background-image: $gradient
+    background-image: $gradient, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
   &.als
     background-color: $slate
+    background-image: $gradientSubtle, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
     &.project-panel::after
       content: none
 
