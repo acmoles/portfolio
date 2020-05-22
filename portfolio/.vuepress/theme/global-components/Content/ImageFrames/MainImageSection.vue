@@ -15,7 +15,6 @@
             <figure class="image" :class="$imageClass">
               <iframe v-if="iframe" class="lazyload" :data-src="url" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               <img v-else class="lazyload medium-zoom" :data-src="url" :alt="alt">
-              <!-- <LazyImage :src="url" :alt="alt" :iframe="false" :zoom="true"/> -->
             </figure>
             <figcaption v-if="!aside">
               {{ caption }}
@@ -33,11 +32,8 @@
 </template>
 
 <script>
-// import LazyImage from '@theme/global-components/content/Lazyimage.vue'
 
 export default {
-
-  // components: { LazyImage },
 
   props: {
     url: String,

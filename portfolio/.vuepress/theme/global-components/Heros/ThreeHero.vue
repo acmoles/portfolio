@@ -28,7 +28,7 @@ export default {
 
   mounted() {
 
-    import('../../application/three/threeComposition.js').then(module => {
+    import('@application/three/threeComposition.js').then(module => {
       this.threeComposition = new module.ThreeComposition(this.$refs.presentation)
 
       this.threeComposition.addEventListener('comp-loaded', () => {

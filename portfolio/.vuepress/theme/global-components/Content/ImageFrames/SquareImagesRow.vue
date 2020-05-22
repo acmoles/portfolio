@@ -33,11 +33,7 @@
 
 <script>
 
-import LazyImage from '@theme/global-components/content/Lazyimage.vue'
-
 export default {
-
-  components: { LazyImage },
 
   props: {
     images: Array,

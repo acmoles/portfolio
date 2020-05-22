@@ -26,7 +26,7 @@ export default {
   },
 
   mounted() {
-    import('../../application/abstract/abstract.js').then(module => {
+    import('@application/abstract/abstract.js').then(module => {
       this.abstract = new module.Abstract(this.$refs.presentation)
 
       this.abstract.addEventListener('abstract-loaded', () => {
