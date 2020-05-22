@@ -10,7 +10,7 @@
         ref="parallax"
         v-if="!hasVisulColumnSlot"
         class="parallax"
-        :class="[{'in-view': visible}, {'appear-fade': animating && !fadeless}]"
+        :class="[{'in-view': visible}, {'appear-fade-up': animating && !fadeless}]"
         :style="{transform: transform}">
         <slot name="visual-background"></slot>
       </div>
@@ -19,6 +19,7 @@
     <div ref="container" class="container is-fullhd">
       <div class="columns">
         <div
+          ref="stage-column"
           class="column stage-column is-two-thirds"
           :class="[{'in-view': visible}, {'appear-fade-up': animating}]"
         >
@@ -34,7 +35,7 @@
           ref="column-parallax"
           v-if="hasVisulColumnSlot"
           class="column visual-column"
-          :class="[{'in-view': visible}, {'appear-fade': animating}]"
+          :class="[{'in-view': visible}, {'appear-fade-up': animating}]"
           :style="{transform: transform}">
         >
             <slot name="visual-column"></slot>
@@ -104,16 +105,25 @@ export default {
           })
         })
 
-        if (this.hasVisulColumnSlot) {
-          this.el = this.$refs['column-parallax']
-        } else {
-          this.el = this.$refs.parallax
-        }
+        // if (this.hasVisulColumnSlot) {
+        //   this.el = this.$refs['column-parallax']
+        // } else {
+        //   this.el = this.$refs.parallax
+        // }
 
+        // this.el.addEventListener('transitionend', () => {
+        //   this.animating = false
+        //   console.log('end transition');
+        // })
+
+        // TODO is this the best way to tell when to turn off animation class for parallax?
+        this.el = this.$refs['stage-column']
         this.el.addEventListener('transitionend', () => {
           this.animating = false
           console.log('end transition');
         })
+
+
 
     })
   },
@@ -167,7 +177,7 @@ export default {
     width: 100%
     position: absolute
     will-change: transform
-    // top: -24px
+    top: -24px
 
     .figure.full-screen
       img
@@ -205,8 +215,8 @@ html:not(.disable-motion)
   .stage-column
     transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay
 
-  .parallax.appear-fade, .visual-column.appear-fade
-    transition-delay: $base-project-delay + 0.6s
-    transition-duration: 6s
+  .parallax.appear-fade-up, .visual-column.appear-fade-up
+    transition: opacity 2.4s $fadeUpTransition .1s, transform .8s $fadeUpTransition .1s
+    transition-delay: $base-project-delay + 0.4s
 
 </style>

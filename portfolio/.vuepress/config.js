@@ -37,7 +37,9 @@ module.exports = {
       ] },
     ],
   },
-  sass: { indentedSyntax: true },
+  sass: { 
+    indentedSyntax: true
+  },
   fadeTransitionTime: 400, // sass variable $fadeTime
   revealTransitionTime: 800, // sass variable $revealTime
   configureWebpack: {
