@@ -21,6 +21,7 @@ export const fadeUpInLoad = {
       if (latest === 'finished' && this.intersected) {
         this.$forceNextTick(() => {
           this.visible = true
+          this.visibleCallback()
         })
       }
     }
@@ -52,6 +53,12 @@ export const fadeUpInLoad = {
 
   destroyed() {
     this.observer.disconnect()
+  },
+
+  methods: {
+    visibleCallback () {
+      // for JS visible callbacks
+    }
   }
 
 }

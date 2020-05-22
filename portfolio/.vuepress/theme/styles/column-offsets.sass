@@ -1,8 +1,11 @@
-  .table-offset
-    position: relative
-    &::before
-      content: '#'
-      visibility: hidden
-      font-size: 1.25em
-      padding: $table-cell-padding
-      display: block
+@import 'variables'
+@import 'mixins'
+
+.table-offset
+  position: relative
+  &::before
+    content: '#'
+    visibility: hidden
+    font-size: 1.25em
+    padding: $table-cell-padding
+    display: block

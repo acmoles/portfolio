@@ -1,7 +1,7 @@
 <template>
   <section
     class="section context background-noise"
-    :class="[ {'in-view': visible}, {'has-shadow': box}, {'wipe-up': doFade && readyForWipe} ]"
+    :class="[ {'in-view': visible}, {'has-shadow': box}, {'wipe-up': readyForWipe} ]"
     :style="{ paddingTop: paddingBottom, paddingBottom: paddingBottom, transform: 'translateY(' + displacement + 'px)' }"
   >
     <div
@@ -45,36 +45,37 @@ export default {
 
   data () {
     return {
-      doFade: false,
       readyForWipe: false,
       displacement: null
-    }
-  },
-  // TODO only animate if scroll position = 0 ??
-  mounted () {
-    this.applyPadding()
-    this.$forceNextTick(() => {
-      if (getScrollTop() === 0) {
-        this.doFade = true
-        this.displacement = getViewport('y') - this.$el.getBoundingClientRect().y
-      }
-    })
-  },
-
-  watch: {
-    pageLoadingStatus (latest, last) {
-      if (latest === 'finished') {
-        this.readyForWipe = true
-        this.$nextTick(() => {
-          this.displacement = 0
-        })
-      }
     }
   },
 
   computed: {
     // TODO make description slot pull from page metadata? Could also be used for SEO
+  },
+
+  // TODO only animate if scroll position = 0 ??
+  mounted () {
+    this.applyPadding()
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.displacement = getViewport('y') - this.$el.getBoundingClientRect().y
+        console.log('displacement is: ', this.displacement);
+      }, 100)
+    })
+  },
+
+  methods: {
+    visibleCallback () {
+      console.log('visible callback');
+      this.readyForWipe = true
+      this.$forceNextTick(() => {
+        this.displacement = 0
+      })
+    }
   }
+
+
 }
 
 </script>

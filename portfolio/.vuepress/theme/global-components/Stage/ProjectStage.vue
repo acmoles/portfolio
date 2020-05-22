@@ -1,6 +1,6 @@
 <template>
 
-  <div class="stage" :class="navStyle" :style="{ paddingTop: paddingTop, paddingBottom: paddingBottom }">
+  <section class="stage" :class="navStyle" :style="{ paddingTop: paddingTop, paddingBottom: paddingBottom }">
 
     <div
       ref="parent"
@@ -43,7 +43,7 @@
       </div>
     </div>
 
-  </div>
+  </section>
 
 </template>
 

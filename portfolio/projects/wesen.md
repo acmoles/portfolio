@@ -12,8 +12,8 @@ case1: Case study
 sidebar: auto
 date: 2019-09-12
 src: /images/homepage/wesen-mock-baked.jpg
-prev: ./ecosia
-next: ./stompy-robot
+prev: ./stompy-robot
+next: ./ecosia
 ---
 
 ::: slot top
@@ -42,7 +42,7 @@ description="Wesen enables anyone to create a unique pendant necklace which can 
 
 ## Context
 
-Vestibulum ac ultrices velit, in porttitor diam. Cras pellentesque dui sed neque pulvinar, in semper turpis rhoncus. Ut ac malesuada nisl. Cras nisi augue, auctor a justo eu, vulputate laoreet ipsum. Vivamus est ante, pellentesque vitae ultrices eu, accumsan ut nisl. Suspendisse ex metus, eleifend vel elit ut, mattis placerat velit. Suspendisse at condimentum neque. Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec.
+Vestibulum ac ultrices velit, in porttitor diam. Cras pellentesque dui sed neque pulvinar, in semper turpis rhoncus. Ut ac malesuada nisl. Cras nisi augue, auctor a justo eu, vulputate laoreet ipsum. Vivamus est ante, pellentesque vitae ultrices eu, accumsan ut nisl. Suspendisse ex metus, eleifend vel elit ut, mattis placerat velit. Suspendisse at condimentum neque. Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec. Test.
 
 Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur tortor in nibh vulputate viverra. Integer fringilla orci enim, non efficitur erat elementum vel. Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit. Pellentesque euismod sodales ipsum in mattis. Test.
 
