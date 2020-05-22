@@ -3,9 +3,10 @@ title: About
 sidebar: auto
 date: 2019-09-11
 navStyle:
-  style: dark
+  style: light
   tint: regular-tint
   progress: light
+background: dark
 ---
 
 ::: slot top

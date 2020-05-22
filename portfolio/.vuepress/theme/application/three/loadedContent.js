@@ -17,7 +17,7 @@ export class LoadedContent extends EventTarget {
     this.animations = [];
     this.interactables = [];
 
-    this.LOADPATH = window.location.origin + '/three/characters.glb';
+    this.LOADPATH = window.location.origin + '/three/characters-3.glb';
 
     this.models = [
       { name: 'Ant',

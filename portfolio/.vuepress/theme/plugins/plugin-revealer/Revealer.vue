@@ -266,5 +266,5 @@ export default {
   animation: fadeIn $fadeTime forwards
 
 .revealer-fade-animation-leave-active
-  animation: fadeOut $fadeTime + 400ms $fadeTime forwards
+  animation: fadeOut $fadeTime $fadeTime forwards
 </style>
