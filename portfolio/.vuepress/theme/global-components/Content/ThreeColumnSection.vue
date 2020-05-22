@@ -19,7 +19,7 @@
           <slot name="column2"></slot>
         </div>
 
-        <div class="column">
+        <div class="column" :class="columnOffset">
           <slot name="column3"></slot>
         </div>
 
@@ -36,6 +36,7 @@ export default {
   props: {
     content: Boolean,
     padding: String,
+    columnOffset: String
   },
 
 }

@@ -417,7 +417,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 
 
-<Content-MainAsideSection padding="is-large" :content="true" :aside="true">
+<Content-MainAsideSection padding="is-large" :content="true" :aside="true" columnOffset="table-offset">
 
 <template slot="content">
 

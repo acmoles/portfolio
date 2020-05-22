@@ -139,7 +139,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 
 
-<Content-ThreeColumnSection :content="true">
+<Content-ThreeColumnSection :content="true" columnOffset="table-offset">
 
 <template v-slot:content>
 
@@ -208,7 +208,7 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 
 
 
-<Content-ThreeColumnSection padding="is-large" :content="true">
+<Content-ThreeColumnSection padding="is-large" :content="true" columnOffset="table-offset">
 
 <template v-slot:content>
 
@@ -325,7 +325,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 
 
-<Content-MainAsideSection padding="is-large" :content="true" :aside="true">
+<Content-MainAsideSection padding="is-large" :content="true" :aside="true" columnOffset="table-offset">
 
 <template slot="content">
 
@@ -465,7 +465,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 
 
-<Content-ThreeColumnSection :content="true">
+<Content-ThreeColumnSection :content="true" columnOffset="table-offset">
 
 <template v-slot:content>
 

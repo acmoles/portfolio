@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 // import Stats from 'three/examples/jsm/libs/stats.module.js';
 import { EventTarget } from 'event-target-shim/dist/event-target-shim.mjs';
 
-import { LoadedContent } from './LoadedContent.js'
+import { LoadedContent } from './loadedContent.js'
 import { Grid } from './grid.js'
 import { Interactions } from './interactions.js'
 

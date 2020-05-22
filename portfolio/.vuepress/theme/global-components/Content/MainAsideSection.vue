@@ -15,7 +15,7 @@
             <slot></slot>
           </div>
 
-          <div v-if="aside" class="column table-spacer">
+          <div v-if="aside" class="column" :class="columnOffset">
             <slot name="aside"></slot>
           </div>
 
@@ -33,6 +33,7 @@ export default {
     content: Boolean,
     aside: Boolean,
     padding: String,
+    columnOffset: String
   }
 
 }
@@ -42,14 +43,4 @@ export default {
 <style lang="sass">
   @import "../../styles/variables.sass"
   @import "../../styles/mixins.sass"
-
-  .table-spacer
-    position: relative
-    &::before
-      content: '#'
-      visibility: hidden
-      font-size: 1.25em
-      padding: $table-cell-padding
-      display: block
-
 </style>

@@ -230,7 +230,7 @@ his project however, focused on an equally important but somewhat subtler metric
 
 
 
-<Content-MainAsideSection padding="is-large" :content="true" :aside="true">
+<Content-MainAsideSection padding="is-large" :content="true" :aside="true" columnOffset="table-offset">
 
 <template slot="content">
 
