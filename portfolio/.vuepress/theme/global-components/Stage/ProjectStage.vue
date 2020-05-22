@@ -197,10 +197,6 @@ export default {
   will-change: transform
   display: flex
   align-items: center
-  .toucan-image
-    position: absolute
-    left: 0
-    width: 200%
 
 
 // Animations
@@ -210,7 +206,7 @@ html:not(.disable-motion)
     transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay
 
   .parallax.appear-fade, .visual-column.appear-fade
-    transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay + 0.4s
-    transition-duration: 2s
+    transition-delay: $base-project-delay + 0.6s
+    transition-duration: 6s
 
 </style>

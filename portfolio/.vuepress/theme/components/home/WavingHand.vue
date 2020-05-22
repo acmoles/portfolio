@@ -36,7 +36,7 @@ export default {
       midHand: 'M 20.989 91.547 C 15.604 87.777 11.28 81.68 9.964 75.728 C 9.476 73.522 7.871 57.04 5.15 26.282 C 5.107 25.797 5.163 25.308 5.315 24.846 C 5.934 22.966 7.959 21.943 9.84 22.561 C 11.238 23.021 12.47 23.927 13.537 25.278 C 15.425 27.669 18.238 34.301 21.978 45.174 C 22.19 45.788 22.59 46.319 23.121 46.691 C 24.511 47.664 26.427 47.327 27.4 45.937 C 27.4 45.937 54.118 7.682 55.732 5.474 C 56.977 3.771 59.267 3.209 61.113 4.236 C 62.93 5.247 63.599 7.493 62.703 9.371 C 61.63 11.619 47.028 40.824 47.028 40.824 C 46.814 41.254 46.928 41.775 47.301 42.077 C 47.741 42.433 48.386 42.364 48.741 41.924 C 48.741 41.924 72.03 13.025 73.232 11.619 C 74.537 10.093 76.754 9.737 78.4 10.89 C 80.038 12.037 80.316 14.164 79.422 15.958 C 78.4 18.008 58.397 49.334 58.397 49.334 C 58.141 49.74 58.202 50.27 58.543 50.607 C 58.945 51.005 59.593 51.002 59.991 50.6 C 59.991 50.6 83.302 26.837 85.116 25.215 C 86.509 23.97 88.56 23.816 89.959 25.058 C 91.359 26.3 91.43 28.332 90.376 29.883 C 89.419 31.294 65.311 61.349 65.311 61.349 C 65.008 61.73 65.014 62.271 65.326 62.644 C 65.689 63.078 66.335 63.136 66.769 62.773 C 66.769 62.773 87.741 45.174 89.419 43.833 C 90.899 42.65 93.039 42.809 94.256 44.264 C 95.51 45.763 95.44 47.965 94.093 49.381 C 84.967 58.976 72.844 71.846 57.724 87.989 C 47.857 98.524 31.614 98.987 20.989 91.547 Z',
       delayTimeout: null,
       active: false,
-      firstAnimation: true
+      finished: false
     }
   },
 
@@ -44,14 +44,16 @@ export default {
     pageLoadingStatus () {
       return this.$store.state.pageLoadingStatus
     },
+    homeFadeUpMotion () {
+      return this.$store.state.homeFadeUpMotion
+    },
   },
 
   watch: {
     pageLoadingStatus (latest, last) {
-      if (latest === 'finished' && this.firstAnimation) {
+      if (latest === 'finished' && this.homeFadeUpMotion) {
         setTimeout(() => {
           this.animateHand()
-          this.firstAnimation = false
         }, 1000)
       }
     }
@@ -67,6 +69,7 @@ export default {
         this.extraAnimation();
         this.delayTimeout = setTimeout( () => {
           this.timeline2.play();
+          this.finished = true;
         }, 6000);
       }
     });
@@ -86,7 +89,11 @@ export default {
   methods: {
     handClick() {
       clearTimeout(this.delayTimeout);
-      this.timeline2.play();
+      if (this.finished) {
+        this.timeline2.play();
+      } else {
+        this.animateHand();
+      }
     },
 
     animateHand() {
@@ -302,7 +309,7 @@ export default {
   width: 1em
   height: 1em
   bottom: 0.83em
-  left: 0.35em
+  left: 0.1em
   vertical-align: bottom
   padding: 0
   position: relative
@@ -311,7 +318,7 @@ export default {
   @media screen and (min-width: $largeformat)
     transform: scale(0.3)
     bottom: 0.85em
-    left: 0.45em
+    left: 0.15em
   // &::after
   //   content: ' '
   //   position: absolute

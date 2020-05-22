@@ -13,7 +13,8 @@
 
           <div class="column is-two-thirds">
             <figure class="image" :class="$imageClass">
-              <img class="lazyload medium-zoom" :data-src="url" data-zoom-src="/images/homepage/art-lebedev-tile-2x.jpg" :alt="alt">
+              <iframe v-if="iframe" class="lazyload" :data-src="url" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <img v-else class="lazyload medium-zoom" :data-src="url" :alt="alt">
               <!-- <LazyImage :src="url" :alt="alt" :iframe="false" :zoom="true"/> -->
             </figure>
             <figcaption v-if="!aside">
@@ -46,6 +47,7 @@ export default {
     aside: Boolean,
     padding: String,
     imageClass: String,
+    iframe: Boolean
   },
 
   computed: {

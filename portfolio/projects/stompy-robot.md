@@ -69,7 +69,7 @@ _I have omitted confidential information in this case study. All information and
 
 
 
-<Content-ImageFrames-MainImageSection imageClass="is-16by9" url="https://bulma.io/images/placeholders/640x360.png" alt="placeholder" :aside="true" :content="true">
+<Content-ImageFrames-MainImageSection imageClass="is-16by9" url="https://www.youtube.com/embed/xZELuhMO9es" alt="placeholder" :aside="true" :content="true" :iframe="true">
 
 <template v-slot:content>
 
@@ -100,9 +100,9 @@ Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursu
 
 
 <Content-ImageFrames-SquareImagesRow :content="true" :images="[
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'/images/stompy-robot/birds-eye-sketch.jpg', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'/images/stompy-robot/character-sketch.jpg', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'/images/stompy-robot/character-model.jpg', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
 ]">
 
 <template slot="content">

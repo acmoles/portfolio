@@ -61,10 +61,9 @@ export default {
     justify-content: flex-end
 
   .presentation
-    padding-top: 160%
+    padding-top: 188%
     width: 920px
     position: relative
-    top: 3em
     margin-left: 50%
     transform: translateX(-50%)
     canvas

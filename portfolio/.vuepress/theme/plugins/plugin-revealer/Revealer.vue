@@ -122,10 +122,15 @@ export default {
               this.transformString = this.generateTransformStringPlacement()
               this.radiusString = this.generateRadiusString()
 
-                setTimeout(() => {
-                  this.show = false
-                  this.$store.dispatch('useLastProject', false)
-                }, 400) // delay fade out
+              // TODO - followup - tested and didn't seem to make a difference
+              // setTimeout(() => {
+              //   this.radiusString = this.generateRadiusString()
+              // }, 500) // delay set radius string
+
+              setTimeout(() => {
+                this.show = false
+                this.$store.dispatch('useLastProject', false)
+              }, 400) // delay fade out
 
             }, 400) // pause before reveal animation
         })
@@ -146,6 +151,10 @@ export default {
       this.revealerClass = 'revealer-cover-animation-active'
       this.transformString = this.generateTransformStringPlacement()
       this.radiusString = this.generateRadiusString()
+
+      // setTimeout(() => {
+      //   this.radiusString = this.generateRadiusString()
+      // }, 600) // delay set radius string
 
       setTimeout(() => {
         this.transformString = 'translate3d(0px, ' + this.projectPosition.scroll + 'px, 0px) scale3d(1, 1, 1)'
@@ -229,23 +238,18 @@ export default {
   transform-origin: 0 0
   border-radius: 0
   // TODO border-radius transition doesn't work on webkit - slows down things in general - any way to spoof?
-  // transition-property: transform, border-radius
-  // transition-property: transform
+  // Tested but not much improvement - main problem is Firefox
 
 // revealer transition states
 
 .revealer-cover-animation-active
-  // transition-duration: $revealTime + 200ms
-  // transition-duration: $revealTime - 200ms
-  // transition-timing-function: $coverTransition
   transition: border-radius 100ms linear, transform $revealTime - 200ms $coverTransition
-
-  // transition: bottom 0.1s ease-out, transform 0.22s 0.1s cubic-bezier(0.215, 0.61, 0.355, 1)
+  // transition: transform $revealTime - 200ms $coverTransition
 
 .revealer-reveal-animation-active
-  // transition-duration: $revealTime
-  // transition-timing-function: $coverTransition
   transition: border-radius 100ms $revealTime - 200ms linear, transform $revealTime $coverTransition
+  // transition: transform $revealTime $coverTransition
+
 
 // fixed position toggle
 

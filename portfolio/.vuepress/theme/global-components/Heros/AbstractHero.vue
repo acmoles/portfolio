@@ -32,6 +32,7 @@ export default {
       this.abstract.addEventListener('abstract-loaded', () => {
         console.log('abstract scene ready')
         this.doLoad()
+        this.abstract.begin()
       })
 
       this.abstract.init()

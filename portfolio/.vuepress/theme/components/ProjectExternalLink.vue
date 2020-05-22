@@ -29,7 +29,6 @@ button.project-external-link.is-dark
   text-rendering: geometricPrecision
   font-size: 1.125em
   color: $button-custom-text-color
-  max-width: 16em
   justify-content: space-between
   background-color: $slate
   height: auto

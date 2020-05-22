@@ -16,20 +16,25 @@ next: ./art-lebedev-studio
 
 ::: slot top
 
-<Stage-ProjectVisual>
-
-</Stage-ProjectVisual>
-
 <Stage-ProjectStage :noise="true" ctaLabel="www.lego-dimensions.com" ctaUrl="#"
 description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
 
-  <template v-slot:visual-background>
-    <figure class="full-screen">
-      <Heros-ImageHero src="/images/ecosia/ecosia-comp.png" alt="Ecosia mobile devices"/>
+  <template v-slot:visual-column>
+    <figure class="lego-image">
+      <Heros-ImageHero src="/images/lego/lego-comp.svg" alt="Ecosia mobile devices"/>
     </figure>
   </template>
 
 </Stage-ProjectStage>
+
+<style lang="sass">
+
+.lego-image
+  position: absolute
+  left: -25%
+  width: 200%
+
+</style>
 
 :::
 

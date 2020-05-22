@@ -204,7 +204,8 @@ export default {
 // TODO make transition delays dependent on which elements have already been seen
 
 .project-card
-  background: $black
+  background-color: $black
+  background-image: $gradientSubtle, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
   background-size: 250%, 256px 256px
   background-blend-mode: overlay
   &.project-panel

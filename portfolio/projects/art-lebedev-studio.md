@@ -4,7 +4,7 @@ title: Art Lebedev Studio
 subtitle: Channelling an agency style
 type: single
 navStyle:
-  style: dark
+  style: light
   tint: regular-tint
   progress: light
 background: als
@@ -39,13 +39,11 @@ description="Wesen is an experiment in turning customers into creators and build
 
 ## Context
 
-toucanBox is an award winning startup subscription service that provides arts and crafts activities for children aged 3 to 8 years old. Each box has the child’s name on the front and a personalised message printed inside. It has illustrated instructions, an activity magazine and all the required materials to make a craft project. It’s also delivered straight through the letterbox.
+Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec.
 
-2017 was a significant year for toucanBox. Having secured funding in the previous year, we were ready to expand the Company and transition into a growth phase.
+Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur tortor in nibh vulputate viverra. Integer fringilla orci enim, non efficitur erat elementum vel. Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit. Pellentesque euismod sodales ipsum in mattis.
 
-As we offer a product customers usually haven’t seen before, we knew that our communication and first impression must be flawless.
-
-New customers register through the website. They choose a box type for their child (or children) and create an account, providing relevant details (including email, delivery address and billing information). The first box is a free trial if they are acquired through paid marketing channels.
+Suspendisse potenti. Praesent risus massa, vulputate eget turpis in, dignissim tincidunt odio
 
 </template>
 
@@ -73,9 +71,9 @@ _I have omitted confidential information in this case study. All information and
 
 
 <Content-ImageFrames-SquareImagesRow padding="is-large" :content="true" :images="[
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'/images/als/als1.jpg', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'/images/als/als2.jpg', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'/images/als/als3.jpg', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
 ]">
 
 <template slot="content">

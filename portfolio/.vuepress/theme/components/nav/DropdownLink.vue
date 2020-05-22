@@ -99,9 +99,13 @@ export default {
 .navbar-item.has-dropdown
   height: fit-content
   &.is-active
-    .navbar-link
-      filter: opacity(50%)
+    .navbar-link, .navbar-link:hover
+      color: $white
+      filter: opacity(100%)
+      .icon
+        filter: opacity(100%)
 
+// TODO: Not used
 .navbar-link:not(.is-arrowless)::after
     border-width: 2px
     border-radius: 0

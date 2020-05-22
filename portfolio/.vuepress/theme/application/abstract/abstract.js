@@ -26,10 +26,6 @@ export class Abstract extends EventTarget {
     this.near = 1;
     this.far = 196;
     this.zoom = 1;
-
-    this.configRenderer();
-    this.configScene();
-    this.configSphere();
   }
 
   init() {
@@ -41,8 +37,14 @@ export class Abstract extends EventTarget {
 
     // window.getCamera = this.getCamera.bind(this);
 
-    this.animate();
+    this.configRenderer();
+    this.configScene();
+    this.configSphere();
     this.dispatchEvent(new Event('abstract-loaded'));
+  }
+
+  begin() {
+    this.animate();
 
     anime({
       targets: this.camera.position,

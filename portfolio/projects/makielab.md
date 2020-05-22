@@ -16,7 +16,7 @@ next: ./random-international
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="none" ctaUrl="#"
+<Stage-ProjectStage :noise="true" :fadeless="true" ctaLabel="none" ctaUrl="#"
 description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
 
 <template v-slot:visual-background>
@@ -35,11 +35,9 @@ description="Wesen is an experiment in turning customers into creators and build
 
 ## Context
 
-The rise of affordable 3D printers popularised the notion of mass customisation → . However, relatively high prices and lacklustre product creation experiences left its promises largely unrealised.
+Vestibulum ac ultrices velit, in porttitor diam. Cras pellentesque dui sed neque pulvinar, in semper turpis rhoncus. Ut ac malesuada nisl. Cras nisi augue, auctor a justo eu, vulputate laoreet ipsum. Vivamus est ante, pellentesque vitae ultrices eu, accumsan ut nisl. Suspendisse ex metus, eleifend vel elit ut, mattis placerat velit. Suspendisse at condimentum neque. Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec.
 
-At that time I was working on customisable children’s toys at Makielab → . We enjoyed modest success, catching the attention of Disney who eventually bought the company. In this project I resolved to draw on some lessons learnt there.
-
-Foremost, I wanted to explore the possibility of an unrestricted creation experience, able to generate infinite variations while being intuitive and fun to use. I also intended to fully automate and outsource the fulfillment process. [Sprint - pre Makielab](/extra/sprint)
+Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur tortor in nibh vulputate viverra. Integer fringilla orci enim, non efficitur erat elementum vel. Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit. Pellentesque euismod sodales ipsum in mattis. [Sprint - pre Makielab](/extra/sprint)
 
 </template>
 

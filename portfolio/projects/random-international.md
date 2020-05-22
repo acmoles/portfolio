@@ -1,7 +1,7 @@
 ---
 uid: 8
 title: Random International
-subtitle: Making an installation
+subtitle: Engineering an installation
 type: single
 navStyle:
   style: light
@@ -37,13 +37,11 @@ description="Wesen is an experiment in turning customers into creators and build
 
 ## Context
 
-toucanBox is an award winning startup subscription service that provides arts and crafts activities for children aged 3 to 8 years old. Each box has the child’s name on the front and a personalised message printed inside. It has illustrated instructions, an activity magazine and all the required materials to make a craft project. It’s also delivered straight through the letterbox.
+Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec.
 
-2017 was a significant year for toucanBox. Having secured funding in the previous year, we were ready to expand the Company and transition into a growth phase.
+Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur tortor in nibh vulputate viverra. Integer fringilla orci enim, non efficitur erat elementum vel. Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit. Pellentesque euismod sodales ipsum in mattis.
 
-As we offer a product customers usually haven’t seen before, we knew that our communication and first impression must be flawless.
-
-New customers register through the website. They choose a box type for their child (or children) and create an account, providing relevant details (including email, delivery address and billing information). The first box is a free trial if they are acquired through paid marketing channels.
+Suspendisse potenti. Praesent risus massa, vulputate eget turpis in, dignissim tincidunt odio
 
 </template>
 

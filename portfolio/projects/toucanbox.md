@@ -37,6 +37,14 @@ description="A redesigned sign up funnel to improve communication, useability an
 
 </Stage-ProjectStage>
 
+<style lang="sass">
+
+.toucan-image
+  position: absolute
+  left: 0
+  width: 200%
+
+</style>
 
 :::
 
