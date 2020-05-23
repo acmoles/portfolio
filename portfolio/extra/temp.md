@@ -1,7 +1,7 @@
 ---
 uid: 7
-title: toucanBox
-subtitle: Refining the value proposition and personalising the experience
+title: temp
+subtitle: temp page
 type: double-right-bottom
 navStyle:
   style: light
@@ -18,8 +18,6 @@ next: ./random-international
 ---
 
 ::: slot top
-
-<Stage-ProjectVisual :noise="true"/>
 
 <Stage-ProjectStage ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com"
 description="A redesigned sign up funnel to improve communication, useability and confidence and a strategic design project to identify new ways to improve customer retention" :fadeUpHero="true">

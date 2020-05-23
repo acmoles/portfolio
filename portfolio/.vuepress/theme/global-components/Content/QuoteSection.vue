@@ -1,5 +1,5 @@
 <template>
-  <section class="section is-large background-noise">
+  <section class="section is-large background-noise quote-section">
     <div class="container is-fullhd content">
       <p class="subtitle">{{ quote }}</p>
       <p class="attribute">{{ attribute }}</p>
@@ -24,4 +24,6 @@ export default {
   @import "../../styles/variables.sass"
   @import "../../styles/mixins.sass"
 
+  .quote-section
+    background-color: rgba($pitch, 0.2)
 </style>

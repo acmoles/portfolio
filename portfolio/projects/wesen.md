@@ -197,7 +197,7 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 <template v-slot:column3>
 
 <figure class="image is-9by16">
-  <img class="lazyload" data-src="https://bulma.io/images/placeholders/360x640.png" alt="#">
+  <img class="lazyload" data-src="/images/wesen/journey_characters2.jpg" alt="Cartoon of enthusiasts and gifters">
 </figure>
 
 </template>
@@ -253,8 +253,8 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 
 <template v-slot:column3>
 
-<figure class="image is-5by3">
-  <img class="lazyload" data-src="https://bulma.io/images/placeholders/800x480.png" alt="#">
+<figure class="image is-2by1">
+  <img class="lazyload" data-src="/images/wesen/draft-journey-mvp.png" alt="Flowchart of user journey">
 </figure>
 <figcaption>
 
@@ -269,15 +269,15 @@ Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
 
 
-<Content-ImageFrames-FullImageSection url="https://bulma.io/images/placeholders/640x320.png" alt="#"/>
+<Content-ImageFrames-FullImageSection url="/images/wesen/wesen-montage-1.jpg" alt="Montage of further discovery process"/>
 
 
 
 
 <Content-ImageFrames-SquareImagesRow :content="true" :images="[
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'https://player.vimeo.com/video/293190700', alt:'Blender prototype video', caption:'Square image caption 1', slot:'slot1', iframe:true },
+{ url:'https://player.vimeo.com/video/293190664', alt:'Interactive webGL prototype', caption:'Square image caption 2', slot:'slot2', iframe:true },
+{ url:'/images/wesen/webgl-feasibility.jpg', alt:'Metal shader exploration', caption:'Square image caption 3', slot:'slot3', iframe:false },
 ]">
 
 <template slot="content">
@@ -352,7 +352,7 @@ Certain types of accessory like hats, clothes and shoes quickly cluttered the sc
 <div class="columns is-gapless">
   <div class="column is-two-thirds">
     <figure class="image is-square">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="toucanBox magazines">
+      <img class="lazyload" data-src="/images/wesen/in-use.jpg" alt="webGL prototype in use">
     </figure>
   </div>
 </div>
@@ -364,12 +364,12 @@ Certain types of accessory like hats, clothes and shoes quickly cluttered the sc
 
 
 
-<Content-ImageFrames-FullImageSection url="https://bulma.io/images/placeholders/640x320.png" alt="#"/>
+<Content-ImageFrames-FullImageSection url="/images/wesen/wesen-montage-2.jpg" alt="Montage of design iteration"/>
 
 
 
 
-<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="https://bulma.io/images/placeholders/640x360.png" alt="placeholder" :aside="true" :content="true">
+<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-2by1" url="/images/wesen/messages.png" alt="Message window which informs users of geometry problems and offers help" :aside="true" :content="true">
 
 <template v-slot:content>
 
@@ -428,9 +428,9 @@ Personal project
 
 
 <Content-ImageFrames-SquareImagesRow :content="true" :images="[
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'/images/wesen/Iconography-square.png', alt:'Production icon assets', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'/images/wesen/product-rendering.jpg', alt:'WIP product rendering', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'/images/wesen/handheld.jpg', alt:'WIP product photography', caption:'Square image caption 3', slot:'slot3', iframe:false },
 ]">
 
 <template slot="content">
@@ -542,7 +542,7 @@ Personal project
 </Content-ThreeColumnSection>
 
 
-<Content-ImageFrames-MainImageSection padding="is-large" url="https://bulma.io/images/placeholders/600x480.png" alt="placeholder" imageClass="is-5by4" :aside="false" :content="false" caption="Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa."/>
+<Content-ImageFrames-MainImageSection padding="is-large" url="/images/wesen/system-diagram.png" alt="System diagram of Wesen app" imageClass="is-5by4" :aside="false" :content="false" caption="Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa."/>
 
 
 
@@ -581,7 +581,7 @@ Maecenas porttitor congue enim, at tempus tellus volutpat ut. In ultricies, just
 <div class="columns is-gapless">
   <div class="column is-two-thirds">
     <figure class="image is-square">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="toucanBox magazines">
+      <img class="lazyload" data-src="/images/wesen/evaluation.jpg" alt="Pendant worn by a customer">
     </figure>
   </div>
 </div>

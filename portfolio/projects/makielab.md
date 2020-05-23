@@ -56,7 +56,7 @@ CTO, product designer, two full-stack developers
 
 
 
-<Content-ImageFrames-MainImageSection url="https://bulma.io/images/placeholders/640x360.png" alt="placeholder" :aside="true" :content="true">
+<Content-ImageFrames-MainImageSection url="https://www.youtube.com/embed/daBtHme2hP8" alt="Makies video" :aside="true" :content="true" :iframe="true">
 
 <template v-slot:content>
 
@@ -73,7 +73,7 @@ In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis 
 <template v-slot:aside>
 
 <figure class="image is-square">
-  <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="#">
+  <img class="lazyload" data-src="/images/makielab/Makies-present1.5x.jpg" alt="Makies product and web interface">
 </figure>
 
 
@@ -84,9 +84,9 @@ In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis 
 
 
 <Content-ImageFrames-SquareImagesRow padding="is-large" :content="true" :images="[
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'/images/makielab/figure-comp.jpg', alt:'Exploring character features', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'/images/makielab/equipment.jpg', alt:'Exploring equipment', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'/images/makielab/printed-figures.jpg', alt:'Printed example figures', caption:'Square image caption 3', slot:'slot3', iframe:false },
 ]">
 
 <template slot="content">

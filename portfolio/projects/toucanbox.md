@@ -224,7 +224,7 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 <template v-slot:column3>
 
 <figure class="image is-9by16">
-  <img class="lazyload" data-src="https://bulma.io/images/placeholders/360x640.png" alt="#">
+  <img class="lazyload" data-src="/images/toucanBox/users-tall.jpg" alt="Cartoon of users">
 </figure>
 
 </template>
@@ -295,15 +295,15 @@ Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
 
 
-<Content-ImageFrames-FullImageSection url="https://bulma.io/images/placeholders/640x320.png" alt="#"/>
+<Content-ImageFrames-FullImageSection url="/images/toucanBox/onboarding-montage.png" alt="Montage of discovery artifacts"/>
 
 
 
 
 <Content-ImageFrames-SquareImagesRow :content="true" :images="[
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'/images/toucanBox/main-stage-square.png', alt:'Optimise the main stage', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'/images/toucanBox/product-section.png', alt:'Optimise the product section', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'/images/toucanBox/ia-nav.png', alt:'Optimise site nav and IA', caption:'Square image caption 3', slot:'slot3', iframe:false },
 ]">
 
 <template slot="content">
@@ -365,9 +365,9 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 
 <Content-ImageFrames-SquareImagesRow padding="is-medium" :content="true" :images="[
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'/images/toucanBox/signup-funnel.png', alt:'Optimise the signup funnel', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'/images/toucanBox/mobile-steps.png', alt:'Mobile friendly steps', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'/images/toucanBox/choose-plan.png', alt:'Choose a plan', caption:'Square image caption 3', slot:'slot3', iframe:false },
 ]">
 
 <template slot="content">
@@ -444,15 +444,17 @@ Certain types of accessory like hats, clothes and shoes quickly cluttered the sc
 <div class="columns is-gapless">
   <div class="column is-two-thirds">
     <figure class="image is-square">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="toucanBox magazines">
+      <img class="lazyload" data-src="/images/toucanBox/user-testing-1.jpg" alt="User tester 1">
     </figure>
   </div>
 </div>
 
+<br>
+
 <div class="columns is-gapless">
   <div class="column is-two-thirds">
     <figure class="image is-square">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="toucanBox magazines">
+      <img class="lazyload" data-src="/images/toucanBox/user-testing-2.jpg" alt="User tester 2">
     </figure>
   </div>
 </div>
@@ -469,7 +471,7 @@ Certain types of accessory like hats, clothes and shoes quickly cluttered the sc
 
 
 
-<Content-ImageFrames-MainImageSection url="https://bulma.io/images/placeholders/640x360.png" alt="placeholder" :aside="true" :content="true">
+<Content-ImageFrames-MainImageSection url="/images/toucanBox/styles.png" alt="toucanBox design system" :aside="true" :content="true">
 
 <template v-slot:content>
 
@@ -558,122 +560,19 @@ Maecenas porttitor congue enim, at tempus tellus volutpat ut. In ultricies, just
 
 <template slot="aside">
 
-<div class="columns is-gapless">
+<!-- <div class="columns is-gapless">
   <div class="column is-two-thirds">
     <figure class="image is-square">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="toucanBox magazines">
+      <img class="lazyload" data-src="/images/toucanBox/post-its-principles.jpg" alt="Design principles">
     </figure>
   </div>
-</div>
+</div> -->
 
-<figcaption>
+<!-- <figcaption>
 
 This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
 
-</figcaption>
-
-</template>
-
-
-</Content-TextSection>
-
-
-
-<Content-MetricsSection padding="is-large" :metrics="[
-{ metric:'40', description:'Projects completed for small businesses and startups.' },
-{ metric:'02', description:'Award winning team members.' },
-{ metric:'103', description:'Years experience working for clients like Google and Amazon.' },
-]"/>
-
-
-
-<Content-MainSectionDivider aside="Section 4 of 4" title="Followup"/>
-
-
-
-
-<Content-ImageFrames-MainImageSection padding="is-large" url="https://bulma.io/images/placeholders/640x360.png" alt="placeholder" :aside="true" :content="true">
-
-<template v-slot:content>
-
-<p class="subtitle">
-  Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
-</p>
-
-In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
-
-</template>
-
-<template v-slot:aside>
-
-<figure class="image is-5by3">
-  <img class="lazyload" data-src="https://bulma.io/images/placeholders/800x480.png" alt="#">
-</figure>
-<figcaption>
-
-Nulla at arcu sagittis, egestas libero ut, finibus massa.
-
-</figcaption>
-
-</template>
-
-</Content-ImageFrames-MainImageSection>
-
-
-
-<Content-ImageFrames-FullImageSection url="https://bulma.io/images/placeholders/640x320.png" alt="#"/>
-
-
-
-
-<Content-ThreeColumnSection :content="true">
-
-<template v-slot:content>
-
-## Defining personalisation
-
-Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
-
-Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
-
-</template>
-
-<template v-slot:column1>
-
-#### Observation
-
----
-
-Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
-
-Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis.
-
-Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
-
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
-
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
-
-
-</template>
-
-<template v-slot:column2>
-
-#### Remedy
-
----
-
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
-
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
-
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
-
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
-
-</template>
-
-<template v-slot:column3>
+</figcaption> -->
 
 <div class="box">
 
@@ -696,11 +595,107 @@ Personal project
 
 </template>
 
-</Content-ThreeColumnSection>
+
+</Content-TextSection>
 
 
 
-<Content-ImageFrames-MainImageSection padding="is-large" url="https://bulma.io/images/placeholders/640x360.png" alt="placeholder" imageClass="is-16by9" :aside="false" :content="false" caption="Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa."/>
+<Content-MetricsSection padding="is-large" :metrics="[
+{ metric:'40', description:'Projects completed for small businesses and startups.' },
+{ metric:'02', description:'Award winning team members.' },
+{ metric:'103', description:'Years experience working for clients like Google and Amazon.' },
+]"/>
+
+
+
+<Content-MainSectionDivider aside="Section 4 of 4" title="Followup"/>
+
+
+
+
+<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-2by1" url="/images/toucanBox/personalised-experience.jpg" alt="Cartoon of a personalised experience" :aside="true" :content="true">
+
+<template v-slot:content>
+
+<p class="subtitle">
+  Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+</p>
+
+In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+
+</template>
+
+<template v-slot:aside>
+
+<figure class="image is-5by3">
+  <img class="lazyload" data-src="/images/toucanBox/warehouse.jpg" alt="toucanBox warehouse">
+</figure>
+<figcaption>
+
+Nulla at arcu sagittis, egestas libero ut, finibus massa.
+
+</figcaption>
+
+</template>
+
+</Content-ImageFrames-MainImageSection>
+
+
+
+<Content-ImageFrames-FullImageSection url="/images/toucanBox/personalisation-montage.jpg" alt="Personalisation discovery montage"/>
+
+
+
+<Content-MainAsideSection :content="true" :aside="true" columnOffset="table-offset">
+
+<template slot="content">
+
+## Defining personalisation
+
+Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+
+Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
+
+</template>
+
+<template>
+
+**Observation** | **Remedy** |
+--- | --- |
+Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout |
+Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added skirts, wellington boots and several other accessories |
+{.table .is-fullwidth}
+
+</template>
+
+<template slot="aside">
+
+<div class="box">
+
+**Platform**
+Responsive web application
+
+**Engine**
+E-commerce
+
+**Styling**
+2018
+
+**Input**
+Personal project
+
+**Animation**
+12 minutes
+
+</div>
+
+</template>
+
+</Content-MainAsideSection>
+
+
+
+<Content-ImageFrames-MainImageSection padding="is-medium-large" url="/images/toucanBox/high-fidelity-sketching.png" alt="Detailing feature screens" imageClass="is-16by9" :aside="false" :content="false" caption="Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa."/>
 
 
 
@@ -735,9 +730,13 @@ Must resonate with the core value proposition (hands-on crafting and creativity)
 
 <template slot="aside">
 
-<figure class="image is-9by16">
-  <img class="lazyload" data-src="https://bulma.io/images/placeholders/360x640.png" alt="#">
-</figure>
+<div class="columns is-gapless">
+  <div class="column is-three-quarters">
+    <figure class="image is-9by16">
+      <img class="lazyload" data-src="/images/toucanBox/choose-interface.png" alt="Screenshot of latest prototype">
+    </figure>
+  </div>
+</div>
 
 <figcaption>
 

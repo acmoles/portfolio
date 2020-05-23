@@ -96,7 +96,7 @@ export default {
 
   mounted () {
     this.$nextTick(() => {
-
+        // TODO turn off parallax after first scroll down 
         updateOnScroll(0, 1, progress => {
           window.requestAnimationFrame(() => {
             if (this.visible) {
@@ -213,10 +213,11 @@ export default {
 
 html:not(.disable-motion)
   .stage-column
-    transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay
+    transition-delay: $base-project-delay + 0.6s
+    // transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay
 
   .parallax.appear-fade-up, .visual-column.appear-fade-up
     transition: opacity 2.4s $fadeUpTransition .1s, transform .8s $fadeUpTransition .1s
-    transition-delay: $base-project-delay + 0.4s
+    transition-delay: $base-project-delay + 0.6s
 
 </style>
