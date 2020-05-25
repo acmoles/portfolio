@@ -17,6 +17,7 @@ export default (Vue) => {
   return new Vuex.Store({
     state: {
       isSidebarOpen: false,
+      isModalOpen: false,
       pageLoadingStatus: 'loading',
       revealerTitle: {
         title: '',
@@ -43,6 +44,9 @@ export default (Vue) => {
     mutations: {
       SET_SIDEBAR_STATUS (state, status) {
         state.isSidebarOpen = status
+      },
+      SET_MODAL_STATUS (state, status) {
+        state.isModalOpen = status
       },
       SET_LOADING_STATUS (state, status) {
         state.pageLoadingStatus = status
@@ -81,6 +85,9 @@ export default (Vue) => {
     actions: {
       setSidebarStatus (context, payload) {
         context.commit('SET_SIDEBAR_STATUS', payload)
+      },
+      setModalStatus (context, payload) {
+        context.commit('SET_MODAL_STATUS', payload)
       },
       setLoadingPageContent (context, payload) {
         context.commit('SET_LOADING_STATUS', payload)

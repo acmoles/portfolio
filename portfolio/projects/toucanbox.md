@@ -304,12 +304,12 @@ Nulla at arcu sagittis, egestas libero ut, finibus massa.
 { url:'/images/toucanBox/main-stage-square.png', alt:'Optimise the main stage', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
   type: 'modal',
   label: 'Iterations',
-  slot: 'stage'
+  slot: 'modal1'
   } },
 { url:'/images/toucanBox/product-section.png', alt:'Optimise the product section', caption:'Square image caption 2', slot:'slot2', iframe:false, action: {
-  type: 'link',
-  label: 'Prototype',
-  url: '/images/toucanBox/onboarding-montage.png'
+  type: 'modal',
+  label: 'Iterations',
+  slot: 'modal2'
   } },
 { url:'/images/toucanBox/ia-nav.png', alt:'Optimise site nav and IA', caption:'Square image caption 3', slot:'slot3', iframe:false },
 ]">
@@ -343,11 +343,11 @@ Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecena
 
 </template>
 
-<template slot="stage">
+<template slot="modal1">
 
-#### Test modal content
-
-Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
+<figure class="image is-2by1">
+  <img class="lazyload" data-src="/images/toucanBox/main-stage-detail.png" alt="Iterations of the Main Stage">
+</figure>
 
 </template>
 
@@ -360,6 +360,14 @@ Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }
 { .check-list }
+
+</template>
+
+<template slot="modal2">
+
+<figure class="image is-2by1">
+  <img class="lazyload" data-src="/images/toucanBox/product-section-detail.png" alt="Iterations of the Product Section">
+</figure>
 
 </template>
 
@@ -382,8 +390,16 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 <Content-ImageFrames-SquareImagesRow padding="is-medium" :content="true" :images="[
 { url:'/images/toucanBox/signup-funnel.png', alt:'Optimise the signup funnel', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'/images/toucanBox/mobile-steps.png', alt:'Mobile friendly steps', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'/images/toucanBox/choose-plan.png', alt:'Choose a plan', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'/images/toucanBox/mobile-steps.png', alt:'Mobile friendly steps', caption:'Square image caption 2', slot:'slot2', iframe:false, action: {
+  type: 'link',
+  label: 'Prototype',
+  url: 'http://signup-prototype.herokuapp.com'
+  } },
+{ url:'/images/toucanBox/choose-plan.png', alt:'Choose a plan', caption:'Square image caption 3', slot:'slot3', iframe:false, action: {
+  type: 'modal',
+  label: 'Video',
+  slot: 'modal3'
+  } },
 ]">
 
 <template slot="content">
@@ -425,6 +441,21 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }
 { .check-list }
+
+</template>
+
+<template slot="modal3">
+
+<div class="video-wrapper">
+
+  <figure class="image is-9by16 single-image">
+    <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190532" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </figure>
+  <figcaption>
+    User testing a subscription plans design iteration
+  </figcaption>
+
+</div>
 
 </template>
 

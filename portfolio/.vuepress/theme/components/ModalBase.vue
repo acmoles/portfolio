@@ -4,14 +4,13 @@
       role="dialog"
       :aria-label="label"
       aria-modal="true"
-      class="popup-wrapper"
+      class="popup-wrapper modal-background"
+      @click="$emit('close')"
     >
-      <div
-        class="popup-wrapper-backdrop"
-        @click="$emit('close')"
-      />
 
-      <slot/>
+      <div class="content-wrapper">
+        <slot/>
+      </div>
 
     </div>
   </portal>
@@ -22,7 +21,7 @@ import { disableScroll } from '@theme/mixins/disableScroll.js'
 
 export default {
   name: 'ModalBase',
-  mixins: [disableScroll],
+  mixins: [ disableScroll ],
   props: {
     focusElement: {
       default: null,
@@ -109,12 +108,15 @@ export default {
   display: flex
   justify-content: center
   align-items: center
+  z-index: 3
+  .content-wrapper
+    width: calc( 100% - 2em )
 
-
-.popup-wrapper-backdrop
-  position: absolute
-  width: 100%
-  height: 100%
-  z-index: -1
+  .video-wrapper
+    max-width: 50vh
+    margin: auto
+    // .image
+    //   max-height: calc( 100% - 2em )
+    //   overflow: hidden
 
 </style>

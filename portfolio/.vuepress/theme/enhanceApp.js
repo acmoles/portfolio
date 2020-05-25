@@ -9,6 +9,7 @@ import PortalVue from 'portal-vue'
 import lazySizes from 'lazysizes'
 
 import Home from './components/home/Home.vue'
+import FadeGlobal from './components/FadeGlobal.vue'
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -23,6 +24,7 @@ export default ({
 
   // Regster the home component separately for clearer directory structure
   Vue.component('Home', Home)
+  Vue.component('Fade', FadeGlobal)
 
   if (typeof document !== 'undefined' && typeof window !== 'undefined') {
     Vue.use(VueForceNextTick)

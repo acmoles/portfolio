@@ -1,59 +1,62 @@
 <template>
-  <header
-    class="navbar"
-    :class="[navStyle, { force: forceLight }]"
-    ref="navbar"
-    :style="{ position: cssPosition, top: cssTop + 'px' }"
-    role="navigation"
-    aria-label="main navigation"
-  >
-    <!-- <div class="container is-fullhd"> -->
-      <div class="navbar-brand" :class="{ burgered: navbarBurgered }">
-        <router-link
-          :to="$localePath"
-          class="home-link"
-        >
-          <!-- <Logo
-            class="logo-site-title"
-            :class="{ burgered: navbarBurgered }"
-          /> -->
-
-          <transition name="fade-fast" mode="out-in">
-            <ArrowIcon
-              class="back-arrow"
-              v-if="navbarBurgered"
-              />
-            <span
-              class="text-site-title"
+  <transition name="fade-fast-delay">
+    <header
+      v-show="!isModalOpen"
+      class="navbar"
+      :class="[navStyle, { force: forceLight }]"
+      ref="navbar"
+      :style="{ position: cssPosition, top: cssTop + 'px' }"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <!-- <div class="container is-fullhd"> -->
+        <div class="navbar-brand" :class="{ burgered: navbarBurgered }">
+          <router-link
+            :to="$localePath"
+            class="home-link"
+          >
+            <!-- <Logo
+              class="logo-site-title"
               :class="{ burgered: navbarBurgered }"
-              v-else
-            >
-              <strong>Anthony Moles</strong>
-              <!-- <span>design, product and technology</span> -->
-            </span>
+            /> -->
+
+            <transition name="fade-fast" mode="out-in">
+              <ArrowIcon
+                class="back-arrow"
+                v-if="navbarBurgered"
+                />
+              <span
+                class="text-site-title"
+                :class="{ burgered: navbarBurgered }"
+                v-else
+              >
+                <strong>Anthony Moles</strong>
+                <!-- <span>design, product and technology</span> -->
+              </span>
+            </transition>
+          </router-link>
+
+          <transition name="fade-fast-delay">
+            <div
+              class="nav-sidebar-button-wrapper"
+              v-if="navbarBurgered"
+              >
+              <SidebarButton
+                purpose="menu"
+                @sidebar-button-event="toggleSidebar"
+              />
+            </div>
           </transition>
-        </router-link>
 
-        <transition name="fade-fast-delay">
-          <div
-            class="nav-sidebar-button-wrapper"
-            v-if="navbarBurgered"
-            >
-            <SidebarButton
-              purpose="menu"
-              @sidebar-button-event="toggleSidebar"
-            />
-          </div>
-        </transition>
+        </div>
 
-      </div>
-
-      <NavLinks
-        :active="isSidebarOpen"
-        :burgered="navbarBurgered"
-      />
-    <!-- </div> -->
-  </header>
+        <NavLinks
+          :active="isSidebarOpen"
+          :burgered="navbarBurgered"
+        />
+      <!-- </div> -->
+    </header>
+  </transition>
 </template>
 
 <script>
@@ -65,11 +68,13 @@ import ArrowIcon from '@theme/components/icons/ArrowIcon.vue'
 
 import updateOnScroll from 'uos'
 // import debounce from 'lodash.debounce'
+import { disableScroll } from '@theme/mixins/disableScroll.js'
 
 import { getScrollTop, getOffsetY, getViewport } from '../../util'
 
 export default {
   components: { SidebarButton, NavLinks, Logo, ArrowIcon },
+  mixins: [ disableScroll ],
   data () {
     return {
       windowHeight: null,
@@ -84,6 +89,8 @@ export default {
     }
   },
   mounted () {
+    this.setBodyEl()
+
     this.$router.beforeEach((to, from, next) => {
       // console.log('nav router guard');
       this.cssPosition = 'absolute'
@@ -110,18 +117,26 @@ export default {
     isSidebarOpen () {
       return this.$store.state.isSidebarOpen
     },
+    isModalOpen () {
+      return this.$store.state.isModalOpen
+    },
     navStyle () {
       return this.$page.frontmatter.navStyle.style
     },
     forceLight () {
       return this.$store.state.isSidebarOpen || this.scrollPosition >= (this.windowHeight - 48)
-    }
+    },
   },
 
   methods: {
     toggleSidebar (to) {
       let status = typeof to === 'boolean' ? to : !this.isSidebarOpen
       this.$store.dispatch('setSidebarStatus', status)
+      if (status === true) {
+        this.disableScrolling(true)
+      } else {
+        this.enableScrolling(true)
+      }
     },
     handleScroll ( progress ) {
       if (this.isSidebarOpen) {

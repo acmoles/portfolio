@@ -1,5 +1,5 @@
 <template>
-  <div ref="presentation" class="presentation noise-light"></div>
+  <div ref="presentation" class="presentation"></div>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <div ref="container" class="container is-fullhd is-home">
-    <!-- <picture class="test-background noise-heavy">
+    <!-- <picture class="test-background">
       <img src="/images/homepage/background-xl.png" alt="">
     </picture> -->
     <!-- <div v-for="n in 5" :class="'test-blur test-blur-' + n"></div> -->

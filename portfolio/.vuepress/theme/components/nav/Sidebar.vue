@@ -2,7 +2,7 @@
   <transition name="fade">
     <div
       v-show="isSidebarOpen"
-      class="modal-background sidebar-container noise-heavy"
+      class="modal-background sidebar-container"
       >
 
       <aside
@@ -31,7 +31,7 @@ import NavLinks from '@theme/components/nav/NavLinks.vue'
 import { resolveSidebarItems } from '../../util'
 import updateOnScroll from 'uos'
 
-//TODO if has case study headings 
+//TODO if has case study headings
 
 export default {
   name: 'Sidebar',
@@ -129,11 +129,6 @@ export default {
     & > li:not(:first-child)
       margin-top: .75rem
 
-//TODO remove search sidebar button
-// .search-sidebar-button
-//   position: absolute
-//   bottom: 0
-//   left: 0
 
 .goto-top-sidebar-button
   position: absolute

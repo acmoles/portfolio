@@ -12,7 +12,7 @@
       ref="revealerParent"
     >
       <div
-        class="revealer project-card noise-light"
+        class="revealer project-card"
         :class="[revealerClass, backgroundClass]"
         :style="{ transform: transformString, WebkitTransform: transformString, borderRadius: radiusString }"
         ref="revealer"
@@ -235,12 +235,12 @@ export default {
 
 .revealer-container
   pointer-events: none
-  @include cover-screen
+  @include cover-screen-units
   z-index: 99
   filter: opacity(100%)
 
 .revealer
-  @include cover-screen
+  @include cover-screen-units
   @include make3d
   transform-origin: 0 0
   border-radius: 0

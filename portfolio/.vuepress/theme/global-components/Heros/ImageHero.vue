@@ -1,12 +1,13 @@
 <template>
-    <img ref="image" :src="src" :alt="alt" :class="{'noise-light': noise}">
+    <img ref="image" :src="src" :alt="alt">
 </template>
 
 <script>
 
 // TODO enable floating png images on background
 
-//     :style="{backgroundImage: backgroundSrc}"
+// :style="{backgroundImage: backgroundSrc}"
+// :class="{'noise-light': noise}"
 
 import { loadableHero } from '../../mixins/loadableHero.js'
 

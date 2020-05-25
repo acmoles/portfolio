@@ -15,7 +15,7 @@
           v-for="(image, i) in images"
         >
 
-          <button v-if="image.action" class="action-button" type="button" name="action" @click="action(image, i)">
+          <button v-if="image.action" class="action-button background-noise" type="button" name="action" @click="action(image, i)">
             <figure class="image is-square">
               <img class="lazyload" :data-src="image.url" :alt="image.alt">
             </figure>
@@ -25,13 +25,15 @@
                 <img v-if="image.action.type === 'link'" src="/svg-icons/icon_external.svg" alt="External icon">
               </i>
             </span>
-            <ModalBase
-              v-if="showDialog === i"
-              @close="showDialog = -1"
-              label="Open dialog"
-            >
-              <slot :name="image.action.slot"></slot>
-            </ModalBase>
+            <transition name="fade">
+              <ModalBase
+                v-if="showDialog === i"
+                @close="close()"
+                label="Open dialog"
+              >
+                <slot :name="image.action.slot"></slot>
+              </ModalBase>
+            </transition>
           </button>
 
           <figure
@@ -95,8 +97,12 @@ export default {
         window.open('http://www.google.com', '_blank')
       } else if (image.action.type === 'modal') {
         this.showDialog = i
-        console.log('open modal')
+        this.$store.dispatch('setModalStatus', true)
       }
+    },
+    close() {
+      this.$store.dispatch('setModalStatus', false)
+      this.showDialog = -1
     }
   }
 
