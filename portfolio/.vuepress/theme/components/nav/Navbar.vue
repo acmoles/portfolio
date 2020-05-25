@@ -1,57 +1,62 @@
 <template>
-  <transition name="navbar-transition">
-    <header
-      v-show="show"
-      class="navbar"
-      :class="[navStyle, { force: forceLight }]"
-      ref="navbar"
-      :style="{ position: cssPosition, top: cssTop + 'px' }"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <!-- <div class="container is-fullhd"> -->
-        <div class="navbar-brand" :class="{ burgered: navbarBurgered }">
-          <router-link
-            :to="$localePath"
-            class="home-link"
-          >
-            <!-- <Logo
-              class="logo-site-title"
+  <header
+    class="navbar"
+    :class="[navStyle, { force: forceLight }]"
+    ref="navbar"
+    :style="{ position: cssPosition, top: cssTop + 'px' }"
+    role="navigation"
+    aria-label="main navigation"
+  >
+    <!-- <div class="container is-fullhd"> -->
+      <div class="navbar-brand" :class="{ burgered: navbarBurgered }">
+        <router-link
+          :to="$localePath"
+          class="home-link"
+        >
+          <!-- <Logo
+            class="logo-site-title"
+            :class="{ burgered: navbarBurgered }"
+          /> -->
+
+          <transition name="fade-fast" mode="out-in">
+            <ArrowIcon
+              class="back-arrow"
+              v-if="navbarBurgered"
+              />
+            <span
+              class="text-site-title"
               :class="{ burgered: navbarBurgered }"
-            /> -->
-            <ArrowIcon class="back-arrow"/>
-            <transition name="fade-fast">
-              <span
-                class="text-site-title"
-                :class="{ burgered: navbarBurgered }"
-                v-show="!navbarBurgered"
-              >
-                <strong>Anthony Moles</strong>
-                <!-- <span>design, product and technology</span> -->
-              </span>
-            </transition>
+              v-else
+            >
+              <strong>Anthony Moles</strong>
+              <!-- <span>design, product and technology</span> -->
+            </span>
+          </transition>
         </router-link>
 
-          <SidebarButton
-            purpose="menu"
-            class="nav-sidebar-button"
+        <transition name="fade-fast-delay">
+          <div
+            class="nav-sidebar-button-wrapper"
             v-if="navbarBurgered"
-            @sidebar-button-event="toggleSidebar"
-          />
-        </div>
+            >
+            <SidebarButton
+              purpose="menu"
+              @sidebar-button-event="toggleSidebar"
+            />
+          </div>
+        </transition>
 
-        <NavLinks
-          :active="isSidebarOpen"
-          :burgered="navbarBurgered"
-        />
-      <!-- </div> -->
-    </header>
-  </transition>
+      </div>
+
+      <NavLinks
+        :active="isSidebarOpen"
+        :burgered="navbarBurgered"
+      />
+    <!-- </div> -->
+  </header>
 </template>
 
 <script>
-
-// TODO switch to in-project back button
 
 import SidebarButton from '@theme/components/nav/SidebarButton.vue'
 import NavLinks from '@theme/components/nav/NavLinks.vue'
@@ -67,7 +72,6 @@ export default {
   components: { SidebarButton, NavLinks, Logo, ArrowIcon },
   data () {
     return {
-      show: true,
       windowHeight: null,
       navbarBurgered: false,
       navbarHeight: 16 * 6,
@@ -80,6 +84,13 @@ export default {
     }
   },
   mounted () {
+    this.$router.beforeEach((to, from, next) => {
+      // console.log('nav router guard');
+      this.cssPosition = 'absolute'
+      this.cssTop = 0
+      next()
+    })
+
     this.$nextTick(() => {
 
       this.windowHeight = getViewport('y') // SSR
@@ -106,17 +117,6 @@ export default {
       return this.$store.state.isSidebarOpen || this.scrollPosition >= (this.windowHeight - 48)
     }
   },
-
-  // watch: {
-  //   pageLoadingStatus (latest, last) {
-  //     // if (latest === 'finished') {
-  //     //   this.show = true
-  //     //   // this.navbarHeight = this.$refs.navbar.offsetHeight
-  //     // } else {
-  //     //   this.show = false
-  //     // }
-  //   }
-  // },
 
   methods: {
     toggleSidebar (to) {
@@ -155,7 +155,12 @@ export default {
       }
 
       if ( this.scrollPosition > this.lastScrollPosition && this.scrollDirection !== 'down') {
-        if ( this.navbarPosition < 0 ) return
+        if ( this.navbarPosition < 0 ) {
+          console.log('navbar problem')
+          this.cssPosition = 'absolute'
+          this.cssTop = 0
+          return
+        }
 
         this.cssPosition = 'absolute'
         this.cssTop = this.navbarPosition
@@ -192,14 +197,6 @@ export default {
   transform: translate3d(0px, -100%, 0px)
   transform: translate3d(0px, 0px, 0px)
 
-.navbar-transition-enter-active, .navbar-transition-leave-active
-  // transition: transform $fadeTime ease, opacity $fadeTime ease
-  transition: opacity $fadeTime ease
-
-.navbar-transition-enter, .navbar-transition-leave-to
-  opacity: 0
-  // transform: translate3d(0px, -100%, 0px)
-
 .home-link
   display: flex
   align-items: center
@@ -208,37 +205,13 @@ export default {
   pointer-events: all
   min-width: 6em
 
-.nav-sidebar-button
+.nav-sidebar-button-wrapper
   position: absolute
   right: 0
   pointer-events: all
 
 .navbar-end, .navbar-start
   align-items: center
-
-// .container.is-fullhd > .navbar-brand
-//   margin-left: 0
-
-
-// Light/dark
-
-// .dark:not(.force)
-//   .back-arrow
-//     #ArrowIcon
-//       polygon
-//         fill: $steel
-
-// .dark:not(.force)
-//   .hamburger
-//       .hamburger-inner::before,
-//       .hamburger-inner::after
-//         background-color: $steel
-
-// .dark:not(.force)
-//   .navbar-item:not(.dropdown-item), .navbar-link
-//     color: $slate
-//   .navbar-link:not(.is-arrowless)::after
-//     border-color: $slate
 
 .light
   .text-site-title
@@ -247,11 +220,10 @@ export default {
   a.navbar-item:not(.dropdown-item), a.navbar-link:not(.dropdown-item)
     filter: opacity(75%)
     color: $white
+    &.router-link-active
+      filter: opacity(100%)
     &:hover
       color: $white
-  .navbar-link:not(.is-arrowless)::after
-    border-color: $white
-
 
 .layout.home
   .back-arrow
@@ -261,13 +233,10 @@ export default {
 
 .back-arrow
   transform: rotate(180deg)
-  display: none
 
 .burgered
   .home-link
     pointer-events: all
-  .back-arrow
-    display: block
 
 
 .logo-site-title

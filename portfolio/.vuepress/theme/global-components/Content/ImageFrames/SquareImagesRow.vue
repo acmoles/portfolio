@@ -14,10 +14,36 @@
           class="column"
           v-for="(image, i) in images"
         >
-          <figure class="image is-square">
+
+          <button v-if="image.action" class="action-button" type="button" name="action" @click="action(image, i)">
+            <figure class="image is-square">
+              <img class="lazyload" :data-src="image.url" :alt="image.alt">
+            </figure>
+            <span>{{ image.action.label }}
+              <i class="icon">
+                <img v-if="image.action.type === 'modal'" src="/svg-icons/icon_maximise.svg" alt="Maximise icon">
+                <img v-if="image.action.type === 'link'" src="/svg-icons/icon_external.svg" alt="External icon">
+              </i>
+            </span>
+            <ModalBase
+              v-if="showDialog === i"
+              @close="showDialog = -1"
+              label="Open dialog"
+            >
+              <slot :name="image.action.slot"></slot>
+            </ModalBase>
+          </button>
+
+          <figure
+            v-else
+            class="image is-square"
+            :class="{'sibling-action-padding': siblingAction}"
+          >
             <iframe v-if="image.iframe" class="lazyload" :data-src="image.url" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             <img v-else class="lazyload" :data-src="image.url" :alt="image.alt">
           </figure>
+
+
           <figcaption class="content">
             <slot v-if="image.slot" :name="image.slot"></slot>
             <template v-else>
@@ -33,13 +59,46 @@
 
 <script>
 
+import ModalBase from '@theme/components/ModalBase.vue'
+
 export default {
+
+  components: { ModalBase },
 
   props: {
     images: Array,
     padding: String,
     content: Boolean,
   },
+
+  data() {
+    return {
+      showDialog: -1,
+    };
+  },
+
+  computed: {
+    siblingAction() {
+      let hasSiblingAction
+      this.images.forEach((image) => {
+        if (image.action) {
+          hasSiblingAction = true
+        }
+      })
+      return hasSiblingAction
+    }
+  },
+
+  methods: {
+    action(image, i) {
+      if (image.action.type === 'link') {
+        window.open('http://www.google.com', '_blank')
+      } else if (image.action.type === 'modal') {
+        this.showDialog = i
+        console.log('open modal')
+      }
+    }
+  }
 
 }
 
@@ -48,6 +107,27 @@ export default {
 <style lang="sass">
   @import "../../../styles/variables.sass"
   @import "../../../styles/mixins.sass"
+
+  .sibling-action-padding
+    margin-bottom: 5em
+
+  .action-button
+    @include button-override
+    cursor: pointer
+    padding: 0
+    width: 100%
+    background-color: $slate
+    color: $button-custom-text-color
+    box-shadow: $button-shadow
+    transition: $button-transition
+    border-radius: 0 0 $radius-small $radius-small
+    &:hover
+      background-color: $button-custom-hover-color
+      color: $grey-light
+    span
+      padding: .75em .75em .75em 1em
+      display: flex
+      justify-content: space-between
 
 
 </style>

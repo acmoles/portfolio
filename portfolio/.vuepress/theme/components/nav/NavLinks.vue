@@ -102,19 +102,18 @@ export default {
 @import "../../styles/mixins.sass"
 
 .navbar-menu
-  transition: filter 0.4s ease
+  transition: opacity 0.15s  0.15s
   margin-right: 2em
   pointer-events: all
 
 .navbar-menu.burgered
-  filter: opacity(0%)
   opacity: 0
   pointer-events: none
   @media screen and (min-width: $desktop)
+    transition: margin-right 0.3s step-end, opacity 0.15s
     margin-right: 6em
 
 .navbar-menu.burgered.is-active
-  filter: opacity(100%)
   opacity: 1
   pointer-events: all
 </style>

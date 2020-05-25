@@ -301,8 +301,16 @@ Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
 
 <Content-ImageFrames-SquareImagesRow :content="true" :images="[
-{ url:'/images/toucanBox/main-stage-square.png', alt:'Optimise the main stage', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'/images/toucanBox/product-section.png', alt:'Optimise the product section', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'/images/toucanBox/main-stage-square.png', alt:'Optimise the main stage', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
+  type: 'modal',
+  label: 'Iterations',
+  slot: 'stage'
+  } },
+{ url:'/images/toucanBox/product-section.png', alt:'Optimise the product section', caption:'Square image caption 2', slot:'slot2', iframe:false, action: {
+  type: 'link',
+  label: 'Prototype',
+  url: '/images/toucanBox/onboarding-montage.png'
+  } },
 { url:'/images/toucanBox/ia-nav.png', alt:'Optimise site nav and IA', caption:'Square image caption 3', slot:'slot3', iframe:false },
 ]">
 
@@ -332,6 +340,14 @@ Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecena
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }
 { .check-list }
+
+</template>
+
+<template slot="stage">
+
+#### Test modal content
+
+Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
 
 </template>
 

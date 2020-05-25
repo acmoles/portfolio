@@ -1,12 +1,11 @@
 <template>
-  <button class="button is-dark project-external-link noise-light">
+  <button class="button is-dark project-external-link background-noise">
     <span>{{ label }}</span>
     <ExternalIcon/>
   </button>
 </template>
 
 <script>
-// TODO thicker icon lines 2px
 import ExternalIcon from '@theme/components/icons/ExternalIcon.vue'
 
 export default {

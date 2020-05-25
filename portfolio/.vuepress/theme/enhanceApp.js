@@ -5,6 +5,7 @@ import initRouting from './routing.js'
 
 import VueForceNextTick from 'vue-force-next-tick'
 import VueClipboard from 'vue-clipboard2'
+import PortalVue from 'portal-vue'
 import lazySizes from 'lazysizes'
 
 import Home from './components/home/Home.vue'
@@ -26,6 +27,7 @@ export default ({
   if (typeof document !== 'undefined' && typeof window !== 'undefined') {
     Vue.use(VueForceNextTick)
     Vue.use(VueClipboard)
+    Vue.use(PortalVue)
 
     lazySizes.init();
 

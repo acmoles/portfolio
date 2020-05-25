@@ -205,7 +205,7 @@ export default {
 
 .project-card
   background-color: $black
-  background-image: $gradientSubtle, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
+  background-image: $gradientNone, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
   background-size: 250%, 256px 256px
   background-blend-mode: overlay
   &.project-panel

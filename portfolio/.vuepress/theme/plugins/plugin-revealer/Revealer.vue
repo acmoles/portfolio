@@ -25,15 +25,15 @@
 <script>
 import nprogress from 'nprogress'
 import config from '../../../config.js'
-import { getViewport, getScrollTop } from '../../util'
+import { getViewport, getViewportInner, getScrollTop } from '../../util'
+import { disableScroll } from '@theme/mixins/disableScroll.js'
+
 // import IncomingTitle from './IncomingTitle.vue'
 
 export default {
 
-  // TODO fix timing issues which depend on js speed
-  // TODO slower fade on fade out
-
   // components: { IncomingTitle },
+  mixins: [disableScroll],
 
   data () {
     return {
@@ -43,7 +43,8 @@ export default {
       revealerClass: '',
       transformString: 'translate3D(0, 0, 0) scale3d(1, 1, 1)',
       radiusString: '0px',
-      enterTime: 400
+      enterTime: 400,
+      scrollEnabled: true
     }
   },
 
@@ -85,14 +86,18 @@ export default {
 
       // disallow scroll & ensure instant scroll
       if (latest === 'finished') {
-        document.documentElement.style.overflowY = 'scroll'
         document.documentElement.style.scrollBehavior = 'smooth'
       } else if (latest === 'revealing') {
-        document.documentElement.style.overflowY = 'scroll'
+        this.scrollEnabled = true
+        this.enableScrolling(false)
         document.documentElement.style.scrollBehavior = 'auto'
       } else {
-        document.documentElement.style.overflowY = 'hidden'
-        document.documentElement.style.scrollBehavior = 'auto'
+        // Loading, Covering
+        if (this.scrollEnabled) {
+          this.disableScrolling(true)
+          this.scrollEnabled = false
+          document.documentElement.style.scrollBehavior = 'auto'
+        }
       }
 
 
@@ -183,6 +188,7 @@ export default {
     document.documentElement.style.scrollBehavior = 'smooth'
 
     this.$nextTick(() => {
+      this.setBodyEl()
       document.documentElement.classList.add('ready')
       this.$store.dispatch('setRevealerInit', true)
     })
@@ -202,6 +208,7 @@ export default {
     },
 
     generateTransformStringPlacement() {
+      // TODO even more robust for browsers with scrollbars?
       const translateX = this.projectPosition.childLeft
       const translateY = this.projectPosition.childTop
       const scaleX = this.projectPosition.childWidth / getViewport('x')

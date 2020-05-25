@@ -118,9 +118,9 @@ export default {
 // .loading
 //   display: none
 
-.revealing, .covering, .loading
-  .page-content
-    overflow: hidden
+// .revealing, .covering, .loading
+//   .page-content
+//     overflow: hidden
 
 .layout.home
   position: relative
@@ -129,10 +129,11 @@ export default {
     position: fixed
     content: ' '
     display: block
-    background: darken($black, 2%)
+    background: darken($black, 3%)
     transition: filter .4s linear
     filter: opacity(0%)
     pointer-events: none
+    z-index: 3
 
 .layout.home.covering, .layout.home.loading
   &::after

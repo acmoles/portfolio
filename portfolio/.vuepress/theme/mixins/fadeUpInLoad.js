@@ -36,6 +36,7 @@ export const fadeUpInLoad = {
 
         if (this.oneTime) {
           this.observer.disconnect()
+          this.disconnectCallback()
         }
 
         if (this.pageLoadingStatus === 'finished') {
@@ -58,6 +59,9 @@ export const fadeUpInLoad = {
   methods: {
     visibleCallback () {
       // for JS visible callbacks
+    },
+    disconnectCallback() {
+
     }
   }
 

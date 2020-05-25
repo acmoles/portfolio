@@ -11,14 +11,12 @@
 
       <div class="columns">
         <div
-          class="column is-two-thirds text-column appear-fade-up"
-          :class="{'in-view': visible}"
+          class="column is-two-thirds text-columnp"
           >
           <slot name="main"></slot>
         </div>
         <div
-          class="column aside appear-fade-up"
-          :class="{'in-view': visible}"
+          class="column aside"
         >
           <slot name="side"></slot>
         </div>
@@ -54,20 +52,30 @@ export default {
     // TODO make description slot pull from page metadata? Could also be used for SEO
   },
 
+  watch: {
+    pageLoadingStatus (latest, last) {
+      if (latest === 'finished' && this.intersected) {
+        this.$forceNextTick(() => {
+          this.visible = true
+          this.visibleCallback()
+        })
+      } else if (latest === 'revealing') {
+        this.displacement = getViewport('y') - this.$el.getBoundingClientRect().y
+        // console.log('rect is: ', this.$el.getBoundingClientRect().y);
+        // console.log('viewport is: ', getViewport('y'));
+        // console.log('displacement is: ', this.displacement);
+      }
+    }
+  },
+
   // TODO only animate if scroll position = 0 ??
   mounted () {
     this.applyPadding()
-    this.$nextTick(() => {
-      setTimeout(() => {
-        this.displacement = getViewport('y') - this.$el.getBoundingClientRect().y
-        console.log('displacement is: ', this.displacement);
-      }, 100)
-    })
   },
 
   methods: {
     visibleCallback () {
-      console.log('visible callback');
+      // console.log('visible callback');
       this.readyForWipe = true
       this.$forceNextTick(() => {
         this.displacement = 0

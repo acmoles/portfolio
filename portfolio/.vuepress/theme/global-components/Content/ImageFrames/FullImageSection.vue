@@ -1,7 +1,7 @@
 <template>
   <section class="section full-image">
     <figure class="image is-2by1">
-      <img class="lazyload medium-zoom" :data-src="url" :alt="alt">
+      <img class="lazyload" :data-src="url" :alt="alt">
     </figure>
   </section>
 </template>
