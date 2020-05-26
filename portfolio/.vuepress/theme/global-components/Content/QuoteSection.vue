@@ -1,8 +1,13 @@
 <template>
   <section class="section is-large background-noise quote-section">
-    <div class="container is-fullhd content">
-      <p class="subtitle">{{ quote }}</p>
-      <p class="attribute">{{ attribute }}</p>
+    <b v-for="n in 128" class="particle"/>
+    <div class="container is-fullhd content relative">
+      <div class="columns">
+        <div class="column is-two-thirds">
+          <p class="subtitle">{{ quote }}</p>
+          <p class="attribute">{{ attribute }}</p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -26,4 +31,29 @@ export default {
 
   .quote-section
     background-color: rgba($pitch, 0.2)
+    overflow: hidden
+
+  .subtitle, .attribute
+    text-shadow: 0 0.25em 0.75em $pitch
+
+  .particle
+    position: absolute
+    top: 0
+    left: 0
+
+    @for $i from 0 to 128
+      $t: (1 + .01*random(100))
+      $w: (1 + .01*random(100))*4px
+      $h: (1 + .01*random(100))*4px
+
+      &:nth-child(#{$i + 1})
+        width: $w
+        height: $h
+        transform: translate(random(100)*1vw, (random(100)*0.38em - 2em)) rotateZ(random(100)*2deg)
+        background: hsl(random(360), 100%, 65%)
+        animation-duration: $t*2s
+        animation-delay: 1.25s + (-.001*random(100)*$t)
+
+
+
 </style>
