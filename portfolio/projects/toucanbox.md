@@ -131,17 +131,17 @@ Proin eget porttitor neque:
 
 <Content-PointsSection :content="true" :points="[
 
-{ src:'/svg-icons/icon_sad.svg', alt:'sad face', title:'Prospective customers are usually on their phones', description:'Customer inverview. Usually on social media - facebook - see our ad. Projects completed for small businesses and startups.' },
+{ src:'/svg-icons/icon_device.svg', alt:'Phone', title:'Prospective customers are usually on their phones', description:'Customer inverview. Usually on social media - facebook - see our ad. Projects completed for small businesses and startups.' },
 
-{ src:'/svg-icons/icon_time.svg', alt:'clock', title:'We were pushing users into the signup funnel too soon', description:'If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.' },
+{ src:'/svg-icons/icon_turn.svg', alt:'clock', title:'We were pushing users into the signup funnel too soon', description:'If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.' },
 
-{ src:'/svg-icons/icon_idea.svg', alt:'lightbulb', title:'Dropout after partially completing the signup form was surprisingly high', description:'Years experience working for clients like Google and Amazon.' },
+{ src:'/svg-icons/icon_divert.svg', alt:'lightbulb', title:'Dropout after partially completing the signup form was surprisingly high', description:'Years experience working for clients like Google and Amazon.' },
 
-{ src:'/svg-icons/icon_search.svg', alt:'search', title:'It wasn’t clear in our messaging that we offer a subscription', description:'VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.' },
+{ src:'/svg-icons/icon_understanding.svg', alt:'search', title:'It wasn’t clear in our messaging that we offer a subscription', description:'VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.' },
 
-{ src:'/svg-icons/icon_docs.svg', alt:'documents', title:'We need more imagery showing the box contents and breadth of the range', description:'Award winning team members.' },
+{ src:'/svg-icons/icon_visible.svg', alt:'documents', title:'We need more imagery showing the box contents and breadth of the range', description:'Award winning team members.' },
 
-{ src:'/svg-icons/icon_device.svg', alt:'device', title:'Lack of feedback that a trial code was applied caused anxiety', description:'Market/competitor research. Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site.' },
+{ src:'/svg-icons/icon_sad.svg', alt:'device', title:'Lack of feedback that a trial code was applied caused anxiety', description:'Market/competitor research. Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site.' },
 
 ]">
 
@@ -162,13 +162,13 @@ Proin eget porttitor neque:
 
 
 
-<Content-ThreeColumnSection :content="true">
+<Content-ThreeColumnSection :content="true" columnOffset="three-offset">
 
 <template v-slot:content>
 
 ## Who are our customers?
 
-Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+Focus on their motivations. Using research. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
 
 </template>
 
@@ -177,6 +177,8 @@ Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere puru
 ####  Parent
 
 ---
+
+<div class="small">
 
 *Buyer persona*
 
@@ -192,6 +194,7 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 
 Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
 
+</div>
 
 </template>
 
@@ -200,6 +203,8 @@ Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu m
 #### Gifter
 
 ---
+
+<div class="small">
 
 *Buyer persona*
 
@@ -211,13 +216,21 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 
 Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
 
+<br>
+
+</div>
+
 #### Child
 
 ---
 
+<div class="small">
+
 *User persona*
 
 Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+</div>
 
 </template>
 
@@ -235,13 +248,13 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 
 
 
-<Content-ThreeColumnSection padding="is-large" :content="true">
+<Content-ThreeColumnSection padding="is-large" :content="true" columnOffset="three-offset">
 
 <template v-slot:content>
 
 ## Objectives
 
-Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis.
+How might we? Jobs to be done and/or user story. Measurable objectives would be better. Design principles? Increase funnel conversion rate. PM-esq stuff. I broke down the overarching project goal into six focus areas under two themes. Unlocking your creativity one box at a time:
 
 </template>
 
@@ -251,6 +264,8 @@ Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere puru
 
 ---
 
+<div class="small">
+
 Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
 
 Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis.
@@ -259,6 +274,7 @@ Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec ferme
 
 Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
 
+</div>
 
 </template>
 
@@ -268,25 +284,27 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 
 ---
 
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
-
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+<div class="small">
 
 Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
 
 Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+
+</div>
 
 </template>
 
 <template v-slot:column3>
 
-<div class="box">
+<Content-InfoBox :hasIcon="true">
 
 Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
-</div>
-
-</figcaption>
+</Content-InfoBox>
 
 </template>
 
@@ -301,7 +319,7 @@ Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
 
 <Content-ImageFrames-SquareImagesRow :content="true" :images="[
-{ url:'/images/toucanBox/main-stage-square.png', alt:'Optimise the main stage', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
+{ url:'/images/toucanBox/main-stage-square.png', alt:'Optimise the \'main stage\'', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
   type: 'modal',
   label: 'Iterations',
   slot: 'modal1'
@@ -333,9 +351,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum maur
 
 <template slot="slot1">
 
-#### Optimise the main stage
+#### Optimise the 'main stage'
 
-Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
+Value proposition and communication. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
 
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }
@@ -373,9 +391,9 @@ Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim
 
 <template slot="slot3">
 
-#### Site-wide navigation
+#### Information architecture
 
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis.
+Site navigation and structure. New content (schools, inside a box, blog/activities). Around what users are really looking for e.g. What's inside the box - reachable by both scrolling and clicking a button in the nav. Nullam a metus quis eros pretium hendrerit ut a turpis.
 
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }
@@ -428,6 +446,7 @@ Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim
 
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }
+- Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim.{ .stop }
 { .check-list }
 
 </template>
@@ -440,6 +459,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }
+- Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim.{ .stop }
 { .check-list }
 
 </template>
@@ -464,7 +484,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 
 
-<Content-MainAsideSection padding="is-large" :content="true" :aside="true" columnOffset="table-offset">
+<Content-MainAsideSection padding="is-large" :content="true" :aside="true" columnOffset="table-offset" page1Label="Landing page" page2Label="Signup funnel">
 
 <template slot="content">
 
@@ -486,22 +506,24 @@ Certain types of accessory like hats, clothes and shoes quickly cluttered the sc
 
 </template>
 
+<template slot="page2">
+
+**Observation** | **Remedy** |
+--- | --- |
+Page 2. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout |
+Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added skirts, wellington boots and several other accessories |
+Cras mollis sodales urna, eu ultrices nibh lobortis ut. Fusce eu pellentesque nulla. | I observed children dragging items off the screen, attempting to delete them, so made that actually work |
+Certain types of accessory like hats, clothes and shoes quickly cluttered the screen and didnt make sense out of their intended positions | I made new placements in specific categories (e.g. hair) remove the previous accessory of that type. This proved to be an intuitive limitation |
+{.table .is-fullwidth}
+
+</template>
+
 <template slot="aside">
 
 <div class="columns is-gapless">
   <div class="column is-two-thirds">
     <figure class="image is-square">
       <img class="lazyload" data-src="/images/toucanBox/user-testing-1.jpg" alt="User tester 1">
-    </figure>
-  </div>
-</div>
-
-<br>
-
-<div class="columns is-gapless">
-  <div class="column is-two-thirds">
-    <figure class="image is-square">
-      <img class="lazyload" data-src="/images/toucanBox/user-testing-2.jpg" alt="User tester 2">
     </figure>
   </div>
 </div>
@@ -518,13 +540,13 @@ Certain types of accessory like hats, clothes and shoes quickly cluttered the sc
 
 
 
-<Content-ImageFrames-MainImageSection url="/images/toucanBox/styles.png" alt="toucanBox design system" :aside="true" :content="true">
+<Content-ImageFrames-MainImageSection url="/images/toucanBox/styles.png" alt="toucanBox design system" :aside="true" :content="true" imageClass="is-2by1">
 
 <template v-slot:content>
 
 ## Design system
 
-In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+Link to living styleguide. Atomic design. UI style evolved from the magazine - graphic design. In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 
 </template>
 
@@ -539,7 +561,7 @@ Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 </Content-ImageFrames-MainImageSection>
 
 
-<Content-TextSection padding="is-large">
+<Content-TextSection padding="is-large" columnOffset="title-offset">
 
 ## Development
 
@@ -547,11 +569,13 @@ Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
   Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
 </p>
 
-Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+What we chose to build in production. Release feature-by-feature - A/B testing to validate. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam.
 
 <template v-slot:aside>
+
+<Content-InfoBox>
 
 #### Techstack
 
@@ -569,6 +593,8 @@ Personal project
 
 **Animation**
 12 minutes
+
+</Content-InfoBox>
 
 </template>
 
@@ -621,24 +647,19 @@ This project however, focused on an equally important but somewhat subtler metri
 
 </figcaption> -->
 
-<div class="box">
+<Content-InfoBox :hasIcon="true" :hasAction="true" type="modal" label="See principles">
 
-**Platform**
-Responsive web application
+Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
-**Engine**
-E-commerce
+<template slot="modal">
 
-**Styling**
-2018
+### Principles content
 
-**Input**
-Personal project
+In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 
-**Animation**
-12 minutes
+</template>
 
-</div>
+</Content-InfoBox>
 
 </template>
 
@@ -647,7 +668,7 @@ Personal project
 
 
 
-<Content-MetricsSection padding="is-large" :metrics="[
+<Content-MetricsSection padding="is-medium-large" :metrics="[
 { metric:'40', description:'Projects completed for small businesses and startups.' },
 { metric:'02', description:'Award winning team members.' },
 { metric:'103', description:'Years experience working for clients like Google and Amazon.' },
@@ -675,7 +696,7 @@ In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis 
 <template v-slot:aside>
 
 <figure class="image is-5by3">
-  <img class="lazyload" data-src="/images/toucanBox/warehouse.jpg" alt="toucanBox warehouse">
+  <img class="lazyload medium-zoom" data-src="/images/toucanBox/warehouse.jpg" alt="toucanBox warehouse">
 </figure>
 <figcaption>
 
@@ -717,23 +738,12 @@ Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas
 
 <template slot="aside">
 
-<div class="box">
-
-**Platform**
-Responsive web application
-
-**Engine**
-E-commerce
-
-**Styling**
-2018
-
-**Input**
-Personal project
-
-**Animation**
-12 minutes
-
+<div class="columns is-gapless">
+  <div class="column is-two-thirds">
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/toucanBox/user-testing-2.jpg" alt="User tester 2">
+    </figure>
+  </div>
 </div>
 
 </template>
@@ -742,7 +752,27 @@ Personal project
 
 
 
-<Content-ImageFrames-MainImageSection padding="is-medium-large" url="/images/toucanBox/high-fidelity-sketching.png" alt="Detailing feature screens" imageClass="is-16by9" :aside="false" :content="false" caption="Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa."/>
+<Content-ImageFrames-MainImageSection padding="is-large" url="/images/toucanBox/high-fidelity-sketching.png" alt="Detailing feature screens" imageClass="is-2by1 transparent-image" :aside="true" :content="true" caption="Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.">
+
+<template slot="content">
+
+<p class="subtitle">
+  Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+</p>
+
+Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
+
+</template>
+
+<template slot="aside">
+
+<figure class="image is-5by3 transparent-image">
+  <img class="lazyload medium-zoom" data-src="/images/toucanBox/personalisation-desktop.png" alt="Iteration for desktop">
+</figure>
+
+</template>
+
+</Content-ImageFrames-MainImageSection>
 
 
 
@@ -751,9 +781,9 @@ Personal project
 
 
 
-<Content-TextSection padding="is-large">
+<Content-TextSection padding="is-large" columnOffset="title-offset">
 
-## Moving forward
+## A promising pilot
 
 <p class="subtitle">
   I asked existing toucanBox customers what ‘value for money’ means to them and gathered their attitudes to children's digital media.
@@ -779,11 +809,15 @@ Must resonate with the core value proposition (hands-on crafting and creativity)
 
 <div class="columns is-gapless">
   <div class="column is-three-quarters">
-    <figure class="image is-9by16">
-      <img class="lazyload" data-src="/images/toucanBox/choose-interface.png" alt="Screenshot of latest prototype">
-    </figure>
+    <Content-ModalWrapper type="link" url="http://personalisation.herokuapp.com/" label="Prototype">
+      <figure class="image is-9by16">
+        <img class="lazyload" data-src="/images/toucanBox/choose-interface.png" alt="Screenshot of latest prototype">
+      </figure>
+    </Content-ModalWrapper>
   </div>
 </div>
+
+
 
 <figcaption>
 

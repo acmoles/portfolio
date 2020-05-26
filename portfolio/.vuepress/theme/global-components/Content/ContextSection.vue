@@ -16,7 +16,7 @@
           <slot name="main"></slot>
         </div>
         <div
-          class="column aside"
+          class="column aside title-offset"
         >
           <slot name="side"></slot>
         </div>
@@ -119,13 +119,6 @@ export default {
   .context
     .aside
       position: relative
-      &::before
-        content: '#'
-        visibility: hidden
-        font-size: 2em
-        margin-bottom: 0.5714em
-        line-height: 1.125
-        display: block
       li
         margin-left: 1.25em
         margin-bottom: 0.75em
@@ -134,16 +127,7 @@ export default {
           position: absolute
           left: 0
 
-
-  // .context-grid
-  //   display: grid
-  //   grid-template-columns: repeat(12, 1fr)
-  //   grid-column-gap: 1em
-  //   width: 100%
-  //   grid-column: span 12/auto
-  //   .context-column
-
-      // type grid inspiration https://www.milieugrotesque.com/info/
+  // type grid inspiration https://www.milieugrotesque.com/info/
 
 
 

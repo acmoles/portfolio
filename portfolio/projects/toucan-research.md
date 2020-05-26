@@ -113,12 +113,12 @@ Planning and management
 
 
 <Content-PointsSection :content="true" :points="[
-{ src:'/svg-icons/icon_sad.svg', alt:'sad face', description:'Projects completed for small businesses and startups.' },
-{ src:'/svg-icons/icon_time.svg', alt:'clock', title:'title', description:'If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.' },
-{ src:'/svg-icons/icon_idea.svg', alt:'lightbulb', title:'title', description:'Years experience working for clients like Google and Amazon.' },
-{ src:'/svg-icons/icon_search.svg', alt:'search', title:'title', description:'VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.' },
-{ src:'/svg-icons/icon_docs.svg', alt:'documents', title:'title', description:'Award winning team members.' },
-{ src:'/svg-icons/icon_device.svg', alt:'device', title:'title', description:'Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site.' },
+{ src:'/svg-icons/icon_sad.svg', alt:'sad face', title:'The box often didn’t seem like good value for money', description:'Unsubscribe data confirmed by customer inverviews. Projects completed for small businesses and startups.' },
+{ src:'/svg-icons/icon_time.svg', alt:'clock', title:'The duration of the toucanBox experience could feel short', description:'The later seemed to be most affected by the short duration of the crafting experience. If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.' },
+{ src:'/svg-icons/icon_idea.svg', alt:'lightbulb', title:'What would be distinctive about digital content by toucanBox?', description:'Years experience working for clients like Google and Amazon.' },
+{ src:'/svg-icons/icon_search.svg', alt:'search', title:'Top apps and search queries suggested areas of focus', description:'VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.' },
+{ src:'/svg-icons/icon_docs.svg', alt:'documents', title:'Device access and ability lifts at the upper range of our age group', description:'Award winning team members.' },
+{ src:'/svg-icons/icon_device.svg', alt:'device', title:'Digital toys for young children have specific characteristics', description:'Never competitive. Market/competitor research. Strong connection to the core value proposition (hands-on crafting and creativity) is critical. Friction of moving to a device from the magazine reduced the reach.' },
 ]">
 
 <template v-slot:content>
@@ -216,7 +216,7 @@ his project however, focused on an equally important but somewhat subtler metric
 
 <template slot="slot3">
 
-#### Idea generating session
+#### Make a Toucanoo of you!
 
 his project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
 
@@ -421,7 +421,7 @@ This project however, focused on an equally important but somewhat subtler metri
 
 
 
-<Content-MetricsSection padding="is-large" :metrics="[
+<Content-MetricsSection padding="is-medium-large" :metrics="[
 { metric:'40', description:'Projects completed for small businesses and startups.' },
 { metric:'02', description:'Award winning team members.' },
 { metric:'103', description:'Years experience working for clients like Google and Amazon.' },

@@ -21,7 +21,7 @@
             </figcaption>
           </div>
 
-          <div v-if="aside" class="column content">
+          <div v-if="aside" class="column content" :class="columnOffset">
             <slot name="aside"></slot>
           </div>
 
@@ -43,7 +43,8 @@ export default {
     aside: Boolean,
     padding: String,
     imageClass: String,
-    iframe: Boolean
+    iframe: Boolean,
+    columnOffset: String,
   },
 
   computed: {

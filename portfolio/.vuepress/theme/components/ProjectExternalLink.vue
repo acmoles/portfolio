@@ -1,5 +1,5 @@
 <template>
-  <button class="button is-dark project-external-link background-noise">
+  <button class="button is-dark project-external-link">
     <span>{{ label }}</span>
     <ExternalIcon/>
   </button>
@@ -20,16 +20,16 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../styles/variables.sass"
-@import "../styles/mixins.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
 button.project-external-link.is-dark
   position: relative
   text-rendering: geometricPrecision
-  font-size: 1.125em
   color: $button-custom-text-color
   justify-content: space-between
   background-color: $slate
+  background-image: url('../plugins/plugin-outside-content/dark-noise-heavy.png')
   height: auto
   padding-left: 2em
   padding-right: 2em
@@ -60,6 +60,7 @@ button.project-external-link.is-dark
 .light
   button.project-external-link.is-dark
     background-color: rgba($white, 0.2)
+    background-image: none
     color: $white
     box-shadow: none
     transition: $button-transition

@@ -25,15 +25,13 @@
                 <img v-if="image.action.type === 'link'" src="/svg-icons/icon_external.svg" alt="External icon">
               </i>
             </span>
-            <transition name="fade">
-              <ModalBase
-                v-if="showDialog === i"
-                @close="close()"
-                label="Open dialog"
-              >
-                <slot :name="image.action.slot"></slot>
-              </ModalBase>
-            </transition>
+            <ModalBase
+              v-if="showDialog === i"
+              @close="close()"
+              label="Open dialog"
+            >
+              <slot :name="image.action.slot"></slot>
+            </ModalBase>
           </button>
 
           <figure
@@ -94,7 +92,7 @@ export default {
   methods: {
     action(image, i) {
       if (image.action.type === 'link') {
-        window.open('http://www.google.com', '_blank')
+        window.open(image.action.url, '_blank')
       } else if (image.action.type === 'modal') {
         this.showDialog = i
         this.$store.dispatch('setModalStatus', true)

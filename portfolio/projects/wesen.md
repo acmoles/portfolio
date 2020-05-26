@@ -114,12 +114,12 @@ Proin eget porttitor neque:
 
 
 <Content-PointsSection :content="true" :points="[
-{ src:'/svg-icons/icon_sad.svg', alt:'sad face', description:'Projects completed for small businesses and startups.' },
-{ src:'/svg-icons/icon_time.svg', alt:'clock', title:'title', description:'If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.' },
-{ src:'/svg-icons/icon_idea.svg', alt:'lightbulb', title:'title', description:'Years experience working for clients like Google and Amazon.' },
-{ src:'/svg-icons/icon_search.svg', alt:'search', title:'title', description:'VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.' },
-{ src:'/svg-icons/icon_docs.svg', alt:'documents', title:'title', description:'Award winning team members.' },
-{ src:'/svg-icons/icon_device.svg', alt:'device', title:'title', description:'Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site.' },
+{ src:'/svg-icons/icon_search.svg', alt:'sad face', title:'Jewellery is a good balance between market size and technical constraints', description:'Projects completed for small businesses and startups.' },
+{ src:'/svg-icons/icon_gift.svg', alt:'clock', title:'High-value, custom or personalised products tend to be gifts', description:'If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.' },
+{ src:'/svg-icons/icon_coffee.svg', alt:'lightbulb', title:'Existing interest combined with dropping prices and improving tools', description:'Are we on the cusp of a trend? Or mobile focus? Touch devices? Years experience working for clients like Google and Amazon.' },
+{ src:'/svg-icons/icon_conversation.svg', alt:'Group', title:'Right now, no-one is asking to create jewellery themselves', description:'And why that might be a good thing. VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.' },
+{ src:'/svg-icons/icon_neutral.svg', alt:'documents', title:'Non-technical people feel daunted by customisation tools', description:'Award winning team members.' },
+{ src:'/svg-icons/icon_pendant.svg', alt:'device', title:'Pendants seem more suitable than rings', description:'Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site.' },
 ]">
 
 <template v-slot:content>
@@ -127,10 +127,10 @@ Proin eget porttitor neque:
 ## Research
 
 <p class="subtitle">
-  Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+  I informally interviewed three designers and one non-designer, each who had recently designed or commissioned bespoke jewellery.
 </p>
 
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat.
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Analytics, asking customer service, interviewing existing customers and parents who weren’t customers. (which was a growing trend among my friends). I recorded standout details and comments:
 
 </template>
 
@@ -145,7 +145,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 ## User profiles
 
-Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+Focus on their motivations. Using research. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
 
 </template>
 
@@ -214,7 +214,7 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 
 ## Scope and objectives
 
-Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis.
+Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. A curated and supported creation experience where users participate without needing to consider constraints - or in mvp definition? A collection of pre-designed products, which can be bought directly or customised before purchase. Note mobile first. How might we? Jobs to be done and/or user story. Measurable objectives would be better. Design principles? Increase funnel conversion rate. PM-esq stuff. I broke down the overarching project goal into six focus areas under two themes:
 
 </template>
 
@@ -237,11 +237,11 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 
 <template v-slot:column2>
 
-#### End-to-end (place and order)
+#### End-to-end
 
 ---
 
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+Place an order. Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
 
 Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
 
@@ -258,7 +258,7 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 </figure>
 <figcaption>
 
-Nulla at arcu sagittis, egestas libero ut, finibus massa.
+What's out of MVP. Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
 </figcaption>
 
@@ -294,7 +294,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum maur
 
 <template slot="slot1">
 
-#### Blender rigging test
+#### Blender animation rig
 
 Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
 
@@ -306,7 +306,7 @@ Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan
 
 #### WebGL basic interactive
 
-Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+Don’t need wizard flow. Show this below in lessons? Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
 
 Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
 
@@ -316,7 +316,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 #### WebGL feasibility
 
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
+The right look in realtime 3D graphics? Matcap shaders. Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
 
 </template>
 
@@ -376,10 +376,10 @@ Certain types of accessory like hats, clothes and shoes quickly cluttered the sc
 ## E-commerce experience
 
 <p class="subtitle">
-  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
+  Turn a prototype tool into an MVP e-commerce experience. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
 </p>
 
-In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+Customer service email, database to retain created models and orders, considering payment services etc. In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 
 ### Input validation for 3D geometry
 
@@ -398,22 +398,6 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
 </div>
-
-
-**Platform**
-Responsive web application
-
-**Engine**
-E-commerce
-
-**Styling**
-2018
-
-**Input**
-Personal project
-
-**Animation**
-12 minutes
 
 </template>
 
@@ -465,7 +449,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 
 
-<Content-ThreeColumnSection :content="true" columnOffset="table-offset">
+<Content-MainAsideSection :content="true" :aside="true" columnOffset="table-offset">
 
 <template v-slot:content>
 
@@ -479,42 +463,20 @@ Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere puru
 
 </template>
 
-<template v-slot:column1>
+<template>
 
-#### Experience
-
----
-
-Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
-
-Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis.
-
-Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
-
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
-
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
-
+**Experience** | **Solution** |
+--- | --- |
+Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout |
+Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added skirts, wellington boots and several other accessories |
+Cras mollis sodales urna, eu ultrices nibh lobortis ut. Fusce eu pellentesque nulla. | I observed children dragging items off the screen, attempting to delete them, so made that actually work |
+Certain types of accessory like hats, clothes and shoes quickly cluttered the screen and didnt make sense out of their intended positions | I made new placements in specific categories (e.g. hair) remove the previous accessory of that type. This proved to be an intuitive limitation |
+{.table .is-fullwidth}
 
 </template>
 
-<template v-slot:column2>
 
-#### Solution
-
----
-
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
-
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
-
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
-
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
-
-</template>
-
-<template v-slot:column3>
+<template v-slot:aside>
 
 <div class="box">
 
@@ -539,7 +501,7 @@ Personal project
 
 </template>
 
-</Content-ThreeColumnSection>
+</Content-MainAsideSection>
 
 
 <Content-ImageFrames-MainImageSection padding="is-medium-large" url="/images/wesen/system-diagram.png" alt="System diagram of Wesen app" imageClass="is-5by4" :aside="false" :content="false" caption="Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa."/>
@@ -599,7 +561,7 @@ This project however, focused on an equally important but somewhat subtler metri
 
 
 
-<Content-MetricsSection padding="is-large" :metrics="[
+<Content-MetricsSection padding="is-medium-large" :metrics="[
 { metric:'40', description:'Projects completed for small businesses and startups.' },
 { metric:'02', description:'Award winning team members.' },
 { metric:'103', description:'Years experience working for clients like Google and Amazon.' },

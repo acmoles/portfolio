@@ -140,7 +140,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 
 
-<Content-ImageFrames-SquareImagesRow class="section-last-child" padding="is-medium" :content="false" :images="[
+<Content-ImageFrames-SquareImagesRow padding="is-medium-large" :content="false" :images="[
 { url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
 { url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
 { url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },

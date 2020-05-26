@@ -95,3 +95,24 @@ html:not(.disable-motion) .appear-fade.in-view
 
 .fade-fast-delay-enter-active
   transition: opacity 0.15s 0.15s
+
+
+// Vue slider
+$slideDistance: 42px
+.next-enter
+  opacity: 0
+  transform: translate3d($slideDistance, 0, 0)
+.next-enter-active, .next-leave-active
+  transition: 0.3s
+.next-leave-to
+  opacity: 0
+  transform: translate3d(-$slideDistance, 0, 0)
+
+.prev-enter
+  opacity: 0
+  transform: translate3d(-$slideDistance, 0, 0)
+.prev-enter-active, .prev-leave-active
+  transition: 0.3s
+.prev-leave-to
+  opacity: 0
+  transform: translate3d($slideDistance, 0, 0)
