@@ -33,8 +33,8 @@ export default {
     background-color: rgba($pitch, 0.2)
     overflow: hidden
 
-  .subtitle, .attribute
-    text-shadow: 0 0.25em 0.75em $pitch
+    .subtitle, .attribute
+      text-shadow: 0 0.25em 0.75em $pitch
 
   .particle
     position: absolute

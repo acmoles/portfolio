@@ -36,7 +36,7 @@
           v-if="hasVisulColumnSlot"
           class="column visual-column"
           :class="[{'in-view': visible}, {'appear-fade-up': animating}]"
-          :style="{transform: transform}">
+          :style="{transform: transform}"
         >
             <slot name="visual-column"></slot>
         </div>

@@ -20,13 +20,23 @@ next: ./interaction
 <Stage-ProjectStage :noise="true" ctaLabel="www.stompy-robot.co.uk" ctaUrl="#"
 description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
 
-  <template v-slot:visual-background>
-    <figure class="full-screen">
-      <Heros-ImageHero src="/images/stompy-robot/header-comp-export.jpg" alt="Ecosia mobile devices"/>
+  <template v-slot:visual-column>
+    <figure class="stompy-image">
+      <Heros-ImageHero src="/images/stompy-robot/header-comp-export-grid.png" alt="Ecosia mobile devices"/>
     </figure>
   </template>
 
 </Stage-ProjectStage>
+
+<style lang="sass">
+
+.stompy-image
+  position: absolute
+  left: -56%
+  top: -12%
+  width: 200%
+
+</style>
 
 :::
 
