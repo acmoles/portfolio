@@ -1,7 +1,7 @@
 ---
 uid: 8
 title: Random International
-subtitle: Engineering an installation
+subtitle: Engineering an interactive art installation
 type: single
 navStyle:
   style: light
@@ -11,13 +11,13 @@ background: random
 sidebar: false
 date: 2019-09-11
 src: /images/homepage/random-tile.jpg
-prev: ./makielab
+prev: ./toucanbox
 next: ./lego
 ---
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="www.random-international.com" ctaUrl="#"
+<Stage-ProjectStage :noise="true" ctaLabel="random-international.com" ctaUrl="https://www.random-international.com/"
 description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
 
   <template v-slot:visual-background>
@@ -29,7 +29,6 @@ description="Wesen is an experiment in turning customers into creators and build
 </Stage-ProjectStage>
 
 :::
-
 
 <Content-ContextSection :box="true">
 
@@ -68,60 +67,43 @@ _I have omitted confidential information in this case study. All information and
 
 
 
-<Content-ImageFrames-SquareImagesRow :content="false" :images="[
-{ url:'/images/random-international/fly-inner.jpg', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'/images/random-international/fly-close.jpg', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'/images/random-international/fly-dark.jpg', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
-]"/>
+<Content-GridSection padding="is-large">
 
-
-
-<Content-FreeSection padding="is-large">
-
-<div class="columns">
-  <div class="column">
-    <figure class="image is-square">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="toucanBox magazines">
+  <template v-slot:grid>
+    <figure class="image is-square span-2">
+      <img class="lazyload" data-src="/images/random-international/fly-inner.jpg" alt="Internal workings">
     </figure>
-  </div>
-
-  <div class="column">
-    <figure class="image is-square">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="toucanBox magazines">
+    <figure class="image is-square span-2">
+      <img class="lazyload" data-src="/images/random-international/fly-close.jpg" alt="Fly ball">
     </figure>
-  </div>
-
-  <div class="column">
-    <figure class="image is-square">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="toucanBox magazines">
+    <figure class="image is-square span-2">
+      <img class="lazyload" data-src="/images/random-international/fly-dark.jpg" alt="Fly in darkness">
     </figure>
-  </div>
-
-  <div class="column">
+    <div class="grid-item-container span-4">
+      <figure class="image is-16by9">
+        <iframe src="https://player.vimeo.com/video/30915879" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
+      </figure>
+    </div>
     <figure class="image is-square">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="toucanBox magazines">
+      <img class="lazyload" data-src="/images/random-international/wip-row/1.jpg" alt="Prototype">
     </figure>
-  </div>
-
-  <div class="column">
     <figure class="image is-square">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="toucanBox magazines">
+      <img class="lazyload" data-src="/images/random-international/wip-row/6.jpg" alt="Fly centre">
     </figure>
-  </div>
-
-  <div class="column">
     <figure class="image is-square">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x480.png" alt="toucanBox magazines">
+      <img class="lazyload" data-src="/images/random-international/wip-row/5.jpg" alt="Pulley system">
     </figure>
-  </div>
-</div>
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/random-international/wip-row/4.jpg" alt="Prototype close up">
+    </figure>
+  </template>
 
-</Content-FreeSection>
+</Content-GridSection>
+
+
 
 
 
 ::: slot bottom
-
-Bottom
 
 :::

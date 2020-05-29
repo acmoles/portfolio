@@ -1,8 +1,8 @@
 <template>
-  <button class="button is-dark project-external-link">
+  <a class="button is-dark project-external-link" target="_blank">
     <span>{{ label }}</span>
     <ExternalIcon/>
-  </button>
+  </a>
 </template>
 
 <script>
@@ -23,7 +23,7 @@ export default {
 @import "@theme/styles/variables.sass"
 @import "@theme/styles/mixins.sass"
 
-button.project-external-link.is-dark
+.button.project-external-link.is-dark
   position: relative
   text-rendering: geometricPrecision
   color: $button-custom-text-color
@@ -58,7 +58,7 @@ button.project-external-link.is-dark
         opacity: 1
 
 .light
-  button.project-external-link.is-dark
+  .button.project-external-link.is-dark
     background-color: rgba($white, 0.2)
     background-image: none
     color: $white

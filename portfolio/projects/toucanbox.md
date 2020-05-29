@@ -13,8 +13,8 @@ case2: Two parts
 sidebar: auto
 date: 2019-09-12
 src: /images/homepage/toucan-baked.jpg
-prev: ./interaction
-next: ./random-international
+prev: ./makielab
+next: ./toucan-research
 ---
 
 ::: slot top

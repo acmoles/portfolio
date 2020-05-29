@@ -96,14 +96,15 @@ export default {
 @import "../../styles/variables.sass"
 @import "../../styles/mixins.sass"
 
-.navbar-item.has-dropdown
-  height: fit-content
-  &.is-active
-    .navbar-link, .navbar-link:hover
-      color: $white
-      filter: opacity(100%)
-      .icon
+.navbar
+  .navbar-item.has-dropdown
+    height: fit-content
+    &.is-active
+      .navbar-link, .navbar-link:hover, .navbar-link:active
+        color: $white
         filter: opacity(100%)
+        .icon
+          filter: opacity(100%)
 
 // TODO: Not used
 .navbar-link:not(.is-arrowless)::after

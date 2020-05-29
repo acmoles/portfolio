@@ -1,11 +1,15 @@
 <template>
-  <section v-if="next" class="page-nav project-card" :class="next.frontmatter.background || 'dark'">
+  <section v-if="next" class="page-nav project-card light" :class="next.frontmatter.background || 'dark'">
 
         <div class="container is-fullhd content" v-if="prev || next">
-          <router-link :to="next.path">
-            <p class="small-title">Next project</p>
-            <h1>{{ next.title || next.path }}</h1>
-          </router-link>
+          <div class="columns">
+            <div class="column is-one-third">
+              <router-link class="page-nav-anchor" :to="next.path">
+                <p class="small-title is-to-fade">{{ next.title || next.path }}</p>
+                <h2 class="item-title is-to-fade">{{ next.frontmatter.subtitle }}</h2>
+              </router-link>
+            </div>
+          </div>
         </div>
 
   </section>
@@ -71,7 +75,13 @@ function resolvePageLink (
   height: 100vh
   display: flex
   align-items: center
-  .project-card
+  .item-title
+    padding-right: 1.5em
+  &.light
+    color: $white
+    .small-title
+      color: $white
+      filter: opacity(78%)
 
 
 </style>

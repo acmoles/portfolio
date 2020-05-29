@@ -110,6 +110,7 @@ export default {
   align-items: center
   z-index: 3
   .content-wrapper
+    overflow-y: scroll
     width: calc( 100% - 2em )
 
   .video-wrapper

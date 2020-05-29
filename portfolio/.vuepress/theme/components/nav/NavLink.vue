@@ -63,7 +63,6 @@ export default {
 
 .navbar-item.single
   height: fit-content
-  // @include opacity-filter-transition
 
 .navbar-item.single.router-link-active
   color: $white

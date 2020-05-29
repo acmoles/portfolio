@@ -12,14 +12,14 @@ case1: Case study
 sidebar: auto
 date: 2019-09-12
 src: /images/homepage/wesen-mock-baked.jpg
-prev: ./stompy-robot
+prev: ./art-lebedev-studio
 next: ./ecosia
 ---
 
 ::: slot top
 
 <!-- Can customers be creators? -->
-<Stage-ProjectStage :noise="true" ctaLabel="www.wesen.studio" ctaUrl="http://www.wesen.studio"
+<Stage-ProjectStage :noise="true" ctaLabel="wesen.studio" ctaUrl="http://www.wesen.studio"
 description="Wesen enables anyone to create a unique pendant necklace which can be manufactured on demand by a blend of modern and traditional techniques.">
 
   <template v-slot:visual-background>
@@ -130,7 +130,7 @@ Proin eget porttitor neque:
   I informally interviewed three designers and one non-designer, each who had recently designed or commissioned bespoke jewellery.
 </p>
 
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Analytics, asking customer service, interviewing existing customers and parents who weren’t customers. (which was a growing trend among my friends). I recorded standout details and comments:
+Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Analytics, asking customer service, interviewing existing customers and parents who weren’t customers. (which was a growing trend among my friends). I recorded standout details and comments:
 
 </template>
 

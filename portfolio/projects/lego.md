@@ -16,8 +16,8 @@ next: ./art-lebedev-studio
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="www.lego-dimensions.com" ctaUrl="#"
-description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
+<Stage-ProjectStage :noise="true" ctaLabel="none" ctaUrl="#"
+description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla.">
 
   <template v-slot:visual-column>
     <figure class="lego-image">
@@ -70,34 +70,34 @@ CTO, product designer, two full-stack developers
 
 <Content-FreeSection padding="is-large">
 
-<div class="columns">
-  <div class="column">
-    <figure class="image is-4by5">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x600.png" alt="toucanBox magazines">
+<div class="columns is-multiline">
+  <div class="column is-half">
+    <figure class="image is-lego">
+      <img class="lazyload" data-src="/images/lego/lego-sketches.jpg" alt="Sketching out the concept">
     </figure>
   </div>
 
-  <div class="column">
-    <figure class="image is-4by5">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/480x600.png" alt="toucanBox magazines">
+  <div class="column is-half">
+    <figure class="image is-lego">
+      <img class="lazyload" data-src="/images/lego/lego-details.jpg" alt="Refining details">
     </figure>
   </div>
+
+  <div class="column is-half">
+    <figure class="image is-16by9">
+      <img class="lazyload" data-src="/images/lego/Lego-dimensions.jpg" alt="Trailer still">
+    </figure>
+  </div>
+
+
+  <div class="column is-half">
+    <figure class="image is-16by9">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/0kmnrwfDewo" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
+    </figure>
+  </div>
+
 </div>
 
 
-<div class="columns">
-  <div class="column">
-    <figure class="image is-16by9">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/640x360.png" alt="toucanBox magazines">
-    </figure>
-  </div>
-
-
-  <div class="column">
-    <figure class="image is-16by9">
-      <img class="lazyload" data-src="https://bulma.io/images/placeholders/640x360.png" alt="toucanBox magazines">
-    </figure>
-  </div>
-</div>
 
 </Content-FreeSection>

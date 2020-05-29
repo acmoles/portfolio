@@ -2,12 +2,6 @@
 @import 'mixins'
 
 /* fade image in after load */
-// .lazyload, .lazyloading
-// 	opacity: 0
-// 	transition: opacity 400ms
-//
-// .lazyloaded
-// 	opacity: 1
 
 .image
 	position: relative
@@ -38,7 +32,8 @@
     transform: scale(1)
     opacity: 0
 
-.loading:before
+.lazyload:before,
+.lazyloading:before
   content: " "
   position: absolute
   z-index: 1

@@ -158,10 +158,6 @@ export default {
     grid-column: 1 / 1
 
   .grid-item
-    // TODO remove? used for earlier design with orange tile on the left
-    // &:first-child
-    //   grid-column-start: 1
-    //   grid-row-start: 1
     article
       height: 100%
 

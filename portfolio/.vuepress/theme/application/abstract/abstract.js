@@ -52,7 +52,7 @@ export class Abstract extends EventTarget {
       y: -19.35,
       z: 57.66,
       duration: 4000,
-      easing: 'easeInOutCubic',
+      easing: 'easeOutQuad',
     })
   }
 

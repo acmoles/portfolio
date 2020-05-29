@@ -43,7 +43,15 @@
   transition-property: filter
   transition-duration: 0.15s
   transition-timing-function: linear
+  .is-to-fade
+    transition-property: filter
+    transition-duration: 0.15s
+    transition-timing-function: linear
   &:hover
     filter: $hover-filter
+    .is-to-fade
+      filter: $hover-filter
   &:active
     filter: $active-filter
+    .is-to-fade
+      filter: $active-filter

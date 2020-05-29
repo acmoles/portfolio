@@ -10,24 +10,32 @@ navStyle:
 background: orange
 sidebar: false
 date: 2019-09-11
-prev: ./ecosia
-next: ./wesen
+prev: ./wesen
+next: ./interaction
 image:
 ---
 
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="www.ecosia.org" ctaUrl="https://www.ecosia.org"
-description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
+<Stage-ProjectStage :noise="true" ctaLabel="ecosia.org" ctaUrl="https://www.ecosia.org"
+description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla.">
 
-  <template v-slot:visual-background>
-    <figure class="full-screen">
-      <Heros-ImageHero src="/images/ecosia/ecosia-comp.png" alt="Ecosia mobile devices"/>
+  <template v-slot:visual-column>
+    <figure class="ecosia-image">
+      <Heros-ImageHero src="/images/ecosia/ecosia-comp-grid.png" alt="Ecosia mobile devices"/>
     </figure>
   </template>
 
 </Stage-ProjectStage>
+
+<style lang="sass">
+
+.ecosia-image
+  position: absolute
+  left: -16%
+  width: 144%
+</style>
 
 :::
 

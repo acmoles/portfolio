@@ -10,14 +10,14 @@ navStyle:
 background: green
 sidebar: false
 date: 2019-09-11
-prev: ./stompy-robot
+prev: ./ecosia
 next: ./toucan-research
 ---
 
 ::: slot top
 
 <Stage-ProjectStage :noise="true" :fadeless="true" ctaLabel="none" ctaUrl="#"
-description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
+description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla.">
 
   <template v-slot:visual-background>
     <Heros-AbstractHero :noise="false"/>

@@ -10,14 +10,14 @@ navStyle:
 background: yellow
 sidebar: false
 date: 2019-09-12
-prev: ./toucanbox
-next: ./random-international
+prev: ./stompy-robot
+next: ./toucanbox
 ---
 
 ::: slot top
 
 <Stage-ProjectStage :noise="true" :fadeless="true" ctaLabel="none" ctaUrl="#"
-description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
+description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla.">
 
 <template v-slot:visual-background>
   <Heros-BeadsHero :noise="true"/>
@@ -37,7 +37,45 @@ description="Wesen is an experiment in turning customers into creators and build
 
 Vestibulum ac ultrices velit, in porttitor diam. Cras pellentesque dui sed neque pulvinar, in semper turpis rhoncus. Ut ac malesuada nisl. Cras nisi augue, auctor a justo eu, vulputate laoreet ipsum. Vivamus est ante, pellentesque vitae ultrices eu, accumsan ut nisl. Suspendisse ex metus, eleifend vel elit ut, mattis placerat velit. Suspendisse at condimentum neque. Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec.
 
-Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur tortor in nibh vulputate viverra. Integer fringilla orci enim, non efficitur erat elementum vel. Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit. Pellentesque euismod sodales ipsum in mattis. [Sprint - pre Makielab](/extra/sprint)
+<p>Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur tortor in nibh vulputate viverra. Integer fringilla orci enim, non efficitur erat elementum vel.
+<Content-ModalLink label="Disney infinity">
+<template v-slot:modal>
+<Content-ImageFrames-SquareImagesRow padding="is-small" :content="true" :images="[
+{ url:'/images/makielab/figure-comp.jpg', alt:'Exploring character features', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'/images/makielab/equipment.jpg', alt:'Exploring equipment', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'/images/makielab/printed-figures.jpg', alt:'Printed example figures', caption:'Square image caption 3', slot:'slot3', iframe:false },
+]">
+
+<template slot="content">
+
+<h2> Disney Infinite Me </h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.</p>
+
+</template>
+
+<template slot="slot1">
+
+Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
+
+</template>
+
+<template slot="slot2">
+
+Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+
+</template>
+
+<template slot="slot3">
+
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis.
+
+</template>
+</Content-ImageFrames-SquareImagesRow>
+</template>
+</Content-ModalLink>
+Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit. Pellentesque euismod sodales ipsum in mattis.</p>
+
+[Sprint - pre Makielab](/extra/sprint)
 
 </template>
 
@@ -56,7 +94,7 @@ CTO, product designer, two full-stack developers
 
 
 
-<Content-ImageFrames-MainImageSection url="https://www.youtube.com/embed/daBtHme2hP8" alt="Makies video" :aside="true" :content="true" :iframe="true">
+<Content-ImageFrames-MainImageSection padding="is-large" url="https://www.youtube.com/embed/daBtHme2hP8" alt="Makies video" :aside="true" :content="true" :iframe="true">
 
 <template v-slot:content>
 
@@ -80,39 +118,3 @@ In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis 
 </template>
 
 </Content-ImageFrames-MainImageSection>
-
-
-
-<Content-ImageFrames-SquareImagesRow padding="is-large" :content="true" :images="[
-{ url:'/images/makielab/figure-comp.jpg', alt:'Exploring character features', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'/images/makielab/equipment.jpg', alt:'Exploring equipment', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'/images/makielab/printed-figures.jpg', alt:'Printed example figures', caption:'Square image caption 3', slot:'slot3', iframe:false },
-]">
-
-<template slot="content">
-
-## Disney Infinite Me
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
-
-</template>
-
-<template slot="slot1">
-
-Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
-
-</template>
-
-<template slot="slot2">
-
-Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
-
-</template>
-
-<template slot="slot3">
-
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis.
-
-</template>
-
-</Content-ImageFrames-SquareImagesRow>

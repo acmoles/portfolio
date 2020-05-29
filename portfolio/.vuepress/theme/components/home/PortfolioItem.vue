@@ -20,7 +20,7 @@
         class="image"
         :class="imageClass"
       >
-        <img :src="src"  :alt="title">
+        <img class="lazyload" :data-src="src"  :alt="title">
       </figure>
 
       <div :ref="'caption' + uid" class="item-caption">

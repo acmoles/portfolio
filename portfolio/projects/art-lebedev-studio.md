@@ -11,14 +11,14 @@ background: als
 sidebar: false
 date: 2019-09-12
 src: /images/homepage/art-lebedev-tile.jpg
-prev: ./wesen
-next: ./lego
+prev: ./lego
+next: ./wesen
 ---
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/id/"
-description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
+<Stage-ProjectStage :noise="true" ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/"
+description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla.">
 
   <template v-slot:visual-background>
     <figure class="full-screen">
@@ -70,10 +70,23 @@ _I have omitted confidential information in this case study. All information and
 
 
 
+
 <Content-ImageFrames-SquareImagesRow padding="is-large" :content="true" :images="[
-{ url:'/images/als/als1.jpg', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'/images/als/als2.jpg', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'/images/als/als3.jpg', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'/images/als/als1.jpg', alt:'ATC console', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
+  type: 'link',
+  label: 'Read more',
+  url: 'https://www.artlebedev.ru/nita/'
+  } },
+{ url:'/images/als/als2.jpg', alt:'Toilet plunger', caption:'Square image caption 2', slot:'slot2', iframe:false, action: {
+  type: 'link',
+  label: 'Read more',
+  url: 'https://www.artlebedev.ru/oktopus/'
+  } },
+{ url:'/images/als/als3.jpg', alt:'Helicopter', caption:'Square image caption 3', slot:'slot3', iframe:false, action: {
+  type: 'link',
+  label: 'Read more',
+  url: 'https://www.artlebedev.ru/scout/exterior/'
+  } },
 ]">
 
 <template slot="content">

@@ -11,14 +11,14 @@ background: stompy
 sidebar: false
 date: 2019-09-12
 src: /images/homepage/stompy-robot-tile.jpg
-prev: ./stompy-robot
-next: ./interaction
+prev: ./toucan-research
+next: ./makielab
 ---
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="www.stompy-robot.co.uk" ctaUrl="#"
-description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
+<Stage-ProjectStage :noise="true" ctaLabel="stompy-robot.uk" ctaUrl="https://stompyrobot.uk/"
+description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla.">
 
   <template v-slot:visual-column>
     <figure class="stompy-image">
@@ -151,9 +151,9 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 
 <Content-ImageFrames-SquareImagesRow padding="is-medium-large" :content="false" :images="[
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'https://player.vimeo.com/video/424005109', alt:'Prototype video', caption:'Prototype video', slot:'slot1', iframe:true },
+{ url:'https://player.vimeo.com/video/424004636', alt:'Animation sample thumbs up', caption:'Animation sample thumbs up', slot:'slot2', iframe:true },
+{ url:'https://player.vimeo.com/video/424006246', alt:'Animation sample thumbs up', caption:'Animation sample running', slot:'slot3', iframe:true },
 ]">
 
 <template slot="slot1">

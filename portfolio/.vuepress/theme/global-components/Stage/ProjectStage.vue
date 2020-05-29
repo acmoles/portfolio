@@ -27,6 +27,7 @@
             {{ description }}
           </p>
           <ProjectExternalLink
+            v-if="ctaLabel !== 'none'"
             :label="ctaLabel"
             :href="ctaUrl"
           />
@@ -92,6 +93,10 @@ export default {
     background () {
       return this.$page.frontmatter.background
     },
+
+    isModalOpen () {
+      return this.$store.state.isModalOpen
+    },
   },
 
   mounted () {
@@ -99,7 +104,7 @@ export default {
         // TODO turn off parallax after first scroll down
         updateOnScroll(0, 1, progress => {
           window.requestAnimationFrame(() => {
-            if (this.visible) {
+            if (this.visible && !this.isModalOpen) {
               this.animateElement()
             }
           })
@@ -130,7 +135,7 @@ export default {
 
   methods: {
     animateElement () {
-      let animationValue = (getScrollTop() * 0.2) // speed factor
+      let animationValue = (getScrollTop() * 0.3) // speed factor
       if (animationValue >= 0 && animationValue <= 300) {
         this.transform = `translate3d(0, ${animationValue}px, 0)`
       }
@@ -157,7 +162,7 @@ export default {
     color: $white
     .subtitle
       color: $white
-      filter: opacity(70%)
+      filter: opacity(78%)
 
 .stage-column
   padding-right: 10em

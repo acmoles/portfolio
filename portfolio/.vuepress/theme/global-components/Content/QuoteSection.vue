@@ -3,7 +3,7 @@
     <b v-for="n in 128" class="particle"/>
     <div class="container is-fullhd content relative">
       <div class="columns">
-        <div class="column is-two-thirds">
+        <div class="column is-two-thirds background-noise">
           <p class="subtitle">{{ quote }}</p>
           <p class="attribute">{{ attribute }}</p>
         </div>
@@ -30,11 +30,25 @@ export default {
   @import "../../styles/mixins.sass"
 
   .quote-section
-    background-color: rgba($pitch, 0.2)
+    background-color: darken($black, 3%)
     overflow: hidden
+    &::after
+      content: ' '
+      position: absolute
+      width: 100%
+      height: 6em
+      background-image: linear-gradient(0deg, rgba($pitch,0.00) 0%, rgba($pitch,0.42) 60%, $pitch 100%)
+      top: 0
+      opacity: 0.16
 
-    .subtitle, .attribute
-      text-shadow: 0 0.25em 0.75em $pitch
+    .column
+      background-color: darken($black, 3%)
+      padding: 1em
+    // .subtitle, .attribute
+      // text-shadow: 0 0 0.75em $pitch, 0 0 2em $pitch
+
+    .attribute
+      color: $silver
 
   .particle
     position: absolute
