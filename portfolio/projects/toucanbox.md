@@ -1,7 +1,7 @@
 ---
 uid: 7
 title: toucanBox
-subtitle: Refining the value proposition and personalising the experience
+subtitle: Refining the onboarding flow for new customers
 type: double-right-bottom
 navStyle:
   style: light
@@ -15,12 +15,13 @@ date: 2019-09-12
 src: /images/homepage/toucan-baked.jpg
 prev: ./makielab
 next: ./toucan-research
+hasFooter: true
 ---
-
+<!-- A redesigned sign up funnel to improve communication, useability and confidence and a strategic design project to identify new ways to improve customer retention -->
 ::: slot top
 
 <Stage-ProjectStage :noise="true" ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com"
-description="A redesigned sign up funnel to improve communication, useability and confidence and a strategic design project to identify new ways to improve customer retention">
+description="toucanBox is an award winning startup subscription service delivering creative craft boxes to children aged 3-8.">
 
   <template v-slot:visual-column>
     <figure class="toucan-image">
@@ -54,13 +55,13 @@ description="A redesigned sign up funnel to improve communication, useability an
 
 ## Context
 
-toucanBox is an award winning startup subscription service that provides arts and crafts activities for children aged 3 to 8 years old. Each box has the child’s name on the front and a personalised message printed inside. It has illustrated instructions, an activity magazine and all the required materials to make a craft project. It’s also delivered straight through the letterbox.
+Each toucanBox is addressed directly to the child and contains all the materials needed to complete crafty projects, with colourful step by step instructions and an activity magazine. New customers register through the website. For leads acquired through paid marketing channels, the first box is typically a free or discounted trial.
 
-2017 was a significant year for toucanBox. Having secured funding in the previous year, we were ready to expand the Company and transition into a growth phase.
+We secured funding in mid-2016 and were ready to scale our operations. Although toucanBox had firmly embraced an online-first business model, we weren't thinking about our product in a holistic way that included the online experience. Our scaling roadmap didn't include significant work on the user-facing portion of our web platform. As the only (digital) product person in the company, I knew it was up to me to change the mindset.
 
-As we offer a product customers usually haven’t seen before, we knew that our communication and first impression must be flawless.
+My breakthrough came when I discovered our average funnel conversion rate lagged behind that of other comparable subscription businesses. From this I could derive a clear and compelling expected ROI - and so I gained my mandate.
 
-New customers register through the website. They choose a box type for their child (or children) and create an account, providing relevant details (including email, delivery address and billing information). The first box is a free trial if they are acquired through paid marketing channels.
+As project lead, I guided the organisation through a human-centred process of research, content strategy, business alignment, user interface and interaction design, usability testing, and development.
 
 </template>
 
@@ -76,10 +77,10 @@ Subscription e-commerce
 2017
 
 **Team composition**
-CTO, product designer*, two full-stack developers, stakeholders in Marketing and Creative
+CTO, 2 full-stack developers, stakeholders in Marketing and Creative
 
-_I have omitted confidential information in this case study. All information and images are my own unless stated otherwise._
-
+_I have omitted confidential information in this case study. All content is my own unless stated otherwise._
+<!-- and does not necessarily reflect the views of toucanBox. -->
 
 </template>
 
@@ -94,7 +95,7 @@ _I have omitted confidential information in this case study. All information and
 
 ###  The challenge
 
-Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat.
+How might we increase funnel conversion rate; achieving our business goal but also helping our users achieve their goals. How might we build a shared organisational understanding of the user’s journey.
 
 </template>
 
@@ -102,7 +103,7 @@ Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus 
 
 ### The outcome
 
-Donec suscipit pretium ipsum eget dapibus. Nunc commodo metus sit amet nunc sagittis, ac sodales leo ornare. Sed vel augue vitae arcu pulvinar dapibus. Mauris quis magna vitae massa gravida vestibulum.
+A usable, reassuring, and technologically sustainable website and signup experience which had an immediate impact on funnel conversion rate.
 
 
 </template>
@@ -111,10 +112,9 @@ Donec suscipit pretium ipsum eget dapibus. Nunc commodo metus sit amet nunc sagi
 
 ### My role
 
-Proin eget porttitor neque:
+Project management
 ~ Customer research and user testing
 ~ Prototyping and design iteration
-~ Frontend development
 ~ Analysis and evaluation
 
 </template>
@@ -153,7 +153,9 @@ Proin eget porttitor neque:
   Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
 </p>
 
- Analytics, asking customer service, interviewing existing customers and parents who weren’t customers. Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat.
+I conducted a series of in-house customer interviews. These consisted of both broad market research questions and useability testing all aspects of the website.
+I also collected data insights and anecdotal feedback from across the business - customer service, website analytics, net promoter score (NPS), customer surveys and production database - sometimes asking new questions of our data to fill the gaps (including writing a few database queries of my own).
+Analytics, asking customer service, interviewing existing customers and parents who weren’t customers. To gain a better understanding of toucanBox's business goals and constraints along with user needs and behaviours, I kicked off a discovery phase based on a range of quantitative and qualitative research methodologies. I held a series of stakeholder interviews across several business lines to better understand toucanBox's business goals, requirements, and constraints. Each of these interviews was captured in audio and text format, and was used to identify common themes and specific needs. I also explored existing data and artifacts, including. Along the way, I captured insights in a central location accessible to the whole project team.
 
 </template>
 
@@ -254,7 +256,24 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 
 ## Objectives
 
-How might we? Jobs to be done and/or user story. Measurable objectives would be better. Design principles? Increase funnel conversion rate. PM-esq stuff. I broke down the overarching project goal into six focus areas under two themes. Unlocking your creativity one box at a time:
+How might we? Jobs to be done and/or user story. Measurable objectives would be better. Design principles? Increase funnel conversion rate. PM-esq stuff. We needed to build a “product” mindset around the signup experience. This would let us make decisions based on real insights and to continuously measure, evaluate, and iterate on the platform over time.
+
+Based on the insights collected through research and discovery, I held a series of workshops with the project team to turn insights into action.
+
+Guided by our findings, I defined clear measures of success for the project through generalized and channel-specific KPIs.
+
+I broke down the overarching project goal into six focus areas under two themes. Unlocking your creativity one box at a time:
+
+I then summarised customer quotes and supporting data into six 'product Design Principles,' each with suggested ideation starting points:
+
+1. Easy
+2. Clear
+3. Trustworthy
+4. Open
+5. Personalised
+6. Flexible
+
+Easy, Clear, Open and Trustworthy with an overhaul of the acquisition funnel and more help and information on the website.
 
 </template>
 
@@ -266,13 +285,11 @@ How might we? Jobs to be done and/or user story. Measurable objectives would be 
 
 <div class="small">
 
-Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
+Refine how we communicate the toucanBox value proposition with messaging and content optimised for fast comprehension
 
-Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis.
+Minimise misunderstanding of the value proposition and effectively translate our typical marketing messages “free craft box” into the full picture “toucanBox is a craft box subscription you can try for free”
 
-Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
-
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
+Reduce anxiety about price and discounts by providing clear and timely feedback
 
 </div>
 
@@ -286,13 +303,13 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 
 <div class="small">
 
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+Enable comparison between the three product types
 
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+Minimise the number of steps, clicks and details required to complete signup
 
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+Build confidence throughout the funnel by following usability best practices, validated by thorough user testing
 
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+Establish a consistent UI language with a living design system
 
 </div>
 
@@ -340,7 +357,9 @@ Nulla at arcu sagittis, egestas libero ut, finibus massa.
   Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
 </p>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
+Before moving into high-fidelity design and development, I performed usability testing on the proposed direction for the signup experience to validate design and content and decisions, identify challenges, and iterate based on real user feedback.
+
+I recruited a range of study participants that closely matched our defined user personas, and designed a usability study that would examine several different signup flows.
 
 <br>
 <br>
@@ -490,7 +509,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 ## Lessons from user testing
 
-Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper. Integer id aliquam quam. Pellentesque purus libero, mollis id ante nec, euismod fermentum justo. In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+Guided by the findings of the usability testing, the project team and greater organization was confident in the design direction, and identified specific opportunities to improve on the chosen design direction and the overall signup experience. Narrowing down. In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 
 </template>
 
@@ -546,7 +565,7 @@ Certain types of accessory like hats, clothes and shoes quickly cluttered the sc
 
 ## Design system
 
-Link to living styleguide. Atomic design. UI style evolved from the magazine - graphic design. In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+Link to living styleguide. Atomic design. UI style evolved from the magazine - graphic design. Thanks to our existing UI design system, progressing from wireframes to high-fidelity UI design was a snap. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 
 </template>
 
@@ -571,7 +590,7 @@ Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 
 What we chose to build in production. Release feature-by-feature - A/B testing to validate. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam.
+The final design is accessible and adapts seamlessly to several distinct user flows, with incredibly fast performance on both desktop and mobile devices. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam.
 
 <template v-slot:aside>
 
@@ -615,7 +634,7 @@ Personal project
   Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur.
 </p>
 
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+The newly-launched signup experience had an immediate impact on toucanBox’s online signup activities. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
 
 
 ### What went well
@@ -657,6 +676,8 @@ Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
 In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 
+_Data reflects year-over-year activity for a defined period of time as of December 2017._
+
 </template>
 
 </Content-InfoBox>
@@ -675,7 +696,6 @@ In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis 
 ]"/>
 
 
-
 <Content-MainSectionDivider aside="Section 4 of 4" title="Followup"/>
 
 
@@ -689,7 +709,7 @@ In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis 
   Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
 </p>
 
-In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+The leadership at toucanBox didn’t think of themselves as a tech company, even though by this point the desire for flexibility, customisation, by a series of incremental steps, we had replaced almost all the off-the-shelf tools for subscription businesses with our own systems. In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 
 </template>
 
@@ -719,6 +739,8 @@ Nulla at arcu sagittis, egestas libero ut, finibus massa.
 <template slot="content">
 
 ## Defining personalisation
+
+Best products (Airbnb and Spotify) blend the boundary between the digital product and the commodity. In toucanbox too.  
 
 Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
 

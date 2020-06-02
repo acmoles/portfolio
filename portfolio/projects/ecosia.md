@@ -147,7 +147,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 #### Ecosia maps
 
-Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
+Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. [Prototype](https://acmoles.github.io/maps-ui/)
 
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }
@@ -171,7 +171,7 @@ Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim
 
 #### Global searches data-vis
 
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. [Live](https://realtime.staging.ecosia.org/)
 
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }

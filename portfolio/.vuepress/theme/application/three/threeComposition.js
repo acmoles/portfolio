@@ -2,6 +2,7 @@ import * as THREE from 'three/build/three.module.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 // import Stats from 'three/examples/jsm/libs/stats.module.js';
 import { EventTarget } from 'event-target-shim/dist/event-target-shim.mjs';
+import updateOnScroll from 'uos'
 
 import { LoadedContent } from './loadedContent.js'
 import { Grid } from './grid.js'
@@ -71,8 +72,11 @@ export class ThreeComposition extends EventTarget {
     } );
 
     this.interactions.addEventListener('scroll', (e) => {
-      this.grid.scroll(e.detail);
-      this.content.scroll(e.detail);
+      window.requestAnimationFrame(() => {
+        this.grid.scroll(e.detail);
+        this.content.scroll(e.detail);
+      })
+
     } );
 
     this.interactions.addEventListener('pause-external', (e) => {

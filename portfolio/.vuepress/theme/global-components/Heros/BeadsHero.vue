@@ -15,7 +15,7 @@ export default {
 
   data () {
     return {
-      amount: 20
+      amount: 30
     }
   },
 
@@ -25,9 +25,9 @@ export default {
   mounted() {
     const x = getViewport('x')
     if (x >= 1600) {
-      this.amount = 40
+      this.amount = 50
     } else if (x >= 1200) {
-      this.amount = 30
+      this.amount = 40
     }
     this.$forceNextTick(() => {
       this.doLoad()

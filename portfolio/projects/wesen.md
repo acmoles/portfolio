@@ -14,6 +14,7 @@ date: 2019-09-12
 src: /images/homepage/wesen-mock-baked.jpg
 prev: ./art-lebedev-studio
 next: ./ecosia
+hasFooter: true
 ---
 
 ::: slot top
@@ -42,28 +43,27 @@ description="Wesen enables anyone to create a unique pendant necklace which can 
 
 ## Context
 
-Vestibulum ac ultrices velit, in porttitor diam. Cras pellentesque dui sed neque pulvinar, in semper turpis rhoncus. Ut ac malesuada nisl. Cras nisi augue, auctor a justo eu, vulputate laoreet ipsum. Vivamus est ante, pellentesque vitae ultrices eu, accumsan ut nisl. Suspendisse ex metus, eleifend vel elit ut, mattis placerat velit. Suspendisse at condimentum neque. Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec. Test.
+Recent years have seen a gradual increase in awareness of product customisation and on-demand manufacturing. But to this day we can see little evidence of the promised revolution due to relatively high prices and no killer app.
 
-Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur tortor in nibh vulputate viverra. Integer fringilla orci enim, non efficitur erat elementum vel. Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit. Pellentesque euismod sodales ipsum in mattis. Test.
+In 2015 I had the chance to work at [Makielab](/makielab) on customisable children’s toys. We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage some lessons learnt there, in order to push the envelope of the [Mass Customisation](http://www.google.com) space.
+
+Firstly, I wanted to explore the possibility of a lightly-constrained creation experience, able to generate infinite variations while being intuitive and fun to use. _I was convinced that suitable constraints could enhance the creativity of customers, rather than restrict it._ Secondly, to completely automate and outsource the fulfillment process.
+
+A separate motivation was to increase my empathy for colleagues and stakeholders as a Product Designer. I wanted to re-experience every stage of digital product development from other perspectives - founder, marketer, product, developer, operations, as well as design.
 
 </template>
 
 <template v-slot:side>
 
-**Product**
-Responsive web application
+**Product** Responsive web application
 
-**Sector**
-E-commerce
+**Sector** Mass customisation e-commerce, 3D content creation
 
-**Timeframe**
-2018
+**Timeframe** 2018
 
-**Team composition**
-Personal project
+**Team composition** Personal project
 
-**Reading time**
-12 minutes
+<!-- _This image shows a mixture of hand-made and procedurally generated pendants_ -->
 
 </template>
 
@@ -78,7 +78,7 @@ Personal project
 
 ###  The challenge
 
-Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat.
+Enable customers to create or customise a product in the web browser and purchase it. Fulfill their order automatically using outsourced manufacturing.
 
 </template>
 
@@ -86,8 +86,7 @@ Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus 
 
 ### The outcome
 
-Donec suscipit pretium ipsum eget dapibus. Nunc commodo metus sit amet nunc sagittis, ac sodales leo ornare. Sed vel augue vitae arcu pulvinar dapibus. Mauris quis magna vitae massa gravida vestibulum.
-
+Wesen fulfills my original criteria and helped me learn a great deal. The most valuable lessons I didn't expect; the importance of _Getting the word out_ and rapidly finding _Product-market fit._
 
 </template>
 
@@ -95,11 +94,8 @@ Donec suscipit pretium ipsum eget dapibus. Nunc commodo metus sit amet nunc sagi
 
 ### My role
 
-Proin eget porttitor neque:
-~ Customer research and user testing
-~ Prototyping and design iteration
-~ Frontend development
-~ Analysis and evaluation
+UX Product designer
+~ Full-stack JS developer
 
 </template>
 
@@ -114,12 +110,17 @@ Proin eget porttitor neque:
 
 
 <Content-PointsSection :content="true" :points="[
-{ src:'/svg-icons/icon_search.svg', alt:'sad face', title:'Jewellery is a good balance between market size and technical constraints', description:'Projects completed for small businesses and startups.' },
-{ src:'/svg-icons/icon_gift.svg', alt:'clock', title:'High-value, custom or personalised products tend to be gifts', description:'If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.' },
-{ src:'/svg-icons/icon_coffee.svg', alt:'lightbulb', title:'Existing interest combined with dropping prices and improving tools', description:'Are we on the cusp of a trend? Or mobile focus? Touch devices? Years experience working for clients like Google and Amazon.' },
-{ src:'/svg-icons/icon_conversation.svg', alt:'Group', title:'Right now, no-one is asking to create jewellery themselves', description:'And why that might be a good thing. VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.' },
-{ src:'/svg-icons/icon_neutral.svg', alt:'documents', title:'Non-technical people feel daunted by customisation tools', description:'Award winning team members.' },
-{ src:'/svg-icons/icon_pendant.svg', alt:'device', title:'Pendants seem more suitable than rings', description:'Hexo has been serving the Vue docs well - in fact, we are probably still a long way to go from migrating away from it for our main site.' },
+{ src:'/svg-icons/icon_search.svg', alt:'sad face', title:'Jewellery balanced market size and technical constraints', description:'Search keywords paired with customisation typically focused on personal appearance and self expression. Jewellery satisfied this criteria and tends to be small, high value objects suitable for 3D printing.' },
+
+{ src:'/svg-icons/icon_conversation.svg', alt:'Group', title:'People weren\'t asking to create jewellery themselves', description:'Search keyword volume was much higher for customisation than creation. This suggested lower awareness and demand for creation, but also less competition to rank. This would have implications for the value-proposition and communication.' },
+
+{ src:'/svg-icons/icon_gift.svg', alt:'clock', title:'Customised or personalised products tended to be gifts', description:'Based on the messaging on competitor websites. Gifting remains highly seasonal. Google Consumer Barometer (2018) suggested more than 50% of fashion and accessories gift purchases were on mobile.' },
+
+{ src:'/svg-icons/icon_coffee.svg', alt:'lightbulb', title:'Customised gifts looked like a growing trend', description:'It wasn\'t hard to find designers in my network who had recently given a customised gift. They shared anecdotes which painted a picture of this becoming increasingly common.' },
+
+{ src:'/svg-icons/icon_neutral.svg', alt:'documents', title:'Non-technical people felt daunted by customisation tools', description:'Designers found the process of making their gifts empowering, while non-designers found it initially daunting and later frustrating. Sometimes they looked for expert help.' },
+
+{ src:'/svg-icons/icon_pendant.svg', alt:'device', title:'Pendants seemed more suitable than rings', description:'The majority of gifts among my interviewees were rings. Pendants came in second place. However, with rings, I foresaw difficulties such as sizing and gemstone fixtures.' },
 ]">
 
 <template v-slot:content>
@@ -127,10 +128,10 @@ Proin eget porttitor neque:
 ## Research
 
 <p class="subtitle">
-  I informally interviewed three designers and one non-designer, each who had recently designed or commissioned bespoke jewellery.
+  I informally interviewed four designers and one non&#8209;designer, each who had recently designed or commissioned bespoke jewellery.
 </p>
 
-Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Analytics, asking customer service, interviewing existing customers and parents who weren’t customers. (which was a growing trend among my friends). I recorded standout details and comments:
+At the outset, I wasn’t set on any particular product category. My approach was to broadly investigate the mass customisation market and make a choice based on estimated product-market fit. I used digital marketing techniques to gauge the market potential and understand what language and search terms potential customers might use. I followed up with qualitative interviews.
 
 </template>
 
@@ -139,13 +140,13 @@ Wesen is an experiment in turning customers into creators and building a digital
 
 
 
-<Content-ThreeColumnSection :content="true" columnOffset="table-offset">
+<Content-ThreeColumnSection :content="true" columnOffset="three-offset">
 
 <template v-slot:content>
 
 ## User profiles
 
-Focus on their motivations. Using research. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+The next step was to clearly define and build empathy for potential customers. Qualitative interviews suggested a primary persona _Gifters_ and a secondary persona _Enthusiasts._ In some cases customers could be both. Enthusiasts are typically a smaller segment, so I decided to focus on gifters. I reasoned that a flow optimised for gifters was unlikely to deter enthusiasts.
 
 </template>
 
@@ -157,17 +158,16 @@ Focus on their motivations. Using research. Nullam a metus quis eros pretium hen
 
 *Buyer persona*
 
-Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
+When I need to give an important gift, I want to design it myself so I can be sure it will make the recipient happy.
 
-**Suspendisse ornare et**
+<br>
 
-Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis.
+_“I’m looking for something which will show them how much I care”_
+~ _“I want to give something unique, which they couldn’t get anywhere else”_
+~ _“It takes ages to find the perfect gift”_
+~ _“A gift should be personal, something which reminds them of me”_
+~ _“I want to feel confident giving the gift”_
 
-Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
-
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
-
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
 
 
 </template>
@@ -180,25 +180,26 @@ Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu m
 
 *Buyer persona*
 
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
+When new and unusual products become available, I want to try them out so I'm on the cutting edge.
 
-**Aenean et nunc tortor**
+<br>
 
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
-
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
-
-**Aenean et nunc tortor**
-
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+_“People expect me to find the next trend”_
+~ _“I like to experiment with new technologies”_
+~ _“I have a personal style and I carefully curate what I wear”_
+~ _“I want to wear jewellery no-one else has seen before”_
 
 </template>
 
 <template v-slot:column3>
 
-<figure class="image is-9by16">
-  <img class="lazyload" data-src="/images/wesen/journey_characters2.jpg" alt="Cartoon of enthusiasts and gifters">
-</figure>
+<div class="columns is-gapless">
+  <div class="column is-three-quarters">
+    <figure class="image is-9by16">
+      <img class="lazyload" data-src="/images/wesen/journey_characters2.jpg" alt="Cartoon of enthusiasts and gifters">
+    </figure>
+  </div>
+</div>
 
 </template>
 
@@ -208,13 +209,18 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 
 
 
-<Content-ThreeColumnSection padding="is-large" :content="true" columnOffset="table-offset">
+<Content-ThreeColumnSection padding="is-large" :content="true" columnOffset="three-offset">
 
 <template v-slot:content>
 
 ## Scope and objectives
 
-Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. A curated and supported creation experience where users participate without needing to consider constraints - or in mvp definition? A collection of pre-designed products, which can be bought directly or customised before purchase. Note mobile first. How might we? Jobs to be done and/or user story. Measurable objectives would be better. Design principles? Increase funnel conversion rate. PM-esq stuff. I broke down the overarching project goal into six focus areas under two themes:
+The results of my research posed two main user experience challenges:
+
+- How to communicate the value of lightly-constrained product creation to an audience that currently isn't asking for it?
+- How to address the anxiety of non-technical users approaching a customisation interface?
+
+Addressing these became the first pillar of my design activity. The second was to reach a level of product resolution where real customers could make actual orders - I refered to this as _End-to-end._ To facilitate achieving this within a reasonable timeframe I paired back the typical components of an e-commerce flow, leaving behind only the critical elements necessary to win my first customers.
 
 </template>
 
@@ -224,14 +230,9 @@ Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere puru
 
 ---
 
-Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
+Build confidence with an e-commerce store that explains the value proposition and allows shoppers to browse pre-designed products. Make it possible for these to be selected as the foundation for further customisation or bought immediately.
 
-Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis.
-
-Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
-
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
-
+Address anxiety and empower non-designers with an intuitive interface that doesn’t require a tutorial and can be learnt within 5 seconds. Allow customers to express themselves meaningfully without requiring a high level of skill or design experience. Minimise the number of controls and progressively disclose supporting features.
 
 </template>
 
@@ -241,24 +242,24 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 
 ---
 
-Place an order. Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+Enable customers to buy the pendant they create and ensure automated fulfillment of their order.
 
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+Save the customer's design and order data, allowing them to return to it and make modifications or repeat orders.
 
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+Establish a line of communication for customers to enquire about their order and report any problems.
 
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+Minimise technical and operational overhead by relying on third-party cloud services where possible. Outsource complex systems like payments and accounts.
 
 </template>
 
 <template v-slot:column3>
 
 <figure class="image is-2by1">
-  <img class="lazyload" data-src="/images/wesen/draft-journey-mvp.png" alt="Flowchart of user journey">
+  <img class="lazyload medium-zoom" data-src="/images/wesen/draft-journey-mvp.png" alt="Flowchart of user journey">
 </figure>
 <figcaption>
 
-What's out of MVP. Nulla at arcu sagittis, egestas libero ut, finibus massa.
+This simplified journey map indicates features to be outsourced or removed for the pilot - marked by the red dashed line.
 
 </figcaption>
 
@@ -285,20 +286,20 @@ What's out of MVP. Nulla at arcu sagittis, egestas libero ut, finibus massa.
 ## Low-fi Prototyping
 
 <p class="subtitle">
-  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
+With my background in Industrial Design, I was already familiar with 3D modelling software. I assembled a list of promising tools, extending it with input from designers in my network.
 </p>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
+My approach was to re-imagine a tool with simplified interaction or reduced capability and then combine several such tools to see if interesting synergies emerged. To formalise my thinking, I rated these ideas by _Expressiveness_ and (ease of) _Implementation_. During this process I started to think of myself as 'unshackling' expressive modelling tools from their specialist software confines.
 
 </template>
 
 <template slot="slot1">
 
-#### Blender animation rig
+#### Blender basic interactive
 
-Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
+I chose to proceed with an idea combining _Radial array_ and _Control geometry._ I found it personally fun to use - often producing pleasing and unexpected outcomes.
 
-Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
+Blender had proven a useful platform for experimentation. But I wasn't able to use it for value or usability testing because my subjects weren't fluent in the Blender interface.
 
 </template>
 
@@ -306,9 +307,9 @@ Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan
 
 #### WebGL basic interactive
 
-Don’t need wizard flow. Show this below in lessons? Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+To overcome this limitation, I quickly built a basic yet functional prototype in WebGL. I also took the opportunity to explore various JS libraries before committing in production.
 
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
+It was gratifying to see testers immediately move the control points. I observed an attitude of curiosity, even among testers I expected to be daunted by customisation interfaces.
 
 </template>
 
@@ -316,7 +317,9 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 #### WebGL feasibility
 
-The right look in realtime 3D graphics? Matcap shaders. Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
+A growing concern was that customers could feel disconnected from the product they would eventually buy.
+
+To mitigate this risk, I prioritised reaching a high level of graphical realism. Matcap shaders offered a solution which also met performance requirements.
 
 </template>
 
@@ -331,7 +334,7 @@ The right look in realtime 3D graphics? Matcap shaders. Maecenas sed nibh eleife
 
 ## Lessons from user testing
 
-Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper. Integer id aliquam quam. Pellentesque purus libero, mollis id ante nec, euismod fermentum justo. In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+Before moving into high-fidelity design and development, I performed further usability testing on the proposed direction to validate design decisions, identify challenges, and iterate based on real user feedback.
 
 </template>
 
@@ -339,10 +342,10 @@ Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit am
 
 **Observation** | **Remedy** |
 --- | --- |
-Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout |
-Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added skirts, wellington boots and several other accessories |
-Cras mollis sodales urna, eu ultrices nibh lobortis ut. Fusce eu pellentesque nulla. | I observed children dragging items off the screen, attempting to delete them, so made that actually work |
-Certain types of accessory like hats, clothes and shoes quickly cluttered the screen and didnt make sense out of their intended positions | I made new placements in specific categories (e.g. hair) remove the previous accessory of that type. This proved to be an intuitive limitation |
+_“I wish I could go back to the way I had it before”_ | I implemented an undo feature and reorganised the interface to accommodate its button |
+_“I have no idea what size it is”_ | I added a scale grid I and an introductory animation sequence, showing the pendant and chain in context |
+_“These messages just get in my way”_ Error messages (further discussion below) broke the creative flow and led to a frustrating experience | Now the user only encounters error messages once they enter the eyelet mode for the first time, thereby signalling a desire to finish the pendant and checkout. I also made error messages dismissable until the next user action |
+_“The first thing I wanted to do was push all the sliders to maximum”_ In some cases testers created the largest possible pendant | This signalled the need for another error condition - where the pendant design is unreasonably large - both too heavy to wear and very expensive. I also tried shrinking the design area but this felt constricting |
 {.table .is-fullwidth}
 
 </template>
@@ -367,27 +370,59 @@ Certain types of accessory like hats, clothes and shoes quickly cluttered the sc
 <Content-ImageFrames-FullImageSection url="/images/wesen/wesen-montage-2.jpg" alt="Montage of design iteration"/>
 
 
+<Content-FreeSection>
 
-
-<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-2by1" url="/images/wesen/messages.png" alt="Message window which informs users of geometry problems and offers help" :aside="true" :content="true">
-
-<template v-slot:content>
+<div class="columns">
+<div class="column is-two-thirds">
 
 ## E-commerce experience
 
 <p class="subtitle">
-  Turn a prototype tool into an MVP e-commerce experience. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
+  Guided by my findings, I was confident the customisation tool was ready to be shaped into an e&#8209;commerce flow.
 </p>
 
-Customer service email, database to retain created models and orders, considering payment services etc. In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+At first I imagined a sequence of steps, often referred to as a 'wizard' pattern, believing this would increase usability. I built mockups of increasing fidelity and continued to test with users. I employed a hybrid approach, mixing static screens and a modified version of my WebGL prototype. But something was wrong; _somewhere along the way I had lost the magic of the earlier tests._
 
-### Input validation for 3D geometry
+</div>
+</div>
 
-Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis.
+<Content-FlowInline :steps="[
+  'Sculpt segments',
+  'Layout segments',
+  'Choose material',
+  'Place the eyelet',
+  'Details',
+  'Checkout'
+]"/>
 
-Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
+<div class="columns">
+<div class="column is-two-thirds">
 
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+I realised this was too cumbersome and restrictive. I evolved my design to include two 'modes' which users could toggle between - sculpt mode and layout mode. But the eureka moment finally came when I remembered that my earlier prototype contained none of this usability 'help' yet testers found it perfectly intuitive. Modes, albeit better than a wizard, still just got in user's way. I stripped it out.
+
+Where the wizard pattern did add value, was in separating the expressive phase of creation from tasks necessary to completing the order - adding the necklace chain eyelet, ensuring the pendant was valid for 3D printing and filling out details.
+
+</div>
+</div>
+
+</Content-FreeSection>
+
+<Content-ImageFrames-MainImageSection padding="is-medium-large" imageClass="is-2by1" url="/images/wesen/messages.png" alt="Message window which informs users of geometry problems and offers help" :aside="true" :content="true">
+
+<template v-slot:content>
+
+## Input validation for 3D geometry
+
+Offering users expressive tools introduced a challenging problem - how to ensure they create valid geometry for manufacture by 3D printing? Through user testing I identified four common error cases:
+
+1. The radial segments do not connect, so that the necklace is not a single volume
+2. The eyelet does not connect to the pendant
+3. The pendant blocks the eyelet so that the chain would not fit
+4. The pendant is extremely large
+
+I developed a system to detect these problems and display error notifications. Although I was aware of additional hard-to-detect problems such as non-manifold or thin geometry, since they rarely occurred, I chose not to address them in the MVP. Rather, I planned to manually fix these models for customers when this occurred.
+
+<!-- An important lesson from user testing was not to show these notifications until the user signals a desire to advance in the purchase flow. Otherwise, they completely counteracted my efforts to reassure non-technical users. Error notifications start once they become useful; when the user adds an eyelet for the necklace chain. -->
 
 </template>
 
@@ -395,7 +430,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 <div class="box">
 
-Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
+The notification window begins by offering tips and later, when appropriate, reports geometry errors.
 
 </div>
 
@@ -421,13 +456,13 @@ Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursu
 
 ## Production assets
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
+Small amount of high quality visual assets and content. Minimal number of screens with highly polished UI. I drew inspiration from the Airbnb Design System and Google Material Design 2.0 while also referencing the design language of fashion and jewellery brands.
 
 </template>
 
 <template slot="slot1">
 
-Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
+Production SVG icon assets
 
 </template>
 
@@ -455,11 +490,9 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 ## Development
 
-<p class="subtitle">
-  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
-</p>
+My main criteria was to setup the necessary e-commerce components to enable orders as quickly as possible. I explored off-the-shelf e-commerce systems like Shopify, Magento and WooCommerce but ... Needed to be even more paired back - no order management, sensitive user data or payments. Shapeways order API could offer this. The Heroku Node.js ecosystem proved remarkably suitable for this use-case.
 
-Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+In specifying production tools and technologies I re-referenced my project goals and drew on past experience: “Ensure that operations can be automated and that manufacture can be fulfilled by a single service (such as Shapeways) with minimal or no post processing” “Minimise the technical overhead of storing personal and payment details by using third-party services” I chose to upgrade and extend the prototype toolchain for production: Customer service email, database to retain created models and orders, considering payment services etc.
 
 </template>
 
@@ -467,10 +500,10 @@ Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere puru
 
 **Experience** | **Solution** |
 --- | --- |
-Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout |
-Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added skirts, wellington boots and several other accessories |
-Cras mollis sodales urna, eu ultrices nibh lobortis ut. Fusce eu pellentesque nulla. | I observed children dragging items off the screen, attempting to delete them, so made that actually work |
-Certain types of accessory like hats, clothes and shoes quickly cluttered the screen and didnt make sense out of their intended positions | I made new placements in specific categories (e.g. hair) remove the previous accessory of that type. This proved to be an intuitive limitation |
+Unity or Unreal are the de facto realtime 3D frameworks but they tend to increase the complexity of a web frontend build chain | Three.js is less fully-featured but perfectly serviceable for a simple 3D interface |
+Different 3D frameworks powering frontend and backend processing can lead to duplicated work and discrepancies between what the user sees and what is actually manufactured | Three.js can run the same code in the browser and on a Node.js server |
+Hosting websites and backend processes on physical infrastructure requires constant maintenance | Node.js / Express server on cloud infrastructure (Heroku) |
+In-house payment and order management systems are a considerable technical commitment | Outsource payment and order management to Shapeways (already the fulfillment partner). Conduct all CS and CRM through email. |
 {.table .is-fullwidth}
 
 </template>
@@ -478,24 +511,25 @@ Certain types of accessory like hats, clothes and shoes quickly cluttered the sc
 
 <template v-slot:aside>
 
-<div class="box">
+<div class="box content">
 
-#### Techstack
+**WebGL framework**
+Three.js
 
-**Platform**
-Responsive web application
+**Backend**
+Harp.js (prototype) to Node.js / Express / MongoDB
 
-**Engine**
-E-commerce
+**UI framework**
+Guify (prototype) to Angular 2+ (Typescript)
 
-**Styling**
-2018
+**CSS framework**
+Bulma
 
-**Input**
-Personal project
+**Email**
+Sendgrid
 
-**Animation**
-12 minutes
+**Fulfillment**
+Shapeways order API
 
 </div>
 
@@ -504,7 +538,7 @@ Personal project
 </Content-MainAsideSection>
 
 
-<Content-ImageFrames-MainImageSection padding="is-medium-large" url="/images/wesen/system-diagram.png" alt="System diagram of Wesen app" imageClass="is-5by4" :aside="false" :content="false" caption="Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa."/>
+<Content-ImageFrames-MainImageSection padding="is-medium-large" url="/images/wesen/system-diagram.png" alt="System diagram of Wesen app" imageClass="is-5by4" :aside="false" :content="false" caption="The Wesen system diagram, detailing user touchpoints and client/server/third-party API interactions."/>
 
 
 
@@ -514,45 +548,43 @@ Personal project
 
 
 
-
-
 <Content-TextSection>
 
 <p class="subtitle">
-  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur.
+  Wesen is live. You can customise and order your pendant necklace right now.
 </p>
 
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+Considering my original success criteria, _Gifter friendly_ and _End-to-end_, Wesen looks like a success. It features a compelling, usable customisation tool and enables customers to order their creation. I significantly grew my skills throughout the process. But this never translated into wide interest or sales. I draw two important lessons from this outcome:
 
+Firstly, I'm not a natural marketer or sales person. Wesen dispelled my lingering false-faith in "if you build it, they will come". _Getting the word out_ is critically important to product success. Going forward I aim to collaborate with people who have complimentary skills and compensate for my blind spots.
 
-### What went well
-
-Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
-
-### What didn't go well
-
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
+Second, I've learnt to test _Product-market fit_ without building anything if possible - not even building MVPs. It's an inconvenient truth that 90% of startups fail. It's far better to fail fast, without making significant investments.
 
 ### Going forward
 
-Maecenas porttitor congue enim, at tempus tellus volutpat ut. In ultricies, justo nec rhoncus rhoncus, ipsum libero tempus est, at pellentesque mi ligula vitae eros. Cras sodales ut nunc et volutpat. Proin eget porttitor neque, consectetur ullamcorper ipsum. Donec porta nisl id sem varius malesuada.
+Wesen is no longer under active development. Were I to return to it, I would focus on one of the first challenges I identified, which was never satisfactorily overcome - that of communicating the value proposition.
 
+The final lesson from Wesen was the importance of team. It's certainly a romantic idea to design and build a product oneself, but in practice it's an inefficient process. Teams bring complimentary skills and perspectives (as mentioned earlier) and specialists get things done faster. As well as appreciating my team all the more in my everyday work, I intend to build teams for any future side projects.
+
+<!-- Money making engine metaphore - marketing money goes in, revenue comes out - is it better than a bank or some other investment? -->
 
 <template slot="aside">
 
 <div class="columns is-gapless">
-  <div class="column is-two-thirds">
-    <figure class="image is-square">
-      <img class="lazyload" data-src="/images/wesen/evaluation.jpg" alt="Pendant worn by a customer">
-    </figure>
+  <div class="column is-three-quarters">
+    <Content-ModalWrapper type="link" url="http://www.wesen.studio" label="wesen.studio">
+      <figure class="image is-square">
+        <img class="lazyload" data-src="/images/wesen/evaluation.jpg" alt="Pendant worn by a customer">
+      </figure>
+    </Content-ModalWrapper>
   </div>
 </div>
 
-<figcaption>
+<!-- <figcaption>
 
-This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+_Due to COVID-19 only plastic materials are currently available._
 
-</figcaption>
+</figcaption> -->
 
 </template>
 
@@ -562,7 +594,7 @@ This project however, focused on an equally important but somewhat subtler metri
 
 
 <Content-MetricsSection padding="is-medium-large" :metrics="[
-{ metric:'40', description:'Projects completed for small businesses and startups.' },
-{ metric:'02', description:'Award winning team members.' },
-{ metric:'103', description:'Years experience working for clients like Google and Amazon.' },
+{ metric:'∞', description:'Unlimited variety' },
+{ metric:'$24', description:'Starting price for a unique pendant incl. necklace chain' },
+{ metric:'2.7s', description:'Avg. load time for the realtime 3D customisation experience' },
 ]"/>

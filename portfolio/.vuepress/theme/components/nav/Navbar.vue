@@ -23,7 +23,7 @@
             <transition name="fade-fast" mode="out-in">
               <ArrowIcon
                 class="back-arrow"
-                v-if="navbarBurgered"
+                v-if="navbarBurgered && burgerBottom"
                 />
               <span
                 class="text-site-title"
@@ -39,7 +39,7 @@
           <transition name="fade-fast-delay">
             <div
               class="nav-sidebar-button-wrapper"
-              v-if="navbarBurgered"
+              v-if="navbarBurgered && burgerBottom"
               >
               <SidebarButton
                 purpose="menu"
@@ -72,6 +72,8 @@ import { disableScroll } from '@theme/mixins/disableScroll.js'
 
 import { getScrollTop, getOffsetY, getViewport } from '../../util'
 
+// TODO reset this.windowHeight on viewport change
+
 export default {
   components: { SidebarButton, NavLinks, Logo, ArrowIcon },
   mixins: [ disableScroll ],
@@ -85,7 +87,8 @@ export default {
       lastScrollPosition: 0,
       scrollDirection: 'down',
       cssPosition: 'absolute',
-      cssTop: 0
+      cssTop: 0,
+      burgerBottom: true
     }
   },
   mounted () {
@@ -100,7 +103,9 @@ export default {
 
     this.$nextTick(() => {
 
+      // TODO do we need this variable?
       this.windowHeight = getViewport('y') // SSR
+
       updateOnScroll(0, 1, progress => {
         window.requestAnimationFrame(() => {
           this.handleScroll( progress )
@@ -132,6 +137,8 @@ export default {
     toggleSidebar (to) {
       let status = typeof to === 'boolean' ? to : !this.isSidebarOpen
       this.$store.dispatch('setSidebarStatus', status)
+
+      // TODO fix effect of scroll lock on nav links...
       if (status === true) {
         this.disableScrolling(true)
       } else {
@@ -139,20 +146,22 @@ export default {
       }
     },
     handleScroll ( progress ) {
+      // TODO // https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
+      // Perhaps uos already offers this?
       if (this.isSidebarOpen) {
         this.cssPosition = 'fixed'
         this.cssTop = 0
         return
       }
 
-      if (progress > 0.1 && this.navbarBurgered === false) {
+      this.scrollPosition = getScrollTop()
+      this.navbarPosition = getOffsetY(this.$refs.navbar)
+
+      if ( this.scrollPosition > (this.windowHeight / 1.618) && this.navbarBurgered === false ) {
         this.navbarBurgered = true
       } else if (progress === 0) {
         this.navbarBurgered = false
       }
-
-      this.scrollPosition = getScrollTop()
-      this.navbarPosition = getOffsetY(this.$refs.navbar)
 
       if ( this.scrollPosition < this.lastScrollPosition && this.scrollDirection !== 'up' ) {
         this.scrollDirection = 'up';
@@ -188,6 +197,16 @@ export default {
       // } else {
       //   Remove overlap class
       // }
+
+      if ((this.windowHeight + this.scrollPosition) >= document.body.offsetHeight) {
+        this.burgerBottom = false
+        this.$forceNextTick(() => {
+          this.cssPosition = 'fixed'
+          this.cssTop = 0
+          this.burgerBottom = true
+          console.log('bottom')
+        })
+      }
 
       this.lastScrollPosition = this.scrollPosition
 

@@ -18,7 +18,7 @@
           <i class="icon is-large point-icon"><img :src="p.src" :alt="p.alt"/></i>
           <slot v-if="p.slot" :name="p.slot"></slot>
           <template v-else>
-            <h4>{{ p.title }}</h4>
+            <h4 class="point-title">{{ p.title }}</h4>
             <p>{{ p.description }}</p>
           </template>
         </div>
@@ -31,6 +31,8 @@
 <script>
 
 export default {
+
+  // TODO tappable points icons for more info e.g. table
 
   props: {
     points: Array,
@@ -52,4 +54,6 @@ export default {
     border-radius: 50%
     margin-bottom: 2em
 
+  .content .point-title
+    line-height: 1.5
 </style>

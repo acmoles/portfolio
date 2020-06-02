@@ -34,6 +34,7 @@ export class Interactions extends EventTarget {
       this.container.addEventListener( 'touchstart', this.onClick.bind(this), false );
 
       updateOnScroll(0, (window.innerHeight / 1.5), progress => {
+      // TODO: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
        this.dispatchEvent( new CustomEvent('scroll', { detail: progress }) );
        if (this.hasEvents && progress > 0) {
          this.stopEvents();

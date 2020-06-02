@@ -18,7 +18,7 @@ next: ./lego
 ::: slot top
 
 <Stage-ProjectStage :noise="true" ctaLabel="random-international.com" ctaUrl="https://www.random-international.com/"
-description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
+description="Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit.">
 
   <template v-slot:visual-background>
     <figure class="full-screen">
@@ -47,19 +47,12 @@ Suspendisse potenti. Praesent risus massa, vulputate eget turpis in, dignissim t
 <template v-slot:side>
 
 **Product**
-Responsive landing page and signup web application
 
 **Sector**
-Subscription e-commerce
 
 **Timeframe**
-2017
 
 **Team composition**
-CTO, product designer*, two full-stack developers, stakeholders in Marketing and Creative
-
-_I have omitted confidential information in this case study. All information and images are my own unless stated otherwise._
-
 
 </template>
 

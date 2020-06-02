@@ -24,7 +24,7 @@
       </figure>
 
       <div :ref="'caption' + uid" class="item-caption">
-        <p class="small-title">{{ title }}</p>
+        <p class="small-title">{{ processedTitle }}</p>
         <h2 class="item-title" v-if="subtitle">{{ subtitle }}</h2>
 
         <p class="case" v-if="case1">{{ case1 }}</p>
@@ -87,6 +87,13 @@ export default {
     },
     notColorTile () {
       return !(this.background === 'dark' || this.background === 'stompy' || this.background === 'als' || this.background === 'random')
+    },
+    processedTitle () {
+      if (this.title === 'toucanBox R&D') {
+        return 'toucanBox'
+      } else {
+        return this.title
+      }
     }
   },
 
@@ -201,8 +208,6 @@ export default {
 @import "../../styles/variables.sass"
 @import "../../styles/mixins.sass"
 
-// TODO make transition delays dependent on which elements have already been seen
-
 .project-card
   background-color: $black
   background-image: $gradientNone, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
@@ -224,6 +229,7 @@ export default {
     &.project-panel::after
       content: none
   &.stompy
+    // Note special grid-item background below
     background-color: $silver
     background-image: $gradientSubtle, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
     &.project-panel::after
@@ -264,6 +270,9 @@ export default {
     &.project-panel::after
       content: none
 
+@media only screen and #{$media-queries}
+  .project-card
+    background-size: 250%, 128px 128px
 
 .grid-item .project-card::after
   @include pseudo-full
@@ -289,6 +298,9 @@ export default {
     .small-title, h2
       width: 42%
 
+.grid-item
+  .stompy
+    background-color: $steel
 
 .case
   display: inline-flex

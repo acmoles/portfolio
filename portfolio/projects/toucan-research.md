@@ -1,6 +1,6 @@
 ---
 uid: 4
-title: toucanBox
+title: toucanBox R&D
 subtitle: Mixing digital and physical play
 type: single
 navStyle:
@@ -53,13 +53,13 @@ Responsive web application
 **Sector**
 Children's digital media
 
-**Timeframe**
+**Period**
 2016
 
 **Team composition**
 Individual research and development project with stakeholders in Marketing, Creative, Operations and Technology.
 
-_I have omitted confidential information in this case study. All information and images are my own unless stated otherwise._
+_I have omitted confidential information in this case study. All content is my own unless stated otherwise._
 
 </template>
 
@@ -93,16 +93,14 @@ Must resonate with the core value proposition (hands-on crafting and creativity)
 ### My role
 
 Planning and management
-~ Customer research and user testing
-~ Prototyping and design iteration
-~ Frontend development
-~ Analysis and evaluation
+~ Project Lead
+~ UX Researcher & Strategist
+~ UI Designer
+~ Front-end Developer
 
 </template>
 
 </Content-ThreeColumnSection>
-
-
 
 
 

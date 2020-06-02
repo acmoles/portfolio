@@ -46,31 +46,21 @@ description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus vol
 
 ## Context
 
-toucanBox is an award winning startup subscription service that provides arts and crafts activities for children aged 3 to 8 years old. Each box has the child’s name on the front and a personalised message printed inside. It has illustrated instructions, an activity magazine and all the required materials to make a craft project. It’s also delivered straight through the letterbox.
+Integer feugiat sagittis vestibulum. Sed iaculis ultrices dui, ut lobortis enim commodo et. Nulla id justo in neque aliquet aliquam. Quisque ante ante, consequat in purus sit amet, ornare tempus erat. Phasellus euismod elit sapien, ac ultricies neque viverra vel. Proin suscipit aliquam dui id cursus. Morbi vitae urna vehicula, commodo tortor vitae, laoreet tortor. Praesent dapibus quam vitae dui hendrerit, sed fringilla orci rutrum. Etiam viverra a lorem quis pellentesque. Vivamus ultricies massa est, nec cursus ipsum eleifend quis. Curabitur varius turpis metus, ut bibendum felis efficitur nec. Aliquam ut enim augue. Suspendisse sodales pretium tristique.
 
-2017 was a significant year for toucanBox. Having secured funding in the previous year, we were ready to expand the Company and transition into a growth phase.
-
-As we offer a product customers usually haven’t seen before, we knew that our communication and first impression must be flawless.
-
-New customers register through the website. They choose a box type for their child (or children) and create an account, providing relevant details (including email, delivery address and billing information). The first box is a free trial if they are acquired through paid marketing channels.
+Nulla urna magna, feugiat in hendrerit consequat, fermentum vel enim. Etiam maximus dolor sit amet vehicula eleifend. Morbi fringilla lorem urna, nec aliquet odio dictum a. Donec nunc augue, tincidunt vel viverra ac, congue vitae sem. Cras ultrices sapien ac imperdiet ullamcorper. Ut a nisi in mauris finibus porttitor. Mauris volutpat tristique commodo.
 
 </template>
 
 <template v-slot:side>
 
 **Product**
-Responsive landing page and signup web application
 
 **Sector**
-Subscription e-commerce
 
 **Timeframe**
-2017
 
 **Team composition**
-CTO, product designer*, two full-stack developers, stakeholders in Marketing and Creative
-
-_I have omitted confidential information in this case study. All information and images are my own unless stated otherwise._
 
 
 </template>

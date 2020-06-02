@@ -28,3 +28,9 @@
 
 .background-noise-light
   background-image: url('../plugins/plugin-outside-content/dark-noise-light.png')
+
+@media only screen and #{$media-queries}
+  .background-noise, .background-noise-light
+    background-size: 128px 128px
+
+// TODO darker / stronger noise for retina screens
