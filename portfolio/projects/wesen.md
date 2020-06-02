@@ -86,7 +86,7 @@ Enable customers to create or customise a product in the web browser and purchas
 
 ### The outcome
 
-Wesen fulfills my original criteria and helped me learn a great deal. The most valuable lessons I didn't expect; the importance of _Getting the word out_ and rapidly finding _Product-market fit._
+Wesen fulfils my original success criteria and helped me learn a great deal. The most valuable lessons I didn't expect; the importance of _getting the word out_ and _working in teams._
 
 </template>
 
@@ -554,19 +554,39 @@ Shapeways order API
   Wesen is live. You can customise and order your pendant necklace right now.
 </p>
 
-Considering my original success criteria, _Gifter friendly_ and _End-to-end_, Wesen looks like a success. It features a compelling, usable customisation tool and enables customers to order their creation. I significantly grew my skills throughout the process. But this never translated into wide interest or sales. I draw two important lessons from this outcome:
+<!-- As suggested by my initial market research, Wesen proved to be a relatively low reach product, delighting a small niche. I was please to discover that a proportion of its audience didn't consider themselves creative or technical. -->
 
-Firstly, I'm not a natural marketer or sales person. Wesen dispelled my lingering false-faith in "if you build it, they will come". _Getting the word out_ is critically important to product success. Going forward I aim to collaborate with people who have complimentary skills and compensate for my blind spots.
+### What went well
 
-Second, I've learnt to test _Product-market fit_ without building anything if possible - not even building MVPs. It's an inconvenient truth that 90% of startups fail. It's far better to fail fast, without making significant investments.
+Wesen features a compelling, usable customisation tool and enables customers to order their creation. A proportion of its audience don't consider themselves creative or technical. Referring back to my original success criteria, _gifter friendly_ and _end-to-end_, it can be considered a success. I also significantly extended my skills and grew empathy for my product and engineering colleagues.
+
+### What didn't go well
+
+For most people Mass Customisation remains a futuristic idea. Although I never believed Wesen would change this, I was still somewhat disappointed it didn't achieve significant circulation or sales. Perhaps this was due to timing or the immensely poor odds facing new ventures (90% of startups fail) but I nonetheless draw an important lessons from this outcome: the importance of _working in teams._
+
+It's certainly a romantic idea to design and build a product oneself, but in practice it's an inefficient and risky process. For a start, I'm not a natural marketer or sales person. _Getting the word out_ is critically important to product success. Diverse perspectives lead to better products. Specialists get things done faster.
 
 ### Going forward
 
-Wesen is no longer under active development. Were I to return to it, I would focus on one of the first challenges I identified, which was never satisfactorily overcome - that of communicating the value proposition.
+Correspondingly, I intend to form a multidisciplinary team for any future ventures or side projects.
 
-The final lesson from Wesen was the importance of team. It's certainly a romantic idea to design and build a product oneself, but in practice it's an inefficient process. Teams bring complimentary skills and perspectives (as mentioned earlier) and specialists get things done faster. As well as appreciating my team all the more in my everyday work, I intend to build teams for any future side projects.
+Wesen is no longer under active development. At some point, I will revisit how I communicate the value proposition and put some money behind a marketing push. Perhaps by then other Mass Customisation products will have raised public awareness.
+
+<!-- Specialists get things done better and faster. -->
+
+<!-- Wesen dispelled my lingering false-faith in "if you build it, they will come". -->
+
+<!-- Going forward I aim to collaborate with people who have complimentary skills and compensate for my blind spots.
+
+The final lesson from Wesen was the importance of team. It's certainly a romantic idea to design and build a product oneself, but in practice it's an inefficient process. Teams bring complimentary skills and perspectives (as mentioned earlier) and specialists get things done faster. As well as appreciating my team all the more in my everyday work, I intend to build teams for any future side projects. -->
 
 <!-- Money making engine metaphore - marketing money goes in, revenue comes out - is it better than a bank or some other investment? -->
+
+<!-- Perhaps even an interesting side note in the broader story of Mass Customisation. -->
+
+<!-- Second, I've learnt to test _Product-market fit_ without building anything if possible - not even building MVPs. It's an inconvenient truth that 90% of startups fail. It's far better to fail fast, without making significant investments. -->
+
+<!-- Were I to return to it, I would focus on one of the first challenges I identified, which was never satisfactorily overcome - that of communicating the value proposition. -->
 
 <template slot="aside">
 
