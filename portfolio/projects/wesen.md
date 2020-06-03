@@ -78,7 +78,9 @@ A separate motivation was to increase my empathy for colleagues and stakeholders
 
 ###  The challenge
 
-Enable customers to create or customise a product in the web browser and purchase it. Fulfill their order automatically using outsourced manufacturing.
+Enable customers to customise a product in the web browser and purchase it. Fulfill their order automatically using outsourced manufacturing.
+
+<!-- create or customise -->
 
 </template>
 
@@ -232,7 +234,7 @@ Addressing these became the first pillar of my design activity. The second was t
 
 Build confidence with an e-commerce store that explains the value proposition and allows shoppers to browse pre-designed products. Make it possible for these to be selected as the foundation for further customisation or bought immediately.
 
-Address anxiety and empower non-designers with an intuitive interface that doesn’t require a tutorial and can be learnt within 5 seconds. Allow customers to express themselves meaningfully without requiring a high level of skill or design experience. Minimise the number of controls and progressively disclose supporting features.
+Address anxiety and empower non-designers with an intuitive interface that doesn’t require a tutorial and can be learnt within 5 seconds. Enable customers to express themselves meaningfully without requiring a high level of skill or design experience. Minimise the number of controls and progressively disclose supporting features.
 
 </template>
 
@@ -242,7 +244,7 @@ Address anxiety and empower non-designers with an intuitive interface that doesn
 
 ---
 
-Enable customers to buy the pendant they create and ensure automated fulfillment of their order.
+Make it possible for customers to buy the pendant they create and ensure automated fulfillment of their order.
 
 Save the customer's design and order data, allowing them to return to it and make modifications or repeat orders.
 
@@ -420,7 +422,7 @@ Offering users expressive tools introduced a challenging problem - how to ensure
 3. The pendant blocks the eyelet so that the chain would not fit
 4. The pendant is extremely large
 
-I developed a system to detect these problems and display error notifications. Although I was aware of additional hard-to-detect problems such as non-manifold or thin geometry, since they rarely occurred, I chose not to address them in the MVP. Rather, I planned to manually fix these models for customers when this occurred.
+I developed a system to detect these problems and display error notifications. Although I was aware of additional hard-to-detect problems such as non-manifold or thin geometry, since they rarely occurred, I chose not to address them in the MVP. Rather, I planned to manually fix these models for customers.
 
 <!-- An important lesson from user testing was not to show these notifications until the user signals a desire to advance in the purchase flow. Otherwise, they completely counteracted my efforts to reassure non-technical users. Error notifications start once they become useful; when the user adds an eyelet for the necklace chain. -->
 
@@ -550,33 +552,45 @@ Shapeways order API
 
 <Content-TextSection>
 
-<p class="subtitle">
+<!-- <p class="subtitle">
   Wesen is live. You can customise and order your pendant necklace right now.
-</p>
+</p> -->
 
 <!-- As suggested by my initial market research, Wesen proved to be a relatively low reach product, delighting a small niche. I was please to discover that a proportion of its audience didn't consider themselves creative or technical. -->
 
 ### What went well
 
-Wesen features a compelling, usable customisation tool and enables customers to order their creation. A proportion of its audience don't consider themselves creative or technical. Referring back to my original success criteria, _gifter friendly_ and _end-to-end_, it can be considered a success. I also significantly extended my skills and grew empathy for my product and engineering colleagues.
+Wesen features a compelling, usable customisation tool and enables customers to order their creation. A proportion of its audience don't consider themselves creative or technical. My original success criteria, _Gifter friendly_ and _End-to-end_, are satisfied. I also significantly extended my skills and grew empathy for my product and engineering colleagues.
 
 ### What didn't go well
 
-For most people Mass Customisation remains a futuristic idea. Although I never believed Wesen would change this, I was still somewhat disappointed it didn't achieve significant circulation or sales. Perhaps this was due to timing or the immensely poor odds facing new ventures (90% of startups fail) but I nonetheless draw an important lessons from this outcome: the importance of _working in teams._
+Although business success was never my primary goal, I was still somewhat disappointed Wesen didn't exceed the modest reach predicted by my initial research. Were this to be a priority in any future venture or side project, I draw an important lesson: _the importance of working in teams._
 
-It's certainly a romantic idea to design and build a product oneself, but in practice it's an inefficient and risky process. For a start, I'm not a natural marketer or sales person. _Getting the word out_ is critically important to product success. Diverse perspectives lead to better products. Specialists get things done faster.
+Building a product oneself is empowering, but it's also an inefficient and risky process. For a start, I'm not a natural marketer or sales person. _Getting the word out_ is critically important to product success. Diverse perspectives lead to better products. Specialists get things done better and faster. Correspondingly, I intend build teams for any future projects at this level of resolution.
 
 ### Going forward
 
-Correspondingly, I intend to form a multidisciplinary team for any future ventures or side projects.
+Wesen is no longer under active development, although I intend to revisit communication of the value proposition make a marketing push at some point. If that proved successful there are several dimensions of the e-commerce experience which could be improved (e.g. reviews/testimonials, user generated content). There's also the possibility of adding new jewellery types to the platform, such as rings.
 
-Wesen is no longer under active development. At some point, I will revisit how I communicate the value proposition and put some money behind a marketing push. Perhaps by then other Mass Customisation products will have raised public awareness.
 
-<!-- Specialists get things done better and faster. -->
+<!--
+
+Specialists get things done better and faster.
+
+Perhaps by then other Mass Customisation products will have raised public awareness.
+-->
 
 <!-- Wesen dispelled my lingering false-faith in "if you build it, they will come". -->
 
 <!-- Going forward I aim to collaborate with people who have complimentary skills and compensate for my blind spots.
+
+At some point, I will revisit how I communicate the value proposition and put some money behind a marketing push.
+
+Correspondingly, I intend to form a multidisciplinary team for any future ventures or side projects.
+
+It's certainly a romantic idea to design and build a product oneself, but in practice it's an inefficient and risky process.
+
+For most people Mass Customisation remains a futuristic idea. Although I never believed Wesen would change this, I was still somewhat disappointed it didn't achieve significant circulation or sales. Perhaps this was due to timing or the immensely poor odds facing new ventures (90% of startups fail) but I nonetheless draw an important lessons from this outcome: the importance of _working in teams._
 
 The final lesson from Wesen was the importance of team. It's certainly a romantic idea to design and build a product oneself, but in practice it's an inefficient process. Teams bring complimentary skills and perspectives (as mentioned earlier) and specialists get things done faster. As well as appreciating my team all the more in my everyday work, I intend to build teams for any future side projects. -->
 
@@ -615,6 +629,6 @@ _Due to COVID-19 only plastic materials are currently available._
 
 <Content-MetricsSection padding="is-medium-large" :metrics="[
 { metric:'∞', description:'Unlimited variety' },
-{ metric:'$24', description:'Starting price for a unique pendant incl. necklace chain' },
+{ metric:'$14', description:'Starting price for a unique pendant' },
 { metric:'2.7s', description:'Avg. load time for the realtime 3D customisation experience' },
 ]"/>
