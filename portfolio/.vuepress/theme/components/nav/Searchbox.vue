@@ -48,7 +48,7 @@
           @mousedown="go(i)"
           @mouseenter="focus(i)"
         >
-          <a :href="s.path" @click.prevent class="search-result">
+          <a :href="s.path" @click.prevent class="search-result no-fade">
             <span class="page-title">{{ s.title || s.path }}</span>
             <span v-if="s.header" class="header">{{ s.header.title }}</span>
           </a>

@@ -32,7 +32,7 @@
 
 // v-on:content-loaded="onEnlargeText"
 import Navbar from '@theme/components/nav/Navbar.vue'
-import Footer from '@theme/components/home/Footer.vue'
+import Footer from '@theme/components/nav/Footer.vue'
 import PageNav from '@theme/components/nav/PageNav.vue'
 import Sidebar from '@theme/components/nav/Sidebar.vue'
 

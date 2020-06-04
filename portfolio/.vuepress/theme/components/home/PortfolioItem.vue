@@ -1,7 +1,7 @@
 <template>
   <router-link
     :to="path"
-    class="grid-item"
+    class="grid-item no-fade"
     :class="[type, {'in-view': visible}, {'appear-fade-up': homeFadeUpMotion}]"
     @mouseleave.native.stop="mouseLeave"
     @mousemove.native.stop="mouseMove"

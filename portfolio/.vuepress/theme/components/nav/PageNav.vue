@@ -1,16 +1,35 @@
 <template>
-  <section v-if="next" class="page-nav project-card light" :class="next.frontmatter.background || 'dark'">
+  <section v-if="prev || next" class="page-nav background-noise">
 
-        <div class="container is-fullhd content" v-if="prev || next">
-          <div class="columns">
-            <div class="column is-one-third">
-              <router-link class="page-nav-anchor" :to="next.path">
-                <p class="small-title is-to-fade">{{ next.title || next.path }}</p>
-                <h2 class="item-title is-to-fade">{{ next.frontmatter.subtitle }}</h2>
-              </router-link>
-            </div>
+    <div class="container is-fullhd content">
+
+      <!-- <div class="page-nav-background columns">
+        <router-link v-if="prev" class="column is-two-thirds prev" :to="prev.path">
+          Previous
+        </router-link>
+        <router-link v-if="next" class="column project-card light no-fade next" :class="next.frontmatter.background" :to="next.path">
+          Next
+        </router-link>
+      </div> -->
+
+      <div class="page-nav-text columns">
+        <router-link v-if="prev" class="column no-fade prev" :to="prev.path">
+          <div class="background background-noise"></div>
+          <div class="text-group">
+            <p class="small-title">{{ prev.title || prev.path }}</p>
+            <h2 class="item-title">{{ prev.frontmatter.subtitle }}</h2>
           </div>
-        </div>
+        </router-link >
+        <router-link  v-if="next" class="column no-fade is-one-third next" :to="next.path">
+          <div class="background project-card" :class="next.frontmatter.background"></div>
+          <div class="text-group">
+            <p class="small-title">{{ next.title || next.path }}</p>
+            <h2 class="item-title">{{ next.frontmatter.subtitle }}</h2>
+          </div>
+        </router-link >
+      </div>
+
+    </div>
 
   </section>
 </template>
@@ -71,17 +90,72 @@ function resolvePageLink (
 @import "../../styles/variables.sass"
 @import "../../styles/mixins.sass"
 
+.page-nav, .page-nav .container
+  height: 20em
+
 .page-nav
-  height: 100vh
-  display: flex
-  align-items: center
+  background-color: $steel
+  margin-bottom: 2px
+  .columns
+    height: 100%
+  &::before
+    content: ' '
+    pointer-events: none
+    position: absolute
+    width: 100%
+    height: 2em
+    background-image: linear-gradient(360deg, $pitch 0%, rgba($pitch,0.42) 40%, rgba($pitch,0.00) 100%)
+    top: -2em
+    opacity: 0.05
+
+// .page-nav-background
+//   position: absolute
+//   top: 0
+//   width: 100%
+//   .prev.column
+//     margin-right: 2px
+//   a
+//     color: transparent
+
+.page-nav-text.columns
+  position: relative
+  top: 2em
+  justify-content: space-between
+  .column
+    display: flex
+    align-items: center
+  .text-group
+    padding-right: 4em
+    pointer-events: none
+  .prev, .next
+    position: relative
+    .background
+      position: absolute
+      top: 0
+      bottom: 0
+      transition: background-color 200ms ease, filter 200ms ease
+  .prev
+    .text-group
+      max-width: 66%
+    .background
+      left: -50vw
+      width: 200vw
+      background-color: $steel
+      &:hover, &:active
+        background-color: $slate
+  .next
+    .background
+      left: -2em
+      width: 50vw
+      border-left: 2px solid $black
+      &:hover, &:active
+        filter: brightness(1.1)
   .item-title
-    padding-right: 1.5em
-  &.light
+    margin-top: 1em
+  .small-title
     color: $white
-    .small-title
-      color: $white
-      filter: opacity(78%)
+    filter: opacity(78%)
+
 
 
 </style>

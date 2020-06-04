@@ -24,7 +24,7 @@
           v-for="(subItem, index) in item.items"
           :key="subItem.link || index"
           :item="subItem"
-          class="dropdown-item"
+          class="dropdown-item no-fade"
         />
     </div>
   </div>

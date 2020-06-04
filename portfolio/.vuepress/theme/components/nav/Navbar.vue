@@ -251,7 +251,7 @@ export default {
   .text-site-title
     color: $white
     filter: opacity(90%)
-  a.navbar-item:not(.dropdown-item), a.navbar-link:not(.dropdown-item)
+  a.navbar-item, a.navbar-link
     filter: opacity(75%)
     color: $white
     &.router-link-active

@@ -564,13 +564,13 @@ Wesen features a compelling, usable customisation tool and enables customers to 
 
 ### What didn't go well
 
-Although business success was never my primary goal, I was still somewhat disappointed Wesen didn't exceed the modest reach predicted by my initial research. Were this to be a priority in any future venture or side project, I draw an important lesson: _the importance of working in teams._
+Although business success was never my primary goal, I was still somewhat disappointed Wesen didn't exceed the modest reach predicted by my initial research. Were this to be a priority in any future venture, I draw an important lesson: _the importance of working in teams._
 
-Building a product oneself is empowering, but it's also an inefficient and risky process. For a start, I'm not a natural marketer or sales person. _Getting the word out_ is critically important to product success. Diverse perspectives lead to better products. Specialists get things done better and faster. Correspondingly, I intend build teams for any future projects at this level of resolution.
+Building a product oneself is empowering, but it's also inefficient and risky. For a start, I'm not a natural marketer or sales person. _Getting the word out_ is critically important to product success. Diverse perspectives lead to better products. Specialists get things done better and faster. Correspondingly, I intend build teams for any future projects at this level of resolution.
 
 ### Going forward
 
-Wesen is no longer under active development, although I intend to revisit communication of the value proposition make a marketing push at some point. If that proved successful there are several dimensions of the e-commerce experience which could be improved (e.g. reviews/testimonials, user generated content). There's also the possibility of adding new jewellery types to the platform, such as rings.
+Wesen is no longer under active development. I intend to revisit communication of the value proposition and make a marketing push at some point. If that proved successful there are several dimensions of the e-commerce experience which could be improved (e.g. reviews/testimonials, user generated content). There's also the possibility of adding more jewellery types to the platform.
 
 
 <!--
@@ -628,7 +628,7 @@ _Due to COVID-19 only plastic materials are currently available._
 
 
 <Content-MetricsSection padding="is-medium-large" :metrics="[
-{ metric:'∞', description:'Unlimited variety' },
-{ metric:'$14', description:'Starting price for a unique pendant' },
 { metric:'2.7s', description:'Avg. load time for the realtime 3D customisation experience' },
+{ metric:'$14', description:'Starting price for a unique pendant in plastic' },
+{ metric:'∞', description:'Unlimited variety' },
 ]"/>
