@@ -34,6 +34,7 @@ export default {
   @import "../../styles/variables.sass"
   @import "../../styles/mixins.sass"
 
-  .text-column
-    padding-right: 6em
+  @media screen and (min-width: $tablet)
+    .text-column
+      padding-right: 6em
 </style>

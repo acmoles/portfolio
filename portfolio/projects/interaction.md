@@ -12,6 +12,7 @@ sidebar: false
 date: 2019-09-11
 prev: ./ecosia
 next: ./toucan-research
+hasFooter: true
 ---
 
 ::: slot top

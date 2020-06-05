@@ -105,14 +105,8 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../../styles/variables.sass"
-  @import "../../styles/mixins.sass"
-
-  .test-background
-    position: absolute
-    left: 0
-    top: 0
-    opacity: 0.4
+  @import "@theme/styles/variables.sass"
+  @import "@theme/styles/mixins.sass"
 
   // in-view rules for fade staggering
   html:not(.disable-motion)
@@ -144,11 +138,20 @@ export default {
 
   .grid-wrapper
     display: grid
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(1, 1fr)
     grid-auto-rows: 1fr
-    column-gap: $columnGap
-    row-gap: $columnGap
+    column-gap: 1em
+    row-gap: 1em
+    grid-auto-flow: dense
+    @media screen and (min-width: $tablet)
+      column-gap: $columnGap
+      row-gap: $columnGap
+      grid-template-columns: repeat(3, 1fr)
     padding-bottom: 2em
+
+  .grid-item
+    article
+      height: 100%
 
   .grid-wrapper::before
     content: ' '
@@ -157,36 +160,47 @@ export default {
     grid-row: 1 / 1
     grid-column: 1 / 1
 
-  .grid-item
-    article
-      height: 100%
+  @media screen and (max-width: $tablet)
 
-  .double-left-bottom
-    grid-column-start: 1
-    grid-column-end: 3
-    grid-row-start: 3
-    grid-row-end: 4
+    .grid-wrapper > .grid-item:first-child
+      grid-row: 1 / 1
+      grid-column: 1 / 1
 
-  .double-left-top
-    grid-column-start: 1
-    grid-column-end: 3
-    grid-row-start: 1
-    grid-row-end: 2
+  @media screen and (min-width: $tablet)
 
-  .double-right-top
-    grid-column-start: 2
-    grid-column-end: 4
-    grid-row-start: 1
-    grid-row-end: 2
+    .double-left-bottom
+      grid-column-start: 1
+      grid-column-end: 3
+      grid-row-start: 3
+      grid-row-end: 4
 
-  .double-right-bottom
-    grid-column-start: 2
-    grid-column-end: 4
-    grid-row-start: 3
-    grid-row-end: 4
+    .double-left-top
+      grid-column-start: 1
+      grid-column-end: 3
+      grid-row-start: 1
+      grid-row-end: 2
+
+    .double-right-top
+      grid-column-start: 2
+      grid-column-end: 4
+      grid-row-start: 1
+      grid-row-end: 2
+
+    .double-right-bottom
+      grid-column-start: 2
+      grid-column-end: 4
+      grid-row-start: 3
+      grid-row-end: 4
 
 
     // TODO remove if unused
+
+    // .test-background
+    //   position: absolute
+    //   left: 0
+    //   top: 0
+    //   opacity: 0.4
+
     // .test-blur
     //   position: absolute
     //   // animation: pulse 10s ease-in-out infinite

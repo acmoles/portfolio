@@ -1,22 +1,24 @@
 <template>
     <footer class="footer background-noise">
       <div class="container is-fullhd">
-        <div class="footer-content">
+        <div class="footer-content columns is-gapless">
           <!-- <i class="icon"><Logo/></i> -->
-          <router-link :to="$localePath">
+          <router-link class="column" :to="$localePath">
             <strong class="footer-title">
               Anthony Moles
             </strong>
           </router-link>
-          <router-link class="footer-contact-links footer-about" to="/about">About</router-link>
-          <a
-            class="footer-contact-links"
-            v-for="item in userContact"
-            :href="item.link"
-            target="_blank"
-          >
-            {{ item.text }}
-          </a>
+          <div class="column">
+            <router-link class="footer-contact-links footer-about" to="/about">About</router-link>
+            <a
+              class="footer-contact-links"
+              v-for="item in userContact"
+              :href="item.link"
+              target="_blank"
+            >
+              {{ item.text }}
+            </a>
+          </div>
         </div>
         <div class="copy">
           © {{ getYear }}
@@ -69,20 +71,33 @@ export default {
   background: transparent
   .footer-content, .copy
     padding: 0 1.5em
+  .copy
+    @media screen and (max-width: $tablet)
+      padding-left: 0.5em
+      margin-top: 4em
   .footer-title
     pointer-events: none
 
 .footer
   text-rendering: geometricPrecision
-  height: 12em
+  height: 16em
+  @media screen and (min-width: $tablet)
+    height: 12em
   display: flex
   align-items: center
   .container
     display: flex
+    flex-wrap: wrap
     justify-content: space-between
-  .footer-content, .copy
-    display: inline-flex
+    .footer-content
+      margin-bottom: 0
+  .footer-content .column, .copy
+    display: flex
+    width: 100%
     align-items: flex-end
+    @media screen and (min-width: $tablet)
+      display: inline-flex
+      width: auto
   .footer-title
     // font-size: 1.25em
     margin-right: 0.25em
@@ -94,6 +109,9 @@ export default {
     color: $silver
     margin-left: 1em
   .footer-about
+    @media screen and (max-width: $tablet)
+      margin-left: 0
+      margin-top: 1.5em
     &::after
       content: "|"
       margin-left: 1em

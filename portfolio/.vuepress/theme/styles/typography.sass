@@ -22,16 +22,33 @@ strong
   h2
     font-size: 2em
 
+p.small-title
+  color: rgba($white, 0.8)
+  text-rendering: geometricPrecision
+  margin-bottom: 1em
+  letter-spacing: .32px
+  font-weight: normal
+  @media screen and (min-width: $tablet)
+    font-size: 1.25em
+
+.dark
+  p.small-title
+    color: $darkSmoke
+
 h2.item-title
-  font-size: 1.75em
+  font-size: 1.5em
   line-height: 1.25
   letter-spacing: .13px
+  @media screen and (min-width: $tablet)
+    font-size: 1.75em
 
 h2.subtitle, p.subtitle
-  font-size: 1.75em
+  font-size: 1.5em
   font-family: $family-sans-serif
   letter-spacing: .31px
   line-height: 1.35
+  @media screen and (min-width: $tablet)
+    font-size: 1.75em
 
 strong
   font-family: $family-display
@@ -51,21 +68,12 @@ em
 ol, ul
   color: $white-ter
 
-p.small-title
-  color: rgba($white, 0.8)
-  text-rendering: geometricPrecision
-  font-size: 1.25em
-  margin-bottom: 1em
-  letter-spacing: .32px
-  font-weight: normal
-
-.dark
-  p.small-title
-    color: $darkSmoke
-
 .table
   table-layout: fixed
 
 .small
   p
     font-size: 1em
+
+.no-wrap
+  white-space: nowrap

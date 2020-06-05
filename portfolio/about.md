@@ -6,30 +6,71 @@ navStyle:
   style: light
   tint: regular-tint
   progress: light
-background: dark
 hasFooter: true
 ---
 
+<style lang="sass">
+
+  .section.about-text
+    padding-top: 0
+    position: relative
+    top: -5em
+
+</style>
+
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="none" ctaUrl="#"
-description="Hello! I'm a Scottish designer and technologist currently based in Berlin. I have almost 10 years experience crafting diverse products and services.">
-
-  <template v-slot:visual-background>
-    <Heros-ThreeHero/>
-  </template>
-
-</Stage-ProjectStage>
+<Heros-ThreeHero/>
 
 :::
 
-<Content-ContextSection :box="true">
-
-<template v-slot:main>
+<Content-TextSection columnOffset="title-offset" padding="about-text">
 
 <!-- INTERACTION (INTERFACE DESIGN AND HUMAN-COMPUTER INTERACTION), EXPERIENCE (UX DESIGN AND ALL OTHER EXPERIENCE) AND PRODUCT DESIGNER -->
 
 <!--
+
+innovative thinker and tinkerer,
+
+passion for solving complex multi-platform user-experience challenges
+
+by research and deep understanding of users
+
+define and uphold design principles, evolving
+
+creative visionary
+
+bringing real-life experiences into the digital world, challenging current thinking of technology interaction
+
+manage the design team’s work in line with sprints and the product roadmap
+
+can-do attitude - solutions rather than problems - and drive to continuously learn
+
+open-mindedness to non-traditional solutions
+
+Self-motivation and team-player attitude
+
+Highly organised, methodical and flexible individual
+
+Strong ability to evaluate and distill user feedback and research to suggest improvements
+
+Background in industrial or product design
+
+Experience working to Agile and Lean methodologies
+
+
+
+
+
+
+multidisciplinary
+creative studio at the intersection
+of art, design and technology.
+Emotional experiences aimed at improving results
+
+
+
+
 
 I take time and energy throughout the design process to carefully understand and unify the needs of both the user and the stakeholders(s). This care extends throughout the feature development, design process, and production phase by testing early and often. I’m passionate about filtering complex problems into simple and actionable solutions which allows people to be more efficient with their time.
 
@@ -66,113 +107,224 @@ I'm skeptical about what is and am determined to have a positive impact by...
 
 -->
 
-## About
+## Hi, I'm Ant
 
-Integer feugiat sagittis vestibulum. Sed iaculis ultrices dui, ut lobortis enim commodo et. Nulla id justo in neque aliquet aliquam. Quisque ante ante, consequat in purus sit amet, ornare tempus erat. Phasellus euismod elit sapien, ac ultricies neque viverra vel. Proin suscipit aliquam dui id cursus. Morbi vitae urna vehicula, commodo tortor vitae, laoreet tortor. Praesent dapibus quam vitae dui hendrerit, sed fringilla orci rutrum. Etiam viverra a lorem quis pellentesque. Vivamus ultricies massa est, nec cursus ipsum eleifend quis. Curabitur varius turpis metus, ut bibendum felis efficitur nec. Aliquam ut enim augue. Suspendisse sodales pretium tristique.
+<p class="subtitle">
+  A multidisciplinary designer creating useful and playful experiences centred on people
+</p>
+
+Let’s break that down a bit. By ‘multidisciplinary designer’ I mean sed iaculis ultrices dui, ut lobortis enim commodo et. Nulla id justo in neque aliquet aliquam. Quisque ante ante, consequat in purus sit amet, ornare tempus erat. Phasellus euismod elit sapien, ac ultricies neque viverra vel. Proin suscipit aliquam dui id cursus. Morbi vitae urna vehicula, commodo tortor vitae, laoreet tortor. Praesent dapibus quam vitae dui hendrerit, sed fringilla orci rutrum. Etiam viverra a lorem quis pellentesque. Vivamus ultricies massa est, nec cursus ipsum eleifend quis. Suspendisse sodales pretium tristique.
 
 Nulla urna magna, feugiat in hendrerit consequat, fermentum vel enim. Etiam maximus dolor sit amet vehicula eleifend. Morbi fringilla lorem urna, nec aliquet odio dictum a. Donec nunc augue, tincidunt vel viverra ac, congue vitae sem. Cras ultrices sapien ac imperdiet ullamcorper. Ut a nisi in mauris finibus porttitor. Mauris volutpat tristique commodo.
 
-Phasellus dapibus sodales pretium. Mauris et magna in est interdum sagittis. Vivamus ac ullamcorper quam. Proin auctor velit non felis vehicula condimentum. Aenean justo felis, luctus ac varius et, sollicitudin eget ligula. Integer a nulla iaculis, commodo justo ut, placerat quam. Nullam convallis tellus leo, non aliquet ante ullamcorper ornare. Nulla vitae felis a massa semper gravida nec non dolor.
+<template v-slot:aside>
 
-</template>
+**Design**
+Etiam consequat urna ut mauris lacinia placerat. Nunc nulla est, pharetra blandit tincidunt eget, ullamcorper in quam.
 
-<template v-slot:side>
+**Technology**
+Phasellus dapibus sodales pretium. Mauris et magna in est interdum sagittis. Vivamus ac ullamcorper quam.
 
-<!-- **Reading time**
-12 minutes
-
-**Team composition**
-CTO, product designer, two full-stack developers -->
-
-</template>
-
-</Content-ContextSection>
-
-
-
-<Content-TextSection>
-
-## What I do
-
-<!--
-
+**People**
 Art Direction • Branding • Digital • Graphic Design • Installations • Moving Image • Web Development
 
-There is no quick answer to this question. I started my career as a teacher and transitioned to UX about 10 years ago. But my career hasn’t been straightforward and my skillset includes variety of skills from UX, UI, PO, Mentorship, Coaching, and Leadership. All in all people call me different things and I think of myself as Pia.
+**Product**
+Phasellus dapibus sodales pretium. Mauris et magna in est interdum sagittis. Vivamus ac ullamcorper quam.
 
-https://piaklancar.com/the-product-person/
-
--->
-
-Phasellus dapibus sodales pretium. Mauris et magna in est interdum sagittis. Vivamus ac ullamcorper quam. Proin auctor velit non felis vehicula condimentum. Aenean justo felis, luctus ac varius et, sollicitudin eget ligula. Integer a nulla iaculis, commodo justo ut, placerat quam. Nullam convallis tellus leo, non aliquet ante ullamcorper ornare. Nulla vitae felis a massa semper gravida nec non dolor.
-
-Vivamus sit amet pulvinar diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean non nibh mattis nisi luctus suscipit nec quis justo. Etiam consequat urna ut mauris lacinia placerat. Nunc nulla est, pharetra blandit tincidunt eget, ullamcorper in quam. Aliquam facilisis, mi id posuere finibus, sapien enim dapibus nisl, vel suscipit diam nisl id ante. Sed sit amet feugiat lorem. Nam at rhoncus libero. Aliquam bibendum lectus turpis, a viverra enim porttitor et. Cras viverra aliquam est sed rutrum. Phasellus mattis felis eu scelerisque eleifend. Nam imperdiet eget metus et maximus. Sed feugiat suscipit augue, vel dictum mi facilisis sed.
-
+</template>
 
 </Content-TextSection>
 
 
 
 
-<Content-TextSection>
+<About-TimelineSection padding="is-timeline">
 
-## Experience and education
+<template v-slot:2020>
 
-**#** | **#** |
---- | --- |
-Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout |
-Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added skirts, wellington boots and several other accessories |
-Cras mollis sodales urna, eu ultrices nibh lobortis ut. Fusce eu pellentesque nulla. | I observed children dragging items off the screen, attempting to delete them, so made that actually work |
-Certain types of accessory like hats, clothes and shoes quickly cluttered the screen and didnt make sense out of their intended positions | I made new placements in specific categories (e.g. hair) remove the previous accessory of that type. This proved to be an intuitive limitation |
-{.table .is-fullwidth}
+<About-TimelineItem type="App" label="test 1"/>
+<About-TimelineItem type="Web" label="test 2"/>
+<About-TimelineItem type="Book" label="test 3"/>
+<About-TimelineItem type="Art" label="test 4"/>
+<About-TimelineItem type="Lesson" label="test 5">
 
+Test content slot _emphasis_ **bold**
 
-</Content-TextSection>
+</About-TimelineItem>
+<About-TimelineItem type="Web" label="test 6">
+<p>Portfolio update
+<Content-ModalLink label="details">
+<template v-slot:modal>
+<div class="container is-full-width content">
 
+Modal content
 
-
-<Content-ThreeColumnSection :content="true">
-
-<template v-slot:content>
-
-## Currently learning
+</div>
+</template>
+</Content-ModalLink>
+</p>
+</About-TimelineItem>
+<About-TimelineItem type="App" label="test 7"/>
+<About-TimelineItem type="Course" label="test 8"/>
 
 </template>
 
-<template v-slot:column1>
+<template v-slot:2019>
 
-### Reading
+<About-TimelineItem type="App" label="test 1"/>
+<About-TimelineItem type="Web" label="test 2"/>
+<About-TimelineItem type="Book" label="Inspired - Marty Cagan"/>
+<About-TimelineItem type="Art" label="test 4"/>
+<About-TimelineItem type="App" label="test 7"/>
+<About-TimelineItem type="Work" label="test 8">
 
-The Design of Everyday Things
+Product Manager at Ecosia
 
-</template>
-
-<template v-slot:column2>
-
-### Listening
-
-Product Breakfast Club
-
-Design Details
-
-The Hacking UI Podcast
-
-IDEO Futures
-
-Masters of Scale
+</About-TimelineItem>
+<About-TimelineItem type="Course" label="test 8"/>
+<About-TimelineItem type="Device" label="Wacom Cintiq Companion 2 (already broken)"/>
 
 </template>
 
-<template v-slot:column3>
+<template v-slot:2018>
 
-### Tinkering
+<About-TimelineItem type="Web" label="test 2"/>
+<About-TimelineItem type="Book" label="test 3"/>
+<About-TimelineItem type="Art" label="test 4"/>
+<About-TimelineItem type="App" label="test 5"/>
+<About-TimelineItem type="Course" label="test 8"/>
+<About-TimelineItem type="Work" label="test 8">
 
-Firebase and realtime messaging with [BLKBRD](http://bit.ly/blkbrdapp)
+Product Designer at Ecosia
+
+</About-TimelineItem>
 
 </template>
 
-</Content-ThreeColumnSection>
+<template v-slot:2017>
 
-<br>
-<br>
-<br>
+<About-TimelineItem type="Art" label="test 4"/>
+<About-TimelineItem type="App" label="test 5"/>
+<About-TimelineItem type="Web" label="test 6"/>
+<About-TimelineItem type="App" label="test 7"/>
+<About-TimelineItem type="App" label="test 8">
+
+[BLKBRD](http://bit.ly/blkbrdapp) digital messages located in the physical world
+
+</About-TimelineItem>
+<About-TimelineItem type="Course" label="test 8"/>
+
+</template>
+
+<template v-slot:2016>
+
+<About-TimelineItem type="Art" label="test 4"/>
+<About-TimelineItem type="App" label="test 5"/>
+<About-TimelineItem type="Web" label="test 6"/>
+<About-TimelineItem type="App" label="test 7"/>
+<About-TimelineItem type="Course" label="test 8"/>
+
+</template>
+
+<template v-slot:2015>
+
+<About-TimelineItem type="App" label="test 1"/>
+<About-TimelineItem type="Web" label="test 2"/>
+<About-TimelineItem type="Web" label="test 6"/>
+<About-TimelineItem type="App" label="test 7"/>
+<About-TimelineItem type="Course" label="test 8"/>
+
+</template>
+
+<template v-slot:2014>
+
+<About-TimelineItem type="App" label="test 1"/>
+<About-TimelineItem type="Web" label="test 2"/>
+<About-TimelineItem type="Book" label="test 3"/>
+<About-TimelineItem type="Art" label="test 4"/>
+<About-TimelineItem type="App" label="test 5"/>
+<About-TimelineItem type="Web" label="test 6"/>
+<About-TimelineItem type="App" label="test 7"/>
+<About-TimelineItem type="Course" label="test 8"/>
+
+</template>
+
+<template v-slot:2013>
+
+<About-TimelineItem type="Book" label="test 3"/>
+<About-TimelineItem type="Art" label="test 4"/>
+<About-TimelineItem type="App" label="test 5"/>
+<About-TimelineItem type="Web" label="test 6"/>
+<About-TimelineItem type="App" label="test 7"/>
+<About-TimelineItem type="Course" label="test 8"/>
+
+</template>
+
+<template v-slot:2012>
+
+<About-TimelineItem type="App" label="test 1"/>
+<About-TimelineItem type="Web" label="test 2"/>
+<About-TimelineItem type="Book" label="test 3"/>
+<About-TimelineItem type="Art" label="test 4"/>
+<About-TimelineItem type="App" label="test 5"/>
+<About-TimelineItem type="Web" label="test 6"/>
+
+</template>
+
+<template v-slot:2011>
+
+<About-TimelineItem type="App" label="test 1"/>
+<About-TimelineItem type="Web" label="test 2"/>
+<About-TimelineItem type="Book" label="test 3"/>
+<About-TimelineItem type="Art" label="test 4"/>
+<About-TimelineItem type="App" label="test 5"/>
+<About-TimelineItem type="Web" label="test 6"/>
+<About-TimelineItem type="App" label="test 7"/>
+<About-TimelineItem type="Course" label="test 8"/>
+
+</template>
+
+<template v-slot:2010>
+
+<About-TimelineItem type="App" label="test 1"/>
+<About-TimelineItem type="Web" label="test 2"/>
+<About-TimelineItem type="Book" label="test 3"/>
+<About-TimelineItem type="Art" label="test 4"/>
+<About-TimelineItem type="App" label="test 5"/>
+<About-TimelineItem type="Web" label="test 6"/>
+<About-TimelineItem type="App" label="test 7"/>
+<About-TimelineItem type="Course" label="test 8"/>
+
+</template>
+
+<template v-slot:2009>
+
+<About-TimelineItem type="App" label="test 1"/>
+<About-TimelineItem type="Web" label="test 2"/>
+<About-TimelineItem type="Book" label="test 3"/>
+<About-TimelineItem type="Art" label="test 4"/>
+<About-TimelineItem type="App" label="test 5"/>
+<About-TimelineItem type="Web" label="test 6"/>
+<About-TimelineItem type="App" label="test 7"/>
+<About-TimelineItem type="Course" label="test 8"/>
+
+</template>
+
+<template v-slot:2008>
+
+<About-TimelineItem type="App" label="test 1"/>
+<About-TimelineItem type="Web" label="test 2"/>
+<About-TimelineItem type="Book" label="test 3"/>
+<About-TimelineItem type="Art" label="test 4"/>
+<About-TimelineItem type="App" label="test 5"/>
+<About-TimelineItem type="Web" label="test 6"/>
+<About-TimelineItem type="App" label="test 7"/>
+<About-TimelineItem type="Course" label="test 8"/>
+
+</template>
+
+
+</About-TimelineSection>
+
+
+<About-AboutContact/>

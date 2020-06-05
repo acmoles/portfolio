@@ -23,7 +23,7 @@
           class="column stage-column is-two-thirds"
           :class="[{'in-view': visible}, {'appear-fade-up': animating}]"
         >
-          <p class="subtitle">
+          <p class="subtitle" :class="ragClass">
             {{ description }}
           </p>
           <ProjectExternalLink
@@ -65,7 +65,8 @@ export default {
     ctaUrl: String,
     description: String,
     noise: Boolean,
-    fadeless: Boolean
+    fadeless: Boolean,
+    ragClass: String,
   },
 
   mixins: [fadeUpInLoad, topPadding],

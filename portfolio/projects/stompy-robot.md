@@ -13,6 +13,7 @@ date: 2019-09-12
 src: /images/homepage/stompy-robot-tile.jpg
 prev: ./toucan-research
 next: ./makielab
+hasFooter: true
 ---
 
 ::: slot top

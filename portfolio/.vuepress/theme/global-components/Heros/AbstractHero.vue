@@ -23,6 +23,20 @@ export default {
   },
 
   computed: {
+    pageLoadingStatus () {
+      return this.$store.state.pageLoadingStatus
+    },
+    window () {
+      return this.$store.state.window
+    },
+  },
+
+  watch: {
+    window (latest, last) {
+      if (this.abstract) {
+        this.abstract.onWindowResize(latest.width, latest.height)
+      }
+    }
   },
 
   mounted() {

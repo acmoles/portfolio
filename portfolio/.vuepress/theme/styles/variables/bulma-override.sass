@@ -34,9 +34,11 @@ $hr-height: 2px
 $size-normal: 1.125em
 
 $radius-small: .1875em
-$radius: .625em
+$radius: $radius-small
+// $radius: .625em
 $control-radius: $radius-small
-$radius-large: 0.6em
+// $radius-large: 0.6em
+$radius-large: $radius-small
 $radius-rounded: 290486px
 $button-border-width: 0
 $button-padding-vertical: 0.75em
@@ -78,7 +80,7 @@ $navbar-item-hover-color: $button-custom-text-color
 $navbar-item-hover-background-color: transparent
 $navbar-item-active-color: $white
 $navbar-background-color: transparent
-$navbar-height: 2rem
+$navbar-height: 6rem
 
 $navbar-dropdown-radius: $radius-small
 $navbar-dropdown-boxed-radius: $radius-small
@@ -102,6 +104,7 @@ $desktop: 960px + (2 * $gap)
 $widescreen: 1152px + (2 * $gap)
 $fullhd: 1344px + (2 * $gap)
 $largeformat: 1600px
+$navbar-breakpoint: $tablet
 
 $media-queries: "(-webkit-min-device-pixel-ratio: 2) and (min--moz-device-pixel-ratio: 2) and (-o-min-device-pixel-ratio: 2 / 1) and (min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-resolution: 2dppx)"
 

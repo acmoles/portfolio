@@ -2,6 +2,7 @@
   <transition name="fade-fast-delay">
     <header
       v-show="!isModalOpen"
+      v-if="burgerBottom"
       class="navbar"
       :class="[navStyle, { force: forceLight }]"
       ref="navbar"
@@ -23,7 +24,7 @@
             <transition name="fade-fast" mode="out-in">
               <ArrowIcon
                 class="back-arrow"
-                v-if="navbarBurgered && burgerBottom"
+                v-if="navbarBurgered"
                 />
               <span
                 class="text-site-title"
@@ -39,7 +40,7 @@
           <transition name="fade-fast-delay">
             <div
               class="nav-sidebar-button-wrapper"
-              v-if="navbarBurgered && burgerBottom"
+              v-if="navbarBurgered"
               >
               <SidebarButton
                 purpose="menu"
@@ -70,17 +71,17 @@ import updateOnScroll from 'uos'
 // import debounce from 'lodash.debounce'
 import { disableScroll } from '@theme/mixins/disableScroll.js'
 
-import { getScrollTop, getOffsetY, getViewport } from '../../util'
-
-// TODO reset this.windowHeight on viewport change
+import { getScrollTop, getOffsetY, getViewport } from '@theme/util'
+import config from '@theme/../config.js'
 
 export default {
   components: { SidebarButton, NavLinks, Logo, ArrowIcon },
   mixins: [ disableScroll ],
+
   data () {
     return {
-      windowHeight: null,
       navbarBurgered: false,
+      isNarrow: false,
       navbarHeight: 16 * 6,
       navbarPosition: 0,
       scrollPosition: 0,
@@ -91,33 +92,13 @@ export default {
       burgerBottom: true
     }
   },
-  mounted () {
-    this.setBodyEl()
-
-    this.$router.beforeEach((to, from, next) => {
-      // console.log('nav router guard');
-      this.cssPosition = 'absolute'
-      this.cssTop = 0
-      next()
-    })
-
-    this.$nextTick(() => {
-
-      // TODO do we need this variable?
-      this.windowHeight = getViewport('y') // SSR
-
-      updateOnScroll(0, 1, progress => {
-        window.requestAnimationFrame(() => {
-          this.handleScroll( progress )
-        })
-      })
-
-    })
-  },
 
   computed: {
     pageLoadingStatus () {
       return this.$store.state.pageLoadingStatus
+    },
+    window () {
+      return this.$store.state.window
     },
     isSidebarOpen () {
       return this.$store.state.isSidebarOpen
@@ -129,11 +110,48 @@ export default {
       return this.$page.frontmatter.navStyle.style
     },
     forceLight () {
-      return this.$store.state.isSidebarOpen || this.scrollPosition >= (this.windowHeight - 48)
+      return this.$store.state.isSidebarOpen || this.scrollPosition >= (this.window.height - 48)
     },
   },
 
+  watch: {
+    window (latest, last) {
+      this.onWindowResize(latest.width)
+    }
+  },
+
+  mounted () {
+    this.onWindowResize(this.window.width)
+    this.setBodyEl()
+
+    this.$router.beforeEach((to, from, next) => {
+      // console.log('nav router guard');
+      this.cssPosition = 'absolute'
+      this.cssTop = 0
+      next()
+    })
+
+    this.$nextTick(() => {
+
+      updateOnScroll(0, 1, progress => {
+        window.requestAnimationFrame(() => {
+          this.handleScroll( progress )
+        })
+      })
+
+    })
+  },
+
   methods: {
+    onWindowResize (width) {
+      console.log('resize ', width);
+      if (width <= config.breakpoints.tablet) {
+        this.isNarrow = true
+        this.navbarBurgered = true
+      } else {
+        this.isNarrow = false
+      }
+    },
     toggleSidebar (to) {
       let status = typeof to === 'boolean' ? to : !this.isSidebarOpen
       this.$store.dispatch('setSidebarStatus', status)
@@ -157,9 +175,9 @@ export default {
       this.scrollPosition = getScrollTop()
       this.navbarPosition = getOffsetY(this.$refs.navbar)
 
-      if ( this.scrollPosition > (this.windowHeight / 1.618) && this.navbarBurgered === false ) {
+      if ( this.scrollPosition > (this.window.height / 1.618) && this.navbarBurgered === false ) {
         this.navbarBurgered = true
-      } else if (progress === 0) {
+      } else if (progress === 0 && !this.isNarrow) {
         this.navbarBurgered = false
       }
 
@@ -198,7 +216,7 @@ export default {
       //   Remove overlap class
       // }
 
-      if ((this.windowHeight + this.scrollPosition) >= document.body.offsetHeight) {
+      if ((this.window.height + this.scrollPosition) >= document.body.offsetHeight) {
         this.burgerBottom = false
         this.$forceNextTick(() => {
           this.cssPosition = 'fixed'
@@ -217,8 +235,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../../styles/variables.sass"
-@import "../../styles/mixins.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
 .navbar
   user-select: none

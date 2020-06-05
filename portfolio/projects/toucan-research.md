@@ -12,6 +12,7 @@ sidebar: auto
 date: 2019-09-11
 prev: ./interaction
 next: ./toucanbox
+hasFooter: true
 ---
 
 ::: slot top

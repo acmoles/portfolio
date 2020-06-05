@@ -42,6 +42,7 @@ export const fadeUpInLoad = {
         if (this.pageLoadingStatus === 'finished') {
           this.$forceNextTick(() => {
             this.visible = true
+            this.visibleCallback()
           })
         }
       } else {

@@ -83,9 +83,9 @@ export class Abstract extends EventTarget {
 
     this.scene.add(this.camera);
 
-    const ref = () => { this.onWindowResize(); };
-    this.ref = ref;
-    window.addEventListener( 'resize', ref, false );
+    // const ref = () => { this.onWindowResize(); };
+    // this.ref = ref;
+    // window.addEventListener( 'resize', ref, false );
   }
 
   // getCamera() {
@@ -141,7 +141,7 @@ export class Abstract extends EventTarget {
 
   destroy() {
     cancelAnimationFrame( this.animationFrame );
-    window.removeEventListener('resize', this.ref, false);
+    // window.removeEventListener('resize', this.ref, false);
 
     this.scene.remove(this.sphere);
     this.geometry.dispose();
@@ -157,7 +157,10 @@ export class Abstract extends EventTarget {
     this.renderer = null;
   }
 
-  onWindowResize() {
+  onWindowResize(width, height) {
+    console.log('resize abstract');
+    this.vw = width;
+    this.vh = height;
     this.renderer.setSize( this.vw, this.vh );
     // this.composer.setSize( this.vw, this.vh );
 

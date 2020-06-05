@@ -3,30 +3,21 @@
 
     <div class="container is-fullhd content">
 
-      <!-- <div class="page-nav-background columns">
-        <router-link v-if="prev" class="column is-two-thirds prev" :to="prev.path">
-          Previous
-        </router-link>
-        <router-link v-if="next" class="column project-card light no-fade next" :class="next.frontmatter.background" :to="next.path">
-          Next
-        </router-link>
-      </div> -->
-
-      <div class="page-nav-text columns">
+      <div class="page-nav-column columns" :class="{'is-end': !prev || !next}">
         <router-link v-if="prev" class="column no-fade prev" :to="prev.path">
           <div class="background background-noise"></div>
           <div class="text-group">
             <p class="small-title">{{ prev.title || prev.path }}</p>
             <h2 class="item-title">{{ prev.frontmatter.subtitle }}</h2>
           </div>
-        </router-link >
+        </router-link>
         <router-link  v-if="next" class="column no-fade is-one-third next" :to="next.path">
           <div class="background project-card" :class="next.frontmatter.background"></div>
           <div class="text-group">
             <p class="small-title">{{ next.title || next.path }}</p>
             <h2 class="item-title">{{ next.frontmatter.subtitle }}</h2>
           </div>
-        </router-link >
+        </router-link>
       </div>
 
     </div>
@@ -108,48 +99,45 @@ function resolvePageLink (
     top: -2em
     opacity: 0.05
 
-// .page-nav-background
-//   position: absolute
-//   top: 0
-//   width: 100%
-//   .prev.column
-//     margin-right: 2px
-//   a
-//     color: transparent
-
-.page-nav-text.columns
+.page-nav-column.columns
   position: relative
   top: 2em
   justify-content: space-between
+  &.is-end
+    justify-content: flex-end
   .column
     display: flex
     align-items: center
   .text-group
     padding-right: 4em
     pointer-events: none
-  .prev, .next
+  .prev, .next, .action
     position: relative
     .background
       position: absolute
       top: 0
       bottom: 0
       transition: background-color 200ms ease, filter 200ms ease
-  .prev
+  .prev, .action
     .text-group
-      max-width: 66%
+      max-width: 60%
     .background
       left: -50vw
       width: 200vw
-      background-color: $steel
-      &:hover, &:active
-        background-color: $slate
-  .next
-    .background
-      left: -2em
-      width: 50vw
-      border-left: 2px solid $black
-      &:hover, &:active
-        filter: brightness(1.1)
+  .prev .background
+    background-color: $steel
+    &:hover, &:active
+      background-color: $slate
+  .action .background
+    background-color: $slate
+    &:hover, &:active
+      background-color: lighten($slate, 3)
+  .next .background
+    left: -2em
+    width: 50vw
+    border-left: 2px solid $black
+    &:hover, &:active
+      filter: brightness(1.1)
   .item-title
     margin-top: 1em
   .small-title

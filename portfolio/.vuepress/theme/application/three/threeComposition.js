@@ -9,7 +9,7 @@ import { Grid } from './grid.js'
 import { Interactions } from './interactions.js'
 
 
-console.log('watch out! 3D content loaded.');
+// console.log('watch out! 3D content loaded.');
 
 export class ThreeComposition extends EventTarget {
 
@@ -133,9 +133,10 @@ export class ThreeComposition extends EventTarget {
 
     this.controls.update();
 
-    const ref = () => { this.onWindowResize(); };
-    this.ref = ref;
-    window.addEventListener( 'resize', ref, false );
+    // TODO replace application watch resize with global
+    // const ref = () => { this.onWindowResize(); };
+    // this.ref = ref;
+    // window.addEventListener( 'resize', ref, false );
   }
 
 
@@ -155,7 +156,7 @@ export class ThreeComposition extends EventTarget {
 
   destroy() {
     cancelAnimationFrame( this.animationFrame );
-    window.removeEventListener('resize', this.ref, false);
+    // window.removeEventListener('resize', this.ref, false);
 
     this.worldScene.remove(this.content.gltfScene);
     this.content.animations = [];

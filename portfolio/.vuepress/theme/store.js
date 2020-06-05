@@ -16,6 +16,7 @@ export default (Vue) => {
 
   return new Vuex.Store({
     state: {
+      window: {width: null, height: null},
       isSidebarOpen: false,
       isModalOpen: false,
       pageLoadingStatus: 'loading',
@@ -42,6 +43,12 @@ export default (Vue) => {
       fadeCount: 0
     },
     mutations: {
+      SET_WINDOW_STATUS (state, status) {
+        state.window = {
+          width: status.width,
+          height: status.height
+        }
+      },
       SET_SIDEBAR_STATUS (state, status) {
         state.isSidebarOpen = status
       },
@@ -83,6 +90,9 @@ export default (Vue) => {
       }
     },
     actions: {
+      setWindowStatus (context, payload) {
+        context.commit('SET_WINDOW_STATUS', payload)
+      },
       setSidebarStatus (context, payload) {
         context.commit('SET_SIDEBAR_STATUS', payload)
       },

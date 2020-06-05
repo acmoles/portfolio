@@ -1,17 +1,14 @@
 <template>
-  <div class="container is-fullhd presentation-wrapper">
-    <div class="columns visual-columns">
-      <div class="column is-one-third">
-        <div ref="presentation" class="presentation"></div>
-      </div>
-    </div>
-  </div>
+  <div ref="presentation" class="presentation"></div>
 </template>
 
 <script>
 
-import { loadableHero } from '../../mixins/loadableHero.js'
+import { loadableHero } from '@theme/mixins/loadableHero.js'
 // import { ThreeComposition } from '../application/three/threeComposition.js'
+
+
+// TODO maybe left align in column?
 
 export default {
 
@@ -24,10 +21,24 @@ export default {
   },
 
   computed: {
+    pageLoadingStatus () {
+      return this.$store.state.pageLoadingStatus
+    },
+    window () {
+      return this.$store.state.window
+    },
+  },
+
+  watch: {
+    window (latest, last) {
+      if (this.threeComposition) {
+        this.threeComposition.onWindowResize()
+      }
+    }
   },
 
   mounted() {
-
+    // this.doLoad()
     import('@application/three/threeComposition.js').then(module => {
       this.threeComposition = new module.ThreeComposition(this.$refs.presentation)
 
@@ -50,22 +61,11 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../../styles/variables.sass"
-  @import "../../styles/mixins.sass"
-
-  .presentation-wrapper
-    height: 100%
-
-  .columns.visual-columns
-    height: 100%
-    justify-content: flex-end
+  @import "@theme/styles/variables.sass"
+  @import "@theme/styles/mixins.sass"
 
   .presentation
-    padding-top: 188%
-    width: 920px
-    position: relative
-    margin-left: 50%
-    transform: translateX(-50%)
+    height: 44em
     canvas
       position: absolute
       top: 0

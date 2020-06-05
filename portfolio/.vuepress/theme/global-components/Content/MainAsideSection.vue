@@ -50,11 +50,7 @@
 
 <script>
 
-import FadeGlobal from '@theme/components/FadeGlobal.vue'
-
 export default {
-
-  components: { FadeGlobal },
 
   props: {
     content: Boolean,
@@ -99,6 +95,7 @@ export default {
   .section-toggle
     padding: 0
     margin-right: 1.5em
+    transition: color 0.3s ease
     .icon
       transition: transform 0.3s ease
     &.is-active

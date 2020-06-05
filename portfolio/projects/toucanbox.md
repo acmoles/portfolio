@@ -20,7 +20,7 @@ hasFooter: true
 <!-- A redesigned sign up funnel to improve communication, useability and confidence and a strategic design project to identify new ways to improve customer retention -->
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com"
+<Stage-ProjectStage :noise="true" ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com" ragClass="toucan-rag"
 description="toucanBox is an award winning startup subscription service delivering creative craft boxes to children aged 3-8.">
 
   <template v-slot:visual-column>
@@ -42,8 +42,15 @@ description="toucanBox is an award winning startup subscription service deliveri
 
 .toucan-image
   position: absolute
-  left: 0
+  left: -1em
   width: 200%
+
+.toucan-rag
+  padding-right: 2em
+
+@media screen and (min-width: 1335px)
+  .toucan-rag
+    padding-right: 4em
 
 </style>
 
@@ -596,7 +603,7 @@ The final design is accessible and adapts seamlessly to several distinct user fl
 
 <Content-InfoBox>
 
-#### Techstack
+<!-- #### Techstack -->
 
 **Platform**
 Responsive web application

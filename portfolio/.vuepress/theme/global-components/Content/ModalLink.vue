@@ -40,6 +40,7 @@ export default {
     @include button-override
     display: inline-flex
     padding: 0
+    cursor: pointer
 
 
 </style>

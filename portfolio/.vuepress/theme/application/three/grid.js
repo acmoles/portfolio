@@ -41,7 +41,8 @@ export class Grid {
 
   makeGrid () {
 
-    let color = new THREE.Color( 0x4F5A68 ).convertSRGBToLinear();
+    // let color = new THREE.Color( 0x4F5A68 ).convertSRGBToLinear();
+    let color = new THREE.Color( 0x273444 ).convertSRGBToLinear();
 
     this.gridMaterial = new THREE.MeshBasicMaterial({
       color: color

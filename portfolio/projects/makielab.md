@@ -12,6 +12,7 @@ sidebar: false
 date: 2019-09-12
 prev: ./stompy-robot
 next: ./toucanbox
+hasFooter: true
 ---
 
 ::: slot top

@@ -7,6 +7,7 @@ import VueForceNextTick from 'vue-force-next-tick'
 import VueClipboard from 'vue-clipboard2'
 import PortalVue from 'portal-vue'
 import lazySizes from 'lazysizes'
+import debounce from 'lodash.debounce'
 
 import Home from './components/home/Home.vue'
 import FadeGlobal from './components/FadeGlobal.vue'
@@ -31,12 +32,26 @@ export default ({
     Vue.use(VueClipboard)
     Vue.use(PortalVue)
 
-    lazySizes.init();
+    lazySizes.init()
 
     // fixes scroll jump in modern browsers
     if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
+      window.history.scrollRestoration = 'manual'
     }
+
+    // global onWindowResize event
+    function onWindowResize() {
+      store.dispatch('setWindowStatus', {
+        width: window.innerWidth,
+        height: window.innerHeight
+      })
+    }
+    onWindowResize()
+    window.addEventListener( 'resize', () => {
+      // debounce(onWindowResize, 150)
+      onWindowResize()
+    }, false )
+
   }
 
 }

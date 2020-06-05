@@ -12,7 +12,6 @@ case1: Case study
 sidebar: auto
 date: 2019-09-12
 src: /images/homepage/wesen-mock-baked.jpg
-prev: ./art-lebedev-studio
 next: ./ecosia
 hasFooter: true
 ---

@@ -33,4 +33,21 @@ export default {
       height: 100%
       display: flex
       align-items: center
+      position: relative
+    .box::after
+    	left: 100%
+    	top: 50%
+    	border: solid transparent
+    	content: " "
+    	height: 0
+    	width: 0
+    	position: absolute
+    	pointer-events: none
+    	border-left-color: $steel
+    	border-width: 0.75em
+    	margin-top: -0.75em
+    .column:last-child
+      .box::after
+        content: none
+
 </style>

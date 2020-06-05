@@ -13,6 +13,7 @@ date: 2019-09-11
 src: /images/homepage/random-tile.jpg
 prev: ./toucanbox
 next: ./lego
+hasFooter: true
 ---
 
 ::: slot top

@@ -205,8 +205,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../../styles/variables.sass"
-@import "../../styles/mixins.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
 .project-card
   background-color: $black
@@ -294,9 +294,12 @@ export default {
   .project-panel
     // box-shadow: $element-shadow
     color: $white-ter
-  &.double-right-top, &.double-right-bottom, &.double-left-top, &.double-left-bottom
-    .small-title, h2
-      width: 42%
+
+@media screen and (min-width: $tablet)
+  .grid-item
+    &.double-right-top, &.double-right-bottom, &.double-left-top, &.double-left-bottom
+      .small-title, h2
+        width: 42%
 
 .grid-item
   .stompy
@@ -328,5 +331,11 @@ export default {
     position: absolute
     top: 0
     right: 0
+    @media screen and (max-width: $tablet)
+      width: auto
+      max-width: unset
+      height: 100%
+      right: auto
+      left: -2.5em
 
 </style>
