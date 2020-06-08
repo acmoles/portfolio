@@ -16,6 +16,14 @@ image:
 hasFooter: true
 ---
 
+<!-- <style lang="sass">
+
+@import "@theme/styles/variables.sass"
+
+.section .button-action .image.is-square
+  background-color: transparent
+
+</style> -->
 
 ::: slot top
 
@@ -24,7 +32,7 @@ description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus vol
 
   <template v-slot:visual-column>
     <figure class="ecosia-image">
-      <Heros-ImageHero src="/images/ecosia/ecosia-comp-grid.png" alt="Ecosia mobile devices"/>
+      <Heros-ImageHero src="/images/ecosia/render-base.png" alt="Ecosia mobile devices"/>
     </figure>
   </template>
 
@@ -69,9 +77,9 @@ CTO, product designer, two full-stack developers
 
 
 <Content-ImageFrames-SquareImagesRow :content="true" :images="[
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'/images/ecosia/Android.jpg', alt:'Ecosia Android app', caption:'Square image caption 1', slot:'slot1', iframe:false, zoomable:true },
+{ url:'/images/ecosia/iOS.jpg', alt:'Ecosia iOS app', caption:'Square image caption 2', slot:'slot2', iframe:false, zoomable:true },
+{ url:'/images/ecosia/MacApp.jpg', alt:'Ecosia Safari Extension', caption:'Square image caption 3', slot:'slot3', iframe:false, zoomable:true },
 ]">
 
 <template slot="content">
@@ -82,7 +90,35 @@ CTO, product designer, two full-stack developers
   Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
 </p>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit. Search results page redesign. <Content-ModalLink label="10th Birthday Doodle">
+<template v-slot:modal>
+
+<Content-FreeSection padding="is-small">
+
+<figure class="image is-16by9">
+<iframe style="background: white;" class="lazyload" data-src="https://ecosia-10-years.netlify.app" frameborder="0"></iframe>
+</figure>
+
+</Content-FreeSection>
+
+</template>
+</Content-ModalLink>
+Desktop extension install button on the search results page (design and code). Green search annotation - leaf/coal blacklist, climate action tracker for countries. Cross promotion mobile - desktop. Press page.
+<Content-ModalLink label="50 Million Doodle">
+<template v-slot:modal>
+
+<Content-FreeSection padding="is-small">
+
+<figure class="image is-16by9">
+<iframe style="background: white;" class="lazyload" data-src="https://ecosia-50-million.netlify.app" frameborder="0"></iframe>
+</figure>
+
+</Content-FreeSection>
+
+</template>
+</Content-ModalLink>
+</p>
 
 <br>
 <br>
@@ -133,9 +169,17 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 
 <Content-ImageFrames-SquareImagesRow padding="is-medium" :content="true" :images="[
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'https://bulma.io/images/placeholders/480x480.png', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'/images/ecosia/EcosiaMaps.jpg', alt:'Ecosia maps', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
+  type: 'link',
+  label: 'Wireframe prototype',
+  url: 'https://acmoles.github.io/maps-ui/'
+  } },
+{ url:'/images/ecosia/Login.jpg', alt:'Ecosia accounts login', caption:'Square image caption 2', slot:'slot2', iframe:false, zoomable:true },
+{ url:'/images/ecosia/SearchMap.jpg', alt:'Searches map visualisation', caption:'Square image caption 3', slot:'slot3', iframe:false, action: {
+  type: 'link',
+  label: 'Live visualisation',
+  url: 'https://realtime.staging.ecosia.org/'
+  } },
 ]">
 
 <template slot="content">
@@ -148,7 +192,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 #### Ecosia maps
 
-Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. [Prototype](https://acmoles.github.io/maps-ui/)
+Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
 
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }
@@ -172,7 +216,9 @@ Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim
 
 #### Global searches data-vis
 
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. [Live](https://realtime.staging.ecosia.org/)
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
+
+<!-- [Live](https://realtime.staging.ecosia.org/) -->
 
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }

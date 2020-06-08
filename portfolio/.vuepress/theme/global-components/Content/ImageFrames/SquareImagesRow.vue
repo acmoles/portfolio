@@ -40,7 +40,7 @@
             :class="{'sibling-action-padding': siblingAction}"
           >
             <iframe v-if="image.iframe" class="lazyload" :data-src="image.url" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            <img v-else class="lazyload" :data-src="image.url" :alt="image.alt">
+            <img v-else class="lazyload" :class="{'medium-zoom': image.zoomable}" :data-src="image.url" :alt="image.alt">
           </figure>
 
 
@@ -109,8 +109,8 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../../../styles/variables.sass"
-  @import "../../../styles/mixins.sass"
+  @import "@theme/styles/variables.sass"
+  @import "@theme/styles/mixins.sass"
 
   .sibling-action-padding
     margin-bottom: 5em
@@ -129,6 +129,7 @@ export default {
       background-color: $button-custom-hover-color
       color: $grey-light
     span
+      border-top: 2px solid $black
       padding: .75em .75em .75em 1em
       display: flex
       justify-content: space-between

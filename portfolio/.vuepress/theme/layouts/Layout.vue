@@ -86,8 +86,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../styles/variables.sass"
-@import "../styles/mixins.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
 .page-content
   // TODO fix timing - ensuring height 100% shows next page behind the transition
@@ -103,15 +103,6 @@ export default {
 
   .main.container.content
     padding-top: 8em
-
-  .header-anchor
-    position: absolute
-    left: -1em
-    filter: opacity(0)
-    @include opacity-filter-transition
-    &:hover
-      filter: opacity(100%)
-
 
 // Page transitions
 
@@ -130,14 +121,17 @@ export default {
     content: ' '
     display: block
     background: darken($black, 3%)
-    transition: filter .4s linear
-    filter: opacity(0%)
+    // transition: filter .4s linear
+    transition: opacity .4s linear
+    opacity: 0
+    // filter: opacity(0%)
     pointer-events: none
     z-index: 3
 
 .layout.home.covering, .layout.home.loading
   &::after
-    filter: opacity(100%)
+    // filter: opacity(100%)
+    opacity: 1
 
 
 </style>

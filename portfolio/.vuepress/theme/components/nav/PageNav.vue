@@ -120,7 +120,7 @@ function resolvePageLink (
       transition: background-color 200ms ease, filter 200ms ease
   .prev, .action
     .text-group
-      max-width: 60%
+      max-width: 50%
     .background
       left: -50vw
       width: 200vw
@@ -133,7 +133,8 @@ function resolvePageLink (
     &:hover, &:active
       background-color: lighten($slate, 3)
   .next .background
-    left: -2em
+    // border-radius: $radius
+    left: -4em
     width: 50vw
     border-left: 2px solid $black
     &:hover, &:active

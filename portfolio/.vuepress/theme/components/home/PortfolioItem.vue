@@ -208,10 +208,13 @@ export default {
 @import "@theme/styles/variables.sass"
 @import "@theme/styles/mixins.sass"
 
+$relative-noise-url: url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
+$relative-noise-url-stronger: url('../../plugins/plugin-outside-content/dark-noise-heavy-2extra.png')
+
 .project-card
   background-color: $black
-  background-image: $gradientNone, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
-  background-size: 250%, 256px 256px
+  background-image: $relative-noise-url, $gradientNone
+  background-size: 256px 256px, 250%
   background-blend-mode: overlay
   &.project-panel
     border-radius: $radius
@@ -222,57 +225,69 @@ export default {
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($orange, 0.56)
     background-color: $orange
-    background-image: $gradientMid, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
+    background-image: $relative-noise-url, $gradientMid
+    @media only screen and #{$media-queries}
+      background-image: $relative-noise-url-stronger, $gradientMid
   &.dark
     background-color: $slate
-    background-image: $gradientSubtle, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
+    background-image: $relative-noise-url, $gradientSubtle
     &.project-panel::after
       content: none
   &.stompy
     // Note special grid-item background below
     background-color: $silver
-    background-image: $gradientSubtle, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
+    background-image: $relative-noise-url, $gradientSubtle
     &.project-panel::after
       content: none
   &.green
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($green, 0.64)
     background-color: $green
-    background-image: $gradient, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
+    background-image: $relative-noise-url, $gradient
+    @media only screen and #{$media-queries}
+      background-image: $relative-noise-url-stronger, $gradient
   &.purple
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($purple, 0.76)
     background-color: $purple
-    background-image: $gradient, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
+    background-image: $relative-noise-url, $gradient
+    @media only screen and #{$media-queries}
+      background-image: $relative-noise-url-stronger, $gradient
   &.blue
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($blue, 0.64)
     background-color: $blue
-    background-image: $gradient, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
+    background-image: $relative-noise-url, $gradient
+    @media only screen and #{$media-queries}
+      background-image: $relative-noise-url-stronger, $gradient
   &.yellow
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($yellow, 0.56)
     background-color: $darkYellow
-    background-image: $gradientDark, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
+    background-image: $relative-noise-url, $gradientDark
+    @media only screen and #{$media-queries}
+      background-image: $relative-noise-url-stronger, $gradientDark
   &.random
     background-color: $silver
-    background-image: $gradientSubtle, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
+    background-image: $relative-noise-url, $gradientSubtle
     &.project-panel::after
       content: none
   &.pink
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($pink, 0.64)
     background-color: $pink
-    background-image: $gradient, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
+    background-image: $relative-noise-url, $gradient
+    @media only screen and #{$media-queries}
+      background-image: $relative-noise-url-stronger, $gradient
   &.als
     background-color: $slate
-    background-image: $gradientSubtle, url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
+    background-image: $relative-noise-url, $gradientSubtle
     &.project-panel::after
       content: none
 
 @media only screen and #{$media-queries}
   .project-card
-    background-size: 250%, 128px 128px
+    background-size: 128px 128px, 250%
 
 .grid-item .project-card::after
   @include pseudo-full

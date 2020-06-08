@@ -1,11 +1,14 @@
-.modal-background
+.modal-background, .medium-zoom--opened .medium-zoom-overlay
   display: flex
   flex-direction: column
   justify-content: center
   z-index: 2
-  background-color: rgba($steel, 0.9)
+  background-color: rgba($steel, 0.8)
   background-image: url('../plugins/plugin-outside-content/dark-noise-heavy.png')
   background-size: 256px 256px
   background-blend-mode: overlay
   backdrop-filter: blur(10px) opacity(100%)
   --webkit-backdrop-filter: blur(10px) opacity(100%)
+  @media only screen and #{$media-queries}
+    background-size: 128px 128px
+    background-image: url('../plugins/plugin-outside-content/dark-noise-heavy-2extra.png')

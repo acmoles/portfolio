@@ -42,8 +42,8 @@ export default {
       revealerParentClass: 'revealer-fixed-active',
       revealerClass: '',
       transformString: 'translate3D(0, 0, 0) scale3d(1, 1, 1)',
-      // radiusString: '0px',
-      radiusString: null,
+      radiusString: '0px',
+      // radiusString: null,
       enterTime: 400,
       scrollEnabled: true
     }
@@ -126,12 +126,7 @@ export default {
               // wait a fraction - DOM render if prioritised over setTimout callback - nprogress finished
               this.revealerClass = 'revealer-reveal-animation-active'
               this.transformString = this.generateTransformStringPlacement()
-              // this.radiusString = this.generateRadiusString()
-
-              // TODO - followup - tested and didn't seem to make a difference
-              // setTimeout(() => {
-              //   this.radiusString = this.generateRadiusString()
-              // }, 500) // delay set radius string
+              this.radiusString = this.generateRadiusString()
 
               setTimeout(() => {
                 this.show = false
@@ -144,7 +139,7 @@ export default {
       }
 
       else {
-        // this.radiusString = '0px'
+        this.radiusString = '0px'
         this.show = false
       }
 
@@ -156,15 +151,11 @@ export default {
       this.revealerParentClass = 'revealer-absolute-active'
       this.revealerClass = 'revealer-cover-animation-active'
       this.transformString = this.generateTransformStringPlacement()
-      // this.radiusString = this.generateRadiusString()
-
-      // setTimeout(() => {
-      //   this.radiusString = this.generateRadiusString()
-      // }, 600) // delay set radius string
+      this.radiusString = this.generateRadiusString()
 
       setTimeout(() => {
         this.transformString = 'translate3d(0px, ' + this.projectPosition.scroll + 'px, 0px) scale3d(1, 1, 1)'
-        // this.radiusString = '0px'
+        this.radiusString = '0px'
         this.enterTime = 400
       }, 200)
     },
@@ -238,7 +229,8 @@ export default {
   pointer-events: none
   @include cover-screen-units
   z-index: 99
-  filter: opacity(100%)
+  // filter: opacity(100%)
+  opacity: 1
 
 .revealer
   @include cover-screen-units
@@ -251,12 +243,12 @@ export default {
 // revealer transition states
 
 .revealer-cover-animation-active
-  // transition: border-radius 100ms linear, transform $revealTime - 200ms $coverTransition
-  transition: transform $revealTime - 200ms $coverTransition
+  transition: border-radius 100ms linear, transform $revealTime - 200ms $coverTransition
+  // transition: transform $revealTime - 200ms $coverTransition
 
 .revealer-reveal-animation-active
-  // transition: border-radius 100ms $revealTime - 200ms linear, transform $revealTime $coverTransition
-  transition: transform $revealTime $coverTransition
+  transition: border-radius 100ms $revealTime - 200ms linear, transform $revealTime $coverTransition
+  // transition: transform $revealTime $coverTransition
 
 
 // fixed position toggle

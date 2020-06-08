@@ -133,6 +133,7 @@ export default {
 
   html:not(.disable-motion)
     .context.wipe-up
+      // transition: transform $project-wipe-time $coverTransition
       transition: transform $project-wipe-time $coverTransition
       // cubic-bezier(.215,.61,.355,1)
       transition-delay: $base-project-delay

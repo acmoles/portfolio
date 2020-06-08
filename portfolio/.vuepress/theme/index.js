@@ -22,7 +22,7 @@ module.exports = (options, ctx) => ({
         selector: 'img.medium-zoom',
         options: {
           margin: 24,
-          background: 'rgba(12, 16, 20, 0.64)',
+          background: null,
         },
       },
     ],

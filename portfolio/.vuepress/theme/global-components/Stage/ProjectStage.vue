@@ -148,8 +148,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../../styles/variables.sass"
-@import "../../styles/mixins.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
 // Stage
 
@@ -218,12 +218,12 @@ export default {
 // Animations
 
 html:not(.disable-motion)
-  .stage-column
-    transition-delay: $base-project-delay + 0.6s
-    // transition-delay: $base-project-delay + $project-wipe-time + $first-mover-delay
+  // .stage-column
+  //   transition: opacity .8s $coverTransition, transform .8s $coverTransition
+  //   transition-delay: $base-project-delay + $first-mover-delay
 
-  .parallax.appear-fade-up, .visual-column.appear-fade-up
-    transition: opacity .8s $fadeUpTransition .1s, transform .8s $fadeUpTransition .1s
-    transition-delay: $base-project-delay + 0.6s
+  .stage-column, .parallax.appear-fade-up, .visual-column.appear-fade-up
+    transition: opacity 0.5s $fadeUpTransition, transform 0.5s $fadeUpTransition
+    transition-delay: $base-project-delay + $first-mover-delay
 
 </style>

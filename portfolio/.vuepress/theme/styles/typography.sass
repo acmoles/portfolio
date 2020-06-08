@@ -1,4 +1,14 @@
 @import 'variables'
+@import 'mixins'
+
+// Content title/header anchor for
+.header-anchor
+  position: absolute
+  left: -1em
+  filter: opacity(0)
+  @include opacity-filter-transition
+  &:hover
+    filter: opacity(100%)
 
 .content
   p, ol, ul, dl, td

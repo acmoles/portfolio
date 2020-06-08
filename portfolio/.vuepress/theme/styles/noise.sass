@@ -23,6 +23,7 @@
 
 .background-noise, .background-noise-light
   background-size: 256px 256px
+  background-blend-mode: overlay
   background-position: 128px 128px
   background-image: url('../plugins/plugin-outside-content/dark-noise-heavy.png')
 
@@ -32,5 +33,5 @@
 @media only screen and #{$media-queries}
   .background-noise, .background-noise-light
     background-size: 128px 128px
-
-// TODO darker / stronger noise for retina screens
+  .background-noise
+    background-image: url('../plugins/plugin-outside-content/dark-noise-heavy-2extra.png')
