@@ -50,6 +50,8 @@ Firstly, I wanted to explore the possibility of a lightly-constrained creation e
 
 A separate motivation was to increase my empathy for colleagues and stakeholders as a Product Designer. I wanted to re-experience every stage of digital product development from other perspectives - founder, marketer, product, developer, operations, as well as design.
 
+<!-- a more freeform creative experience, within constraints to make it easier to pick up -->
+
 </template>
 
 <template v-slot:side>

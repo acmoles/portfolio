@@ -1,8 +1,7 @@
 ---
-uid: 9
-title: Lego
+uid: 1
+title: Sprint
 subtitle: Building a uniquely Lego gaming experience
-type: single
 navStyle:
   style: light
   tint: pink-tint
@@ -10,8 +9,6 @@ navStyle:
 background: pink
 sidebar: false
 date: 2019-09-12
-prev: ./random-international
-next: ./art-lebedev-studio
 ---
 
 ::: slot top

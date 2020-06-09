@@ -10,7 +10,7 @@
         ref="parallax"
         v-if="!hasVisulColumnSlot"
         class="parallax"
-        :class="[{'in-view': visible}, {'appear-fade-up': animating && !fadeless}]"
+        :class="[{'in-view': visible}, {'appear-stage-up': animating && !fadeless}]"
         :style="{transform: transform}">
         <slot name="visual-background"></slot>
       </div>
@@ -21,7 +21,7 @@
         <div
           ref="stage-column"
           class="column stage-column is-two-thirds"
-          :class="[{'in-view': visible}, {'appear-fade-up': animating}]"
+          :class="[{'in-view': visible}, {'appear-stage-up': animating}]"
         >
           <p class="subtitle" :class="ragClass">
             {{ description }}
@@ -36,7 +36,7 @@
           ref="column-parallax"
           v-if="hasVisulColumnSlot"
           class="column visual-column"
-          :class="[{'in-view': visible}, {'appear-fade-up': animating}]"
+          :class="[{'in-view': visible}, {'appear-stage-up': animating}]"
           :style="{transform: transform}"
         >
             <slot name="visual-column"></slot>
@@ -222,8 +222,18 @@ html:not(.disable-motion)
   //   transition: opacity .8s $coverTransition, transform .8s $coverTransition
   //   transition-delay: $base-project-delay + $first-mover-delay
 
-  .stage-column, .parallax.appear-fade-up, .visual-column.appear-fade-up
-    transition: opacity 0.5s $fadeUpTransition, transform 0.5s $fadeUpTransition
-    transition-delay: $base-project-delay + $first-mover-delay
+
+  // TODO follow wipe motion
+
+  .appear-stage-up
+    transition: opacity .8s $fadeUpTransition ($base-project-delay + $first-mover-delay), transform 1s $coverTransition
+    opacity: 0
+    transform: translateY(144px)
+    // transition: opacity 0.5s $fadeUpTransition, transform 0.5s $fadeUpTransition
+    // transition-delay: $base-project-delay + $first-mover-delay
+
+  .appear-stage-up.in-view
+    transform: translateY(0)
+    opacity: 1
 
 </style>

@@ -60,15 +60,19 @@ export default {
           this.visibleCallback()
         })
       } else if (latest === 'revealing') {
-        this.displacement = getViewport('y') - this.$el.getBoundingClientRect().y
-        // console.log('rect is: ', this.$el.getBoundingClientRect().y);
-        // console.log('viewport is: ', getViewport('y'));
-        // console.log('displacement is: ', this.displacement);
+        this.$forceNextTick(() => {
+          // console.log('scrolltop: ', getScrollTop());
+          if (getScrollTop() === 0) {
+            this.displacement = getViewport('y') - this.$el.getBoundingClientRect().y
+            // console.log('rect is: ', this.$el.getBoundingClientRect().y);
+            // console.log('viewport is: ', getViewport('y'));
+            // console.log('displacement is: ', this.displacement);
+          }
+        })
       }
     }
   },
 
-  // TODO only animate if scroll position = 0 ??
   mounted () {
     this.applyPadding()
   },

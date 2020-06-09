@@ -1,39 +1,26 @@
 ---
-uid: 7
+uid: 2
 title: temp
 subtitle: temp page
-type: double-right-bottom
 navStyle:
   style: light
   tint: blue-tint
   progress: light
 background: blue
-case1: Case study
-case2: Two parts
 sidebar: auto
 date: 2019-09-12
-src: /images/homepage/toucan-baked.jpg
-prev: ./interaction
-next: ./random-international
 ---
 
 ::: slot top
 
-<Stage-ProjectStage ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com"
-description="A redesigned sign up funnel to improve communication, useability and confidence and a strategic design project to identify new ways to improve customer retention" :fadeUpHero="true">
+<Stage-ProjectStage :noise="true" ctaLabel="none" ctaUrl="https://www.ecosia.org"
+description="Wesen is an experiment in turning customers into creators and building a digital product end-to-end. It enables anyone to customise a pendant necklace, which can be bespoke manufactured by a blend of traditional and modern techniques.">
 
-<template v-slot:visual-grid>
-  <figure class="image">
-    <Heros-ImageHero name="toucanbox" src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage"/>
-    <!-- <b class="decoration svg-bee"/> -->
-    <!-- <b class="decoration svg-confetti-red"/> -->
-    <b class="decoration svg-confetti-yellow"/>
-    <b class="decoration svg-flash-blue"/>
-    <!-- <b class="decoration svg-flash-yellow"/> -->
-    <b class="decoration svg-yellow-splat"/>
-    <!-- <b class="decoration svg-pencil-parachute"/> -->
-  </figure>
-</template>
+  <template v-slot:visual-background>
+    <figure class="full-screen">
+      <Heros-ImageHero src="/images/als/moscow.jpg" alt="Ecosia mobile devices"/>
+    </figure>
+  </template>
 
 </Stage-ProjectStage>
 
@@ -51,7 +38,8 @@ toucanBox is an award winning startup subscription service that provides arts an
 
 As we offer a product customers usually haven’t seen before, we knew that our communication and first impression must be flawless.
 
-New customers register through the website. They choose a box type for their child (or children) and create an account, providing relevant details (including email, delivery address and billing information). The first box is a free trial if they are acquired through paid marketing channels.
+New customers register through the website. They choose a box type for their child (or children) and create an account, providing relevant details (including email, delivery address and billing information). The first box is a free trial if they are acquired through paid marketing channels. [Wesen anchor](projects/wesen/#going-forward)
+
 
 </template>
 
@@ -75,6 +63,164 @@ _I have omitted confidential information in this case study. All information and
 </template>
 
 </Content-ContextSection>
+
+
+
+
+
+<Content-ImageFrames-SquareImagesRow :content="true" :images="[
+{ url:'/images/ecosia/Android.jpg', alt:'Ecosia Android app', caption:'Square image caption 1', slot:'slot1', iframe:false, zoomable:true },
+{ url:'/images/ecosia/iOS.jpg', alt:'Ecosia iOS app', caption:'Square image caption 2', slot:'slot2', iframe:false, zoomable:true },
+{ url:'/images/ecosia/MacApp.jpg', alt:'Ecosia Safari Extension', caption:'Square image caption 3', slot:'slot3', iframe:false, zoomable:true },
+]">
+
+<template slot="content">
+
+## Initiatives
+
+<p class="subtitle">
+  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
+</p>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit. Search results page redesign. <Content-ModalLink label="10th Birthday Doodle">
+<template v-slot:modal>
+
+<Content-FreeSection padding="is-small">
+
+<figure class="image is-16by9">
+<iframe style="background: white;" class="lazyload" data-src="https://ecosia-10-years.netlify.app" frameborder="0"></iframe>
+</figure>
+
+</Content-FreeSection>
+
+</template>
+</Content-ModalLink>
+Desktop extension install button on the search results page (design and code). Green search annotation - leaf/coal blacklist, climate action tracker for countries. Cross promotion mobile - desktop. Press page.
+<Content-ModalLink label="50 Million Doodle">
+<template v-slot:modal>
+
+<Content-FreeSection padding="is-small">
+
+<figure class="image is-16by9">
+<iframe style="background: white;" class="lazyload" data-src="https://ecosia-50-million.netlify.app" frameborder="0"></iframe>
+</figure>
+
+</Content-FreeSection>
+
+</template>
+</Content-ModalLink>
+</p>
+
+<br>
+<br>
+
+### As product manager
+
+</template>
+
+<template slot="slot1">
+
+#### Android app
+
+Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
+
+- This prototype excited children the least{ .check }
+- The interruption in the story broke the children's attention{ .cross }
+{ .check-list }
+
+</template>
+
+<template slot="slot2">
+
+#### iOS app
+
+Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+
+- This prototype excited children the least{ .check }
+- The interruption in the story broke the children's attention{ .cross }
+{ .check-list }
+
+</template>
+
+<template slot="slot3">
+
+#### Mac app
+
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis.
+
+- This prototype excited children the least{ .check }
+- The interruption in the story broke the children's attention{ .cross }
+{ .check-list }
+
+</template>
+
+</Content-ImageFrames-SquareImagesRow>
+
+
+
+
+<Content-ImageFrames-SquareImagesRow padding="is-medium" :content="true" :images="[
+{ url:'/images/ecosia/EcosiaMaps.jpg', alt:'Ecosia maps', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
+  type: 'link',
+  label: 'Wireframe prototype',
+  url: 'https://acmoles.github.io/maps-ui/'
+  } },
+{ url:'/images/ecosia/Login.jpg', alt:'Ecosia accounts login', caption:'Square image caption 2', slot:'slot2', iframe:false, zoomable:true },
+{ url:'/images/ecosia/SearchMap.jpg', alt:'Searches map visualisation', caption:'Square image caption 3', slot:'slot3', iframe:false, action: {
+  type: 'link',
+  label: 'Live visualisation',
+  url: 'https://realtime.staging.ecosia.org/'
+  } },
+]">
+
+<template slot="content">
+
+### As product designer
+
+</template>
+
+<template slot="slot1">
+
+#### Ecosia maps
+
+Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
+
+- This prototype excited children the least{ .check }
+- The interruption in the story broke the children's attention{ .cross }
+{ .check-list }
+
+</template>
+
+<template slot="slot2">
+
+#### User accounts MVP
+
+Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+
+- This prototype excited children the least{ .check }
+- The interruption in the story broke the children's attention{ .cross }
+{ .check-list }
+
+</template>
+
+<template slot="slot3">
+
+#### Global searches data-vis
+
+Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
+
+<!-- [Live](https://realtime.staging.ecosia.org/) -->
+
+- This prototype excited children the least{ .check }
+- The interruption in the story broke the children's attention{ .cross }
+{ .check-list }
+
+</template>
+
+</Content-ImageFrames-SquareImagesRow>
+
+
 
 
 

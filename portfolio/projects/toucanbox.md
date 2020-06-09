@@ -718,6 +718,8 @@ _Data reflects year-over-year activity for a defined period of time as of Decemb
 
 The leadership at toucanBox didn’t think of themselves as a tech company, even though by this point the desire for flexibility, customisation, by a series of incremental steps, we had replaced almost all the off-the-shelf tools for subscription businesses with our own systems. In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 
+Best products (Airbnb and Spotify) blend the boundary between the digital product and the commodity. In toucanbox too.  toucanbox - small team, involved in the core product but - central question for me: how can the online product enhance the overall experience for parents, and also children.  
+
 </template>
 
 <template v-slot:aside>

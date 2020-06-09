@@ -5,7 +5,7 @@
 
         <div
         v-for="(m, i) in metrics"
-        class="column"
+        class="column is-one-third"
         >
           <span class="metric">{{ m.metric }}</span>
           <p class="metric-description">{{ m.description }}</p>

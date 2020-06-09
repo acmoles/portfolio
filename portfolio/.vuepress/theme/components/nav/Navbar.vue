@@ -166,6 +166,7 @@ export default {
     handleScroll ( progress ) {
       // TODO // https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
       // Perhaps uos already offers this?
+      // https://lodash.com/docs/#debounce
       if (this.isSidebarOpen) {
         this.cssPosition = 'fixed'
         this.cssTop = 0

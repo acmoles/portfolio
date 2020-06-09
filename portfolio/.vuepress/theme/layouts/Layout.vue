@@ -90,7 +90,6 @@ export default {
 @import "@theme/styles/mixins.sass"
 
 .page-content
-  // TODO fix timing - ensuring height 100% shows next page behind the transition
   // height: 100%
   min-height: 100%
   display: flex
