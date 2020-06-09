@@ -63,7 +63,7 @@ Suspendisse potenti. Praesent risus massa, vulputate eget turpis in, dignissim t
 
 We made impressive progress on our mobile apps with only two developers and a share of my overall capacity as a product designer. By mid 2019, with growing user numbers and a renewed strategic focus on mobile, it was time to found a new agile product team with a focus on native apps. I took on the role of product manager and team leader, filling in as product designer until we made the necessary hire. Over the next three months we added two developers and a designer to the team.
 
-The primary purpose of Ecosia's native apps is to make searching easy on major platforms. Web search resides at the meta or system level, it's one way in which devices augment our brains. Deep platform knowledge and user empathy were necessary to create search experiences which fit seamlessly into people's daily lives.
+The primary purpose of Ecosia's native apps is to make searching easy on major platforms. Web search resides at the meta or system level; it's one way in which devices augment our brains. Deep platform knowledge and user empathy were necessary to create search experiences which fit seamlessly into people's daily lives.
 
 A second aspect of our apps vision is that they connect users with Ecosia's mission. In early 2020 we extended our thinking beyond searching and browsing; asking ourselves how we can help users make further incremental changes in their daily lives.
 
@@ -113,12 +113,12 @@ Product designer, 2 iOS developers, 1 Android developer, 1 devOps/backend
   This was my first taste of formal team leadership, although I've previously led projects and mentored individuals on a 1:1 basis.
 </p>
 
-Conditions were favourable, which I recognise as fortunate. I had good relationships with the founding members who responded well to a culture promoting trust, autonomy and respect.
+Conditions were favourable, which I recognise as fortunate. I had good relationships with the founding team members. They responded well to a culture promoting trust, autonomy and respect.
 
 ### Product design at scale
 
 <p>
-I joined Ecosia at an inflection point. We would soon experience rapid growth, reaching over 10 million daily users. The organisation grew accordingly and the design guild doubled. At that time it was critical to foster collaborative practices, to establish an agreed set of principles and to support a nascent design system. These considerations were forefront in my mind as I worked on highlight projects such as <Content-ModalLink label="maps">
+When I joined Ecosia it was at an inflection point. We would soon experience rapid growth, reaching over 10 million daily users. The organisation grew accordingly and the design guild doubled. At that time it was critical to foster collaborative practices, to establish an agreed set of principles and to establish a nascent design system. These considerations were forefront in my mind as I worked on projects such as <Content-ModalLink label="Maps">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
@@ -131,7 +131,7 @@ I joined Ecosia at an inflection point. We would soon experience rapid growth, r
 
 <figcaption>
 
-_caption_
+Ecosia maps posed a unique design challenge. As part of slicing the feature we decided to exclude the search box from the first release. Rather, we would enable users to make pseudo searches for common keywords such as hotels and shopping. These constraints called for creativity. It was satisfying to work on a completely new search vertical. Some work in progress: [wireframe interaction prototype](https://acmoles.github.io/maps-ui/)
 
 </figcaption>
 </div>
@@ -140,7 +140,7 @@ _caption_
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> and <Content-ModalLink label="accounts.">
+</Content-ModalLink> and <Content-ModalLink label="Accounts.">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
@@ -153,7 +153,7 @@ _caption_
 
 <figcaption>
 
-_caption_
+I led design of the accounts beta release, enabling users to save and share their personal impact counter across devices. Our hypothesis was that already engaged users would love this feature. We found demand was so high, users outside our testing region began clamouring to be included in the pilot.
 
 </figcaption>
 </div>
@@ -190,7 +190,7 @@ Even as we grew, there remained a need to be hands-on and responsive. I designed
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> A particular personal highlight was a 4-day hack project where we (me, backend, data, comms) <Content-ModalLink label="visualised global searches">
+</Content-ModalLink> A particular personal highlight was a hack week project where we <Content-ModalLink label="visualised global searches">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
@@ -203,7 +203,7 @@ Even as we grew, there remained a need to be hands-on and responsive. I designed
 
 <figcaption>
 
-_caption_
+I collaborated with a backend developer, data scientist and marketing manager to design and build this data visualisation in 4 days. As a bonus feature I plotted Ecosia's tree planting sites on the map. It's possible in Brazil to see users searching within 10km of rainforest restored by Ecosia. [View live visualisation](https://mapvis.netlify.app/)
 
 </figcaption>
 </div>
@@ -215,16 +215,12 @@ _caption_
 </Content-ModalLink> in realtime. I designed and coded the visualisation frontend.
 </p>
 
-<!-- Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem. -->
-
-<!-- ### On leadership
-
-Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem. -->
+<!-- ### On leadership -->
 
 ### Mobile team highlights
 
 <p>
-We had a standout success with the iOS App. The message from users was clear; the app was failing them with poor usability and lacking features. Browser tabs were the top request. I worked closely with developers to shape missing features into an interface we dubbed the <Content-ModalLink label="Organiser">
+Early on, we had a standout success with the iOS App. The message from users was clear; the app was failing them with poor usability and missing browser features. Browsing tabs were the top request. I worked closely with developers to shape an interface we dubbed the <Content-ModalLink label="Organiser">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
@@ -237,7 +233,7 @@ We had a standout success with the iOS App. The message from users was clear; th
 
 <figcaption>
 
-_caption_
+With the iOS App Organiser Ecosia could stand as a viable alternative browser to Safari.
 
 </figcaption>
 </div>
@@ -263,7 +259,7 @@ The greatest business impact came from two projects where I supported the team t
 
 <figcaption>
 
-_caption_
+Our browser extensions add Ecosia as default search engine. Users expect that they can search with Ecosia directly in the address bar. At first, we were uncertain we could deliver this functionality and implemented a dropdown search box in the Safari UI as contingency.
 
 </figcaption>
 </div>
@@ -272,7 +268,7 @@ _caption_
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> and migrated 91% of users.
+</Content-ModalLink> and migrated 91% of users in the face of considerable technical challenges.
 </p>
 
 <p>
@@ -289,7 +285,7 @@ The Ecosia <Content-ModalLink label="Android App">
 
 <figcaption>
 
-_caption_
+The Ecosia Android app offers the familiarity of Chromium but with Ecosia search and connection to the cause through tree planting news, financial reporting and other content.
 
 </figcaption>
 </div>

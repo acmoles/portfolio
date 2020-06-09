@@ -209,7 +209,7 @@ export default {
 @import "@theme/styles/mixins.sass"
 
 $relative-noise-url: url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
-$relative-noise-url-stronger: url('../../plugins/plugin-outside-content/dark-noise-heavy-2extra.png')
+$relative-noise-url-stronger: url('../../plugins/plugin-outside-content/dark-noise-heavy-1_5extra.png')
 
 .project-card
   background-color: $black
@@ -233,6 +233,8 @@ $relative-noise-url-stronger: url('../../plugins/plugin-outside-content/dark-noi
     background-image: $relative-noise-url, $gradientSubtle
     &.project-panel::after
       content: none
+    @media only screen and #{$media-queries}
+      background-image: $relative-noise-url-stronger, $gradientSubtle
   &.stompy
     // Note special grid-item background below
     background-color: $silver
@@ -264,9 +266,10 @@ $relative-noise-url-stronger: url('../../plugins/plugin-outside-content/dark-noi
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($yellow, 0.56)
     background-color: $darkYellow
-    background-image: $relative-noise-url, $gradientDark
+    background-image: $relative-noise-url, $gradientMid
+    // background-blend-mode: overlay
     @media only screen and #{$media-queries}
-      background-image: $relative-noise-url-stronger, $gradientDark
+      background-image: $relative-noise-url-stronger, $gradientMid
   &.random
     background-color: $silver
     background-image: $relative-noise-url, $gradientSubtle

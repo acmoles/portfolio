@@ -41,6 +41,7 @@ export default {
     display: inline-flex
     padding: 0
     cursor: pointer
+    margin-right: -0.125em
 
 
 </style>

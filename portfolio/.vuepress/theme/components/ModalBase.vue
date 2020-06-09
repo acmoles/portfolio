@@ -5,6 +5,7 @@
       :aria-label="label"
       aria-modal="true"
       class="popup-wrapper modal-background"
+      :class="tint"
       @click="$emit('close')"
     >
 
@@ -31,6 +32,11 @@ export default {
       required: true,
       type: String,
     },
+  },
+  computed: {
+    tint () {
+      return this.$page.frontmatter.navStyle.tint
+    }
   },
   mounted() {
     this.setBodyEl()
