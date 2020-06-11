@@ -92,8 +92,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../../styles/variables.sass"
-@import "../../styles/mixins.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
 .sidebar-container
   @include cover-screen
@@ -129,9 +129,16 @@ export default {
     & > li:not(:first-child)
       margin-top: .75rem
 
-
 .goto-top-sidebar-button
   position: absolute
   bottom: 0
   right: 0
+
+@media screen and (max-width: $tablet)
+  .sidebar-container
+    height: calc( 100% - 6em )
+    top: 6em
+    border-top: 1px solid rgba($pitch, 0.25)
+  .navbar-menu
+    padding: 1.5em 0
 </style>

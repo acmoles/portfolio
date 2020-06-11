@@ -1,8 +1,4 @@
-.modal-background, .medium-zoom--opened .medium-zoom-overlay
-  display: flex
-  flex-direction: column
-  justify-content: center
-  z-index: 2
+@mixin modal-background
   background-color: rgba($steel, 0.8)
   background-image: url('../plugins/plugin-outside-content/dark-noise-heavy.png')
   background-size: 256px 256px
@@ -12,3 +8,13 @@
   @media only screen and #{$media-queries}
     background-size: 128px 128px
     background-image: url('../plugins/plugin-outside-content/dark-noise-heavy-2extra.png')
+
+.modal-background, .medium-zoom--opened .medium-zoom-overlay
+  display: flex
+  flex-direction: column
+  justify-content: center
+  z-index: 2
+  @include modal-background
+
+.modal-background-only
+  @include modal-background

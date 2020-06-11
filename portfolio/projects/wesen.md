@@ -9,7 +9,7 @@ navStyle:
   progress: light
 background: dark
 case1: Case study
-sidebar: auto
+sidebar: false
 date: 2019-09-12
 src: /images/homepage/wesen-mock-baked.jpg
 next: ./ecosia

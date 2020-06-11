@@ -1,5 +1,5 @@
 <template>
-  <section class="section is-large project-card" :class="[background]">
+  <section class="section divider is-large project-card" :class="[background]">
     <div class="container is-fullhd content">
       <p class="small-title">{{ aside }}</p>
       <h1>{{ title }}</h1>
@@ -27,11 +27,11 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../../styles/variables.sass"
-  @import "../../styles/mixins.sass"
+  @import "@theme/styles/variables.sass"
+  @import "@theme/styles/mixins.sass"
 
   .project-card .content h1
-    margin-top: 0
+    margin: 0
 
 
 </style>

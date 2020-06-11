@@ -13,6 +13,7 @@ date: 2019-09-12
 src: /images/homepage/art-lebedev-tile.jpg
 prev: ./lego
 next: ./wesen
+hasFooter: true
 ---
 
 ::: slot top

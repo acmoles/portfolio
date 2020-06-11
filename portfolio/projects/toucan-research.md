@@ -8,7 +8,7 @@ navStyle:
   tint: purple-tint
   progress: light
 background: purple
-sidebar: auto
+sidebar: false
 date: 2019-09-11
 prev: ./interaction
 next: ./toucanbox

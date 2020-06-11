@@ -4,31 +4,31 @@
       v-show="!isModalOpen"
       v-if="burgerBottom"
       class="navbar"
-      :class="[navStyle, { force: forceLight }]"
+      :class="[
+        navStyle,
+        { force: forceLight },
+        { burgered: navbarBurgered },
+        {'modal-background-only': hasModalBackground } ]"
       ref="navbar"
       :style="{ position: cssPosition, top: cssTop + 'px' }"
       role="navigation"
       aria-label="main navigation"
     >
       <!-- <div class="container is-fullhd"> -->
-        <div class="navbar-brand" :class="{ burgered: navbarBurgered }">
+        <div class="navbar-brand">
           <router-link
             :to="$localePath"
             class="home-link"
           >
-            <!-- <Logo
-              class="logo-site-title"
-              :class="{ burgered: navbarBurgered }"
-            /> -->
+            <!-- <Logo class="logo-site-title"/> -->
 
             <transition name="fade-fast" mode="out-in">
               <ArrowIcon
                 class="back-arrow"
-                v-if="navbarBurgered"
+                v-if="navbarBurgered && !isMobileHome"
                 />
               <span
                 class="text-site-title"
-                :class="{ burgered: navbarBurgered }"
                 v-else
               >
                 <strong>Anthony Moles</strong>
@@ -97,7 +97,7 @@ export default {
     pageLoadingStatus () {
       return this.$store.state.pageLoadingStatus
     },
-    window () {
+    $window () {
       return this.$store.state.window
     },
     isSidebarOpen () {
@@ -109,19 +109,25 @@ export default {
     navStyle () {
       return this.$page.frontmatter.navStyle.style
     },
-    forceLight () {
-      return this.$store.state.isSidebarOpen || this.scrollPosition >= (this.window.height - 48)
+    isMobileHome () {
+      return this.$page.frontmatter.home && config.breakpoints.tablet >= this.$window.width
     },
+    forceLight () {
+      return this.$store.state.isSidebarOpen || this.scrollPosition >= (this.$window.height - 48)
+    },
+    hasModalBackground () {
+      return config.breakpoints.tablet >= this.$window.width
+    }
   },
 
   watch: {
-    window (latest, last) {
+    $window (latest, last) {
       this.onWindowResize(latest.width)
     }
   },
 
   mounted () {
-    this.onWindowResize(this.window.width)
+    this.onWindowResize(this.$window.width)
     this.setBodyEl()
 
     this.$router.beforeEach((to, from, next) => {
@@ -144,7 +150,7 @@ export default {
 
   methods: {
     onWindowResize (width) {
-      console.log('resize ', width);
+      // console.log('resize ', width);
       if (width <= config.breakpoints.tablet) {
         this.isNarrow = true
         this.navbarBurgered = true
@@ -157,11 +163,11 @@ export default {
       this.$store.dispatch('setSidebarStatus', status)
 
       // TODO fix effect of scroll lock on nav links...
-      if (status === true) {
-        this.disableScrolling(true)
-      } else {
-        this.enableScrolling(true)
-      }
+      // if (status === true) {
+      //   this.disableScrolling(true)
+      // } else {
+      //   this.enableScrolling(true)
+      // }
     },
     handleScroll ( progress ) {
       // TODO // https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
@@ -176,7 +182,7 @@ export default {
       this.scrollPosition = getScrollTop()
       this.navbarPosition = getOffsetY(this.$refs.navbar)
 
-      if ( this.scrollPosition > (this.window.height / 1.618) && this.navbarBurgered === false ) {
+      if ( this.scrollPosition > (this.$window.height / 1.618) && this.navbarBurgered === false ) {
         this.navbarBurgered = true
       } else if (progress === 0 && !this.isNarrow) {
         this.navbarBurgered = false
@@ -217,7 +223,7 @@ export default {
       //   Remove overlap class
       // }
 
-      if ((this.window.height + this.scrollPosition) >= document.body.offsetHeight) {
+      if ((this.$window.height + this.scrollPosition) >= document.body.offsetHeight) {
         this.burgerBottom = false
         this.$forceNextTick(() => {
           this.cssPosition = 'fixed'
@@ -266,11 +272,20 @@ export default {
 .navbar-end, .navbar-start
   align-items: center
 
+.logo-site-title
+  filter: opacity(0%)
+.burgered .logo-site-title
+  filter: opacity(100%)
+
+.text-site-title
+  color: $white-ter
+  margin-left: 2.5em
+
 .light
   .text-site-title
     color: $white
     filter: opacity(90%)
-  a.navbar-item, a.navbar-link
+  a.navbar-item, a.navbar-link, span.label
     filter: opacity(75%)
     color: $white
     &.router-link-active
@@ -287,20 +302,18 @@ export default {
 .back-arrow
   transform: rotate(180deg)
 
-.burgered
-  .home-link
-    pointer-events: all
+.burgered .home-link
+  pointer-events: all
 
+@media screen and (max-width: $desktop)
+  .navbar-menu
+    box-shadow: none
+    justify-content: flex-end
+    margin-right: 1.5em
+    .navbar-item
+      text-align: right
 
-.logo-site-title
-  filter: opacity(0%)
-  &.burgered
-    filter: opacity(100%)
-
-.text-site-title
-  color: $white-ter
-  margin-left: 2.5em
-
-
+  .text-site-title
+    margin-left: 2em
 
 </style>

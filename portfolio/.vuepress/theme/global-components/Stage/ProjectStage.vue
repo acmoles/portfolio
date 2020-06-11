@@ -165,44 +165,56 @@ export default {
       color: $white
       filter: opacity(78%)
 
-.stage-column
-  padding-right: 10em
-  position: relative
+@media screen and (max-width: $tablet)
+  .stage
+    height: 100vh
+    align-items: flex-start
 
+.stage-column
+  position: relative
+  @media screen and (max-width: $desktop)
+    padding-top: 8em
+    padding-bottom: 6em
+  @media screen and (min-width: $desktop)
+    padding-right: 10em
+  @media screen and (max-width: $tablet)
+    padding: 11em 3em 5em 3em
 
 // Background
 
-.visual.project-card
+.visual, .parallax
   top: 0
-  height: 100vh
+  height: calc(100vh + 48px)
   width: 100%
   position: absolute
   overflow: hidden
-  .parallax
-    height: 100vh
+  will-change: transform
+  top: -24px
+
+figure.full-screen
+  img
+    object-fit: cover
     width: 100%
-    position: absolute
-    will-change: transform
-    top: -24px
+    max-width: none
+    height: 100%
+    // top: 0px
+    // right: 0px
+    //
+    // // width: auto
+    // // height: 100vh
+    // //
+    // // max-height: none
+    // // max-width: none
+    //
+    // min-height: 100%
+    // min-width: 100%
 
-    .figure.full-screen
-      img
-        object-fit: cover
-        width: 100%
-        max-width: none
-        height: 100%
-        // top: 0px
-        // right: 0px
-        //
-        // // width: auto
-        // // height: 100vh
-        // //
-        // // max-height: none
-        // // max-width: none
-        //
-        // min-height: 100%
-        // min-width: 100%
-
+@media screen and (max-width: $desktop)
+  figure.full-screen
+    height: 100%
+    img
+      height: 100%
+      max-width: none
 
 // In-column hero
 

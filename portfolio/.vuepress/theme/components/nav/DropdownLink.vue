@@ -93,8 +93,8 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../../styles/variables.sass"
-@import "../../styles/mixins.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
 .navbar
   .navbar-item.has-dropdown
@@ -105,6 +105,19 @@ export default {
         filter: opacity(100%)
         .icon
           filter: opacity(100%)
+
+@media screen and (max-width: $desktop)
+  .navbar-item.has-dropdown
+    .navbar-dropdown
+      display: none
+    &.is-active
+      .navbar-dropdown
+        display: block
+  .navbar-dropdown, .light .navbar-dropdown
+    a.navbar-item
+      filter: opacity(100%)
+      color: $button-custom-text-color
+
 
 // TODO: Not used
 .navbar-link:not(.is-arrowless)::after

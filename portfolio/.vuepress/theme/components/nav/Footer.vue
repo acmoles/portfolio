@@ -64,17 +64,13 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../../styles/variables.sass"
-@import "../../styles/mixins.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
 .home .footer
   background: transparent
   .footer-content, .copy
     padding: 0 1.5em
-  .copy
-    @media screen and (max-width: $tablet)
-      padding-left: 0.5em
-      margin-top: 4em
   .footer-title
     pointer-events: none
 
@@ -107,7 +103,11 @@ export default {
     margin-right: 0.75em
   .footer-contact-links, .copy
     color: $silver
+  .footer-contact-links
     margin-left: 1em
+  .copy
+    @media screen and (max-width: $tablet)
+      margin-top: 4em
   .footer-about
     @media screen and (max-width: $tablet)
       margin-left: 0
@@ -116,5 +116,6 @@ export default {
       content: "|"
       margin-left: 1em
       filter: opacity(25%)
+
 
 </style>

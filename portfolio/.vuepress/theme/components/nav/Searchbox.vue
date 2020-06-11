@@ -4,15 +4,16 @@
     :class="[open ? 'is-active' : null, ]"
     aria-label="dropdown navigation"
   >
-    <div class="navbar-link is-arrowless">
-      <i
-        class="icon"
-        @click="setOpen(!open)"
-        aria-label="Search dropdown"
-        role="button"
-        aria-haspopup="true"
-        aria-controls="dropdown-menu"
-      >
+    <div
+      class="navbar-link is-arrowless"
+      @click="setOpen(!open)"
+      aria-label="Search dropdown"
+      role="button"
+      aria-haspopup="true"
+      aria-controls="dropdown-menu"
+    >
+      <span class="label">Search</span>
+      <i class="icon" aria-hidden="true">
         <MediumSearchIcon/>
       </i>
     </div>
@@ -242,13 +243,16 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../../styles/variables.sass"
-@import "../../styles/mixins.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
 .search-dropdown
+  .navbar-link
+    @include opacity-filter-transition
   .icon
     filter: opacity(64%)
-    @include opacity-filter-transition
+  .label
+    display: none
 
 .search-box
   width: 20em
@@ -297,26 +301,28 @@ export default {
       .header
         color: $grey-light
 
-@media (max-width: $tablet)
-  .search-box
-    cursor: pointer
-    width: 0
-    border-color: transparent
-    position: relative
-    &:focus
-      cursor: text
-      left: 0
-      width: 10rem
+@media screen and (max-width: $desktop)
+  .search-dropdown
+    .icon
+      display: none
+    .label
+      display: block
+    .search-box input
+      text-align: right
+      padding-right: 1.5rem
+    .suggestion.dropdown-item
+      padding-right: 1.5rem
 
 
+// @media (max-width: $tablet)
+//   .search-box
+//     cursor: pointer
+//     width: 0
+//     border-color: transparent
+//     position: relative
+//     &:focus
+//       cursor: text
+//       left: 0
+//       width: 10rem
 
-  // TODO or remove? Redo Bulma dropdown transition
-  // .bulma-dropdown-enter-active, .bulma-dropdown-leave-active
-  //   transition-property: opacity, transform
-  //   transition-duration: 400ms
-  //
-  //
-  // .bulma-dropdown-enter, .bulma-dropdown-leave-to
-  //   opacity: 0
-  //   transform: translateY(-5px)
 </style>

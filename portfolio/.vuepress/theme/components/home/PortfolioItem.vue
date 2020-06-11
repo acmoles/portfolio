@@ -144,7 +144,7 @@ export default {
         if (!this.mouseOn) {
           this.transitionTimeout = setTimeout(() => {
             this.mouseOn = true
-          }, 300)
+          }, 210)
         }
       },
       mouseMove(event) {

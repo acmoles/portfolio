@@ -10,7 +10,7 @@
   @media screen and (min-width: $largeformat)
     padding: 0
 
-section
+.section
   position: relative
 
 .section.is-medium-large
@@ -18,6 +18,19 @@ section
 
 .section.is-small
   padding: $section-padding-small
+
+@media screen and (max-width: $desktop)
+  .section
+    padding: 6em 0 0 0
+  .section.is-large
+    padding: 6em 0
+  .section.is-medium-large
+    padding: 0 0 6em 0
+  .section.is-small
+    padding: 1em 0
+  .section.context
+    padding: 6em 0
+
 
 .section
   figure:not(.transparent-image)

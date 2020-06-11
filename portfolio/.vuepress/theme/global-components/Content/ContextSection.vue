@@ -31,7 +31,8 @@
 import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
 import { topPadding } from '@theme/mixins/topPadding.js'
 
-import { getScrollTop, getViewport } from '../../util'
+import { getScrollTop, getViewport } from '@theme/util'
+import config from '@theme/../config.js'
 
 export default {
   name: 'ContextSection',
@@ -49,26 +50,36 @@ export default {
   },
 
   computed: {
+    $window () {
+      return this.$store.state.window
+    },
+    isMobile () {
+      return config.breakpoints.tablet >= this.$window.width
+    },
     // TODO make description slot pull from page metadata? Could also be used for SEO
   },
 
   watch: {
     pageLoadingStatus (latest, last) {
-      if (latest === 'finished' && this.intersected) {
-        this.$forceNextTick(() => {
-          this.visible = true
-          this.visibleCallback()
-        })
-      } else if (latest === 'revealing') {
-        this.$forceNextTick(() => {
-          // console.log('scrolltop: ', getScrollTop());
-          if (getScrollTop() === 0) {
-            this.displacement = getViewport('y') - this.$el.getBoundingClientRect().y
-            // console.log('rect is: ', this.$el.getBoundingClientRect().y);
-            // console.log('viewport is: ', getViewport('y'));
-            // console.log('displacement is: ', this.displacement);
-          }
-        })
+      if (!this.isMobile) {
+
+        if (latest === 'finished' && this.intersected) {
+          this.$forceNextTick(() => {
+            this.visible = true
+            this.visibleCallback()
+          })
+        } else if (latest === 'revealing') {
+          this.$forceNextTick(() => {
+            // console.log('scrolltop: ', getScrollTop());
+            if (getScrollTop() === 0) {
+              this.displacement = getViewport('y') - this.$el.getBoundingClientRect().y
+              // console.log('rect is: ', this.$el.getBoundingClientRect().y);
+              // console.log('viewport is: ', getViewport('y'));
+              // console.log('displacement is: ', this.displacement);
+            }
+          })
+        }
+
       }
     }
   },
@@ -93,8 +104,8 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../../styles/variables.sass"
-  @import "../../styles/mixins.sass"
+  @import "@theme/styles/variables.sass"
+  @import "@theme/styles/mixins.sass"
 
   .context
     background-color: $black

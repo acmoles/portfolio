@@ -78,8 +78,8 @@ function resolvePageLink (
 </script>
 
 <style lang="sass">
-@import "../../styles/variables.sass"
-@import "../../styles/mixins.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
 .page-nav, .page-nav .container
   height: 20em
@@ -144,6 +144,18 @@ function resolvePageLink (
   .small-title
     color: $white
     filter: opacity(78%)
+
+@media screen and (max-width: $desktop)
+  .page-nav, .page-nav .container
+    height: 12em
+  .page-nav-column.columns
+    .column.prev
+      display: none
+    .column.next
+      .background
+        width: 100%
+        height: 12em
+        left: 0
 
 
 

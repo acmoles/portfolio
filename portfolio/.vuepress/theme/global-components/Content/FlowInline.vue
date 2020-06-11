@@ -50,4 +50,16 @@ export default {
       .box::after
         content: none
 
+  @media screen and (max-width: $desktop)
+    .step-columns
+      .box::after
+        top: 100%
+        left: 50%
+        border-top-color: $steel
+        border-left-color: transparent
+        border-width: 0.75em
+        margin-top: unset
+        margin-left: -0.75em
+
+
 </style>
