@@ -3,13 +3,14 @@
     :to="path"
     class="grid-item no-fade"
     :class="[type, {'in-view': visible}, {'appear-fade-up': homeFadeUpMotion}]"
+    @mouseenter.native.stop="mouseEnter"
     @mouseleave.native.stop="mouseLeave"
     @mousemove.native.stop="mouseMove"
     :ref="'base' + uid"
   >
     <article
       class="project-panel project-card"
-      :class="background"
+      :class="[background, { 'transition': !mouseOn }]"
       :ref="'article' + uid"
       @click="emitBoundingRect($event)"
     >
@@ -23,7 +24,7 @@
         <img class="lazyload" :data-src="src"  :alt="title">
       </figure>
 
-      <div :ref="'caption' + uid" class="item-caption">
+      <div :ref="'caption' + uid" class="item-caption" :class="{ 'transition': !mouseOn }">
         <p class="small-title">{{ processedTitle }}</p>
         <h2 class="item-title" v-if="subtitle">{{ subtitle }}</h2>
 
@@ -59,6 +60,8 @@ export default {
 
   data () {
     return {
+      mouseOn: false,
+      transitionTimeout: null,
       base: {},
       animatables: {},
       options: {
@@ -137,6 +140,13 @@ export default {
       		}
       		return { x : posx, y : posy }
       },
+      mouseEnter(event) {
+        if (!this.mouseOn) {
+          this.transitionTimeout = setTimeout(() => {
+            this.mouseOn = true
+          }, 300)
+        }
+      },
       mouseMove(event) {
         // layout on mouse move
         requestAnimationFrame(() => {
@@ -145,10 +155,15 @@ export default {
       },
       mouseLeave(event) {
         // reverse animation
-        requestAnimationFrame(() => {
-          for(var key in this.animatables) {
-            this.animatables[key].style.WebkitTransform = this.animatables[key].style.transform = 'translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1)'
-  				}
+        clearTimeout(this.transitionTimeout)
+        this.mouseOn = false
+
+        this.$forceNextTick(() => {
+          // requestAnimationFrame(() => {
+            for(var key in this.animatables) {
+              this.animatables[key].style.WebkitTransform = this.animatables[key].style.transform = 'translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1)'
+            }
+          // })
         })
       },
       layout(event) {
@@ -210,6 +225,8 @@ export default {
 
 $relative-noise-url: url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
 $relative-noise-url-stronger: url('../../plugins/plugin-outside-content/dark-noise-heavy-1_5extra.png')
+
+// Card background
 
 .project-card
   background-color: $black
@@ -292,6 +309,8 @@ $relative-noise-url-stronger: url('../../plugins/plugin-outside-content/dark-noi
   .project-card
     background-size: 128px 128px, 250%
 
+// Card glow
+
 .grid-item .project-card::after
   @include pseudo-full
   pointer-events: none
@@ -302,16 +321,21 @@ $relative-noise-url-stronger: url('../../plugins/plugin-outside-content/dark-noi
 .grid-item:hover .project-card::after
   filter: opacity(100%)
 
+// Card parallax effect
 
 .grid-item
   position: relative
   perspective: 1000px
   .item-caption, .project-card
-    transition: transform 0.2s ease-out
     @include make3d
+    will-change: transform
+  .item-caption.transition, .project-card.transition
+    transition: transform 0.2s ease-out
   .project-panel
     // box-shadow: $element-shadow
-    color: $white-ter
+    color: $white
+
+// Card Typeography
 
 @media screen and (min-width: $tablet)
   .grid-item
@@ -335,6 +359,7 @@ $relative-noise-url-stronger: url('../../plugins/plugin-outside-content/dark-noi
   .case
     background: rgba($white, 0.2)
 
+// Card layout and image
 
 .double-comp, .single-comp
   position: absolute
