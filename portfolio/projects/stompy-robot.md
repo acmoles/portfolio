@@ -19,7 +19,7 @@ hasFooter: true
 ::: slot top
 
 <Stage-ProjectStage :noise="true" ctaLabel="stompy-robot.uk" ctaUrl="https://stompyrobot.uk/"
-description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla.">
+description="Stompy Robot is an independent studio based in Edinburgh creating games for mobile and tools for developers.">
 
   <template v-slot:visual-column>
     <figure class="stompy-image">
@@ -47,58 +47,13 @@ description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus vol
 
 ## Context
 
+In 2013 I joined forces with my brother [Simon Moles](https://www.simonmoles.com/) (systems developer at [Rockstart North](https://www.rockstarnorth.com/)) to build video games specifically for mobile devices. We had just witnessed the dawn of ubiquitous touch-based computing and believed we could exploit this fresh input medium to reimagine some of our favourite game genres.
 
+We worked in the Unity game engine, enabling us to target all major platforms. Our guiding principle was touch-centricity. Mobile games of the time often borrowed existing interaction models, such as on-screen joysticks or pointers. We wanted to play to the strengths of touch.
 
-Integer feugiat sagittis vestibulum. Sed iaculis ultrices dui, ut lobortis enim commodo et. Nulla id justo in neque aliquet aliquam. Quisque ante ante, consequat in purus sit amet, ornare tempus erat. Phasellus euismod elit sapien, ac ultricies neque viverra vel. Proin suscipit aliquam dui id cursus. Morbi vitae urna vehicula, commodo tortor vitae, laoreet tortor. Praesent dapibus quam vitae dui hendrerit, sed fringilla orci rutrum. Etiam viverra a lorem quis pellentesque. Vivamus ultricies massa est, nec cursus ipsum eleifend quis. Curabitur varius turpis metus, ut bibendum felis efficitur nec. Aliquam ut enim augue. Suspendisse sodales pretium tristique.
-
-Nulla urna magna, feugiat in hendrerit consequat, fermentum vel enim. Etiam maximus dolor sit amet vehicula eleifend. Morbi fringilla lorem urna, nec aliquet odio dictum a. Donec nunc augue, tincidunt vel viverra ac, congue vitae sem. Cras ultrices sapien ac imperdiet ullamcorper. Ut a nisi in mauris finibus porttitor. Mauris volutpat tristique commodo.
-
-</template>
-
-<template v-slot:side>
-
-**Product**
-
-**Sector**
-
-**Timeframe**
-
-**Team composition**
-
-
-</template>
-
-</Content-ContextSection>
-
-
-
-<Content-ImageFrames-MainImageSection imageClass="is-16by9" url="https://www.youtube.com/embed/xZELuhMO9es" alt="placeholder" :aside="true" :content="true" :iframe="true">
-
-<template v-slot:content>
-
-## Nova
-
-<p class="subtitle">
-  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
-</p>
-
-In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
-
-Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
-
-</template>
-
-<template v-slot:aside>
-
-Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
-
-</template>
-
-</Content-ImageFrames-MainImageSection>
-
-
-
-
+<p>
+The studio's breakthrough success was with development tools, rather than games. The insights gained building games enabled us to identify valuable workflow improvements in coding and debugging. <a href="https://assetstore.unity.com/packages/tools/gui/srdebugger-console-tools-on-device-27688" target="blank">SRDebugger</a> is still available on the Unity Asset Store. <Content-ModalLink label="Spaced">
+<template v-slot:modal>
 
 <Content-ImageFrames-SquareImagesRow :content="true" :images="[
 { url:'/images/stompy-robot/birds-eye-sketch.jpg', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
@@ -166,3 +121,67 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 </template>
 
 </Content-ImageFrames-SquareImagesRow>
+
+</template>
+</Content-ModalLink> was our last game title in development.
+</p>
+
+<!-- to reimagine the game genres we loved in this new paradigm.
+
+which specifically aims to leverage the interaction opportunities offered by touch screens.
+
+Across all popular mobile platforms (iOS, Windows, Android), we design and craft fun, touch-centric games. We believe that a game should be designed for touch, fully exploiting the fresh input medium provided by this new technology.
+
+with the Unity game engine -->
+
+</template>
+
+<template v-slot:side>
+
+**Product**
+Mobile video games, developer tools and plugins for Unity
+
+**Sector**
+Interactive entertainment
+
+**Timeframe**
+2013-2015
+
+**My role**
+2D/3D/UI/Game designer
+
+**Team**
+Game developer/designer
+
+
+</template>
+
+</Content-ContextSection>
+
+
+
+<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="https://www.youtube.com/embed/xZELuhMO9es" alt="placeholder" :aside="true" :content="true" :iframe="true">
+
+<template v-slot:content>
+
+## Nova
+
+<p class="subtitle">
+  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
+</p>
+
+tactical RTS action game
+
+In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+
+Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
+
+</template>
+
+<template v-slot:aside>
+
+Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
+
+</template>
+
+</Content-ImageFrames-MainImageSection>

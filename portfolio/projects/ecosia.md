@@ -97,7 +97,7 @@ Internet search
 **My role**
 Product manager and team lead
 
-**Team composition**
+**Team**
 Product designer, 2 iOS developers, 1 Android developer, 1 devOps/backend
 
 </template>

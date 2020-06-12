@@ -134,7 +134,7 @@ function resolvePageLink (
       background-color: lighten($slate, 3)
   .next .background
     // border-radius: $radius
-    left: -4em
+    left: -2em
     width: 50vw
     border-left: 2px solid $black
     &:hover, &:active
