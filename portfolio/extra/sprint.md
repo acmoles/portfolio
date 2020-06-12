@@ -39,6 +39,8 @@ At that time I was working on customisable children’s toys at Makielab → . W
 
 Foremost, I wanted to explore the possibility of an unrestricted creation experience, able to generate infinite variations while being intuitive and fun to use. I also intended to fully automate and outsource the fulfillment process.
 
+<!-- My interest lay specifically in full colour 3D printing of durable plastics suitable for children's toys. -->
+
 </template>
 
 <template v-slot:side>

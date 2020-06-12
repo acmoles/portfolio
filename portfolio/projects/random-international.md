@@ -43,17 +43,31 @@ Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur t
 
 Suspendisse potenti. Praesent risus massa, vulputate eget turpis in, dignissim tincidunt odio
 
+<!-- Glass, cable, machined aluminium, pulley, custom control system and software
+200 x 200 x 200 cm
+
+Fly studies the movement of objects and insects within a confined space. An abstract representation of a fly is held captive inside a glass box, centrally ensnared by eight cables. The behaviour of this fly is controlled by a unique and autonomous algorithm, accurately simulating the observed behaviour of real flies. The fly has the freedom to move anywhere within its box, but lacks spatial reference. RANDOM INTERNATIONAL has applied this pattern of movement to an inanimate object, as though it were trapped beneath a watch-glass; exploring not only the behaviour of objects but also that of humans. When the fly senses the presence of a person at its perimeter, it changes the demeanour of its flight in response. This continuing physical interplay of action and reaction can offer a new perspective to our own behaviour, its effects, and apparent freedom, in the current age. Fly premiered at the 4th Moscow Biennial of Contemporary Art, curated by Peter Weibel.
+
+the group’s work invites active participation. RANDOM INTERNATIONAL explores the human condition in an increasingly mechanised world through emotional yet physically intense experiences.  -->
+
 </template>
 
 <template v-slot:side>
 
 **Product**
+Interactive art installation
 
-**Sector**
+**Exhibited**
+4th Moscow Biennial of Contemporary Art
 
 **Timeframe**
+2010
 
-**Team composition**
+**My role**
+Design engineer
+
+**Team**
+Engineering manager and senior creative coder
 
 </template>
 

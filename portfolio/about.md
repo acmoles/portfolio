@@ -119,13 +119,13 @@ Let’s break that down a bit. By ‘multidisciplinary designer’ I mean. I'm a
 
 Nulla urna magna, feugiat in hendrerit consequat, fermentum vel enim. Etiam maximus dolor sit amet vehicula eleifend. Morbi fringilla lorem urna, nec aliquet odio dictum a. Donec nunc augue, tincidunt vel viverra ac, congue vitae sem. Cras ultrices sapien ac imperdiet ullamcorper. Ut a nisi in mauris finibus porttitor. Mauris volutpat tristique commodo.
 
-<p class="subtitle">
+<!-- <p class="subtitle">
   How would we survive without apps? Apps can transform your mobile device into essential tools like a harmonica, disco ball or convincing moustache. Somewhere out there is the perfect storm of touchscreen technology to fix everything that’s wrong with your life.
 </p>
 
-- Rockstar North
+- Rockstar North -->
 
-I built this website with [Vue.JS](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress](https://vuepress.vuejs.org/). 3D content is rendered with [Three.js](https://threejs.org/).
+I built this website with [Vue.js](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), [Three.js](https://threejs.org/), SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress](https://vuepress.vuejs.org/).
 
 <template v-slot:aside>
 

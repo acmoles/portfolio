@@ -47,7 +47,7 @@ description="Stompy Robot is an independent studio based in Edinburgh creating g
 
 ## Context
 
-In 2013 I joined forces with my brother [Simon Moles](https://www.simonmoles.com/) (systems developer at [Rockstart North](https://www.rockstarnorth.com/)) to build video games specifically for mobile devices. We had just witnessed the dawn of ubiquitous touch-based computing and believed we could exploit this fresh input medium to reimagine some of our favourite game genres.
+In 2013 I joined forces with my brother [Simon Moles](https://www.simonmoles.com/) (systems developer at [Rockstar North](https://www.rockstarnorth.com/)) to build video games specifically for mobile devices. We had just witnessed the dawn of ubiquitous touch-based computing and believed we could exploit this fresh input medium to reimagine some of our favourite game genres.
 
 We worked in the Unity game engine, enabling us to target all major platforms. Our guiding principle was touch-centricity. Mobile games of the time often borrowed existing interaction models, such as on-screen joysticks or pointers. We wanted to play to the strengths of touch.
 
@@ -94,8 +94,6 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 </Content-ImageFrames-SquareImagesRow>
 
 
-
-
 <Content-ImageFrames-SquareImagesRow padding="is-medium-large" :content="false" :images="[
 { url:'https://player.vimeo.com/video/424005109', alt:'Prototype video', caption:'Prototype video', slot:'slot1', iframe:true },
 { url:'https://player.vimeo.com/video/424004636', alt:'Animation sample thumbs up', caption:'Animation sample thumbs up', slot:'slot2', iframe:true },
@@ -119,11 +117,17 @@ Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim
 Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
 
 </template>
-
 </Content-ImageFrames-SquareImagesRow>
 
 </template>
-</Content-ModalLink> was our last game title in development.
+</Content-ModalLink> was our last game title in development and we occasionally <Content-ModalLink label="Game jam">
+<template v-slot:modal>
+
+Game jam
+
+</template>
+</Content-ModalLink>
+.
 </p>
 
 <!-- to reimagine the game genres we loved in this new paradigm.
@@ -157,6 +161,8 @@ Game developer/designer
 </template>
 
 </Content-ContextSection>
+
+
 
 
 
