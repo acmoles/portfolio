@@ -212,9 +212,9 @@ figure.full-screen
 @media screen and (max-width: $desktop)
   figure.full-screen
     height: 100%
-    img
-      height: 100%
-      max-width: none
+    // img
+    //   height: 100%
+    //   max-width: none
 
 // In-column hero
 

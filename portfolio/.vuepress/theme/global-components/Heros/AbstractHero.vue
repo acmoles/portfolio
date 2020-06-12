@@ -1,5 +1,5 @@
 <template>
-  <div ref="presentation" class="presentation"></div>
+  <div ref="presentation" class="presentation abstract"></div>
 </template>
 
 <script>
@@ -63,7 +63,13 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../../styles/variables.sass"
-  @import "../../styles/mixins.sass"
+  @import "@theme/styles/variables.sass"
+  @import "@theme/styles/mixins.sass"
+
+  .presentation.abstract
+    height: 100%
+    canvas
+      position: relative
+      top: 48px
 
 </style>

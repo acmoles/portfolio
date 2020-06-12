@@ -140,7 +140,7 @@ function resolvePageLink (
     &:hover, &:active
       filter: brightness(1.1)
   .item-title
-    margin-top: 1em
+    margin-top: 0
   .small-title
     color: $white
     filter: opacity(78%)

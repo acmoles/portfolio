@@ -105,6 +105,8 @@ I have more than a decade of expertise that covers the entire human-centred desi
 
 I'm skeptical about what is and am determined to have a positive impact by...
 
+OpenGL/WebGL, Graphics Shaders, VR/AR, 3D, Visual FX & Dynamic Film
+
 -->
 
 ## Hi, I'm Ant
@@ -116,6 +118,8 @@ I'm skeptical about what is and am determined to have a positive impact by...
 Let’s break that down a bit. By ‘multidisciplinary designer’ I mean. I'm a design engineer by training and I began my career working as a children's toy designer. I transitioned into digital product five years ago, where I've worked both as a designer and a product manager. sed iaculis ultrices dui, ut lobortis enim commodo et. Nulla id justo in neque aliquet aliquam. Quisque ante ante, consequat in purus sit amet, ornare tempus erat. Phasellus euismod elit sapien, ac ultricies neque viverra vel. Proin suscipit aliquam dui id cursus. Morbi vitae urna vehicula, commodo tortor vitae, laoreet tortor. Praesent dapibus quam vitae dui hendrerit, sed fringilla orci rutrum. Etiam viverra a lorem quis pellentesque. Vivamus ultricies massa est, nec cursus ipsum eleifend quis. Suspendisse sodales pretium tristique.
 
 Nulla urna magna, feugiat in hendrerit consequat, fermentum vel enim. Etiam maximus dolor sit amet vehicula eleifend. Morbi fringilla lorem urna, nec aliquet odio dictum a. Donec nunc augue, tincidunt vel viverra ac, congue vitae sem. Cras ultrices sapien ac imperdiet ullamcorper. Ut a nisi in mauris finibus porttitor. Mauris volutpat tristique commodo.
+
+I built this website with [VueJS](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress](https://vuepress.vuejs.org/). 3D content is rendered with [three.js](https://threejs.org/).
 
 <template v-slot:aside>
 

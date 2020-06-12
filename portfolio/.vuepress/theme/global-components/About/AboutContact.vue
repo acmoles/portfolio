@@ -8,7 +8,7 @@
           <div class="background background-noise"></div>
           <div class="text-group">
             <h2 class="item-title">Get in touch <WavingHand/></h2>
-            <p class="small-title">I’m glad you dropped by. I’d love to chat about design, technology, startups or opportunities. Shoot me an email and we <span class="no-wrap">can work</span> something out.</p>
+            <p class="small-title">I’m glad you dropped by. I’d love to chat about design, technology, startups or opportunities. Shoot me a message and we <span class="no-wrap">can work</span> something out.</p>
           </div>
         </button>
         <div class="column photo is-narrow">

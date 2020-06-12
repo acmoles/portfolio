@@ -115,7 +115,6 @@ export class ThreeComposition extends EventTarget {
 
   configScene() {
     this.camera.position.set( 33, 30, 33 );
-    this.controls.target.set( 0, 5.5, 0 );
 
     //dark
     this.worldScene.background = null;
@@ -126,10 +125,15 @@ export class ThreeComposition extends EventTarget {
 
     // TODO add these to restrict user camera
     let maxAngle = (7 / 20) * Math.PI;
+    this.controls.target.set( 0, 5.5, 0 );
+
     this.controls.maxPolarAngle = maxAngle;
     this.controls.minPolarAngle = maxAngle;
     this.controls.enableZoom = false;
     this.controls.enablePan = false;
+    if (window.innerWidth < 768) {
+      this.controls.enabled = false;
+    }
 
     this.controls.update();
 

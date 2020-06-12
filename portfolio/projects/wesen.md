@@ -44,7 +44,7 @@ description="Wesen enables anyone to create a unique pendant necklace which can 
 
 Recent years have seen a gradual increase in awareness of product customisation and on-demand manufacturing. But to this day we can see little evidence of the promised revolution due to relatively high prices and no killer app.
 
-In 2015 I had the chance to work at [Makielab](/makielab) on customisable children’s toys. We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage some lessons learnt there, in order to push the envelope of the [Mass Customisation](http://www.google.com) space.
+In 2015 I had the chance to work at [Makielab](/projects/makielab) on customisable children’s toys. We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage some lessons learnt there, in order to push the envelope of the [Mass Customisation](http://www.google.com) space.
 
 Firstly, I wanted to explore the possibility of a lightly-constrained creation experience, able to generate infinite variations while being intuitive and fun to use. _I was convinced that suitable constraints could enhance the creativity of customers, rather than restrict it._ Secondly, to completely automate and outsource the fulfillment process.
 
@@ -449,40 +449,59 @@ The notification window begins by offering tips and later, when appropriate, rep
 
 
 
-<Content-ImageFrames-SquareImagesRow :content="true" :images="[
-{ url:'/images/wesen/Iconography-square.png', alt:'Production icon assets', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'/images/wesen/product-rendering.jpg', alt:'WIP product rendering', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'/images/wesen/handheld.jpg', alt:'WIP product photography', caption:'Square image caption 3', slot:'slot3', iframe:false },
-]">
-
-<template slot="content">
+<Content-TextSection columnOffset="title-offset">
 
 ## Production assets
 
-Small amount of high quality visual assets and content. Minimal number of screens with highly polished UI. I drew inspiration from the Airbnb Design System and Google Material Design 2.0 while also referencing the design language of fashion and jewellery brands.
+With the aim of getting a working product in users hands quickly, I focussed on creating a small number of high quality assets. My approach to visual design was similar. I was able to focus on a minimal set of screens thanks to my earlier work scoping the user flow. I was inspired at that time by the Airbnb Design System and Google Material Design, as well as the design language of fashion and jewellery brands.
+
+<br>
+
+<div class="columns is-variable is-6">
+<div class="column">
+<figure class="image is-square">
+<img class="lazyload" data-src="/images/wesen/Iconography-square.png" alt="Production icon assets">
+</figure>
+<figcaption>
+
+I created a series of SVG icons inspired by the Montserrat font.
+
+</figcaption>
+</div>
+
+<div class="column">
+<figure class="image is-square">
+<img class="lazyload" data-src="/images/wesen/product-rendering.jpg" alt="WIP product rendering">
+</figure>
+<figcaption>
+
+Photorealistic renders enabled me to communicate the variety of products possible.
+
+</figcaption>
+</div>
+
+
+</div>
+
+
+<template slot="aside">
+
+<figure class="image is-16by9 transparent-image wesen-combined">
+<img class="lazyload" data-src="/images/wesen/combined_wesen.png" alt="Production UI">
+</figure>
+
+<style lang="sass">
+
+  @media screen and (min-width: 768px)
+    .wesen-combined
+      transform-origin: top left
+      transform: scale(2.8)
+
+</style>
 
 </template>
 
-<template slot="slot1">
-
-Production SVG icon assets
-
-</template>
-
-<template slot="slot2">
-
-Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
-
-</template>
-
-<template slot="slot3">
-
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis.
-
-</template>
-
-</Content-ImageFrames-SquareImagesRow>
-
+</Content-TextSection>
 
 
 
@@ -493,9 +512,21 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 ## Development
 
+Speed of development was my main criteria when investigating technologies to power the e&#8209;commerce component of the experience. I wanted to avoid building common solutions like order management and payments. This led me to consider off-the-shelf products like Shopify and Magento.
+
+I learnt that [Shapeways](/#) (leading online 3D printing platform) offered an API with the capability to upload models directly to a private store hosted on their e-commerce platform. In this way, I could completely outsource checkout, payment and fulfilment.
+
+The question was then what steps I would take to enhance users' checkout experience, if any. I was already building 3D-print-ready  geometry on the Wesen backend and saving records in a database. Connecting customers to this record would avoid foreseeable customer service challenges and emailing this information would avoid the need for user accounts. I added email capability using Sendgrid. Customers receive an email with a link to their saved pendant design and a link to their Shapeways product page. They can respond to the email with questions.
+
+<!-- who save their pendant receive an email with a link to their saved
+
+Users could retrieve their data and render it in the Wesen frontend using their model UID. I decided to smooth this experience by adding an email component. Upon saving a model, the user receives
+
+It became clear that I required a Node.js server to build pendant models for 3D printing.
+
 My main criteria was to setup the necessary e-commerce components to enable orders as quickly as possible. I explored off-the-shelf e-commerce systems like Shopify, Magento and WooCommerce but ... Needed to be even more paired back - no order management, sensitive user data or payments. Shapeways order API could offer this. The Heroku Node.js ecosystem proved remarkably suitable for this use-case.
 
-In specifying production tools and technologies I re-referenced my project goals and drew on past experience: “Ensure that operations can be automated and that manufacture can be fulfilled by a single service (such as Shapeways) with minimal or no post processing” “Minimise the technical overhead of storing personal and payment details by using third-party services” I chose to upgrade and extend the prototype toolchain for production: Customer service email, database to retain created models and orders, considering payment services etc.
+In specifying production tools and technologies I re-referenced my project goals and drew on past experience: “Ensure that operations can be automated and that manufacture can be fulfilled by a single service (such as Shapeways) with minimal or no post processing” “Minimise the technical overhead of storing personal and payment details by using third-party services” I chose to upgrade and extend the prototype toolchain for production: Customer service email, database to retain created models and orders, considering payment services etc. -->
 
 </template>
 
@@ -551,7 +582,7 @@ Shapeways order API
 
 
 
-<Content-TextSection>
+<Content-TextSection columnOffset="title-small-offset">
 
 <!-- <p class="subtitle">
   Wesen is live. You can customise and order your pendant necklace right now.
@@ -561,9 +592,9 @@ Shapeways order API
 
 ### What went well
 
-Wesen features a compelling, usable customisation tool and enables customers to order their creation. A proportion of its audience don't consider themselves creative or technical. My original success criteria, _Gifter friendly_ and _End-to-end_, are satisfied. I also significantly extended my skills and grew empathy for my product and engineering colleagues.
+Wesen features a compelling, usable customisation tool and enables customers to order their creation. A proportion of its audience don't consider themselves creative or technical. I satisfied my original success criteria, _Gifter friendly_ and _End-to-end._ I also significantly expanded my skills, growing deeper empathy for my product and engineering colleagues.
 
-### What didn't go well
+### Lessons learnt
 
 Although business success was never my primary goal, I was still somewhat disappointed Wesen didn't exceed the modest reach predicted by my initial research. Were this to be a priority in any future venture, I draw an important lesson: _the importance of working in teams._
 
@@ -571,7 +602,7 @@ Building a product oneself is empowering, but it's also inefficient and risky. F
 
 ### Going forward
 
-Wesen is no longer under active development. I intend to revisit communication of the value proposition and make a marketing push at some point. If that proved successful there are several dimensions of the e-commerce experience which could be improved (e.g. reviews/testimonials, user generated content). There's also the possibility of adding more jewellery types to the platform.
+Wesen is no longer under active development. A possible next step would be to revisit the value proposition and run a concerted marketing campaign. If that looked promising there are several dimensions of the e-commerce experience which could be improved (e.g. reviews/testimonials, user generated content), as well as adding more jewellery types to the platform.
 
 
 <!--
