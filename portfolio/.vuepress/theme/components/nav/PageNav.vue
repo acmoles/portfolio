@@ -142,6 +142,9 @@ function resolvePageLink (
   .item-title
     margin-top: 0
   .small-title
+    color: $extraDarkSmoke
+    filter: opacity(100%)
+  .next .small-title
     color: $white
     filter: opacity(78%)
 

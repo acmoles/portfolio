@@ -18,7 +18,7 @@ hasFooter: true
 ::: slot top
 
 <Stage-ProjectStage :noise="true" :fadeless="true" ctaLabel="none" ctaUrl="#"
-description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla.">
+description="Makielab was a mobile games and e-commerce startup acquired by Disney in 2016. We created Makies, an award-winning customisable digital avatar, which could be ordered as a bespoke 3D printed toy.">
 
 <template v-slot:visual-background>
   <Heros-BeadsHero :noise="true"/>
@@ -36,10 +36,12 @@ description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus vol
 
 ## Context
 
-Vestibulum ac ultrices velit, in porttitor diam. Cras pellentesque dui sed neque pulvinar, in semper turpis rhoncus. Ut ac malesuada nisl. Cras nisi augue, auctor a justo eu, vulputate laoreet ipsum. Vivamus est ante, pellentesque vitae ultrices eu, accumsan ut nisl. Suspendisse ex metus, eleifend vel elit ut, mattis placerat velit. Suspendisse at condimentum neque. Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec.
+Monetising mobile games is a tricky subject, particularly when it comes to children. Makielab was founded to explore a new angle on the problem by enabling children to buy physical products based on their unique in-game content. To this end, the company focused both on mobile game development and on e-commerce and toy manufacture.
 
-<p>Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur tortor in nibh vulputate viverra. Integer fringilla orci enim, non efficitur erat elementum vel.
-<Content-ModalLink label="Disney infinity">
+<p>
+I was part of the agile product team responsible for the later. We worked closely with the games team to ensure a holistic experience across touch-points and I spanned teams as we developed new toys and experiences leveraging the underlying technology. One such project involved a partnership with Disney via the Disney/Techstars accelerator where I demonstrated the possibility of personalised
+
+<Content-ModalLink label="Disney Infinity">
 <template v-slot:modal>
 <Content-ImageFrames-SquareImagesRow padding="is-small" :content="true" :images="[
 { url:'/images/makielab/figure-comp.jpg', alt:'Exploring character features', caption:'Square image caption 1', slot:'slot1', iframe:false },
@@ -74,19 +76,31 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 </Content-ImageFrames-SquareImagesRow>
 </template>
 </Content-ModalLink>
-Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit. Pellentesque euismod sodales ipsum in mattis.</p>
+figures.
+</p>
 
-[Sprint - pre Makielab](/extra/sprint)
+With [Sprint](/extra/sprint) I was already exploring the possibility of toy manufacture without the usual requisite investment (tooling, factories etc) prior to joining Makielab.
+
+
 
 </template>
 
 <template v-slot:side>
 
-**Reading time**
-12 minutes
+**Product**
+Responsive web application and physical toys
 
-**Team composition**
-CTO, product designer, two full-stack developers
+**Sector**
+Children's toys and entertainment
+
+**Timeframe**
+2015-2016
+
+**My role**
+UI, concept art and industrial design
+
+**Team**
+CTO, product manager, 3D artist, front&#8209;end developer, 2 full&#8209;stack developers
 
 </template>
 
@@ -102,7 +116,7 @@ CTO, product designer, two full-stack developers
 ## Makies
 
 <p class="subtitle">
-  Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+  Creative dolls for creative kids and the world's first 3D printed toys.
 </p>
 
 In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
