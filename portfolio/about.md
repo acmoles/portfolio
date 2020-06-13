@@ -107,6 +107,8 @@ I'm skeptical about what is and am determined to have a positive impact by...
 
 OpenGL/WebGL, Graphics Shaders, VR/AR, 3D, Visual FX & Dynamic Film
 
+I started my career as a teacher and transitioned to UX about 10 years ago. But my career hasn’t been straightforward and my skillset includes variety of skills from UX, UI, PO, Mentorship, Coaching, and Leadership.
+
 -->
 
 ## Hi, I'm Ant
@@ -115,9 +117,24 @@ OpenGL/WebGL, Graphics Shaders, VR/AR, 3D, Visual FX & Dynamic Film
   A multidisciplinary designer creating useful and playful experiences centred on people
 </p>
 
-Let’s break that down a bit. By ‘multidisciplinary designer’ I mean. I'm a design engineer by training and I began my career working as a children's toy designer. I transitioned into digital product five years ago, where I've worked both as a designer and a product manager. sed iaculis ultrices dui, ut lobortis enim commodo et. Nulla id justo in neque aliquet aliquam. Quisque ante ante, consequat in purus sit amet, ornare tempus erat. Phasellus euismod elit sapien, ac ultricies neque viverra vel. Proin suscipit aliquam dui id cursus. Morbi vitae urna vehicula, commodo tortor vitae, laoreet tortor. Praesent dapibus quam vitae dui hendrerit, sed fringilla orci rutrum. Etiam viverra a lorem quis pellentesque. Vivamus ultricies massa est, nec cursus ipsum eleifend quis. Suspendisse sodales pretium tristique.
+Let’s break that down a bit. My training was in [Product Design Engineering](/#) and I started my career as a [Toy Designer at Lego.](/#) I transitioned into UX about 5 years ago, pursuing a desire to blend technology and interactivity into my practice. But I never forgot my roots and I'm at my best when bridging the digital/physical divide.
 
-Nulla urna magna, feugiat in hendrerit consequat, fermentum vel enim. Etiam maximus dolor sit amet vehicula eleifend. Morbi fringilla lorem urna, nec aliquet odio dictum a. Donec nunc augue, tincidunt vel viverra ac, congue vitae sem. Cras ultrices sapien ac imperdiet ullamcorper. Ut a nisi in mauris finibus porttitor. Mauris volutpat tristique commodo.
+I've had the pleasure to collaborate with great people on diverse products, from time-critical [MVPs](/projects/toucanbox) at startups to [iterative features](/projects/ecosia) reaching millions of users. My natural curiosity and adaptability have led me to play varied roles in the agile product team. As a designer and product person, I've found a lifetime of tinkering with digital tools, languages and technologies to be extremely advantageous.
+
+Software and technology have immense potential as a force for good in our lives. By distilling complexity with design, I strive to open up this potential to everyone, not just specialists. I believe rigorously designed interfaces with playful interactions are a key ingredient. Another is iteration - testing early and often. The human-centred design process is my guiding north star and the thread that has run throughout my career. I originally hail from Edinburgh, Scotland, I recently called London home and I'm currently based in Berlin.
+
+<!-- T
+time&#8209;critical
+
+ech and design - tinkerer.
+Strong believer in iteration. Testing early and often.
+Software and technology as an enabler. bridge between people and technology.
+to deliver meaningful, lasting experiences through playful interactions and rigorous design thinking.
+filtering complex problems into simple and actionable solutions which allows people to be more efficient with their time -->
+
+<!-- By ‘multidisciplinary designer’ I mean. I'm a design engineer by training and I began my career working as a children's toy designer. I transitioned into digital product five years ago, where I've worked both as a designer and a product manager. sed iaculis ultrices dui, ut lobortis enim commodo et. Nulla id justo in neque aliquet aliquam. Quisque ante ante, consequat in purus sit amet, ornare tempus erat. Phasellus euismod elit sapien, ac ultricies neque viverra vel. Proin suscipit aliquam dui id cursus. Morbi vitae urna vehicula, commodo tortor vitae, laoreet tortor. Praesent dapibus quam vitae dui hendrerit, sed fringilla orci rutrum. Etiam viverra a lorem quis pellentesque. Vivamus ultricies massa est, nec cursus ipsum eleifend quis. Suspendisse sodales pretium tristique.
+
+Nulla urna magna, feugiat in hendrerit consequat, fermentum vel enim. Etiam maximus dolor sit amet vehicula eleifend. Morbi fringilla lorem urna, nec aliquet odio dictum a. Donec nunc augue, tincidunt vel viverra ac, congue vitae sem. Cras ultrices sapien ac imperdiet ullamcorper. Ut a nisi in mauris finibus porttitor. Mauris volutpat tristique commodo. -->
 
 <!-- <p class="subtitle">
   How would we survive without apps? Apps can transform your mobile device into essential tools like a harmonica, disco ball or convincing moustache. Somewhere out there is the perfect storm of touchscreen technology to fix everything that’s wrong with your life.
@@ -125,21 +142,21 @@ Nulla urna magna, feugiat in hendrerit consequat, fermentum vel enim. Etiam maxi
 
 - Rockstar North -->
 
-I built this website with [Vue.js](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), [Three.js](https://threejs.org/), SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress](https://vuepress.vuejs.org/).
-
 <template v-slot:aside>
 
 **Design**
-Etiam consequat urna ut mauris lacinia placerat. Nunc nulla est, pharetra blandit tincidunt eget, ullamcorper in quam.
+UX, UI, interaction, motion, user research and testing, visual design, illustration, sketching, 3D modelling
 
 **Technology**
-Phasellus dapibus sodales pretium. Mauris et magna in est interdum sagittis. Vivamus ac ullamcorper quam.
+[Web development](/#), Unity (C#), iOS (Xcode, Swift)
+
+<!-- I built this website with [Vue.js](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), [Three.js](https://threejs.org/), SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress](https://vuepress.vuejs.org/). (Vue, Angular, React, WebGL, Node.js, Ruby)-->
 
 **People**
-Art Direction • Branding • Digital • Graphic Design • Installations • Moving Image • Web Development
+Leadership, stakeholders, mentoring, training
 
 **Product**
-Phasellus dapibus sodales pretium. Mauris et magna in est interdum sagittis. Vivamus ac ullamcorper quam.
+Strategy, Analytics, A/B testing
 
 </template>
 
