@@ -321,17 +321,18 @@ export default {
   display: inline
   width: 1em
   height: 1em
-  bottom: 0.83em
-  left: 0.1em
+  bottom: 0.82em
+  left: 0.4em
   vertical-align: bottom
   padding: 0
   position: relative
   transform-origin: 0 100%
   transform: scale(0.24)
+  @media screen and (min-width: $tablet)
+    bottom: 0.7em
   @media screen and (min-width: $largeformat)
+    bottom: 0.72em
     transform: scale(0.3)
-    bottom: 0.85em
-    left: 0.15em
   // &::after
   //   content: ' '
   //   position: absolute

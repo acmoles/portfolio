@@ -2,6 +2,8 @@ import * as THREE from 'three';
 import { EventTarget } from 'event-target-shim/dist/event-target-shim.mjs';
 import anime from 'animejs';
 import updateOnScroll from 'uos';
+import { getViewport } from '@theme/util'
+import config from '@theme/../config.js'
 
 export class Interactions extends EventTarget {
 
@@ -29,10 +31,12 @@ export class Interactions extends EventTarget {
       this.NOMINAL_GRID_Y = this.gridElements[0].y;
       this.HOVER_Y = this.NOMINAL_GRID_Y + 0.25;
 
-      this.container.addEventListener( 'mousemove', this.updateMouse.bind(this), false );
-      this.container.addEventListener( 'mousedown', this.onClick.bind(this), false );
-      this.container.addEventListener( 'touchstart', this.onClick.bind(this), false );
-
+      if (getViewport('y') > config.breakpoints.tablet) {
+        this.container.addEventListener( 'mousemove', this.updateMouse.bind(this), false );
+        this.container.addEventListener( 'mousedown', this.onClick.bind(this), false );
+        this.container.addEventListener( 'touchstart', this.onClick.bind(this), false );
+      }
+      
       updateOnScroll(0, (window.innerHeight / 1.5), progress => {
       // TODO: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
        this.dispatchEvent( new CustomEvent('scroll', { detail: progress }) );

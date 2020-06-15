@@ -156,7 +156,7 @@ UX, UI, interaction, motion, user research and testing, visual design, illustrat
 Leadership, stakeholders, mentoring, training
 
 **Product**
-Strategy, Analytics, A/B testing
+Strategy, analytics, A/B testing
 
 </template>
 

@@ -60,6 +60,9 @@ export default {
   .page-nav.about-nav
     .page-nav-column
       top: 0
+    .item-title
+      display: inline-flex
+      align-items: center
     .action
       @include button-override
       text-align: left
@@ -73,10 +76,12 @@ export default {
         display: block
         padding-bottom: 100%
       .image
-        margin-top: 0
-        width: 20em
         position: relative
-        left: 2px
+        margin-top: 0
+        width: 100%
+        @media screen and (min-width: $desktop)
+          width: 20em
+          left: 2px
       .background
         background-color: $steel
         position: absolute
@@ -84,5 +89,20 @@ export default {
         bottom: 0
         width: 50vw
         border-left: 2px solid $black
+
+  @media screen and (max-width: $desktop)
+    .page-nav.about-nav, .page-nav.about-nav .container
+      height: auto
+
+    .page-nav.about-nav
+      .photo .background
+        display: none
+      .column.action
+        padding-top: 3em
+
+    .photo
+      padding-top: 1.25em
+
+
 
 </style>

@@ -113,6 +113,8 @@ export default {
 
   .section.is-timeline
     padding: 3rem 0 18rem 0
+    @media screen and (max-width: $desktop)
+      padding: 3rem 0 12rem 0
 
 
 

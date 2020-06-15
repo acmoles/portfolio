@@ -159,6 +159,10 @@ function resolvePageLink (
         width: 100%
         height: 12em
         left: 0
+    .prev, .action
+      .text-group
+        max-width: unset
+        padding-right: 2.75em
 
 
 

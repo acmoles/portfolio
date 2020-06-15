@@ -55,7 +55,7 @@ import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
 import { topPadding } from '@theme/mixins/topPadding.js'
 import updateOnScroll from 'uos'
 // import debounce from 'lodash.debounce'
-import { getScrollTop, getViewport } from '../../util'
+import { getScrollTop, getViewport } from '@theme/util'
 
 export default {
   components: { ProjectExternalLink },
