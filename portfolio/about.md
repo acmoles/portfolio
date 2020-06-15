@@ -121,10 +121,17 @@ Let’s break that down a bit. My training was in [Product Design Engineering](/
 
 I've had the pleasure to collaborate with great people on diverse products, from time-critical [MVPs](/projects/toucanbox) at startups to [iterative features](/projects/ecosia) reaching millions of users. My natural curiosity and adaptability have led me to play varied roles in the agile product team. As a designer and product person, I've found a lifetime of tinkering with digital tools, languages and technologies to be extremely advantageous.
 
-Software and technology have immense potential as a force for good in our lives. By distilling complexity with design, I strive to open up this potential to everyone, not just specialists. I believe rigorously designed interfaces with playful interactions are a key ingredient. Another is iteration - testing early and often. The human-centred design process is my guiding north star and the thread that has run throughout my career. I originally hail from Edinburgh, Scotland, I recently called London home and I'm currently based in Berlin.
+What drives me is a belief that software and technology have immense potential to enhance our creativity. By distilling complexity with design, I strive to open up this potential to everyone, not just specialists. Rigorously designed interfaces with playful interactions are a key ingredient. Another is iteration - testing early and often. The human-centred design process is my guiding north star and the thread that has run throughout my career. I originally hail from Edinburgh, Scotland, I recently called London home and I'm currently based in Berlin.
 
-<!-- T
+<!--
+as a force for good in our lives
+
+
 time&#8209;critical
+
+
+I'm using cookies on this website because without them the entire internet would go to shit - fine
+
 
 ech and design - tinkerer.
 Strong believer in iteration. Testing early and often.

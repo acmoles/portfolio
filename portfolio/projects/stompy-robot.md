@@ -180,6 +180,17 @@ In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis 
 
 Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
+<!--
+
+Nova is a squad-based action RPG for tablet devices. I collaborated with an artist to create the visual style, silhouetting ships against a bright background and overlaying heavy glow effects for weapons, engines, highlights. A major focus was to take advantage of touch controls and streamlining interactions with the UI and squad control.
+
+
+Nova is an action-strategy game for tablet devices. The player controls an elite squad of heroes in the far future as they endeavour to defeat the oppressive galactic powers present in the Milky Way galaxy.
+
+Players will acquire new heroes and weaponry as they progress in the game. Heroes and weapons have unique abilities which the player can combine to develop the most effective strategy for defeating their opponents.
+
+ -->
+
 </template>
 
 <template v-slot:aside>

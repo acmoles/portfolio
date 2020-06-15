@@ -62,7 +62,7 @@ A separate motivation was to increase my empathy for colleagues and stakeholders
 
 **Timeframe** 2018
 
-**Team** (Individual project)
+**Individual project**
 
 <!-- _This image shows a mixture of hand-made and procedurally generated pendants_ -->
 

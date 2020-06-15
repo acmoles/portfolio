@@ -1,7 +1,7 @@
 ---
 uid: 10
 title: Art Lebedev Studio
-subtitle: Channelling an agency style
+subtitle: Channelling a house style
 type: single
 navStyle:
   style: light
@@ -19,7 +19,7 @@ hasFooter: true
 ::: slot top
 
 <Stage-ProjectStage :noise="true" ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/"
-description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla.">
+description="Art Lebedev Studio is the first and largest independent design studio in Russia. Founded in 1995 with over 300 employees today.">
 
   <template v-slot:visual-background>
     <figure class="full-screen">
@@ -40,29 +40,37 @@ description="Proin volutpat in purus a lobortis. Praesent nec purus eu metus vol
 
 ## Context
 
-Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec.
+The studio is best known internationally for the [Optimus Maximus](https://www.artlebedev.com/optimus/) keyboard which features a customisable OLED display in every key. Within Russia it's famous for redesigning the Moscow metro map and synonymous with internet brands like Yandex and Alfa-bank.
 
-Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur tortor in nibh vulputate viverra. Integer fringilla orci enim, non efficitur erat elementum vel. Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit. Pellentesque euismod sodales ipsum in mattis.
+I was attracted by the irreverent humour and the product design department's emphasis on craft, with influences from automotive design, a discipline which I've always admired. As an intern, I was immediately treated as a fully fledged member of the team and thrown into diverse projects covering consumer electronics, aviation, gifts, architecture and urban objects.
 
-Suspendisse potenti. Praesent risus massa, vulputate eget turpis in, dignissim tincidunt odio
+It was to challenge myself that motivated me to pursue an opportunity in far-flung Moscow. I wanted to refine my skills, particularly sketching form and my stylistic sensibilities. Just under 9 months emulating the studio's house style under the highest standards for quality have left a lasting impression on my practice.
+
+
+
+<!--
+
+Automotive inspired consumer product design. I've always admired the craft and skill involved in automotive design.
+
+Outsider status is appealing. So is the irreverent sense of humour. I wanted to learn this craft for myself. To be able to channel the studio house style.
+
+ -->
 
 </template>
 
 <template v-slot:side>
 
 **Product**
-Responsive landing page and signup web application
-
-**Sector**
-Subscription e-commerce
+Various consumer and B2B products
 
 **Timeframe**
-2017
+2012-2013
+
+**My role**
+Industrial designer
 
 **Team composition**
-CTO, product designer*, two full-stack developers, stakeholders in Marketing and Creative
-
-_I have omitted confidential information in this case study. All information and images are my own unless stated otherwise._
+Creative director, 3 industrial designers, 2 3D modellers, visualisation expert
 
 
 </template>
@@ -94,13 +102,20 @@ _I have omitted confidential information in this case study. All information and
 
 ## Highlights
 
+<p class="subtitle">
+Anthony has shown a great persistence on one particular project where almost everyone in the design team lost enthusiasm and hope due to very strict technological, ergonomic and layout constrains. He literally saved the project and brought back optimism and belief.
+</p>
+
+Timour Bourbaev, Creative Director of Product Design, referring to NITA air traffic control
+
+
 </template>
 
 <template slot="slot1">
 
 #### NITA air traffic control
 
-Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
+The console can be configured for various workflows including command post, flight controller and operations. In each case there are strict international regulations regarding ergonomics and safety.
 
 </template>
 
@@ -108,7 +123,7 @@ Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan
 
 #### Oktopus toilet plunger
 
-Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+It started as a humorous 'what if?' and became of product for ALS's network of designer stores. The challenge lay in finding an iconic form which could be convincingly rendered in the typical materials of a plunger to cost.
 
 </template>
 
@@ -116,7 +131,7 @@ Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim
 
 #### Scout helicopter
 
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis.
+I was privileged to be involved in interior, exterior and interface design for this concept light helicopter. It aims to offer never-before seen simplicity and affordability.
 
 </template>
 
