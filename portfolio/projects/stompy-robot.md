@@ -173,10 +173,8 @@ Game developer/designer
 ## Nova
 
 <p class="subtitle">
-  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
+  We built a tactical RTS action game, which specifically aims to leverage the interaction opportunities offered by touch screens.
 </p>
-
-tactical RTS action game
 
 In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 

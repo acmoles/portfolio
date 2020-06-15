@@ -61,11 +61,11 @@ Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur t
 
 Suspendisse potenti. Praesent risus massa, vulputate eget turpis in, dignissim tincidunt odio -->
 
-We made impressive progress on our mobile apps with only two developers and a share of my overall capacity as a product designer. By mid 2019, with growing user numbers and a renewed strategic focus on mobile, it was time to found a new agile product team with a focus on native apps. I took on the role of product manager and team leader, filling in as product designer until we made the necessary hire. Over the next three months we added two developers and a designer to the team.
+We made impressive progress on our mobile apps with only two developers and a share of my overall capacity as a product designer. By mid 2019, with a growing user base and a renewed strategic focus on mobile, it was time to found a new agile product team with a focus on native apps. I took on the role of product manager and team leader. Over the next three months we added two developers and a designer to the team.
 
-The primary purpose of Ecosia's native apps is to make searching easy on major platforms. Web search resides at the meta or system level; it's one way in which devices augment our brains. Deep platform knowledge and user empathy were necessary to create search experiences which fit seamlessly into people's daily lives.
+The primary purpose of Ecosia's native apps is to make searching easy on major platforms. Web search resides in a meta space. It's naturally multi-platform and one way in which devices augment our mental abilities. So it's critically important that Ecosia's apps fit seamlessly into user's daily lives and I found that deep user empathy and platform knowledge were key to achieving this.
 
-A second aspect of our apps vision is that they connect users with Ecosia's mission. In early 2020 we extended our thinking beyond searching and browsing; asking ourselves how we can help users make further incremental changes in their daily lives.
+Another aspect of the vision is to connect users with the tree-planting mission. In early 2020 we extended our thinking beyond searching and browsing by asking ourselves how we can help users make further incremental changes in their daily lives.
 
 <!--
 
@@ -294,7 +294,7 @@ The Ecosia Android app offers the familiarity of Chromium but with Ecosia search
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> is a fork of the Chromium browser. The advantage is a ready&#8209;made and familiar browsing experience. But the drawback is the enormous time investment required to keep it up-to-date. I facilitated a design thinking process with developers to identify ways we might accelerate the update process and then supported them by slicing the work and establishing milestones. In both cases my technical background was an invaluable asset which enabled me to participate in discussions and offer meaningful leadership.
+</Content-ModalLink> is a fork of the Chromium browser. The advantage is a ready&#8209;made and familiar browsing experience. But the drawback is the enormous time investment required to keep it up-to-date. I facilitated a design thinking process with developers to identify ways we might accelerate the update process and then supported them by slicing the work and establishing milestones. In both cases my technical background was a valuable asset which enabled me to participate in discussions and offer meaningful leadership.
 </p>
 
 <template slot="aside">

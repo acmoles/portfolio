@@ -223,9 +223,6 @@ export default {
 @import "@theme/styles/variables.sass"
 @import "@theme/styles/mixins.sass"
 
-$relative-noise-url: url('../../plugins/plugin-outside-content/dark-noise-heavy.png')
-$relative-noise-url-stronger: url('../../plugins/plugin-outside-content/dark-noise-heavy-1_5extra.png')
-
 // Card background
 
 .project-card

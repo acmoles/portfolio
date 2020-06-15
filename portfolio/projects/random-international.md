@@ -19,7 +19,7 @@ hasFooter: true
 ::: slot top
 
 <Stage-ProjectStage :noise="true" ctaLabel="random-international.com" ctaUrl="https://www.random-international.com/"
-description="Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit.">
+description="Fly is an interactive art installation built for the 4th Moscow Biennial of Contemporary Art.">
 
   <template v-slot:visual-background>
     <figure class="full-screen">
@@ -37,14 +37,21 @@ description="Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fer
 
 ## Context
 
-Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec.
+Random International design and build technology powered interactive art installations. My ongoing focus is bridging the real and digital worlds, challenging current thinking about interactivity and exploring how people relate to rapidly changing technology. So I was very please to join them as an intern in 2010.
 
-Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur tortor in nibh vulputate viverra. Integer fringilla orci enim, non efficitur erat elementum vel. Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit. Pellentesque euismod sodales ipsum in mattis.
+In the first weeks I helped assemble and install [Swarm Study III](https://www.random-international.com/swarm-study-iii-2011) in the V&A, I paid a maintenance visit to [Duplex](https://www.random-international.com/duplex-2011) and created a new PCB bracket for [Self Portrait](https://www.random-international.com/self-portrait-2010). Getting hands on with studio's existing artworks taught me a great deal about how to manufacture bespoke mechanical/electrical objects. It gave me a firm foundation to contribute meaningfully to the next project.
 
-Suspendisse potenti. Praesent risus massa, vulputate eget turpis in, dignissim tincidunt odio
+With [Fly](https://www.random-international.com/fly-2011), I began by researching mechanical solutions and talking to suppliers regarding challenges like structural glass, pulley systems and cable tensioning. My role gradually expanded so that by the time we packed the installation for shipment I had been responsible for the design, prototyping and testing of almost every mechanical component. The faith placed in me by the Random International team turned out to be well founded, although as we constructed the installation in Moscow I learnt some valuable lessons about designing for ease of assembly.
 
 <!-- Glass, cable, machined aluminium, pulley, custom control system and software
 200 x 200 x 200 cm
+
+Random International design and build technology powered interactive art installations. I helped them create Fly, an exhibit for the 4th Moscow Biennial of Contemporary Art. My involvement spanned refining the concept to independently detailing the design; CAD, prototyping, sourcing and manufacture.
+
+As a student
+bringing real-life experiences into the digital world, challenging current thinking of technology interaction
+As a student of of Product Design Engineering, this was exactly the blend of design and technology
+Sought out. Lacking technology (interactivity, digital, software, blend) human responses to technology and the rapidly changing conditions of present day life. Emotional experiences.
 
 Fly studies the movement of objects and insects within a confined space. An abstract representation of a fly is held captive inside a glass box, centrally ensnared by eight cables. The behaviour of this fly is controlled by a unique and autonomous algorithm, accurately simulating the observed behaviour of real flies. The fly has the freedom to move anywhere within its box, but lacks spatial reference. RANDOM INTERNATIONAL has applied this pattern of movement to an inanimate object, as though it were trapped beneath a watch-glass; exploring not only the behaviour of objects but also that of humans. When the fly senses the presence of a person at its perimeter, it changes the demeanour of its flight in response. This continuing physical interplay of action and reaction can offer a new perspective to our own behaviour, its effects, and apparent freedom, in the current age. Fly premiered at the 4th Moscow Biennial of Contemporary Art, curated by Peter Weibel.
 
