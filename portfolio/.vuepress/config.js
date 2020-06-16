@@ -31,7 +31,7 @@ module.exports = {
       // { text: 'Projects', ariaLabel: 'Projects link', link: '/projects/' },
       { text: 'About', ariaLabel: 'About link', link: '/about/' },
       { text: 'Contact', ariaLabel: 'Contact menu', items: [
-          { text: 'Email', link: 'https://email.com' },
+          { text: 'Email', link: 'mailto:acmoles@gmail.com' },
           { text: 'Linkedin', link: 'https://linkedin.com' },
           { text: 'Github', link: 'https://github.com' }
       ] },

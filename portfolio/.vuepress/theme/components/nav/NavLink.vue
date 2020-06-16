@@ -7,28 +7,41 @@
     :exact="exact"
   >{{ item.text }}</router-link>
   <a
+    v-else-if="isMailto(link)"
+    v-clipboard:copy="splitMailto(link)"
+    v-clipboard:success="onCopy"
+    v-clipboard:error="onError"
+    @focusout="focusoutAction"
+    class="navbar-item copy"
+  >
+    {{ copyTextMessage ? copyTextMessage : item.text }}
+  </a>
+  <a
     v-else
     :href="link"
     @focusout="focusoutAction"
     class="navbar-item external"
-    :target="isMailto(link) || isTel(link) ? null : '_blank'"
-    :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
+    :target="isTel(link) ? null : '_blank'"
+    :rel="isTel(link) ? null : 'noopener noreferrer'"
   >
     {{ item.text }}
   </a>
 </template>
 
 <script>
-// TODO customise OutboundLink
 
-// TODO isMailto, then use copy component
-
-import { isExternal, isMailto, isTel, ensureExt } from '../../util'
+import { isExternal, isMailto, isTel, ensureExt } from '@theme/util'
 
 export default {
   props: {
     item: {
       required: true
+    }
+  },
+
+  data () {
+    return {
+      copyTextMessage: null,
     }
   },
 
@@ -51,14 +64,28 @@ export default {
     isTel,
     focusoutAction () {
       this.$emit('focusout')
+    },
+    onCopy () {
+      this.copyTextMessage = 'Email copied to clipboard'
+      setTimeout(() => {
+        this.copyTextMessage = null
+      }, 1600)
+
+      // TODO global snackbar indicator
+    },
+    onError () {
+      this.copyTextMessage = 'Error'
+    },
+    splitMailto (mailto) {
+      return mailto.split(':')[1]
     }
   }
 }
 </script>
 
 <style lang="sass">
-@import "../../styles/variables.sass"
-@import "../../styles/mixins.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
 
 .navbar-item.single

@@ -26,7 +26,7 @@ description="toucanBox is an award winning startup subscription service deliveri
   <template v-slot:visual-column>
     <figure class="toucan-image">
       <b class="decoration svg-yellow-splat"/>
-      <Heros-ImageHero src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage" style="position: relative"/>
+      <Heros-ImageHero src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage"/>
       <!-- <b class="decoration svg-bee"/> -->
       <!-- <b class="decoration svg-confetti-red"/> -->
       <b class="decoration svg-confetti-yellow"/>
@@ -38,12 +38,18 @@ description="toucanBox is an award winning startup subscription service deliveri
 
 </Stage-ProjectStage>
 
+  <!-- width: 200% -->
+
 <style lang="sass">
 
 .toucan-image
   position: absolute
-  left: -1em
-  width: 200%
+  left: -5em
+  height: 50vh
+  img
+    position: relative
+    height: 100%
+    max-width: initial
 
 .toucan-rag
   padding-right: 2em
@@ -324,9 +330,19 @@ Establish a consistent UI language with a living design system
 
 <template v-slot:column3>
 
-<Content-InfoBox :hasIcon="true">
+<Content-InfoBox :hasIcon="true" :hasAction="true" type="modal" label="See principles" style="margin-bottom: 3em;">
 
-Nulla at arcu sagittis, egestas libero ut, finibus massa.
+At the end of the project, I gathered everything I learnt about our users into a set of principles the whole organisation could benefit from.
+
+<template slot="modal">
+
+### Principles content
+
+In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+
+_Data reflects year-over-year activity for a defined period of time as of December 2017._
+
+</template>
 
 </Content-InfoBox>
 
@@ -648,7 +664,7 @@ The newly-launched signup experience had an immediate impact on toucanBox’s on
 
 Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
 
-### What didn't go well
+### Lessons learnt
 
 Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
 
@@ -673,21 +689,13 @@ This project however, focused on an equally important but somewhat subtler metri
 
 </figcaption> -->
 
-<Content-InfoBox :hasIcon="true" :hasAction="true" type="modal" label="See principles">
 
-Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
-<template slot="modal">
-
-### Principles content
-
-In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
-
-_Data reflects year-over-year activity for a defined period of time as of December 2017._
-
-</template>
-
-</Content-InfoBox>
+<Content-ModalWrapper type="link" url="http://toucanwww.herokuapp.com/" label="toucanBox static website circa 2017">
+  <figure class="image is-3by2">
+    <img class="lazyload" data-src="/images/toucanbox/onboarding-desktop.jpg"" alt="touanBox website in 2017">
+  </figure>
+</Content-ModalWrapper>
 
 </template>
 
@@ -808,7 +816,7 @@ Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere puru
 
 
 
-<Content-QuoteSection quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero." attribute="Donec suscipit pretium"/>
+<Content-QuoteSection quote="I wouldn't want to add my preferences if I can choose my box. It's basically the same thing, except choosing is better." attribute="Sandra Whitehouse, Mum to Harry and Scarlet"/>
 
 
 

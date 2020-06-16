@@ -111,6 +111,7 @@ function resolvePageLink (
   .text-group
     padding-right: 4em
     pointer-events: none
+    position: relative
   .prev, .next, .action
     position: relative
     .background

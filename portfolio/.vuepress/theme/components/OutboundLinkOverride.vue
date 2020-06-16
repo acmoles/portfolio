@@ -18,6 +18,7 @@
 
 <script>
   // TODO override node-modules component @vuepress/core/lib/client/components/OutboundLink.vue
+  // Fixed with CSS - for now. See index.js for component/plugin replacement method - had node module issues before.
 </script>
 
 <style>

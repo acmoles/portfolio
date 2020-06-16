@@ -1,5 +1,5 @@
 <template>
-  <a class="button is-dark project-external-link" target="_blank">
+  <a class="button is-dark project-external-link" target="_blank" rel="noopener noreferrer">
     <span>{{ label }}</span>
     <ExternalIcon/>
   </a>

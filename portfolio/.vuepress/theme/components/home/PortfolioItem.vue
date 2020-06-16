@@ -341,7 +341,7 @@ export default {
         width: 42%
 
 .grid-item
-  .stompy
+  .stompy, .als
     background-color: $steel
 
 .case

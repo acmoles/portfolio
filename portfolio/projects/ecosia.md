@@ -125,13 +125,15 @@ When I joined Ecosia it was at an inflection point. We would soon experience rap
 
 <div class="columns is-centered">
 <div class="column is-two-thirds">
+<Content-ModalWrapper type="link" url="https://acmoles.github.io/maps-ui/" label="Wireframe interaction prototype">
 <figure class="image is-5by4">
 <img class="lazyload" data-src="/images/ecosia/EcosiaMaps-modal.jpg" alt="Ecosia maps vertical">
 </figure>
+</Content-ModalWrapper>
 
 <figcaption>
 
-Ecosia maps posed a unique design challenge. As part of slicing the feature we decided to exclude the search box from the first release. Rather, we would enable users to make pseudo searches for common keywords such as hotels and shopping. These constraints called for creativity. It was satisfying to work on a completely new search vertical. Some work in progress: [wireframe interaction prototype](https://acmoles.github.io/maps-ui/)
+Ecosia maps posed a unique design challenge. As part of slicing the feature we decided to exclude the search box from the first release. Rather, we would enable users to make pseudo searches for common keywords such as hotels and shopping. These constraints called for creativity. It was satisfying to work on a completely new search vertical.
 
 </figcaption>
 </div>
@@ -197,13 +199,15 @@ Even as we grew, there remained a need to be hands-on and responsive. I designed
 
 <div class="columns is-centered">
 <div class="column is-two-thirds">
+<Content-ModalWrapper type="link" url="https://mapvis.netlify.app/" label="View live visualisation">
 <figure class="image is-5by4">
 <img class="lazyload" data-src="/images/ecosia/SearchMap-modal.jpg" alt="Searches map visualisation">
 </figure>
+</Content-ModalWrapper>
 
 <figcaption>
 
-I collaborated with a backend developer, data scientist and marketing manager to design and build this data visualisation in 4 days. As a bonus feature I plotted Ecosia's tree planting sites on the map. It's possible in Brazil to see users searching within 10km of rainforest restored by Ecosia. [View live visualisation](https://mapvis.netlify.app/)
+I collaborated with a backend developer, data scientist and marketing manager to design and build this data visualisation in 4 days. As a bonus feature I plotted Ecosia's tree planting sites on the map. It's possible in Brazil to see users searching within 10km of rainforest restored by Ecosia.
 
 </figcaption>
 </div>

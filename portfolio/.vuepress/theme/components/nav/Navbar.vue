@@ -229,7 +229,7 @@ export default {
           this.cssPosition = 'fixed'
           this.cssTop = 0
           this.burgerBottom = true
-          console.log('bottom')
+          // console.log('bottom')
         })
       }
 

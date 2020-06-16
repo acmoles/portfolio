@@ -52,7 +52,7 @@ In 2013 I joined forces with my brother [Simon Moles](https://www.simonmoles.com
 We worked in the Unity game engine, enabling us to target all major platforms. Our guiding principle was touch-centricity. Mobile games of the time often borrowed existing interaction models, such as on-screen joysticks or pointers. We wanted to play to the strengths of touch.
 
 <p>
-The studio's breakthrough success was with development tools, rather than games. The insights gained building games enabled us to identify valuable workflow improvements in coding and debugging. <a href="https://assetstore.unity.com/packages/tools/gui/srdebugger-console-tools-on-device-27688" target="blank">SRDebugger</a> is still available on the Unity Asset Store. <Content-ModalLink label="Spaced">
+The studio's breakthrough success was with development tools, rather than games. The insights gained building games enabled us to identify valuable workflow improvements in coding and debugging. <a href="https://assetstore.unity.com/packages/tools/gui/srdebugger-console-tools-on-device-27688" target="_blank" rel="noopener noreferrer">SRDebugger</a> is still available on the Unity Asset Store. <Content-ModalLink label="Spaced">
 <template v-slot:modal>
 
 <Content-ImageFrames-SquareImagesRow :content="true" :images="[
@@ -69,7 +69,7 @@ The studio's breakthrough success was with development tools, rather than games.
   Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
 </p>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
+**Lorem ipsum dolor sit amet**, _consectetur adipiscing elit._ Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
 
 </template>
 

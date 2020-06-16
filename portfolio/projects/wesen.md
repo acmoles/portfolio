@@ -20,7 +20,7 @@ hasFooter: true
 
 <!-- Can customers be creators? -->
 <Stage-ProjectStage :noise="true" ctaLabel="wesen.studio" ctaUrl="http://www.wesen.studio"
-description="Wesen enables anyone to create a unique pendant necklace which can be manufactured on demand by a blend of modern and traditional techniques.">
+description="Wesen enables anyone to create and order their unique pendant necklace. It's manufactured on demand by a blend of modern and traditional techniques.">
 
   <template v-slot:visual-background>
     <figure class="full-screen">
@@ -44,11 +44,11 @@ description="Wesen enables anyone to create a unique pendant necklace which can 
 
 Recent years have seen a gradual increase in awareness of product customisation and on-demand manufacturing. But to this day we can see little evidence of the promised revolution due to relatively high prices and no killer app.
 
-In 2015 I had the chance to work at [Makielab](/projects/makielab) on customisable children’s toys. We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage some lessons learnt there, in order to push the envelope of the [Mass Customisation](http://www.google.com) space.
+In 2015 I was pioneering customisable children’s toys at [Makielab](/projects/makielab). We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage some lessons learnt there and push the envelope of [Mass Customisation](https://hbr.org/1997/01/the-four-faces-of-mass-customization).
 
-Firstly, I wanted to explore the possibility of a lightly-constrained creation experience, able to generate infinite variations while being intuitive and fun to use. _I was convinced that suitable constraints could enhance the creativity of customers, rather than restrict it._ Secondly, to completely automate and outsource the fulfillment process.
+Firstly, I wanted to explore the possibility of a lightly constrained creation experience, able to generate infinite variations while being intuitive and fun to use. _I was convinced that suitable constraints could enhance the creativity of customers, rather than restrict it._ Secondly, to completely automate and outsource the fulfilment process.
 
-A separate motivation was to increase my empathy for colleagues and stakeholders as a Product Designer. I wanted to re-experience every stage of digital product development from other perspectives - founder, marketer, product, developer, operations, as well as design.
+Through the process of building a product end-to-end I hoped to increase my empathy for colleagues and stakeholders. I wanted to re-experience every stage of digital product development from other perspectives - founder, marketer, product, developer, operations, as well as design.
 
 <!-- a more freeform creative experience, within constraints to make it easier to pick up -->
 
@@ -453,7 +453,7 @@ The notification window begins by offering tips and later, when appropriate, rep
 
 ## Production assets
 
-With the aim of getting a working product in users hands quickly, I focussed on creating a small number of high quality assets. My approach to visual design was similar. I was able to focus on a minimal set of screens thanks to my earlier work scoping the user flow. I was inspired at that time by the Airbnb Design System and Google Material Design, as well as the design language of fashion and jewellery brands.
+With the aim of getting a working product in users hands quickly, I focussed on creating a small number of high quality assets. My approach to visual design was similar. I was able to focus on a minimal set of screens thanks to my earlier work scoping the user flow. My stylistic inspiration came from the Airbnb Design System, Google Material Design and the design language of fashion and jewellery brands.
 
 <br>
 
