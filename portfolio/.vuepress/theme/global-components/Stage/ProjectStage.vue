@@ -163,7 +163,7 @@ export default {
     color: $white
     .subtitle
       color: $white
-      filter: opacity(78%)
+      opacity: 0.78
 
 @media screen and (max-width: $tablet)
   .stage

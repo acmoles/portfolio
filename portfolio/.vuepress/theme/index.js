@@ -9,6 +9,11 @@ module.exports = (options, ctx) => ({
   plugins: [
     // ['@vuepress/active-header-links'],
     // , options.activeHeaderLinks
+
+    // TODO add sitemap: npm install vuepress-plugin-sitemap
+    // ['sitemap', {
+    //   hostname: 'https://pake.web.id'
+    // }],
     'vuepress-plugin-reading-time',
     require('./plugins/plugin-outside-content/index.js'),
     require('./plugins/plugin-revealer/index.js'),
@@ -16,16 +21,14 @@ module.exports = (options, ctx) => ({
       serviceWorker: false,
       updatePopup: false
     }],
-    [
-      '@vuepress/medium-zoom',
+    ['@vuepress/medium-zoom',
       {
         selector: 'img.medium-zoom',
         options: {
           margin: 24,
           background: null,
         },
-      },
-    ],
+    }],
     ['clean-urls', {
        normalSuffix: '/',
        indexSuffix: '/',

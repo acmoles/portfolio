@@ -21,6 +21,8 @@ body, #app, .layout
 
 body
   overflow-x: hidden
+  @media screen and (min-width: $tablet) and (max-width: $desktop)
+    font-size: 0.875em
   @media screen and (min-width: $largeformat + 1px)
     font-size: 1.125em
 
@@ -29,3 +31,17 @@ a:not(.no-fade):not(.button)
 
 .relative
   position: relative !important
+
+// Anchor link icon replacement
+
+a[target=_blank]:not(.button):not(.navbar-item):not(.footer-contact-links)
+  // margin-right: 1em
+  &::after
+    content: ' '
+    width: 1.5em
+    height: 1.5em
+    opacity: inherit
+    // background-position: 0.1em 0
+    vertical-align: middle
+    display: inline-block
+    background-image: url('../../public/svg-icons/icon_external.svg')

@@ -120,16 +120,13 @@ export default {
     content: ' '
     display: block
     background: darken($black, 3%)
-    // transition: filter .4s linear
     transition: opacity .4s linear
     opacity: 0
-    // filter: opacity(0%)
     pointer-events: none
     z-index: 3
 
 .layout.home.covering, .layout.home.loading
   &::after
-    // filter: opacity(100%)
     opacity: 1
 
 

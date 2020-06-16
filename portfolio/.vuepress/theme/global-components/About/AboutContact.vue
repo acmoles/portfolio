@@ -69,7 +69,7 @@ export default {
       cursor: pointer
       .small-title
         color: $extraDarkSmoke
-        filter: opacity(100%)
+        opacity: 1
     .photo
       &::after
         content: ' '

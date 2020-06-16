@@ -28,7 +28,7 @@ export default {
     background-size: 256px 256px
     background-position: 128px 128px
     animation: flip .3s steps(1) infinite
-    filter: opacity(5%)
+    opacity: 0.05
     pointer-events: none
 
   .noise-adjust
@@ -37,13 +37,13 @@ export default {
     transform: translate3d(0,0,0)
     z-index: 200
     pointer-events: none
-    filter: opacity(0%)
+    opacity: 0
     animation: fadeIn 1s linear forwards
     div
       @include cover-screen
       background-image: url('dark-noise.png')
       background-size: 256px 256px
       animation: flip .3s steps(1) infinite
-      filter: opacity(5%)
+      opacity: 0.05
 
 </style>

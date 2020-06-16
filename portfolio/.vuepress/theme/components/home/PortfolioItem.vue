@@ -297,7 +297,7 @@ export default {
     @media only screen and #{$media-queries}
       background-image: $relative-noise-url-stronger, $gradient
   &.als
-    background-color: $slate
+    background-color: $silver
     background-image: $relative-noise-url, $gradientSubtle
     &.project-panel::after
       content: none
@@ -312,11 +312,11 @@ export default {
   @include pseudo-full
   pointer-events: none
   border-radius: $radius
-  filter: opacity(0%)
+  filter: opacity(0)
   transition: filter 0.3s ease-out
 
 .grid-item:hover .project-card::after
-  filter: opacity(100%)
+  filter: opacity(1)
 
 // Card parallax effect
 

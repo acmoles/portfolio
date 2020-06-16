@@ -102,9 +102,9 @@ export default {
     &.is-active
       .navbar-link, .navbar-link:hover, .navbar-link:active
         color: $white
-        filter: opacity(100%)
+        opacity: 1
         .icon
-          filter: opacity(100%)
+          opacity: 1
 
 @media screen and (max-width: $desktop)
   .navbar-item.has-dropdown
@@ -115,7 +115,7 @@ export default {
         display: block
   .navbar-dropdown, .light .navbar-dropdown
     a.navbar-item
-      filter: opacity(100%)
+      opacity: 1
       color: $button-custom-text-color
 
 
@@ -126,13 +126,13 @@ export default {
     width: 0.5em
     height: 0.5em
     right: 1.25em
-    filter: opacity(64%)
+    opacity: 0.64
     transition: filter 0.3s ease
     transform-origin: 50% 55%
 
 .navbar-item.has-dropdown.is-active
     .navbar-link:not(.is-arrowless)::after
-      filter: opacity(0%)
+      opacity: 0
 
 .dropdown-item
   transition: $button-transition

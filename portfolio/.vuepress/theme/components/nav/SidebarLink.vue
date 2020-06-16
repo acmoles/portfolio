@@ -104,9 +104,9 @@ function renderExternal (h, to, text) {
     line-height: 1.4
     width: 100%
     @include opacity-filter-transition
-    filter: opacity(100%)
+    opacity: 1
     &:hover
-      filter: opacity(50%)
+      opacity: 0.5
     &.active
       color: $blue
       border-left-color: $blue

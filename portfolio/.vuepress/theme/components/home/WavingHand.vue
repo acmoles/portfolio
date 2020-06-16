@@ -333,25 +333,13 @@ export default {
   @media screen and (min-width: $largeformat)
     bottom: 0.72em
     transform: scale(0.3)
-  // &::after
-  //   content: ' '
-  //   position: absolute
-  //   z-index: 1
-  //   width: 1px
-  //   height: 1px
-  //   left: 36%
-  //   top: 42%
-  //   border-radius: 50%
-  //   background: $pink
-  //   box-shadow: 0 0 0.64em 0.32em rgba($pink, 0.76)
-  //   filter: opacity(0%)
 
 .hand-button.animate::after
   animation: handGlow 6s 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86)
-  transition: filter 0.6s ease
+  transition: opacity 0.6s ease
 
 .hand-button.animate:hover::after
-  filter: opacity(100%)
+  opacity: 1
 
 .hitbox
   position: absolute
@@ -362,15 +350,15 @@ export default {
 @keyframes handGlow
   0%
     transform: translateX(-48px) scale(0.5)
-    filter: opacity(0%)
+    opacity: 0
 
   13%
     transform: translateX(0) scale(1)
-    filter: opacity(100%)
+    opacity: 1
 
   100%
     transform: translateX(0) scale(1)
-    filter: opacity(0%)
+    opacity: 0
 
 #hand-container
   cursor: pointer

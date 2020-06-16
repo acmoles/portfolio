@@ -42,6 +42,18 @@ Vivamus sit amet pulvinar diam. Class aptent taciti sociosqu ad litora torquent 
 
 An entire generation of computer users who grew up playing 3D games is poised to join the computing mainstream. They are hungry for novel and innovative application of 3D-related technologies to increase their productivity and improve their daily computing experience. Also in this decade, a vast amount of research capital is being poured into big data visualization technology, 3D scanning, and 3D printing — perhaps legitimizing computing in 3D for the first time in history. Combine this trend with the ever-increasing 3D hardware rendering power of today’s mobile devices — and the ability to harness this power simply and effectively using WebGL — and JavaScript developers are now at the forefront of an exciting wave.
 
+Generation coming up who are fluent in 3D interfaces. The next generation will be XR natives.
+
+
+
+I'm uniquely placed to excel in this new world of 3D interactions.
+
+- Hand sketching
+- 3D design background
+- Craft, making and engineering of physical things
+- Video games and entertainment
+
+
 </template>
 
 <template v-slot:side>

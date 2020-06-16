@@ -273,9 +273,9 @@ export default {
   align-items: center
 
 .logo-site-title
-  filter: opacity(0%)
+  opacity: 0
 .burgered .logo-site-title
-  filter: opacity(100%)
+  opacity: 1
 
 .text-site-title
   color: $white-ter
@@ -284,12 +284,12 @@ export default {
 .light
   .text-site-title
     color: $white
-    filter: opacity(90%)
+    opacity: 0.9
   a.navbar-item, a.navbar-link, span.label
-    filter: opacity(75%)
+    opacity: 0.75
     color: $white
     &.router-link-active
-      filter: opacity(100%)
+      opacity: 1
     &:hover
       color: $white
 

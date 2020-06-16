@@ -39,7 +39,7 @@ description="Makielab was a mobile games and e-commerce startup acquired by Disn
 Monetising mobile games is a tricky subject, particularly when it comes to children. Makielab was founded to explore a new angle on the problem by enabling children to buy physical products based on their unique in-game content. To this end, the company focused both on mobile game development and on e-commerce and toy manufacture.
 
 <p>
-I was part of the agile product team responsible for the later. We worked closely with the games team to ensure a holistic experience across touch-points and I spanned teams as we developed new toys and experiences leveraging the underlying technology. One such project involved a partnership with Disney via the Disney/Techstars accelerator where I demonstrated the possibility of personalised
+I was part of the agile product team responsible for the website and physical products. We worked closely with the games team to ensure a holistic experience across touch-points and I spanned teams as we developed new toys and experiences leveraging the underlying technology. One such project involved a partnership with Disney via the Disney/Techstars accelerator where I demonstrated the possibility of personalised
 
 <Content-ModalLink label="Disney Infinity">
 <template v-slot:modal>

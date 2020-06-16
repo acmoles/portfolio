@@ -64,8 +64,8 @@
 </script>
 
 <style lang="sass">
-@import "../../styles/variables.sass"
-@import "../../styles/mixins.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
 $hamburger-layer-width         : 1.25em
 $hamburger-layer-height        : 2px
@@ -89,7 +89,7 @@ $hamburger-layer-border-radius : 0px
 
   &.disabled
     cursor: not-allowed
-    filter: opacity(25%)
+    opacity: 0.25
 
 .hamburger
     .hamburger-inner::before,
@@ -166,25 +166,25 @@ $hamburger-layer-border-radius : 0px
   transition-duration: 0.22s
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
   .search-inner, .list-inner
-    transition: filter 0.22s ease
+    transition: opacity 0.22s ease
     position: absolute
     width: 100%
     height: 100%
     left: 0
     top: 0
   .search-inner
-    filter: opacity(100%)
+    opacity: 1
   .list-inner
-    filter: opacity(0%)
+    opacity: 0
     transform: rotate(-180deg)
 
   &.is-active
     transform: rotate(180deg)
     transition-timing-function: ease-out
     .search-inner
-      filter: opacity(0%)
+      opacity: 0
     .list-inner
-      filter: opacity(100%)
+      opacity: 1
 
 
 </style>

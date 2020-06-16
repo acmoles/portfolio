@@ -144,10 +144,10 @@ function resolvePageLink (
     margin-top: 0
   .small-title
     color: $extraDarkSmoke
-    filter: opacity(100%)
+    opacity: 1
   .next .small-title
     color: $white
-    filter: opacity(78%)
+    opacity: 0.78
 
 @media screen and (max-width: $desktop)
   .page-nav, .page-nav .container

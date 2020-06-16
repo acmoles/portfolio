@@ -250,7 +250,7 @@ export default {
   .navbar-link
     @include opacity-filter-transition
   .icon
-    filter: opacity(64%)
+    opacity: 0.64
   .label
     display: none
 
@@ -273,11 +273,8 @@ export default {
     font-size: 1em
     &::placeholder
       color: $silver
-      // @include opacity-filter-transition
     &:focus
       cursor: auto
-    // &:focus::placeholder
-    //   filter: opacity(25%)
 
 .suggestions
   list-style-type: none

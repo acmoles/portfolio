@@ -229,7 +229,6 @@ export default {
   pointer-events: none
   @include cover-screen-units
   z-index: 99
-  // filter: opacity(100%)
   opacity: 1
 
 .revealer

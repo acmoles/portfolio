@@ -61,18 +61,18 @@ export default {
   pointer-events: none
   @include cover-screen
   @include make3d
-  filter: opacity(100%)
+  opacity: 1
   z-index: 100
   padding-top: 11em
   transform: translate3D(0, 0, 0) scale3d(1, 1, 1)
 
 
 .revealer-content-fade-enter-active, .revealer-content-fade-leave-active
-  transition: filter $fadeTime $fadeTime ease
+  transition: opacity $fadeTime $fadeTime ease
   // transition: opacity $fadeTime $fadeTime ease
 
 .revealer-content-fade-enter, .revealer-content-fade-leave-to
-  filter: opacity(0%)
+  opacity: 0
   // opacity: 0
 
 

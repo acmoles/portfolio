@@ -115,7 +115,7 @@ export default {
     &::after
       content: "|"
       margin-left: 1em
-      filter: opacity(25%)
+      opacity: 0.25
 
 
 </style>

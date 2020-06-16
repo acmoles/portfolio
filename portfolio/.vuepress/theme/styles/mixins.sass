@@ -40,18 +40,17 @@
   overflow: visible
 
 @mixin opacity-filter-transition
-  transition-property: filter
+  // transition-property: filter
+  // transition-duration: 0.15s
+  // transition-timing-function: linear
+  // &:hover
+  //   filter: $hover-filter
+  // &:active
+  //   filter: $active-filter
+  transition-property: opacity
   transition-duration: 0.15s
   transition-timing-function: linear
-  .is-to-fade
-    transition-property: filter
-    transition-duration: 0.15s
-    transition-timing-function: linear
   &:hover
-    filter: $hover-filter
-    .is-to-fade
-      filter: $hover-filter
+    opacity: $hover-opacity
   &:active
-    filter: $active-filter
-    .is-to-fade
-      filter: $active-filter
+    opacity: $active-opacity

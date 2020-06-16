@@ -38,7 +38,7 @@ toucanBox is an award winning startup subscription service that provides arts an
 
 As we offer a product customers usually haven’t seen before, we knew that our communication and first impression must be flawless.
 
-New customers register through the website. They choose a box type for their child (or children) and create an account, providing relevant details (including email, delivery address and billing information). The first box is a free trial if they are acquired through paid marketing channels. [Wesen anchor](projects/wesen/#going-forward)
+New customers register through the website. They choose a box type for their child (or children) and create an account, providing relevant details (including email, delivery address and billing information). The first box is a free trial if they are acquired through paid marketing channels. [Wesen anchor](/projects/wesen/#going-forward)
 
 
 </template>

@@ -516,7 +516,7 @@ Speed of development was my main criteria when investigating technologies to pow
 
 I learnt that [Shapeways](https://www.shapeways.com/) (leading online 3D printing platform) offered an API with the capability to upload models directly to a private store hosted on their e-commerce platform. In this way, I could completely outsource checkout, payment and fulfilment.
 
-The question was then what steps I would take to enhance users' checkout experience, if any. I was already building 3D-print-ready  geometry on the Wesen backend and saving records in a database. Connecting customers to this record would avoid foreseeable customer service challenges and emailing this information would avoid the need for user accounts. I added email capability using Sendgrid. Customers receive an email with a link to their saved pendant design and a link to their Shapeways product page. They can respond to the email with questions.
+The question became what steps, if any, I would take to enhance users' checkout experience. I was already building 3D-print-ready  geometry on the Wesen backend and saving records in a database. Connecting customers to this record would avoid foreseeable customer service challenges and emailing this information would avoid the need for user accounts. I added email capability using Sendgrid. Customers receive an email with a link to their saved pendant design and a link to their Shapeways product page. They can respond to the email with questions.
 
 <!-- who save their pendant receive an email with a link to their saved
 
