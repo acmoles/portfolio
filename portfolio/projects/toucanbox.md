@@ -93,6 +93,8 @@ Subscription e-commerce
 CTO, 2 full-stack developers, stakeholders in Marketing and Creative
 
 _I have omitted confidential information in this case study. All content is my own unless stated otherwise._
+{ .secondary }
+
 <!-- and does not necessarily reflect the views of toucanBox. -->
 
 </template>
@@ -251,9 +253,13 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 
 <template v-slot:column3>
 
-<figure class="image is-9by16">
-  <img class="lazyload" data-src="/images/toucanBox/users-tall.jpg" alt="Cartoon of users">
-</figure>
+<div class="columns is-gapless">
+  <div class="column is-three-quarters">
+    <figure class="image is-9by16">
+      <img class="lazyload" data-src="/images/toucanBox/users-tall.jpg" alt="Cartoon of users">
+    </figure>
+  </div>
+</div>
 
 </template>
 
@@ -688,6 +694,13 @@ Maecenas porttitor congue enim, at tempus tellus volutpat ut. In ultricies, just
 This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
 
 </figcaption> -->
+
+<Content-InfoBox :hasIcon="true" :hasAction="true" type="link" label="toucanBox static mirror" url="http://toucanwww.herokuapp.com/">
+
+At the end of the project, I gathered everything I learnt about our users into a set of principles the whole organisation could benefit from.
+
+
+</Content-InfoBox>
 
 
 

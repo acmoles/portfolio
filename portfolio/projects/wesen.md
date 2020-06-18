@@ -44,11 +44,11 @@ description="Wesen enables anyone to create and order their unique pendant neckl
 
 Recent years have seen a gradual increase in awareness of product customisation and on-demand manufacturing. But to this day we can see little evidence of the promised revolution due to relatively high prices and no killer app.
 
-In 2015 I was pioneering customisable children’s toys at [Makielab](/projects/makielab). We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage some lessons learnt there and push the envelope of [Mass Customisation](https://hbr.org/1997/01/the-four-faces-of-mass-customization).
+In 2015 I was pioneering customisable children’s toys at [Makielab](/projects/makielab). We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage the lessons learnt and push the envelope of [Mass Customisation](https://hbr.org/1997/01/the-four-faces-of-mass-customization).
 
 Firstly, I wanted to explore the possibility of a lightly constrained creation experience, able to generate infinite variations while being intuitive and fun to use. _I was convinced that suitable constraints could enhance the creativity of customers, rather than restrict it._ Secondly, to completely automate and outsource the fulfilment process.
 
-Through the process of building a product end-to-end I hoped to increase my empathy for colleagues and stakeholders. I wanted to re-experience every stage of digital product development from other perspectives - founder, marketer, product, developer, operations, as well as design.
+I also hoped to increase my empathy for colleagues and stakeholders by building a product end-to-end. To re-experience digital product development from other perspectives - founder, marketer, product, developer, operations, as well as design.
 
 <!-- a more freeform creative experience, within constraints to make it easier to pick up -->
 
@@ -73,7 +73,7 @@ Through the process of building a product end-to-end I hoped to increase my empa
 
 
 
-<Content-ThreeColumnSection padding="is-large">
+<Content-ThreeColumnSection padding="is-equal">
 
 <template v-slot:column1>
 
@@ -107,19 +107,24 @@ UX Product designer
 
 
 
+<Content-ImageFrames-FullImageSection url="/images/wesen/wesen-montage-3.jpg" alt="Montage of further discovery process"/>
+
+
+
+
 <Content-MainSectionDivider aside="Section 1 of 3" title="Discovery"/>
 
 
-
+<!-- People weren\'t asking to create jewellery themselves -->
 
 <Content-PointsSection :content="true" :points="[
-{ src:'/svg-icons/icon_search.svg', alt:'sad face', title:'Jewellery balanced market size and technical constraints', description:'Search keywords paired with customisation typically focused on personal appearance and self expression. Jewellery satisfied this criteria and tends to be small, high value objects suitable for 3D printing.' },
+{ src:'/svg-icons/icon_search.svg', alt:'sad face', title:'Jewellery balanced market size and technical constraints', description:'Search keywords paired with customisation typically focused on personal appearance and self expression. Jewellery was among them and tends to be small, high value objects suitable for 3D printing.' },
 
-{ src:'/svg-icons/icon_conversation.svg', alt:'Group', title:'People weren\'t asking to create jewellery themselves', description:'Search keyword volume was much higher for customisation than creation. This suggested lower awareness and demand for creation, but also less competition to rank. This would have implications for the value-proposition and communication.' },
+{ src:'/svg-icons/icon_conversation.svg', alt:'Group', title:'Creation seems to have lower demand than customisation', description:'Search keyword volume was higher for customisation. The language used by potential customers has implications for the value-proposition and communication. But it\'s also easier to rank for niche queries.' },
 
-{ src:'/svg-icons/icon_gift.svg', alt:'clock', title:'Customised or personalised products tended to be gifts', description:'Based on the messaging on competitor websites. Gifting remains highly seasonal. Google Consumer Barometer (2018) suggested more than 50% of fashion and accessories gift purchases were on mobile.' },
+{ src:'/svg-icons/icon_gift.svg', alt:'clock', title:'Customised or personalised products tended to be gifts', description:'Based on competitor website messaging. Gifting remains highly seasonal. Google Consumer Barometer (2018) suggested more than 50% of fashion and accessories gift purchases were on mobile.' },
 
-{ src:'/svg-icons/icon_coffee.svg', alt:'lightbulb', title:'Customised gifts looked like a growing trend', description:'It wasn\'t hard to find designers in my network who had recently given a customised gift. They shared anecdotes which painted a picture of this becoming increasingly common.' },
+{ src:'/svg-icons/icon_coffee.svg', alt:'lightbulb', title:'Customised gifts looked like a growing trend', description:'It wasn\'t hard to find designers in my network who had recently given a customised gift. They shared anecdotes which painted a picture of this happening increasingly often.' },
 
 { src:'/svg-icons/icon_neutral.svg', alt:'documents', title:'Non-technical people felt daunted by customisation tools', description:'Designers found the process of making their gifts empowering, while non-designers found it initially daunting and later frustrating. Sometimes they looked for expert help.' },
 
@@ -134,7 +139,7 @@ UX Product designer
   I informally interviewed four designers and one non&#8209;designer, each who had recently designed or commissioned bespoke jewellery.
 </p>
 
-At the outset, I wasn’t set on any particular product category. My approach was to broadly investigate the mass customisation market and make a choice based on estimated product-market fit. I used digital marketing techniques to gauge the market potential and understand what language and search terms potential customers might use. I followed up with qualitative interviews.
+At the outset, I wasn’t set on any particular product category. My approach was to broadly investigate the mass customisation market and make a choice based on estimated product-market fit. I used digital marketing techniques to gauge the market size. I followed up with qualitative interviews.
 
 </template>
 
@@ -149,7 +154,9 @@ At the outset, I wasn’t set on any particular product category. My approach wa
 
 ## User profiles
 
-The next step was to clearly define and build empathy for potential customers. Qualitative interviews suggested a primary persona _Gifters_ and a secondary persona _Enthusiasts._ In some cases customers could be both. Enthusiasts are typically a smaller segment, so I decided to focus on gifters. I reasoned that a flow optimised for gifters was unlikely to deter enthusiasts.
+The next step was to clearly define and build empathy for potential customers. Qualitative interviews suggested a primary persona _Gifters_ and a secondary persona _Enthusiasts._
+
+<!-- In some cases customers could be both. Enthusiasts are typically a smaller segment, so I decided to focus on gifters. I reasoned that a flow optimised for gifters was unlikely to deter enthusiasts. -->
 
 </template>
 
@@ -170,7 +177,7 @@ _“I’m looking for something which will show them how much I care”_
 ~ _“It takes ages to find the perfect gift”_
 ~ _“A gift should be personal, something which reminds them of me”_
 ~ _“I want to feel confident giving the gift”_
-
+{ .secondary }
 
 
 </template>
@@ -191,6 +198,7 @@ _“People expect me to find the next trend”_
 ~ _“I like to experiment with new technologies”_
 ~ _“I have a personal style and I carefully curate what I wear”_
 ~ _“I want to wear jewellery no-one else has seen before”_
+{ .secondary }
 
 </template>
 
@@ -218,12 +226,13 @@ _“People expect me to find the next trend”_
 
 ## Scope and objectives
 
-The results of my research posed two main user experience challenges:
+My research posed two key user experience challenges. Firstly, how to communicate the value of lightly-constrained product creation to an audience that isn't explicitly asking for it. Secondly, how to address the anxiety of non-technical users approaching a customisation interface.
 
-- How to communicate the value of lightly-constrained product creation to an audience that currently isn't asking for it?
-- How to address the anxiety of non-technical users approaching a customisation interface?
+There was another important aspect to address; how to build an end-to-end product, which enables customers to buy their creations, while minimising the amount of development effort. To facilitate this I set a tight scope and suitable objectives.
 
-Addressing these became the first pillar of my design activity. The second was to reach a level of product resolution where real customers could make actual orders - I refered to this as _End-to-end._ To facilitate achieving this within a reasonable timeframe I paired back the typical components of an e-commerce flow, leaving behind only the critical elements necessary to win my first customers.
+<!-- which enables customers to order their pendants
+
+Addressing these became the first pillar of my design activity. The second was to reach a level of product resolution where real customers could make actual orders - I refered to this as _End-to-end._ To facilitate achieving this within a reasonable timeframe I paired back the typical components of an e-commerce flow, leaving behind only the critical elements necessary to win my first customers. -->
 
 </template>
 
@@ -233,9 +242,13 @@ Addressing these became the first pillar of my design activity. The second was t
 
 ---
 
+<div class="small">
+
 Build confidence with an e-commerce store that explains the value proposition and allows shoppers to browse pre-designed products. Make it possible for these to be selected as the foundation for further customisation or bought immediately.
 
-Address anxiety and empower non-designers with an intuitive interface that doesn’t require a tutorial and can be learnt within 5 seconds. Enable customers to express themselves meaningfully without requiring a high level of skill or design experience. Minimise the number of controls and progressively disclose supporting features.
+Address anxiety and empower non-designers with an intuitive interface that doesn’t require a tutorial and _can be learnt within 5 seconds._ Enable customers to express themselves meaningfully without requiring a high level of skill or design experience. Minimise the number of controls and progressively disclose supporting features.
+
+</div>
 
 </template>
 
@@ -245,6 +258,8 @@ Address anxiety and empower non-designers with an intuitive interface that doesn
 
 ---
 
+<div class="small">
+
 Make it possible for customers to buy the pendant they create and ensure automated fulfillment of their order.
 
 Save the customer's design and order data, allowing them to return to it and make modifications or repeat orders.
@@ -253,6 +268,8 @@ Establish a line of communication for customers to enquire about their order and
 
 Minimise technical and operational overhead by relying on third-party cloud services where possible. Outsource complex systems like payments and accounts.
 
+</div>
+
 </template>
 
 <template v-slot:column3>
@@ -260,7 +277,7 @@ Minimise technical and operational overhead by relying on third-party cloud serv
 <figure class="image is-2by1">
   <img class="lazyload medium-zoom" data-src="/images/wesen/draft-journey-mvp.png" alt="Flowchart of user journey">
 </figure>
-<figcaption>
+<figcaption class="small">
 
 This simplified journey map indicates features to be outsourced or removed for the pilot - marked by the red dashed line.
 
@@ -289,10 +306,10 @@ This simplified journey map indicates features to be outsourced or removed for t
 ## Low-fi Prototyping
 
 <p class="subtitle">
-With my background in Industrial Design, I was already familiar with 3D modelling software. I assembled a list of promising tools, extending it with input from designers in my network.
+My background in Industrial Design helped me assemble a list of promising 3D modelling tools. I extended it with input from designers in my network.
 </p>
 
-My approach was to re-imagine a tool with simplified interaction or reduced capability and then combine several such tools to see if interesting synergies emerged. To formalise my thinking, I rated these ideas by _Expressiveness_ and (ease of) _Implementation_. During this process I started to think of myself as 'unshackling' expressive modelling tools from their specialist software confines.
+The search for a compelling customisation experience required a non-linear approach. I sometimes reimagined a tool with simplified interaction, other times I constrained its capability. Then I would combine several such tools to see if interesting synergies emerged. To formalise my thinking, I rated these ideas by _Expressiveness_ and (ease of) _Implementation_. During this process I began thinking of myself as 'unshackling' expressive modelling tools from their specialist software confines.
 
 </template>
 
@@ -300,7 +317,7 @@ My approach was to re-imagine a tool with simplified interaction or reduced capa
 
 #### Blender basic interactive
 
-I chose to proceed with an idea combining _Radial array_ and _Control geometry._ I found it personally fun to use - often producing pleasing and unexpected outcomes.
+I chose to proceed with an idea combining _Radial array_ and _Control geometry._ It was fun to use - often producing pleasing and unexpected outcomes.
 
 Blender had proven a useful platform for experimentation. But I wasn't able to use it for value or usability testing because my subjects weren't fluent in the Blender interface.
 
@@ -312,7 +329,7 @@ Blender had proven a useful platform for experimentation. But I wasn't able to u
 
 To overcome this limitation, I quickly built a basic yet functional prototype in WebGL. I also took the opportunity to explore various JS libraries before committing in production.
 
-It was gratifying to see testers immediately move the control points. I observed an attitude of curiosity, even among testers I expected to be daunted by customisation interfaces.
+All testers immediately grasped the affordance and moved the control points. I observed an attitude of curiosity, even among testers I expected to be daunted by customisation interfaces.
 
 </template>
 
@@ -320,9 +337,9 @@ It was gratifying to see testers immediately move the control points. I observed
 
 #### WebGL feasibility
 
-A growing concern was that customers could feel disconnected from the product they would eventually buy.
+My growing concern was that customers could feel disconnected from the product they would eventually buy.
 
-To mitigate this risk, I prioritised reaching a high level of graphical realism. Matcap shaders offered a solution which also met performance requirements.
+I prioritised reaching a high level of graphical realism to mitigate this risk. Matcap shaders offered a solution which also met performance requirements.
 
 </template>
 
@@ -449,64 +466,44 @@ The notification window begins by offering tips and later, when appropriate, rep
 
 
 
-<Content-TextSection columnOffset="title-offset">
+<Content-ImageFrames-SquareImagesRow :content="true" :images="[
+{ url:'/images/wesen/Iconography-square.png', alt:'Production icon assets', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'/images/wesen/product-rendering.jpg', alt:'WIP product rendering', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'/images/wesen/handheld.jpg', alt:'WIP product photography', caption:'Square image caption 3', slot:'slot3', iframe:false },
+]">
+
+<template slot="content">
 
 ## Production assets
 
-With the aim of getting a working product in users hands quickly, I focussed on creating a small number of high quality assets. My approach to visual design was similar. I was able to focus on a minimal set of screens thanks to my earlier work scoping the user flow. My stylistic inspiration came from the Airbnb Design System, Google Material Design and the design language of fashion and jewellery brands.
-
-<br>
-
-<div class="columns is-variable is-6">
-<div class="column">
-<figure class="image is-square">
-<img class="lazyload" data-src="/images/wesen/Iconography-square.png" alt="Production icon assets">
-</figure>
-<figcaption>
-
-I created a series of SVG icons inspired by the Montserrat font.
-
-</figcaption>
-</div>
-
-<div class="column">
-<figure class="image is-square">
-<img class="lazyload" data-src="/images/wesen/product-rendering.jpg" alt="WIP product rendering">
-</figure>
-<figcaption>
-
-Photorealistic renders enabled me to communicate the variety of products possible.
-
-</figcaption>
-</div>
-
-
-</div>
-
-
-<template slot="aside">
-
-<figure class="image is-16by9 transparent-image wesen-combined">
-<img class="lazyload" data-src="/images/wesen/combined_wesen.png" alt="Production UI">
-</figure>
-
-<style lang="sass">
-
-  @media screen and (min-width: 768px)
-    .wesen-combined
-      transform-origin: top left
-      transform: scale(2.8)
-
-</style>
+With the aim of getting a working product in users hands quickly, I focussed on creating a small number of high quality assets. My approach to visual design was similar, aided by my earlier work scoping down the user flow. I was influenced by the Airbnb Design System, Google Material Design and the design language of fashion and jewellery brands.
 
 </template>
 
-</Content-TextSection>
+<template slot="slot1">
+
+I created a series of SVG icons inspired by the Montserrat font.
+
+</template>
+
+<template slot="slot2">
+
+Photorealistic renders enabled me to communicate the variety of products possible.
+
+</template>
+
+<template slot="slot3">
+
+I reused WIP samples for product photography, intending to revisit this in future iterations.
+
+</template>
+
+</Content-ImageFrames-SquareImagesRow>
 
 
 
 
-<Content-MainAsideSection :content="true" :aside="true" columnOffset="table-offset">
+<Content-MainAsideSection :content="true" :aside="true">
 
 <template v-slot:content>
 
@@ -545,9 +542,31 @@ In-house payment and order management systems are a considerable technical commi
 
 <template v-slot:aside>
 
-<div class="box content">
+<Content-Techstack
 
-**WebGL framework**
+:techs="[
+{ title:'WebGL', description:'Three.js' },
+{ title:'UI', description:'Angular 2+' },
+{ title:'CSS', description:'SASS, Bulma' },
+{ title:'Backend', description:'Node.js, Express, MongoDB' },
+{ title:'APIs', description:'Sendgrid, Shapeways' },
+]"
+
+/>
+
+
+<!-- <div class="box content">
+
+### Techstack
+
+**WebGL framework** Three.js
+~ **UI framework** Guify (prototype) to Angular 2+ (Typescript)
+~ **CSS framework** Bulma
+~ **Backend** Harp.js (prototype) to Node.js, Express, MongoDB
+~ **Email** Sendgrid
+~ **Fulfillment** Shapeways order API
+
+<!-- **WebGL framework**
 Three.js
 
 **Backend**
@@ -565,7 +584,7 @@ Sendgrid
 **Fulfillment**
 Shapeways order API
 
-</div>
+</div> -->
 
 </template>
 
@@ -602,7 +621,7 @@ Building a product oneself is empowering, but it's also inefficient and risky. F
 
 ### Going forward
 
-Wesen is no longer under active development. A possible next step would be to revisit the value proposition and run a concerted marketing campaign. If that looked promising there are several dimensions of the e-commerce experience which could be improved (e.g. reviews/testimonials, user generated content), as well as adding more jewellery types to the platform.
+Wesen is no longer under active development. Possible next steps would be to add gift-card capability, revisit the value proposition and run a concerted marketing campaign. If that looked promising there are several other dimensions of the e-commerce experience which could be improved (e.g. reviews/testimonials, user generated content), as well as adding more jewellery types to the platform.
 
 
 <!--

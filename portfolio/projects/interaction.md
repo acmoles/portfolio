@@ -1,7 +1,7 @@
 ---
 uid: 3
-title: Experiments
-subtitle: Exploring the tools of the future
+title: XR
+subtitle: Experimenting with the tools of the future
 type: single
 navStyle:
   style: light

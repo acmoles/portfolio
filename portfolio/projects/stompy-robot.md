@@ -130,13 +130,22 @@ Game jam
 .
 </p>
 
-<!-- to reimagine the game genres we loved in this new paradigm.
+<!--
+
+to reimagine the game genres we loved in this new paradigm.
 
 which specifically aims to leverage the interaction opportunities offered by touch screens.
 
 Across all popular mobile platforms (iOS, Windows, Android), we design and craft fun, touch-centric games. We believe that a game should be designed for touch, fully exploiting the fresh input medium provided by this new technology.
 
-with the Unity game engine -->
+with the Unity game engine
+
+
+
+Emphasise what I did, what the challenges were, what was learnt in content text
+
+
+-->
 
 </template>
 

@@ -13,6 +13,9 @@
 .section
   position: relative
 
+.section.is-equal
+  padding: $section-padding-equal
+
 .section.is-medium-large
   padding: $section-padding-medium-large
 
@@ -22,7 +25,7 @@
 @media screen and (max-width: $desktop)
   .section
     padding: 6em 0 0 0
-  .section.is-large
+  .section.is-large, .section.is-equal
     padding: 6em 0
   .section.is-medium-large
     padding: 0 0 6em 0

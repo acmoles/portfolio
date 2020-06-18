@@ -68,7 +68,11 @@ th
   font-size: 1.25em
 
 em
-  color: $silver
+  color: $white-bis
+
+p.secondary, dl.secondary
+  em
+    color: $silver
 
 .content
   dt, dd
@@ -80,6 +84,8 @@ ol, ul
 
 .table
   table-layout: fixed
+  thead th
+    line-height: 1
 
 .small
   p
@@ -87,3 +93,6 @@ ol, ul
 
 .no-wrap
   white-space: nowrap
+
+.no-margin-bottom
+  margin-bottom: 0 !important

@@ -3,6 +3,7 @@ uid: 4
 title: toucanBox R&D
 subtitle: Mixing digital and physical play
 type: single
+case1: Case study
 navStyle:
   style: light
   tint: purple-tint
@@ -40,7 +41,7 @@ A toucanBox subscription craft box contains all the materials needed to complete
 
 In my hybrid role as digital product designer and R&D manager, I was given a broad remit to tackle projects across the customer journey. I set strict criteria - setting up a _Project Passport_ to ensure we were laser focussed on key metrics.
 
-Consequently, some initiatives aimed to improve the experience for children, some for parents and often both benefited. The [other toucanBox case study](/toucanbox) covers two projects focussing on parents.
+Consequently, some initiatives aimed to improve the experience for children, some for parents and typically both benefited. For example in early 2017 I led a project to refine the onboarding flow for new customers, that is, the parents ([read the case study](/projects/toucanbox)).
 
 Create by toucanBox aims to move the needle for _customer activation_ - the rate at which trialists convert to fully paying subscribers. We knew the top two reasons for cancellation in trial were _affordability_ and _value for money._ My hypothesis was that exclusive digital content could help address this, without increasing the variable cost of the box.
 
@@ -61,6 +62,7 @@ Children's digital media
 Individual research and development project with stakeholders in Marketing, Creative, Operations and Technology.
 
 _I have omitted confidential information in this case study. All content is my own unless stated otherwise._
+{ .secondary }
 
 </template>
 
@@ -84,7 +86,7 @@ Establish to what extent digital content linked to the trial box can increase ac
 
 ### The outcome
 
-Must resonate with the core value proposition (hands-on crafting and creativity). High friction when moving to a device from the magazine reduced the reach leading to low overal impact.
+Must resonate with the core value proposition (hands-on crafting and creativity). High friction when moving to a device from the magazine reduced the reach, leading to low overal impact.
 
 
 </template>
@@ -93,11 +95,10 @@ Must resonate with the core value proposition (hands-on crafting and creativity)
 
 ### My role
 
-Planning and management
-~ Project Lead
-~ UX Researcher & Strategist
-~ UI Designer
-~ Front-end Developer
+Project Lead
+~ UI/UX Design
+~ Front-end Development
+~ Evaluation
 
 </template>
 
@@ -112,12 +113,12 @@ Planning and management
 
 
 <Content-PointsSection :content="true" :points="[
-{ src:'/svg-icons/icon_sad.svg', alt:'sad face', title:'The box often didn’t seem like good value for money', description:'Unsubscribe data confirmed by customer inverviews. Projects completed for small businesses and startups.' },
-{ src:'/svg-icons/icon_time.svg', alt:'clock', title:'The duration of the toucanBox experience could feel short', description:'The later seemed to be most affected by the short duration of the crafting experience. If you don’t care for SEO and don’t want to mess with installing dependencies, these are still great choices.' },
-{ src:'/svg-icons/icon_idea.svg', alt:'lightbulb', title:'What would be distinctive about digital content by toucanBox?', description:'Years experience working for clients like Google and Amazon.' },
-{ src:'/svg-icons/icon_search.svg', alt:'search', title:'Top apps and search queries suggested areas of focus', description:'VuePress is focused on content-centric static sites and provides features tailored for technical documentation out of the box.' },
-{ src:'/svg-icons/icon_docs.svg', alt:'documents', title:'Device access and ability lifts at the upper range of our age group', description:'Award winning team members.' },
-{ src:'/svg-icons/icon_device.svg', alt:'device', title:'Digital toys for young children have specific characteristics', description:'Never competitive. Market/competitor research. Strong connection to the core value proposition (hands-on crafting and creativity) is critical. Friction of moving to a device from the magazine reduced the reach.' },
+{ src:'/svg-icons/icon_sad.svg', alt:'sad face', title:'The box often didn’t seem like good value for money', description:'Even satisfied customers felt the product was somewhat overpriced. They focussed on the value of the materials, rather than the holistic experience.' },
+{ src:'/svg-icons/icon_time.svg', alt:'clock', title:'The duration of the toucanBox experience could feel short', description:'Some customers would craft with their children, others would use the box to get a moment of peace. In both cases they wanted a longer lasting experience.' },
+{ src:'/svg-icons/icon_idea.svg', alt:'lightbulb', title:'What would be distinctive about digital content by toucanBox?', description:'toucanBox customers want to offer their children hands-on play away from the screen. So any digital content could not be a screen-only experience.' },
+{ src:'/svg-icons/icon_search.svg', alt:'search', title:'Top apps and search queries suggested areas of focus', description:'Creative, Learning, Exploration, Rhythm, Roleplay, Nurture and Story were the top categories on app stores and web search.' },
+{ src:'/svg-icons/icon_docs.svg', alt:'documents', title:'Device access and ability lifts at the upper range of our age group', description:'A survey of parents in Germany (2016, The Kids Want Mobile) found that device access, frequency, session duration and child ability increase rapidly from age 6.' },
+{ src:'/svg-icons/icon_device.svg', alt:'device', title:'Digital toys for young children have specific characteristics', description:'Based on competitor research I could see that apps and games targeting our age group typically aren\'t competitive. They offer open-ended play.'},
 ]">
 
 <template v-slot:content>
@@ -125,10 +126,10 @@ Planning and management
 ## Research
 
 <p class="subtitle">
-  I asked existing toucanBox customers what ‘value for money’ means to them and gathered their attitudes to children's digital media.
+  I asked existing toucanBox customers what <em>value for money</em> means to them and collected their attitudes to children's digital media.
 </p>
 
-Customer acquisition and retention were two of the most discussed performance metrics at toucanBox. This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+My approach was to engage parents with an in-depth interview, intended to flesh out the insights from our automatic unsubscriber survey. Simultaneously I would offer their children popular apps and games to play on an iPhone. Once the interview concluded we switched our attention to what the child was doing, discussing the app and asking questions of the child. This way I gathered detailed qualitative information from the parents and play tested competitor apps with the child.
 
 </template>
 
@@ -144,7 +145,11 @@ Customer acquisition and retention were two of the most discussed performance me
 
 ## User journey and ideation
 
-Customer acquisition and retention were two of the most discussed performance metrics at toucanBox. [User profiles, detailed in the other case study](/toucanbox) this project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+What ways can customers access our digital content? I foresaw three possible routes; dedicated toucanBox native app, online accounts or URL/QR code printed in the box. There was a balance to be struck between the friction to reach the content and the effort required to build the delivery medium. For a pilot, it was hard to justify building a native app or adding the business logic necessary for content to automatically appear in customers' accounts, making printed URLs the natural choice.
+
+I facilitated a company-wide brainstorm for content ideas. They broadly split into two themes _Interactive activity_ and _Content hub._ We agreed to spin out the second concept, into what later became toucanBox Activities Hub (with a focus on SEO and customer acquisition).
+
+<!-- [User profiles](/projects/toucanbox/#who-are-our-customers)  -->
 
 </template>
 
@@ -162,7 +167,7 @@ Customer acquisition and retention were two of the most discussed performance me
 
 #### Magazine
 
-his project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+The magazine in the first box features a double page spread introducing Create by toucanBox.
 
 </figcaption>
 
@@ -181,11 +186,11 @@ his project however, focused on an equally important but somewhat subtler metric
 
 ## Testing prototypes
 
-<p class="subtitle">
-  I asked existing toucanBox customers what ‘value for money’ means to them and gathered their attitudes to children's digital media.
+<p class="subtitle" style="margin-bottom: 0;">
+  I was able to test at toucanBox's regular craft testing sessions with parents and children.
 </p>
 
-Customer acquisition and retention were two of the most discussed performance metrics at toucanBox. This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+<!-- Customer acquisition and retention were two of the most discussed performance metrics at toucanBox. This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate). -->
 
 </template>
 
@@ -193,10 +198,11 @@ Customer acquisition and retention were two of the most discussed performance me
 
 #### Augmented reality (AR) on/in craft
 
-his project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+Add 3D animated characters, enhancements and storytelling to a child’s finished craft project.
 
-- This prototype excited children the least{ .check }
-- The interruption in the story broke the children's attention{ .cross }
+- Children found the concept very compelling{ .check }
+- We observed them using AR in creative ways we didnt foresee "Look I've got wings on my arm"{ .check }
+- No support for AR in current web browsers{ .cross }
 { .check-list }
 
 </template>
@@ -205,7 +211,7 @@ his project however, focused on an equally important but somewhat subtler metric
 
 #### Extended storytelling
 
-his project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+A story in the magazine, with an interactive finale online or in an app. Each new craft is a chapter in a digital adventure.
 
 - This prototype excited children the least{ .cross }
 - The interruption in the story broke the children's attention{ .cross }
@@ -217,10 +223,11 @@ his project however, focused on an equally important but somewhat subtler metric
 
 #### Make a Toucanoo of you!
 
-his project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+Then print it out and colour it in. Toucanoos are cute triangular characters which feature in the toucanBox activity magazine.
 
-- This prototype excited children the least{ .check }
-- The interruption in the story broke the children's attention{ .cross }
+- Engrossed children for up to 45 minutes{ .check }
+- Digital/physical crossover experience{ .check }
+- Not linked to the box theme{ .cross }
 { .check-list }
 
 </template>
@@ -235,7 +242,7 @@ his project however, focused on an equally important but somewhat subtler metric
 
 ## Detailing a candidate
 
-Customer acquisition and retention were two of the most discussed performance metrics at toucanBox. This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+My next steps were to refine the Toucanoo prototype by taking action on test feedback and improving the visual design.
 
 </template>
 
@@ -260,7 +267,7 @@ Many adult testers requested that hand-held items move when the hand moves | Thi
 </figure>
 <figcaption>
 
-This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+Low-fi prototype of the Toucanoo colouring sheet maker, used in early testing
 
 </figcaption>
 
@@ -280,7 +287,7 @@ This project however, focused on an equally important but somewhat subtler metri
 
 ## Visual design
 
-Customer acquisition and retention were two of the most discussed performance metrics at toucanBox. This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+In early 2018 the Creative Team updated the look and feel of the activity magazine. In order to maximise consistency in the journey from magazine to web content, I chose to update the visual style of the experience. It gave a taste of how the new look might translate into UI across toucanBox's web products.
 
 </template>
 
@@ -298,13 +305,13 @@ Customer acquisition and retention were two of the most discussed performance me
 
 </div>
 
-<figcaption>
+<!-- <figcaption>
 
 #### Following the new magazine
 
-his project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+Matching the style of the new toucanBox magazine required a different look and feel from the website.
 
-</figcaption>
+</figcaption> -->
 
 </template>
 
@@ -319,11 +326,11 @@ his project however, focused on an equally important but somewhat subtler metric
 
 ## Development
 
-<p class="subtitle">
+<!-- <p class="subtitle">
   I asked existing toucanBox customers what ‘value for money’ means to them and gathered their attitudes to children's digital media.
-</p>
+</p> -->
 
-Customer acquisition and retention were two of the most discussed performance metrics at toucanBox. This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+I selected WebGL backed HTML Canvas rather than DOM or SVG. My rationale was performance on low-spec mobile devices, which could lean on their graphics processor (GPU) to keep frame-rate high and animations smooth.
 
 </template>
 
@@ -335,7 +342,7 @@ Customer acquisition and retention were two of the most discussed performance me
 
 <figcaption>
 
-Establish to what extent digital content linked to the trial box can increase activation rate. Estimate the costs and benefits of producing more digital content.
+Dozens of Toucanoo accessories packed on a compressed PNG sprite sheet using Texturepacker
 
 </figcaption>
 
@@ -349,7 +356,7 @@ Establish to what extent digital content linked to the trial box can increase ac
 
 <figcaption>
 
-Must resonate with the core value proposition (hands-on crafting and creativity). High friction when moving to a device from the magazine reduced the reach leading to low overal impact.
+Tuning the tweens and sinusoidal functions behind the motion sometimes produced unexpected results.
 
 </figcaption>
 
@@ -358,13 +365,28 @@ Must resonate with the core value proposition (hands-on crafting and creativity)
 
 <template v-slot:column3>
 
+<Content-Techstack
+
+:techs="[
+{ title:'Framework', description:'Jekyll' },
+{ title:'Localisation', description:'Jekyll language plugin' },
+{ title:'Renderer', description:'Pixi.js' },
+{ title:'Build', description:'Browserify, Gulp' },
+]"
+
+/>
+
+<!-- <div class="box content">
+
 ### Techstack
 
-**Framework** Planning and management
-~ **CSS** Customer research and user testing
-~ **Renderer** Prototyping and design iteration
-~ **Localisation** Frontend development
-~ **Framework** Analysis and evaluation
+**Framework** Jekyll
+~ **CSS** SCSS
+~ **Canvas renderer** Pixi.js
+~ **Localisation** Jekyll multi language plugin
+~ **Build** Browserify, Gulp
+
+</div> -->
 
 </template>
 
@@ -383,23 +405,20 @@ Must resonate with the core value proposition (hands-on crafting and creativity)
 <Content-TextSection>
 
 <p class="subtitle">
-  I asked existing toucanBox customers what ‘value for money’ means to them and gathered their attitudes to children's digital media.
+  "When I try to imagine what kind of app or game toucanBox would make, this feels exactly right."
 </p>
-
-Customer acquisition and retention were two of the most discussed performance metrics at toucanBox. This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
-
 
 ### What went well
 
-Establish to what extent digital content linked to the trial box can increase activation rate. Estimate the costs and benefits of producing more digital content.
+The pilot launched in the first box magazine for all trialists. Those customers that accessed the experience were very engaged. There was internal enthusiasm about the initiative and a general feeling it embodied our values.
 
-### What didn't go well
+### Lessons Learnt
 
-Must resonate with the core value proposition (hands-on crafting and creativity) . High friction when moving to a device from the magazine reduced the reach leading to low overal impact.
+I measured _no noticeable change to activation rate_ due to low reach. When I followed up with customers, I discovered the cause was a combination of the friction going from magazine to online and a mental model for arts and crafts which didn't include interactive content. Only once they understood what it was were they interested. I realised it would require considerable effort to educate our customers at scale, with an uncertain outcome.
 
 ### Going forward
 
-Must resonate with the core value proposition (hands-on crafting and creativity) . High friction when moving to a device from the magazine reduced the reach leading to low overal impact.
+Was there a future for digital interactive experiences as part of the toucanBox value proposition? Not in the short-term. The pilot had proven that departing from the core value proposition had potential, but that resources would be better spent focussing on what was already working.
 
 
 <template slot="aside">
@@ -407,11 +426,11 @@ Must resonate with the core value proposition (hands-on crafting and creativity)
 <figure class="image is-9by16">
   <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190429" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </figure>
-<figcaption>
+<!-- <figcaption>
 
-This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
+Useability testing a high fidelity iteration with children.
 
-</figcaption>
+</figcaption> -->
 
 </template>
 
@@ -421,7 +440,7 @@ This project however, focused on an equally important but somewhat subtler metri
 
 
 <Content-MetricsSection padding="is-medium-large" :metrics="[
-{ metric:'40', description:'Projects completed for small businesses and startups.' },
-{ metric:'02', description:'Award winning team members.' },
-{ metric:'103', description:'Years experience working for clients like Google and Amazon.' },
+{ metric:'3x', description:'higher average time on page.' },
+{ metric:'56', description:'minutes longest session.' },
+{ metric:'3.4%', description:'of trialists accessed the experience.' },
 ]"/>

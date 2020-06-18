@@ -1,7 +1,7 @@
 ---
 uid: 9
-title: Lego
-subtitle: Building a uniquely Lego video game experience
+title: LEGO
+subtitle: Building a unique video game experience
 type: single
 navStyle:
   style: light

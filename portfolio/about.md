@@ -117,7 +117,7 @@ I started my career as a teacher and transitioned to UX about 10 years ago. But 
   A multidisciplinary designer creating useful and playful experiences centred on people
 </p>
 
-Let’s break that down a bit. My training was in [Product Design Engineering](/#) and I started my career as a [Toy Designer at Lego.](/#) I transitioned into UX about 5 years ago, pursuing a desire to blend technology and interactivity into my practice. But I never forgot my roots and I'm at my best when bridging the digital/physical divide.
+Let’s break that down a bit. My training was in [Product Design Engineering](/#) and I started my career as a [Toy Designer at LEGO.](/#) I transitioned into UX about 5 years ago, pursuing a desire to blend technology and interactivity into my practice. But I never forgot my roots and I'm at my best when bridging the digital/physical divide.
 
 I've had the pleasure to collaborate with great people on diverse products, from time-critical [MVPs](/projects/toucanbox) at startups to [iterative features](/projects/ecosia) reaching millions of users. My natural curiosity and adaptability have led me to play varied roles in the agile product team. As a designer and product person, I've found a lifetime of tinkering with digital tools, languages and technologies to be extremely advantageous.
 
@@ -147,7 +147,36 @@ Nulla urna magna, feugiat in hendrerit consequat, fermentum vel enim. Etiam maxi
   How would we survive without apps? Apps can transform your mobile device into essential tools like a harmonica, disco ball or convincing moustache. Somewhere out there is the perfect storm of touchscreen technology to fix everything that’s wrong with your life.
 </p>
 
-- Rockstar North -->
+- Rockstar North
+
+
+Rapha feedback highlights
+
+- Homepage 'led' reasonably well
+- 'Experiments' title should be more specific
+- Drawn to Stompy Robot title - entrepreneurial - is it too effective?
+- Would expect case studies to be behind every button, case study label helps though
+- Drawn to Ecosia - colour - but scrolling understands I'm trying to focus reader on wesen
+- TLDR would help for case-studies - maybe hide content behind a button? Considered the possibility of sidebar or toc
+- Split up toucanBox? - notices scroll bar and sees how much scrolling is needed
+- Try to cut where possible Wesen is already over the maximum
+- A little lost among initial content - could be reworked - show more of a path through, what to focus on
+- Show more imagery up front on Wesen? (And toucanBox x2 case studies?) e.g. how it looked in the end.
+- Questioned presenting the company front-and-centre for each project page - more interested in me, what I did, what I'm like, rather than companies
+- Selected further reading/content rather than next, back (questioned the implicit, rather than specific affordances)
+- Use the word affordances somewhere in a case study! Ideally Wesen - control points.
+- Clearly put a lot of effort in, knows what he's talking about
+- Confirmed reading of titles and bold, large text
+- Not that interested in 'About' but impressed - good. Might not read if coming from application
+- Timeline - it's life milestones
+- Overall felt it displayed artistic sensibilities
+
+
+
+
+
+
+-->
 
 <template v-slot:aside>
 
