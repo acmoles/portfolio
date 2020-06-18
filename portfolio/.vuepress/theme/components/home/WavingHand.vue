@@ -96,7 +96,7 @@ export default {
       if (!this.finished) {
         setTimeout(() => {
           this.animateHand()
-        }, 2400)
+        }, 1600)
       }
     },
 

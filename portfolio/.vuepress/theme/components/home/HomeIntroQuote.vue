@@ -6,7 +6,7 @@
   >
     <div ref="container" class="intro-container">
       <p class="subtitle">
-          I'm a multidisciplinary designer creating useful and playful experiences centred on people
+          I'm a designer and leader creating useful and playful experiences centred on people
           <!-- <WavingHand/> -->
       </p>
     </div>

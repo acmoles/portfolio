@@ -132,8 +132,7 @@ function resolvePageLink (
   .action .background
     background-color: $slate
     &:hover, &:active
-      background-color: $slate
-      background-image: $relative-noise-url, $gradientSubtle
+      background-color: lighten($slate, 1.5)
   .next .background
     // border-radius: $radius
     left: -2em

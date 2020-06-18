@@ -1,5 +1,5 @@
 <template>
-  <section class="section is-large background-noise quote-section">
+  <section class="section is-large background-noise quote-section" :class="color">
     <b v-for="n in 128" class="particle"/>
     <div class="container is-fullhd content relative">
       <div class="columns">
@@ -19,6 +19,7 @@ export default {
   props: {
     quote: String,
     attribute: String,
+    color: String,
   },
 
 }
@@ -26,8 +27,8 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../../styles/variables.sass"
-  @import "../../styles/mixins.sass"
+  @import "@theme/styles/variables.sass"
+  @import "@theme/styles/mixins.sass"
 
   .quote-section
     background-color: darken($black, 3%)
@@ -67,6 +68,11 @@ export default {
         background: hsl(random(360), 100%, 65%)
         animation-duration: $t*2s
         animation-delay: 1.25s + (-.001*random(100)*$t)
+
+  .green .particle
+    @for $i from 0 to 128
+      &:nth-child(#{$i + 1})
+        background: hsl(167°, 68%, 13% + random(30))
 
 
 

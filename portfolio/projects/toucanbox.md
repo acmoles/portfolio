@@ -137,6 +137,8 @@ Project management
 </Content-ThreeColumnSection>
 
 
+<!-- <Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse.jpg" alt="Montage of discovery artifacts"/> -->
+
 
 
 <Content-MainSectionDivider aside="Section 1 of 4" title="Discovery"/>
@@ -144,7 +146,7 @@ Project management
 
 
 
-<Content-PointsSection :content="true" :points="[
+<Content-PointsSection padding="is-large" :content="true" :points="[
 
 { src:'/svg-icons/icon_device.svg', alt:'Phone', title:'Prospective customers are usually on their phones', description:'Customer inverview. Usually on social media - facebook - see our ad. Projects completed for small businesses and startups.' },
 
@@ -177,6 +179,7 @@ Analytics, asking customer service, interviewing existing customers and parents 
 </Content-PointsSection>
 
 
+<Content-QuoteSection quote="I wouldn't want to add my preferences if I can choose my box. It's basically the same thing, except choosing is better." attribute="Sandra Whitehouse, Mum to Harry and Scarlet"/>
 
 
 <Content-ThreeColumnSection :content="true" columnOffset="three-offset">

@@ -114,14 +114,14 @@ I started my career as a teacher and transitioned to UX about 10 years ago. But 
 ## Hi, I'm Ant
 
 <p class="subtitle">
-  A multidisciplinary designer creating useful and playful experiences centred on people
+  A designer and leader creating useful and playful experiences centred on people
 </p>
 
-Let’s break that down a bit. My training was in [Product Design Engineering](/#) and I started my career as a [Toy Designer at LEGO.](/#) I transitioned into UX about 5 years ago, pursuing a desire to blend technology and interactivity into my practice. But I never forgot my roots and I'm at my best when bridging the digital/physical divide.
+Let’s break that down a bit. My training was in [Product Design Engineering](/#) and I started my career as a [Toy Designer at LEGO.](/#) I transitioned into UX about 5 years ago, pursuing a desire to blend technology and interactivity into my practice. Recently I've been working as a Product Manager. But I never forgot my roots and I'm at my best when bridging the digital/physical divide.
 
 I've had the pleasure to collaborate with great people on diverse products, from time-critical [MVPs](/projects/toucanbox) at startups to [iterative features](/projects/ecosia) reaching millions of users. My natural curiosity and adaptability have led me to play varied roles in the agile product team. As a designer and product person, I've found a lifetime of tinkering with digital tools, languages and technologies to be extremely advantageous.
 
-What drives me is a belief that software and technology have immense potential to enhance our creativity. By distilling complexity with design, I strive to open up this potential to everyone, not just specialists. Rigorously designed interfaces with playful interactions are a key ingredient. Another is iteration - testing early and often. The human-centred design process is my guiding north star and the thread that has run throughout my career. I originally hail from Edinburgh, Scotland, I recently called London home and I'm currently based in Berlin.
+What drives me is the belief that software and technology have immense potential to enhance our creativity. By distilling complexity with design, I strive to open up this potential to everyone, not just specialists. Rigorously designed interfaces with playful interactions are a key ingredient. Another is iteration - testing early and often. The human-centred design process is my guiding north star and the thread that has run throughout my career. I originally hail from Edinburgh, Scotland, I recently called London home and I'm currently based in Berlin.
 
 <!--
 as a force for good in our lives

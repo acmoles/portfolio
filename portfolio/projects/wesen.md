@@ -117,7 +117,7 @@ UX Product designer
 
 <!-- People weren\'t asking to create jewellery themselves -->
 
-<Content-PointsSection :content="true" :points="[
+<Content-PointsSection padding="is-large" :content="true" :points="[
 { src:'/svg-icons/icon_search.svg', alt:'sad face', title:'Jewellery balanced market size and technical constraints', description:'Search keywords paired with customisation typically focused on personal appearance and self expression. Jewellery was among them and tends to be small, high value objects suitable for 3D printing.' },
 
 { src:'/svg-icons/icon_conversation.svg', alt:'Group', title:'Creation seems to have lower demand than customisation', description:'Search keyword volume was higher for customisation. The language used by potential customers has implications for the value-proposition and communication. But it\'s also easier to rank for niche queries.' },
@@ -144,6 +144,10 @@ At the outset, I wasn’t set on any particular product category. My approach wa
 </template>
 
 </Content-PointsSection>
+
+
+
+<Content-QuoteSection quote="I couldn’t find anything exactly like what I had in mind. In the end they found it so thoughtful." attribute="Designer interviewee on gifting jewellery to their partner" color="green"/>
 
 
 
@@ -418,7 +422,7 @@ At first I imagined a sequence of steps, often referred to as a 'wizard' pattern
 <div class="columns">
 <div class="column is-two-thirds">
 
-I realised this was too cumbersome and restrictive. I evolved my design to include two 'modes' which users could toggle between - sculpt mode and layout mode. But the eureka moment finally came when I remembered that my earlier prototype contained none of this usability 'help' yet testers found it perfectly intuitive. Modes, albeit better than a wizard, still just got in user's way. I stripped it out.
+I realised this was too cumbersome and restrictive. I evolved my design to include two 'modes' which users could toggle between - sculpt mode and layout mode. But the eureka moment finally came when I remembered that my earlier prototype contained none of this usability 'help' yet testers found it perfectly intuitive. Modes, albeit better than a wizard, still just got in users' way. I stripped it out.
 
 Where the wizard pattern did add value, was in separating the expressive phase of creation from tasks necessary to completing the order - adding the necklace chain eyelet, ensuring the pendant was valid for 3D printing and filling out details.
 
@@ -427,36 +431,30 @@ Where the wizard pattern did add value, was in separating the expressive phase o
 
 </Content-FreeSection>
 
-<Content-ImageFrames-MainImageSection padding="is-medium-large" imageClass="is-2by1" url="/images/wesen/messages.png" alt="Message window which informs users of geometry problems and offers help" :aside="true" :content="true">
-
-<template v-slot:content>
+<Content-TextSection padding="is-medium-large" columnOffset="title-offset">
 
 ## Input validation for 3D geometry
 
-Offering users expressive tools introduced a challenging problem - how to ensure they create valid geometry for manufacture by 3D printing? Through user testing I identified four common error cases:
+Offering users expressive tools introduced a challenging problem; how to ensure they create valid geometry for manufacture by 3D printing? Through user testing I identified four common error cases:
 
 1. The radial segments do not connect, so that the necklace is not a single volume
 2. The eyelet does not connect to the pendant
 3. The pendant blocks the eyelet so that the chain would not fit
-4. The pendant is extremely large
+4. The pendant is overly large
 
-I developed a system to detect these problems and display error notifications. Although I was aware of additional hard-to-detect problems such as non-manifold or thin geometry, since they rarely occurred, I chose not to address them in the MVP. Rather, I planned to manually fix these models for customers.
+I developed a system to detect each of these problems. The notification window begins by offering tips and later, when appropriate, reports geometry errors. I was aware of additional hard-to-detect problems such as non-manifold and thin geometry but I chose not to address them in the MVP since they rarely occurred, preferring to manually fix these models for customers.
 
 <!-- An important lesson from user testing was not to show these notifications until the user signals a desire to advance in the purchase flow. Otherwise, they completely counteracted my efforts to reassure non-technical users. Error notifications start once they become useful; when the user adds an eyelet for the necklace chain. -->
 
-</template>
-
 <template v-slot:aside>
 
-<div class="box">
-
-The notification window begins by offering tips and later, when appropriate, reports geometry errors.
-
-</div>
+<figure class="image is-square">
+  <img class="lazyload" data-src="/images/wesen/messages-square.png" alt="3D geometry error messages"/>
+</figure>
 
 </template>
 
-</Content-ImageFrames-MainImageSection>
+</Content-TextSection>
 
 
 
