@@ -161,7 +161,7 @@ Interactive entertainment
 2013-2015
 
 **My role**
-2D/3D/UI/Game designer
+Artist and Game designer
 
 **Team**
 Game developer/designer

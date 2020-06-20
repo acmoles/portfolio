@@ -121,7 +121,7 @@ Let’s break that down a bit. My training was in [Product Design Engineering](/
 
 I've had the pleasure to collaborate with great people on diverse products, from time-critical [MVPs](/projects/toucanbox) at startups to [iterative features](/projects/ecosia) reaching millions of users. My natural curiosity and adaptability have led me to play varied roles in the agile product team. As a designer and product person, I've found a lifetime of tinkering with digital tools, languages and technologies to be extremely advantageous.
 
-What drives me is the belief that software and technology have immense potential to enhance our creativity. By distilling complexity with design, I strive to open up this potential to everyone, not just specialists. Rigorously designed interfaces with playful interactions are a key ingredient. Another is iteration - testing early and often. The human-centred design process is my guiding north star and the thread that has run throughout my career. I originally hail from Edinburgh, Scotland, I recently called London home and I'm currently based in Berlin.
+What drives me is the belief that software and technology have immense potential to enhance our creativity and learning. By distilling complexity with design, I strive to open up this potential to everyone, not just specialists. Rigorously designed interfaces with playful interactions are a key ingredient. Another is iteration - testing early and often. The human-centred design process is my guiding north star and the thread that has run throughout my career. I originally hail from Edinburgh, Scotland, I recently called London home and I'm currently based in Berlin.
 
 <!--
 as a force for good in our lives
@@ -184,7 +184,7 @@ Rapha feedback highlights
 UX, UI, interaction, motion, user research and testing, visual design, illustration, sketching, 3D modelling
 
 **Technology**
-[Web development](/#), Unity (C#), iOS (Xcode, Swift)
+[Web development](/#), Unity (C#), Familiar with: iOS (Xcode, Swift), Ruby/Rails,
 
 <!-- I built this website with [Vue.js](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), [Three.js](https://threejs.org/), SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress](https://vuepress.vuejs.org/). (Vue, Angular, React, WebGL, Node.js, Ruby)-->
 
@@ -215,8 +215,8 @@ Test content slot _emphasis_ **bold**
 
 </About-TimelineItem>
 <About-TimelineItem type="Web" label="test 6">
-<p>Portfolio update
-<Content-ModalLink label="details">
+<p>Portfolio website
+<Content-ModalLink label="techstack">
 <template v-slot:modal>
 <div class="container is-full-width content">
 

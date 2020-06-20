@@ -137,12 +137,8 @@ Project management
 </Content-ThreeColumnSection>
 
 
-<!-- <Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse.jpg" alt="Montage of discovery artifacts"/> -->
-
-
 
 <Content-MainSectionDivider aside="Section 1 of 4" title="Discovery"/>
-
 
 
 
@@ -182,13 +178,13 @@ Analytics, asking customer service, interviewing existing customers and parents 
 <Content-QuoteSection quote="I wouldn't want to add my preferences if I can choose my box. It's basically the same thing, except choosing is better." attribute="Sandra Whitehouse, Mum to Harry and Scarlet"/>
 
 
-<Content-ThreeColumnSection :content="true" columnOffset="three-offset">
+<Content-ThreeColumnSection :content="true" padding="is-large" columnOffset="three-offset">
 
 <template v-slot:content>
 
 ## Who are our customers?
 
-Focus on their motivations. Using research. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+Through internal stakeholder consultation and customer interviews, I identified the following high level personas and their corresponding motivations:
 
 </template>
 
@@ -202,17 +198,20 @@ Focus on their motivations. Using research. Nullam a metus quis eros pretium hen
 
 *Buyer persona*
 
-Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
+In general it’s the parent who responds to our advertising and comms, makes the purchase, manages the subscription and engages with our customer care.
 
-**Suspendisse ornare et**
+<br>
 
-Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis.
+**I want my child to be happy**
+~ They enjoy crafting _“We do crafts every weekend and they love it”_
+~ They want toucanBox _“They saw it on TV and asked me for it”_
 
-Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
+<br>
 
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
-
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+**I want to be a good parent**
+~ I want to share positive experiences with my child, forming lasting memories _“I really value the time we spend together”_
+~ I want to support my child’s education and development _“If only it was easier to find things for my kids to do that support their education”_
+~ I want to be prepared _“I want to do more crafting with my kids but I’m not creative”_
 
 </div>
 
@@ -228,14 +227,15 @@ Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu m
 
 *Buyer persona*
 
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices. Aenean et nunc tortor. Cras semper gravida purus sit amet porttitor. Donec fermentum finibus eros.
+A family friend or relative. Possibly already a customer.
 
-**Aenean et nunc tortor**
+<br>
 
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+**I want to give a good gift**
+~ I want to show how much I care _“Finding a gift that’s good enough can be hard”_
+~ I want it to be quick and easy, for me and the recipient _“A good gift doesn’t create any work for whoever I give it to”_
 
-Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu magna non risus. Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
-
+<br>
 <br>
 
 </div>
@@ -248,7 +248,12 @@ Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu m
 
 *User persona*
 
-Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ultrices.
+The box experience is all about the child. If they enjoy it, this drives the decision to remain subscribed
+
+<br>
+
+**I want to be entertained**
+~ I want to do what I’ve seen my friends do / seen on TV (YouTube) / done at school
 
 </div>
 
@@ -269,7 +274,7 @@ Quisque pulvinar dui sagittis orci blandit pellentesque. Duis ornare bibendum ul
 </Content-ThreeColumnSection>
 
 
-
+<Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse-wide.jpg" alt="Montage of discovery artifacts"/>
 
 
 <Content-ThreeColumnSection padding="is-large" :content="true" columnOffset="three-offset">
@@ -444,7 +449,7 @@ Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim
 
 #### Information architecture
 
-Site navigation and structure. New content (schools, inside a box, blog/activities). Around what users are really looking for e.g. What's inside the box - reachable by both scrolling and clicking a button in the nav. Nullam a metus quis eros pretium hendrerit ut a turpis.
+Always visible login button, redesigned sitemap and navigation. The right-oriented, persistent login button fades out as the menu slides in. Site navigation and structure. New content (schools, inside a box, blog/activities). Around what users are really looking for e.g. What's inside the box - reachable by both scrolling and clicking a button in the nav. Nullam a metus quis eros pretium hendrerit ut a turpis.
 
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }
@@ -481,7 +486,7 @@ Site navigation and structure. New content (schools, inside a box, blog/activiti
 
 #### Reassuring information
 
-Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
+Clear feedback of discount and price status. A reassuring and customisable message that the trial offer is applied follows users through the homepage and details form steps
 
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }
@@ -493,7 +498,7 @@ Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecena
 
 #### Mobile-friendly steps
 
-Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+Trialist mode is activated when the user enters a valid discount code or if they arrived from a paid marketing source with a URL embedded code.
 
 - This prototype excited children the least{ .check }
 - The interruption in the story broke the children's attention{ .cross }
@@ -541,7 +546,7 @@ Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis
 
 ## Lessons from user testing
 
-Guided by the findings of the usability testing, the project team and greater organization was confident in the design direction, and identified specific opportunities to improve on the chosen design direction and the overall signup experience. Narrowing down. In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+I led usability testing of the new acquisition funnel with internal stakeholders and external testers. The appropriate level of fidelity was different for each proposed initiative. In some cases static images sufficed. The use of wireframes and paper prototypes greatly increased iteration speed when testing with internal stakeholders. For external testing I typically made use of inVision and detailed HTML prototypes.
 
 </template>
 
@@ -549,10 +554,10 @@ Guided by the findings of the usability testing, the project team and greater or
 
 **Observation** | **Remedy** |
 --- | --- |
-Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout |
-Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added skirts, wellington boots and several other accessories |
-Cras mollis sodales urna, eu ultrices nibh lobortis ut. Fusce eu pellentesque nulla. | I observed children dragging items off the screen, attempting to delete them, so made that actually work |
-Certain types of accessory like hats, clothes and shoes quickly cluttered the screen and didnt make sense out of their intended positions | I made new placements in specific categories (e.g. hair) remove the previous accessory of that type. This proved to be an intuitive limitation |
+_“I’ll use the menu to learn more”_ A significant minority of testers wanted to use the navigation menu to learn more, rather than scrolling. They found the options unsatisfying or confusing | I added links to the main navigation for separate pages mirroring and expanding upon scroll-reachable content on the homepage |
+_"We can't just have the burger menu on desktop"_ Internal testers requested an always-visible main navigation on desktop | I had de-prioritised this for expediency but quickly realised we weren't meeting users' expectations while it was absent |
+_“How do I close this?”_ Testers expected the product details modal to have a close button at the top as well as the bottom | In addition to the existing close button, I added one at the top of the modal |
+The view rate for the toucanBox promotional video didn't increase, even though I had increased the prominence of the video button | Further emphasis on the video button might compete with the main CTA. As a compromise I added an autoplay looping montage video cut from the promotional video footage (to be loaded asynchronously) on desktop |
 {.table .is-fullwidth}
 
 </template>
@@ -561,10 +566,10 @@ Certain types of accessory like hats, clothes and shoes quickly cluttered the sc
 
 **Observation** | **Remedy** |
 --- | --- |
-Page 2. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout |
-Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added skirts, wellington boots and several other accessories |
-Cras mollis sodales urna, eu ultrices nibh lobortis ut. Fusce eu pellentesque nulla. | I observed children dragging items off the screen, attempting to delete them, so made that actually work |
-Certain types of accessory like hats, clothes and shoes quickly cluttered the screen and didnt make sense out of their intended positions | I made new placements in specific categories (e.g. hair) remove the previous accessory of that type. This proved to be an intuitive limitation |
+_“I expected siblings would always cost £1 extra?”_ Testers reported that the messaging regarding the trial offer for siblings (additional children) was unclear. The existing copy could imply that each additional child would always cost £1, not just for the first delivery | Over time several such copywriting mistakes had crept into the funnel. I worked with our copywriter to revamp messaging across the homepage and signup flow. |
+_“I can’t be sure how much I’m paying.”_ Testers mentioned that it felt frightening to click the ‘authorise payment’ button on the details form | I added a mini order summary next to the payment/paypal button titled 'What You are Paying Today' |
+_“If I wanted to send toucanBox to two different addresses, how would I do that?”_ It became clear that our system was not well suited to gifters. The copy, interface and even the backend data model was not tailored to their needs | This was good feedback but the issue was out of the scope of this project. I made sure it was communicated to the Leadership Team and suggested a future project to resolve the issue. |
+_“I don’t remember making a password, now I need one to log in?”_ Around 15% of trialists didn’t make a password after completing sign up, so I was aware we were increasing CS load to optimise for conversion. | It was clear detailed analysis was needed to understand the impact of making the password field mandatory. I decided not to tackle this problem in this project, but advocated for a sister link to 'Forgotten your password?'' on the login page - 'Not created a password yet?' |
 {.table .is-fullwidth}
 
 </template>
@@ -575,6 +580,14 @@ Certain types of accessory like hats, clothes and shoes quickly cluttered the sc
   <div class="column is-two-thirds">
     <figure class="image is-square">
       <img class="lazyload" data-src="/images/toucanBox/user-testing-1.jpg" alt="User tester 1">
+    </figure>
+  </div>
+</div>
+
+<div class="columns is-gapless">
+  <div class="column is-two-thirds">
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/toucanBox/user-testing-2.jpg" alt="User tester 2">
     </figure>
   </div>
 </div>
@@ -591,13 +604,15 @@ Certain types of accessory like hats, clothes and shoes quickly cluttered the sc
 
 
 
-<Content-ImageFrames-MainImageSection url="/images/toucanBox/styles.png" alt="toucanBox design system" :aside="true" :content="true" imageClass="is-2by1">
+<Content-ImageFrames-MainImageSection padding="is-large" url="/images/toucanBox/styles.png" alt="toucanBox design system" :aside="true" :content="true" imageClass="is-2by1">
 
 <template v-slot:content>
 
 ## Design system
 
-Link to living styleguide. Atomic design. UI style evolved from the magazine - graphic design. Thanks to our existing UI design system, progressing from wireframes to high-fidelity UI design was a snap. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
+Guided by the findings from usability testing, the project team and broader organisation was sufficiently confident in the selected iniiatives
+
+in the design direction, and identified specific opportunities to improve on the chosen design direction and the overall signup experience. Link to living styleguide. Atomic design. UI style evolved from the magazine - graphic design. Thanks to our existing UI design system, progressing from wireframes to high-fidelity UI design was a snap. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 
 </template>
 
@@ -612,6 +627,13 @@ Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 </Content-ImageFrames-MainImageSection>
 
 
+
+<Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse-wide.jpg" alt="Montage of discovery artifacts"/>
+TODO in-context presentation image - eyecandy
+
+
+
+
 <Content-TextSection padding="is-large" columnOffset="title-offset">
 
 ## Development
@@ -620,32 +642,22 @@ Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
   Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
 </p>
 
-What we chose to build in production. Release feature-by-feature - A/B testing to validate. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
+What we chose to build in production. Release feature-by-feature - A/B testing to validate. Focus on working with and supporting developers to realise designs in production. Supporing with - CSS, Design System, compromises and adjustments to the spec.
 
-The final design is accessible and adapts seamlessly to several distinct user flows, with incredibly fast performance on both desktop and mobile devices. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam.
+The final design is accessible and adapts seamlessly to several distinct user flows, with incredibly fast performance on both desktop and mobile devices.
 
 <template v-slot:aside>
 
-<Content-InfoBox>
+<Content-Techstack
 
-<!-- #### Techstack -->
+:techs="[
+{ title:'Static pages', description:'Middleman' },
+{ title:'UI', description:'JQuery, Vue.js' },
+{ title:'CSS', description:'SCSS' },
+{ title:'Backend', description:'Sinatra (Ruby, ERB), Postgres' },
+]"
 
-**Platform**
-Responsive web application
-
-**Engine**
-E-commerce
-
-**Styling**
-2018
-
-**Input**
-Personal project
-
-**Animation**
-12 minutes
-
-</Content-InfoBox>
+/>
 
 </template>
 
@@ -656,7 +668,7 @@ Personal project
 
 <Content-MainSectionDivider aside="Section 3 of 4" title="Evaluation"/>
 
-
+TODO add anchors to section dividers.
 
 
 
@@ -681,6 +693,15 @@ Sed tempus, massa sed egestas viverra, mi nunc maximus lorem, nec egestas arcu m
 
 Maecenas porttitor congue enim, at tempus tellus volutpat ut. In ultricies, justo nec rhoncus rhoncus, ipsum libero tempus est, at pellentesque mi ligula vitae eros. Cras sodales ut nunc et volutpat. Proin eget porttitor neque, consectetur ullamcorper ipsum. Donec porta nisl id sem varius malesuada.
 
+<Content-ModalLink label="Personalised experience followup">
+<template v-slot:modal>
+
+<Content :page-key="$site.pages.find(p => p.path === '/extra/toucanbox-personalisation/').key"/>
+
+</template>
+</Content-ModalLink>
+
+
 
 <template slot="aside">
 
@@ -700,18 +721,16 @@ This project however, focused on an equally important but somewhat subtler metri
 
 <Content-InfoBox :hasIcon="true" :hasAction="true" type="link" label="toucanBox static mirror" url="http://toucanwww.herokuapp.com/">
 
-At the end of the project, I gathered everything I learnt about our users into a set of principles the whole organisation could benefit from.
+touanBox website in 2017. At the end of the project, I gathered everything I learnt about our users into a set of principles the whole organisation could benefit from.
 
 
 </Content-InfoBox>
 
-
-
-<Content-ModalWrapper type="link" url="http://toucanwww.herokuapp.com/" label="toucanBox static website circa 2017">
+<!-- <Content-ModalWrapper type="link" url="http://toucanwww.herokuapp.com/" label="toucanBox static website circa 2017">
   <figure class="image is-3by2">
     <img class="lazyload" data-src="/images/toucanbox/onboarding-desktop.jpg"" alt="touanBox website in 2017">
   </figure>
-</Content-ModalWrapper>
+</Content-ModalWrapper> -->
 
 </template>
 
@@ -725,162 +744,3 @@ At the end of the project, I gathered everything I learnt about our users into a
 { metric:'02', description:'Award winning team members.' },
 { metric:'103', description:'Years experience working for clients like Google and Amazon.' },
 ]"/>
-
-
-<Content-MainSectionDivider aside="Section 4 of 4" title="Followup"/>
-
-
-
-
-<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-2by1" url="/images/toucanBox/personalised-experience.jpg" alt="Cartoon of a personalised experience" :aside="true" :content="true">
-
-<template v-slot:content>
-
-<p class="subtitle">
-  Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
-</p>
-
-The leadership at toucanBox didn’t think of themselves as a tech company, even though by this point the desire for flexibility, customisation, by a series of incremental steps, we had replaced almost all the off-the-shelf tools for subscription businesses with our own systems. In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
-
-Best products (Airbnb and Spotify) blend the boundary between the digital product and the commodity. In toucanbox too.  toucanbox - small team, involved in the core product but - central question for me: how can the online product enhance the overall experience for parents, and also children.  
-
-</template>
-
-<template v-slot:aside>
-
-<figure class="image is-5by3">
-  <img class="lazyload medium-zoom" data-src="/images/toucanBox/warehouse.jpg" alt="toucanBox warehouse">
-</figure>
-<figcaption>
-
-Nulla at arcu sagittis, egestas libero ut, finibus massa.
-
-</figcaption>
-
-</template>
-
-</Content-ImageFrames-MainImageSection>
-
-
-
-<Content-ImageFrames-FullImageSection url="/images/toucanBox/personalisation-montage.jpg" alt="Personalisation discovery montage"/>
-
-
-
-<Content-MainAsideSection :content="true" :aside="true" columnOffset="table-offset">
-
-<template slot="content">
-
-## Defining personalisation
-
-Best products (Airbnb and Spotify) blend the boundary between the digital product and the commodity. In toucanbox too.  
-
-Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
-
-Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
-
-</template>
-
-<template>
-
-**Observation** | **Remedy** |
---- | --- |
-Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout |
-Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added skirts, wellington boots and several other accessories |
-{.table .is-fullwidth}
-
-</template>
-
-<template slot="aside">
-
-<div class="columns is-gapless">
-  <div class="column is-two-thirds">
-    <figure class="image is-square">
-      <img class="lazyload" data-src="/images/toucanBox/user-testing-2.jpg" alt="User tester 2">
-    </figure>
-  </div>
-</div>
-
-</template>
-
-</Content-MainAsideSection>
-
-
-
-<Content-ImageFrames-MainImageSection padding="is-large" url="/images/toucanBox/high-fidelity-sketching.png" alt="Detailing feature screens" imageClass="is-2by1 transparent-image" :aside="true" :content="true" caption="Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.">
-
-<template slot="content">
-
-<p class="subtitle">
-  Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
-</p>
-
-Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
-
-</template>
-
-<template slot="aside">
-
-<figure class="image is-5by3 transparent-image">
-  <img class="lazyload medium-zoom" data-src="/images/toucanBox/personalisation-desktop.png" alt="Iteration for desktop">
-</figure>
-
-</template>
-
-</Content-ImageFrames-MainImageSection>
-
-
-
-
-<Content-QuoteSection quote="I wouldn't want to add my preferences if I can choose my box. It's basically the same thing, except choosing is better." attribute="Sandra Whitehouse, Mum to Harry and Scarlet"/>
-
-
-
-<Content-TextSection padding="is-large" columnOffset="title-offset">
-
-## A promising pilot
-
-<p class="subtitle">
-  I asked existing toucanBox customers what ‘value for money’ means to them and gathered their attitudes to children's digital media.
-</p>
-
-Customer acquisition and retention were two of the most discussed performance metrics at toucanBox. This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
-
-
-### Detailed Prototyping
-
-Establish to what extent digital content linked to the trial box can increase activation rate. Estimate the costs and benefits of producing more digital content.
-
-### Gathering more data with an MVP
-
-Must resonate with the core value proposition (hands-on crafting and creativity) . High friction when moving to a device from the magazine reduced the reach leading to low overal impact.
-
-### Handover
-
-Must resonate with the core value proposition (hands-on crafting and creativity) . High friction when moving to a device from the magazine reduced the reach leading to low overal impact.
-
-
-<template slot="aside">
-
-<div class="columns is-gapless">
-  <div class="column is-three-quarters">
-    <Content-ModalWrapper type="link" url="http://personalisation.herokuapp.com/" label="Prototype">
-      <figure class="image is-9by16">
-        <img class="lazyload" data-src="/images/toucanBox/choose-interface.png" alt="Screenshot of latest prototype">
-      </figure>
-    </Content-ModalWrapper>
-  </div>
-</div>
-
-
-
-<figcaption>
-
-This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
-
-</figcaption>
-
-</template>
-
-
-</Content-TextSection>

@@ -44,7 +44,7 @@ description="Wesen enables anyone to create and order their unique pendant neckl
 
 Recent years have seen a gradual increase in awareness of product customisation and on-demand manufacturing. But to this day we can see little evidence of the promised revolution due to relatively high prices and no killer app.
 
-In 2015 I was pioneering customisable children’s toys at [Makielab](/projects/makielab). We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage the lessons learnt and push the envelope of [Mass Customisation](https://hbr.org/1997/01/the-four-faces-of-mass-customization).
+In 2015 I helped pioneer customisable children’s toys at [Makielab](/projects/makielab). We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage the lessons learnt and push the envelope of [Mass Customisation](https://hbr.org/1997/01/the-four-faces-of-mass-customization).
 
 Firstly, I wanted to explore the possibility of a lightly constrained creation experience, able to generate infinite variations while being intuitive and fun to use. _I was convinced that suitable constraints could enhance the creativity of customers, rather than restrict it._ Secondly, to completely automate and outsource the fulfilment process.
 
@@ -89,7 +89,7 @@ Enable customers to customise a product in the web browser and purchase it. Fulf
 
 ### The outcome
 
-Wesen fulfils my original success criteria and helped me learn a great deal. The most valuable lessons I didn't expect; the importance of _getting the word out_ and _working in teams._
+Wesen fulfils my original success criteria. I learnt a great deal but the most valuable lessons I didn't expect; the importance of _getting the word out_ and _working in teams._
 
 </template>
 
@@ -97,7 +97,8 @@ Wesen fulfils my original success criteria and helped me learn a great deal. The
 
 ### My role
 
-UX Product designer
+Entrepreneur
+~ UX Product designer
 ~ Full-stack JS developer
 
 </template>
@@ -139,7 +140,7 @@ UX Product designer
   I informally interviewed four designers and one non&#8209;designer, each who had recently designed or commissioned bespoke jewellery.
 </p>
 
-At the outset, I wasn’t set on any particular product category. My approach was to broadly investigate the mass customisation market and make a choice based on estimated product-market fit. I used digital marketing techniques to gauge the market size. I followed up with qualitative interviews.
+My approach was to broadly investigate the mass customisation market and choose a product category based on estimated product-market fit. I used digital marketing techniques to gauge the market size. I followed up with qualitative interviews.
 
 </template>
 
@@ -147,7 +148,7 @@ At the outset, I wasn’t set on any particular product category. My approach wa
 
 
 
-<Content-QuoteSection quote="I couldn’t find anything exactly like what I had in mind. In the end they found it so thoughtful." attribute="Designer interviewee on gifting jewellery to their partner" color="green"/>
+<Content-QuoteSection quote="I couldn’t find anything that exactly matched what I had in mind. In the end designing [the ring] myself really paid off. They found it so thoughtful!" attribute="Designer interviewee on gifting jewellery to their partner" color="green"/>
 
 
 
@@ -216,6 +217,8 @@ _“People expect me to find the next trend”_
   </div>
 </div>
 
+TODO - make this square
+
 </template>
 
 </Content-ThreeColumnSection>
@@ -230,9 +233,17 @@ _“People expect me to find the next trend”_
 
 ## Scope and objectives
 
+I recognised the need for clear project objectives and a narrow scope if I was to succeed in launching a product within a reasonable timeframe. I identified the key challenges, which I captured as 'How Might We' statements.
+
+
+<!-- that we needed to have a clear understanding of the project goals and motivations, which we could then use to guide the project process. Together with the project team, I identified our key challenges, which we captured as “How Might We” statements:
+
+Having built an understanding of the space, I distilled my
+As the project kicked off, we identified our key challenges, which we captured as “How Might We” statements:
+
 My research posed two key user experience challenges. Firstly, how to communicate the value of lightly-constrained product creation to an audience that isn't explicitly asking for it. Secondly, how to address the anxiety of non-technical users approaching a customisation interface.
 
-There was another important aspect to address; how to build an end-to-end product, which enables customers to buy their creations, while minimising the amount of development effort. To facilitate this I set a tight scope and suitable objectives.
+There was another important aspect to address; . To facilitate this I set a tight scope and suitable objectives. -->
 
 <!-- which enables customers to order their pendants
 
@@ -247,6 +258,10 @@ Addressing these became the first pillar of my design activity. The second was t
 ---
 
 <div class="small">
+
+_How might we communicate the value of lightly-constrained product creation to an audience that isn't explicitly asking for it?_
+
+_How might we address the anxiety of non-technical users approaching a customisation interface?_
 
 Build confidence with an e-commerce store that explains the value proposition and allows shoppers to browse pre-designed products. Make it possible for these to be selected as the foundation for further customisation or bought immediately.
 
@@ -263,6 +278,8 @@ Address anxiety and empower non-designers with an intuitive interface that doesn
 ---
 
 <div class="small">
+
+_How might we build an end-to-end product, which enables customers to buy their creations, while minimising development effort?_
 
 Make it possible for customers to buy the pendant they create and ensure automated fulfillment of their order.
 
@@ -284,6 +301,8 @@ Minimise technical and operational overhead by relying on third-party cloud serv
 <figcaption class="small">
 
 This simplified journey map indicates features to be outsourced or removed for the pilot - marked by the red dashed line.
+
+TODO pseudo post-its? Square?
 
 </figcaption>
 
@@ -313,7 +332,9 @@ This simplified journey map indicates features to be outsourced or removed for t
 My background in Industrial Design helped me assemble a list of promising 3D modelling tools. I extended it with input from designers in my network.
 </p>
 
-The search for a compelling customisation experience required a non-linear approach. I sometimes reimagined a tool with simplified interaction, other times I constrained its capability. Then I would combine several such tools to see if interesting synergies emerged. To formalise my thinking, I rated these ideas by _Expressiveness_ and (ease of) _Implementation_. During this process I began thinking of myself as 'unshackling' expressive modelling tools from their specialist software confines.
+The search for a compelling customisation experience required an iterative approach. I set myself a series of exercises, for example reimagining a tool with simplified interaction or constrained capability. Then I would combine several such tools to see if interesting synergies emerged.
+
+To formalise my thinking, I rated these ideas on _Expressiveness_ and (ease of) _Implementation_. During this process I began thinking of myself as 'unshackling' expressive modelling tools from their specialist software confines.
 
 </template>
 

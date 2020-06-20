@@ -24,10 +24,10 @@
           <div class="column is-two-thirds">
             <template v-if="hasSecondPageSlot">
               <transition :name="transitionName" mode="out-in">
-                <div key="page-1" v-if="currentPage === 1">
+                <div ref="page-1" key="page-1" v-if="currentPage === 1">
                   <slot></slot>
                 </div>
-                <div  key="page-2" v-else>
+                <div ref="page-2" key="page-2" v-else :style="{ height: maxHeight + 'px' }">
                   <slot name="page2"></slot>
                 </div>
               </transition>
@@ -61,14 +61,26 @@ export default {
     page2Label: String,
   },
 
+  watch: {
+    pageLoadingStatus (latest, last) {
+      if (latest === 'finished' && this.$refs['page-1']) {
+        this.maxHeight = this.$refs['page-1'].offsetHeight
+      }
+    }
+  },
+
   data () {
     return {
       currentPage: 1,
-      transitionName: 'next'
+      transitionName: 'next',
+      maxHeight: null
     }
   },
 
   computed: {
+    pageLoadingStatus () {
+      return this.$store.state.pageLoadingStatus
+    },
     hasSecondPageSlot () {
       return !!this.$slots['page2']
     },
