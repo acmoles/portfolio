@@ -15,7 +15,7 @@
               v-for="i in 3"
               class="column"
             >
-              <h4 class="timeline-year">{{ slotName( n, i ) }}</h4>
+              <h4 class="timeline-year">{{ slotName( n, i ) === '2009' ? slotName( n, i ) + ' >' : slotName( n, i ) }}</h4>
               <slot :name="slotName( n, i )"></slot>
             </div>
 
@@ -92,7 +92,7 @@ export default {
     slotName (page, index) {
       const base = 20
       const delta = ( (page - 1) * 3 ) + ( index - 1 )
-      const year = base - delta < 10 ? '0' + (base - delta) : base - delta
+      let year = base - delta < 10 ? '0' + (base - delta) : base - delta
       // Page 1 - 20, 19, 18 - delta(0, 1, 2)
       // Page 2 - 17, 16, 15 - delta(3, 4, 5)
       // Page 3 - 14, 13, 12 - delta(6, 7, 8)

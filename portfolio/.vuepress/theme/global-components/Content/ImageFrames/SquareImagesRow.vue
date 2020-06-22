@@ -11,7 +11,7 @@
 
       <div class="columns">
         <div
-          class="column"
+          class="column is-one-third"
           v-for="(image, i) in images"
         >
 

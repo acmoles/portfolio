@@ -1,6 +1,6 @@
 <template>
   <section class="section full-image">
-    <figure class="image is-2by1">
+    <figure class="image" :class="imageClass ? imageClass : 'is-2by1'">
       <img class="lazyload" :data-src="url" :alt="alt">
     </figure>
   </section>
@@ -13,6 +13,7 @@ export default {
   props: {
     url: String,
     alt: String,
+    imageClass: String,
   }
 
 }
@@ -20,8 +21,8 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../../../styles/variables.sass"
-  @import "../../../styles/mixins.sass"
+  @import "@theme/styles/variables.sass"
+  @import "@theme/styles/mixins.sass"
 
   .section.full-image
     padding: 0

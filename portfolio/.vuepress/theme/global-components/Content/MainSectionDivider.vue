@@ -1,5 +1,5 @@
 <template>
-  <section class="section divider is-large project-card" :class="[background]">
+  <section class="section divider is-large project-card" :class="[background]" :id="title">
     <div class="container is-fullhd content">
       <p class="small-title">{{ aside }}</p>
       <h1>{{ title }}</h1>

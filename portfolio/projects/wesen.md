@@ -89,7 +89,7 @@ Enable customers to customise a product in the web browser and purchase it. Fulf
 
 ### The outcome
 
-Wesen fulfils my original success criteria. I learnt a great deal but the most valuable lessons I didn't expect; the importance of _getting the word out_ and _working in teams._
+Wesen fulfils my original success criteria. It taught me a great deal but the most valuable lessons I didn't expect; the importance of _getting the word out_ and _working in teams._
 
 </template>
 
@@ -106,9 +106,6 @@ Entrepreneur
 </Content-ThreeColumnSection>
 
 
-
-
-<Content-ImageFrames-FullImageSection url="/images/wesen/wesen-montage-3.jpg" alt="Montage of further discovery process"/>
 
 
 
@@ -177,12 +174,15 @@ When I need to give an important gift, I want to design it myself so I can be su
 
 <br>
 
-_“I’m looking for something which will show them how much I care”_
+<div class="small">
+
+_“I’m looking for the perfect gift which will show them how much I care”_
 ~ _“I want to give something unique, which they couldn’t get anywhere else”_
-~ _“It takes ages to find the perfect gift”_
 ~ _“A gift should be personal, something which reminds them of me”_
 ~ _“I want to feel confident giving the gift”_
 { .secondary }
+
+</div>
 
 
 </template>
@@ -199,25 +199,23 @@ When new and unusual products become available, I want to try them out so I'm on
 
 <br>
 
+<div class="small">
+
 _“People expect me to find the next trend”_
 ~ _“I like to experiment with new technologies”_
 ~ _“I have a personal style and I carefully curate what I wear”_
 ~ _“I want to wear jewellery no-one else has seen before”_
 { .secondary }
 
+</div>
+
 </template>
 
 <template v-slot:column3>
 
-<div class="columns is-gapless">
-  <div class="column is-three-quarters">
-    <figure class="image is-9by16">
-      <img class="lazyload" data-src="/images/wesen/journey_characters2.jpg" alt="Cartoon of enthusiasts and gifters">
-    </figure>
-  </div>
-</div>
-
-TODO - make this square
+<figure class="image is-square">
+  <img class="lazyload" data-src="/images/wesen/journey_characters2.jpg" alt="Cartoon of enthusiasts and gifters">
+</figure>
 
 </template>
 
@@ -295,14 +293,12 @@ Minimise technical and operational overhead by relying on third-party cloud serv
 
 <template v-slot:column3>
 
-<figure class="image is-2by1">
+<figure class="image is-square">
   <img class="lazyload medium-zoom" data-src="/images/wesen/draft-journey-mvp.png" alt="Flowchart of user journey">
 </figure>
 <figcaption class="small">
 
-This simplified journey map indicates features to be outsourced or removed for the pilot - marked by the red dashed line.
-
-TODO pseudo post-its? Square?
+Orange indicates features to be outsourced or removed for the pilot.
 
 </figcaption>
 
@@ -485,17 +481,18 @@ I developed a system to detect each of these problems. The notification window b
 
 
 
-<Content-ImageFrames-SquareImagesRow :content="true" :images="[
+<Content-ImageFrames-SquareImagesRow padding="is-large" :content="true" :images="[
 { url:'/images/wesen/Iconography-square.png', alt:'Production icon assets', caption:'Square image caption 1', slot:'slot1', iframe:false },
 { url:'/images/wesen/product-rendering.jpg', alt:'WIP product rendering', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'/images/wesen/handheld.jpg', alt:'WIP product photography', caption:'Square image caption 3', slot:'slot3', iframe:false },
 ]">
+
+<!-- { url:'/images/wesen/handheld.jpg', alt:'WIP product photography', caption:'Square image caption 3', slot:'slot3', iframe:false }, -->
 
 <template slot="content">
 
 ## Production assets
 
-With the aim of getting a working product in users hands quickly, I focussed on creating a small number of high quality assets. My approach to visual design was similar, aided by my earlier work scoping down the user flow. I was influenced by the Airbnb Design System, Google Material Design and the design language of fashion and jewellery brands.
+Based on my wireframes and aided by the tightly scoped user journey, I was able to focus visual design effort on a minimal number of interfaces and assets. Some of my influences included the Airbnb Design System, Google Material Design and the design language of fashion and jewellery brands.
 
 </template>
 
@@ -519,6 +516,8 @@ I reused WIP samples for product photography, intending to revisit this in futur
 
 </Content-ImageFrames-SquareImagesRow>
 
+
+<Content-ImageFrames-FullImageSection url="/images/wesen/wesen-montage-3.jpg" alt="Montage of further discovery process"/>
 
 
 

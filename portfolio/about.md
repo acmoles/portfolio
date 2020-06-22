@@ -205,16 +205,15 @@ Strategy, analytics, A/B testing
 
 <template v-slot:2020>
 
-<About-TimelineItem type="App" label="test 1"/>
-<About-TimelineItem type="Web" label="test 2"/>
-<About-TimelineItem type="Book" label="test 3"/>
-<About-TimelineItem type="Art" label="test 4"/>
-<About-TimelineItem type="Lesson" label="test 5">
+<About-TimelineItem type="Role" label="Ecosia Mobile Team strategy"/>
 
-Test content slot _emphasis_ **bold**
+<About-TimelineItem type="App">
+
+[Ecosia Android App](/projects/ecosia/#mobile-team-highlights) relaunch
 
 </About-TimelineItem>
-<About-TimelineItem type="Web" label="test 6">
+
+<About-TimelineItem type="Web">
 <p>Portfolio website
 <Content-ModalLink label="techstack">
 <template v-slot:modal>
@@ -227,162 +226,302 @@ Modal content
 </Content-ModalLink>
 </p>
 </About-TimelineItem>
-<About-TimelineItem type="App" label="test 7"/>
-<About-TimelineItem type="Course" label="test 8"/>
+
+<About-TimelineItem type="XR">
+
+[Interaction experiments](/projects/interaction)
+
+</About-TimelineItem>
+
 
 </template>
 
 <template v-slot:2019>
 
-<About-TimelineItem type="App" label="test 1"/>
-<About-TimelineItem type="Web" label="test 2"/>
-<About-TimelineItem type="Book" label="Inspired - Marty Cagan"/>
-<About-TimelineItem type="Art" label="test 4"/>
-<About-TimelineItem type="App" label="test 7"/>
-<About-TimelineItem type="Work" label="test 8">
+<About-TimelineItem type="App">
+
+[Ecosia iOS App](/projects/ecosia/#mobile-team-highlights)
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Game">
+
+Stompy Robot [Game Jam](/#)
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Role">
 
 Product Manager at Ecosia
 
 </About-TimelineItem>
-<About-TimelineItem type="Course" label="test 8"/>
-<About-TimelineItem type="Device" label="Wacom Cintiq Companion 2 (already broken)"/>
+<About-TimelineItem type="Read" label="Inspired by Marty Cagan"/>
+<About-TimelineItem type="Web">
+
+Ecosia hack days [Search Map](https://mapvis.netlify.app/)
+
+</About-TimelineItem>
 
 </template>
 
 <template v-slot:2018>
 
-<About-TimelineItem type="Web" label="test 2"/>
-<About-TimelineItem type="Book" label="test 3"/>
-<About-TimelineItem type="Art" label="test 4"/>
-<About-TimelineItem type="App" label="test 5"/>
-<About-TimelineItem type="Course" label="test 8"/>
-<About-TimelineItem type="Work" label="test 8">
+<About-TimelineItem type="Web">
 
-Product Designer at Ecosia
+[Wesen](/projects/wesen)
 
 </About-TimelineItem>
+
+<About-TimelineItem type="Role">
+
+[Ecosia](/projects/ecosia), Berlin
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Course" label="German Language B2"/>
+<About-TimelineItem type="Read" label="Universal Principles of Design by Lidwell et al."/>
 
 </template>
 
 <template v-slot:2017>
 
-<About-TimelineItem type="Art" label="test 4"/>
-<About-TimelineItem type="App" label="test 5"/>
-<About-TimelineItem type="Web" label="test 6"/>
-<About-TimelineItem type="App" label="test 7"/>
-<About-TimelineItem type="App" label="test 8">
+<About-TimelineItem type="Read" label="The Design of Everyday Things by Don Norman"/>
 
-[BLKBRD](http://bit.ly/blkbrdapp) digital messages located in the physical world
+<About-TimelineItem type="Web">
+
+[toucanBox onboarding](/projects/toucanbox)
 
 </About-TimelineItem>
-<About-TimelineItem type="Course" label="test 8"/>
+
+<About-TimelineItem type="Web">
+
+[toucanBox personalisation](/extra/toucanbox-personalisation)
+
+</About-TimelineItem>
+
+<About-TimelineItem type="App">
+
+[BLKBRD](http://bit.ly/blkbrdapp) digital messages located in the physical world
+{ .blkbrd }
+
+</About-TimelineItem>
+
+<style lang="sass">
+
+  .blkbrd
+    a::after
+      position: relative
+      top: -2px
+
+</style>
+
+<About-TimelineItem type="Game">
+
+[Spaced](/#)
+
+</About-TimelineItem>
 
 </template>
 
 <template v-slot:2016>
 
-<About-TimelineItem type="Art" label="test 4"/>
-<About-TimelineItem type="App" label="test 5"/>
-<About-TimelineItem type="Web" label="test 6"/>
-<About-TimelineItem type="App" label="test 7"/>
-<About-TimelineItem type="Course" label="test 8"/>
+<About-TimelineItem type="Role" label="Makielab sold to Disney"/>
+
+<About-TimelineItem type="Role" label="Contract Senior Designer, Mattel"/>
+
+<About-TimelineItem type="Role">
+
+[toucanBox](/projects/toucanbox), London
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Web">
+
+[Create by toucanBox](/projects/toucanbox-research)
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Web" label="toucanBox Christmas campaign"/>
 
 </template>
 
 <template v-slot:2015>
 
-<About-TimelineItem type="App" label="test 1"/>
-<About-TimelineItem type="Web" label="test 2"/>
-<About-TimelineItem type="Web" label="test 6"/>
-<About-TimelineItem type="App" label="test 7"/>
-<About-TimelineItem type="Course" label="test 8"/>
+<About-TimelineItem type="Role">
+
+[Makielab](/projects/makielab), London
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Speaking" label="BBC Radio on 3D printing"/>
+
+<About-TimelineItem type="Toy">
+
+[Disney Infinity Me](/projects/makielab)
+
+</About-TimelineItem>
+
+<!-- <About-TimelineItem type="Kudos" label="Innovate UK"/> -->
+<About-TimelineItem type="Kudos" label="Techstars Accelerator"/>
+
 
 </template>
 
 <template v-slot:2014>
 
-<About-TimelineItem type="App" label="test 1"/>
-<About-TimelineItem type="Web" label="test 2"/>
-<About-TimelineItem type="Book" label="test 3"/>
-<About-TimelineItem type="Art" label="test 4"/>
-<About-TimelineItem type="App" label="test 5"/>
-<About-TimelineItem type="Web" label="test 6"/>
-<About-TimelineItem type="App" label="test 7"/>
-<About-TimelineItem type="Course" label="test 8"/>
+<About-TimelineItem type="Toy">
+
+[Sprint figures](/extra/sprint)
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Toy">
+
+[LEGO Dimensions](/projects/lego)
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Toy" label="LEGO Nexo Knights"/>
+<About-TimelineItem type="Toy" label="LEGO undisclosed concepts"/>
 
 </template>
 
 <template v-slot:2013>
 
-<About-TimelineItem type="Book" label="test 3"/>
-<About-TimelineItem type="Art" label="test 4"/>
-<About-TimelineItem type="App" label="test 5"/>
-<About-TimelineItem type="Web" label="test 6"/>
-<About-TimelineItem type="App" label="test 7"/>
-<About-TimelineItem type="Course" label="test 8"/>
+<About-TimelineItem type="Product">
+
+[NITA](/projects/art-lebedev-studio) air traffic control consoles
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Role">
+
+Co-founded [Stompy Robot](/projects/stompy-robot), Edinburgh
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Game">
+
+[Nova](/projects/stompy-robot#Nova)
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Role">
+
+[Design by Touch](/projects/lego), Leamington Spa
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Wearable">
+
+[NERF Energon Band](/#)
+
+</About-TimelineItem>
+
 
 </template>
 
 <template v-slot:2012>
 
-<About-TimelineItem type="App" label="test 1"/>
-<About-TimelineItem type="Web" label="test 2"/>
-<About-TimelineItem type="Book" label="test 3"/>
-<About-TimelineItem type="Art" label="test 4"/>
-<About-TimelineItem type="App" label="test 5"/>
-<About-TimelineItem type="Web" label="test 6"/>
+<About-TimelineItem type="Read" label="The Art of Innovation by Tom Kelly"/>
+
+<About-TimelineItem type="Course">
+
+Human Scale Biogas, graduate project PDE
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Role">
+
+[Art Lebedev Studio](/projects/art-lebedev-studio), Moscow
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Product">
+
+[Oktopus](/projects/art-lebedev-studio)
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Vehicle">
+
+[Scout Helicopter](/projects/art-lebedev-studio)
+
+</About-TimelineItem>
 
 </template>
 
 <template v-slot:2011>
 
-<About-TimelineItem type="App" label="test 1"/>
-<About-TimelineItem type="Web" label="test 2"/>
-<About-TimelineItem type="Book" label="test 3"/>
-<About-TimelineItem type="Art" label="test 4"/>
-<About-TimelineItem type="App" label="test 5"/>
-<About-TimelineItem type="Web" label="test 6"/>
-<About-TimelineItem type="App" label="test 7"/>
-<About-TimelineItem type="Course" label="test 8"/>
+<About-TimelineItem type="App" label="Myfood meal subscription"/>
+
+<About-TimelineItem type="Course">
+
+Industrial Ecology
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Course">
+
+3D modelling and rendering in Solidworks and 3DS Max
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Role">
+
+[Random International](/projects/random-international), London
+
+</About-TimelineItem>
+
+
 
 </template>
 
 <template v-slot:2010>
 
-<About-TimelineItem type="App" label="test 1"/>
-<About-TimelineItem type="Web" label="test 2"/>
-<About-TimelineItem type="Book" label="test 3"/>
-<About-TimelineItem type="Art" label="test 4"/>
-<About-TimelineItem type="App" label="test 5"/>
-<About-TimelineItem type="Web" label="test 6"/>
-<About-TimelineItem type="App" label="test 7"/>
-<About-TimelineItem type="Course" label="test 8"/>
+<About-TimelineItem type="Build">
+
+Treadmill boat, powered and piloted by feet alone
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Course">
+
+ERASMUS exchange at NTNU, Trondheim, Norway
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Build">
+
+Pinewood furniture, T-Komponent
+
+</About-TimelineItem>
+
+<About-TimelineItem type="UI">
+
+Offshore bridge, Ulstein Group
+
+</About-TimelineItem>
+
+
 
 </template>
 
 <template v-slot:2009>
 
-<About-TimelineItem type="App" label="test 1"/>
-<About-TimelineItem type="Web" label="test 2"/>
-<About-TimelineItem type="Book" label="test 3"/>
-<About-TimelineItem type="Art" label="test 4"/>
-<About-TimelineItem type="App" label="test 5"/>
-<About-TimelineItem type="Web" label="test 6"/>
-<About-TimelineItem type="App" label="test 7"/>
-<About-TimelineItem type="Course" label="test 8"/>
+<About-TimelineItem type="Course">
 
-</template>
+[Product Design Engineering](/#), Glasgow School of Art
 
-<template v-slot:2008>
+</About-TimelineItem>
 
-<About-TimelineItem type="App" label="test 1"/>
-<About-TimelineItem type="Web" label="test 2"/>
-<About-TimelineItem type="Book" label="test 3"/>
-<About-TimelineItem type="Art" label="test 4"/>
-<About-TimelineItem type="App" label="test 5"/>
-<About-TimelineItem type="Web" label="test 6"/>
-<About-TimelineItem type="App" label="test 7"/>
-<About-TimelineItem type="Course" label="test 8"/>
+<About-TimelineItem type="Role">
+
+[LEGO](/#), Billund
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Build" label="Micro hydro electric generator"/>
 
 </template>
 

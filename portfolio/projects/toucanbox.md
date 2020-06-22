@@ -45,7 +45,8 @@ description="toucanBox is an award winning startup subscription service deliveri
 .toucan-image
   position: absolute
   left: -5em
-  height: 50vh
+  height: 150%
+  max-height: 26em
   img
     position: relative
     height: 100%
@@ -168,7 +169,7 @@ Project management
 
 I conducted a series of in-house customer interviews. These consisted of both broad market research questions and useability testing all aspects of the website.
 I also collected data insights and anecdotal feedback from across the business - customer service, website analytics, net promoter score (NPS), customer surveys and production database - sometimes asking new questions of our data to fill the gaps (including writing a few database queries of my own).
-Analytics, asking customer service, interviewing existing customers and parents who weren’t customers. To gain a better understanding of toucanBox's business goals and constraints along with user needs and behaviours, I kicked off a discovery phase based on a range of quantitative and qualitative research methodologies. I held a series of stakeholder interviews across several business lines to better understand toucanBox's business goals, requirements, and constraints. Each of these interviews was captured in audio and text format, and was used to identify common themes and specific needs. I also explored existing data and artifacts, including. Along the way, I captured insights in a central location accessible to the whole project team.
+Analytics, asking customer service, interviewing existing customers and parents who weren’t customers. To gain a better understanding of toucanBox's business goals and constraints along with user needs and behaviours, I kicked off a discovery phase based on a range of quantitative and qualitative research methodologies. I held a series of stakeholder interviews across several business lines to better understand toucanBox's business goals, requirements, and constraints. Each of these interviews was captured in audio and text format, and was used to identify common themes and specific needs. I also explored existing data and artefacts, including. Along the way, I captured insights in a central location accessible to the whole project team.
 
 </template>
 
@@ -274,7 +275,7 @@ The box experience is all about the child. If they enjoy it, this drives the dec
 </Content-ThreeColumnSection>
 
 
-<Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse-wide.jpg" alt="Montage of discovery artifacts"/>
+<Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse-wide.jpg" alt="Montage of discovery artefacts"/>
 
 
 <Content-ThreeColumnSection padding="is-large" :content="true" columnOffset="three-offset">
@@ -367,7 +368,7 @@ _Data reflects year-over-year activity for a defined period of time as of Decemb
 
 
 
-<Content-ImageFrames-FullImageSection url="/images/toucanBox/onboarding-montage.png" alt="Montage of discovery artifacts"/>
+<Content-ImageFrames-FullImageSection url="/images/toucanBox/onboarding-montage.png" alt="Montage of discovery artefacts"/>
 
 
 
@@ -576,8 +577,8 @@ _“I don’t remember making a password, now I need one to log in?”_ Around 1
 
 <template slot="aside">
 
-<div class="columns is-gapless">
-  <div class="column is-two-thirds">
+<div class="columns is-gapless" style="margin-bottom: 3em;">
+  <div class="column is-half">
     <figure class="image is-square">
       <img class="lazyload" data-src="/images/toucanBox/user-testing-1.jpg" alt="User tester 1">
     </figure>
@@ -585,7 +586,7 @@ _“I don’t remember making a password, now I need one to log in?”_ Around 1
 </div>
 
 <div class="columns is-gapless">
-  <div class="column is-two-thirds">
+  <div class="column is-half">
     <figure class="image is-square">
       <img class="lazyload" data-src="/images/toucanBox/user-testing-2.jpg" alt="User tester 2">
     </figure>
@@ -628,8 +629,7 @@ Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 
 
 
-<Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse-wide.jpg" alt="Montage of discovery artifacts"/>
-TODO in-context presentation image - eyecandy
+<Content-ImageFrames-FullImageSection imageClass="is-16by9" url="/images/toucanBox/toucan-together.jpg" alt="Montage of discovery artefacts"/>
 
 
 
@@ -666,9 +666,8 @@ The final design is accessible and adapts seamlessly to several distinct user fl
 
 
 
-<Content-MainSectionDivider aside="Section 3 of 4" title="Evaluation"/>
+<Content-MainSectionDivider aside="Section 3 of 3" title="Evaluation"/>
 
-TODO add anchors to section dividers.
 
 
 
