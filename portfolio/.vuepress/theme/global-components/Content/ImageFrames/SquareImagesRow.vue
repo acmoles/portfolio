@@ -15,7 +15,7 @@
           v-for="(image, i) in images"
         >
 
-          <button v-if="image.action" class="action-button background-noise" type="button" name="action" @click="action(image, i)">
+          <button v-if="image.action" class="action-button background-noise" :class="image.action.type" type="button" name="action" @click="action(image, i)">
             <figure class="image is-square">
               <img class="lazyload" :data-src="image.url" :alt="image.alt">
             </figure>
