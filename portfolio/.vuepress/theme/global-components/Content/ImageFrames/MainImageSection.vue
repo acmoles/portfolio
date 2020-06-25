@@ -2,8 +2,8 @@
   <section class="section" :class="padding">
       <div class="container is-fullhd">
 
-        <div v-if="content" class="columns">
-          <div class="column is-two-thirds content">
+        <div v-if="hasContent" class="columns">
+          <div class="column is-two-thirds content" :class="rag">
             <slot name="content"></slot>
             <br>
           </div>
@@ -39,12 +39,12 @@ export default {
     url: String,
     alt: String,
     caption: String,
-    content: Boolean,
     aside: Boolean,
     padding: String,
     imageClass: String,
     iframe: Boolean,
     columnOffset: String,
+    rag: String
   },
 
   computed: {
@@ -54,8 +54,12 @@ export default {
       } else {
         return 'is-16by9'
       }
-    }
+    },
+    hasContent () {
+      return !!this.$slots['content']
+    },
   }
+
 
 }
 

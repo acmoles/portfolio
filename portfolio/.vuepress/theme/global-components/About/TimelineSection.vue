@@ -123,6 +123,7 @@ export default {
     margin-top: 3em
     justify-content: flex-end
     .section-toggle
+      transition: color 0.3s ease
       padding: 0
       margin-left: 1.5em
       margin-right: 0

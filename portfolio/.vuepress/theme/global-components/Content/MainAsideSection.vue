@@ -2,8 +2,8 @@
   <section class="section" :class="padding">
       <div class="container is-fullhd">
 
-        <div v-if="content" class="columns">
-          <div class="column is-two-thirds content">
+        <div v-if="hasContent" class="columns">
+          <div class="column is-two-thirds content" :class="rag">
             <slot name="content"></slot>
 
             <template v-if="hasSecondPageSlot">
@@ -53,12 +53,12 @@
 export default {
 
   props: {
-    content: Boolean,
     aside: Boolean,
     padding: String,
     columnOffset: String,
     page1Label: String,
     page2Label: String,
+    rag: String,
   },
 
   watch: {
@@ -84,6 +84,9 @@ export default {
     hasSecondPageSlot () {
       return !!this.$slots['page2']
     },
+    hasContent () {
+      return !!this.$slots['content']
+    },
   },
 
   methods: {
@@ -101,8 +104,8 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../../styles/variables.sass"
-  @import "../../styles/mixins.sass"
+  @import "@theme/styles/variables.sass"
+  @import "@theme/styles/mixins.sass"
 
   .section-toggle
     padding: 0

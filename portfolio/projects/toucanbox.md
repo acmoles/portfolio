@@ -20,7 +20,7 @@ hasFooter: true
 <!-- A redesigned sign up funnel to improve communication, useability and confidence and a strategic design project to identify new ways to improve customer retention -->
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com" ragClass="toucan-rag"
+<Stage-ProjectStage :noise="true" ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com" rag="toucan-rag"
 description="toucanBox is an award winning startup subscription service delivering creative craft boxes to children aged 3-8.">
 
   <template v-slot:visual-column>
@@ -44,7 +44,7 @@ description="toucanBox is an award winning startup subscription service deliveri
 
 .toucan-image
   position: absolute
-  left: -5em
+  left: -4em
   height: 150%
   max-height: 26em
   img
@@ -63,7 +63,7 @@ description="toucanBox is an award winning startup subscription service deliveri
 
 :::
 
-<Content-ContextSection :box="true">
+<Content-ContextSection :box="true" rag="rag-5">
 
 <template v-slot:main>
 
@@ -144,7 +144,7 @@ Project management
 
 
 
-<Content-PointsSection padding="is-large" :content="true" :points="[
+<Content-PointsSection padding="is-large"  :points="[
 
 { src:'/svg-icons/icon_device.svg', alt:'device', title:'Prospective customers are usually on their phones', description:'85% of users accessed the website on mobile or tablet. The most common source was our social media ads.' },
 
@@ -185,13 +185,15 @@ Analytics, asking customer service, interviewing existing customers and parents 
 <Content-QuoteSection quote="It’s fun, I can see it’s for kids. But I want to see more of what’s inside the box." attribute="Ameera Algarni, Mum to Rafi"/>
 
 
-<Content-ThreeColumnSection :content="true" padding="is-large" columnOffset="three-offset">
+<Content-ThreeColumnSection padding="is-large" columnOffset="three-offset">
 
 <template v-slot:content>
 
 ## Who are our customers?
 
+<p style="padding-right: 6em;">
 Through internal stakeholder consultation and customer interviews, I identified the following high level personas and their corresponding motivations:
+</p>
 
 </template>
 
@@ -280,7 +282,7 @@ The box experience is all about the child. If they enjoy it, this drives the dec
 <Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse-wide.jpg" alt="Montage of discovery artefacts"/>
 
 
-<Content-ThreeColumnSection padding="is-large" :content="true" columnOffset="three-offset">
+<Content-ThreeColumnSection padding="is-large"  columnOffset="three-offset">
 
 <template v-slot:content>
 
@@ -470,7 +472,7 @@ _Data reflects year-over-year activity for a defined period of time as of Decemb
 
 
 
-<Content-ImageFrames-SquareImagesRow :content="true" :images="[
+<Content-ImageFrames-SquareImagesRow rag="rag-3" :images="[
 { url:'/images/toucanBox/main-stage-square.png', alt:'Optimise the \'main stage\'', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
   type: 'modal',
   label: 'Iterations',
@@ -578,7 +580,7 @@ Redesigned sitemap and site-wide navigation, able to accommodate existing conten
 
 
 
-<Content-ImageFrames-SquareImagesRow padding="is-medium" :content="true" :images="[
+<Content-ImageFrames-SquareImagesRow padding="is-medium"  :images="[
 { url:'/images/toucanBox/signup-funnel.png', alt:'Optimise the signup funnel', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
   type: 'modal',
   label: 'Wireframes',
@@ -667,7 +669,7 @@ I experimented with adding additional choice at signup but found this reduced co
 
 
 
-<Content-MainAsideSection padding="is-large" :content="true" :aside="true" columnOffset="table-offset" page1Label="Landing page" page2Label="Signup funnel">
+<Content-MainAsideSection padding="is-large" rag="rag-4" :aside="true" columnOffset="table-offset" page1Label="Landing page" page2Label="Signup funnel">
 
 <template slot="content">
 
@@ -731,7 +733,7 @@ _“I don’t remember making a password, now I need one to log in?”_ Around 1
 
 
 
-<Content-ImageFrames-MainImageSection padding="is-large" url="/images/toucanBox/styles.png" alt="toucanBox design system" :aside="true" :content="true" imageClass="is-2by1">
+<Content-ImageFrames-MainImageSection padding="is-large" url="/images/toucanBox/styles.png" alt="toucanBox design system" :aside="true" rag="rag-5" imageClass="is-2by1">
 
 <template v-slot:content>
 
@@ -797,7 +799,7 @@ Having been involved in the earlier stages of the project, they were primed and 
 
 
 
-<Content-TextSection padding="is-large" columnOffset="title-offset">
+<Content-TextSection padding="is-large" rag="rag-4" columnOffset="title-offset">
 
 ## Development
 
@@ -847,9 +849,9 @@ In order to act quickly, I slotted into the role of front-end developer to build
 
 
 
-<Content-TextSection>
+<Content-TextSection rag="rag-5">
 
-<p class="subtitle">
+<p class="subtitle" style="padding-right: 4em;">
   The new signup experience had an immediate impact on funnel conversion rate.
 </p>
 
@@ -934,5 +936,5 @@ I created a static mirror of the toucanBox homepage at the conclusion of this pr
 <Content-MetricsSection padding="is-medium-large" :metrics="[
 { metric:'25%', description:'Estimated cumulative average increase in funnel conversion rate.' },
 { metric:'35%', description:'Drop in average homepage load time (I implemented SVG spritesheets, lazy loading and progressive enhancement).' },
-{ metric:'20%', description:'Reduction in the number of customer service cases relating to a misunderstanding of the value proposition.' },
+{ metric:'20%', description:'Reduction in the number of CS cases relating to a misunderstanding of the value proposition.' },
 ]"/>

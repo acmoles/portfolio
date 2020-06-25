@@ -2,8 +2,8 @@
   <section class="section" :class="padding">
     <div class="container is-fullhd">
 
-      <div v-if="content" class="columns">
-        <div class="column is-two-thirds content">
+      <div v-if="hasContent" class="columns">
+        <div class="column is-two-thirds content" :class="rag">
           <slot name="content"></slot>
           <br>
         </div>
@@ -69,6 +69,7 @@ export default {
     images: Array,
     padding: String,
     content: Boolean,
+    rag: String
   },
 
   data() {
@@ -86,7 +87,10 @@ export default {
         }
       })
       return hasSiblingAction
-    }
+    },
+    hasContent () {
+      return !!this.$slots['content']
+    },
   },
 
   methods: {

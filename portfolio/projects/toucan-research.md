@@ -18,7 +18,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="create.toucanbox.com" ctaUrl="https://create.toucanbox.com"
+<Stage-ProjectStage :noise="true" rag="rag-3" ctaLabel="create.toucanbox.com" ctaUrl="https://create.toucanbox.com"
 description="Create by toucanBox explores whether adding digital value to the physical craft box can lift activation rate at a critical point in the first box experience.">
 
   <template v-slot:visual-background>
@@ -78,7 +78,7 @@ _I have omitted confidential information in this case study. All content is my o
 
 ###  The challenge
 
-Establish to what extent digital content linked to the trial box can increase activation rate. Estimate the costs and benefits of producing more digital content.
+Establish to what extent digital content linked to the trial box can increase activation rate. Estimate the costs and benefits of producing further digital content.
 
 </template>
 
@@ -86,10 +86,10 @@ Establish to what extent digital content linked to the trial box can increase ac
 
 ### The outcome
 
-Must resonate with the core value proposition (hands-on crafting and creativity). High friction when moving to a device from the magazine reduced the reach, leading to low overal impact.
-
+Promising pilot with some very engaged users but high friction moving to a device from the magazine reduced the reach, leading to low overall impact on activation.
 
 </template>
+<!-- Must resonate with the core value proposition (hands-on crafting and creativity).  -->
 
 <template v-slot:column3>
 
@@ -112,7 +112,7 @@ Project Lead
 
 
 
-<Content-PointsSection :content="true" :points="[
+<Content-PointsSection  rag="rag-3" :points="[
 { src:'/svg-icons/icon_sad.svg', alt:'sad face', title:'The box often didn’t seem like good value for money', description:'Even satisfied customers felt the product was somewhat overpriced. They focussed on the value of the materials, rather than the holistic experience.' },
 { src:'/svg-icons/icon_time.svg', alt:'clock', title:'The duration of the toucanBox experience could feel short', description:'Some customers would craft with their children, others would use the box to get a moment of peace. In both cases they wanted a longer lasting experience.' },
 { src:'/svg-icons/icon_idea.svg', alt:'lightbulb', title:'What would be distinctive about digital content by toucanBox?', description:'toucanBox customers want to offer their children hands-on play away from the screen. So any digital content could not be a screen-only experience.' },
@@ -139,7 +139,7 @@ My approach was to engage parents with an in-depth interview, intended to flesh 
 
 
 
-<Content-ImageFrames-MainImageSection url="/images/toucan-rnd/process.jpg" alt="placeholder" :aside="true" :content="true">
+<Content-ImageFrames-MainImageSection url="/images/toucan-rnd/process.jpg" alt="placeholder" :aside="true" >
 
 <template v-slot:content>
 
@@ -176,7 +176,7 @@ The magazine in the first box features a double page spread introducing Create b
 </Content-ImageFrames-MainImageSection>
 
 
-<Content-ImageFrames-SquareImagesRow :content="true" :images="[
+<Content-ImageFrames-SquareImagesRow  :images="[
 { url:'https://player.vimeo.com/video/412315835', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:true },
 { url:'https://player.vimeo.com/video/412315982', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:true },
 { url:'/images/toucan-rnd/colouring.jpg', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
@@ -236,7 +236,7 @@ Then print it out and colour it in. Toucanoos are cute triangular characters whi
 
 
 
-<Content-MainAsideSection padding="is-large" :content="true" :aside="true" columnOffset="table-offset">
+<Content-MainAsideSection padding="is-large" rag="rag-6" :aside="true" columnOffset="table-offset">
 
 <template slot="content">
 
@@ -281,7 +281,7 @@ Low-fi prototype of the Toucanoo colouring sheet maker, used in early testing
 
 
 
-<Content-ImageFrames-MainImageSection imageClass="is-5by3" url="/images/toucan-rnd/colouring-design.png" alt="placeholder" :aside="true" :content="true">
+<Content-ImageFrames-MainImageSection imageClass="is-5by3" url="/images/toucan-rnd/colouring-design.png" alt="placeholder" :aside="true" >
 
 <template v-slot:content>
 
@@ -320,7 +320,7 @@ Matching the style of the new toucanBox magazine required a different look and f
 
 
 
-<Content-ThreeColumnSection :content="true" padding="is-large">
+<Content-ThreeColumnSection padding="is-large">
 
 <template v-slot:content>
 
@@ -330,7 +330,9 @@ Matching the style of the new toucanBox magazine required a different look and f
   I asked existing toucanBox customers what ‘value for money’ means to them and gathered their attitudes to children's digital media.
 </p> -->
 
+<p style="padding-right: 4em;">
 I selected WebGL backed HTML Canvas rather than DOM or SVG. My rationale was performance on low-spec mobile devices, which could lean on their graphics processor (GPU) to keep frame-rate high and animations smooth.
+</p>
 
 </template>
 
@@ -402,7 +404,7 @@ Tuning the tweens and sinusoidal functions behind the motion sometimes produced 
 
 
 
-<Content-TextSection>
+<Content-TextSection rag="rag-6">
 
 <p class="subtitle">
   "When I try to imagine what kind of app or game toucanBox would make, this feels exactly right."

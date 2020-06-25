@@ -97,6 +97,13 @@ export default {
       } else {
         return this.title
       }
+    },
+    isSafari () {
+      if (typeof window !== 'undefined') {
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+      } else {
+        return false
+      }
     }
   },
 
@@ -141,6 +148,12 @@ export default {
       		return { x : posx, y : posy }
       },
       mouseEnter(event) {
+        if (this.isSafari) {
+          // Immediately remove transition on mouse over in Safari to avoid stutter
+          this.mouseOn = true
+          return
+        }
+
         if (!this.mouseOn) {
           this.transitionTimeout = setTimeout(() => {
             this.mouseOn = true

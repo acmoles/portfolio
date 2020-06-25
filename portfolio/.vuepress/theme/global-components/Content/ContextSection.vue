@@ -11,12 +11,14 @@
 
       <div class="columns">
         <div
-          class="column is-two-thirds text-columnp"
+          class="column is-two-thirds"
+          :class="rag"
           >
           <slot name="main"></slot>
         </div>
         <div
           class="column aside title-offset"
+          :class="rag"
         >
           <slot name="side"></slot>
         </div>
@@ -39,7 +41,8 @@ export default {
   mixins: [fadeUpInLoad, topPadding],
 
   props: {
-    box: Boolean
+    box: Boolean,
+    rag: String
   },
 
   data () {

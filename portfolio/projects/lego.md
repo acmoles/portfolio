@@ -17,7 +17,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="none" ctaUrl="#"
+<Stage-ProjectStage rag="rag-3" :noise="true" ctaLabel="none" ctaUrl="#"
 description="LEGO Dimensions blends brick building with video games. It brings together unlikely allies in a mash-up multiverse. It's a unique take on toys-to-life.">
 
   <template v-slot:visual-column>
@@ -40,7 +40,7 @@ description="LEGO Dimensions blends brick building with video games. It brings t
 :::
 
 
-<Content-ContextSection :box="true">
+<Content-ContextSection :box="true" rag="rag-5">
 
 <template v-slot:main>
 

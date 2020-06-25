@@ -15,7 +15,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="none" ctaUrl="https://www.ecosia.org" ragClass="sprint-rag"
+<Stage-ProjectStage :noise="true" ctaLabel="none" ctaUrl="https://www.ecosia.org" rag="rag-4"
 description="Sprint action figures are manufactured on-demand in durable, full colour 3D printed plastic.">
 
   <template v-slot:visual-background>

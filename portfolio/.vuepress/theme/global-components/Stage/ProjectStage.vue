@@ -23,7 +23,7 @@
           class="column stage-column is-two-thirds"
           :class="[{'in-view': visible}, {'appear-stage-up': animating}]"
         >
-          <p class="subtitle" :class="ragClass">
+          <p class="subtitle" :class="rag">
             {{ description }}
           </p>
           <ProjectExternalLink
@@ -66,7 +66,7 @@ export default {
     description: String,
     noise: Boolean,
     fadeless: Boolean,
-    ragClass: String,
+    rag: String,
   },
 
   mixins: [fadeUpInLoad, topPadding],
@@ -173,10 +173,7 @@ export default {
 .stage-column
   position: relative
   @media screen and (max-width: $desktop)
-    padding-top: 8em
     padding-bottom: 6em
-  @media screen and (min-width: $desktop)
-    padding-right: 10em
   @media screen and (max-width: $tablet)
     padding: 11em 3em 5em 3em
 
@@ -233,9 +230,6 @@ html:not(.disable-motion)
   // .stage-column
   //   transition: opacity .8s $coverTransition, transform .8s $coverTransition
   //   transition-delay: $base-project-delay + $first-mover-delay
-
-
-  // TODO follow wipe motion
 
   .appear-stage-up
     transition: opacity .8s $fadeUpTransition ($base-project-delay + $first-mover-delay), transform 1s $coverTransition

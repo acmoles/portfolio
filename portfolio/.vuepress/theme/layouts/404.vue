@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { loadableHero } from '@theme/mixins/loadableHero.js'
+
 const msgs = [
   `There's nothing here.`,
   `How did we get here?`,
@@ -16,9 +18,13 @@ const msgs = [
   `Looks like we've got some broken links.`
 ]
 
-// TODO make 404 page work
-
 export default {
+  mixins: [loadableHero],
+
+  mounted() {
+    this.doLoad()
+  },
+
   methods: {
     getMsg () {
       return msgs[Math.floor(Math.random() * msgs.length)]

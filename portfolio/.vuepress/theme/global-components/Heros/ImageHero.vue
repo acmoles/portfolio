@@ -9,7 +9,7 @@
 // :style="{backgroundImage: backgroundSrc}"
 // :class="{'noise-light': noise}"
 
-import { loadableHero } from '../../mixins/loadableHero.js'
+import { loadableHero } from '@theme/mixins/loadableHero.js'
 
 export default {
 
@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../../styles/variables.sass"
-  @import "../../styles/mixins.sass"
+  @import "@theme/styles/variables.sass"
+  @import "@theme/styles/mixins.sass"
 
 </style>

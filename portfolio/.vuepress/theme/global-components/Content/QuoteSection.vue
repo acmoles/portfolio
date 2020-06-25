@@ -3,7 +3,7 @@
     <b v-for="n in 128" class="particle"/>
     <div class="container is-fullhd content relative">
       <div class="columns">
-        <div class="column is-two-thirds background-noise">
+        <div class="column is-two-thirds background-noise" :class="rag">
           <p class="subtitle">{{ quote }}</p>
           <p class="attribute">{{ attribute }}</p>
         </div>
@@ -20,6 +20,7 @@ export default {
     quote: String,
     attribute: String,
     color: String,
+    rag: String
   },
 
 }
@@ -44,7 +45,6 @@ export default {
 
     .column
       background-color: darken($black, 3%)
-      padding: 1em
     // .subtitle, .attribute
       // text-shadow: 0 0 0.75em $pitch, 0 0 2em $pitch
 

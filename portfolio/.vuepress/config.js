@@ -32,8 +32,8 @@ module.exports = {
       { text: 'About', ariaLabel: 'About link', link: '/about/' },
       { text: 'Contact', ariaLabel: 'Contact menu', items: [
           { text: 'Email', link: 'mailto:acmoles@gmail.com' },
-          { text: 'Linkedin', link: 'https://linkedin.com' },
-          { text: 'Github', link: 'https://github.com' }
+          { text: 'Linkedin', link: 'https://de.linkedin.com/in/anthonymoles' },
+          { text: 'Github', link: 'https://github.com/acmoles' }
       ] },
     ],
   },

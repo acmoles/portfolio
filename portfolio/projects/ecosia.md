@@ -27,7 +27,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="ecosia.org" ctaUrl="https://www.ecosia.org"
+<Stage-ProjectStage :noise="true" rag="rag-4" ctaLabel="ecosia.org" ctaUrl="https://www.ecosia.org"
 description="Ecosia is a search engine that uses 80% of profits from advertising to plant trees around the world, where they're needed the most.">
 
   <template v-slot:visual-column>
@@ -49,7 +49,7 @@ description="Ecosia is a search engine that uses 80% of profits from advertising
 :::
 
 
-<Content-ContextSection :box="true">
+<Content-ContextSection :box="true" rag="rag-4">
 
 <template v-slot:main>
 
@@ -61,11 +61,13 @@ Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur t
 
 Suspendisse potenti. Praesent risus massa, vulputate eget turpis in, dignissim tincidunt odio -->
 
-We made impressive progress on our mobile apps with only two developers and a share of my overall capacity as a product designer. By mid 2019, with a growing user base and a renewed strategic focus on mobile, it was time to found a new agile product team with a focus on native apps. I took on the role of product manager and team leader. Over the next three months we added two developers and a designer to the team.
+With a growing user base and a renewed strategic focus on mobile, in mid 2019 it was time to found a new agile product team with a focus on native apps. Having been closely involved on a strategic level as a product designer, I was a natural fit to take on the role of product manager and team leader. Over the next three months we grew the team from two to four developers and added a dedicated designer.
 
-The primary purpose of Ecosia's native apps is to make searching easy on major platforms. Web search resides in a meta space. It's naturally multi-platform and one way in which devices augment our mental abilities. So it's critically important that Ecosia's apps fit seamlessly into user's daily lives and I found that deep user empathy and platform knowledge were key to achieving this.
+<!-- We made impressive progress on our mobile apps with only two developers and a share of my overall capacity as a product designer.  -->
 
-Another aspect of the vision is to connect users with the tree-planting mission. In early 2020 we extended our thinking beyond searching and browsing by asking ourselves how we can help users make further incremental changes in their daily lives.
+The primary purpose of Ecosia's native apps is to make searching easy on major platforms. Web search resides in a meta space. It's naturally multi-platform; one way in which devices augment our mental abilities. So _it's critically important that Ecosia's apps fit seamlessly into user's daily lives,_ which requires deep user empathy and platform knowledge.
+
+We also want to connect users with our tree-planting mission and in early 2020 we extended our thinking beyond searching and browsing by asking ourselves how we can help users make further incremental changes in their daily lives.
 
 <!--
 
@@ -86,7 +88,7 @@ I initially joined Ecosia as a product designer and gradually transitioned into 
 <template v-slot:side>
 
 **Product**
-Native apps on Android, iOS and MacOS
+Android, iOS and MacOS apps
 
 **Sector**
 Internet search
@@ -105,11 +107,11 @@ Product designer, 2 iOS developers, 1 Android developer, 1 devOps/backend
 </Content-ContextSection>
 
 
-<Content-TextSection columnOffset="title-offset">
+<Content-TextSection columnOffset="title-offset" rag="rag-3">
 
 ## Reflections
 
-<p class="subtitle">
+<p class="subtitle" style="padding-right: 1em;">
   This was my first taste of formal team leadership, although I've previously led projects and mentored individuals on a 1:1 basis.
 </p>
 

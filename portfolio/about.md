@@ -24,7 +24,7 @@ hasFooter: true
 
 :::
 
-<Content-TextSection columnOffset="title-offset" padding="about-text">
+<Content-TextSection columnOffset="title-offset" padding="about-text" rag="rag-4">
 
 <!-- INTERACTION (INTERFACE DESIGN AND HUMAN-COMPUTER INTERACTION), EXPERIENCE (UX DESIGN AND ALL OTHER EXPERIENCE) AND PRODUCT DESIGNER -->
 
@@ -111,17 +111,17 @@ I started my career as a teacher and transitioned to UX about 10 years ago. But 
 
 -->
 
-## Hi, I'm Ant
+## Hello! I'm Ant
 
-<p class="subtitle">
+<p class="subtitle" style="padding-right: 5em;">
   A designer and leader creating useful and playful experiences centred on people
 </p>
 
-Let’s break that down a bit. My training was in [Product Design Engineering](/#) and I started my career as a [Toy Designer at LEGO.](/#) I transitioned into UX about 5 years ago, pursuing a desire to blend technology and interactivity into my practice. Recently I've been working as a Product Manager. But I never forgot my roots and I'm at my best when bridging the digital/physical divide.
+Let’s break that down a bit. I started my career as a [Toy Designer at LEGO](/projects/lego), having trained in [Product Design Engineering](http://www.gsa.ac.uk/study/undergraduate-degrees/product-design-engineering/) at the Glasgow School of Art. I transitioned into UX about 5 years ago, pursuing a desire to blend technology and interactivity into my practice. Recently I've been leading a technology team as a [Product Manager](/projects/ecosia). But I haven't forgotten my roots and I'm at my best when bridging the digital/physical and design/technology divides.
 
-I've had the pleasure to collaborate with great people on diverse products, from time-critical [MVPs](/projects/toucanbox) at startups to [iterative features](/projects/ecosia) reaching millions of users. My natural curiosity and adaptability have led me to play varied roles in the agile product team. As a designer and product person, I've found a lifetime of tinkering with digital tools, languages and technologies to be extremely advantageous.
+I've had the pleasure to collaborate with great people on diverse products, from time-critical [MVPs](/projects/toucanbox) at startups to [iterative features](/projects/ecosia/#product-design-at-scale) reaching millions of users. My natural curiosity and adaptability have led me to play varied roles in the agile product team. As a designer and product person, I've found a lifetime of tinkering with digital tools, languages and technologies to be extremely advantageous.
 
-What drives me is the belief that software and technology have immense potential to enhance our creativity and learning. By distilling complexity with design, I strive to open up this potential to everyone, not just specialists. Rigorously designed interfaces with playful interactions are a key ingredient. Another is iteration - testing early and often. The human-centred design process is my guiding north star and the thread that has run throughout my career. I originally hail from Edinburgh, Scotland, I recently called London home and I'm currently based in Berlin.
+What drives me is the belief that technology has immense potential to enhance everyone's creativity and learning. By distilling complexity through design, I strive to open up this potential to wider audiences. I see rigorously designed interfaces with playful interactions as a key ingredient. Another is iteration - testing early and often. _The human-centred design process is my guiding north star and the thread that runs throughout my career._ I originally hail from Edinburgh, Scotland, I recently called London home and I'm currently based in Berlin.
 
 <!--
 as a force for good in our lives
@@ -183,13 +183,59 @@ Rapha feedback highlights
 **Design**
 UX, UI, interaction, motion, user research and testing, visual design, illustration, sketching, 3D modelling
 
-**Technology**
-[Web development](/#), Unity (C#), Familiar with: iOS (Xcode, Swift), Ruby/Rails,
+<p>
+<strong>Technology</strong>
+<Content-ModalLink label="Web development">
+<template v-slot:modal>
+<Content-ThreeColumnSection padding="is-small">
 
-<!-- I built this website with [Vue.js](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), [Three.js](https://threejs.org/), SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress](https://vuepress.vuejs.org/). (Vue, Angular, React, WebGL, Node.js, Ruby)-->
+<template v-slot:column1>
+
+###  Front-end
+
+CSS (SCSS, SASS)
+~ JS (ES6, Typescript)
+~ UI frameworks (React, Vue, Angular, Ionic)
+~ Motion (Anime.js, Greensock)
+~ WebGL/XR (A-frame, Three.js, Pixi.js)
+~ Datavis (D3.js, Mapbox)
+~ Analytics (Google, Snowplough)
+~ Build systems (Gulp, Webpack, Browserify)
+~ Testing (Jest, Cypress)
+~ Legacy stacks (JQuery, Backbone)
+
+</template>
+
+<template v-slot:column2>
+
+### Back-end
+
+Node.js stack (Express, Harp)
+~ Database (MongoDB, SQL, Postgres)
+~ REST APIs, Websocket
+~ Familiar with Ruby/Rails, Go
+
+</template>
+
+<template v-slot:column3>
+
+### Ops
+
+Version control (Git)
+~ Static hosting (Netlify, GitHub Pages)
+~ App hosting (Heroku, Digital Ocean)
+~ Familiar with Docker, Circle CI
+
+</template>
+
+</Content-ThreeColumnSection>
+</template>
+</Content-ModalLink>
+Unity, familiar with iOS and Android development
+</p>
 
 **People**
-Leadership, stakeholders, mentoring, training
+Leadership, stakeholders, team building, mentoring, training
 
 **Product**
 Strategy, analytics, A/B testing
@@ -205,7 +251,7 @@ Strategy, analytics, A/B testing
 
 <template v-slot:2020>
 
-<About-TimelineItem type="Role" label="Ecosia Mobile Team strategy"/>
+<!-- <About-TimelineItem type="Role" label="Ecosia Mobile Team strategy"/> -->
 
 <About-TimelineItem type="App">
 
@@ -214,14 +260,14 @@ Strategy, analytics, A/B testing
 </About-TimelineItem>
 
 <About-TimelineItem type="Web">
-<p>Portfolio website
-<Content-ModalLink label="techstack">
+<p>
+<Content-ModalLink label="Portfolio website">
 <template v-slot:modal>
-<div class="container is-full-width content">
+<Content-TextSection padding="is-small" rag="rag-6">
 
-Modal content
+I designed this website in [Sketch](https://www.sketch.com/) and hand coded it using [Vue.js](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), [Three.js](https://threejs.org/), SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress](https://vuepress.vuejs.org/).
 
-</div>
+</Content-TextSection>
 </template>
 </Content-ModalLink>
 </p>
@@ -240,19 +286,19 @@ Modal content
 
 <About-TimelineItem type="App">
 
-[Ecosia iOS App](/projects/ecosia/#mobile-team-highlights)
+[Ecosia iOS App](/projects/ecosia/#mobile-team-highlights) browser overhaul
 
 </About-TimelineItem>
 
-<About-TimelineItem type="Game">
+<!-- <About-TimelineItem type="Game">
 
 Stompy Robot [Game Jam](/#)
 
-</About-TimelineItem>
+</About-TimelineItem> -->
 
 <About-TimelineItem type="Role">
 
-Product Manager at Ecosia
+Product Manager, Native Apps team
 
 </About-TimelineItem>
 <About-TimelineItem type="Read" label="Inspired by Marty Cagan"/>
@@ -285,8 +331,6 @@ Ecosia hack days [Search Map](https://mapvis.netlify.app/)
 
 <template v-slot:2017>
 
-<About-TimelineItem type="Read" label="The Design of Everyday Things by Don Norman"/>
-
 <About-TimelineItem type="Web">
 
 [toucanBox onboarding](/projects/toucanbox)
@@ -295,7 +339,11 @@ Ecosia hack days [Search Map](https://mapvis.netlify.app/)
 
 <About-TimelineItem type="Web">
 
-[toucanBox personalisation](/extra/toucanbox-personalisation)
+<Content-ModalLink label="toucanBox personalisation">
+<template v-slot:modal>
+<Content :page-key="$site.pages.find(p => p.path === '/extra/toucanbox-personalisation/').key"/>
+</template>
+</Content-ModalLink>
 
 </About-TimelineItem>
 
@@ -317,7 +365,11 @@ Ecosia hack days [Search Map](https://mapvis.netlify.app/)
 
 <About-TimelineItem type="Game">
 
-[Spaced](/#)
+<Content-ModalLink label="Spaced">
+<template v-slot:modal>
+<Content :page-key="$site.pages.find(p => p.path === '/extra/spaced/').key"/>
+</template>
+</Content-ModalLink>
 
 </About-TimelineItem>
 
@@ -341,7 +393,7 @@ Ecosia hack days [Search Map](https://mapvis.netlify.app/)
 
 </About-TimelineItem>
 
-<About-TimelineItem type="Web" label="toucanBox Christmas campaign"/>
+<!-- <About-TimelineItem type="Web" label="toucanBox Christmas campaign"/> -->
 
 </template>
 
@@ -357,40 +409,47 @@ Ecosia hack days [Search Map](https://mapvis.netlify.app/)
 
 <About-TimelineItem type="Toy">
 
-[Disney Infinity Me](/projects/makielab)
-
+<Content-ModalLink label="Disney Infinity Me">
+<template v-slot:modal>
+<Content :page-key="$site.pages.find(p => p.path === '/extra/infinity/').key"/>
+</template>
+</Content-ModalLink>
 </About-TimelineItem>
 
+<About-TimelineItem type="Read" label="The Design of Everyday Things by Don Norman"/>
+
 <!-- <About-TimelineItem type="Kudos" label="Innovate UK"/> -->
-<About-TimelineItem type="Kudos" label="Techstars Accelerator"/>
+<!-- <About-TimelineItem type="Kudos" label="Techstars Accelerator"/> -->
 
 
 </template>
 
+
+
 <template v-slot:2014>
-
-<About-TimelineItem type="Toy">
-
-[Sprint figures](/extra/sprint)
-
-</About-TimelineItem>
 
 <About-TimelineItem type="Toy">
 
 [LEGO Dimensions](/projects/lego)
 
 </About-TimelineItem>
-
 <About-TimelineItem type="Toy" label="LEGO Nexo Knights"/>
 <About-TimelineItem type="Toy" label="LEGO undisclosed concepts"/>
+<About-TimelineItem type="Toy">
+
+[Sprint](/extra/sprint), colour 3DP action figures
+
+</About-TimelineItem>
 
 </template>
+
+
 
 <template v-slot:2013>
 
 <About-TimelineItem type="Product">
 
-[NITA](/projects/art-lebedev-studio) air traffic control consoles
+[NITA](/projects/art-lebedev-studio/#highlights) air traffic control consoles
 
 </About-TimelineItem>
 
@@ -402,7 +461,7 @@ Co-founded [Stompy Robot](/projects/stompy-robot), Edinburgh
 
 <About-TimelineItem type="Game">
 
-[Nova](/projects/stompy-robot#Nova)
+[Nova](/projects/stompy-robot#Nova), mobile action RTS
 
 </About-TimelineItem>
 
@@ -412,14 +471,15 @@ Co-founded [Stompy Robot](/projects/stompy-robot), Edinburgh
 
 </About-TimelineItem>
 
-<About-TimelineItem type="Wearable">
+<!-- <About-TimelineItem type="Wearable">
 
 [NERF Energon Band](/#)
 
-</About-TimelineItem>
-
+</About-TimelineItem> -->
 
 </template>
+
+
 
 <template v-slot:2012>
 
@@ -427,7 +487,7 @@ Co-founded [Stompy Robot](/projects/stompy-robot), Edinburgh
 
 <About-TimelineItem type="Course">
 
-Human Scale Biogas, graduate project PDE
+Human Scale Biogas, graduate project PDE (1st Class Meng)
 
 </About-TimelineItem>
 
@@ -439,17 +499,19 @@ Human Scale Biogas, graduate project PDE
 
 <About-TimelineItem type="Product">
 
-[Oktopus](/projects/art-lebedev-studio)
+[Oktopus](/projects/art-lebedev-studio/#highlights)
 
 </About-TimelineItem>
 
-<About-TimelineItem type="Vehicle">
+<!-- <About-TimelineItem type="Vehicle">
 
 [Scout Helicopter](/projects/art-lebedev-studio)
 
-</About-TimelineItem>
+</About-TimelineItem> -->
 
 </template>
+
+
 
 <template v-slot:2011>
 
@@ -499,7 +561,7 @@ Pinewood furniture, T-Komponent
 
 <About-TimelineItem type="UI">
 
-Offshore bridge, Ulstein Group
+Offshore vessel bridge, Ulstein Group
 
 </About-TimelineItem>
 
@@ -511,13 +573,13 @@ Offshore bridge, Ulstein Group
 
 <About-TimelineItem type="Course">
 
-[Product Design Engineering](/#), Glasgow School of Art
+[Product Design Engineering](http://www.gsa.ac.uk/study/undergraduate-degrees/product-design-engineering/), Glasgow School of Art
 
 </About-TimelineItem>
 
 <About-TimelineItem type="Role">
 
-[LEGO](/#), Billund
+[LEGO](/projects/lego), Billund
 
 </About-TimelineItem>
 

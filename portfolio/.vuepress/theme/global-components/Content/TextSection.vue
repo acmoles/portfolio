@@ -3,7 +3,7 @@
     <div class="container is-fullhd content">
       <div class="columns">
 
-        <div class="column is-two-thirds text-column">
+        <div class="column is-two-thirds" :class="rag">
           <slot></slot>
         </div>
 
@@ -23,6 +23,7 @@ export default {
 
   props: {
     padding: String,
+    rag: String,
     columnOffset: String,
   },
 
@@ -31,10 +32,4 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "@theme/styles/variables.sass"
-  @import "@theme/styles/mixins.sass"
-
-  @media screen and (min-width: $tablet)
-    .text-column
-      padding-right: 6em
 </style>

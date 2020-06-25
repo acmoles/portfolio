@@ -1,5 +1,4 @@
 ---
-uid: 7
 title: toucanBox 2
 subtitle: Personalised experience
 navStyle:
@@ -26,7 +25,7 @@ Visuals: cartoon, vision (small), screenshot with button
 
 OR full content - in modal is this possible? Double modal on zoomable images? Not in the first instance at least...
 
-<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-2by1" url="/images/toucanBox/personalised-experience.jpg" alt="Cartoon of a personalised experience" :aside="true" :content="true">
+<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-2by1" url="/images/toucanBox/personalised-experience.jpg" alt="Cartoon of a personalised experience" :aside="true" >
 
 <template v-slot:content>
 
@@ -61,7 +60,7 @@ Nulla at arcu sagittis, egestas libero ut, finibus massa.
 
 
 
-<Content-MainAsideSection :content="true" :aside="true" columnOffset="table-offset">
+<Content-MainAsideSection  :aside="true" columnOffset="table-offset">
 
 <template slot="content">
 
@@ -101,7 +100,7 @@ Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas
 
 
 
-<Content-ImageFrames-MainImageSection padding="is-large" url="/images/toucanBox/high-fidelity-sketching.png" alt="Detailing feature screens" imageClass="is-2by1 transparent-image" :aside="true" :content="true" caption="Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.">
+<Content-ImageFrames-MainImageSection padding="is-large" url="/images/toucanBox/high-fidelity-sketching.png" alt="Detailing feature screens" imageClass="is-2by1 transparent-image" :aside="true"  caption="Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.">
 
 <template slot="content">
 

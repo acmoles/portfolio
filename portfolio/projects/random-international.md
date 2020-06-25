@@ -18,7 +18,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="random-international.com" ctaUrl="https://www.random-international.com/"
+<Stage-ProjectStage rag="rag-6" :noise="true" ctaLabel="random-international.com" ctaUrl="https://www.random-international.com/"
 description="Fly is an interactive art installation built for the 4th Moscow Biennial of Contemporary Art.">
 
   <template v-slot:visual-background>
@@ -31,7 +31,7 @@ description="Fly is an interactive art installation built for the 4th Moscow Bie
 
 :::
 
-<Content-ContextSection :box="true">
+<Content-ContextSection :box="true" rag="rag-4">
 
 <template v-slot:main>
 

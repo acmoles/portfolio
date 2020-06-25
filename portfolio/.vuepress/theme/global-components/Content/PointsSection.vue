@@ -2,8 +2,8 @@
   <section class="section" :class="padding">
     <div class="container is-fullhd content project-section">
 
-      <div v-if="content" class="columns">
-        <div class="column is-two-thirds content">
+      <div v-if="hasContent" class="columns">
+        <div class="column is-two-thirds content" :class="rag">
           <slot name="content"></slot>
           <br>
         </div>
@@ -32,13 +32,17 @@
 
 export default {
 
-  // TODO tappable points icons for more info e.g. table
-
   props: {
     points: Array,
     padding: String,
-    content: Boolean
+    rag: String
   },
+
+  computed: {
+    hasContent () {
+      return !!this.$slots['content']
+    },
+  }
 
 
 }
@@ -46,8 +50,8 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "../../styles/variables.sass"
-  @import "../../styles/mixins.sass"
+  @import "@theme/styles/variables.sass"
+  @import "@theme/styles/mixins.sass"
 
   .point-icon
     border: 1.5px solid $silver

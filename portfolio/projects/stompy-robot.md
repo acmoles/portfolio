@@ -18,7 +18,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="stompy-robot.uk" ctaUrl="https://stompyrobot.uk/"
+<Stage-ProjectStage rag="rag-6" :noise="true" ctaLabel="stompy-robot.uk" ctaUrl="https://stompyrobot.uk/"
 description="Stompy Robot is an independent studio based in Edinburgh creating games for mobile and tools for developers.">
 
   <template v-slot:visual-column>
@@ -41,7 +41,7 @@ description="Stompy Robot is an independent studio based in Edinburgh creating g
 
 :::
 
-<Content-ContextSection :box="true">
+<Content-ContextSection :box="true" rag="rag-5">
 
 <template v-slot:main>
 
@@ -54,80 +54,18 @@ We worked in the Unity game engine, enabling us to target all major platforms. O
 <p>
 The studio's breakthrough success was with development tools, rather than games. The insights gained building games enabled us to identify valuable workflow improvements in coding and debugging. <a href="https://assetstore.unity.com/packages/tools/gui/srdebugger-console-tools-on-device-27688" target="_blank" rel="noopener noreferrer">SRDebugger</a> is still available on the Unity Asset Store. <Content-ModalLink label="Spaced">
 <template v-slot:modal>
-
-<Content-ImageFrames-SquareImagesRow :content="true" :images="[
-{ url:'/images/stompy-robot/birds-eye-sketch.jpg', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'/images/stompy-robot/character-sketch.jpg', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'/images/stompy-robot/character-model.jpg', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
-]">
-
-<template slot="content">
-
-## Spaced
-
-<p class="subtitle">
-  Cras cursus est sodales, consectetur felis eget, auctor metus. Duis egestas commodo eros in efficitur. Nullam eu consequat leo. Maecenas sit amet arcu ut mauris accumsan semper.
-</p>
-
-**Lorem ipsum dolor sit amet**, _consectetur adipiscing elit._ Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum. Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
-
+<Content :page-key="$site.pages.find(p => p.path === '/extra/spaced/').key"/>
 </template>
+</Content-ModalLink> was our last game title in development and we occasionally game jam.
 
-<template slot="slot1">
-
-Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
-
-</template>
-
-<template slot="slot2">
-
-Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
-
-</template>
-
-<template slot="slot3">
-
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis.
-
-</template>
-
-</Content-ImageFrames-SquareImagesRow>
-
-
-<Content-ImageFrames-SquareImagesRow padding="is-medium-large" :content="false" :images="[
-{ url:'https://player.vimeo.com/video/424005109', alt:'Prototype video', caption:'Prototype video', slot:'slot1', iframe:true },
-{ url:'https://player.vimeo.com/video/424004636', alt:'Animation sample thumbs up', caption:'Animation sample thumbs up', slot:'slot2', iframe:true },
-{ url:'https://player.vimeo.com/video/424006246', alt:'Animation sample thumbs up', caption:'Animation sample running', slot:'slot3', iframe:true },
-]">
-
-<template slot="slot1">
-
-Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.
-
-</template>
-
-<template slot="slot2">
-
-Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
-
-</template>
-
-<template slot="slot3">
-
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
-
-</template>
-</Content-ImageFrames-SquareImagesRow>
-
-</template>
-</Content-ModalLink> was our last game title in development and we occasionally <Content-ModalLink label="Game jam">
+<!-- <Content-ModalLink label="Game jam">
 <template v-slot:modal>
 
 Game jam
 
 </template>
 </Content-ModalLink>
-.
+. -->
 </p>
 
 <!--
@@ -175,7 +113,7 @@ Game developer/designer
 
 
 
-<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="https://www.youtube.com/embed/xZELuhMO9es" alt="placeholder" :aside="true" :content="true" :iframe="true">
+<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="https://www.youtube.com/embed/xZELuhMO9es" alt="placeholder" :aside="true"  :iframe="true">
 
 <template v-slot:content>
 

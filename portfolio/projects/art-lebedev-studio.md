@@ -18,7 +18,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/"
+<Stage-ProjectStage rag="rag-2" :noise="true" ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/"
 description="Art Lebedev Studio is the first and largest independent design studio in Russia. Founded in 1995 with over 300 employees today.">
 
   <template v-slot:visual-background>
@@ -34,7 +34,7 @@ description="Art Lebedev Studio is the first and largest independent design stud
 
 
 
-<Content-ContextSection :box="true">
+<Content-ContextSection :box="true" rag="rag-5">
 
 <template v-slot:main>
 
@@ -80,7 +80,7 @@ Creative director, 3 industrial designers, 2 3D modellers, visualisation expert
 
 
 
-<Content-ImageFrames-SquareImagesRow padding="is-large" :content="true" :images="[
+<Content-ImageFrames-SquareImagesRow padding="is-large"  :images="[
 { url:'/images/als/als1.jpg', alt:'ATC console', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
   type: 'link',
   label: 'Read more',
@@ -102,8 +102,8 @@ Creative director, 3 industrial designers, 2 3D modellers, visualisation expert
 
 ## Highlights
 
-<p class="subtitle">
-Anthony has shown a great persistence on one particular project where almost everyone in the design team lost enthusiasm and hope due to very strict technological, ergonomic and layout constrains. He literally saved the project and brought back optimism and belief.
+<p class="subtitle" style="padding-right: 1em;">
+Anthony has shown a great persistence on one particular project where almost everyone in the design team lost hope due to very strict technological, ergonomic and layout constrains. He literally saved the project and brought back optimism and belief.
 </p>
 
 Timour Bourbaev, Creative Director of Product Design, referring to NITA air traffic control

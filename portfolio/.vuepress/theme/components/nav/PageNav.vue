@@ -128,7 +128,7 @@ function resolvePageLink (
   .prev .background
     background-color: $steel
     &:hover, &:active
-      background-color: $slate
+      background-color: darken($slate, 1.5)
   .action .background
     background-color: $slate
     &:hover, &:active
