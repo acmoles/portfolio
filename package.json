@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev portfolio",
-    "build": "vuepress build portfolio"
+    "build": "vuepress build portfolio",
+    "dev:no-cache": "vuepress dev portfolio --no-cache --debug",
+    "dev:alt": "vuepress dev --host localhost",
+    "info": "vuepress info"
   },
   "repository": {
     "type": "git",
@@ -19,18 +22,32 @@
   },
   "homepage": "https://github.com/acmoles/portfolio#readme",
   "devDependencies": {
-    "@vuepress/plugin-active-header-links": "^1.0.0-rc.1",
-    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
-    "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
-    "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
-    "@vuepress/plugin-pwa": "^1.0.0-rc.1",
-    "@vuepress/plugin-search": "^1.0.0-rc.1",
-    "autoprefixer": "^9.6.1",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.0",
-    "vuepress": "^1.0.4",
-    "vuepress-plugin-clean-urls": "^1.0.3",
-    "vuepress-plugin-reading-time": "^0.1.1"
+    "@vuepress/plugin-active-header-links": "^1.5.0",
+    "@vuepress/plugin-medium-zoom": "^1.5.0",
+    "@vuepress/plugin-nprogress": "^1.5.0",
+    "@vuepress/plugin-pwa": "^1.5.0",
+    "autoprefixer": "^9.8.0",
+    "markdown-it-attrs": "^3.0.2",
+    "markdown-it-deflist": "^2.0.3",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^7.3.1",
+    "vuepress": "^1.5.0",
+    "vuepress-plugin-clean-urls": "^1.1.1",
+    "vuepress-plugin-reading-time": "^0.1.1",
+    "webpack": "^4.43.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "airtable": "^0.8.1",
+    "animejs": "^3.2.0",
+    "bulma": "^0.8.2",
+    "event-target-shim": "^5.0.1",
+    "imagesloaded": "^4.1.4",
+    "lazysizes": "^5.2.1-rc2",
+    "portal-vue": "^2.1.7",
+    "three": "^0.116.1",
+    "uos": "^1.2.0",
+    "vue-clipboard2": "^0.3.1",
+    "vue-force-next-tick": "^1.1.0",
+    "vuex": "^3.4.0"
+  }
 }

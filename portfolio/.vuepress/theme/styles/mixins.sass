@@ -1,0 +1,56 @@
+@mixin cover-screen
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+@mixin cover-screen-units
+  position: absolute
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+
+@mixin make3d
+  backface-visibility: hidden
+  transform-style: preserve-3d
+  perspective: 1000px
+  -webkit-backface-visibility: hidden
+  -webkit-transform-style: preserve-3d
+  -webkit-perspective: 1000px
+  transform: translate3D(0, 0, 0) scale3d(1, 1, 1)
+
+@mixin pseudo-full
+  content: ' '
+  position: absolute
+  z-index: 1
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+
+@mixin button-override
+  font: inherit
+  color: inherit
+  text-transform: none
+  background-color: transparent
+  border: 0
+  margin: 0
+  overflow: visible
+
+@mixin opacity-filter-transition
+  // transition-property: filter
+  // transition-duration: 0.15s
+  // transition-timing-function: linear
+  // &:hover
+  //   filter: $hover-filter
+  // &:active
+  //   filter: $active-filter
+  transition-property: opacity
+  transition-duration: 0.15s
+  transition-timing-function: linear
+  &:hover
+    opacity: $hover-opacity
+  &:active
+    opacity: $active-opacity

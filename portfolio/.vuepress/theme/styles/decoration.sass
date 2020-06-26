@@ -1,0 +1,91 @@
+
+%decoration-mobile
+  background: url("/images/toucanBox/decoration-mobile.css.svg") no-repeat
+
+.decoration
+  display: block
+  position: absolute
+  text-indent: -119988px
+  overflow: hidden
+  text-align: left
+  display: block
+  pointer-events: none
+
+  &.svg-bee
+    @extend %decoration-mobile
+    background-position: 25.7% 57%
+    width: 221px
+    height: 89px
+    right: -130px
+    top: 8%
+    z-index: 6
+    transform: scale(0.5)
+
+  &.svg-confetti-red
+    @extend %decoration-mobile
+    display: block
+    background-position: 23.9% 98%
+    width: 82.67px
+    height: 114.67px
+    top: 26px
+    left: 22%
+    z-index: 1
+    transform: scale(0.6)
+
+  &.svg-confetti-yellow
+    @extend %decoration-mobile
+    background-position: 36% 56%
+    width: 116.25px
+    height: 66.7px
+    left: -10%
+    top: -16%
+    z-index: 1
+    transform: scale(0.6)
+
+  &.svg-flash-blue
+    @extend %decoration-mobile
+    background-position: 28.6% 97.6%
+    width: 109px
+    height: 110px
+    top: -1.5em
+    left: -2em
+    z-index: 1
+    transform: scale(0.5)
+
+  &.svg-flash-yellow
+    @extend %decoration-mobile
+    background-position: 52.2% 67%
+    width: 72.33px
+    height: 68.48px
+    bottom: 4%
+    left: 50%
+    z-index: 1
+    transform: scale(0.8)
+
+  &.svg-pencil-parachute
+    @extend %decoration-mobile
+    background-position: 37% 79.6%
+    width: 179px
+    height: 191px
+    left: 25%
+    top: -7em
+    z-index: 2
+    transform-origin: top center
+    animation: swing 5s ease-in-out infinite
+
+  &.svg-yellow-splat
+    @extend %decoration-mobile
+    background-position: 25.7% 80.224%
+    width: 220.48px
+    height: 200px
+    left: 24%
+    top: -18%
+    transform: scale(0.5) rotate(-40deg)
+
+@keyframes swing
+  0%
+    transform: scale(0.4) rotate3d(0, 0, 1, -7deg)
+  50%
+    transform: scale(0.4) rotate3d(0, 0, 1, 6deg)
+  100%
+    transform: scale(0.4) rotate3d(0, 0, 1, -7deg)

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g fill="none" fill-rule="evenodd">
+    <polygon fill="#EFF2F7" fill-rule="nonzero" points="26.25 11.25 11.12 11.25 13.81 8.56 12.75 7.5 8.25 12 12.75 16.5 13.81 15.44 11.12 12.75 26.25 12.75" transform="matrix(0 -1 -1 0 29.25 29.25)"/>
+    <path fill="#EFF2F7" fill-rule="nonzero" d="M9,6.75 L3.8725,6.75 L6.5575,4.0575 L5.5,3 L1,7.5 L5.5,12 L6.5575,10.9425 L3.8725,8.25 L9,8.25 L9,17 L10.5,17 L10.5,8.25 C10.5,7.42157288 9.82842712,6.75 9,6.75 Z" transform="matrix(1 0 0 -1 0 20)"/>
+  </g>
+</svg>

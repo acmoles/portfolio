@@ -1,0 +1,37 @@
+@import 'variables'
+@import 'mixins'
+
+.noise-heavy::before, .noise-light::before
+  @include cover-screen
+  content: ' '
+  background-size: 256px 256px
+  background-position: 128px 128px
+  pointer-events: none
+
+// TODO switch to background mixing - not pseudo element
+
+.noise-heavy::before
+  // filter: opacity(6%)
+  background-image: url('../plugins/plugin-outside-content/dark-noise-heavy.png')
+
+.noise-light::before
+  // filter: opacity(3%)
+  background-image: url('../plugins/plugin-outside-content/dark-noise-light.png')
+
+// .layout.noise-heavy
+//   z-index: 0
+
+.background-noise, .background-noise-light
+  background-size: 256px 256px
+  background-blend-mode: overlay
+  background-position: 128px 128px
+  background-image: url('../plugins/plugin-outside-content/dark-noise-heavy.png')
+
+.background-noise-light
+  background-image: url('../plugins/plugin-outside-content/dark-noise-light.png')
+
+@media only screen and #{$media-queries}
+  .background-noise, .background-noise-light
+    background-size: 128px 128px
+  .background-noise
+    background-image: url('../plugins/plugin-outside-content/dark-noise-heavy-2extra.png')

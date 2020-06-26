@@ -1,0 +1,52 @@
+---
+title: Disney Infinity
+subtitle: None
+navStyle:
+  style: light
+  tint: blue-tint
+  progress: light
+background: blue
+sidebar: false
+date: 2019-09-12
+hasFooter: false
+---
+
+::: slot top
+
+:::
+
+<Loader current="infinity"/>
+
+<Content-ImageFrames-SquareImagesRow padding="is-small"  :images="[
+{ url:'/images/makielab/figure-comp.jpg', alt:'Exploring character features', caption:'Square image caption 1', slot:'slot1', iframe:false },
+{ url:'/images/makielab/equipment.jpg', alt:'Exploring equipment', caption:'Square image caption 2', slot:'slot2', iframe:false },
+{ url:'/images/makielab/printed-figures.jpg', alt:'Printed example figures', caption:'Square image caption 3', slot:'slot3', iframe:false },
+]">
+
+<template slot="content">
+
+<h2> Disney Infinite Me </h2>
+<p class="rag-3">
+I worked closely with the team at Disney to translate Makies tech for Disney Infinity. My concept was to use a parameterised base figure, similar to the Makies doll head. Customisable variables would include height, build, face shape etc. This would also be rigged for animation, enabling posing, clothes and accessories.
+</p>
+
+</template>
+
+<template slot="slot1">
+
+I made numerous sketches, exploring which variables were most important for creating diverse characters.
+
+</template>
+
+<template slot="slot2">
+
+Costumes and equipment from various Disney IPs can be mixed and matched creating unique combinations of abilities.
+
+</template>
+
+<template slot="slot3">
+
+I created several prototypes to demonstrate the concept and explore manufacturing solutions.
+
+</template>
+</Content-ImageFrames-SquareImagesRow>

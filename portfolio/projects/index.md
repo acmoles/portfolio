@@ -1,9 +1,22 @@
-# List of projects
+---
+title: List of projects
+pageClass: projects-list
+navStyle:
+  style: light
+  tint: regular-tint
+  progress: light
+---
 
-projects here
+<style>
+  .projects-list {
+    padding-top: 8em;
+  }
+</style>
 
-<ul>
-  <li v-for="page in $site.pages">
-    <router-link :to="page.path">{{ page.title }}</router-link>
-  </li>
-</ul>
+<Content-TextSection>
+
+## List of projects
+
+<ProjectList/>
+
+</Content-TextSection>

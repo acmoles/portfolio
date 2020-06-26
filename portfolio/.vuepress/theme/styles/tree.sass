@@ -1,0 +1,67 @@
+@import '../variables'
+
+.tree
+  padding-left: 2em
+
+.tree ul
+    margin-left:  20px
+
+
+.tree li
+    list-style-type:  none
+    margin: 10px
+    position:  relative
+
+
+.tree li::before
+    content:  " "
+    position:  absolute
+    top: -10px
+    left: -20px
+    border-left:  1px solid $extraDarkSnow
+    border-bottom: 1px solid $extraDarkSnow
+    border-radius: 0 0 0 0px
+    width: 20px
+    height: 26px
+
+
+.tree li::after
+    position: absolute
+    content: ""
+    top: 15px
+    left: -20px
+    border-left:  1px solid $extraDarkSnow
+    border-top: 1px solid $extraDarkSnow
+    border-radius: 0px 0 0 0
+    width: 20px
+    height: 100%
+
+
+.tree li:last-child::after
+    display: none
+
+
+.tree li:last-child:before
+    border-radius:  0 0 0 5px
+
+
+ul.tree>li:first-child::before
+    display: none
+
+ul.tree>li:first-child::after
+    border-radius: 5px 0 0 0
+
+.tree li a
+    display: inline-block
+    border-radius:  5px
+    background-color: $darkSnow
+    padding: 4px 10px
+    color: $slate
+    transition: 0.4s ease
+    transition-property: background-color, color
+
+
+.tree li a:hover, .tree li a:hover+ul li a,
+.tree li a:focus, .tree li a:focus+ul li a
+    background-color: $extraDarkSnow
+    color: $steel

@@ -1,0 +1,10 @@
+@import 'variables'
+@import 'mixins'
+
+.icon.outbound
+  display: none !important
+
+.outbound
+  &::after
+    content: ' '
+    background: url('../../public/svg-icons/icon_external.svg')

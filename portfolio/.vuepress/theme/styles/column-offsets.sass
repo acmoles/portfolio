@@ -1,0 +1,34 @@
+@import 'variables'
+@import 'mixins'
+
+@media screen and (min-width: $tablet)
+  .table-offset, .title-offset, .three-offset, .title-small-offset
+    position: relative
+    &::before
+      content: '#'
+      visibility: hidden
+      font-size: 1.25em
+      padding: $table-cell-padding
+      display: block
+      line-height: 1
+
+  .title-offset
+    &::before
+      font-size: 2em
+      margin-bottom: 0.5714em
+      padding: 0
+      line-height: 1.125
+
+  .title-small-offset
+    &::before
+      font-size: 1.5em
+      margin-bottom: 0.6666em
+      padding: 0
+      line-height: 1.125
+
+  .three-offset
+    &::before
+      font-size: 1.25em
+      margin-bottom: 0.8em
+      padding: 0
+      line-height: 1.125

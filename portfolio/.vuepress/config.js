@@ -1,5 +1,8 @@
+const path = require('path')
+
 module.exports = {
   dest: './dist',
+  // temp: './tmp',
   title: 'Anthony Moles Portfolio',
   locales: {
       '/': {
@@ -24,37 +27,65 @@ module.exports = {
   base: '/',
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Projects', link: '/projects/' },
-      { text: 'External', link: 'https://google.com' },
+      // { text: 'Home', ariaLabel: 'Home link', link: '/' },
+      // { text: 'Projects', ariaLabel: 'Projects link', link: '/projects/' },
+      { text: 'About', ariaLabel: 'About link', link: '/about/' },
+      { text: 'Contact', ariaLabel: 'Contact menu', items: [
+          { text: 'Email', link: 'mailto:acmoles@gmail.com' },
+          { text: 'Linkedin', link: 'https://de.linkedin.com/in/anthonymoles' },
+          { text: 'Github', link: 'https://github.com/acmoles' }
+      ] },
     ],
   },
-  plugins: [
-    '@vuepress/nprogress',
-    'vuepress-plugin-reading-time',
-    ['@vuepress/back-to-top', true],
-    ['@vuepress/pwa', {
-      serviceWorker: true,
-      updatePopup: true
-    }],
-    ['@vuepress/active-header-links', {
-      sidebarLinkSelector: '.sidebar-link',
-      headerAnchorSelector: '.header-anchor',
-      headerTopOffset: 120
-    }],
-    ['@vuepress/medium-zoom', true],
-    ['@vuepress/search', {
-       searchMaxSuggestions: 10
-     }],
-    ['clean-urls', {
-       normalSuffix: '/',
-       indexSuffix: '/',
-    }],
-  ],
-  postcss: {
-    plugins: [
-      require('autoprefixer'),
-    ],
+  sass: {
+    indentedSyntax: true
   },
-  evergreen: true,
+  fadeTransitionTime: 400, // sass variable $fadeTime
+  revealTransitionTime: 800, // sass variable $revealTime
+  breakpoints: { // matches css breakpoints
+    tablet: 769,
+    desktop: 1152,
+    widescreen: 1344,
+    fullhd: 1536,
+    largeformat: 1600
+  },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        "@assets": path.resolve(__dirname, '../assets'),
+        "@application": path.resolve(__dirname, './theme/application')
+      }
+    }
+  },
+  markdown: {
+    extendMarkdown: md => {
+      md.use(require('markdown-it-attrs'))
+      md.use(require('markdown-it-deflist'))
+    }
+  },
+  // chainMarkdown(config) {
+  //   const { PLUGINS } = require('@vuepress/markdown')
+  //   const originalLinkPlugin = require('@vuepress/markdown/lib/link.js');
+  //
+  //   config
+  //     .plugins
+  //       .delete(PLUGINS.CONVERT_ROUTER_LINK)
+  //
+  //   const linkPlugin = function (md) {
+  //     const result = originalLinkPlugin.apply(this, arguments);
+  //     const close = md.renderer.rules.link_close;
+  //     md.renderer.rules.link_close = function() {
+  //       return close.apply(this, arguments).replace('<OutboundLink/>', '');
+  //     }
+  //     return result;
+  //   };
+  //
+  //   config
+  //     .plugin(PLUGINS.CONVERT_ROUTER_LINK)
+  //       .use(linkPlugin, [{
+  //         // The config.markdown.externalLinks options https://vuepress.vuejs.org/config/#markdown-externallinks
+  //         target: '_blank',
+  //         rel: 'noopener noreferrer'
+  //       }])
+  // },
 }

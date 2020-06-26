@@ -1,0 +1,121 @@
+@import 'variables'
+@import 'mixins'
+
+// Content title/header anchor for
+.header-anchor
+  position: absolute
+  left: -1em
+  opacity: 0
+  @include opacity-filter-transition
+  &:hover
+    opacity: 1
+
+// .content
+//   p, ol, ul, dl, td
+    // font-size: 1.125em
+    // font-family: $family-sans-serif-base
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong
+  font-family: $family-display
+  font-weight: normal
+  text-rendering: geometricPrecision
+  position: relative
+
+.content
+  h1
+    font-size: 3em
+  h2
+    font-size: 2em
+
+p.small-title
+  color: rgba($white, 0.8)
+  text-rendering: geometricPrecision
+  margin-bottom: 1em
+  letter-spacing: .32px
+  font-weight: normal
+  @media screen and (min-width: $tablet)
+    font-size: 1.25em
+
+.dark
+  p.small-title
+    color: $darkSmoke
+
+h2.item-title
+  font-size: 1.5em
+  line-height: 1.25
+  letter-spacing: .13px
+  @media screen and (min-width: $tablet)
+    font-size: 1.75em
+
+h2.subtitle, p.subtitle
+  font-size: 1.25em
+  font-family: $family-sans-serif
+  letter-spacing: .31px
+  line-height: 1.35
+  @media screen and (min-width: $tablet)
+    font-size: 1.75em
+
+strong
+  font-family: $family-display
+  letter-spacing: .64px
+
+th
+  font-size: 1.25em
+
+em
+  color: $white-bis
+
+p.secondary, dl.secondary
+  em
+    color: $silver
+
+.content
+  dt, dd
+    margin-bottom: 0.5em
+    margin-left: 0
+
+ol, ul
+  color: $white-ter
+
+.table
+  table-layout: fixed
+  thead th
+    line-height: 1
+
+.small
+  p, dl
+    font-size: 1em
+  br
+    line-height: 0.5
+
+.no-wrap
+  white-space: nowrap
+
+.no-margin-bottom
+  margin-bottom: 0 !important
+
+@media screen and (min-width: $desktop)
+
+  .rag-1
+    padding-right: 1em
+
+  .rag-2
+    padding-right: 2em
+
+  .rag-3
+    padding-right: 3em
+
+  .rag-4
+    padding-right: 4em
+
+  .rag-5
+    padding-right: 5em
+
+  .rag-6
+    padding-right: 6em

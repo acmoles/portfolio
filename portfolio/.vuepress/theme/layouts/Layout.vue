@@ -1,24 +1,11 @@
 <template>
   <div
-    class="theme-container"
+    class="layout background-noise"
     :class="pageClasses"
-    @touchstart="onTouchStart"
-    @touchend="onTouchEnd"
   >
-    <Navbar
-      v-if="shouldShowNavbar"
-      @toggle-sidebar="toggleSidebar"
-    />
+    <Navbar/>
 
-    <div
-      class="sidebar-mask"
-      @click="toggleSidebar(false)"
-    ></div>
-
-    <Sidebar
-      :items="sidebarItems"
-      @toggle-sidebar="toggleSidebar"
-    >
+    <Sidebar>
       <slot
         name="sidebar-top"
         slot="top"
@@ -29,131 +16,118 @@
       />
     </Sidebar>
 
-    <Home v-if="$page.frontmatter.home"/>
+    <main class="page-content">
+      <Content slot-key="top"/>
 
-    <Page
-      v-else
-    >
-      <slot
-        name="page-top"
-        slot="top"
-      />
-      <slot
-        name="page-bottom"
-        slot="bottom"
-      />
-    </Page>
-    <Footer
-      v-if="shouldShowNavbar"
-    />
+      <Content class="main"/>
+
+      <PageNav/>
+
+      <Footer v-if="hasFooter"/>
+    </main>
   </div>
 </template>
 
 <script>
-import Home from '@theme/components/Home.vue'
-import Navbar from '@theme/components/Navbar.vue'
-import Footer from '@theme/components/Footer.vue'
-import Page from '@theme/components/Page.vue'
-import Sidebar from '@theme/components/Sidebar.vue'
-import { resolveSidebarItems } from '../util'
+
+// v-on:content-loaded="onEnlargeText"
+import Navbar from '@theme/components/nav/Navbar.vue'
+import Footer from '@theme/components/nav/Footer.vue'
+import PageNav from '@theme/components/nav/PageNav.vue'
+import Sidebar from '@theme/components/nav/Sidebar.vue'
+
+import config from '../../config.js'
 
 export default {
-  components: { Home, Page, Sidebar, Navbar, Footer },
-
-  data () {
-    return {
-      isSidebarOpen: false
-    }
-  },
+  components: { Sidebar, Navbar, Footer, PageNav },
 
   computed: {
-    shouldShowNavbar () {
-      const { themeConfig } = this.$site
-      const { frontmatter } = this.$page
-      if (
-        frontmatter.navbar === false
-        || themeConfig.navbar === false) {
-        return false
-      }
-      return (
-        this.$title
-        || themeConfig.logo
-        || themeConfig.repo
-        || themeConfig.nav
-        || this.$themeLocaleConfig.nav
-      )
+    pageLoadingStatus () {
+      return this.$store.state.pageLoadingStatus
     },
 
-    shouldShowSidebar () {
-      const { frontmatter } = this.$page
-      return (
-        !frontmatter.home
-        && frontmatter.sidebar !== false
-        && this.sidebarItems.length
-      )
-    },
-
-    sidebarItems () {
-      return resolveSidebarItems(
-        this.$page,
-        this.$page.regularPath,
-        this.$site,
-        this.$localePath
-      )
+    firstLoad () {
+      return this.$store.state.firstLoad
     },
 
     pageClasses () {
       const userPageClass = this.$page.frontmatter.pageClass
+      const tintStyle = this.$page.frontmatter.navStyle.tint
       return [
-        {
-          'no-navbar': !this.shouldShowNavbar,
-          'sidebar-open': this.isSidebarOpen,
-          'no-sidebar': !this.shouldShowSidebar
-        },
+        this.pageLoadingStatus,
+        tintStyle,
         userPageClass
       ]
     },
 
-    projects () {
-      return this.$site.pages
-        .filter(x => x.path.startsWith('/projects/'))
-        .sort(
-          (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
-        )
-    },
-
+    hasFooter () {
+      return this.$page.frontmatter.hasFooter
+    }
   },
 
-  mounted () {
-    this.$router.afterEach(() => {
-      this.isSidebarOpen = false
-    })
-  },
+  watch: {
+    pageLoadingStatus (latest, last) {
+      if (latest === 'revealing' && this.firstLoad) {
+        // Needed to navigate to anchors in first load cases
+        const anchor = this.$router.currentRoute.hash
+        const split = anchor.substr(1)
 
-  methods: {
-    toggleSidebar (to) {
-      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
-    },
-
-    // side swipe
-    onTouchStart (e) {
-      this.touchStart = {
-        x: e.changedTouches[0].clientX,
-        y: e.changedTouches[0].clientY
-      }
-    },
-
-    onTouchEnd (e) {
-      const dx = e.changedTouches[0].clientX - this.touchStart.x
-      const dy = e.changedTouches[0].clientY - this.touchStart.y
-      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
-        if (dx > 0 && this.touchStart.x <= 80) {
-          this.toggleSidebar(true)
-        } else {
-          this.toggleSidebar(false)
-        }
+        this.$nextTick( () => {
+          if (anchor && document.getElementById(split)) {
+            this.$store.dispatch('setFirstLoad', false)
+            location.href = anchor
+          }
+        });
       }
     }
   }
+
 }
 </script>
+
+<style lang="sass">
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
+
+.page-content
+  // height: 100%
+  min-height: 100%
+  display: flex
+  flex-direction: column
+  align-content: space-between
+
+  &.content__default
+    padding: 0 2em
+    flex-grow: 1
+
+  .main.container.content
+    padding-top: 8em
+
+// Page transitions
+
+// .loading
+//   display: none
+
+// .revealing, .covering, .loading
+//   .page-content
+//     overflow: hidden
+
+.layout.home
+  position: relative
+  &::after
+    @include cover-screen
+    position: fixed
+    content: ' '
+    display: block
+    background: darken($black, 3%)
+    transition: opacity .4s linear
+    opacity: 0
+    pointer-events: none
+    z-index: 3
+
+.layout.home.covering, .layout.home.loading
+  &::after
+    opacity: 1
+
+
+</style>

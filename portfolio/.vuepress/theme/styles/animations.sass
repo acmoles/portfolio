@@ -1,0 +1,165 @@
+@keyframes animateIn
+  0%
+    transform: translateY(100vh)
+
+  100%
+    transform: translateY(0vh)
+
+@keyframes animateOut
+  0%
+    transform: translateY(0vh)
+
+  100%
+    transform: translateY(-100vh)
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+@keyframes fadeOut
+  0%
+    opacity: 1
+
+  100%
+    opacity: 0
+
+@keyframes flip
+  0%
+    transform: scaleX(1) scaleY(1)
+
+  25%
+    transform: scaleX(1) scaleY(-1)
+
+  50%
+    transform: scaleX(-1) scaleY(-1)
+
+  75%
+    transform: scaleX(-1) scaleY(1)
+
+  100%
+    transform: scaleX(-1) scaleY(1)
+
+@keyframes pulse
+  0%
+    transform: scaleX(1) scaleY(1) rotate(0deg)
+
+  25%
+    transform: scaleX(1.2) scaleY(1.1) rotate(1deg)
+    opacity: 1
+
+  50%
+    transform: scaleX(0.9) scaleY(1.2) rotate(-1deg)
+    opacity: 0.9
+
+  75%
+    transform: scaleX(1) scaleY(0.9) rotate(1deg)
+    opacity: 1
+
+  100%
+    transform: scaleX(1) scaleY(1) rotate(0deg)
+
+
+// Intersection Observer animations
+
+html:not(.disable-motion) .appear-fade-up
+  transition: opacity .8s $fadeUpTransition .1s, transform .8s $fadeUpTransition .1s
+  opacity: 0
+  transform: translateY(24px)
+
+html:not(.disable-motion) .appear-fade-up.in-view
+  transform: translateY(0)
+  opacity: 1
+
+
+html:not(.disable-motion) .appear-fade
+  transition: opacity .8s $fadeUpTransition .1s
+  opacity: 0
+
+html:not(.disable-motion) .appear-fade.in-view
+  opacity: 1
+
+
+// Vue transitions
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity 0.3s
+
+.fade-enter, .fade-leave-to, .fade-fast-enter, .fade-fast-leave-to, .fade-fast-delay-enter, .fade-fast-delay-leave-to
+  opacity: 0
+
+.fade-fast-enter-active, .fade-fast-leave-active, .fade-fast-delay-leave-active
+  transition: opacity 0.15s
+
+.fade-fast-delay-enter-active
+  transition: opacity 0.15s 0.15s
+
+
+
+@keyframes slideYIn
+  from
+    opacity: 0
+    transform: translateY(-15px)
+  to
+    opacity: 1
+
+.slideY-enter-active
+  animation: 0.6s ease slideYIn
+
+@keyframes slideYOut
+  from
+    opacity: 1
+  to
+    opacity: 0
+    transform: translateY(-15px)
+
+.slideY-leave-active
+  animation: 0.6s ease slideYOut
+
+
+
+@keyframes slideYDownIn
+  from
+    opacity: 0
+    transform: translateY(15px)
+
+  to
+    opacity: 1
+
+.slideYDown-enter-active
+  animation: 0.6s ease slideYDownIn
+
+@keyframes slideYDownOut
+  from
+    opacity: 1
+
+  to
+    opacity: 0
+    transform: translateY(15px)
+
+.slideYDown-leave-active
+  animation: 0.6s ease slideYDownOut
+
+
+
+// Vue slider
+$slideDistance: 42px
+.next-enter
+  opacity: 0
+  transform: translate3d($slideDistance, 0, 0)
+.next-enter-active, .next-leave-active
+  transition: 0.3s
+.next-leave-to
+  opacity: 0
+  transform: translate3d(-$slideDistance, 0, 0)
+
+.prev-enter
+  opacity: 0
+  transform: translate3d(-$slideDistance, 0, 0)
+.prev-enter-active, .prev-leave-active
+  transition: 0.3s
+.prev-leave-to
+  opacity: 0
+  transform: translate3d($slideDistance, 0, 0)
