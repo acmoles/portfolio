@@ -265,9 +265,9 @@ Strategy, OKRs, analytics, A/B testing
 <template v-slot:modal>
 <Content-TextSection padding="is-small" rag="rag-6">
 
-I designed this website in [Sketch](https://www.sketch.com/) and hand coded it in [Vue.js](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), [Three.js](https://threejs.org/), SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress](https://vuepress.vuejs.org/).
+I designed this website in [Sketch](https://www.sketch.com/) and hand coded it in [Vue.js,](https://vuejs.org/) [Vuex,](https://vuex.vuejs.org/) [Three.js,](https://threejs.org/) SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress.](https://vuepress.vuejs.org/)
 
-The code is available on [Github](https://github.com/acmoles/portfolio).
+The code is available on [Github.](https://github.com/acmoles/portfolio)
 
 </Content-TextSection>
 </template>

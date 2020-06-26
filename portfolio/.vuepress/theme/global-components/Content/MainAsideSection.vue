@@ -117,4 +117,9 @@ export default {
       cursor: default
       .icon
         transform: rotate(90deg)
+
+  // Fix minimize CSS bug
+  .button .icon:first-child:last-child
+    margin-left: 0
+    margin-right: 0
 </style>
