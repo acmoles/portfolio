@@ -42,7 +42,7 @@ export default (Vue) => {
       useLastProject: false,
       fadeCount: 0,
       snackbar: {
-        text: 'Nothing here',
+        text: 'Email copied to clipboard',
         position: 'top'
       }
     },

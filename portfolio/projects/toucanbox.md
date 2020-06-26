@@ -282,7 +282,7 @@ The box experience is all about the child. If they enjoy it, this drives the dec
 <Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse-wide.jpg" alt="Montage of discovery artefacts"/>
 
 
-<Content-ThreeColumnSection padding="is-large"  columnOffset="three-offset">
+<Content-ThreeColumnSection padding="is-large" rag="rag-5" columnOffset="three-offset">
 
 <template v-slot:content>
 
@@ -349,7 +349,7 @@ In a technique inspired by the product agency [Made By Many](https://www.madebym
 
 </style> -->
 
-Since our objective was to increase conversion rate, we agreed to focus on the first four principles as the most relevant. This enabled me to define clear measures of success through general and channel-specific KPIs.
+Since our objective was to increase conversion rate, we agreed to focus on the first two principles as the most relevant. This enabled me to define clear measures of success through general and channel-specific KPIs.
 
 
 <!-- ‘Why toucanBox?’ and ‘How it works.’
@@ -437,7 +437,27 @@ Establish a consistent UI language with a living design system.
 
 </template>
 
-<template v-slot:column3>
+<!-- <template v-slot:column3>
+
+#### Trustworthy
+
+---
+
+<div class="small">
+
+Be more human in the tone of our design and copywriting.
+
+Minimise the number of steps, clicks and details required to complete signup.
+
+Build confidence throughout the funnel by following usability best practices, validated by thorough user testing.
+
+Establish a consistent UI language with a living design system.
+
+</div>
+
+</template> -->
+
+<!-- <template v-slot:column3>
 
 <Content-InfoBox :hasIcon="true" :hasAction="true" type="modal" label="See principles" style="margin-bottom: 3em;">
 
@@ -451,7 +471,7 @@ I gathered everything we learnt about our users into a set of principles the who
 
 </Content-InfoBox>
 
-</template>
+</template> -->
 
 </Content-ThreeColumnSection>
 

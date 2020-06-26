@@ -21,7 +21,7 @@
         class="image"
         :class="imageClass"
       >
-        <img class="lazyload" :data-src="src"  :alt="title">
+        <img class="lazyload" :data-src="src"  :alt="title" :style="{ height: isFirefox ? '100%' :null }">
       </figure>
 
       <div :ref="'caption' + uid" class="item-caption" :class="{ 'transition': !mouseOn }">
@@ -101,10 +101,18 @@ export default {
     },
     isSafari () {
       if (typeof window !== 'undefined') {
-        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
       } else {
         return false
       }
+    },
+    isFirefox () {
+      if (typeof window !== 'undefined') {
+        return navigator.userAgent.indexOf('Firefox') !== -1
+      } else {
+        return false
+      }
+
     }
   },
 
