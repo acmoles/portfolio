@@ -26,25 +26,27 @@ hasFooter: false
 <template slot="content">
 
 <h2> Disney Infinite Me </h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum mauris in odio tempor, vitae tempus ante condimentum. Maecenas id nibh libero. Vivamus tristique elit eu dui mollis elementum.</p>
+<p class="rag-3">
+I worked closely with the team at Disney to translate Makies tech for Disney Infinity. My concept was to use a parameterised base figure, similar to the Makies doll head. Customisable variables would include height, build, face shape etc. This would also be rigged for animation, enabling posing, clothes and accessories.
+</p>
 
 </template>
 
 <template slot="slot1">
 
-Vivamus sit amet semper felis. Maecenas non eros non turpis consectetur accumsan ac eget quam. Nam a sapien diam. Mauris blandit.
+I made numerous sketches, exploring which variables were most important for creating diverse characters.
 
 </template>
 
 <template slot="slot2">
 
-Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+Costumes and equipment from various Disney IPs can be mixed and matched creating unique combinations of abilities.
 
 </template>
 
 <template slot="slot3">
 
-Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis.
+I created several prototypes to demonstrate the concept and explore manufacturing solutions.
 
 </template>
 </Content-ImageFrames-SquareImagesRow>

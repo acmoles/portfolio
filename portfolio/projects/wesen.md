@@ -44,7 +44,7 @@ description="Wesen enables anyone to create and order their unique pendant neckl
 
 Recent years have seen a gradual increase in awareness of product customisation and on&#8209;demand manufacturing. But to this day we can see little evidence of the promised revolution due to relatively high prices and no killer app.
 
-In 2015 I helped pioneer customisable children’s toys at [Makielab](/projects/makielab). We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage the lessons learnt and push the envelope of Mass Customisation.
+In 2015 I helped pioneer customisable children’s toys at [Makielab.](/projects/makielab) We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage the lessons learnt and push the envelope of Mass Customisation.
 
 Firstly, I wanted to explore the possibility of a lightly constrained creation experience, able to generate infinite variations while being intuitive and fun to use. _I was convinced that suitable constraints could enhance the creativity of customers, rather than restrict it._ Secondly, to completely automate and outsource the fulfilment process.
 

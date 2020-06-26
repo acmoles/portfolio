@@ -17,6 +17,80 @@ hasFooter: false
 
 <Loader current="spaced"/>
 
+<Content-GridSection padding="is-small">
+
+  <template v-slot:grid>
+    <figure class="image is-square span-2">
+      <img class="lazyload" data-src="/images/stompy-robot/birds-eye-sketch.jpg" alt="Spaced sketching">
+    </figure>
+    <figure class="image is-square span-2">
+    <img class="lazyload" data-src="/images/stompy-robot/character-sketch.jpg" alt="Spaced character sketching">
+    </figure>
+    <figure class="image is-square span-2">
+    <img class="lazyload" data-src="/images/stompy-robot/character-model.jpg" alt="Spaced 3D modelling">
+    </figure>
+    <figure class="image is-square span-2">
+    <iframe class="lazyload" data-src="https://player.vimeo.com/video/424005109" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </figure>
+    <figure class="image is-square span-2">
+    <iframe class="lazyload" data-src="https://player.vimeo.com/video/424004636" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </figure>
+    <figure class="image is-square span-2">
+    <iframe class="lazyload" data-src="https://player.vimeo.com/video/424006246" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </figure>
+  </template>
+
+</Content-GridSection>
+
+<div class="container is-fullhd content">
+<p style="width: 60%; margin-top: 1.5em;">
+  Spaced challenges the player to keep a fully simulated spaceship functioning in the face of routine (and not-so-routine) missions.
+</p>
+</div>
+
+
+<!-- <div class="container is-fullhd content" style="overflow-y: hidden">
+<div class="columns is-multiline">
+  <div class="column is-one-third">
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/stompy-robot/birds-eye-sketch.jpg" alt="Spaced sketching">
+    </figure>
+  </div>
+  <div class="column is-one-third">
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/stompy-robot/character-sketch.jpg" alt="Spaced sketching">
+    </figure>
+  </div>
+  <div class="column is-one-third">
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/stompy-robot/character-model.jpg" alt="Spaced sketching">
+    </figure>
+  </div>
+  <div class="column is-one-third">
+    <figure class="image is-square">
+      <iframe class="lazyload" data-src="https://player.vimeo.com/video/424005109" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </figure>
+  </div>
+  <div class="column is-one-third">
+    <figure class="image is-square">
+      <iframe class="lazyload" data-src="https://player.vimeo.com/video/424004636" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </figure>
+  </div>
+  <div class="column is-one-third">
+    <figure class="image is-square">
+      <iframe class="lazyload" data-src="https://player.vimeo.com/video/424006246" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </figure>
+  </div>
+  <div class="column is-two-thirds">
+    <p style="padding-right: 2em;">
+      Spaced challenges the player to keep a fully simulated spaceship functioning in the face of routine (and not-so-routine) missions.
+    </p>
+  </div>
+</div>
+</div> -->
+
+<!-- <Loader current="spaced"/>
+
 <Content-ImageFrames-SquareImagesRow  :images="[
 { url:'/images/stompy-robot/birds-eye-sketch.jpg', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
 { url:'/images/stompy-robot/character-sketch.jpg', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
@@ -79,4 +153,4 @@ Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim
 Maecenas sed nibh eleifend, congue felis et, malesuada eros. Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales.
 
 </template>
-</Content-ImageFrames-SquareImagesRow>
+</Content-ImageFrames-SquareImagesRow> -->

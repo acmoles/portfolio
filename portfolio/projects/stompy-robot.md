@@ -56,9 +56,13 @@ The studio's breakthrough success was with development tools, rather than games.
 <template v-slot:modal>
 <Content :page-key="$site.pages.find(p => p.path === '/extra/spaced/').key"/>
 </template>
-</Content-ModalLink> was our last game title in development and we occasionally game jam.
+</Content-ModalLink> was our last game title in development.
 
-<!-- <Content-ModalLink label="Game jam">
+<!--
+and we occasionally game jam
+
+
+<Content-ModalLink label="Game jam">
 <template v-slot:modal>
 
 Game jam
@@ -95,17 +99,17 @@ Game developer/designer
 
 
 
-<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="https://www.youtube.com/embed/xZELuhMO9es" alt="placeholder" :aside="true" rag="rag-4" :iframe="true">
+<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="https://www.youtube.com/embed/xZELuhMO9es" alt="placeholder" :aside="true" rag="rag-3" :iframe="true">
 
 <template v-slot:content>
 
 ## Nova
 
 <p class="subtitle">
-  We built a tactical action RTS game, which specifically aims to leverage the interaction opportunities offered by touch screens.
+  A tactical action RTS which specifically leverages the interaction opportunities offered by touch screens.
 </p>
 
-The player commands an elite squad of starship captains who must battle against ambitious new factions to defend the neutrality of the galaxy. But beware - suppressing one faction might allow others to gain the upper hand in the ongoing war for dominance. Ultimately our heroes must teach everyday people that they can rise up against their oppressors. As the player progresses, they collect new starships, captains, weaponry and equipment. Each possess advantages and abilities, which can be combined into effective strategies for defeating any opponent.
+The player commands an elite squad of starship captains who must defend the freedom of the galaxy. Battle against ambitious new factions seeking galactic dominance. As the player progresses, they collect new starships, captains, weaponry and equipment. Each possess advantages and abilities, which can be combined into effective strategies for defeating any opponent.
 
 
  <!-- as they endeavour to defeat the oppressive galactic powers present in the Milky Way galaxy.

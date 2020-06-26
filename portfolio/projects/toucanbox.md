@@ -14,7 +14,7 @@ sidebar: false
 date: 2019-09-12
 src: /images/homepage/toucan-baked.jpg
 prev: ./makielab
-next: ./toucan-research
+next: ./random-international
 hasFooter: true
 ---
 <!-- A redesigned sign up funnel to improve communication, useability and confidence and a strategic design project to identify new ways to improve customer retention -->
@@ -182,7 +182,7 @@ Analytics, asking customer service, interviewing existing customers and parents 
 </Content-PointsSection>
 
 
-<Content-QuoteSection quote="It’s fun, I can see it’s for kids. But I want to see more of what’s inside the box." attribute="Ameera Algarni, Mum to Rafi"/>
+<Content-QuoteSection rag="rag-6" quote="It’s fun, I can see it’s for kids. But I can't see straight away what it is or how it works." attribute="Ameera Algarni, Mum to Rafi"/>
 
 
 <Content-ThreeColumnSection padding="is-large" columnOffset="three-offset">
@@ -445,11 +445,7 @@ I gathered everything we learnt about our users into a set of principles the who
 
 <template slot="modal">
 
-### Principles content
-
-In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
-
-_Data reflects year-over-year activity for a defined period of time as of December 2017._
+<Content :page-key="$site.pages.find(p => p.path === '/extra/toucanbox-principles/').key"/>
 
 </template>
 
@@ -644,7 +640,7 @@ Splitting fieldsets onto separate pages (mobile and desktop) with a continue but
 I experimented with adding additional choice at signup but found this reduced conversion rate. A small uptick in retention didn't offset the effect. Subsequent projects would focus on retention.
 
 - Upsell customers at signup{ .check }
-- Doesn't fit with the typical "I'm trying this out" attitude{ .stop }
+- Too much upfront commitment for most potential customers{ .stop }
 { .check-list }
 
 </template>
@@ -849,7 +845,7 @@ In order to act quickly, I slotted into the role of front-end developer to build
 
 
 
-<Content-TextSection rag="rag-5">
+<Content-TextSection rag="rag-6">
 
 <p class="subtitle" style="padding-right: 4em;">
   The new signup experience had an immediate impact on funnel conversion rate.
@@ -877,7 +873,7 @@ The donation experience project had a transformational effect within the greater
 
 ### Lessons learnt
 
-The only disappointment with this project was how long it took to access the valuable outcomes. As the only full-time member of the project team I needed to split my time between management and UX design. Although I relished the varied work, combined with the developer bottleneck, the delay between identifying problems and applying remedies was costly.
+The only disappointment was how long it took to access the valuable outcomes. As the only full-time member of the project team I needed to split my time between management and UX design. Although I relished the varied work, combined with the developer bottleneck, the delay between identifying problems and applying remedies was costly. Upon my urging, we addressed this issue by hiring a specialised front-end developer and a product manager.
 
 <!-- I was the only full-time member of the project team; coordinating the research, executing the design process, writing front-end code, planning tests and shipping releases. We were a small team with many competing priorities and a limited budget. This meant a delay between identifying the problems and releasing the improvements.
 
@@ -888,7 +884,7 @@ We addressed this problem in early 2018 by hiring a dedicated front-end develope
 ### Going forward
 
 <p>
-Upon my urging, we addressed this issue by hiring a specialised front-end developer and a product manager. There remained two 'Product Design Principles' which we hadn't yet addressed; Flexible and Personalised. I would tackle them in a <Content-ModalLink label="future project">
+Based on the up-front research from this project, it was clear the greatest potential for further improvement to the user experience lay with the two so-far unaddressed 'Product Design Principles' (Flexible and Personalised). I would tackle them in a <Content-ModalLink label="future project">
 <template v-slot:modal>
 
 <Content :page-key="$site.pages.find(p => p.path === '/extra/toucanbox-personalisation/').key"/>
@@ -908,15 +904,11 @@ Upon my urging, we addressed this issue by hiring a specialised front-end develo
   </div>
 </div> -->
 
-<!-- <figcaption>
-
-This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
-
-</figcaption> -->
-
 <Content-InfoBox :hasIcon="false" :hasAction="true" type="link" label="toucanbox.com static mirror" url="http://toucanwww.herokuapp.com/">
 
-I created a static mirror of the toucanBox homepage at the conclusion of this project (Summer 2017). It's hosted on Heroku with a free dyno so may take longer to load in the first instance.
+I created a static mirror of the toucanBox homepage at the conclusion of this project in Summer 2017.
+
+Note: free Heroku Dyno will take ~10s to wake up, consequently longer initial load.
 
 </Content-InfoBox>
 
@@ -935,6 +927,8 @@ I created a static mirror of the toucanBox homepage at the conclusion of this pr
 
 <Content-MetricsSection padding="is-medium-large" :metrics="[
 { metric:'25%', description:'Estimated cumulative average increase in funnel conversion rate.' },
-{ metric:'35%', description:'Drop in average homepage load time (I implemented SVG spritesheets, lazy loading and progressive enhancement).' },
+{ metric:'35%', description:'Reduction in homepage data transfer. I implemented SVG spritesheets, lazy loading and progressive enhancement.' },
 { metric:'20%', description:'Reduction in the number of CS cases relating to a misunderstanding of the value proposition.' },
 ]"/>
+
+<!-- _Data reflects year-over-year activity for a defined period of time as of December 2017._ -->

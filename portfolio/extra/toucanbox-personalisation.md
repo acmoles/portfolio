@@ -17,13 +17,58 @@ hasFooter: false
 
 <Loader current="toucanBox 2"/>
 
-Based on the research findings from the acquisition project. Retention related themes not yet addressed.
+<Content-TextSection padding="is-small" rag="rag-3" columnOffset="title-offset">
 
-What is it called etc. Short form.
+## toucanBox personalisation
 
-Visuals: cartoon, vision (small), screenshot with button
+The best products elevate a commodity (like music, holidays or crafts in this case) into a valuable holistic experience. After completing a user-centred design process focussing on customer onboarding, I had both a wealth of insights and the momentum of a company-wide shift to a 'product mindset'.
 
-OR full content - in modal is this possible? Double modal on zoomable images? Not in the first instance at least...
+The next challenge was customer retention. How might we make customers so satisfied with toucanBox that they want to stay subscribed for longer? I had a clear answer from my research: _Get the right craft box to the right customer in the right quantity._ toucanBox was uniquely positioned to leverage a personalised experience, with a bespoke technology platform and a direct relationship with customers.
+
+I created several concepts, the most promising of which we named the 'Box builder'. We built prototypes to test on a limited audience in production, with promising results. This was my last project at toucanBox, which sadly had to be left unfinished. I hired, onboarded and handed over the project to a new UX designer. This feature is now released.
+
+<div class="columns" style="padding-top: 2em;">
+<div class="column">
+<figure class="image is-2by1">
+  <img class="lazyload" data-src="/images/toucanBox/personalised-experience.jpg" alt="Cartoon of a personalised experience">
+</figure>
+</div>
+<div class="column">
+<figure class="image is-2by1">
+  <img class="lazyload" data-src="/images/toucanBox/high-fidelity-sketching.png" alt="Flowchart of personalisation interface in the account section">
+</figure>
+</div>
+</div>
+
+
+<template slot="aside">
+
+<div class="columns is-gapless">
+  <div class="column is-three-quarters">
+    <Content-ModalWrapper type="link" url="http://personalisation.herokuapp.com/" label="Prototype">
+      <figure class="image is-9by16">
+        <img class="lazyload" data-src="/images/toucanBox/choose-interface.png" alt="Screenshot of box personalisation prototype">
+      </figure>
+    </Content-ModalWrapper>
+  </div>
+</div>
+
+</template>
+
+
+</Content-TextSection>
+
+<!-- <Content-ImageFrames-FullImageSection url="/images/toucanBox/personalisation-montage.jpg" alt="Personalisation discovery montage"/>
+
+
+
+Best products (Airbnb and Spotify) blend the boundary between the digital product and the commodity. In toucanbox too.  In toucanbox too.  toucanbox - small team, involved in the core product but - central question for me: how can the online product enhance the overall experience for parents, and also children. The leadership at toucanBox didn’t think of themselves as a tech company, even though by this point the desire for flexibility, customisation, by a series of incremental steps, we had replaced almost all the off-the-shelf tools for subscription businesses with our own systems.
+
+
+
+
+
+
 
 <Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-2by1" url="/images/toucanBox/personalised-experience.jpg" alt="Cartoon of a personalised experience" :aside="true" >
 
@@ -176,4 +221,4 @@ This project however, focused on an equally important but somewhat subtler metri
 </template>
 
 
-</Content-TextSection>
+</Content-TextSection> -->

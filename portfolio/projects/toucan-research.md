@@ -12,7 +12,7 @@ background: purple
 sidebar: false
 date: 2019-09-11
 prev: ./interaction
-next: ./toucanbox
+next: ./stompy-robot
 hasFooter: true
 ---
 

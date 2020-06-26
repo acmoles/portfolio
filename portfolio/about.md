@@ -172,7 +172,8 @@ Rapha feedback highlights
 - Overall felt it displayed artistic sensibilities
 
 
-
+~ Testing (Jest, Cypress)
+~ Legacy stacks (JQuery, Backbone)
 
 
 
@@ -197,12 +198,9 @@ CSS (SCSS, SASS)
 ~ JS (ES6, Typescript)
 ~ UI frameworks (React, Vue, Angular, Ionic)
 ~ Motion (Anime.js, Greensock)
-~ WebGL/XR (A-frame, Three.js, Pixi.js)
+~ WebGL/XR (A-frame, Three.js)
 ~ Datavis (D3.js, Mapbox)
 ~ Analytics (Google, Snowplough)
-~ Build systems (Gulp, Webpack, Browserify)
-~ Testing (Jest, Cypress)
-~ Legacy stacks (JQuery, Backbone)
 
 </template>
 
@@ -212,7 +210,8 @@ CSS (SCSS, SASS)
 
 Node.js stack (Express, Harp)
 ~ Database (MongoDB, SQL, Postgres)
-~ REST APIs, Websocket
+~ REST APIs
+~ Websocket (socket.io)
 ~ Familiar with Ruby/Rails, Go
 
 </template>
@@ -222,6 +221,7 @@ Node.js stack (Express, Harp)
 ### Ops
 
 Version control (Git)
+~ Front-end build systems (Gulp, Webpack, Browserify)
 ~ Static hosting (Netlify, GitHub Pages)
 ~ App hosting (Heroku, Digital Ocean)
 ~ Familiar with Docker, Circle CI
@@ -322,7 +322,7 @@ Ecosia hack days [Search Map](https://mapvis.netlify.app/)
 
 <About-TimelineItem type="Role">
 
-[Ecosia](/projects/ecosia), Berlin
+[Ecosia,](/projects/ecosia) Berlin
 
 </About-TimelineItem>
 
@@ -385,7 +385,7 @@ Ecosia hack days [Search Map](https://mapvis.netlify.app/)
 
 <About-TimelineItem type="Role">
 
-[toucanBox](/projects/toucanbox), London
+[toucanBox,](/projects/toucanbox) London
 
 </About-TimelineItem>
 
@@ -403,7 +403,7 @@ Ecosia hack days [Search Map](https://mapvis.netlify.app/)
 
 <About-TimelineItem type="Role">
 
-[Makielab](/projects/makielab), London
+[Makielab,](/projects/makielab) London
 
 </About-TimelineItem>
 
@@ -439,7 +439,7 @@ Ecosia hack days [Search Map](https://mapvis.netlify.app/)
 <About-TimelineItem type="Toy" label="LEGO undisclosed concepts"/>
 <About-TimelineItem type="Toy">
 
-[Sprint](/extra/sprint), colour 3DP action figures
+[Sprint,](/extra/sprint) colour 3DP action figures
 
 </About-TimelineItem>
 
@@ -457,19 +457,19 @@ Ecosia hack days [Search Map](https://mapvis.netlify.app/)
 
 <About-TimelineItem type="Role">
 
-Co-founded [Stompy Robot](/projects/stompy-robot), Edinburgh
+Co-founded [Stompy Robot,](/projects/stompy-robot) Edinburgh
 
 </About-TimelineItem>
 
 <About-TimelineItem type="Game">
 
-[Nova](/projects/stompy-robot#Nova), mobile action RTS
+[Nova,](/projects/stompy-robot#Nova) mobile action RTS
 
 </About-TimelineItem>
 
 <About-TimelineItem type="Role">
 
-[Design by Touch](/projects/lego), Leamington Spa
+[Design by Touch,](/projects/lego) Leamington Spa
 
 </About-TimelineItem>
 
@@ -495,7 +495,7 @@ Human Scale Biogas, graduate project PDE (1st Class Meng)
 
 <About-TimelineItem type="Role">
 
-[Art Lebedev Studio](/projects/art-lebedev-studio), Moscow
+[Art Lebedev Studio,](/projects/art-lebedev-studio) Moscow
 
 </About-TimelineItem>
 
@@ -533,7 +533,7 @@ Industrial Ecology
 
 <About-TimelineItem type="Role">
 
-[Random International](/projects/random-international), London
+[Random International,](/projects/random-international) London
 
 </About-TimelineItem>
 
@@ -575,13 +575,13 @@ Offshore vessel bridge, Ulstein Group
 
 <About-TimelineItem type="Course">
 
-[Product Design Engineering](http://www.gsa.ac.uk/study/undergraduate-degrees/product-design-engineering/), Glasgow School of Art
+[Product Design Engineering,](http://www.gsa.ac.uk/study/undergraduate-degrees/product-design-engineering/) Glasgow School of Art
 
 </About-TimelineItem>
 
 <About-TimelineItem type="Role">
 
-[LEGO](/projects/lego), Billund
+[LEGO,](/projects/lego) Billund
 
 </About-TimelineItem>
 
