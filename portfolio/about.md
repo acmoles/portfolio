@@ -121,7 +121,7 @@ Let’s break that down a bit. I started my career as a [Toy Designer at LEGO](/
 
 I've had the pleasure to collaborate with great people on diverse products, from time-critical [MVPs](/projects/toucanbox) at startups to [iterative features](/projects/ecosia/#product-design-at-scale) reaching millions of users. My natural curiosity and adaptability have led me to play varied roles in the agile product team. As a designer and product person, I've found a lifetime of tinkering with digital tools, languages and technologies to be extremely advantageous.
 
-What drives me is the belief that technology has immense potential to enhance everyone's creativity and learning. By distilling complexity through design, I strive to open up this potential to wider audiences. I see rigorously designed interfaces with playful interactions as a key ingredient. Another is iteration - testing early and often. _The human-centred design process is my guiding north star and the thread that runs throughout my career._ I originally hail from Edinburgh, Scotland, I recently called London home and I'm currently based in Berlin.
+What drives me is the belief that everyone's creativity and learning can be enhanced by technology. By distilling complexity through design, I strive to open up this potential to wider audiences. I see rigorously designed interfaces with playful interactions as a key ingredient. Another is iteration - testing with users early and often. _The human-centred design process is my guiding north star and the thread that runs throughout my career._ I originally hail from Edinburgh, Scotland, I recently called London home and I'm currently based in Berlin.
 
 <!--
 as a force for good in our lives
@@ -238,7 +238,7 @@ Unity, familiar with iOS and Android development
 Leadership, stakeholders, team building, mentoring, training
 
 **Product**
-Strategy, analytics, A/B testing
+Strategy, OKRs, analytics, A/B testing
 
 </template>
 
@@ -265,7 +265,9 @@ Strategy, analytics, A/B testing
 <template v-slot:modal>
 <Content-TextSection padding="is-small" rag="rag-6">
 
-I designed this website in [Sketch](https://www.sketch.com/) and hand coded it using [Vue.js](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), [Three.js](https://threejs.org/), SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress](https://vuepress.vuejs.org/).
+I designed this website in [Sketch](https://www.sketch.com/) and hand coded it in [Vue.js](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), [Three.js](https://threejs.org/), SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress](https://vuepress.vuejs.org/).
+
+The code is available on [Github](https://github.com/acmoles/portfolio).
 
 </Content-TextSection>
 </template>

@@ -26,7 +26,7 @@
 
       <div :ref="'caption' + uid" class="item-caption" :class="{ 'transition': !mouseOn }">
         <p class="small-title">{{ processedTitle }}</p>
-        <h2 class="item-title" v-if="subtitle">{{ subtitle }}</h2>
+        <h2 class="item-title" :class="rag" v-if="subtitle">{{ subtitle }}</h2>
 
         <p class="case" v-if="case1">{{ case1 }}</p>
         <!-- <p class="case" v-if="case2">{{ case2 }}</p> -->
@@ -53,7 +53,8 @@ export default {
     case1: String,
     case2: String,
     background: String,
-    src: String
+    src: String,
+    rag: String
   },
 
   mixins: [fadeUpInLoad],

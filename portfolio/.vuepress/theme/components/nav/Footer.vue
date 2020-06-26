@@ -10,14 +10,22 @@
           </router-link>
           <div class="column">
             <router-link class="footer-contact-links footer-about" to="/about">About</router-link>
-            <a
-              class="footer-contact-links"
-              v-for="item in userContact"
-              :href="item.link"
-              target="_blank"
-            >
-              {{ item.text }}
-            </a>
+            <template v-for="item in userContact">
+              <a
+                v-if="isMailto(item.link)"
+                class="footer-contact-links"
+                @click="doCopy('acmoles@gmail.com', 'Email copied to clipboard', 'bottom')"
+              >
+                {{ item.text }}</a>
+              <a
+                v-else
+                class="footer-contact-links"
+                :href="isMailto(item.link) ? null : item.link"
+                :target="isTel(item.link) ? null : '_blank'"
+                :rel="isTel(item.link) ? null : 'noopener noreferrer'"
+              >
+                {{ item.text }}</a>
+            </template>
           </div>
         </div>
         <div class="copy">
@@ -28,11 +36,13 @@
 </template>
 
 <script>
-import Logo from '@theme/components/icons/Logo.vue'
+// import Logo from '@theme/components/icons/Logo.vue'
+import { isExternal, isMailto, isTel } from '@theme/util'
+import { copyText } from '@theme/mixins/copyText.js'
 
 export default {
-
-  components: { Logo },
+  // components: { Logo },
+  mixins: [copyText],
 
   computed: {
     getYear () {
@@ -53,12 +63,14 @@ export default {
       })
       return contactItems
     }
-
-
   },
 
   methods: {
+    isExternal,
+    isMailto,
+    isTel,
   }
+
 }
 
 </script>

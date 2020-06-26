@@ -4,7 +4,7 @@
     <div class="container is-fullhd content">
 
       <div class="page-nav-column columns">
-        <button class="column action">
+        <button class="column action" @click="doCopy('acmoles@gmail.com', 'Email copied to clipboard', 'bottom')">
           <div class="background background-noise"></div>
           <div class="text-group">
             <h2 class="item-title">Get in touch <WavingHand/></h2>
@@ -27,28 +27,14 @@
 <script>
 
 import WavingHand from '@theme/components/home/WavingHand.vue'
+import { copyText } from '@theme/mixins/copyText.js'
 
 export default {
 
   components: { WavingHand },
 
-  data () {
-    return {
-      title: 'Projects'
-    }
-  },
+  mixins: [copyText]
 
-  computed: {
-    projects () {
-      return true
-    },
-  },
-
-  mounted() {
-  },
-
-  methods: {
-  }
 }
 
 </script>
@@ -91,6 +77,9 @@ export default {
         border-left: 2px solid $black
 
   @media screen and (max-width: $desktop)
+    .about-nav .page-nav-column .action .text-group
+      padding-right: 4em
+
     .page-nav.about-nav, .page-nav.about-nav .container
       height: auto
 

@@ -19,7 +19,7 @@
     </div>
 
     <div
-      class="navbar-dropdown is-boxed search-box"
+      class="navbar-dropdown is-boxed search-box background-noise"
       role="combobox"
       @mouseleave="unfocus"
     >

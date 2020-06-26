@@ -3,6 +3,7 @@ uid: 10
 title: Art Lebedev Studio
 subtitle: Channelling a house style
 type: single
+rag: rag-3
 navStyle:
   style: light
   tint: regular-tint

@@ -40,7 +40,11 @@ export default (Vue) => {
         background: ''
       },
       useLastProject: false,
-      fadeCount: 0
+      fadeCount: 0,
+      snackbar: {
+        text: 'Nothing here',
+        position: 'top'
+      }
     },
     mutations: {
       SET_WINDOW_STATUS (state, status) {
@@ -87,6 +91,9 @@ export default (Vue) => {
       },
       RESET_FADE_COUNT (state, status) {
         state.fadeCount = 0
+      },
+      SET_SNACKBAR_STATUS (state, status) {
+        state.snackbar = status
       }
     },
     actions: {
@@ -131,6 +138,9 @@ export default (Vue) => {
       },
       resetFadeCount (context, payload) {
         context.commit('RESET_FADE_COUNT')
+      },
+      setSnackbarStatus (context, payload) {
+        context.commit('SET_SNACKBAR_STATUS', payload)
       },
     }
   })

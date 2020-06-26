@@ -1,9 +1,11 @@
 <template>
   <div class="page-content">
     <div class="theme-default-content">
-      <h1>404</h1>
-      <blockquote>{{ getMsg() }}</blockquote>
-      <router-link to="/">Take me home.</router-link>
+      <Content-TextSection padding="is-large">
+        <h1>404</h1>
+        <blockquote>{{ getMsg() }}</blockquote>
+        <router-link to="/">Take me home</router-link>
+      </Content-TextSection>
     </div>
   </div>
 </template>

@@ -19,6 +19,7 @@
             :case2="project.frontmatter.case2"
             :background="project.frontmatter.background"
             :src="project.frontmatter.src"
+            :rag="project.frontmatter.rag"
             v-on:project-click="handleProjectClick"
           />
     </div>
@@ -33,8 +34,7 @@ import HomeIntroLarge from '@theme/components/home/HomeIntroLarge.vue'
 import HomeIntroSmall from '@theme/components/home/HomeIntroSmall.vue'
 import HomeIntroQuote from '@theme/components/home/HomeIntroQuote.vue'
 
-// TODO fix width issue of tiles on smaller desktop screens
-// TODO mobile view
+// TODO Manifest.json check, What's requesting logo.png, do favicons,
 
 export default {
   components: { PortfolioItem, HomeIntroLarge, HomeIntroSmall, HomeIntroQuote },

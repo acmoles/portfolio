@@ -1,7 +1,7 @@
 ---
 uid: 5
 title: Stompy Robot
-subtitle: Co-founding an indie games studio
+subtitle: Co-founding a games studio
 type: single
 navStyle:
   style: light
@@ -18,7 +18,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage rag="rag-6" :noise="true" ctaLabel="stompy-robot.uk" ctaUrl="https://stompyrobot.uk/"
+<Stage-ProjectStage rag="rag-6" :noise="true" ctaLabel="stompyrobot.uk" ctaUrl="https://stompyrobot.uk/"
 description="Stompy Robot is an independent studio based in Edinburgh creating games for mobile and tools for developers.">
 
   <template v-slot:visual-column>
@@ -52,7 +52,7 @@ In 2013 I joined forces with my brother [Simon Moles](https://www.simonmoles.com
 We worked in the Unity game engine, enabling us to target all major platforms. Our guiding principle was touch-centricity. Mobile games of the time often borrowed existing interaction models, such as on-screen joysticks or pointers. We wanted to play to the strengths of touch.
 
 <p>
-The studio's breakthrough success was with development tools, rather than games. The insights gained building games enabled us to identify valuable workflow improvements in coding and debugging. <a href="https://assetstore.unity.com/packages/tools/gui/srdebugger-console-tools-on-device-27688" target="_blank" rel="noopener noreferrer">SRDebugger</a> is still available on the Unity Asset Store. <Content-ModalLink label="Spaced">
+The studio's breakthrough success was with development tools, rather than games. The insights gained building games enabled us to identify valuable workflow improvements in coding and debugging. <a href="https://assetstore.unity.com/packages/tools/gui/srdebugger-console-tools-on-device-27688" target="blank" rel="noopener noreferrer">SRDebugger</a> is still available on the Unity Asset Store. <Content-ModalLink label="Spaced">
 <template v-slot:modal>
 <Content :page-key="$site.pages.find(p => p.path === '/extra/spaced/').key"/>
 </template>
@@ -67,23 +67,6 @@ Game jam
 </Content-ModalLink>
 . -->
 </p>
-
-<!--
-
-to reimagine the game genres we loved in this new paradigm.
-
-which specifically aims to leverage the interaction opportunities offered by touch screens.
-
-Across all popular mobile platforms (iOS, Windows, Android), we design and craft fun, touch-centric games. We believe that a game should be designed for touch, fully exploiting the fresh input medium provided by this new technology.
-
-with the Unity game engine
-
-
-
-Emphasise what I did, what the challenges were, what was learnt in content text
-
-
--->
 
 </template>
 
@@ -112,20 +95,26 @@ Game developer/designer
 
 
 
-
-<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="https://www.youtube.com/embed/xZELuhMO9es" alt="placeholder" :aside="true"  :iframe="true">
+<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="https://www.youtube.com/embed/xZELuhMO9es" alt="placeholder" :aside="true" rag="rag-4" :iframe="true">
 
 <template v-slot:content>
 
 ## Nova
 
 <p class="subtitle">
-  We built a tactical RTS action game, which specifically aims to leverage the interaction opportunities offered by touch screens.
+  We built a tactical action RTS game, which specifically aims to leverage the interaction opportunities offered by touch screens.
 </p>
+
+The player commands an elite squad of starship captains who must battle against ambitious new factions to defend the neutrality of the galaxy. But beware - suppressing one faction might allow others to gain the upper hand in the ongoing war for dominance. Ultimately our heroes must teach everyday people that they can rise up against their oppressors. As the player progresses, they collect new starships, captains, weaponry and equipment. Each possess advantages and abilities, which can be combined into effective strategies for defeating any opponent.
+
+
+ <!-- as they endeavour to defeat the oppressive galactic powers present in the Milky Way galaxy.
+
+Players will acquire new heroes and weaponry as they progress in the game. Heroes and weapons have unique abilities which the player can combine to develop the most effective strategy for defeating their opponents.
 
 In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
 
-Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
+Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa. -->
 
 <!--
 
@@ -140,10 +129,30 @@ Players will acquire new heroes and weaponry as they progress in the game. Heroe
 
 </template>
 
-<template v-slot:aside>
-
-Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus. Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.
-
-</template>
 
 </Content-ImageFrames-MainImageSection>
+
+
+
+
+
+
+
+
+
+<!--
+
+to reimagine the game genres we loved in this new paradigm.
+
+which specifically aims to leverage the interaction opportunities offered by touch screens.
+
+Across all popular mobile platforms (iOS, Windows, Android), we design and craft fun, touch-centric games. We believe that a game should be designed for touch, fully exploiting the fresh input medium provided by this new technology.
+
+with the Unity game engine
+
+
+
+Emphasise what I did, what the challenges were, what was learnt in content text
+
+
+-->

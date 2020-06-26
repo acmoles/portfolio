@@ -81,7 +81,7 @@ CTO, product manager, 3D artist, front&#8209;end developer, 2 full&#8209;stack d
 
 
 
-<Content-ImageFrames-MainImageSection rag="rag-4" padding="is-large" url="https://www.youtube.com/embed/daBtHme2hP8" alt="Makies video" :aside="true"  :iframe="true">
+<Content-ImageFrames-MainImageSection rag="rag-5" padding="is-large" url="https://www.youtube.com/embed/daBtHme2hP8" alt="Makies video" :aside="true"  :iframe="true">
 
 <template v-slot:content>
 
@@ -91,7 +91,9 @@ CTO, product manager, 3D artist, front&#8209;end developer, 2 full&#8209;stack d
   Creative dolls for creative kids and the world's first 3D printed toys.
 </p>
 
-Character with a digital and physical existence. Personalised by the child, avatar/character from the mobile game or made online before purchase. On-demand manufacture. Creative, DIY toy, crafting, hands-on play/learning, modification e.g. Arduino, RFID, RC. Counterpart to on-screen play. Get children excited about technology, particularly girls. Sustainable and locally made.
+Makies are toys with a digital twin. They're the child's personalised avatar for Makielab's mobile games but they're also a physical toy which encourages hands-on creativity, crafting, DIY making, modification and learning. Makies are designed to get children excited about technology. They can be extended with Arduino kits, among others. Each Makie is hand-assembled in the UK.
+
+<!-- Character with a digital and physical existence. Personalised by the child, avatar/character from the mobile game or made online before purchase. On-demand manufacture. Creative, DIY toy, crafting, hands-on play/learning, modification e.g. Arduino, RFID, RC. Counterpart to on-screen play. Get children excited about technology, particularly girls. Sustainable and locally made. -->
 
 </template>
 

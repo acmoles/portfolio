@@ -8,14 +8,11 @@
   >{{ item.text }}</router-link>
   <a
     v-else-if="isMailto(link)"
-    v-clipboard:copy="splitMailto(link)"
-    v-clipboard:success="onCopy"
-    v-clipboard:error="onError"
+    @click="doCopy('acmoles@gmail.com', 'Email copied to clipboard', 'top')"
     @focusout="focusoutAction"
-    class="navbar-item copy"
+    class="navbar-item"
   >
-    {{ copyTextMessage ? copyTextMessage : item.text }}
-  </a>
+    {{ item.text }}</a>
   <a
     v-else
     :href="link"
@@ -24,13 +21,17 @@
     :target="isTel(link) ? null : '_blank'"
     :rel="isTel(link) ? null : 'noopener noreferrer'"
   >
-    {{ item.text }}
-  </a>
+    {{ item.text }}</a>
 </template>
 
 <script>
 
+// v-clipboard:copy="this.splitMailto(link)"
+// v-clipboard:success="this.onCopy('random text', 'top')"
+// v-clipboard:error="onError"
+
 import { isExternal, isMailto, isTel, ensureExt } from '@theme/util'
+import { copyText } from '@theme/mixins/copyText.js'
 
 export default {
   props: {
@@ -39,11 +40,7 @@ export default {
     }
   },
 
-  data () {
-    return {
-      copyTextMessage: null,
-    }
-  },
+  mixins: [copyText],
 
   computed: {
     link () {
@@ -65,20 +62,23 @@ export default {
     focusoutAction () {
       this.$emit('focusout')
     },
-    onCopy () {
-      this.copyTextMessage = 'Email copied to clipboard'
-      setTimeout(() => {
-        this.copyTextMessage = null
-      }, 1600)
-
-      // TODO global snackbar indicator
-    },
-    onError () {
-      this.copyTextMessage = 'Error'
-    },
     splitMailto (mailto) {
       return mailto.split(':')[1]
-    }
+    },
+    // onCopy (text, position) {
+    //   console.log('mixin method');
+    //   this.$store.dispatch('setSnackbarStatus', {
+    //     text: text,
+    //     position: position || 'top'
+    //   })
+    // },
+    // onError () {
+    //   console.log('mixin error');
+    //   this.$store.dispatch('setSnackbarStatus', {
+    //     text: 'Clipboard copy error',
+    //     position: 'top'
+    //   })
+    // },
   }
 }
 </script>

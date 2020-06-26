@@ -1,7 +1,7 @@
 ---
 uid: 2
 title: Ecosia
-subtitle: Leading the native apps team
+subtitle: Leading the mobile apps team
 type: single
 navStyle:
   style: light
@@ -61,11 +61,11 @@ Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur t
 
 Suspendisse potenti. Praesent risus massa, vulputate eget turpis in, dignissim tincidunt odio -->
 
-With a growing user base and a renewed strategic focus on mobile, in mid 2019 it was time to found a new agile product team with a focus on native apps. Having been closely involved on a strategic level as a product designer, I was a natural fit to take on the role of product manager and team leader. Over the next three months we grew the team from two to four developers and added a dedicated designer.
+With a growing user base and a renewed strategic focus on mobile, in mid 2019 it was time to found a new agile product team with a focus on mobile apps. Having been closely involved on a strategic level as a product designer, I was a natural fit to take on the role of product manager and team leader. Over the next three months we grew the team from two to four developers and added a dedicated designer.
 
 <!-- We made impressive progress on our mobile apps with only two developers and a share of my overall capacity as a product designer.  -->
 
-The primary purpose of Ecosia's native apps is to make searching easy on major platforms. Web search resides in a meta space. It's naturally multi-platform; one way in which devices augment our mental abilities. So _it's critically important that Ecosia's apps fit seamlessly into user's daily lives,_ which requires deep user empathy and platform knowledge.
+The primary purpose of Ecosia's apps is to make searching easy on major platforms. Web search resides in a meta space. It's naturally multi-platform; one way in which devices augment our mental abilities. So _it's critically important that Ecosia's apps fit seamlessly into user's daily lives,_ which requires deep user empathy and platform knowledge.
 
 We also want to connect users with our tree-planting mission and in early 2020 we extended our thinking beyond searching and browsing by asking ourselves how we can help users make further incremental changes in their daily lives.
 
@@ -120,7 +120,7 @@ Conditions were favourable, which I recognise as fortunate. I had good relations
 ### Product design at scale
 
 <p>
-When I joined Ecosia it was at an inflection point. We would soon experience rapid growth, reaching over 10 million daily users. The organisation grew accordingly and the design guild doubled. At that time it was critical to foster collaborative practices, to establish an agreed set of principles and to establish a nascent design system. These considerations were forefront in my mind as I worked on projects such as <Content-ModalLink label="Maps">
+When I joined Ecosia it was at an inflection point. We would soon experience rapid growth, reaching over 10 million daily users. The organisation scaled accordingly and the design guild doubled. At that time it was critical to foster collaborative practices, to establish a set of design principles and to take the first steps towards a component-based design system. These considerations were forefront in my mind as I worked on projects such as <Content-ModalLink label="Maps">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
@@ -135,7 +135,7 @@ When I joined Ecosia it was at an inflection point. We would soon experience rap
 
 <figcaption>
 
-Ecosia maps posed a unique design challenge. As part of slicing the feature we decided to exclude the search box from the first release. Rather, we would enable users to make pseudo searches for common keywords such as hotels and shopping. These constraints called for creativity. It was satisfying to work on a completely new search vertical.
+Ecosia maps posed a unique design challenge. As part of slicing the feature we decided to exclude the search box from the first release. Rather, we would enable users to make pseudo searches for common keywords such as hotels and shopping. These constraints called for creativity and it was satisfying to work on a completely new search vertical.
 
 </figcaption>
 </div>
@@ -157,7 +157,7 @@ Ecosia maps posed a unique design challenge. As part of slicing the feature we d
 
 <figcaption>
 
-I led design of the accounts beta release, enabling users to save and share their personal impact counter across devices. Our hypothesis was that already engaged users would love this feature. We found demand was so high, users outside our testing region began clamouring to be included in the pilot.
+I led design of the accounts beta release, enabling users to save and share their personal impact counter across devices. Our hypothesis was that already engaged users would love this feature. We found demand was so high that users outside our testing region began clamouring to be included in the pilot.
 
 </figcaption>
 </div>
@@ -170,7 +170,7 @@ I led design of the accounts beta release, enabling users to save and share thei
 </p>
 
 <p>
-Even as we grew, there remained a need to be hands-on and responsive. I designed and coded doodles marking significant milestones: <Content-ModalLink label="50 million trees">
+Even as we grew, there remained the need to be hands-on and responsive. I designed and coded doodles marking significant milestones: <Content-ModalLink label="50 million trees">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
@@ -194,7 +194,7 @@ Even as we grew, there remained a need to be hands-on and responsive. I designed
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> A particular personal highlight was a hack week project where we <Content-ModalLink label="visualised global searches">
+</Content-ModalLink> A particular personal highlight was <Content-ModalLink label="Hack Days 2019">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
@@ -209,7 +209,7 @@ Even as we grew, there remained a need to be hands-on and responsive. I designed
 
 <figcaption>
 
-I collaborated with a backend developer, data scientist and marketing manager to design and build this data visualisation in 4 days. As a bonus feature I plotted Ecosia's tree planting sites on the map. It's possible in Brazil to see users searching within 10km of rainforest restored by Ecosia.
+I collaborated with a backend developer, data scientist and marketing manager to design and build this data visualisation in 4 days. As a bonus feature we plotted Ecosia's tree planting sites on the map. In Brazil there are users searching within 10km of rainforest restored by Ecosia.
 
 </figcaption>
 </div>
@@ -218,7 +218,7 @@ I collaborated with a backend developer, data scientist and marketing manager to
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> in realtime. I designed and coded the visualisation frontend.
+</Content-ModalLink> where we visualised global searches in realtime. I designed and coded the visualisation frontend.
 </p>
 
 <!-- ### On leadership -->
@@ -226,7 +226,7 @@ I collaborated with a backend developer, data scientist and marketing manager to
 ### Mobile team highlights
 
 <p>
-Early on, we had a standout success with the iOS App. The message from users was clear; the app was failing them with poor usability and missing browser features. Browsing tabs were the top request. I worked closely with developers to shape an interface we dubbed the <Content-ModalLink label="Organiser">
+Early on, we had a standout success with the iOS App. Users were clear that the app was missing key browser features and lagging in usability. Browsing tabs were the top request. I worked closely with developers to shape an interface we named the <Content-ModalLink label="Organiser">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
@@ -248,8 +248,88 @@ With the iOS App Organiser Ecosia could stand as a viable alternative browser to
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> for favourites, history, tabs and settings. This release immediately raised 1-week retention by an average of 18%. Over the same period user numbers jumped 3x.
+</Content-ModalLink> for favourites, history, tabs and settings. This release immediately raised 1-week retention by an average of 18%. Over the same period our daily active users count jumped 3x. Its success influenced the strategic decision to invest in mobile apps.
 </p>
+
+<p>
+The greatest business impact was achieved with a project where I supported the team to deliver complex technical solutions. The Ecosia <Content-ModalLink label="Android App">
+<template v-slot:modal>
+
+<Content-FreeSection padding="is-small">
+
+<div class="columns is-centered">
+<div class="column is-two-thirds">
+<figure class="image is-5by4">
+<img class="lazyload" data-src="/images/ecosia/Android-modal.jpg" alt="Ecosia Android App">
+</figure>
+
+<figcaption>
+
+The Ecosia Android app offers the familiarity of Chromium with Ecosia search. It connects users to the cause through tree planting news, financial reporting and other content.
+
+</figcaption>
+</div>
+</div>
+
+</Content-FreeSection>
+
+</template>
+</Content-ModalLink> is a fork of the Chromium browser. This offers a ready&#8209;made, familiar browsing experience but with the drawback of requiring enormous investment to keep it up-to-date. <em>I facilitated a design thinking process with developers where we identified ways we might accelerate the update process.</em> Then I helped them prioritise initiatives, slice the work, establish milestones and finally evaluate based on success criteria. My technical background enabled me to participate meaningfully in discussions and offer effective leadership.
+</p>
+
+<template slot="aside">
+
+<figure class="image is-16by9">
+  <img class="lazyload" data-src="/images/ecosia/Ecosia-support1.jpg" alt="Ecosia offices">
+</figure>
+
+<figure class="image is-16by9">
+  <img class="lazyload" data-src="/images/ecosia/Ecosia-support2.jpg" alt="Ecosia offices">
+</figure>
+
+<figure class="image is-16by9">
+  <img class="lazyload" data-src="/images/ecosia/Ecosia-support3.jpg" alt="Ecosia tree saplings">
+</figure>
+
+</template>
+
+</Content-TextSection>
+
+
+
+<Content-MetricsSection padding="is-medium-large" :metrics="[
+{ metric:'18%', description:'Increase in iOS App 1-week retention.' },
+{ metric:'3x', description:'iOS app DAU growth in 2019.' },
+{ metric:'4x', description:'Faster Android app updates.' },
+]"/>
+
+<!--
+
+{ metric:'91%', description:'Users migrated to the Safari App Extension.' },
+
+We achieved this despite facing a considerable challenge replicating previous functionality with the new, hardly documented, platform.
+
+{ metric:'50%', description:'Rate of Android users setting Ecosia as system default browser when prompted.' },
+
+Safari Mac App - Apple changes the platform, efforts to keep our users and build an alternative.
+93% drops to 85% users on extension - frame as kept/migrated 91% of users
+
+iOS app - adding much needed browser features like browsing tabs, history, favorites and a design overhaul
+Increase 1-week retention from 28% to 34%, increase of 18%
+While 3x DAU over a 3 month period
+App stability?
+
+Android app - update speed would be nice
+Set as default browser - 2.2% clickthrough, Android default browser set is in Android in-app activities Dashboard - seems to be broken
+7.8M resume events
+5.2M resume events with default set
+2/3 Android launch events from users who set Ecosia as system default browser
+Android users who set Ecosia as system default browser app
+App stability?
+
+
+
+// SAFARI CUT
 
 <p>
 The greatest business impact came from two projects where I supported the team to deliver complex technical solutions. Apple were poised to remove their existing extension platform from Safari. 15% of daily searches came from users relying on this extension. We rapidly built a replacement <Content-ModalLink label="Safari App Extension">
@@ -277,79 +357,7 @@ Our browser extensions add Ecosia as default search engine. Users expect that th
 </Content-ModalLink> and migrated 91% of users in the face of considerable technical challenges.
 </p>
 
-<p>
-The Ecosia <Content-ModalLink label="Android App">
-<template v-slot:modal>
 
-<Content-FreeSection padding="is-small">
-
-<div class="columns is-centered">
-<div class="column is-two-thirds">
-<figure class="image is-5by4">
-<img class="lazyload" data-src="/images/ecosia/Android-modal.jpg" alt="Ecosia Android App">
-</figure>
-
-<figcaption>
-
-The Ecosia Android app offers the familiarity of Chromium but with Ecosia search and connection to the cause through tree planting news, financial reporting and other content.
-
-</figcaption>
-</div>
-</div>
-
-</Content-FreeSection>
-
-</template>
-</Content-ModalLink> is a fork of the Chromium browser. The advantage is a ready&#8209;made and familiar browsing experience. But the drawback is the enormous time investment required to keep it up-to-date. I facilitated a design thinking process with developers to identify ways we might accelerate the update process and then supported them by slicing the work and establishing milestones. In both cases my technical background was a valuable asset which enabled me to participate in discussions and offer meaningful leadership.
-</p>
-
-<template slot="aside">
-
-<figure class="image is-16by9">
-  <img class="lazyload" data-src="/images/ecosia/Ecosia-support1.jpg" alt="Ecosia offices">
-</figure>
-
-<figure class="image is-16by9">
-  <img class="lazyload" data-src="/images/ecosia/Ecosia-support2.jpg" alt="Ecosia offices">
-</figure>
-
-<figure class="image is-16by9">
-  <img class="lazyload" data-src="/images/ecosia/Ecosia-support3.jpg" alt="Ecosia tree saplings">
-</figure>
-
-</template>
-
-</Content-TextSection>
-
-
-
-<Content-MetricsSection padding="is-medium-large" :metrics="[
-{ metric:'18%', description:'Increase in iOS App 1-week retention.' },
-{ metric:'91%', description:'Users migrated to the Safari App Extension.' },
-{ metric:'4x', description:'Faster Android Chromium update cycles.' },
-]"/>
-
-<!--
-
-We achieved this despite facing a considerable challenge replicating previous functionality with the new, hardly documented, platform.
-
-{ metric:'50%', description:'Rate of Android users setting Ecosia as system default browser when prompted.' },
-
-Safari Mac App - Apple changes the platform, efforts to keep our users and build an alternative.
-93% drops to 85% users on extension - frame as kept/migrated 91% of users
-
-iOS app - adding much needed browser features like browsing tabs, history, favorites and a design overhaul
-Increase 1-week retention from 28% to 34%, increase of 18%
-While 3x DAU over a 3 month period
-App stability?
-
-Android app - update speed would be nice
-Set as default browser - 2.2% clickthrough, Android default browser set is in Android in-app activities Dashboard - seems to be broken
-7.8M resume events
-5.2M resume events with default set
-2/3 Android launch events from users who set Ecosia as system default browser
-Android users who set Ecosia as system default browser app
-App stability?
 
 
 -->

@@ -15,7 +15,7 @@
       <span class="link-text">{{ item.text }}</span>
     </a>
     <div
-      class="navbar-dropdown is-boxed"
+      class="navbar-dropdown is-boxed background-noise"
       role="menu"
     >
         <NavLink
