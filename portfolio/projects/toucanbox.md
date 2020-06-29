@@ -45,7 +45,7 @@ description="toucanBox is an award winning startup subscription service deliveri
 .toucan-image
   position: absolute
   left: -4em
-  height: 150%
+  height: 40vh
   max-height: 26em
   img
     position: relative
@@ -53,11 +53,11 @@ description="toucanBox is an award winning startup subscription service deliveri
     max-width: initial
 
 .toucan-rag
-  padding-right: 2em
+  padding-right: 3em
 
 @media screen and (min-width: 1335px)
   .toucan-rag
-    padding-right: 4em
+    padding-right: 5em
 
 </style>
 
