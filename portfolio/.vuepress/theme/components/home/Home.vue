@@ -111,8 +111,7 @@ export default {
   @import "@theme/styles/mixins.sass"
 
   .container.is-home
-    @media screen and (max-width: $tablet)
-      padding-top: 7em
+    padding-top: 7em      
 
   // in-view rules for fade staggering
   html:not(.disable-motion)

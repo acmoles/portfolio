@@ -26,11 +26,19 @@
           <p class="subtitle" :class="rag">
             {{ description }}
           </p>
-          <ProjectExternalLink
-            v-if="ctaLabel !== 'none'"
-            :label="ctaLabel"
-            :href="ctaUrl"
-          />
+          <template v-if="ctaLabel !== 'none'">
+            <ProjectExternalModal
+              v-if="hasModal"
+              :label="ctaLabel"
+            >
+              <slot name="modal"></slot>
+            </ProjectExternalModal>
+            <ProjectExternalLink
+              v-else
+              :label="ctaLabel"
+              :href="ctaUrl"
+            />
+          </template>
         </div>
         <div
           ref="column-parallax"
@@ -50,6 +58,7 @@
 
 <script>
 import ProjectExternalLink from '@theme/components/ProjectExternalLink.vue'
+import ProjectExternalModal from '@theme/components/ProjectExternalModal.vue'
 
 import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
 import { topPadding } from '@theme/mixins/topPadding.js'
@@ -58,7 +67,7 @@ import updateOnScroll from 'uos'
 import { getScrollTop, getViewport } from '@theme/util'
 
 export default {
-  components: { ProjectExternalLink },
+  components: { ProjectExternalLink, ProjectExternalModal },
 
   props: {
     ctaLabel: String,
@@ -67,6 +76,7 @@ export default {
     noise: Boolean,
     fadeless: Boolean,
     rag: String,
+    hasModal: Boolean,
   },
 
   mixins: [fadeUpInLoad, topPadding],
@@ -82,7 +92,6 @@ export default {
 
   computed: {
     // TODO make description slot pull from page metadata? Could also be used for SEO
-
     navStyle () {
       return this.$page.frontmatter.navStyle.style
     },
@@ -172,6 +181,7 @@ export default {
 
 .stage-column
   position: relative
+  z-index: 2
   @media screen and (max-width: $desktop)
     padding-bottom: 6em
   @media screen and (max-width: $tablet)

@@ -60,7 +60,7 @@ Experience working to Agile and Lean methodologies
 
 
 
-
+Designer. Team Builder. Problem Solver
 
 
 multidisciplinary
@@ -113,15 +113,15 @@ I started my career as a teacher and transitioned to UX about 10 years ago. But 
 
 ## Hello! I'm Ant
 
-<p class="subtitle" style="padding-right: 5em;">
+<p class="subtitle">
   A designer and leader creating useful and playful experiences centred on people
 </p>
 
-Let’s break that down a bit. I started my career as a [Toy Designer at LEGO](/projects/lego), having trained in [Product Design Engineering](http://www.gsa.ac.uk/study/undergraduate-degrees/product-design-engineering/) at the Glasgow School of Art. I transitioned into UX about 5 years ago, pursuing a desire to blend technology and interactivity into my practice. Recently I've been leading a technology team as a [Product Manager](/projects/ecosia). But I haven't forgotten my roots and I'm at my best when bridging the digital/physical and design/technology divides.
+Let’s break that down a bit. I started my career as a [Toy Designer at LEGO](/projects/lego), having trained in [Product Design Engineering](http://www.gsa.ac.uk/study/undergraduate-degrees/product-design-engineering/) at the Glasgow School of Art. I transitioned into UX about 5 years ago, pursuing a desire to blend technology and interactivity into my design practice. Recently I've been leading an agile product team as a [Product Manager](/projects/ecosia). But I haven't forgotten my roots and I'm at my best when bridging digital/physical and design/technology divides.
 
-I've had the pleasure to collaborate with great people on diverse products, from time-critical [MVPs](/projects/toucanbox) at startups to [iterative features](/projects/ecosia/#product-design-at-scale) reaching millions of users. My natural curiosity and adaptability have led me to play varied roles in the agile product team. As a designer and product person, I've found a lifetime of tinkering with digital tools, languages and technologies to be extremely advantageous.
+I've had the pleasure to collaborate with great people on diverse products, from time-critical [MVPs](/projects/toucanbox) at startups to [iterative features](/projects/ecosia/#product-design-at-scale) reaching millions of users. My natural curiosity, adaptability and love of learning have led me to play varied roles. A lifetime of tinkering with tools, languages and technologies enables me to empathise with engineering stakeholders as much as I do with users.
 
-What drives me is the belief that everyone's creativity and learning can be enhanced by technology. By distilling complexity through design, I strive to open up this potential to wider audiences. I see rigorously designed interfaces with playful interactions as a key ingredient. Another is iteration - testing with users early and often. _The human-centred design process is my guiding north star and the thread that runs throughout my career._ I originally hail from Edinburgh, Scotland, I recently called London home and I'm currently based in Berlin.
+What drives me is the belief that everyone's creativity and learning can be enhanced by technology. By distilling complexity through design, I strive to open up this potential to wider audiences. I see rigorously designed interfaces with playful interactions as a key ingredient. Another is iteration - testing with users early and often. _The human-centred design process is the thread that runs through my career._
 
 <!--
 as a force for good in our lives
@@ -182,7 +182,7 @@ Rapha feedback highlights
 <template v-slot:aside>
 
 **Design**
-UX, UI, interaction, motion, user research and testing, visual design, illustration, sketching, 3D modelling
+UX, UI, interaction, motion, user research and testing, sketching, 3D modelling
 
 <p>
 <strong>Technology</strong>
@@ -211,8 +211,8 @@ CSS (SCSS, SASS)
 Node.js stack (Express, Harp)
 ~ Database (MongoDB, SQL, Postgres)
 ~ REST APIs
-~ Websocket (socket.io)
-~ Familiar with Ruby/Rails, Go
+~ Websocket (Socket.io)
+~ Familiar with Ruby/Rails, Go, PHP
 
 </template>
 
@@ -231,7 +231,7 @@ Version control (Git)
 </Content-ThreeColumnSection>
 </template>
 </Content-ModalLink>
-Unity, familiar with iOS and Android development
+, Unity, familiar with iOS and Android development
 </p>
 
 **People**
@@ -239,6 +239,11 @@ Leadership, stakeholders, team building, mentoring, training
 
 **Product**
 Strategy, OKRs, analytics, A/B testing
+
+<br>
+
+_I originally hail from Edinburgh, I recently called London home and I'm currently based in Berlin._
+{ .secondary }
 
 </template>
 
@@ -249,87 +254,236 @@ Strategy, OKRs, analytics, A/B testing
 
 <About-TimelineSection padding="is-timeline">
 
-<template v-slot:2020>
 
-<!-- <About-TimelineItem type="Role" label="Ecosia Mobile Team strategy"/> -->
 
-<About-TimelineItem type="App">
+<template v-slot:2009>
 
-[Ecosia Android App](/projects/ecosia/#mobile-team-highlights) relaunch
+<About-TimelineItem type="Course">
 
-</About-TimelineItem>
-
-<About-TimelineItem type="Web">
-<p>
-<Content-ModalLink label="Portfolio website">
-<template v-slot:modal>
-<Content-TextSection padding="is-small" rag="rag-6">
-
-I designed this website in [Sketch](https://www.sketch.com/) and hand coded it in [Vue.js,](https://vuejs.org/) [Vuex,](https://vuex.vuejs.org/) [Three.js,](https://threejs.org/) SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress.](https://vuepress.vuejs.org/)
-
-The code is available on [Github.](https://github.com/acmoles/portfolio)
-
-</Content-TextSection>
-</template>
-</Content-ModalLink>
-</p>
-</About-TimelineItem>
-
-<About-TimelineItem type="XR">
-
-[Interaction experiments](/projects/interaction)
+[Product Design Engineering](http://www.gsa.ac.uk/study/undergraduate-degrees/product-design-engineering/), Glasgow School of Art
 
 </About-TimelineItem>
 
+<About-TimelineItem type="Role">
+
+[LEGO](/projects/lego), Billund
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Build" label="Micro hydro electric generator"/>
 
 </template>
 
-<template v-slot:2019>
 
-<About-TimelineItem type="App">
 
-[Ecosia iOS App](/projects/ecosia/#mobile-team-highlights) browser overhaul
+
+<template v-slot:2010>
+
+<About-TimelineItem type="Build">
+
+Treadmill boat, powered and piloted by feet alone
 
 </About-TimelineItem>
 
-<!-- <About-TimelineItem type="Game">
+<About-TimelineItem type="Course">
 
-Stompy Robot [Game Jam](/#)
+ERASMUS exchange at NTNU, Trondheim, Norway
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Build">
+
+Pinewood furniture, T-Komponent
+
+</About-TimelineItem>
+
+<About-TimelineItem type="UI">
+
+Offshore vessel bridge, Ulstein Group
+
+</About-TimelineItem>
+
+</template>
+
+
+
+
+<template v-slot:2011>
+
+<About-TimelineItem type="App" label="Myfood meal subscription"/>
+
+<About-TimelineItem type="Course">
+
+Industrial Ecology
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Course">
+
+3D modelling and rendering in Solidworks and 3DS Max
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Role">
+
+[Random International](/projects/random-international), London
+
+</About-TimelineItem>
+
+</template>
+
+
+
+
+
+<template v-slot:2012>
+
+<About-TimelineItem type="Read" label="The Art of Innovation by Tom Kelly"/>
+
+<About-TimelineItem type="Course">
+
+Human Scale Biogas, graduate project PDE (1st Class Meng)
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Role">
+
+[Art Lebedev Studio](/projects/art-lebedev-studio), Moscow
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Product">
+
+[Oktopus](/projects/art-lebedev-studio/#highlights)
+
+</About-TimelineItem>
+
+<!-- <About-TimelineItem type="Vehicle">
+
+[Scout Helicopter](/projects/art-lebedev-studio)
 
 </About-TimelineItem> -->
 
-<About-TimelineItem type="Role">
-
-Product Manager, Native Apps team
-
-</About-TimelineItem>
-<About-TimelineItem type="Read" label="Inspired by Marty Cagan"/>
-<About-TimelineItem type="Web">
-
-Ecosia hack days [Search Map](https://mapvis.netlify.app/)
-
-</About-TimelineItem>
-
 </template>
 
-<template v-slot:2018>
 
-<About-TimelineItem type="Web">
 
-[Wesen](/projects/wesen)
+
+
+
+<template v-slot:2013>
+
+<About-TimelineItem type="Product">
+
+[NITA](/projects/art-lebedev-studio/#highlights) air traffic control consoles
 
 </About-TimelineItem>
 
 <About-TimelineItem type="Role">
 
-[Ecosia,](/projects/ecosia) Berlin
+Co-founded [Stompy Robot](/projects/stompy-robot), Edinburgh
 
 </About-TimelineItem>
 
-<About-TimelineItem type="Course" label="German Language B2"/>
-<About-TimelineItem type="Read" label="Universal Principles of Design by Lidwell et al."/>
+<About-TimelineItem type="Game">
+
+[Nova](/projects/stompy-robot#Nova), mobile action RTS
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Role">
+
+[Design by Touch](/projects/lego), Leamington Spa
+
+</About-TimelineItem>
+
+<!-- <About-TimelineItem type="Wearable">
+
+[NERF Energon Band](/#)
+
+</About-TimelineItem> -->
 
 </template>
+
+
+
+
+
+
+<template v-slot:2014>
+
+<About-TimelineItem type="Toy">
+
+[LEGO Dimensions](/projects/lego)
+
+</About-TimelineItem>
+<About-TimelineItem type="Toy" label="LEGO Nexo Knights"/>
+<About-TimelineItem type="Toy" label="LEGO undisclosed concepts"/>
+<About-TimelineItem type="Toy">
+
+[Sprint](/extra/sprint), colour 3DP action figures
+
+</About-TimelineItem>
+
+</template>
+
+
+
+
+<template v-slot:2015>
+
+<About-TimelineItem type="Role">
+
+[Makielab](/projects/makielab), London
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Speaking" label="BBC Radio on 3D printing"/>
+
+<About-TimelineItem type="Toy">
+
+<Content-ModalLink label="Disney Infinity Me">
+<template v-slot:modal>
+<Content :page-key="$site.pages.find(p => p.path === '/extra/infinity/').key"/>
+</template>
+</Content-ModalLink>
+</About-TimelineItem>
+
+<About-TimelineItem type="Read" label="The Design of Everyday Things by Don Norman"/>
+
+<!-- <About-TimelineItem type="Kudos" label="Innovate UK"/> -->
+<!-- <About-TimelineItem type="Kudos" label="Techstars Accelerator"/> -->
+
+
+</template>
+
+
+
+
+<template v-slot:2016>
+
+<About-TimelineItem type="Role" label="Makielab sold to Disney"/>
+
+<About-TimelineItem type="Role" label="Contract Senior Designer, Mattel"/>
+
+<About-TimelineItem type="Role">
+
+[toucanBox](/projects/toucanbox), London
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Web">
+
+[Create by toucanBox](/projects/toucanbox-research)
+
+</About-TimelineItem>
+
+<!-- <About-TimelineItem type="Web" label="toucanBox Christmas campaign"/> -->
+
+</template>
+
+
+
 
 <template v-slot:2017>
 
@@ -377,217 +531,96 @@ Ecosia hack days [Search Map](https://mapvis.netlify.app/)
 
 </template>
 
-<template v-slot:2016>
 
-<About-TimelineItem type="Role" label="Makielab sold to Disney"/>
 
-<About-TimelineItem type="Role" label="Contract Senior Designer, Mattel"/>
+
+<template v-slot:2018>
+
+<About-TimelineItem type="Web">
+
+[Wesen](/projects/wesen)
+
+</About-TimelineItem>
 
 <About-TimelineItem type="Role">
 
-[toucanBox,](/projects/toucanbox) London
+[Ecosia](/projects/ecosia), Berlin
+
+</About-TimelineItem>
+
+<About-TimelineItem type="Course" label="German Language B2"/>
+<About-TimelineItem type="Read" label="Universal Principles of Design by Lidwell et al."/>
+
+</template>
+
+
+
+
+<template v-slot:2019>
+
+<About-TimelineItem type="App">
+
+[Ecosia iOS App](/projects/ecosia/#mobile-team-highlights) browsing overhaul
+
+</About-TimelineItem>
+
+<!-- <About-TimelineItem type="Game">
+
+Stompy Robot [Game Jam](/#)
+
+</About-TimelineItem> -->
+
+<About-TimelineItem type="Role">
+
+Product Manager, Native Apps team
+
+</About-TimelineItem>
+<About-TimelineItem type="Read" label="Inspired by Marty Cagan"/>
+<About-TimelineItem type="Web">
+
+Ecosia hack days [Search Map](https://mapvis.netlify.app/)
+
+</About-TimelineItem>
+
+</template>
+
+
+
+
+<template v-slot:2020>
+
+<!-- <About-TimelineItem type="Role" label="Ecosia Mobile Team strategy"/> -->
+
+<About-TimelineItem type="App">
+
+[Ecosia Android App](/projects/ecosia/#mobile-team-highlights) relaunch
 
 </About-TimelineItem>
 
 <About-TimelineItem type="Web">
-
-[Create by toucanBox](/projects/toucanbox-research)
-
-</About-TimelineItem>
-
-<!-- <About-TimelineItem type="Web" label="toucanBox Christmas campaign"/> -->
-
-</template>
-
-<template v-slot:2015>
-
-<About-TimelineItem type="Role">
-
-[Makielab,](/projects/makielab) London
-
-</About-TimelineItem>
-
-<About-TimelineItem type="Speaking" label="BBC Radio on 3D printing"/>
-
-<About-TimelineItem type="Toy">
-
-<Content-ModalLink label="Disney Infinity Me">
+<p>
+<Content-ModalLink label="Portfolio website">
 <template v-slot:modal>
-<Content :page-key="$site.pages.find(p => p.path === '/extra/infinity/').key"/>
+<Content-TextSection padding="is-small" rag="rag-6">
+
+I designed this website in [Sketch](https://www.sketch.com/) and hand coded it in [Vue.js](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), [Three.js](https://threejs.org/), SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress.](https://vuepress.vuejs.org/)
+
+The code is available on [Github](https://github.com/acmoles/portfolio).
+
+</Content-TextSection>
 </template>
 </Content-ModalLink>
+</p>
 </About-TimelineItem>
 
-<About-TimelineItem type="Read" label="The Design of Everyday Things by Don Norman"/>
+<About-TimelineItem type="XR">
 
-<!-- <About-TimelineItem type="Kudos" label="Innovate UK"/> -->
-<!-- <About-TimelineItem type="Kudos" label="Techstars Accelerator"/> -->
-
-
-</template>
-
-
-
-<template v-slot:2014>
-
-<About-TimelineItem type="Toy">
-
-[LEGO Dimensions](/projects/lego)
-
-</About-TimelineItem>
-<About-TimelineItem type="Toy" label="LEGO Nexo Knights"/>
-<About-TimelineItem type="Toy" label="LEGO undisclosed concepts"/>
-<About-TimelineItem type="Toy">
-
-[Sprint,](/extra/sprint) colour 3DP action figures
+[Interaction experiments](/projects/interaction)
 
 </About-TimelineItem>
 
 </template>
 
-
-
-<template v-slot:2013>
-
-<About-TimelineItem type="Product">
-
-[NITA](/projects/art-lebedev-studio/#highlights) air traffic control consoles
-
-</About-TimelineItem>
-
-<About-TimelineItem type="Role">
-
-Co-founded [Stompy Robot,](/projects/stompy-robot) Edinburgh
-
-</About-TimelineItem>
-
-<About-TimelineItem type="Game">
-
-[Nova,](/projects/stompy-robot#Nova) mobile action RTS
-
-</About-TimelineItem>
-
-<About-TimelineItem type="Role">
-
-[Design by Touch,](/projects/lego) Leamington Spa
-
-</About-TimelineItem>
-
-<!-- <About-TimelineItem type="Wearable">
-
-[NERF Energon Band](/#)
-
-</About-TimelineItem> -->
-
-</template>
-
-
-
-<template v-slot:2012>
-
-<About-TimelineItem type="Read" label="The Art of Innovation by Tom Kelly"/>
-
-<About-TimelineItem type="Course">
-
-Human Scale Biogas, graduate project PDE (1st Class Meng)
-
-</About-TimelineItem>
-
-<About-TimelineItem type="Role">
-
-[Art Lebedev Studio,](/projects/art-lebedev-studio) Moscow
-
-</About-TimelineItem>
-
-<About-TimelineItem type="Product">
-
-[Oktopus](/projects/art-lebedev-studio/#highlights)
-
-</About-TimelineItem>
-
-<!-- <About-TimelineItem type="Vehicle">
-
-[Scout Helicopter](/projects/art-lebedev-studio)
-
-</About-TimelineItem> -->
-
-</template>
-
-
-
-<template v-slot:2011>
-
-<About-TimelineItem type="App" label="Myfood meal subscription"/>
-
-<About-TimelineItem type="Course">
-
-Industrial Ecology
-
-</About-TimelineItem>
-
-<About-TimelineItem type="Course">
-
-3D modelling and rendering in Solidworks and 3DS Max
-
-</About-TimelineItem>
-
-<About-TimelineItem type="Role">
-
-[Random International,](/projects/random-international) London
-
-</About-TimelineItem>
-
-
-
-</template>
-
-<template v-slot:2010>
-
-<About-TimelineItem type="Build">
-
-Treadmill boat, powered and piloted by feet alone
-
-</About-TimelineItem>
-
-<About-TimelineItem type="Course">
-
-ERASMUS exchange at NTNU, Trondheim, Norway
-
-</About-TimelineItem>
-
-<About-TimelineItem type="Build">
-
-Pinewood furniture, T-Komponent
-
-</About-TimelineItem>
-
-<About-TimelineItem type="UI">
-
-Offshore vessel bridge, Ulstein Group
-
-</About-TimelineItem>
-
-
-
-</template>
-
-<template v-slot:2009>
-
-<About-TimelineItem type="Course">
-
-[Product Design Engineering,](http://www.gsa.ac.uk/study/undergraduate-degrees/product-design-engineering/) Glasgow School of Art
-
-</About-TimelineItem>
-
-<About-TimelineItem type="Role">
-
-[LEGO,](/projects/lego) Billund
-
-</About-TimelineItem>
-
-<About-TimelineItem type="Build" label="Micro hydro electric generator"/>
-
-</template>
 
 
 </About-TimelineSection>

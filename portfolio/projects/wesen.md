@@ -41,7 +41,7 @@ It's manufactured on demand by a blend of modern and traditional techniques.
 
 <template v-slot:main>
 
-## Context
+<h2 class="inline-title"> {{ $page.frontmatter.subtitle }} </h2> <p class="case inline">{{ $page.frontmatter.case1 }}</p>
 
 Recent years have seen a gradual increase in awareness of product customisation and on&#8209;demand manufacturing. But to this day we can see little evidence of the promised revolution due to relatively high prices and no killer app.
 
@@ -105,8 +105,8 @@ Wesen fulfils my original success criteria. It taught me a great deal but the mo
 ### My role
 
 Entrepreneur
-~ UX Product designer
-~ Full-stack JS developer
+~ UX Product Designer
+~ Full-stack JS Developer
 
 </template>
 

@@ -105,6 +105,9 @@ export default {
 </script>
 
 <style lang="sass">
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
+
 .popup-wrapper
   position: fixed
   top: 0
@@ -116,11 +119,13 @@ export default {
   align-items: center
   z-index: 3
   .content-wrapper
-    overflow-y: scroll
+    overflow-y: hidden
+    @media screen and (max-width: $tablet)
+      overflow-y: scroll
     width: calc( 100% - 2em )
 
   .video-wrapper
-    max-width: 50vh
+    max-width: 42vh
     margin: auto
     // .image
     //   max-height: calc( 100% - 2em )

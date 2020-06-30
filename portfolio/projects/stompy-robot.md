@@ -45,7 +45,7 @@ description="Stompy Robot is an independent studio based in Edinburgh creating g
 
 <template v-slot:main>
 
-## Context
+<h2> {{ $page.frontmatter.subtitle }} </h2>
 
 In 2013 I joined forces with my brother [Simon Moles](https://www.simonmoles.com/) (systems developer at [Rockstar North](https://www.rockstarnorth.com/)) to build video games specifically for mobile devices. We had just witnessed the dawn of ubiquitous touch-based computing and believed we could exploit this fresh input medium to reimagine some of our favourite game genres.
 

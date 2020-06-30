@@ -11,15 +11,15 @@
 
       <div class="columns">
 
-        <div class="column" :class="rag">
+        <div class="column" :class="columnRag">
           <slot name="column1"></slot>
         </div>
 
-        <div class="column" :class="rag">
+        <div class="column" :class="columnRag">
           <slot name="column2"></slot>
         </div>
 
-        <div class="column" :class="[columnOffset, rag]">
+        <div class="column" :class="[columnOffset, columnRag]">
           <slot name="column3"></slot>
         </div>
 
@@ -36,7 +36,8 @@ export default {
   props: {
     padding: String,
     columnOffset: String,
-    rag: String
+    rag: String,
+    columnRag: String
   },
 
   computed: {

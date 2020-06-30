@@ -34,7 +34,7 @@ I created several concepts, the most promising of which we named the 'Box builde
 </figure>
 </div>
 <div class="column">
-<figure class="image is-2by1">
+<figure class="image is-2by1 transparent-image">
   <img class="lazyload" data-src="/images/toucanBox/high-fidelity-sketching.png" alt="Flowchart of personalisation interface in the account section">
 </figure>
 </div>

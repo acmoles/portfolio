@@ -1,7 +1,9 @@
 <template>
   <button class="modal-inline" type="button" name="action" @click="action()">
     {{ label }}
-    <img src="/svg-icons/icon_maximise.svg" alt="Maximise icon">
+    <i class="icon" aria-hidden="true">
+      <img src="/svg-icons/icon_maximise.svg" alt="Maximise icon">
+    </i>
     <ModalBase
       v-if="modalOpen"
       @close="close()"

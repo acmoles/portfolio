@@ -9,6 +9,7 @@
           <div class="text-group">
             <p class="small-title">{{ prev.title || prev.path }}</p>
             <h2 class="item-title">{{ prev.frontmatter.subtitle }}</h2>
+            <p class="case" v-if="prev.frontmatter.case1">{{ prev.frontmatter.case1 }}</p>
           </div>
         </router-link>
         <router-link  v-if="next" class="column no-fade is-one-third next" :to="next.path">
@@ -16,6 +17,7 @@
           <div class="text-group">
             <p class="small-title">{{ next.title || next.path }}</p>
             <h2 class="item-title">{{ next.frontmatter.subtitle }}</h2>
+            <p class="case" v-if="next.frontmatter.case1">{{ next.frontmatter.case1 }}</p>
           </div>
         </router-link>
       </div>
@@ -98,6 +100,9 @@ function resolvePageLink (
     background-image: linear-gradient(360deg, $pitch 0%, rgba($pitch,0.42) 40%, rgba($pitch,0.00) 100%)
     top: -2em
     opacity: 0.05
+  .case
+    color: rgba($white, 0.8)
+    margin-top: 0.5em
 
 .page-nav-column.columns
   position: relative

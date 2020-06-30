@@ -1,7 +1,7 @@
 ---
 uid: 7
 title: toucanBox
-subtitle: Refining the onboarding flow for new customers
+subtitle: Refining the onboarding flow
 type: double-right-bottom
 navStyle:
   style: light
@@ -20,25 +20,37 @@ hasFooter: true
 <!-- A redesigned sign up funnel to improve communication, useability and confidence and a strategic design project to identify new ways to improve customer retention -->
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com" rag="toucan-rag"
+<Stage-ProjectStage :noise="true" ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com" rag="toucan-rag" :hasModal="true"
 description="toucanBox is an award winning startup subscription service delivering creative craft boxes to children aged 3-8.">
 
-  <template v-slot:visual-column>
-    <figure class="toucan-image">
-      <b class="decoration svg-yellow-splat"/>
-      <Heros-ImageHero src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage"/>
-      <!-- <b class="decoration svg-bee"/> -->
-      <!-- <b class="decoration svg-confetti-red"/> -->
-      <b class="decoration svg-confetti-yellow"/>
-      <b class="decoration svg-flash-blue"/>
-      <!-- <b class="decoration svg-flash-yellow"/> -->
-      <!-- <b class="decoration svg-pencil-parachute"/> -->
-    </figure>
-  </template>
+<template v-slot:visual-column>
+  <figure class="toucan-image">
+    <b class="decoration svg-yellow-splat"/>
+    <Heros-ImageHero src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage"/>
+    <!-- <b class="decoration svg-bee"/> -->
+    <!-- <b class="decoration svg-confetti-red"/> -->
+    <b class="decoration svg-confetti-yellow"/>
+    <b class="decoration svg-flash-blue"/>
+    <!-- <b class="decoration svg-flash-yellow"/> -->
+    <!-- <b class="decoration svg-pencil-parachute"/> -->
+  </figure>
+</template>
+
+<template v-slot:modal>
+
+<Content-ModalAlert label1="toucanBox 2017" label2="toucanBox current" url1="https://toucanwww.netlify.app/" url2="https://www.toucanbox.com">
+
+**toucanBox.com**
+
+I created a static mirror of the toucanBox homepage upon conclusion of this project in Summer 2017.
+
+</Content-ModalAlert>
+
+</template>
 
 </Stage-ProjectStage>
 
-  <!-- width: 200% -->
+
 
 <style lang="sass">
 
@@ -67,7 +79,7 @@ description="toucanBox is an award winning startup subscription service deliveri
 
 <template v-slot:main>
 
-## Context
+<h2 class="inline-title"> {{ $page.frontmatter.subtitle }} </h2> <p class="case inline">{{ $page.frontmatter.case1 }}</p>
 
 Each toucanBox is addressed directly to the child and contains all the materials needed to complete crafty projects, with colourful step by step instructions and an activity magazine. New customers register through the website.
 
@@ -93,7 +105,7 @@ Subscription e-commerce
 **Team composition**
 CTO, 2 full-stack developers, stakeholders in Marketing and Creative
 
-_I have omitted confidential information in this case study. All content is my own unless stated otherwise._
+_I have omitted confidential information in this case study. All work is my own unless stated otherwise._
 { .secondary }
 
 <!-- and does not necessarily reflect the views of toucanBox. -->
@@ -129,10 +141,10 @@ A usable, reassuring, and technologically sustainable homepage and signup experi
 
 ### My role
 
-Project management
-~ Customer research and user testing
-~ Prototyping and design iteration
-~ Analysis and evaluation
+Project Management
+~ Customer Research
+~ UX/UI Design
+~ Analysis and Evaluation
 
 </template>
 
@@ -165,7 +177,7 @@ Project management
 ## Research
 
 <p class="subtitle">
-  My customer and non-customer interviews consisted of a dialogue to uncover core motivations and usability testing all aspects of the current website.
+  My approach to customer and non-customer interviews consisted of a dialogue to uncover core motivations <em>and</em> usability testing all aspects of the current website.
 </p>
 
 To supplement this, I collected data insights and stakeholder knowledge from across the business; customer service, website analytics, net promoter score (NPS), customer surveys and the production database, sometimes asking new questions of our data to fill in the gaps (including writing a few database queries of my own). Along the way, I captured insights in a central location accessible to the whole organisation.
@@ -182,7 +194,7 @@ Analytics, asking customer service, interviewing existing customers and parents 
 </Content-PointsSection>
 
 
-<Content-QuoteSection rag="rag-6" quote="It’s fun, I can see it’s for kids. But I can't see straight away what it is or how it works." attribute="Ameera Algarni, Mum to Rafi"/>
+<Content-QuoteSection rag="rag-4" quote="It’s fun, I can see it’s for kids. But what I can't see straight away why I might want it or how it works." attribute="Ameera Algarni, Mum to Rafi"/>
 
 
 <Content-ThreeColumnSection padding="is-large" columnOffset="three-offset">
@@ -306,48 +318,6 @@ In a technique inspired by the product agency [Made By Many](https://www.madebym
 
 </style>
 
-<!-- <div class="columns is-variable is-2 principles">
-<div class="column is-2">
-
-1. Easy
-
-</div>
-<div class="column is-2">
-
-2. Clear
-
-</div>
-<div class="column is-2">
-
-3. Trustworthy
-
-</div>
-<div class="column is-2">
-
-4. Open
-
-</div>
-<div class="column is-2">
-
-5. Personalised
-
-</div>
-<div class="column is-2">
-
-6. Flexible
-
-</div>
-</div>
-
-<style lang="sass">
-
-  .columns.principles
-    .column ol
-      font-size: 1em
-      margin-left: 1.5em
-      background: red
-
-</style> -->
 
 Since our objective was to increase conversion rate, we agreed to focus on the first two principles as the most relevant. This enabled me to define clear measures of success through general and channel-specific KPIs.
 
@@ -457,7 +427,7 @@ Establish a consistent UI language with a living design system.
 
 </template> -->
 
-<!-- <template v-slot:column3>
+<template v-slot:column3>
 
 <Content-InfoBox :hasIcon="true" :hasAction="true" type="modal" label="See principles" style="margin-bottom: 3em;">
 
@@ -471,7 +441,7 @@ I gathered everything we learnt about our users into a set of principles the who
 
 </Content-InfoBox>
 
-</template> -->
+</template>
 
 </Content-ThreeColumnSection>
 
@@ -605,7 +575,7 @@ Redesigned sitemap and site-wide navigation, able to accommodate existing conten
 { url:'/images/toucanBox/mobile-steps.png', alt:'Mobile friendly steps', caption:'Square image caption 2', slot:'slot2', iframe:false, action: {
   type: 'link',
   label: 'Prototype',
-  url: 'http://signup-prototype.herokuapp.com?code=test'
+  url: 'https://signup-prototype.netlify.app/?code=test'
   } },
 { url:'/images/toucanBox/choose-plan.png', alt:'Choose a plan', caption:'Square image caption 3', slot:'slot3', iframe:false, action: {
   type: 'modal',
@@ -924,11 +894,10 @@ Based on the up-front research from this project, it was clear the greatest pote
   </div>
 </div> -->
 
-<Content-InfoBox :hasIcon="false" :hasAction="true" type="link" label="toucanbox.com static mirror" url="http://toucanwww.herokuapp.com/">
+<Content-InfoBox :hasIcon="true" :hasAction="true" type="link" label="toucanbox.com 2017" url="https://toucanwww.netlify.app/">
 
-I created a static mirror of the toucanBox homepage at the conclusion of this project in Summer 2017.
-
-Note: free Heroku Dyno will take ~10s to wake up, consequently longer initial load.
+I created a static mirror of the toucanBox homepage upon conclusion of this project.
+{ .rag-2 }
 
 </Content-InfoBox>
 

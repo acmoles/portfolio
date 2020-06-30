@@ -33,7 +33,7 @@ description="Sprint action figures are manufactured on-demand in durable, full c
 
 <template v-slot:main>
 
-## Context
+## Sprint
 
 Colour details are strictly limited by cost in toy design and manufacture. Three options are available; decals, hand painting or the creative use of split lines between parts of different colour. These constraints often lead to smart design solutions. But if these limitations were lifted, it could enable toys with the kind of colour and material detail we're only used to seeing in on&#8209;screen entertainment.
 
