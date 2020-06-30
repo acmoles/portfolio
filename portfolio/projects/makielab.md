@@ -1,7 +1,7 @@
 ---
 uid: 6
 title: Makielab
-subtitle: Pioneering customisable childrens toys
+subtitle: Pioneering customisable children's toys
 type: single
 navStyle:
   style: light
@@ -29,12 +29,14 @@ description="Makielab was a mobile games and e-commerce startup acquired by Disn
 :::
 
 
+<!-- TODO Context to titles from homepage -->
+
 
 <Content-ContextSection rag="rag-5" :box="true">
 
 <template v-slot:main>
 
-## Context
+<h2> {{ $page.frontmatter.subtitle }} </h2>
 
 Monetising mobile games is a tricky subject, particularly when it comes to children. Makielab was founded to explore a new angle on the problem by enabling children to buy physical products based on their unique in-game content. To this end, the company focused both on mobile game development and on e-commerce and toy manufacture.
 

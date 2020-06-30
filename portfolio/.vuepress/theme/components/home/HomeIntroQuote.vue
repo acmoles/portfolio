@@ -2,7 +2,6 @@
   <div
     class="home-intro"
     :class="[{'in-view': visible}, {'appear-fade-up': homeFadeUpMotion}]"
-    :style="{ paddingTop: paddingTop }"
   >
     <div ref="container" class="intro-container">
       <p class="subtitle">
@@ -17,12 +16,13 @@
 import WavingHand from '@theme/components/home/WavingHand.vue'
 
 import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
-import { topPadding } from '@theme/mixins/topPadding.js'
+// import { topPadding } from '@theme/mixins/topPadding.js'
+// :style="{ paddingTop: paddingTop }"
 
 export default {
   components: { WavingHand },
 
-  mixins: [fadeUpInLoad, topPadding],
+  mixins: [fadeUpInLoad],
 
   computed: {
     homeFadeUpMotion () {
@@ -47,7 +47,7 @@ export default {
       margin-left: 1rem
       width: 88%
     @media screen and (min-width: $tablet)
-      padding: 6em 0 5em 0
+      padding: 8em 0 4em 0
       display: grid
       grid-template-columns: repeat(3, 1fr)
       column-gap: $columnGap

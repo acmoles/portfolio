@@ -53,7 +53,7 @@ description="Ecosia is a search engine that uses 80% of profits from advertising
 
 <template v-slot:main>
 
-## Context
+<h2> {{ $page.frontmatter.subtitle }} </h2>
 
 <!-- Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec.
 
@@ -126,9 +126,9 @@ When I joined Ecosia it was at an inflection point. We would soon experience rap
 <Content-FreeSection padding="is-small">
 
 <div class="columns is-centered">
-<div class="column is-two-thirds">
+<div class="column is-three-fifths">
 <Content-ModalWrapper type="link" url="https://acmoles.github.io/maps-ui/" label="Wireframe interaction prototype">
-<figure class="image is-5by4">
+<figure class="image is-5by4 modal-image-limit">
 <img class="lazyload" data-src="/images/ecosia/EcosiaMaps-modal.jpg" alt="Ecosia maps vertical">
 </figure>
 </Content-ModalWrapper>
@@ -144,29 +144,7 @@ Ecosia maps posed a unique design challenge. As part of slicing the feature we d
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> and <Content-ModalLink label="Accounts.">
-<template v-slot:modal>
-
-<Content-FreeSection padding="is-small">
-
-<div class="columns is-centered">
-<div class="column is-two-thirds">
-<figure class="image is-5by4">
-<img class="lazyload" data-src="/images/ecosia/Login-modal.jpg" alt="Ecosia accounts login">
-</figure>
-
-<figcaption>
-
-I led design of the accounts beta release, enabling users to save and share their personal impact counter across devices. Our hypothesis was that already engaged users would love this feature. We found demand was so high that users outside our testing region began clamouring to be included in the pilot.
-
-</figcaption>
-</div>
-</div>
-
-</Content-FreeSection>
-
-</template>
-</Content-ModalLink>
+</Content-ModalLink> and Accounts.
 </p>
 
 <p>
@@ -200,7 +178,7 @@ Even as we grew, there remained the need to be hands-on and responsive. I design
 <Content-FreeSection padding="is-small">
 
 <div class="columns is-centered">
-<div class="column is-two-thirds">
+<div class="column is-three-fifths">
 <Content-ModalWrapper type="link" url="https://mapvis.netlify.app/" label="View live visualisation">
 <figure class="image is-5by4">
 <img class="lazyload" data-src="/images/ecosia/SearchMap-modal.jpg" alt="Searches map visualisation">
@@ -232,14 +210,14 @@ Early on, we had a standout success with the iOS App. Users were clear that the 
 <Content-FreeSection padding="is-small">
 
 <div class="columns is-centered">
-<div class="column is-two-thirds">
+<div class="column is-three-fifths">
 <figure class="image is-5by4">
 <img class="lazyload" data-src="/images/ecosia/iOS-modal.jpg" alt="Ecosia iOS App">
 </figure>
 
 <figcaption>
 
-With the iOS App Organiser Ecosia could stand as a viable alternative browser to Safari.
+With the iOS App Organiser, Ecosia could stand as a viable alternative browser to Safari.
 
 </figcaption>
 </div>
@@ -258,7 +236,7 @@ The greatest business impact was achieved with a project where I supported the t
 <Content-FreeSection padding="is-small">
 
 <div class="columns is-centered">
-<div class="column is-two-thirds">
+<div class="column is-three-fifths">
 <figure class="image is-5by4">
 <img class="lazyload" data-src="/images/ecosia/Android-modal.jpg" alt="Ecosia Android App">
 </figure>
@@ -357,6 +335,34 @@ Our browser extensions add Ecosia as default search engine. Users expect that th
 </Content-ModalLink> and migrated 91% of users in the face of considerable technical challenges.
 </p>
 
+
+
+
+
+
+<Content-ModalLink label="Accounts.">
+<template v-slot:modal>
+
+<Content-FreeSection padding="is-small">
+
+<div class="columns is-centered">
+<div class="column is-two-thirds">
+<figure class="image is-5by4">
+<img class="lazyload" data-src="/images/ecosia/Login-modal.jpg" alt="Ecosia accounts login">
+</figure>
+
+<figcaption>
+
+I led design of the accounts beta release, enabling users to save and share their personal impact counter across devices. Our hypothesis was that already engaged users would love this feature. We found demand was so high that users outside our testing region began clamouring to be included in the pilot.
+
+</figcaption>
+</div>
+</div>
+
+</Content-FreeSection>
+
+</template>
+</Content-ModalLink>
 
 
 

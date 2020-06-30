@@ -35,7 +35,7 @@ description="Create by toucanBox explores whether adding digital value to the ph
 
 <template v-slot:main>
 
-## Context
+<h2 class="inline-title"> {{ $page.frontmatter.subtitle }} </h2> <p class="case inline">{{ $page.frontmatter.case1 }}</p>
 
 A toucanBox subscription craft box contains all the materials needed to complete a craft project, with illustrated instructions, stickers to collect and an activity magazine.
 
@@ -61,7 +61,7 @@ Children's digital media
 **Team composition**
 Individual research and development project with stakeholders in Marketing, Creative, Operations and Technology.
 
-_I have omitted confidential information in this case study. All content is my own unless stated otherwise._
+_I have omitted confidential information in this case study. All work is my own unless stated otherwise._
 { .secondary }
 
 </template>

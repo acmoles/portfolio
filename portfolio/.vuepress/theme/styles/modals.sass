@@ -19,7 +19,9 @@
 .modal-background-only
   @include modal-background
 
-
+.popup-wrapper .container
+  @media screen and (min-width: $tablet)
+    overflow-y: hidden
 
 
 // Modal buttons
@@ -28,7 +30,7 @@
   figure.image
     margin-bottom: 0
 
-.action-button
+.box .action-button, .action-button
   @include button-override
   cursor: pointer
   padding: 0

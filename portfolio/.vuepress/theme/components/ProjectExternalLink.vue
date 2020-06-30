@@ -41,7 +41,7 @@ export default {
     transform: translateX(0.75em)
   .icon, span
     transition: transform 300ms ease
-  #ExternalIcon
+  #ExternalIcon, #MaximiseIcon
     path
       transition: opacity 200ms ease
       fill: $button-custom-text-color
@@ -53,7 +53,7 @@ export default {
       transform: translateX(0)
     span
       transform: translateX(-0.75em)
-    #ExternalIcon
+    #ExternalIcon, #MaximiseIcon
       path
         opacity: 1
 
@@ -64,13 +64,13 @@ export default {
     color: $white
     box-shadow: none
     transition: $button-transition
-    #ExternalIcon
+    #ExternalIcon, #MaximiseIcon
       path
         fill: $white
         opacity: 0
     &:hover
       background-color: rgba($white, 0.3)
-      #ExternalIcon
+      #ExternalIcon, #MaximiseIcon
         path
           fill: $white
           opacity: 0.8

@@ -373,10 +373,13 @@ export default {
   padding: 0.5em .75em
   margin: 2em 1em 0 0
   border-radius: $radius-small
+  &.inline
+    margin: 0
+    vertical-align: middle
 
 .blue
   .case
-    background: rgba($white, 0.2)
+    background: rgba($white, 0.14)
 
 // Card layout and image
 

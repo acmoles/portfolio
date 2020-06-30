@@ -1,10 +1,10 @@
 <template>
-  <div ref="container" class="container is-fullhd is-home">
+  <div ref="container" class="container is-fullhd is-home" :style="{ paddingTop: paddingTop }">
     <!-- <picture class="test-background">
       <img src="/images/homepage/background-xl.png" alt="">
     </picture> -->
     <!-- <div v-for="n in 5" :class="'test-blur test-blur-' + n"></div> -->
-    <HomeIntroQuote/>
+    <!-- <HomeIntroQuote/> -->
 
     <div class="grid-wrapper" :class="festRowClass">
           <PortfolioItem
@@ -34,12 +34,14 @@ import HomeIntroLarge from '@theme/components/home/HomeIntroLarge.vue'
 import HomeIntroSmall from '@theme/components/home/HomeIntroSmall.vue'
 import HomeIntroQuote from '@theme/components/home/HomeIntroQuote.vue'
 
+import { topPadding } from '@theme/mixins/topPadding.js'
+
 // TODO Manifest.json check, What's requesting logo.png, do favicons,
 
 export default {
   components: { PortfolioItem, HomeIntroLarge, HomeIntroSmall, HomeIntroQuote },
 
-  mixins: [loadableHero],
+  mixins: [loadableHero, topPadding],
 
   data () {
     return {
@@ -107,6 +109,9 @@ export default {
 <style lang="sass">
   @import "@theme/styles/variables.sass"
   @import "@theme/styles/mixins.sass"
+
+  .container.is-home
+    padding-top: 7em      
 
   // in-view rules for fade staggering
   html:not(.disable-motion)

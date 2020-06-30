@@ -19,8 +19,8 @@ hasFooter: true
 ::: slot top
 
 <!-- Can customers be creators? -->
-<Stage-ProjectStage :noise="true" rag="rag-4" ctaLabel="wesen.studio" ctaUrl="http://www.wesen.studio"
-description="Wesen enables anyone to create and order their unique pendant necklace. It's manufactured on demand by a blend of modern and traditional techniques.">
+<Stage-ProjectStage :noise="true" rag="rag-6" ctaLabel="wesen.studio" ctaUrl="http://www.wesen.studio"
+description="Wesen enables anyone to create and order their unique pendant necklace.">
 
   <template v-slot:visual-background>
     <figure class="full-screen">
@@ -34,17 +34,18 @@ description="Wesen enables anyone to create and order their unique pendant neckl
 :::
 
 <!-- <li>Responsive web application</li>
+It's manufactured on demand by a blend of modern and traditional techniques.
 <li>2018</li> -->
 
 <Content-ContextSection :box="true" rag="rag-5">
 
 <template v-slot:main>
 
-## Context
+<h2 class="inline-title"> {{ $page.frontmatter.subtitle }} </h2> <p class="case inline">{{ $page.frontmatter.case1 }}</p>
 
 Recent years have seen a gradual increase in awareness of product customisation and on&#8209;demand manufacturing. But to this day we can see little evidence of the promised revolution due to relatively high prices and no killer app.
 
-In 2015 I helped pioneer customisable children’s toys at [Makielab.](/projects/makielab) We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage the lessons learnt and push the envelope of Mass Customisation.
+In 2015 I helped pioneer customisable children’s toys at [Makielab.](/projects/makielab) We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage the lessons learnt and push the envelope of consumer Mass Customisation software.
 
 Firstly, I wanted to explore the possibility of a lightly constrained creation experience, able to generate infinite variations while being intuitive and fun to use. _I was convinced that suitable constraints could enhance the creativity of customers, rather than restrict it._ Secondly, to completely automate and outsource the fulfilment process.
 
@@ -104,8 +105,8 @@ Wesen fulfils my original success criteria. It taught me a great deal but the mo
 ### My role
 
 Entrepreneur
-~ UX Product designer
-~ Full-stack JS developer
+~ UX Product Designer
+~ Full-stack JS Developer
 
 </template>
 

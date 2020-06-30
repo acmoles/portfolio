@@ -39,13 +39,13 @@ description="Art Lebedev Studio is the first and largest independent design stud
 
 <template v-slot:main>
 
-## Context
+<h2> {{ $page.frontmatter.subtitle }} </h2>
 
 The studio is best known internationally for the [Optimus Maximus](https://www.artlebedev.com/optimus/) keyboard which features a customisable OLED display in every key. Within Russia it's famous for redesigning the Moscow metro map and synonymous with internet brands like Yandex and Alfa-bank.
 
 I was attracted by the irreverent humour and the product design department's emphasis on craft, with influences from automotive design, a discipline which I've always admired. As an intern, I was immediately treated as a fully fledged member of the team and thrown into diverse projects covering consumer electronics, aviation, gifts, architecture and urban objects.
 
-It was to challenge myself that motivated me to pursue an opportunity in far-flung Moscow. I wanted to refine my skills, particularly sketching form and my stylistic sensibilities. Just under 9 months emulating the studio's house style under the highest standards for quality have left a lasting impression on my practice.
+My motivation to pursue an opportunity in far-flung Moscow was to refine my skills, particularly sketching and styling form. Just under 9 months emulating the studio's house style under the highest standards for quality have left a lasting impression on my design practice.
 
 
 
