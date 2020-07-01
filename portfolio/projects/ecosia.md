@@ -112,10 +112,10 @@ Product designer, 2 iOS developers, 1 Android developer, 1 devOps/backend
 ## Reflections
 
 <p class="subtitle" style="padding-right: 1em;">
-  This was my first taste of formal team leadership, although I've previously led projects and mentored individuals on a 1:1 basis.
+  This was my first taste of formal team leadership.
 </p>
 
-Conditions were favourable, which I recognise as fortunate. I had good relationships with the founding team members. They responded well to a culture promoting trust, autonomy and respect.
+I brought a strong foundation, having led projects and mentored individuals, but I was also fortunate that conditions were favourable. I had good relationships with the founding team members. They responded well to a culture promoting trust, autonomy and respect.
 
 ### Product design at scale
 
