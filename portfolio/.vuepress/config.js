@@ -43,7 +43,7 @@ module.exports = {
   fadeTransitionTime: 400, // sass variable $fadeTime
   revealTransitionTime: 800, // sass variable $revealTime
   breakpoints: { // matches css breakpoints
-    tablet: 769,
+    tablet: 888,
     desktop: 1152,
     widescreen: 1344,
     fullhd: 1536,

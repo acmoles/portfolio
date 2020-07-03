@@ -19,13 +19,38 @@ hasFooter: true
 ::: slot top
 
 <!-- Can customers be creators? -->
-<Stage-ProjectStage :noise="true" rag="rag-6" ctaLabel="wesen.studio" ctaUrl="http://www.wesen.studio"
-description="Wesen enables anyone to create and order their unique pendant necklace.">
+<Stage-ProjectStage :noise="true" rag="rag-4" ragTitle="rag-2" titleColumnClass="is-three-fifths" ctaLabel="wesen.studio" ctaUrl="http://www.wesen.studio"
+description="I built an intuitive 3D customisation tool which enables anyone to create and order their unique pendant necklace.">
 
   <template v-slot:visual-background>
     <figure class="full-screen">
       <Heros-ImageHero src="/images/wesen/wesen-header-2.jpg" alt="Wesen Studio examples"/>
     </figure>
+  </template>
+
+  <template v-slot:platform>
+
+  Responsive web app
+
+  </template>
+
+  <template v-slot:timeframe>
+
+  2018
+
+  </template>
+
+  <template v-slot:my-role>
+
+  UX/UI Designer
+  ~ Full-stack JS developer
+
+  </template>
+
+  <template v-slot:team>
+
+  Individual project
+
   </template>
 
 </Stage-ProjectStage>
@@ -37,11 +62,9 @@ description="Wesen enables anyone to create and order their unique pendant neckl
 It's manufactured on demand by a blend of modern and traditional techniques.
 <li>2018</li> -->
 
-<Content-ContextSection :box="true" rag="rag-5">
+<Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial">
 
-<template v-slot:main>
-
-<h2 class="inline-title"> {{ $page.frontmatter.subtitle }} </h2> <p class="case inline">{{ $page.frontmatter.case1 }}</p>
+## Case study
 
 Recent years have seen a gradual increase in awareness of product customisation and on&#8209;demand manufacturing. But to this day we can see little evidence of the promised revolution due to relatively high prices and no killer app.
 
@@ -57,38 +80,38 @@ I also hoped to increase my empathy for colleagues and stakeholders by building 
 
  [Mass Customisation](https://hbr.org/1997/01/the-four-faces-of-mass-customization)
 
+
+
+ create or customise
+
 -->
-
-</template>
-
-<template v-slot:side>
-
-**Product** Responsive web application
-
-**Sector** Mass customisation e&#8209;commerce, 3D content creation
-
-**Timeframe** 2018
-
-**Individual project**
 
 <!-- _This image shows a mixture of hand-made and procedurally generated pendants_ -->
 
+<template v-slot:aside>
+
+###  The challenge
+
+Enable customers to customise a product in the web browser. Make it possible to save and order their creation with automatic fulfilment by outsourced operations and manufacturing.
+
+### The outcome
+
+Wesen fulfils my original success criteria. It taught me a great deal but the most valuable lessons I didn't expect; the importance of _getting the word out_ and _working in teams._
+
 </template>
 
-</Content-ContextSection>
+</Content-TextSection>
 
 
 
 
-<Content-ThreeColumnSection padding="is-equal" rag="rag-3">
+<!-- <Content-ThreeColumnSection padding="is-equal" rag="rag-3">
 
 <template v-slot:column1>
 
 ###  The challenge
 
 Enable customers to customise a product in the web browser. Make it possible to save and order their creation with automatic fulfilment by outsourced operations and manufacturing.
-
-<!-- create or customise -->
 
 </template>
 
@@ -110,7 +133,7 @@ Entrepreneur
 
 </template>
 
-</Content-ThreeColumnSection>
+</Content-ThreeColumnSection> -->
 
 
 
@@ -228,7 +251,7 @@ _“People expect me to find the next trend”_
 
 
 
-<Content-ThreeColumnSection padding="is-large"  columnOffset="three-offset">
+<Content-ThreeColumnSection padding="is-large has-divider"  columnOffset="three-offset">
 
 <template v-slot:content>
 
@@ -387,7 +410,7 @@ I prioritised reaching a high level of graphical realism to mitigate this risk. 
 
 
 
-<Content-MainAsideSection padding="is-large"  :aside="true" columnOffset="table-offset">
+<Content-MainAsideSection padding="is-large has-divider"  :aside="true" columnOffset="table-offset">
 
 <template slot="content">
 

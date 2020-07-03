@@ -25,7 +25,7 @@ export const copyText = {
     doCopy (copy, text, position) {
 
       this.$copyText(copy).then((e) => {
-        console.log('Copied: ', e)
+        // console.log('Copied: ', e)
         this.$store.dispatch('setSnackbarStatus', {
           text: text,
           position: position || 'top'

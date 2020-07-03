@@ -19,7 +19,7 @@ hasFooter: true -->
 ::: slot top
 
 <Stage-ProjectStage :noise="true" :fadeless="true" ctaLabel="none" ctaUrl="#"
-description="XR, hand tracking, realtime 3D graphics, shaders. Nothing here yet. Watch this space.">
+description="Hand tracking, realtime 3D graphics, shaders. Nothing here yet. Watch this space.">
 
   <template v-slot:visual-background>
     <Heros-AbstractHero :noise="false"/>

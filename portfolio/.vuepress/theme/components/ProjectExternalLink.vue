@@ -1,5 +1,5 @@
 <template>
-  <a class="button is-dark project-external-link" target="_blank" rel="noopener noreferrer">
+  <a class="button is-dark project-external-link is-fullwidth background-noise" target="_blank" rel="noopener noreferrer">
     <span>{{ label }}</span>
     <ExternalIcon/>
   </a>
@@ -25,11 +25,10 @@ export default {
 
 .button.project-external-link.is-dark
   position: relative
+  justify-content: center
   text-rendering: geometricPrecision
   color: $button-custom-text-color
-  justify-content: space-between
   background-color: $slate
-  background-image: url('../plugins/plugin-outside-content/dark-noise-heavy.png')
   height: auto
   padding-left: 2em
   padding-right: 2em
@@ -37,7 +36,8 @@ export default {
   transition: $button-transition
   .icon
     position: absolute
-    right: 1em
+    right: 0.75em
+    margin: 0
     transform: translateX(0.75em)
   .icon, span
     transition: transform 300ms ease
@@ -60,7 +60,6 @@ export default {
 .light
   .button.project-external-link.is-dark
     background-color: rgba($white, 0.2)
-    background-image: none
     color: $white
     box-shadow: none
     transition: $button-transition

@@ -2,7 +2,7 @@
 uid: 1
 title: Sprint
 pageClass: sprint
-subtitle: Applying new technology to toy manufacture
+subtitle: Imagining the toys of the future
 navStyle:
   style: light
   tint: regular-tint
@@ -15,23 +15,45 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="none" ctaUrl="https://www.ecosia.org" rag="rag-4"
-description="Sprint action figures are manufactured on-demand in durable, full colour 3D printed plastic.">
+<Stage-ProjectStage ctaLabel="none" ctaUrl="https://www.ecosia.org" rag="" ragTitle="rag-3" platform="Product"
+description="I created action figures which are manufactured in durable, full colour 3D printed plastic.">
 
-  <template v-slot:visual-background>
-    <figure class="full-screen">
-      <Heros-ImageHero src="/images/makielab/sprint-header.jpg" alt="Ecosia mobile devices"/>
-    </figure>
-  </template>
+<template v-slot:visual-background>
+  <figure class="full-screen">
+    <Heros-ImageHero src="/images/makielab/sprint-header.jpg" alt="Ecosia mobile devices"/>
+  </figure>
+</template>
+
+<template v-slot:platform>
+
+Colour 3D printed action figures
+
+</template>
+
+<template v-slot:timeframe>
+
+2014
+
+</template>
+
+<template v-slot:my-role>
+
+Toy Designer
+
+</template>
+
+<template v-slot:team>
+
+Individual project
+
+</template>
 
 </Stage-ProjectStage>
 
 :::
 
 
-<Content-ContextSection :box="true">
-
-<template v-slot:main>
+<Content-TextSection rag="rag-4" columnOffset="title-offset" padding="is-initial">
 
 ## Sprint
 
@@ -80,9 +102,7 @@ how the mechanical accuracy of 3D geometry created in industrial design and engi
 
 -->
 
-</template>
-
-<template v-slot:side>
+<template v-slot:aside>
 
 **Product** Colour 3D printed action figures
 
@@ -94,7 +114,7 @@ how the mechanical accuracy of 3D geometry created in industrial design and engi
 
 </template>
 
-</Content-ContextSection>
+</Content-TextSection>
 
 
 <style lang="sass">
@@ -103,7 +123,6 @@ how the mechanical accuracy of 3D geometry created in industrial design and engi
   width: 82%
 
 .sprint .section
-  padding-top: 25em
   .grid-wrapper-content
     column-gap: 2em
     row-gap: 2em

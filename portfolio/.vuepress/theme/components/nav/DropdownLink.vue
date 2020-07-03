@@ -117,7 +117,8 @@ export default {
     a.navbar-item
       opacity: 1
       color: $button-custom-text-color
-
+  .navbar-dropdown.is-boxed
+    background-image: none
 
 // TODO: Not used
 .navbar-link:not(.is-arrowless)::after

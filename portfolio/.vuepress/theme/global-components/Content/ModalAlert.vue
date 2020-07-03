@@ -1,7 +1,7 @@
 <template>
 
   <div class="alert-modal">
-    <div class="box with-action">
+    <div class="box with-action background-noise">
       <slot/>
 
       <div class="action-group">

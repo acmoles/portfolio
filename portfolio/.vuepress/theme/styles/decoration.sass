@@ -3,13 +3,14 @@
   background: url("/images/toucanBox/decoration-mobile.css.svg") no-repeat
 
 .decoration
-  display: block
+  display: none
   position: absolute
   text-indent: -119988px
   overflow: hidden
   text-align: left
-  display: block
   pointer-events: none
+  @media screen and (min-width: $tablet)
+    display: block
 
   &.svg-bee
     @extend %decoration-mobile
@@ -23,7 +24,6 @@
 
   &.svg-confetti-red
     @extend %decoration-mobile
-    display: block
     background-position: 23.9% 98%
     width: 82.67px
     height: 114.67px

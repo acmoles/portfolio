@@ -24,7 +24,7 @@ hasFooter: true
 
 :::
 
-<Content-TextSection columnOffset="title-offset" padding="about-text" rag="rag-4">
+<Content-TextSection columnOffset="big-title-offset" padding="about-text" rag="rag-4">
 
 <!-- INTERACTION (INTERFACE DESIGN AND HUMAN-COMPUTER INTERACTION), EXPERIENCE (UX DESIGN AND ALL OTHER EXPERIENCE) AND PRODUCT DESIGNER -->
 
@@ -111,9 +111,9 @@ I started my career as a teacher and transitioned to UX about 10 years ago. But 
 
 -->
 
-## Hello! I'm Ant
+<h1 class="stage-title">Hello! I'm Ant</h1>
 
-<p class="subtitle">
+<p class="subtitle" style="padding-right: 3em;">
   A designer and leader creating useful and playful experiences centred on people
 </p>
 
@@ -181,12 +181,23 @@ Rapha feedback highlights
 
 <template v-slot:aside>
 
-**Design**
-UX, UI, interaction, motion, user research and testing, sketching, 3D modelling
+<div class="columns is-mobile" style="padding-top: 0.25em;">
+<div class="column is-one-quarter">
 
-<p>
-<strong>Technology</strong>
-<Content-ModalLink label="Web development">
+**Design**
+
+</div>
+<div class="column">
+UX, UI, interaction, motion, user research and testing, sketching, 3D modelling
+</div>
+</div>
+
+<div class="columns is-mobile">
+<div class="column is-one-quarter">
+<strong>Tech</strong>
+</div>
+<div class="column">
+<Content-ModalLink label="Web" style="margin-right: -0.25em;">
 <template v-slot:modal>
 <Content-ThreeColumnSection padding="is-small">
 
@@ -209,7 +220,7 @@ CSS (SCSS, SASS)
 ### Back-end
 
 Node.js stack (Express, Harp)
-~ Database (MongoDB, SQL, Postgres)
+~ Database (MongoDB, Postgres)
 ~ REST APIs
 ~ Websocket (Socket.io)
 ~ Familiar with Ruby/Rails, Go, PHP
@@ -222,7 +233,7 @@ Node.js stack (Express, Harp)
 
 Version control (Git)
 ~ Front-end build systems (Gulp, Webpack, Browserify)
-~ Static hosting (Netlify, GitHub Pages)
+~ Static hosting (Netlify, Github Pages)
 ~ App hosting (Heroku, Digital Ocean)
 ~ Familiar with Docker, Circle CI
 
@@ -231,19 +242,36 @@ Version control (Git)
 </Content-ThreeColumnSection>
 </template>
 </Content-ModalLink>
-, Unity, familiar with iOS and Android development
-</p>
+, Unity, familiar with native iOS and Android
+</div>
+</div>
+
+<div class="columns is-mobile">
+<div class="column is-one-quarter">
 
 **People**
+
+</div>
+<div class="column">
 Leadership, stakeholders, team building, mentoring, training
+</div>
+</div>
+
+<div class="columns is-mobile">
+<div class="column is-one-quarter">
 
 **Product**
+
+</div>
+<div class="column">
 Strategy, OKRs, analytics, A/B testing
+</div>
+</div>
 
 <br>
 
-_I originally hail from Edinburgh, I recently called London home and I'm currently based in Berlin._
-{ .secondary }
+<!-- _I originally hail from Edinburgh, I recently called London home and I'm currently based in Berlin._
+{ .secondary } -->
 
 </template>
 

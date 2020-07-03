@@ -10,6 +10,8 @@
 
 export default {
 
+  // TODO responsive images
+
   props: {
     url: String,
     alt: String,

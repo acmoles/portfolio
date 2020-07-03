@@ -17,26 +17,52 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage rag="rag-2" :noise="true" :fadeless="true" ctaLabel="none" ctaUrl="#"
-description="Makielab was a mobile games and e-commerce startup acquired by Disney in 2016. We created Makies, an award-winning customisable digital avatar, which could be ordered as a bespoke 3D printed toy.">
+<Stage-ProjectStage rag="rag-4" titleRag="rag-2" :fadeless="true" ctaLabel="none" ctaUrl="#"
+description="I played a central role in Makielab's collaboration with Disney, who eventually acquired the company.">
 
 <template v-slot:visual-background>
   <Heros-BeadsHero :noise="true"/>
+</template>
+
+<template v-slot:platform>
+
+Responsive web app
+~ 3D printed toys
+
+</template>
+
+<template v-slot:timeframe>
+
+2015
+
+</template>
+
+<template v-slot:my-role>
+
+Toy Designer
+~ UX/UI Designer
+
+</template>
+
+<template v-slot:team>
+
+CTO
+~ Product Manager
+~ 3D Artist
+~ 3 Full&#8209;stack Developers
+
+
 </template>
 
 </Stage-ProjectStage>
 
 :::
 
+<Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial is-continuous">
 
-<!-- TODO Context to titles from homepage -->
-
-
-<Content-ContextSection rag="rag-5" :box="true">
-
-<template v-slot:main>
-
-<h2> {{ $page.frontmatter.subtitle }} </h2>
+<p class="subtitle">
+Makielab was a mobile games and e-commerce startup acquired by Disney in 2016. We created Makies, an award-winning customisable digital avatar, which could be ordered as a bespoke 3D printed toy.
+</p>
 
 Monetising mobile games is a tricky subject, particularly when it comes to children. Makielab was founded to explore a new angle on the problem by enabling children to buy physical products based on their unique in-game content. To this end, the company focused both on mobile game development and on e-commerce and toy manufacture.
 
@@ -57,28 +83,11 @@ With [Sprint](/extra/sprint) I was already exploring the possibility of toy manu
 
 
 
-</template>
-
-<template v-slot:side>
-
-**Product**
-Responsive web application and physical toys
-
-**Sector**
-Children's toys and entertainment
-
-**Timeframe**
-2015-2016
-
-**My role**
-UI, concept art and industrial design
-
-**Team**
-CTO, product manager, 3D artist, front&#8209;end developer, 2 full&#8209;stack developers
+<template v-slot:aside>
 
 </template>
 
-</Content-ContextSection>
+</Content-TextSection>
 
 
 

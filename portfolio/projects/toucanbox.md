@@ -20,8 +20,8 @@ hasFooter: true
 <!-- A redesigned sign up funnel to improve communication, useability and confidence and a strategic design project to identify new ways to improve customer retention -->
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com" rag="toucan-rag" :hasModal="true"
-description="toucanBox is an award winning startup subscription service delivering creative craft boxes to children aged 3-8.">
+<Stage-ProjectStage :noise="true" ctaLabel="toucanbox.com" ctaUrl="https://www.toucanbox.com" rag="toucan-rag" ragTitle="rag-1" titleColumnClass="is-three-fifths" :hasModal="true"
+description="I guided the organisation through a human-centred design process which had a transformative effect on our approach to product development.">
 
 <template v-slot:visual-column>
   <figure class="toucan-image">
@@ -42,44 +42,80 @@ description="toucanBox is an award winning startup subscription service deliveri
 
 **toucanBox.com**
 
-I created a static mirror of the toucanBox homepage upon conclusion of this project in Summer 2017.
+I created a static mirror of the toucanBox homepage at the conclusion of this project in Summer 2017.
 
 </Content-ModalAlert>
 
 </template>
 
+<template v-slot:platform>
+
+Responsive web app
+
+</template>
+
+<template v-slot:timeframe>
+
+2017
+
+</template>
+
+<template v-slot:my-role>
+
+Project lead
+~ UX/UI Designer
+
+</template>
+
+<template v-slot:team>
+
+CTO
+~ 2 full-stack developers
+<!-- ~ stakeholders in Marketing and Creative -->
+
+</template>
+
 </Stage-ProjectStage>
 
-
-
 <style lang="sass">
+@import "@theme/styles/variables.sass"
 
 .toucan-image
   position: absolute
-  left: -4em
-  height: 40vh
-  max-height: 26em
+  height: 28vh
+  max-height: 16em
+  top: 0
+  @media screen and (min-width: $tablet)
+    top: auto
+    left: -16%
+    height: 38vh
+    max-height: 26em
+    min-height: 22em
   img
     position: relative
     height: 100%
     max-width: initial
 
 .toucan-rag
-  padding-right: 3em
+  padding-right: 2em
 
-@media screen and (min-width: 1335px)
+@media screen and (min-width: $fullhd)
   .toucan-rag
-    padding-right: 5em
+    padding-right: 4em
 
 </style>
 
 :::
 
-<Content-ContextSection :box="true" rag="rag-5">
 
-<template v-slot:main>
 
-<h2 class="inline-title"> {{ $page.frontmatter.subtitle }} </h2> <p class="case inline">{{ $page.frontmatter.case1 }}</p>
+<Content-TextSection rag="rag-4" columnOffset="title-offset" padding="is-initial">
+
+##  Case study
+
+<p class="subtitle">
+toucanBox is an award winning startup subscription service delivering creative craft boxes to children aged 3-8.
+</p>
 
 Each toucanBox is addressed directly to the child and contains all the materials needed to complete crafty projects, with colourful step by step instructions and an activity magazine. New customers register through the website.
 
@@ -89,37 +125,26 @@ My breakthrough came when I discovered our average funnel conversion rate lagged
 
 As project lead, I guided the organisation through a human-centred process of research, content strategy, business alignment, user interface and interaction design, usability testing, and web development.
 
-</template>
+<template v-slot:aside>
 
-<template v-slot:side>
+###  The challenge
 
-**Product**
-Responsive landing page and signup web application
+How might we increase funnel conversion rate; achieving our business goal but also helping our users achieve their goals. How might we build a shared organisational understanding of the user’s journey.
 
-**Sector**
-Subscription e-commerce
+### The outcome
 
-**Timeframe**
-2017
-
-**Team composition**
-CTO, 2 full-stack developers, stakeholders in Marketing and Creative
+A usable, reassuring, and technologically sustainable homepage and signup experience which raised funnel conversion rate by an average of **25%** while reducing messaging related CS cases.
 
 _I have omitted confidential information in this case study. All work is my own unless stated otherwise._
 { .secondary }
 
-<!-- and does not necessarily reflect the views of toucanBox. -->
-
-<!-- For leads acquired through paid marketing channels, the first box is typically a free or discounted trial. -->
-
 </template>
 
-</Content-ContextSection>
+
+</Content-TextSection>
 
 
-
-
-<Content-ThreeColumnSection padding="is-large">
+<!-- <Content-ThreeColumnSection padding="is-large">
 
 <template v-slot:column1>
 
@@ -148,7 +173,7 @@ Project Management
 
 </template>
 
-</Content-ThreeColumnSection>
+</Content-ThreeColumnSection> -->
 
 
 
@@ -431,7 +456,9 @@ Establish a consistent UI language with a living design system.
 
 <Content-InfoBox :hasIcon="true" :hasAction="true" type="modal" label="See principles" style="margin-bottom: 3em;">
 
+<p style="padding-right: 1em;">
 I gathered everything we learnt about our users into a set of principles the whole organisation could access and benefit from.
+</p>
 
 <template slot="modal">
 
@@ -451,7 +478,7 @@ I gathered everything we learnt about our users into a set of principles the who
 
 
 
-<Content-ImageFrames-FullImageSection url="/images/toucanBox/onboarding-montage.png" alt="Montage of discovery artefacts"/>
+<Content-ImageFrames-FullImageSection url="/images/toucanBox/onboarding-montage.jpg" alt="Montage of discovery artefacts"/>
 
 
 
@@ -863,7 +890,7 @@ The donation experience project had a transformational effect within the greater
 
 ### Lessons learnt
 
-The only disappointment was how long it took to access the valuable outcomes. As the only full-time member of the project team I needed to split my time between management and UX design. Although I relished the varied work, combined with the developer bottleneck, the delay between identifying problems and applying remedies was costly. Upon my urging, we addressed this issue by hiring a specialised front-end developer and a product manager.
+The only disappointment was how long it took to access the valuable outcomes. As the only full-time member of the project team I needed to split my time between management and UX design. Although I relished the varied work, combined with the developer bottleneck, the delay between identifying problems and applying remedies was costly. We agreed to address this issue by hiring a specialised front-end developer and a product manager.
 
 <!-- I was the only full-time member of the project team; coordinating the research, executing the design process, writing front-end code, planning tests and shipping releases. We were a small team with many competing priorities and a limited budget. This meant a delay between identifying the problems and releasing the improvements.
 
@@ -896,7 +923,7 @@ Based on the up-front research from this project, it was clear the greatest pote
 
 <Content-InfoBox :hasIcon="true" :hasAction="true" type="link" label="toucanbox.com 2017" url="https://toucanwww.netlify.app/">
 
-I created a static mirror of the toucanBox homepage upon conclusion of this project.
+I created a static mirror of the toucanBox homepage at the conclusion of this project.
 { .rag-2 }
 
 </Content-InfoBox>

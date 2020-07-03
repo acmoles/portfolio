@@ -75,8 +75,8 @@ $hamburger-layer-border-radius : 0px
 
 
 .sidebar-button
-  width: 6em
-  height: 6em
+  width: 6rem
+  height: 6rem
   padding: 0
   display: flex
   justify-content: center
