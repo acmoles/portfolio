@@ -109,7 +109,7 @@ export default {
 .navbar-menu.burgered
   opacity: 0
   pointer-events: none
-  @media screen and (min-width: $desktop)
+  @media screen and (min-width: $tablet)
     transition: margin-right 0.3s step-end, opacity 0.15s
     margin-right: 6em
 

@@ -18,8 +18,8 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage rag="rag-6" titleRag="rag-1" platform="Product" ctaLabel="random-international.com" ctaUrl="https://www.random-international.com/"
-description="Fly is an interactive art installation built for the 4th Moscow Biennial of Contemporary Art.">
+<Stage-ProjectStage rag="rag-4" titleRag="rag-2" platform="Product" ctaLabel="random-international.com" ctaUrl="https://www.random-international.com/"
+description="I designed all physical aspects of an art installation for the 4th Moscow Biennial of Contemporary Art.">
 
   <template v-slot:visual-background>
     <figure class="full-screen">
@@ -56,9 +56,7 @@ Engineering Manager
 
 :::
 
-<Content-TextSection rag="rag-4" columnOffset="title-offset" padding="is-initial">
-
-<h2> {{ $page.frontmatter.subtitle }} </h2>
+<Content-TextSection rag="rag-4" columnOffset="title-offset" padding="is-initial is-continuous">
 
 Random International design and build technology powered interactive art installations. My ongoing focus is bridging the real and digital worlds, challenging current thinking about interactivity and exploring how people relate to rapidly changing technology. So I was very please to join them as an intern in 2010.
 
@@ -80,30 +78,11 @@ Fly studies the movement of objects and insects within a confined space. An abst
 
 the group’s work invites active participation. RANDOM INTERNATIONAL explores the human condition in an increasingly mechanised world through emotional yet physically intense experiences.  -->
 
-<template v-slot:aside>
-
-**Product**
-Interactive art installation
-
-**Exhibited**
-4th Moscow Biennial of Contemporary Art
-
-**Timeframe**
-2010
-
-**My role**
-Design engineer
-
-**Team**
-Engineering manager and senior creative coder
-
-</template>
-
 </Content-TextSection>
 
 
 
-<Content-GridSection padding="is-large">
+<Content-GridSection padding="is-medium-large" style="padding-bottom: 14em;">
 
   <template v-slot:grid>
     <figure class="image is-square span-2">

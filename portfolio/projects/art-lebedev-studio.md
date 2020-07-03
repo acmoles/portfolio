@@ -19,8 +19,8 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage rag="rag-2" ragTitle="rag-1" platform="Product" ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/"
-description="Art Lebedev Studio is the first and largest independent design studio in Russia. Founded in 1995 with over 300 employees today.">
+<Stage-ProjectStage rag="rag-2" ragTitle="rag-3" platform="Product" ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/"
+description="I spent 9 months in Moscow, honing my craft among an award-winning industrial design team.">
 
 <template v-slot:visual-background>
   <figure class="full-screen">
@@ -62,9 +62,11 @@ Creative Director
 
 
 
-<Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial">
+<Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial is-continuous">
 
-<h2> {{ $page.frontmatter.subtitle }} </h2>
+<p class="subtitle">
+Art Lebedev Studio is the first and largest independent design studio in Russia. Founded in 1995 with over 300 employees today.
+</p>
 
 The studio is best known internationally for the [Optimus Maximus](https://www.artlebedev.com/optimus/) keyboard which features a customisable OLED display in every key. Within Russia it's famous for redesigning the Moscow metro map and synonymous with internet brands like Yandex and Alfa-bank.
 
@@ -82,30 +84,12 @@ Outsider status is appealing. So is the irreverent sense of humour. I wanted to 
 
  -->
 
-
-<template v-slot:aside>
-
-**Product**
-Various consumer and B2B products
-
-**Timeframe**
-2012-2013
-
-**My role**
-Industrial designer
-
-**Team composition**
-Creative director, 3 industrial designers, 2 3D modellers, visualisation expert
-
-
-</template>
-
 </Content-TextSection>
 
 
 
 
-<Content-ImageFrames-SquareImagesRow padding="is-large"  :images="[
+<Content-ImageFrames-SquareImagesRow padding="is-medium-large"  :images="[
 { url:'/images/als/als1.jpg', alt:'ATC console', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
   type: 'link',
   label: 'Read more',

@@ -87,9 +87,10 @@ CTO
   top: 0
   @media screen and (min-width: $tablet)
     top: auto
-    left: -22%
+    left: -16%
     height: 38vh
     max-height: 26em
+    min-height: 22em
   img
     position: relative
     height: 100%
@@ -477,7 +478,7 @@ I gathered everything we learnt about our users into a set of principles the who
 
 
 
-<Content-ImageFrames-FullImageSection url="/images/toucanBox/onboarding-montage.png" alt="Montage of discovery artefacts"/>
+<Content-ImageFrames-FullImageSection url="/images/toucanBox/onboarding-montage.jpg" alt="Montage of discovery artefacts"/>
 
 
 

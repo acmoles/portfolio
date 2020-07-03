@@ -65,7 +65,7 @@ export default {
         position: relative
         margin-top: 0
         width: 100%
-        @media screen and (min-width: $desktop)
+        @media screen and (min-width: $tablet)
           width: 20em
           left: 2px
       .background
@@ -76,7 +76,7 @@ export default {
         width: 50vw
         border-left: 2px solid $black
 
-  @media screen and (max-width: $desktop)
+  @media screen and (max-width: $tablet)
     .about-nav .page-nav-column .action .text-group
       padding-right: 4em
 

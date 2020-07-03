@@ -111,7 +111,7 @@ export default {
   },
 
   // TODO could optimise https://codepen.io/andymerskin/pen/XNMWvQ OR https://aminerman.com/playground/vuejs-mouse-parallax/
-
+  // Debounce or throttle mouse events?
   methods: {
       emitBoundingRect(event) {
         this.mouseLeave(event)

@@ -113,7 +113,7 @@ I started my career as a teacher and transitioned to UX about 10 years ago. But 
 
 <h1 class="stage-title">Hello! I'm Ant</h1>
 
-<p class="subtitle">
+<p class="subtitle" style="padding-right: 3em;">
   A designer and leader creating useful and playful experiences centred on people
 </p>
 

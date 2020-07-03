@@ -305,7 +305,7 @@ export default {
 .burgered .home-link
   pointer-events: all
 
-@media screen and (max-width: $desktop)
+@media screen and (max-width: $tablet)
   .navbar-menu
     box-shadow: none
     justify-content: flex-end
@@ -314,6 +314,6 @@ export default {
       text-align: right
 
   .text-site-title
-    margin-left: 2em
+    margin-left: 2em  
 
 </style>

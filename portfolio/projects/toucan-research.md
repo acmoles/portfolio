@@ -18,7 +18,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" rag="rag-4" ragTitle="rag-1" ctaLabel="create.toucanbox.com" ctaUrl="https://create.toucanbox.com"
+<Stage-ProjectStage :noise="true" rag="rag-6" ragTitle="rag-1" ctaLabel="create.toucanbox.com" ctaUrl="https://create.toucanbox.com"
 description="I explored whether adding digital value to the physical craft box can lift activation rate at a critical point in the first box experience.">
 
 <template v-slot:visual-background>
@@ -61,7 +61,7 @@ Stakeholders in:
 
 :::
 
-<Content-TextSection padding="is-initial" style="padding-top: 4em;" columnOffset="title-offset">
+<Content-TextSection padding="is-initial" style="padding-top: 4em;" columnOffset="title-offset" rag="rag-6">
 
 ## Case study
 
@@ -75,17 +75,13 @@ Create by toucanBox aims to move the needle for _customer activation_ - the rate
 
 <template v-slot:aside>
 
-**Product**
-Responsive web application
+###  The challenge
 
-**Sector**
-Children's digital media
+Establish to what extent digital content linked to the trial box can increase activation rate. Estimate the costs and benefits of producing further digital content.
 
-**Period**
-2016
+### The outcome
 
-**Team composition**
-Individual research and development project with stakeholders in Marketing, Creative, Operations and Technology.
+Promising pilot with some very engaged users but high friction moving to a device from the magazine reduced the reach, leading to low overall impact on activation.
 
 _I have omitted confidential information in this case study. All work is my own unless stated otherwise._
 { .secondary }
@@ -95,40 +91,6 @@ _I have omitted confidential information in this case study. All work is my own 
 </Content-TextSection>
 
 
-
-
-
-<Content-ThreeColumnSection padding="is-large">
-
-<template v-slot:column1>
-
-###  The challenge
-
-Establish to what extent digital content linked to the trial box can increase activation rate. Estimate the costs and benefits of producing further digital content.
-
-</template>
-
-<template v-slot:column2>
-
-### The outcome
-
-Promising pilot with some very engaged users but high friction moving to a device from the magazine reduced the reach, leading to low overall impact on activation.
-
-</template>
-<!-- Must resonate with the core value proposition (hands-on crafting and creativity).  -->
-
-<template v-slot:column3>
-
-### My role
-
-Project Lead
-~ UI/UX Design
-~ Front-end Development
-~ Evaluation
-
-</template>
-
-</Content-ThreeColumnSection>
 
 
 

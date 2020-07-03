@@ -43,7 +43,7 @@
     <div
       class="overview content"
       :class="[ {'wipe-up': readyForWipe} ]"
-      :style="{ transform: 'translateY(' + displacement + 'px)' }"
+      :style="{ transform: 'translate3D(0,' + displacement + 'px, 0)' }"
       v-on:transitionend="wipeEnd()"
     >
     <div class="modal-background-only upper-mask" :class="{ 'finished': wipeFinished }"></div>
@@ -306,10 +306,10 @@ export default {
       color: $white
       opacity: 0.78
   @media screen and (min-width: $tablet)
-    height: 100vh
+    min-height: 100vh
 
   .stage-intro
-    min-height: calc(100vh - 6em)
+    min-height: 100vh
     display: flex
     flex: none
     padding-top: 7em
@@ -330,6 +330,8 @@ export default {
     @media screen and (min-width: $tablet)
       font-size: 3.5em
 
+.stage, .stage-intro, .visual
+  transform: translate3d(0,0,0)
 
 // Overview
 
@@ -346,13 +348,15 @@ export default {
   display: flex
   flex-direction: column
   justify-content: center
+  // Webkit hack fix
+  box-shadow: 1px 0 1px 1px transparent
   .columns.is-gapless
     width: 100%
     .column
       display: flex
       height: 100%
   .columns.is-vcentered
-    height: 100%
+    height: 6em
     .column.is-overview-row
       height: 100%
       display: none
@@ -417,12 +421,14 @@ export default {
 // Background
 
 .visual, .parallax
-  height: calc(100vh + 24px)
+  height: calc(100vh + 24px + 6em)
   width: 100%
   position: absolute
   overflow: hidden
   will-change: transform
   top: -24px
+  @media screen and (min-width: $tablet)
+    height: calc(100vh + 24px)
 
 figure.full-screen
   img

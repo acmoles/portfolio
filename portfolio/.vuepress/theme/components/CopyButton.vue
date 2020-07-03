@@ -1,5 +1,5 @@
 <template>
-  <button class="button copy-button" @click="doCopy(pageLink, 'Page address copied to clipboard', 'top')">
+  <button class="button copy-button" @click="doCopy(pageLink, 'Current page address copied to clipboard', 'top')">
     <i class="icon" aria-hidden="true">
       <img src="/svg-icons/icon_share.svg" alt="link icon">
     </i>

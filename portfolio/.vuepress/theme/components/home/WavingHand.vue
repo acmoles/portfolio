@@ -330,7 +330,7 @@ export default {
   transform: scale(0.24)
   @media screen and (min-width: $tablet)
     bottom: 0.7em
-  @media screen and (min-width: $largeformat)
+  @media screen and (min-width: $fullhd)
     bottom: 0.72em
     transform: scale(0.3)
 

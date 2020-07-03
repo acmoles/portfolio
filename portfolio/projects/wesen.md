@@ -64,7 +64,7 @@ It's manufactured on demand by a blend of modern and traditional techniques.
 
 <Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial">
 
-<h2 class="inline-title"> {{ $page.frontmatter.subtitle }} </h2> <p class="case inline">{{ $page.frontmatter.case1 }}</p>
+## Case study
 
 Recent years have seen a gradual increase in awareness of product customisation and on&#8209;demand manufacturing. But to this day we can see little evidence of the promised revolution due to relatively high prices and no killer app.
 

@@ -1,5 +1,5 @@
 <template>
-  <button class="button is-dark project-external-link is-fullwidth" @click="action()">
+  <button class="button is-dark project-external-link is-fullwidth background-noise" @click="action()">
     <span>{{ label }}</span>
     <MaximiseIcon/>
     <ModalBase

@@ -80,9 +80,7 @@ Product designer
 :::
 
 
-<Content-TextSection rag="rag-4" columnOffset="title-offset" padding="is-initial">
-
-<h2> {{ $page.frontmatter.subtitle }} </h2>
+<Content-TextSection rag="rag-3" columnOffset="title-offset" padding="is-initial is-continuous">
 
 <!-- Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec.
 
@@ -94,13 +92,9 @@ Suspendisse potenti. Praesent risus massa, vulputate eget turpis in, dignissim t
 Ecosia is a search engine that uses 80% of profits from advertising to plant trees around the world, where they're needed the most.
 </p>
 
-With a growing user base and a renewed strategic focus on mobile, in mid 2019 it was time to found a new agile product team with a focus on mobile apps. Having been closely involved on a strategic level as a product designer, I was a natural fit to take on the role of product manager and team leader. Over the next three months we grew the team from two to four developers and added a dedicated designer.
-
 <!-- We made impressive progress on our mobile apps with only two developers and a share of my overall capacity as a product designer.  -->
 
-The primary purpose of Ecosia's apps is to make searching easy on major platforms. Web search resides in a meta space. It's naturally multi-platform; one way in which devices augment our mental abilities. So _it's critically important that Ecosia's apps fit seamlessly into user's daily lives,_ which requires deep user empathy and platform knowledge.
-
-We also want to connect users with our tree-planting mission and in early 2020 we extended our thinking beyond searching and browsing by asking ourselves how we can help users make further incremental changes in their daily lives.
+The apps' primary purpose is to make searching with Ecosia easy on major platforms. Web search resides in a meta space. It's naturally multi-platform; one way in which devices augment our mental abilities. So _it's critically important that Ecosia's apps fit seamlessly into users' daily lives_. This requires deep empathy and platform knowledge. We also enrich our search results with green data to help users make sustainable choices while on the go.
 
 <!--
 
@@ -126,20 +120,22 @@ I initially joined Ecosia as a product designer and gradually transitioned into 
 </Content-TextSection>
 
 
-<Content-TextSection columnOffset="title-offset" rag="rag-3">
+<Content-TextSection columnOffset="title-offset" rag="rag-3" padding="is-medium">
 
 ## Reflections
 
 <p class="subtitle" style="padding-right: 1em;">
-  This was my first taste of formal team leadership.
+  With a growing user base and a renewed strategic focus on mobile, in mid 2019 it was time to found a new agile product team with a focus on mobile apps.
 </p>
 
-I brought a strong foundation, having led projects and mentored individuals, but I was also fortunate that conditions were favourable. I had good relationships with the founding team members. They responded well to a culture promoting trust, autonomy and respect.
+Having been closely involved on a strategic level as a product designer, I was a natural fit to take on the role of product manager and team leader. Over the next three months we grew the team from two to four developers and added a dedicated designer.
+
+Leading projects and mentoring individuals gave me a good foundation to take on a position of formal team leadership, but I was glad conditions were favourable. My relationships with the founding team members were strong. Everyone in the team responded well to a culture promoting trust, autonomy and respect.
 
 ### Product design at scale
 
 <p>
-When I joined Ecosia it was at an inflection point. We would soon experience rapid growth, reaching over 10 million daily users. The organisation scaled accordingly and the design guild doubled. At that time it was critical to foster collaborative practices, to establish a set of design principles and to take the first steps towards a component-based design system. These considerations were forefront in my mind as I worked on projects such as <Content-ModalLink label="Maps">
+When I joined Ecosia it was at an inflection point. We would soon experience rapid growth, reaching over 10 million daily users. The organisation scaled accordingly and the design guild doubled. At that time (before I began working as a PM) it was critical to foster collaborative practices, establish a set of design principles and take the first steps towards a component-based design system. These considerations were forefront in my mind as I worked on projects such as <Content-ModalLink label="Maps">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
@@ -154,7 +150,7 @@ When I joined Ecosia it was at an inflection point. We would soon experience rap
 
 <figcaption>
 
-Ecosia maps posed a unique design challenge. As part of slicing the feature we decided to exclude the search box from the first release. Rather, we would enable users to make pseudo searches for common keywords such as hotels and shopping. These constraints called for creativity and it was satisfying to work on a completely new search vertical.
+Ecosia maps posed a unique design challenge. As part of slicing the feature we decided to exclude the search box from the first release. Rather, we would enable users to make pseudo searches for common keywords such as hotels and shopping. These constraints called for creativity. It was satisfying to work on a completely new search vertical.
 
 </figcaption>
 </div>
@@ -179,7 +175,7 @@ Even as we grew, there remained the need to be hands-on and responsive. I design
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> and <Content-ModalLink label="Ecosia's 10th anniversary.">
+</Content-ModalLink> and <Content-ModalLink label="Ecosia's 10th anniversary">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
@@ -191,7 +187,7 @@ Even as we grew, there remained the need to be hands-on and responsive. I design
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> A particular personal highlight was <Content-ModalLink label="Hack Days 2019">
+</Content-ModalLink>. A particular personal highlight was <Content-ModalLink label="Hack Days 2019">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
@@ -223,7 +219,7 @@ I collaborated with a backend developer, data scientist and marketing manager to
 ### Mobile team highlights
 
 <p>
-Early on, we had a standout success with the iOS App. Users were clear that the app was missing key browser features and lagging in usability. Browsing tabs were the top request. I worked closely with developers to shape an interface we named the <Content-ModalLink label="Organiser">
+Early on, we had a standout success with the iOS App. Users were clear that the app was lagging in usability and missing key browser features. Browsing tabs were the top request. I worked closely with developers to shape an interface we named the <Content-ModalLink label="Organiser">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
@@ -271,7 +267,7 @@ The Ecosia Android app offers the familiarity of Chromium with Ecosia search. It
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> is a fork of the Chromium browser. This offers a ready&#8209;made, familiar browsing experience but with the drawback of requiring enormous investment to keep it up-to-date. <em>I facilitated a design thinking process with developers where we identified ways we might accelerate the update process.</em> Then I helped them prioritise initiatives, slice the work, establish milestones and finally evaluate based on success criteria. My technical background enabled me to participate meaningfully in discussions and offer effective leadership.
+</Content-ModalLink> is a fork of the Chromium browser. This offers a ready&#8209;made, familiar browsing experience but at the cost of enormous investment to keep it up-to-date. <em>I facilitated a design thinking process with developers where we identified ways we might accelerate the update process.</em> Then I helped them prioritise initiatives, slice the work, establish milestones and finally evaluate based on success criteria. My technical background enabled me to participate meaningfully in discussions and offer effective leadership.
 </p>
 
 <template slot="aside">
@@ -295,9 +291,9 @@ The Ecosia Android app offers the familiarity of Chromium with Ecosia search. It
 
 
 <Content-MetricsSection padding="is-medium-large" :metrics="[
-{ metric:'18%', description:'Increase in iOS App 1-week retention.' },
-{ metric:'3x', description:'iOS app DAU growth in 2019.' },
-{ metric:'4x', description:'Faster Android app updates.' },
+{ metric:'18%', description:'Increase in iOS App 1-week retention' },
+{ metric:'3x', description:'iOS app DAU growth in 2019' },
+{ metric:'4x', description:'Faster Android app updates' },
 ]"/>
 
 <!--

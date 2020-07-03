@@ -129,7 +129,10 @@ function resolvePageLink (
       transition: background-color 200ms ease, filter 200ms ease
   .prev, .action
     .text-group
-      max-width: 50%
+      @media screen and (min-width: $desktop)
+        max-width: 80%
+      @media screen and (min-width: $widescreen)
+        max-width: 50%
     .background
       left: -50vw
       width: 200vw
@@ -157,7 +160,7 @@ function resolvePageLink (
     color: $white
     opacity: 0.78
 
-@media screen and (max-width: $desktop)
+@media screen and (max-width: $tablet)
   .page-nav, .page-nav .container
     height: 12em
   .page-nav-column.columns

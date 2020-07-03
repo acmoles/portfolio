@@ -18,7 +18,7 @@ hasFooter: true
 ::: slot top
 
 <Stage-ProjectStage rag="rag-3" ragTitle="rag-1" platform="Product" ctaLabel="none" ctaUrl="#"
-description="LEGO Dimensions blends brick building with video games. It brings together unlikely allies in a mash-up multiverse. It's a unique take on toys-to-life.">
+description="I was a core member of a skunkworks team tasked with blending brick building with video games.">
 
 <template v-slot:visual-column>
   <figure class="lego-image">
@@ -47,7 +47,7 @@ Interaction and Industrial Designer
 
 <template v-slot:team>
 
-Project Manager
+Design Manager
 ~ Manufacturing Engineer
 
 </template>
@@ -66,16 +66,29 @@ Project Manager
 :::
 
 
-<Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial">
+<Content-FreeSection padding="is-initial is-continuous">
 
-<h2> {{ $page.frontmatter.subtitle }} </h2>
+<div class="columns">
 
-My early career was defined by my time at LEGO, both in-house and later as a consultant at [Design by Touch](https://www.designbytouch.com/). Among diverse projects including Nexo Knights, Bionicle, Hero Factory, City, Mario and numerous undisclosed concepts, Dimensions is my favourite project. Even more gratifying, it broke out of the concept phase and into the real world. It's the LEGO answer to Skylanders, Disney Infinity, and Nintendo Amiibo. I joined the core team as we took it from back-of-the-napkin idea to major strategic initiative backed by the whole company.
+<div class="column">
+
+My early career was defined by my time at LEGO, both in-house and later as a consultant at [Design by Touch](https://www.designbytouch.com/). Among diverse projects including Nexo Knights, Bionicle, Hero Factory, City, Mario and numerous undisclosed concepts, Dimensions stands out as my enduring favourite. Even more gratifying, it broke out of the concept phase and into the real world. It's the LEGO answer to Skylanders, Disney Infinity, and Nintendo Amiibo (toys-to-life). I joined the core team as we took it from back-of-the-napkin idea to major strategic initiative backed by the whole company.
+{ .rag-3 }
+
+</div>
+
+<div class="column">
 
 LEGO's unique DNA sets Dimensions apart from competitors. We wanted to push forward what it means to blend toys and video games into a single experience. One route was to emphasise building and rebuilding as part of the integrated gameplay. Contextual on-screen building instructions show children how to modify their models to solve puzzles and beat challenges. Another was to stimulate roleplaying in the real world. We saw the hardware as more than just a gateway for bringing LEGO into the game. It was also a new kind of gamepad which facilitated interactions triggered by the toy's physical state. Dimensions launched in 2015 to overwhelmingly positive reviews but was cancelled in 2017 as the broader category fell out of favour with children and parents.
+{ .rag-2 }
 
+</div>
+</div>
 
 <!--
+
+It brings together unlikely allies in a mash-up multiverse.
+
 
 Encourage kids to build crazy cross-brand combinations. This is the essence of LEGO. It's what children are gleefully doing themselves already. As part of the value proposition: only possible given LEGOs amazing relationships with global entertainment brands. Linking to the LEGO Movie.
 
@@ -114,26 +127,8 @@ The LEGO DIMENSIONS Starter Pack has everything you need to set out on epic mash
 
  -->
 
-<template v-slot:aside>
 
-**Product**
-Integrated video game, peripheral and toys
-
-**Sector**
-Children's toys and entertainment
-
-**Timeframe**
-2014
-
-**My role**
-Interaction and industrial designer
-
-**LEGO Team**
-Project manager, manufacturing engineer
-
-</template>
-
-</Content-TextSection>
+</Content-FreeSection>
 
 
 

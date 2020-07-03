@@ -18,8 +18,8 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage rag="rag-4" ragTitle="rag-1" titleColumnClass="is-three-fifths" ctaLabel="stompyrobot.uk" ctaUrl="https://stompyrobot.uk/"
-description="I was one half of Stompy Robot, an independent studio based in Edinburgh, creating games for mobile and tools for developers.">
+<Stage-ProjectStage rag="rag-4" ragTitle="rag-2" titleColumnClass="is-three-fifths" ctaLabel="stompyrobot.uk" ctaUrl="https://stompyrobot.uk/"
+description="I helped start Stompy Robot, an independent studio based in Edinburgh, creating games for mobile and tools for developers.">
 
 <template v-slot:visual-column>
   <figure class="stompy-image">
@@ -50,7 +50,7 @@ Game Designer
 
 <template v-slot:team>
 
-Designer/developer
+Designer/Developer
 
 </template>
 
@@ -68,20 +68,23 @@ Designer/developer
 
 :::
 
-<Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial">
+<Content-TextSection rag="rag-6" columnOffset="title-offset" padding="is-initial is-continuous">
 
-<h2> {{ $page.frontmatter.subtitle }} </h2>
+<p class="subtitle">
+We had just witnessed the dawn of ubiquitous touch-based tablet computing and believed we could exploit this fresh input medium to reimagine some of our favourite game genres.
+</p>
 
-In 2013 I joined forces with my brother [Simon Moles](https://www.simonmoles.com/) (systems developer at [Rockstar North](https://www.rockstarnorth.com/)) to build video games specifically for mobile devices. We had just witnessed the dawn of ubiquitous touch-based computing and believed we could exploit this fresh input medium to reimagine some of our favourite game genres.
-
-We worked in the Unity game engine, enabling us to target all major platforms. Our guiding principle was touch-centricity. Mobile games of the time often borrowed existing interaction models, such as on-screen joysticks or pointers. We wanted to play to the strengths of touch.
+In 2013 I joined forces with my brother [Simon Moles](https://www.simonmoles.com/) (systems developer at [Rockstar North](https://www.rockstarnorth.com/)) to build video games specifically for tablet devices. We worked in the Unity game engine, enabling us to target all major platforms.
 
 <p>
-The studio's breakthrough success was with development tools, rather than games. The insights gained building games enabled us to identify valuable workflow improvements in coding and debugging. <a href="https://assetstore.unity.com/packages/tools/gui/srdebugger-console-tools-on-device-27688" target="blank" rel="noopener noreferrer">SRDebugger</a> is still available on the Unity Asset Store. <Content-ModalLink label="Spaced">
+Our guiding principle was touch-centricity. Mobile games of the time often borrowed existing interaction models, such as on-screen joysticks or pointers. We wanted to play to the strengths of touch. Our pioneering effort was Nova (below), <Content-ModalLink label="Spaced">
 <template v-slot:modal>
 <Content :page-key="$site.pages.find(p => p.path === '/extra/spaced/').key"/>
 </template>
 </Content-ModalLink> was our last game title in development.
+</p>
+
+Rather than games, the studio's breakthrough success was with development tools. The insights gained building games enabled us to identify valuable workflow improvements in coding and debugging. [SRDebugger](https://assetstore.unity.com/packages/tools/gui/srdebugger-console-tools-on-device-27688) is still available on the Unity Asset Store.
 
 <!--
 and we occasionally game jam
@@ -95,25 +98,8 @@ Game jam
 </template>
 </Content-ModalLink>
 . -->
-</p>
 
 <template v-slot:aside>
-
-**Product**
-Mobile video games, developer tools and plugins for Unity
-
-**Sector**
-Interactive entertainment
-
-**Timeframe**
-2013-2015
-
-**My role**
-Artist and Game designer
-
-**Team**
-Game developer/designer
-
 
 </template>
 
@@ -122,7 +108,7 @@ Game developer/designer
 
 
 
-<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="https://www.youtube.com/embed/xZELuhMO9es" alt="placeholder" :aside="true" rag="rag-3" :iframe="true">
+<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="https://www.youtube.com/embed/xZELuhMO9es" alt="placeholder" :aside="true" rag="rag-4" :iframe="true">
 
 <template v-slot:content>
 
@@ -132,7 +118,7 @@ Game developer/designer
   A tactical action RTS which specifically leverages the interaction opportunities offered by touch screens.
 </p>
 
-The player commands an elite squad of starship captains who must defend the freedom of the galaxy. Battle against ambitious new factions seeking galactic dominance. As the player progresses, they collect new starships, captains, weaponry and equipment. Each possess advantages and abilities, which can be combined into effective strategies for defeating any opponent.
+The player commands an elite squad of starship captains who must defend the freedom of the galaxy. Battle against ambitious new factions seeking galactic dominance. As the player progresses, they collect new starships, characters, weaponry and equipment. Each possess advantages and abilities, which can be combined into effective strategies for defeating any opponent.
 
 
  <!-- as they endeavour to defeat the oppressive galactic powers present in the Milky Way galaxy.

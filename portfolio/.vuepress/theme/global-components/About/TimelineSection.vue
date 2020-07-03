@@ -1,10 +1,11 @@
 <template>
   <section class="section" :class="padding">
       <div class="container is-fullhd content">
+        <h2 class="timeline-title">Timeline</h2>
         <transition :name="transitionName" mode="out-in">
           <div
             v-for="n in numberOfPages"
-            class="columns"
+            class="columns timeline-columns"
             :key="`page-${n}`"
             :ref="`page-${n}`"
             v-if="currentPage === n"
@@ -124,8 +125,21 @@ export default {
   h4.timeline-year
     margin-bottom: 3em
 
+  h2.timeline-title
+    display: none
+    margin-bottom: 2em
+
   .section.is-timeline
     padding: 3rem 0 12rem 0
+
+  @media screen and (max-width: $tablet)
+    .timeline-columns
+      flex-direction: column-reverse
+      display: flex
+    h2.timeline-title
+      display: block
+    .section.is-timeline
+      padding: 0 0 12rem 0
 
   .slider-controls-container
     display: flex
