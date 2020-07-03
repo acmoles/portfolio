@@ -1,6 +1,6 @@
 <template>
   <transition :name="transition">
-    <div v-show="show" class="snackbar project-card blue" :class="snackbarMessage.position">
+    <div v-show="show" class="snackbar background-noise" :class="snackbarMessage.position">
       <div class="content">
         <strong>{{ snackbarMessage.text }}</strong>
       </div>
@@ -28,7 +28,7 @@ export default {
 
   watch: {
     snackbarMessage (latest, last) {
-      console.log(latest);
+      // console.log(latest);
       if (latest.position === 'bottom') {
         this.transition = 'slideYDown'
       } else {
@@ -61,6 +61,7 @@ export default {
     color: $white
     align-items: center
     justify-content: center
+    background-color: $slate
     box-shadow: 0 1.5em 4em 0 rgba($pitch, 0.56)
     &.bottom
       top: auto

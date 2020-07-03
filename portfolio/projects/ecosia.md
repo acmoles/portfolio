@@ -27,31 +27,60 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" rag="rag-4" ctaLabel="ecosia.org" ctaUrl="https://www.ecosia.org"
-description="Ecosia is a search engine that uses 80% of profits from advertising to plant trees around the world, where they're needed the most.">
+<Stage-ProjectStage rag="rag-3" ragTitle="rag-3" ctaLabel="ecosia.org" ctaUrl="https://www.ecosia.org"
+description="I created the right conditions for designers and engineers to build impactful features reaching millions of users.">
 
-  <template v-slot:visual-column>
-    <figure class="ecosia-image">
-      <Heros-ImageHero src="/images/ecosia/render-base.png" alt="Ecosia mobile devices"/>
-    </figure>
-  </template>
+<template v-slot:visual-column>
+  <figure class="ecosia-image">
+    <Heros-ImageHero src="/images/ecosia/render-base.png" alt="Ecosia mobile devices"/>
+  </figure>
+</template>
+
+<template v-slot:platform>
+
+Android, iOS and MacOS apps
+
+</template>
+
+<template v-slot:timeframe>
+
+2018-2020
+
+</template>
+
+<template v-slot:my-role>
+
+Team leader
+~ Product Manager
+
+</template>
+
+<template v-slot:team>
+
+Product designer
+~ 2 iOS developers
+~ 1 Android developer
+~ 1 Back-end developer
+
+</template>
 
 </Stage-ProjectStage>
 
 <style lang="sass">
+@import "@theme/styles/variables.sass"
 
 .ecosia-image
   position: absolute
-  left: -16%
+  left: -14%
   width: 144%
+  @media screen and (max-width: $tablet)
+    top: -24%
 </style>
 
 :::
 
 
-<Content-ContextSection :box="true" rag="rag-4">
-
-<template v-slot:main>
+<Content-TextSection rag="rag-4" columnOffset="title-offset" padding="is-initial">
 
 <h2> {{ $page.frontmatter.subtitle }} </h2>
 
@@ -60,6 +89,10 @@ description="Ecosia is a search engine that uses 80% of profits from advertising
 Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur tortor in nibh vulputate viverra. Integer fringilla orci enim, non efficitur erat elementum vel. Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit. Pellentesque euismod sodales ipsum in mattis.
 
 Suspendisse potenti. Praesent risus massa, vulputate eget turpis in, dignissim tincidunt odio -->
+
+<p class="subtitle">
+Ecosia is a search engine that uses 80% of profits from advertising to plant trees around the world, where they're needed the most.
+</p>
 
 With a growing user base and a renewed strategic focus on mobile, in mid 2019 it was time to found a new agile product team with a focus on mobile apps. Having been closely involved on a strategic level as a product designer, I was a natural fit to take on the role of product manager and team leader. Over the next three months we grew the team from two to four developers and added a dedicated designer.
 
@@ -83,28 +116,14 @@ I initially joined Ecosia as a product designer and gradually transitioned into 
 
 -->
 
-</template>
 
-<template v-slot:side>
+<template v-slot:aside>
 
-**Product**
-Android, iOS and MacOS apps
 
-**Sector**
-Internet search
-
-**Timeframe**
-2018-2020
-
-**My role**
-Product manager and team lead
-
-**Team**
-Product designer, 2 iOS developers, 1 Android developer, 1 devOps/backend
 
 </template>
 
-</Content-ContextSection>
+</Content-TextSection>
 
 
 <Content-TextSection columnOffset="title-offset" rag="rag-3">

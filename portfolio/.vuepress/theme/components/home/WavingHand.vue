@@ -83,7 +83,7 @@ export default {
       autoplay: false,
       loop: false,
       complete: () => {
-        // this.restartRandom();
+        this.restartRandom();
       }
     });
 

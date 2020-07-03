@@ -19,14 +19,41 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage rag="rag-2" :noise="true" ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/"
+<Stage-ProjectStage rag="rag-2" ragTitle="rag-1" platform="Product" ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/"
 description="Art Lebedev Studio is the first and largest independent design studio in Russia. Founded in 1995 with over 300 employees today.">
 
-  <template v-slot:visual-background>
-    <figure class="full-screen">
-      <Heros-ImageHero src="/images/als/moscow.jpg" alt="Ecosia mobile devices"/>
-    </figure>
-  </template>
+<template v-slot:visual-background>
+  <figure class="full-screen">
+    <Heros-ImageHero src="/images/als/moscow.jpg" alt="Ecosia mobile devices"/>
+  </figure>
+</template>
+
+<template v-slot:platform>
+
+Consumer and B2B products
+
+</template>
+
+<template v-slot:timeframe>
+
+2012-2013
+
+</template>
+
+<template v-slot:my-role>
+
+Industrial Designer
+
+</template>
+
+<template v-slot:team>
+
+Creative Director
+~ 3 Industrial Designers
+~ 2 3D Modellers
+~ Visualisation Expert
+
+</template>
 
 </Stage-ProjectStage>
 
@@ -35,9 +62,7 @@ description="Art Lebedev Studio is the first and largest independent design stud
 
 
 
-<Content-ContextSection :box="true" rag="rag-5">
-
-<template v-slot:main>
+<Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial">
 
 <h2> {{ $page.frontmatter.subtitle }} </h2>
 
@@ -57,9 +82,8 @@ Outsider status is appealing. So is the irreverent sense of humour. I wanted to 
 
  -->
 
-</template>
 
-<template v-slot:side>
+<template v-slot:aside>
 
 **Product**
 Various consumer and B2B products
@@ -76,7 +100,7 @@ Creative director, 3 industrial designers, 2 3D modellers, visualisation expert
 
 </template>
 
-</Content-ContextSection>
+</Content-TextSection>
 
 
 

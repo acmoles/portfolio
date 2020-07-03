@@ -18,24 +18,52 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" rag="rag-3" ctaLabel="create.toucanbox.com" ctaUrl="https://create.toucanbox.com"
-description="Create by toucanBox explores whether adding digital value to the physical craft box can lift activation rate at a critical point in the first box experience.">
+<Stage-ProjectStage :noise="true" rag="rag-4" ragTitle="rag-1" ctaLabel="create.toucanbox.com" ctaUrl="https://create.toucanbox.com"
+description="I explored whether adding digital value to the physical craft box can lift activation rate at a critical point in the first box experience.">
 
-  <template v-slot:visual-background>
-    <figure class="full-screen">
-      <Heros-ImageHero src="/images/toucan-rnd/all-together4.jpg" alt="Ecosia mobile devices"/>
-    </figure>
-  </template>
+<template v-slot:visual-background>
+  <figure class="full-screen">
+    <Heros-ImageHero src="/images/toucan-rnd/all-together4.jpg" alt="Ecosia mobile devices"/>
+  </figure>
+</template>
+
+<template v-slot:platform>
+
+Responsive web app
+
+</template>
+
+<template v-slot:timeframe>
+
+2016
+
+</template>
+
+<template v-slot:my-role>
+
+Project lead
+~ UX/UI Designer
+~ Front-end Developer
+~ Evaluation
+
+</template>
+
+<template v-slot:team>
+
+Stakeholders in:
+~ Marketing
+~ Operations
+~ Technology
+
+</template>
 
 </Stage-ProjectStage>
 
 :::
 
-<Content-ContextSection :box="true">
+<Content-TextSection padding="is-initial" style="padding-top: 4em;" columnOffset="title-offset">
 
-<template v-slot:main>
-
-<h2 class="inline-title"> {{ $page.frontmatter.subtitle }} </h2> <p class="case inline">{{ $page.frontmatter.case1 }}</p>
+## Case study
 
 A toucanBox subscription craft box contains all the materials needed to complete a craft project, with illustrated instructions, stickers to collect and an activity magazine.
 
@@ -45,9 +73,7 @@ Consequently, some initiatives aimed to improve the experience for children, som
 
 Create by toucanBox aims to move the needle for _customer activation_ - the rate at which trialists convert to fully paying subscribers. We knew the top two reasons for cancellation in trial were _affordability_ and _value for money._ My hypothesis was that exclusive digital content could help address this, without increasing the variable cost of the box.
 
-</template>
-
-<template v-slot:side>
+<template v-slot:aside>
 
 **Product**
 Responsive web application
@@ -66,7 +92,7 @@ _I have omitted confidential information in this case study. All work is my own 
 
 </template>
 
-</Content-ContextSection>
+</Content-TextSection>
 
 
 
@@ -139,7 +165,7 @@ My approach was to engage parents with an in-depth interview, intended to flesh 
 
 
 
-<Content-ImageFrames-MainImageSection url="/images/toucan-rnd/process.jpg" alt="placeholder" :aside="true" >
+<Content-ImageFrames-MainImageSection url="/images/toucan-rnd/process.jpg" alt="placeholder" :aside="true" padding="has-divider">
 
 <template v-slot:content>
 
@@ -176,7 +202,7 @@ The magazine in the first box features a double page spread introducing Create b
 </Content-ImageFrames-MainImageSection>
 
 
-<Content-ImageFrames-SquareImagesRow  :images="[
+<Content-ImageFrames-SquareImagesRow padding="has-divider" :images="[
 { url:'https://player.vimeo.com/video/412315835', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:true },
 { url:'https://player.vimeo.com/video/412315982', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:true },
 { url:'/images/toucan-rnd/colouring.jpg', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
@@ -236,7 +262,7 @@ Then print it out and colour it in. Toucanoos are cute triangular characters whi
 
 
 
-<Content-MainAsideSection padding="is-large" rag="rag-6" :aside="true" columnOffset="table-offset">
+<Content-MainAsideSection padding="is-large has-divider" rag="rag-6" :aside="true" columnOffset="table-offset">
 
 <template slot="content">
 
@@ -320,7 +346,7 @@ Matching the style of the new toucanBox magazine required a different look and f
 
 
 
-<Content-ThreeColumnSection padding="is-large">
+<Content-ThreeColumnSection padding="is-large has-divider">
 
 <template v-slot:content>
 

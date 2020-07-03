@@ -7,7 +7,7 @@
         <router-link v-if="prev" class="column no-fade prev" :to="prev.path">
           <div class="background background-noise"></div>
           <div class="text-group">
-            <p class="small-title">{{ prev.title || prev.path }}</p>
+            <p class="small-title">{{ processedTitle(prev.frontmatter.title) }}</p>
             <h2 class="item-title">{{ prev.frontmatter.subtitle }}</h2>
             <p class="case" v-if="prev.frontmatter.case1">{{ prev.frontmatter.case1 }}</p>
           </div>
@@ -15,7 +15,7 @@
         <router-link  v-if="next" class="column no-fade is-one-third next" :to="next.path">
           <div class="background project-card" :class="next.frontmatter.background"></div>
           <div class="text-group">
-            <p class="small-title">{{ next.title || next.path }}</p>
+            <p class="small-title">{{ processedTitle(next.frontmatter.title) }}</p>
             <h2 class="item-title">{{ next.frontmatter.subtitle }}</h2>
             <p class="case" v-if="next.frontmatter.case1">{{ next.frontmatter.case1 }}</p>
           </div>
@@ -30,7 +30,9 @@
 <script>
 import isString from 'lodash/isString'
 import isNil from 'lodash/isNil'
-import { resolvePage } from '../../util'
+import { resolvePage } from '@theme/util'
+import { processedTitle } from '@theme/mixins/processedTitle.js'
+
 
 // <span v-if="prev" class="prev">
 //   ←
@@ -39,6 +41,7 @@ import { resolvePage } from '../../util'
 
 export default {
   name: 'PageNav',
+  mixins: [processedTitle],
   computed: {
     prev () {
       return resolvePageLink(LINK_TYPES.PREV, this)

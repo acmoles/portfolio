@@ -17,14 +17,40 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage rag="rag-3" :noise="true" ctaLabel="none" ctaUrl="#"
+<Stage-ProjectStage rag="rag-3" ragTitle="rag-1" platform="Product" ctaLabel="none" ctaUrl="#"
 description="LEGO Dimensions blends brick building with video games. It brings together unlikely allies in a mash-up multiverse. It's a unique take on toys-to-life.">
 
-  <template v-slot:visual-column>
-    <figure class="lego-image">
-      <Heros-ImageHero src="/images/lego/lego-comp.svg" alt="Ecosia mobile devices"/>
-    </figure>
-  </template>
+<template v-slot:visual-column>
+  <figure class="lego-image">
+    <Heros-ImageHero src="/images/lego/lego-comp.svg" alt="Ecosia mobile devices"/>
+  </figure>
+</template>
+
+
+<template v-slot:platform>
+
+Integrated video game, peripherals and toys
+
+</template>
+
+<template v-slot:timeframe>
+
+2014
+
+</template>
+
+<template v-slot:my-role>
+
+Interaction and Industrial Designer
+
+</template>
+
+<template v-slot:team>
+
+Project Manager
+~ Manufacturing Engineer
+
+</template>
 
 </Stage-ProjectStage>
 
@@ -40,9 +66,7 @@ description="LEGO Dimensions blends brick building with video games. It brings t
 :::
 
 
-<Content-ContextSection :box="true" rag="rag-5">
-
-<template v-slot:main>
+<Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial">
 
 <h2> {{ $page.frontmatter.subtitle }} </h2>
 
@@ -90,9 +114,7 @@ The LEGO DIMENSIONS Starter Pack has everything you need to set out on epic mash
 
  -->
 
-</template>
-
-<template v-slot:side>
+<template v-slot:aside>
 
 **Product**
 Integrated video game, peripheral and toys
@@ -111,7 +133,7 @@ Project manager, manufacturing engineer
 
 </template>
 
-</Content-ContextSection>
+</Content-TextSection>
 
 
 

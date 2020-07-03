@@ -25,7 +25,7 @@
       </figure>
 
       <div :ref="'caption' + uid" class="item-caption" :class="{ 'transition': !mouseOn }">
-        <p class="small-title">{{ processedTitle }}</p>
+        <p class="small-title">{{ processedTitle(title) }}</p>
         <h2 class="item-title" :class="rag" v-if="subtitle">{{ subtitle }}</h2>
 
         <p class="case" v-if="case1">{{ case1 }}</p>
@@ -41,6 +41,8 @@
 // TODO multi resolution card images (and high resolution for landscape format)
 
 import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
+import { browserDetection } from '@theme/mixins/browserDetection.js'
+import { processedTitle } from '@theme/mixins/processedTitle.js'
 
 export default {
 
@@ -57,7 +59,7 @@ export default {
     rag: String
   },
 
-  mixins: [fadeUpInLoad],
+  mixins: [fadeUpInLoad, processedTitle, browserDetection],
 
   data () {
     return {
@@ -91,28 +93,6 @@ export default {
     },
     notColorTile () {
       return !(this.background === 'dark' || this.background === 'stompy' || this.background === 'als' || this.background === 'random')
-    },
-    processedTitle () {
-      if (this.title === 'toucanBox R&D') {
-        return 'toucanBox'
-      } else {
-        return this.title
-      }
-    },
-    isSafari () {
-      if (typeof window !== 'undefined') {
-        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-      } else {
-        return false
-      }
-    },
-    isFirefox () {
-      if (typeof window !== 'undefined') {
-        return navigator.userAgent.indexOf('Firefox') !== -1
-      } else {
-        return false
-      }
-
     }
   },
 

@@ -18,14 +18,41 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage rag="rag-6" :noise="true" ctaLabel="stompyrobot.uk" ctaUrl="https://stompyrobot.uk/"
-description="Stompy Robot is an independent studio based in Edinburgh creating games for mobile and tools for developers.">
+<Stage-ProjectStage rag="rag-4" ragTitle="rag-1" titleColumnClass="is-three-fifths" ctaLabel="stompyrobot.uk" ctaUrl="https://stompyrobot.uk/"
+description="I was one half of Stompy Robot, an independent studio based in Edinburgh, creating games for mobile and tools for developers.">
 
-  <template v-slot:visual-column>
-    <figure class="stompy-image">
-      <Heros-ImageHero src="/images/stompy-robot/header-comp-export-grid.png" alt="Ecosia mobile devices"/>
-    </figure>
-  </template>
+<template v-slot:visual-column>
+  <figure class="stompy-image">
+    <Heros-ImageHero src="/images/stompy-robot/header-comp-export-grid.png" alt="Ecosia mobile devices"/>
+  </figure>
+</template>
+
+<template v-slot:platform>
+
+Mobile games
+~ Unity plugins
+
+</template>
+
+<template v-slot:timeframe>
+
+2013-2015
+<!-- ~ (part-time) -->
+
+</template>
+
+<template v-slot:my-role>
+
+Game Designer
+~ Artist
+
+</template>
+
+<template v-slot:team>
+
+Designer/developer
+
+</template>
 
 </Stage-ProjectStage>
 
@@ -34,16 +61,14 @@ description="Stompy Robot is an independent studio based in Edinburgh creating g
 .stompy-image
   position: absolute
   left: -56%
-  top: -12%
+  top: -2%
   width: 200%
 
 </style>
 
 :::
 
-<Content-ContextSection :box="true" rag="rag-5">
-
-<template v-slot:main>
+<Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial">
 
 <h2> {{ $page.frontmatter.subtitle }} </h2>
 
@@ -72,9 +97,7 @@ Game jam
 . -->
 </p>
 
-</template>
-
-<template v-slot:side>
+<template v-slot:aside>
 
 **Product**
 Mobile video games, developer tools and plugins for Unity
@@ -94,7 +117,7 @@ Game developer/designer
 
 </template>
 
-</Content-ContextSection>
+</Content-TextSection>
 
 
 

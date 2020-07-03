@@ -1,6 +1,6 @@
 <template>
 
-  <section class="stage" :class="navStyle" :style="{ paddingTop: paddingTop, paddingBottom: paddingBottom }">
+  <section class="stage" :class="navStyle">
 
     <div
       ref="parent"
@@ -16,77 +16,176 @@
       </div>
     </div>
 
-    <div ref="container" class="container is-fullhd">
-      <div class="columns">
+    <div ref="stage-intro" class="stage-intro container is-fullhd">
+      <div class="columns" :style="{transform: transform}">
         <div
-          ref="stage-column"
-          class="column stage-column is-two-thirds"
-          :class="[{'in-view': visible}, {'appear-stage-up': animating}]"
+          class="column stage-column"
+          :class="[{'in-view': visible}, {'appear-stage-up': animating}, titleColumnClass]"
+          v-on:transitionend="stageTransitionEnd()"
         >
+          <p class="small-title">{{ processedTitle(subtitle) }}</p>
+          <h1 class="stage-title" :class="ragTitle">{{ title }}</h1>
           <p class="subtitle" :class="rag">
             {{ description }}
           </p>
-          <template v-if="ctaLabel !== 'none'">
-            <ProjectExternalModal
-              v-if="hasModal"
-              :label="ctaLabel"
-            >
-              <slot name="modal"></slot>
-            </ProjectExternalModal>
-            <ProjectExternalLink
-              v-else
-              :label="ctaLabel"
-              :href="ctaUrl"
-            />
-          </template>
         </div>
         <div
           ref="column-parallax"
           v-if="hasVisulColumnSlot"
-          class="column visual-column"
+          class="column is-one-third visual-column"
           :class="[{'in-view': visible}, {'appear-stage-up': animating}]"
-          :style="{transform: transform}"
         >
             <slot name="visual-column"></slot>
         </div>
       </div>
     </div>
 
-  </section>
+    <div
+      class="overview content"
+      :class="[ {'wipe-up': readyForWipe} ]"
+      :style="{ transform: 'translateY(' + displacement + 'px)' }"
+      v-on:transitionend="wipeEnd()"
+    >
+    <div class="modal-background-only upper-mask" :class="{ 'finished': wipeFinished }"></div>
+
+    <div class="overview-upper">
+      <div class="modal-background-only upper-mask-nonblur" :class="{ 'finished': wipeFinished }"></div>
+      <div class="container is-fullhd">
+
+        <div class="columns is-vcentered is-gapless">
+          <div class="column is-two-thirds is-overview-row" v-if="hasOverview">
+            <div class="columns is-gapless">
+              <div class="column">
+                <strong>{{ platform }}</strong>
+              </div>
+              <div class="column">
+                <strong>Team</strong>
+              </div>
+              <div class="column">
+                <strong>My role</strong>
+              </div>
+              <div class="column">
+                <strong>Timeframe</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-action-row">
+            <template v-if="ctaLabel !== 'none'">
+              <ProjectExternalModal
+                v-if="hasModal"
+                :label="ctaLabel"
+              >
+                <slot name="modal"></slot>
+              </ProjectExternalModal>
+              <ProjectExternalLink
+                v-else
+                :label="ctaLabel"
+                :href="ctaUrl"
+              />
+            </template>
+            <CopyButton/>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="background-noise overview-lower">
+      <div class="container is-fullhd">
+
+        <div class="columns is-gapless overview-lower-row" v-if="hasOverview">
+          <div class="column is-two-thirds">
+            <div class="columns is-gapless">
+              <div class="column">
+                <slot name="platform"></slot>
+              </div>
+              <div class="column">
+                <slot name="team"></slot>
+              </div>
+              <div class="column">
+                <slot name="my-role"></slot>
+              </div>
+              <div class="column">
+                <slot name="timeframe"></slot>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-mobile is-variable is-1 is-multiline overview-lower-mobile" v-if="hasOverview">
+            <div class="column is-half">
+              <strong>{{ platform }}</strong>
+              <slot name="platform"></slot>
+            </div>
+            <div class="column is-half">
+              <strong>Timeframe</strong>
+              <slot name="timeframe"></slot>
+            </div>
+            <div class="column is-half">
+              <strong>Team</strong>
+              <slot name="team"></slot>
+            </div>
+            <div class="column is-half">
+              <strong>My role</strong>
+              <slot name="my-role"></slot>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
 
 </template>
 
 <script>
 import ProjectExternalLink from '@theme/components/ProjectExternalLink.vue'
 import ProjectExternalModal from '@theme/components/ProjectExternalModal.vue'
+import CopyButton from '@theme/components/CopyButton.vue'
 
 import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
-import { topPadding } from '@theme/mixins/topPadding.js'
+// import { browserDetection } from '@theme/mixins/browserDetection.js'
+import { processedTitle } from '@theme/mixins/processedTitle.js'
+
 import updateOnScroll from 'uos'
 // import debounce from 'lodash.debounce'
 import { getScrollTop, getViewport } from '@theme/util'
+import config from '@theme/../config.js'
 
 export default {
-  components: { ProjectExternalLink, ProjectExternalModal },
+  name: 'ProjectStage',
+  components: { ProjectExternalLink, ProjectExternalModal, CopyButton },
 
   props: {
     ctaLabel: String,
     ctaUrl: String,
     description: String,
-    noise: Boolean,
     fadeless: Boolean,
     rag: String,
+    ragTitle: String,
     hasModal: Boolean,
+    platform: {
+      type: String,
+      default: 'Platform'
+    },
+    titleColumnClass: {
+      type: String,
+      default: 'is-two-thirds'
+    },
   },
 
-  mixins: [fadeUpInLoad, topPadding],
+  mixins: [fadeUpInLoad, processedTitle],
 
   data () {
     return {
-      el: null,
       transform: ``,
       oneTime: true,
       animating: true,
+      readyForWipe: false,
+      wipeFinished: false,
+      displacement: null
     }
   },
 
@@ -95,23 +194,59 @@ export default {
     navStyle () {
       return this.$page.frontmatter.navStyle.style
     },
-
     hasVisulColumnSlot () {
       return !!this.$slots['visual-column']
     },
-
+    hasOverview () {
+      return !!this.$slots['platform']
+    },
     background () {
       return this.$page.frontmatter.background
     },
-
+    title () {
+      return this.$page.frontmatter.subtitle
+    },
+    subtitle () {
+      return this.$page.frontmatter.title
+    },
     isModalOpen () {
       return this.$store.state.isModalOpen
     },
+    $window () {
+      return this.$store.state.window
+    },
+    isMobile () {
+      return config.breakpoints.tablet >= this.$window.width
+    },
+  },
+
+  watch: {
+    pageLoadingStatus (latest, last) {
+      if (!this.isMobile) {
+
+        if (latest === 'finished' && this.intersected) {
+          this.$forceNextTick(() => {
+            this.visible = true
+            this.visibleCallback()
+          })
+        } else if (latest === 'revealing') {
+          this.$forceNextTick(() => {
+            // console.log('scrolltop: ', getScrollTop());
+            if (getScrollTop() === 0) {
+              this.displacement = getViewport('y') - this.$refs['stage-intro'].getBoundingClientRect().height
+              // console.log('rect is: ', this.$el.getBoundingClientRect().y);
+              // console.log('viewport is: ', getViewport('y'));
+              // console.log('displacement is: ', this.displacement);
+            }
+          })
+        }
+
+      }
+    }
   },
 
   mounted () {
     this.$nextTick(() => {
-        // TODO turn off parallax after first scroll down
         updateOnScroll(0, 1, progress => {
           window.requestAnimationFrame(() => {
             if (this.visible && !this.isModalOpen) {
@@ -119,27 +254,6 @@ export default {
             }
           })
         })
-
-        // if (this.hasVisulColumnSlot) {
-        //   this.el = this.$refs['column-parallax']
-        // } else {
-        //   this.el = this.$refs.parallax
-        // }
-
-        // this.el.addEventListener('transitionend', () => {
-        //   this.animating = false
-        //   console.log('end transition');
-        // })
-
-        // TODO is this the best way to tell when to turn off animation class for parallax?
-        this.el = this.$refs['stage-column']
-        this.el.addEventListener('transitionend', () => {
-          this.animating = false
-          // console.log('end transition');
-        })
-
-
-
     })
   },
 
@@ -149,6 +263,21 @@ export default {
       if (animationValue >= 0 && animationValue <= 300) {
         this.transform = `translate3d(0, ${animationValue}px, 0)`
       }
+    },
+    visibleCallback () {
+      // console.log('visible callback');
+      this.readyForWipe = true
+      this.$forceNextTick(() => {
+        this.displacement = 0
+      })
+    },
+    wipeEnd () {
+      // console.log('whipe end');
+      this.wipeFinished = true
+    },
+    stageTransitionEnd () {
+      // console.log('stage end');
+      this.animating = false
     }
   }
 
@@ -163,9 +292,12 @@ export default {
 // Stage
 
 .stage
-  min-height: calc(100vh / 1.618)
   display: flex
-  align-items: center
+  flex-direction: column
+  overflow: hidden
+  .stage-column
+    position: relative
+    z-index: 2
   .subtitle
     margin-bottom: 2rem
   &.light
@@ -173,25 +305,119 @@ export default {
     .subtitle
       color: $white
       opacity: 0.78
-
-@media screen and (max-width: $tablet)
-  .stage
+  @media screen and (min-width: $tablet)
     height: 100vh
-    align-items: flex-start
 
-.stage-column
+  .stage-intro
+    min-height: calc(100vh - 6em)
+    display: flex
+    flex: none
+    padding-top: 7em
+    .subtitle
+      margin-bottom: 0
+    .columns
+      justify-content: space-between
+    @media screen and (min-width: $tablet)
+      padding-top: 8em
+      padding-bottom: 3em
+      min-height: calc(100vh / 1.618)
+      align-items: center
+
+  .stage-title
+    font-size: 2em
+    line-height: 1.15
+    margin-bottom: 0.25em
+    @media screen and (min-width: $tablet)
+      font-size: 3.5em
+
+
+// Overview
+
+.overview
+  display: flex
+  flex-grow: 1
+  flex-direction: column
   position: relative
-  z-index: 2
-  @media screen and (max-width: $desktop)
-    padding-bottom: 6em
-  @media screen and (max-width: $tablet)
-    padding: 11em 3em 5em 3em
+  top: 1px
+
+.overview-upper
+  height: 6em
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  .columns.is-gapless
+    width: 100%
+    .column
+      display: flex
+      height: 100%
+  .columns.is-vcentered
+    height: 100%
+    .column.is-overview-row
+      height: 100%
+      display: none
+      .column, .columns
+        height: 100%
+        align-items: flex-end
+      strong
+        margin-bottom: 0.9em
+      @media screen and (min-width: $tablet)
+        display: block
+  .is-action-row
+    justify-content: flex-end
+    .button
+      margin-top: auto
+      margin-bottom: auto
+
+  @media screen and (min-width: $tablet)
+    .project-external-link
+      margin-left: 2.5em
+  .copy-button
+    margin-left: 1em
+
+.overview-lower
+  background-color: $black
+  flex-grow: 1
+  padding: 3em 0 4em 0
+  @media screen and (min-width: $tablet)
+    padding: 1em 0
+  border-top: 1px solid rgba($pitch, 0.42)
+  position: relative
+  color: $extraDarkSmoke
+  p, dl
+    width: 80%
+  .overview-lower-row
+    display: none
+    @media screen and (min-width: $tablet)
+      display: block
+
+@media screen and (min-width: $tablet)
+  .overview-lower-mobile
+    display: none !important
+
+
+
+// Overview modal shading
+
+.modal-background-only.upper-mask, .modal-background-only.upper-mask-nonblur
+  @include cover-screen
+
+.modal-background-only.upper-mask
+  transition: opacity 0.4s ease
+  background-color: transparent
+  opacity: 0
+  &.finished
+    opacity: 1
+
+.modal-background-only.upper-mask-nonblur
+  backdrop-filter: none
+  --webkit-backdrop-filter: none
+
 
 // Background
 
 .visual, .parallax
-  top: 0
-  height: calc(100vh + 48px)
+  height: calc(100vh + 24px)
   width: 100%
   position: absolute
   overflow: hidden
@@ -231,6 +457,7 @@ figure.full-screen
   position: relative
   will-change: transform
   display: flex
+  justify-content: center
   align-items: center
 
 
@@ -251,5 +478,13 @@ html:not(.disable-motion)
   .appear-stage-up.in-view
     transform: translateY(0)
     opacity: 1
+
+
+
+  .overview.wipe-up
+    // transition: transform $project-wipe-time $coverTransition
+    transition: transform $project-wipe-time $coverTransition
+    // cubic-bezier(.215,.61,.355,1)
+    transition-delay: $base-project-delay
 
 </style>

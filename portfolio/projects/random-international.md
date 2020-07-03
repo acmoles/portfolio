@@ -18,7 +18,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage rag="rag-6" :noise="true" ctaLabel="random-international.com" ctaUrl="https://www.random-international.com/"
+<Stage-ProjectStage rag="rag-6" titleRag="rag-1" platform="Product" ctaLabel="random-international.com" ctaUrl="https://www.random-international.com/"
 description="Fly is an interactive art installation built for the 4th Moscow Biennial of Contemporary Art.">
 
   <template v-slot:visual-background>
@@ -27,13 +27,36 @@ description="Fly is an interactive art installation built for the 4th Moscow Bie
     </figure>
   </template>
 
+<template v-slot:platform>
+
+Interactive art installation
+
+</template>
+
+<template v-slot:timeframe>
+
+2010
+
+</template>
+
+<template v-slot:my-role>
+
+Design engineer
+
+</template>
+
+<template v-slot:team>
+
+Engineering Manager
+~ Senior Creative Developer
+
+</template>
+
 </Stage-ProjectStage>
 
 :::
 
-<Content-ContextSection :box="true" rag="rag-4">
-
-<template v-slot:main>
+<Content-TextSection rag="rag-4" columnOffset="title-offset" padding="is-initial">
 
 <h2> {{ $page.frontmatter.subtitle }} </h2>
 
@@ -57,9 +80,7 @@ Fly studies the movement of objects and insects within a confined space. An abst
 
 the group’s work invites active participation. RANDOM INTERNATIONAL explores the human condition in an increasingly mechanised world through emotional yet physically intense experiences.  -->
 
-</template>
-
-<template v-slot:side>
+<template v-slot:aside>
 
 **Product**
 Interactive art installation
@@ -78,7 +99,7 @@ Engineering manager and senior creative coder
 
 </template>
 
-</Content-ContextSection>
+</Content-TextSection>
 
 
 
