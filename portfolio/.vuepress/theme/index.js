@@ -17,6 +17,7 @@ module.exports = (options, ctx) => ({
     'vuepress-plugin-reading-time',
     require('./plugins/plugin-outside-content/index.js'),
     require('./plugins/plugin-revealer/index.js'),
+    // TODO customise updatePopup and enable PWA
     ['@vuepress/pwa', {
       serviceWorker: false,
       updatePopup: false

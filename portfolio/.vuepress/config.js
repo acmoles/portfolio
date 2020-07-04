@@ -3,27 +3,32 @@ const path = require('path')
 module.exports = {
   dest: './dist',
   // temp: './tmp',
-  title: 'Anthony Moles Portfolio',
+  title: 'Anthony Moles | Portfolio',
   locales: {
       '/': {
         lang: 'en-GB',
-        title: 'ACM Portfolio',
-        description: 'Portfolio'
+        title: 'Anthony Moles | Portfolio',
+        description: 'I\'m a designer and leader creating useful and playful experiences centred on people.'
       }
   },
   head: [
-      ['link', { rel: 'icon', href: `/logo.png` }],
+      ['link', { rel: 'icon', type: `image/png`, sizes: `16x16`, href: `/icons/android-chrome-16x16.png` }],
+      ['link', { rel: 'icon', type: `image/png`, sizes: `32x32`, href: `/icons/android-chrome-32x32.png` }],
+      ['link', { rel: 'icon', type: `image/png`, sizes: `192x192`, href: `/icons/android-chrome-192x192.png` }],
+      ['link', { rel: 'icon', type: `image/png`, sizes: `512x512`, href: `/icons/android-chrome-512x512.png` }],
+      ['link', { rel: 'icon', type:'image/x-icon', href: `/favicon.ico` }],
+      ['link', { rel: 'shortcut icon', type:'image/x-icon', href: `/favicon.ico` }],
       ['link', { rel: 'manifest', href: '/manifest.json' }],
-      ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+      ['meta', { name: 'theme-color', content: '#1F2D3D' }],
       ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-      ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+      ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
       ['link', { rel: 'apple-touch-icon', href: `/icons/apple-touch-icon-152x152.png` }],
-      ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
+      ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#1F2D3D' }],
       ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
-      ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+      ['meta', { name: 'msapplication-TileColor', content: '#1F2D3D' }]
   ],
   ga: '',
-  description: 'This is your page description.',
+  description: 'I\'m a designer and leader creating useful and playful experiences centred on people.',
   base: '/',
   themeConfig: {
     nav: [
@@ -63,6 +68,7 @@ module.exports = {
       md.use(require('markdown-it-deflist'))
     }
   },
+  // TODO improve external link icon (css replacement right now)
   // chainMarkdown(config) {
   //   const { PLUGINS } = require('@vuepress/markdown')
   //   const originalLinkPlugin = require('@vuepress/markdown/lib/link.js');

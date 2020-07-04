@@ -72,7 +72,7 @@ In 2015 I helped pioneer customisable children’s toys at [Makielab.](/projects
 
 Firstly, I wanted to explore the possibility of a lightly constrained creation experience, able to generate infinite variations while being intuitive and fun to use. _I was convinced that suitable constraints could enhance the creativity of customers, rather than restrict it._ Secondly, to completely automate and outsource the fulfilment process.
 
-I also hoped to increase my empathy for colleagues and stakeholders by building a product end-to-end. To re-experience digital product development from other perspectives - founder, marketer, product, developer, operations, as well as design.
+I also hoped to increase my empathy for colleagues and stakeholders by building a product end-to-end. To re-experience digital product development from every perspective - founder, marketer, product, design, developer and operations.
 
 <!--
 
@@ -148,26 +148,26 @@ Entrepreneur
 <Content-PointsSection padding="is-large" rag="rag-5" :points="[
 { src:'/svg-icons/icon_search.svg', alt:'sad face', title:'Jewellery balanced market size and technical constraints', description:'Search keywords paired with customisation typically focused on personal appearance and self expression. Jewellery was among them and tends to be small, high value objects suitable for 3D printing.' },
 
-{ src:'/svg-icons/icon_conversation.svg', alt:'Group', title:'Creation seems to have lower demand than customisation', description:'Search keyword volume was higher for customisation. The language used by potential customers has implications for the value-proposition and communication. But it\'s also easier to rank for niche queries.' },
+{ src:'/svg-icons/icon_conversation.svg', alt:'Group', title:'People were talking about customisation and personalisation', description:'Search keyword volume was marginally higher for personalisation. Few people were signalling a desire for \'creative expression\'. This signalled a risk, but also an opportunity to unlock demand and rank for niche search queries.' },
 
-{ src:'/svg-icons/icon_gift.svg', alt:'clock', title:'Customised or personalised products tended to be gifts', description:'Based on competitor website messaging. Gifting remains highly seasonal. Google Consumer Barometer (2018) suggested more than 50% of fashion and accessories gift purchases were on mobile.' },
+{ src:'/svg-icons/icon_gift.svg', alt:'clock', title:'Customised and personalised products tend to be gifts', description:'Based on competitor website messaging. Gifting remains highly seasonal, with a shift to mobile. Google Consumer Barometer (2018) suggested more than 50% of fashion and accessories gift purchases were on mobile.' },
 
-{ src:'/svg-icons/icon_coffee.svg', alt:'lightbulb', title:'Customised gifts looked like a growing trend', description:'It wasn\'t hard to find designers in my network who had recently given a customised gift. They shared anecdotes which painted a picture of this happening increasingly often.' },
+{ src:'/svg-icons/icon_coffee.svg', alt:'lightbulb', title:'Customised gifts looked like a growing trend', description:'It wasn\'t hard to find designers in my network who had recently given a customised gift. They shared anecdotes suggesting a growing trend.' },
 
 { src:'/svg-icons/icon_neutral.svg', alt:'documents', title:'Non-technical people felt daunted by customisation tools', description:'Designers found the process of making their gifts empowering, while non-designers found it initially daunting and later frustrating. Sometimes they looked for expert help.' },
 
-{ src:'/svg-icons/icon_pendant.svg', alt:'device', title:'Pendants seemed more suitable than rings', description:'The majority of gifts among my interviewees were rings. Pendants came in second place. However, with rings, I foresaw difficulties such as sizing and gemstone fixtures.' },
+{ src:'/svg-icons/icon_pendant.svg', alt:'device', title:'Pendants seemed more suitable than rings', description:'The majority of gifts among my interviewees were rings. Pendants came in second place. However, with rings, I foresaw difficulties such as sizing and gemstone fixture.' },
 ]">
 
 <template v-slot:content>
 
 ## Research
 
-<p class="subtitle">
-  I informally interviewed four designers and one non&#8209;designer, each who had recently designed or commissioned bespoke jewellery.
-</p>
+My approach was to broadly investigate the mass customisation market and choose a product category based on estimated product-market fit. I used digital marketing techniques to gauge the market size.
 
-My approach was to broadly investigate the mass customisation market and choose a product category based on estimated product-market fit. I used digital marketing techniques to gauge the market size. I followed up with qualitative interviews.
+<p class="subtitle">
+  I followed up with qualitative interviews; four designers and one non&#8209;designer, each who had recently designed or commissioned bespoke jewellery.
+</p>
 
 </template>
 
@@ -369,7 +369,7 @@ Orange indicates features to be outsourced or removed for the pilot.
 My background in Industrial Design helped me assemble a list of promising 3D modelling tools. I extended it with input from designers in my network.
 </p>
 
-The search for a compelling customisation experience required an iterative approach. I set myself a series of exercises, for example reimagining a tool with simplified interaction or constrained capability. Then I would combine several such tools to see if interesting synergies emerged.
+The search for a compelling customisation experience required an iterative approach. I reimagined each tool with simplified interaction or constrained capability. Then I would combine several such tools to see if interesting synergies emerged.
 
 To formalise my thinking, I rated these ideas on _Expressiveness_ and (ease of) _Implementation_. During this process I began thinking of myself as 'unshackling' expressive modelling tools from their specialist software confines.
 
@@ -379,9 +379,9 @@ To formalise my thinking, I rated these ideas on _Expressiveness_ and (ease of) 
 
 #### Blender basic interactive
 
-I chose to proceed with an idea combining _Radial array_ and _Control geometry._ It was fun to use - often producing pleasing and unexpected outcomes.
+I chose to proceed with an idea combining _Radial array_ and _Control geometry._ It was fun to use, often producing pleasing and unexpected outcomes.
 
-Blender had proven a useful platform for experimentation. But I wasn't able to use it for value or usability testing because my subjects weren't fluent in the Blender interface.
+Blender had proven a useful platform for experimentation. But I wasn't able to use it for usability or value testing because my subjects weren't fluent in the Blender interface.
 
 </template>
 
@@ -389,9 +389,9 @@ Blender had proven a useful platform for experimentation. But I wasn't able to u
 
 #### WebGL basic interactive
 
-To overcome this limitation, I quickly built a basic yet functional prototype in WebGL. I also took the opportunity to explore various JS libraries before committing in production.
+To overcome this limitation, I built a basic yet functional prototype in WebGL. I also took the opportunity to explore various JS libraries before committing in production.
 
-All testers immediately grasped the affordance and moved the control points. I observed an attitude of curiosity, even among testers I expected to be daunted by customisation interfaces.
+_All testers immediately grasped the affordance and moved the control points._ I observed an attitude of curiosity, even among those I expected to be daunted by the interface.
 
 </template>
 
@@ -399,9 +399,9 @@ All testers immediately grasped the affordance and moved the control points. I o
 
 #### WebGL feasibility
 
-My growing concern was that customers could feel disconnected from the product they would eventually buy.
+I had a growing concern that customers could feel disconnected from the product they would eventually buy.
 
-I prioritised reaching a high level of graphical realism to mitigate this risk. Matcap shaders offered a solution which also met performance requirements.
+To mitigate this risk, I prioritised reaching a high level of graphical realism. Matcap shaders offered a solution that also met my performance requirements.
 
 </template>
 
@@ -416,7 +416,7 @@ I prioritised reaching a high level of graphical realism to mitigate this risk. 
 
 ## Lessons from user testing
 
-Before moving into high-fidelity design and development, I performed further usability testing on the proposed direction to validate design decisions, identify challenges, and iterate based on real user feedback.
+Before moving into high-fidelity design and development, I performed further usability testing on the proposed direction to validate design decisions, identify challenges, and iterate based on user feedback.
 
 </template>
 
@@ -424,8 +424,8 @@ Before moving into high-fidelity design and development, I performed further usa
 
 **Observation** | **Remedy** |
 --- | --- |
-_“I wish I could go back to the way I had it before”_ | I implemented an undo feature and reorganised the interface to accommodate its button |
-_“I have no idea what size it is”_ | I added a scale grid I and an introductory animation sequence, showing the pendant and chain in context |
+_“I wish I could go back to the way I had it before”_ | I implemented an undo feature and reorganised the interface to accommodate the button |
+_“I have no idea what size it is”_ | I added a scale grid and an introductory animation sequence, showing the pendant and chain in context |
 _“These messages just get in my way”_ Error messages (further discussion below) broke the creative flow and led to a frustrating experience | Now the user only encounters error messages once they enter the eyelet mode for the first time, thereby signalling a desire to finish the pendant and checkout. I also made error messages dismissable until the next user action |
 _“The first thing I wanted to do was push all the sliders to maximum”_ In some cases testers created the largest possible pendant | This signalled the need for another error condition - where the pendant design is unreasonably large - both too heavy to wear and very expensive. I also tried shrinking the design area but this felt constricting |
 {.table .is-fullwidth}
@@ -463,7 +463,7 @@ _“The first thing I wanted to do was push all the sliders to maximum”_ In so
   Guided by my findings, I was confident the customisation tool was ready to be shaped into an e&#8209;commerce flow.
 </p>
 
-At first I imagined a sequence of steps, often referred to as a 'wizard' pattern, believing this would increase usability. I built mockups of increasing fidelity and continued to test with users. I employed a hybrid approach, mixing static screens and a modified version of my WebGL prototype. But something was wrong; _somewhere along the way I had lost the magic of the earlier tests._
+At first I imagined a sequence of steps. I built mockups of increasing fidelity and continued to test with users. I employed a hybrid approach, mixing static screens with the WebGL prototype. But something was wrong; _somewhere along the way I had lost the magic of the earlier tests._
 
 </div>
 </div>
@@ -480,16 +480,16 @@ At first I imagined a sequence of steps, often referred to as a 'wizard' pattern
 <div class="columns">
 <div class="column is-two-thirds">
 
-I realised this was too cumbersome and restrictive. I evolved my design to include two 'modes' which users could toggle between - sculpt mode and layout mode. But the eureka moment finally came when I remembered that my earlier prototype featured none of this usability 'help' yet testers found it perfectly intuitive. Modes, albeit better than a wizard, still just got in users' way. I stripped it out.
+I switched from linear steps to 'modes' in an effort to address this, but my eureka moment came when I remembered that earlier prototypes featured none of this usability 'help' yet testers found them perfectly intuitive. Modes, albeit better than a steps, still just got in users' way.
 
-Where the wizard pattern did add value, was in separating the expressive phase of creation from tasks necessary to completing the order - adding the necklace chain eyelet, ensuring the pendant was valid for 3D printing and filling out details.
+Where they did add value was in separating the expressive phase of creation from the tasks necessary for completing the order, such as adding the necklace chain eyelet, ensuring the pendant was valid for 3D printing and filling out details.
 
 </div>
 </div>
 
 </Content-FreeSection>
 
-<Content-TextSection rag="rag-3" padding="is-medium-large" columnOffset="title-offset">
+<Content-TextSection rag="rag-3" padding="is-medium-large has-divider" columnOffset="title-offset">
 
 ## Input validation for 3D geometry
 
@@ -501,7 +501,7 @@ Offering users expressive tools introduced a challenging problem; how to ensure 
 4. The pendant is overly large
 { .wesen-list }
 
-I developed a system to detect each of these problems. The notification window begins by offering tips and later, when appropriate, reports geometry errors. I was aware of additional hard-to-detect problems such as non-manifold and thin geometry but I chose not to address them in the MVP since they rarely occurred, preferring to manually fix these models for customers.
+I developed systems to detect each of these problems. The notification window begins by offering tips. Later, when appropriate, it reports geometry errors. I was aware of additional hard-to-detect problems such as non-manifold and thin geometry but I chose not to address them in the MVP since they rarely occurred, preferring to manually fix these models for customers.
 
 <style lang="sass">
 
@@ -544,7 +544,7 @@ I developed a system to detect each of these problems. The notification window b
 
 ## Production assets
 
-Based on my wireframes and aided by the tightly scoped user journey, I was able to focus visual design effort on a minimal number of interfaces and assets. Some of my influences included the Airbnb Design System, Google Material Design and the design language of fashion and jewellery brands.
+Based on my wireframes and aided by the tightly scoped user journey, I was able to focus on visually designing a minimal set of interfaces and assets. Among my influences were the Airbnb Design System, Google Material Design and the design language of fashion and jewellery brands.
 
 </template>
 
@@ -579,7 +579,7 @@ I reused WIP samples for product photography, intending to revisit this in futur
 
 ## Development
 
-As I investigated technologies to power the e&#8209;commerce side of the experience, my main criteria was development speed. I wanted to avoid building common solutions like order management and payments. This led me to consider off-the-shelf platforms like Shopify and Magento. I found an even leaner solution. [Shapeways](https://www.shapeways.com/) (leading 3D printing web platform) offered an API with the capability to directly upload models to a private store hosted on their e-commerce platform. In this way, I could completely outsource checkout, payment and fulfilment. For further technical decisions, I drew on my experience at toucanBox and Makielab:
+As I investigated technologies to power the e&#8209;commerce side of the experience, my main criteria was development speed. I wanted to avoid building common solutions like order management and payments. This led me to consider off-the-shelf platforms like Shopify and Magento. I found an even leaner solution. [Shapeways](https://www.shapeways.com/) (leading 3D printing web platform) offers an API with the capability to directly upload models to a private store hosted on their e-commerce platform. In this way, I could completely outsource checkout, payment and fulfilment. For further technical decisions, I drew on my experience at toucanBox and Makielab:
 
 <!-- The question became what steps (if any) I would take to enhance users' checkout experience. I was already building 3D-print-ready  geometry on the Wesen backend and saving order records in a database. Connecting customers to this record would avoid foreseeable customer service challenges. Emailing this information would avoid the need for user accounts. So I decided to add email capability with Sendgrid. Customers receive an email with a checkout link and a link to their saved pendant, which they can modify and reorder. They can respond to the email with questions. -->
 
@@ -608,12 +608,13 @@ by enabling retrieval of saved content and quick CS responses
 --- | --- |
 Unity or Unreal are the de facto realtime 3D frameworks but they tend to increase the complexity of a web frontend build chain | Three.js is less fully-featured but perfectly serviceable for a simple 3D interface |
 Different 3D frameworks powering frontend and backend processing can lead to duplicated work and discrepancies between what the user sees and what is actually manufactured | Three.js can run the same code in the browser and on a Node.js server |
-Hosting websites and backend processes on physical infrastructure requires constant maintenance | Node.js / Express server on cloud infrastructure (Heroku) |
-In-house payment and order management systems are a considerable technical commitment | Outsource payment and order management to Shapeways (already the fulfillment partner). |
-User accounts can greatly improve the customer experience but they are a considerable technical overhead. | Send unique content links (saved pendant and checkout links) by email. Conduct all CS using the same email thread.  |
+Hosting websites and backend processes on physical infrastructure requires constant maintenance | Node.js / Express server on Heroku cloud infrastructure |
+User accounts can greatly improve the customer experience but they are a considerable technical overhead | Send unique content links (saved pendant and checkout links) by email. Conduct all CS using the same email thread  |
 {.table .is-fullwidth}
 
 </template>
+
+<!-- In-house payment and order management systems are a considerable technical commitment | Outsource payment and order management to Shapeways (already the fulfillment partner) | -->
 
 
 <template v-slot:aside>
@@ -687,7 +688,7 @@ Shapeways order API
 
 ### What went well
 
-Wesen features a compelling, usable customisation tool and enables customers to order their creation. A proportion of its audience don't consider themselves creative or technical. I satisfied my original success criteria, _Gifter friendly_ and _End-to-end._ I also significantly expanded my skills, growing deeper empathy for my product and engineering colleagues.
+Wesen features a compelling, usable customisation tool and enables customers to order their creation. A proportion of its audience don't consider themselves creative or technical. I was satisfied my original success criteria, _Gifter friendly_ and _End-to-end_, were met. I also significantly expanded my skills, growing deeper empathy for my product and engineering colleagues.
 
 ### Lessons learnt
 
@@ -697,7 +698,7 @@ Building a product oneself is empowering, but it's also inefficient and risky. F
 
 ### Going forward
 
-Wesen is no longer under active development. Possible next steps would be to add gift-card capability, revisit the value proposition and run a concerted marketing campaign. If that looked promising there are several other dimensions of the e-commerce experience which could be improved (e.g. reviews/testimonials, user generated content), as well as adding more jewellery types to the platform.
+Wesen is no longer under active development. Possible next steps include adding gift-card capability, revisiting the value proposition and running a concerted marketing campaign. If that looked promising there are several other dimensions of the e-commerce experience which could be improved (e.g. reviews, testimonials, user generated content), as well as adding more jewellery types to the platform.
 
 
 <!--

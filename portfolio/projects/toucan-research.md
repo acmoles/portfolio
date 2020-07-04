@@ -44,7 +44,6 @@ Responsive web app
 Project lead
 ~ UX/UI Designer
 ~ Front-end Developer
-~ Evaluation
 
 </template>
 
@@ -71,7 +70,7 @@ In my hybrid role as digital product designer and R&D manager, I was given a bro
 
 Consequently, some initiatives aimed to improve the experience for children, some for parents and typically both benefited. For example in early 2017 I led a project to refine the onboarding flow for new customers, that is, the parents ([read the case study](/projects/toucanbox)).
 
-Create by toucanBox aims to move the needle for _customer activation_ - the rate at which trialists convert to fully paying subscribers. We knew the top two reasons for cancellation in trial were _affordability_ and _value for money._ My hypothesis was that exclusive digital content could help address this, without increasing the variable cost of the box.
+Create by toucanBox aims to move the needle of _customer activation_ - the rate at which trialists convert to fully paying subscribers. We knew the top two reasons for cancellation in trial were _affordability_ and _value for money_. My hypothesis was that exclusive digital content could help address this, without increasing the variable cost of the box.
 
 <template v-slot:aside>
 
@@ -83,8 +82,10 @@ Establish to what extent digital content linked to the trial box can increase ac
 
 Promising pilot with some very engaged users but high friction moving to a device from the magazine reduced the reach, leading to low overall impact on activation.
 
-_I have omitted confidential information in this case study. All work is my own unless stated otherwise._
+_I have omitted confidential information in this case study._
 { .secondary }
+
+<!-- All work is my own unless stated otherwise. -->
 
 </template>
 
@@ -104,9 +105,9 @@ _I have omitted confidential information in this case study. All work is my own 
 { src:'/svg-icons/icon_sad.svg', alt:'sad face', title:'The box often didn’t seem like good value for money', description:'Even satisfied customers felt the product was somewhat overpriced. They focussed on the value of the materials, rather than the holistic experience.' },
 { src:'/svg-icons/icon_time.svg', alt:'clock', title:'The duration of the toucanBox experience could feel short', description:'Some customers would craft with their children, others would use the box to get a moment of peace. In both cases they wanted a longer lasting experience.' },
 { src:'/svg-icons/icon_idea.svg', alt:'lightbulb', title:'What would be distinctive about digital content by toucanBox?', description:'toucanBox customers want to offer their children hands-on play away from the screen. So any digital content could not be a screen-only experience.' },
-{ src:'/svg-icons/icon_search.svg', alt:'search', title:'Top apps and search queries suggested areas of focus', description:'Creative, Learning, Exploration, Rhythm, Roleplay, Nurture and Story were the top categories on app stores and web search.' },
+{ src:'/svg-icons/icon_search.svg', alt:'search', title:'Top apps and search queries suggested areas of focus', description:'Creative, Learning, Exploration, Rhythm, Roleplay, Nurture and Story were the top categories in app stores and web search.' },
 { src:'/svg-icons/icon_docs.svg', alt:'documents', title:'Device access and ability lifts at the upper range of our age group', description:'A survey of parents in Germany (2016, The Kids Want Mobile) found that device access, frequency, session duration and child ability increase rapidly from age 6.' },
-{ src:'/svg-icons/icon_device.svg', alt:'device', title:'Digital toys for young children have specific characteristics', description:'Based on competitor research I could see that apps and games targeting our age group typically aren\'t competitive. They offer open-ended play.'},
+{ src:'/svg-icons/icon_device.svg', alt:'device', title:'Digital toys for young children have specific characteristics', description:'Based on competitor research I could see that apps and games targeting our age group are not typically competitive. They offer open-ended play.'},
 ]">
 
 <template v-slot:content>
@@ -117,7 +118,12 @@ _I have omitted confidential information in this case study. All work is my own 
   I asked existing toucanBox customers what <em>value for money</em> means to them and collected their attitudes to children's digital media.
 </p>
 
-My approach was to engage parents with an in-depth interview, intended to flesh out the insights from our automatic unsubscriber survey. Simultaneously I would offer their children popular apps and games to play on an iPhone. Once the interview concluded we switched our attention to what the child was doing, discussing the app and asking questions of the child. This way I gathered detailed qualitative information from the parents and play tested competitor apps with the child.
+While I engaged parents with an in-depth interview, I simultaneously offered their children a selection of apps to play on an iPhone. We later switched our attention to the child, discussed what they were doing and asked them questions. This way I fleshed out my existing data insights with qualitative information and play tested competitor apps.
+
+<!-- to flesh out our existing data insights (unsubscribe reasons)
+Once the interview concluded we switched our attention
+
+-->
 
 </template>
 
@@ -133,9 +139,9 @@ My approach was to engage parents with an in-depth interview, intended to flesh 
 
 ## User journey and ideation
 
-What ways can customers access our digital content? I foresaw three possible routes; dedicated toucanBox native app, online accounts or URL/QR code printed in the box. There was a balance to be struck between the friction to reach the content and the effort required to build the delivery medium. For a pilot, it was hard to justify building a native app or adding the business logic necessary for content to automatically appear in customers' accounts, making printed URLs the natural choice.
+What ways can customers access our digital content? I foresaw three possible routes; dedicated toucanBox native app, online accounts or URL/QR code printed in the box. There was a balance to be struck between the friction when reaching the content and the effort required to build the delivery medium. For a pilot, it was hard to justify building a native app or adding the business logic necessary for content to automatically appear in customers' accounts, making printed URLs the natural choice.
 
-I facilitated a company-wide brainstorm for content ideas. They broadly split into two themes _Interactive activity_ and _Content hub._ We agreed to spin out the second concept, into what later became toucanBox Activities Hub (with a focus on SEO and customer acquisition).
+I facilitated a company-wide brainstorm for content ideas. They broadly split into two themes _Interactive activity_ and _Content hub_. We agreed to spin out the second concept, into what later became toucanBox Activities Hub (with a focus on SEO and customer acquisition).
 
 <!-- [User profiles](/projects/toucanbox/#who-are-our-customers)  -->
 
@@ -189,8 +195,8 @@ The magazine in the first box features a double page spread introducing Create b
 Add 3D animated characters, enhancements and storytelling to a child’s finished craft project.
 
 - Children found the concept very compelling{ .check }
-- We observed them using AR in creative ways we didnt foresee "Look I've got wings on my arm"{ .check }
-- No support for AR in current web browsers{ .cross }
+- They used AR in unforeseen, creative ways: "Look I've got wings on my arm"{ .check }
+- No support for AR in web browsers (2016){ .cross }
 { .check-list }
 
 </template>
@@ -199,7 +205,7 @@ Add 3D animated characters, enhancements and storytelling to a child’s finishe
 
 #### Extended storytelling
 
-A story in the magazine, with an interactive finale online or in an app. Each new craft is a chapter in a digital adventure.
+A comic in the magazine, with an interactive finale. Each craft is a new chapter in a digital adventure.
 
 - This prototype excited children the least{ .cross }
 - The interruption in the story broke the children's attention{ .cross }
@@ -214,7 +220,7 @@ A story in the magazine, with an interactive finale online or in an app. Each ne
 Then print it out and colour it in. Toucanoos are cute triangular characters which feature in the toucanBox activity magazine.
 
 - Engrossed children for up to 45 minutes{ .check }
-- Digital/physical crossover experience{ .check }
+- Digital / physical crossover experience{ .check }
 - Not linked to the box theme{ .cross }
 { .check-list }
 
@@ -230,7 +236,7 @@ Then print it out and colour it in. Toucanoos are cute triangular characters whi
 
 ## Detailing a candidate
 
-My next steps were to refine the Toucanoo prototype by taking action on test feedback and improving the visual design.
+My next steps were to refine the Toucanoo colouring sheet prototype by taking action on test feedback and improving the visual design.
 
 </template>
 
@@ -238,7 +244,7 @@ My next steps were to refine the Toucanoo prototype by taking action on test fee
 
 **Observation** | **Remedy** |
 --- | --- |
-*"My Toucanoo is called Wendy"*  Many children named their Toucanoos, even if they werent able to write the names | I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout |
+*"My Toucanoo is called Wendy"*  Many children named their Toucanoos, even if they werent able to write the names | I added a text box in the print modal where an older child or parent could type the name, which appears on the printout |
 *"Theres no skirt!"*  Several important accessories were clearly missing | I added skirts, wellington boots and several other accessories |
 *"I dont want this one"*  Children wanted to be able to delete accessories | I observed children dragging items off the screen, attempting to delete them, so made that actually work |
 Certain types of accessory like hats, clothes and shoes quickly cluttered the screen and didnt make sense out of their intended positions | I made new placements in specific categories (e.g. hair) remove the previous accessory of that type. This proved to be an intuitive limitation |
@@ -269,13 +275,13 @@ Low-fi prototype of the Toucanoo colouring sheet maker, used in early testing
 
 
 
-<Content-ImageFrames-MainImageSection imageClass="is-5by3" url="/images/toucan-rnd/colouring-design.png" alt="placeholder" :aside="true" >
+<Content-ImageFrames-MainImageSection rag="rag-3" imageClass="is-5by3" url="/images/toucan-rnd/colouring-design.png" alt="placeholder" :aside="true" >
 
 <template v-slot:content>
 
 ## Visual design
 
-In early 2018 the Creative Team updated the look and feel of the activity magazine. In order to maximise consistency in the journey from magazine to web content, I chose to update the visual style of the experience. It gave a taste of how the new look might translate into UI across toucanBox's web products.
+In early 2018 the Creative Team updated the look and feel of the activity magazine. In order to maximise consistency in the journey from magazine to web content, I chose to update the visual style of the experience. It also acted as a preview of how the new look might translate into UI across the website.
 
 </template>
 
@@ -319,7 +325,7 @@ Matching the style of the new toucanBox magazine required a different look and f
 </p> -->
 
 <p style="padding-right: 4em;">
-I selected WebGL backed HTML Canvas rather than DOM or SVG. My rationale was performance on low-spec mobile devices, which could lean on their graphics processor (GPU) to keep frame-rate high and animations smooth.
+I selected WebGL Canvas rather than DOM or SVG. My rationale was performance on low-spec mobile devices, which could lean on their graphics processor (GPU) to keep frame-rate high and animations smooth.
 </p>
 
 </template>
@@ -332,7 +338,7 @@ I selected WebGL backed HTML Canvas rather than DOM or SVG. My rationale was per
 
 <figcaption>
 
-Dozens of Toucanoo accessories packed on a compressed PNG sprite sheet using Texturepacker
+Dozens of Toucanoo accessories packed on a compressed PNG sprite sheet
 
 </figcaption>
 
@@ -346,7 +352,7 @@ Dozens of Toucanoo accessories packed on a compressed PNG sprite sheet using Tex
 
 <figcaption>
 
-Tuning the tweens and sinusoidal functions behind the motion sometimes produced unexpected results.
+Tuning tweens and sinusoidal motion sometimes produced unexpected results
 
 </figcaption>
 
@@ -394,7 +400,7 @@ Tuning the tweens and sinusoidal functions behind the motion sometimes produced 
 
 <Content-TextSection rag="rag-6">
 
-<p class="subtitle">
+<p class="subtitle" style="padding-right: 3em;">
   "When I try to imagine what kind of app or game toucanBox would make, this feels exactly right."
 </p>
 
@@ -404,12 +410,17 @@ The pilot launched in the first box magazine for all trialists. Those customers 
 
 ### Lessons Learnt
 
-I measured _no noticeable change to activation rate_ due to low reach. When I followed up with customers, I discovered the cause was a combination of the friction going from magazine to online and a mental model for arts and crafts which didn't include interactive content. Only once they understood what it was were they interested. I realised it would require considerable effort to educate our customers at scale, with an uncertain outcome.
+I measured _no noticeable change in activation rate_ due to low reach. When I followed up with customers, I discovered the cause was a combination of friction reaching the content and a mental model that didn't expect it. Only once they understood what it was were they interested. I realised it would require considerable effort to educate our customers at scale, with an uncertain outcome.
 
 ### Going forward
 
-Was there a future for digital interactive experiences as part of the toucanBox value proposition? Not in the short-term. The pilot had proven that departing from the core value proposition had potential, but that resources would be better spent focussing on what was already working.
-
+<p>
+Was there a future for digital interactive experiences as part of the toucanBox value proposition? Perhaps, buit not in the short-term. The pilot proved that departing from the core value proposition could have potential, but that resources would probably be better spent focussing on what was already working. My next initiatives focussed on <router-link to="/projects/toucanbox">optimising customer onboarding</router-link>, addressing known pain points and <Content-ModalLink label="enhancing the subscription experience">
+<template v-slot:modal>
+<Content :page-key="$site.pages.find(p => p.path === '/extra/toucanbox-personalisation/').key"/>
+</template>
+</Content-ModalLink>.
+</p>
 
 <template slot="aside">
 

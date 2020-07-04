@@ -74,6 +74,10 @@ export default {
       &:nth-child(#{$i + 1})
         background: hsl(167°, 68%, 13% + random(30))
 
+  .blue .particle
+    @for $i from 0 to 128
+      &:nth-child(#{$i + 1})
+        background: hsl(200, 100%, 56% + random(30))
 
 
 </style>

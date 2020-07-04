@@ -600,7 +600,7 @@ Stompy Robot [Game Jam](/#)
 
 <About-TimelineItem type="Role">
 
-Product Manager, Native Apps team
+Product Manager, Mobile Apps team
 
 </About-TimelineItem>
 <About-TimelineItem type="Read" label="Inspired by Marty Cagan"/>
