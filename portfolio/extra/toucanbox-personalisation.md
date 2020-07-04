@@ -25,7 +25,7 @@ The best products elevate a commodity (like music or holidays, or crafts in this
 
 The next challenge was customer retention. How might we make customers so satisfied with toucanBox that they want to stay subscribed for longer? Research offered a clear answer: _Get the right craft box to the right customer in the right quantity_. With a bespoke technology platform and a direct relationship with customers, toucanBox was uniquely positioned to leverage a personalised experience.
 
-I created several concepts, the most promising of which we named the _Box builder_. We tested live-data prototypes on a limited audience in production, with promising results. Sadly I was unable to finish this project before my move to Berlin. I hired, onboarded and handed over the project to a new UX designer. It's now released.
+I created several concepts, the most promising of which we named the _Box builder_. We tested live-data prototypes on a limited audience in production, with promising results. Sadly I was unable to finish this project before my move to Berlin. I hired, onboarded and handed over the project to a new UX designer.
 
 <div class="columns" style="padding-top: 2em;">
 <div class="column">
@@ -58,7 +58,12 @@ I created several concepts, the most promising of which we named the _Box builde
 
 </Content-TextSection>
 
-<!-- <Content-ImageFrames-FullImageSection url="/images/toucanBox/personalisation-montage.jpg" alt="Personalisation discovery montage"/>
+<!--
+
+ It's now released.
+
+
+ <Content-ImageFrames-FullImageSection url="/images/toucanBox/personalisation-montage.jpg" alt="Personalisation discovery montage"/>
 
 
 
