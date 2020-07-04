@@ -71,5 +71,6 @@ export default {
     canvas
       position: relative
       top: 48px
+      @include make3d
 
 </style>

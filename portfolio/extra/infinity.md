@@ -27,26 +27,26 @@ hasFooter: false
 
 <h2> Disney Infinite Me </h2>
 <p class="rag-3">
-I worked closely with the team at Disney to translate Makies tech for Disney Infinity. My concept was to use a parameterised base figure, similar to the Makies doll head. Customisable variables would include height, build, face shape etc. This would also be rigged for animation, enabling posing, clothes and accessories.
+I worked closely with the team at Disney to envision how Makies tech could be applied to Disney Infinity. Our approach involved a parameterised base figure, similar to the Makies doll head, with customisable variables like height, build, face, pose, clothing and accessories. We had a working prototype of the concept.
 </p>
 
 </template>
 
 <template slot="slot1">
 
-I made numerous sketches, exploring which variables were most important for creating diverse characters.
+I sketched to explore which variables were most important for creating diverse characters
 
 </template>
 
 <template slot="slot2">
 
-Costumes and equipment from various Disney IPs can be mixed and matched creating unique combinations of abilities.
+Costumes and equipment from various Disney IPs can be mixed and matched
 
 </template>
 
 <template slot="slot3">
 
-I created several prototypes to demonstrate the concept and explore manufacturing solutions.
+I created several prototypes to demonstrate the concept and explore manufacturing solutions
 
 </template>
 </Content-ImageFrames-SquareImagesRow>

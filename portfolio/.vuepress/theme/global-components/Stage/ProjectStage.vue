@@ -292,6 +292,7 @@ export default {
 // Stage
 
 .stage
+  @include make3d
   display: flex
   flex-direction: column
   overflow: hidden
@@ -317,6 +318,8 @@ export default {
       margin-bottom: 0
     .columns
       justify-content: space-between
+      will-change: transform
+      @include make3d
     @media screen and (min-width: $tablet)
       padding-top: 8em
       padding-bottom: 3em
@@ -330,12 +333,13 @@ export default {
     @media screen and (min-width: $tablet)
       font-size: 3.5em
 
-.stage, .stage-intro, .visual
-  transform: translate3d(0,0,0)
+// .stage, .stage-intro, .visual
+//   transform: translate3d(0,0,0)
 
 // Overview
 
 .overview
+  @include make3d
   display: flex
   flex-grow: 1
   flex-direction: column
@@ -407,6 +411,7 @@ export default {
   @include cover-screen
 
 .modal-background-only.upper-mask
+  @include make3d
   transition: opacity 0.4s ease
   background-color: transparent
   opacity: 0
@@ -426,6 +431,7 @@ export default {
   position: absolute
   overflow: hidden
   will-change: transform
+  @include make3d
   top: -24px
   @media screen and (min-width: $tablet)
     height: calc(100vh + 24px)

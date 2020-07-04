@@ -64,10 +64,10 @@ CTO
 Makielab was a mobile games and e-commerce startup acquired by Disney in 2016. We created Makies, an award-winning customisable digital avatar, which could be ordered as a bespoke 3D printed toy.
 </p>
 
-Monetising mobile games is a tricky subject, particularly when it comes to children. Makielab was founded to explore a new angle on the problem by enabling children to buy physical products based on their unique in-game content. To this end, the company focused both on mobile game development and on e-commerce and toy manufacture.
+Monetising mobile games is a tricky subject, particularly when it comes to children. Makielab was founded to explore a new angle on the problem by enabling children to buy physical products based on their unique in-game content. To this end, the company focused equally on mobile games, toys and e-commerce.
 
 <p>
-I was part of the agile product team responsible for the website and physical products. We worked closely with the games team to ensure a holistic experience across touch-points and I spanned teams as we developed new toys and experiences leveraging the underlying technology. One such project involved a partnership with Disney via the Disney/Techstars accelerator where I demonstrated the possibility of personalised
+ I worked across teams as we developed Makies (below) and new toy experiences leveraging the underlying technology. One such project involved a partnership with Disney via the Disney / Techstars accelerator, where I demonstrated the possibility of personalised
 
 <Content-ModalLink label="Disney Infinity">
 <template v-slot:modal>
@@ -79,9 +79,9 @@ I was part of the agile product team responsible for the website and physical pr
 figures.
 </p>
 
-With [Sprint](/extra/sprint) I was already exploring the possibility of toy manufacture without the usual requisite investment (tooling, factories etc) prior to joining Makielab.
+Before joining Makielab I was already exploring the possibility of toy manufacture without the usual requisite investment (tooling, factories etc) with [Sprint](/extra/sprint).
 
-
+<!-- I was part of the agile product team responsible for the website and physical products. We worked closely with the games team to ensure a holistic experience across touch-points and I spanned teams -->
 
 <template v-slot:aside>
 
@@ -98,11 +98,11 @@ With [Sprint](/extra/sprint) I was already exploring the possibility of toy manu
 
 ## Makies
 
-<p class="subtitle" style="padding-right: 4em;">
+<p class="subtitle" style="padding-right: 6em;">
   Creative dolls for creative kids and the world's first 3D printed toys.
 </p>
 
-Makies are toys with a digital twin. They're the child's personalised avatar for Makielab's mobile games but they're also a physical toy which encourages hands-on creativity, crafting, DIY making, modification and learning. Makies are designed to get children excited about technology. They can be extended with Arduino kits, among others. Each Makie is hand-assembled in the UK.
+Makies are toys with a digital twin. They're the child's personalised avatar for Makielab's mobile games but they're also a physical toy which encourages hands-on creativity, crafting, DIY making, modification and learning. Makies are designed to get children excited about technology and can be extended with Arduino kits. Each Makie is hand-assembled in the UK.
 
 <!-- Character with a digital and physical existence. Personalised by the child, avatar/character from the mobile game or made online before purchase. On-demand manufacture. Creative, DIY toy, crafting, hands-on play/learning, modification e.g. Arduino, RFID, RC. Counterpart to on-screen play. Get children excited about technology, particularly girls. Sustainable and locally made. -->
 

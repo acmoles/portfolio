@@ -13,6 +13,12 @@
         <slot/>
       </div>
 
+      <button class="sidebar-button modal-close">
+        <i class="icon" aria-hidden="true">
+          <img src="/svg-icons/icon_close.svg" alt="close icon">
+        </i>
+      </button>
+
     </div>
   </portal>
 </template>
@@ -122,7 +128,6 @@ export default {
     overflow-y: hidden
     @media screen and (max-width: $tablet)
       overflow-y: scroll
-    width: calc( 100% - 2em )
 
   .video-wrapper
     max-width: 42vh
@@ -130,5 +135,10 @@ export default {
     // .image
     //   max-height: calc( 100% - 2em )
     //   overflow: hidden
+
+.modal-close
+  position: absolute
+  top: 0
+  right: 0
 
 </style>

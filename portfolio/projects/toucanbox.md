@@ -129,13 +129,13 @@ As project lead, I guided the organisation through a human-centred process of re
 
 ###  The challenge
 
-How might we increase funnel conversion rate; achieving our business goal but also helping our users achieve their goals. How might we build a shared organisational understanding of the user’s journey.
+How might we increase funnel conversion rate; achieving our business goal but also helping our customers achieve their goals. How might we build a shared organisational understanding of the customer journey.
 
 ### The outcome
 
-A usable, reassuring, and technologically sustainable homepage and signup experience which raised funnel conversion rate by an average of **25%** while reducing messaging related CS cases.
+A usable, reassuring, and technologically sustainable homepage and signup experience which raised funnel conversion rate by an average of **25%** while reducing messaging related customer service cases.
 
-_I have omitted confidential information in this case study. All work is my own unless stated otherwise._
+_I have omitted confidential information in this case study._
 { .secondary }
 
 </template>
@@ -181,7 +181,7 @@ Project Management
 
 
 
-<Content-PointsSection padding="is-large"  :points="[
+<Content-PointsSection padding="is-large" :points="[
 
 { src:'/svg-icons/icon_device.svg', alt:'device', title:'Prospective customers are usually on their phones', description:'85% of users accessed the website on mobile or tablet. The most common source was our social media ads.' },
 
@@ -189,11 +189,11 @@ Project Management
 
 { src:'/svg-icons/icon_repeat.svg', alt:'repeat', title:'We were pushing users into the signup funnel too soon', description:'Many of the signup dropouts returned to the homepage and eventually converted.' },
 
-{ src:'/svg-icons/icon_understanding.svg', alt:'question', title:'It wasn’t clear in our messaging that we offer a subscription', description:'This was a frequent CS complaint. On average, users only spent 30s on the landing page and 75% didn\'t scroll far enough to find key information.' },
+{ src:'/svg-icons/icon_understanding.svg', alt:'question', title:'It wasn’t clear in our messaging that we offer a subscription', description:'This was a frequent complaint. On average, users only spent 30s on the landing page and 75% didn\'t scroll far enough to find key information.' },
 
-{ src:'/svg-icons/icon_visible.svg', alt:'eye', title:'We need more imagery showing the box contents and breadth of the range', description:'This was the most common theme in user and prospect interviews. It was a strength that we weren\'t leveraging.' },
+{ src:'/svg-icons/icon_visible.svg', alt:'eye', title:'We needed more box imagery showing breadth of the range', description:'This was the most common theme in user and prospect interviews. It was a strength that we weren\'t leveraging.' },
 
-{ src:'/svg-icons/icon_sad.svg', alt:'sad face', title:'Lack of feedback that a trial code was applied caused anxiety', description:'I was aware of this from CS questions and by usability testing the existing signup funnel. It was the cause of the strongest negative emotions I encountered.' },
+{ src:'/svg-icons/icon_sad.svg', alt:'sad face', title:'Lack of feedback that a trial code was applied caused anxiety', description:'I was aware of this from complaints and testing. It was the cause of the strongest negative emotions I encountered.' },
 
 ]">
 
@@ -202,10 +202,10 @@ Project Management
 ## Research
 
 <p class="subtitle">
-  My approach to customer and non-customer interviews consisted of a dialogue to uncover core motivations <em>and</em> usability testing all aspects of the current website.
+  I usability tested the existing flow and engaged both customers and non-customers in a dialogue to uncover core motivations.
 </p>
 
-To supplement this, I collected data insights and stakeholder knowledge from across the business; customer service, website analytics, net promoter score (NPS), customer surveys and the production database, sometimes asking new questions of our data to fill in the gaps (including writing a few database queries of my own). Along the way, I captured insights in a central location accessible to the whole organisation.
+To supplement this, I collected data insights and stakeholder knowledge from across the business; customer service (CS), website analytics, net promoter score (NPS), customer surveys and the production database, sometimes asking new questions of our data to fill in the gaps (including writing a few database queries of my own). Along the way, I captured insights in a central location accessible to the whole organisation.
 
 
 
@@ -244,7 +244,7 @@ Through internal stakeholder consultation and customer interviews, I identified 
 
 *Buyer persona*
 
-In general it’s the parent who responds to our advertising and comms, makes the purchase, manages the subscription and engages with our customer care.
+In general it’s the parent who responds to our advertising and comms, makes the purchase, manages the subscription and engages with customer service.
 
 <br>
 
@@ -294,7 +294,7 @@ A family friend or relative. Possibly already a customer.
 
 *User persona*
 
-The box experience is all about the child. If they enjoy it, this drives the decision to remain subscribed. They want to be entertained and to do what their friends are doing or what they've seen on TV or tried at school.
+The box experience is all about the child. Their enjoyment drives the decision to remain subscribed. They want to be entertained or to do what they've seen on TV or tried at school.
 
 <!-- <br> -->
 
@@ -325,13 +325,15 @@ The box experience is all about the child. If they enjoy it, this drives the dec
 
 ## Collaboration and objectives
 
-Internal stakeholder engagement was crucial to understand the overarching business goals and challenges, but also to build a sense of ownership in the project outcomes. I needed to establish a 'product mindset' around the online experience. This would help us to continuously measure, evaluate, and iterate the platform on an ongoing basis.
+Internal stakeholder engagement was crucial to understand the overarching business goals and challenges, but also to build a sense of ownership in the project outcomes. I needed to establish a _'product mindset'_ around the online experience, so that we would continue to measure, evaluate, and iterate the platform on an ongoing basis.
 
-The foundation was already laid by defining the problems in an inclusive process. My next step was to involve key stakeholders in a journey mapping workshop to visualise the front- and back-stage activities involved in the subscription experience. This not only helped me gain a better understanding of the details, it also helped other departments empathise with the customer.
+I involved key stakeholders in a journey mapping workshop to visualise the front- and back-stage activities comprising a subscription. This equipped me with important foundational knowledge but also helped other departments empathise with the customer. I followed up with a second workshop, this time focussed on optimising the core value proposition, messaging and content hierarchy. We used our new mission statement as a starting point: _“Unlocking your creativity one box at a time.”_
 
-I followed up with a second workshop, this time focussed on our core value proposition. My goal was to optimise messaging and content hierarchy. We used our new mission statement as a starting point: _“Unlocking your creativity one box at a time.”_ As well as generating some snappy copy, we realised we were mixing up 'Why toucanBox' and 'How it works'. Going forward we knew to avoid this pitfall.
+<!-- As well as generating some snappy copy, we realised we were mixing up 'Why toucanBox' and 'How it works'. Going forward we knew to avoid this pitfall.
+In a technique inspired by the product agency [Made By Many](https://www.madebymany.com/)
+-->
 
-In a technique inspired by the product agency [Made By Many](https://www.madebymany.com/) I summarised our insights into six 'Product Design Principles' each with suggested ideation starting points.
+I summarised our insights into six 'Product Principles' each with suggested ideation starting points:
 
 1\. Easy	&nbsp;	&nbsp;2. Clear	&nbsp;	&nbsp;3. Trustworthy	&nbsp;	&nbsp;4. Open	&nbsp;	&nbsp;5. Personalised	&nbsp;	&nbsp;6. Flexible
 {.principles}
@@ -344,8 +346,7 @@ In a technique inspired by the product agency [Made By Many](https://www.madebym
 </style>
 
 
-Since our objective was to increase conversion rate, we agreed to focus on the first two principles as the most relevant. This enabled me to define clear measures of success through general and channel-specific KPIs.
-
+We agreed the first two principles were most relevant to our goal of increasing conversion rate. This focus enabled me to define clear measures of success through general and channel-specific KPIs.
 
 <!-- ‘Why toucanBox?’ and ‘How it works.’
 
@@ -404,7 +405,7 @@ Easy, Clear, Open and Trustworthy with an overhaul of the acquisition funnel and
 
 Refine how we communicate the toucanBox value proposition with messaging and content optimised for fast comprehension.
 
-Minimise misunderstanding of the value proposition and effectively translate our typical marketing messages “free craft box” into the full picture “toucanBox is a craft box subscription you can try for free”.
+Minimise misunderstanding and effectively translate our typical marketing messages “free craft box” into the full picture “toucanBox is a craft box subscription you can try for free”.
 
 Reduce anxiety about price and discounts by providing clear and timely feedback.
 
@@ -420,7 +421,7 @@ Reduce anxiety about price and discounts by providing clear and timely feedback.
 
 <div class="small">
 
-Enable comparison between the three product types.
+Enable comparison between the three box sizes.
 
 Minimise the number of steps, clicks and details required to complete signup.
 
@@ -457,7 +458,7 @@ Establish a consistent UI language with a living design system.
 <Content-InfoBox :hasIcon="true" :hasAction="true" type="modal" label="See principles" style="margin-bottom: 3em;">
 
 <p style="padding-right: 1em;">
-I gathered everything we learnt about our users into a set of principles the whole organisation could access and benefit from.
+I gathered everything we learnt about our users into a set of 'Product Principles' the whole organisation could access and benefit from.
 </p>
 
 <template slot="modal">
@@ -485,7 +486,7 @@ I gathered everything we learnt about our users into a set of principles the who
 
 
 
-<Content-ImageFrames-SquareImagesRow rag="rag-3" :images="[
+<Content-ImageFrames-SquareImagesRow rag="rag-4" :images="[
 { url:'/images/toucanBox/main-stage-square.png', alt:'Optimise the \'main stage\'', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
   type: 'modal',
   label: 'Iterations',
@@ -504,12 +505,14 @@ I gathered everything we learnt about our users into a set of principles the who
 ## Testing prototypes
 
 <p class="subtitle">
-  Having identified the problems facing users and generated strategic objectives by involving the whole organisation, my next step was to iterate towards design solutions.
+  Equipped with strategic objectives generated by the whole organisation, my next step was to iterate towards a design solution.
 </p>
 
-Four design challenges stood out as critical to the project’s success; the 'main stage', product section, site navigation and the details form. Insights from the journey mapping and value proposition workshops enabled me to rapidly iterate flow, information architecture, usability, interface and visual design from a strong foundation. Nevertheless, I didn't solely rely on upfront research and tested constantly with stakeholders and users.
+Four design challenges stood out as critical to the project’s success; the 'main stage', product section, site navigation and the details form. I didn't rely solely on upfront research and tested continuously with stakeholders and users. NB: trialist mode is activated when a user enters a valid discount code or if they arrive from a paid marketing source with a URL embedded code.
 
-NB: Trialist mode is activated when a user enters a valid discount code or if they arrive from a paid marketing source with a URL embedded code.
+<!-- Insights from the journey mapping and value proposition workshops enabled me to rapidly iterate flow, information architecture, usability, interface and visual design from a strong foundation. Nevertheless, I didn't solely rely on upfront research and tested constantly with stakeholders and users. -->
+
+
 
 
 <!-- Rapid wireframing and prototyping
@@ -558,7 +561,7 @@ Leveraging our newly optimised messaging to communicate the value proposition cl
 
 #### Product section
 
-Enable comparison between each box, while emphasising their different propositions.
+Enabling comparison between each box, while emphasising their different propositions.
 
 - Compact vertically stacking cards with detail views{ .check }
 - Not neglecting desktop users - three column layout{ .check }
@@ -654,9 +657,10 @@ Splitting fieldsets onto separate pages (mobile and desktop) with a continue but
 
 #### Choose a subscription plan
 
-I experimented with adding additional choice at signup but found this reduced conversion rate. A small uptick in retention didn't offset the effect. Subsequent projects would focus on retention.
+We experimented with adding additional choice at signup but found this reduced conversion rate. A small uptick in retention didn't offset the effect.
 
 - Upsell customers at signup{ .check }
+- Retention was a promising future focus{ .check }
 - Too much upfront commitment for most potential customers{ .stop }
 { .check-list }
 
@@ -682,13 +686,13 @@ I experimented with adding additional choice at signup but found this reduced co
 
 
 
-<Content-MainAsideSection padding="is-large" rag="rag-4" :aside="true" columnOffset="table-offset" page1Label="Landing page" page2Label="Signup funnel">
+<Content-MainAsideSection padding="is-large has-divider" rag="rag-4" :aside="true" columnOffset="table-offset" page1Label="Landing page" page2Label="Signup funnel">
 
 <template slot="content">
 
 ## Lessons from user testing
 
-I led usability testing of the new acquisition funnel designs with internal stakeholders and external testers. The appropriate level of fidelity was different for each proposed initiative and audience. Static images, wireframes and paper prototypes sufficed for internal stakeholders, greatly increasing iteration speed. For external testing I typically made use of inVision and detailed HTML prototypes, recording videos to be viewed by the whole project team.
+I conducted usability testing of the funnel designs with internal stakeholders and external testers. The appropriate level of fidelity was different for each initiative and audience. Static wireframes and paper prototypes sufficed for internal stakeholders, greatly increasing iteration speed. For external testing I typically made use of inVision and HTML prototypes, recording sessions by video to be viewed later by the whole project team.
 
 </template>
 
@@ -698,8 +702,8 @@ I led usability testing of the new acquisition funnel designs with internal stak
 --- | --- |
 _“I’ll use the menu to learn more”_ A significant minority of testers wanted to use the navigation menu to learn more, rather than scrolling. They found the options unsatisfying or confusing | I added links to the main navigation for separate pages mirroring and expanding upon scroll-reachable content on the homepage |
 _"We can't just have the burger menu on desktop"_ Internal testers requested an always-visible main navigation on desktop | I had de-prioritised this for expediency but quickly realised we weren't meeting users' expectations while it was absent |
-_“How do I close this?”_ Testers expected the product details modal to have a close button at the top as well as the bottom | In addition to the existing close button, I added one at the top of the modal |
-The view rate for the toucanBox promotional video didn't increase, even though I had increased the prominence of the video button | Further emphasis on the video button might compete with the main CTA. As a compromise I added an autoplay looping montage video cut from the promotional video footage (to be loaded asynchronously) on desktop |
+_“How do I close this?”_ Testers expected the product details modal to have a close button at the top as well as the bottom | I added close buttons to the top and bottom of the modal |
+The view rate for the toucanBox promotional video didn't increase, even though I had increased the prominence of the video button | Further emphasis on the video button might compete with the main CTA. Instead, I added an autoplay looping montage video on desktop |
 {.table .is-fullwidth}
 
 </template>
@@ -709,9 +713,9 @@ The view rate for the toucanBox promotional video didn't increase, even though I
 **Observation** | **Remedy** |
 --- | --- |
 _“I expected siblings would always cost £1 extra?”_ Testers reported that the messaging regarding the trial offer for siblings (additional children) was unclear. The existing copy could imply that each additional child would always cost £1, not just for the first delivery | Over time several such copywriting mistakes had crept into the funnel. I worked with our copywriter to revamp messaging across the homepage and signup flow. |
-_“I can’t be sure how much I’m paying.”_ Testers mentioned that it felt frightening to click the ‘authorise payment’ button on the details form | I added a mini order summary next to the payment/paypal button titled 'What You are Paying Today' |
+_“I can’t be sure how much I’m paying.”_ Testers mentioned that it felt frightening to click the ‘authorise payment’ button on the details form | I added a mini order summary next to the payment/paypal button titled 'What You're Paying Today' |
 _“If I wanted to send toucanBox to two different addresses, how would I do that?”_ It became clear that our system was not well suited to gifters. The copy, interface and even the backend data model was not tailored to their needs | This was good feedback but the issue was out of the scope of this project. I made sure it was communicated to the Leadership Team and suggested a future project to resolve the issue. |
-_“I don’t remember making a password, now I need one to log in?”_ Around 15% of trialists didn’t make a password after completing sign up, so I was aware we were increasing CS load to optimise for conversion. | It was clear detailed analysis was needed to understand the impact of making the password field mandatory. I decided not to tackle this problem in this project, but advocated for a sister link to 'Forgotten your password?'' on the login page - 'Not created a password yet?' |
+_“I don’t remember making a password, now I need one to log in?”_ Around 15% of trialists didn’t make a password after completing sign up, so I was aware we were increasing CS load to optimise for conversion. | Detailed analysis was needed to understand the impact of making the password field mandatory. I decided not to tackle this problem in this project, but advocated for a sister link to 'Forgotten your password?' on the login page: 'Not created a password yet?' |
 {.table .is-fullwidth}
 
 </template>
@@ -752,11 +756,11 @@ _“I don’t remember making a password, now I need one to log in?”_ Around 1
 
 ## Design system
 
-With such a small technology team and a rapidly growing business, I knew it was crucial to utilise every opportunity to maximise efficiency. We still had a relatively thin stack, so it made sense to establish a living design system while overhauling the website.
+With such a small technology team and a rapidly growing business, I knew it was crucial to utilise every opportunity to maximise efficiency. We still had a relatively small web platform, so it made sense to establish a living design system during a redesign.
 
-I worked closely with developers as we followed the [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) methodology with code as the single source of truth. I separately maintained a minimal Sketch Library of atoms to facilitate rapid UI sketching. In support, I directly wrote CSS for variables, atoms, molecules and some organisms.
+I worked closely with developers as we followed the [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) methodology, with code as the single source of truth. I separately maintained a minimal Sketch Library of atoms to facilitate rapid UI sketching. In support, I directly wrote CSS for variables, atoms, molecules and some organisms.
 
-Going forward, the design system enabled developers to prototype UI and enabled the establishment of the 'Activities' blog, where content writers could easily compose visually rich articles.
+Going forward, the design system enabled developers to prototype UI and the establishment of the 'Activities' blog, where content writers could easily compose visually rich articles.
 
  <!-- Implementation makes it easy for content editors to visualize and create content. block-based components
 ongoing iteration and refinement to meet evolving user and business needs.
@@ -817,12 +821,12 @@ Having been involved in the earlier stages of the project, they were primed and 
 ## Development
 
 <p class="subtitle">
-  Guided by the findings from usability testing, the technology team and broader organisation was sufficiently confident in the selected initiatives.
+  Guided by the findings from usability testing, we were sufficiently confident in the selected initiatives to move into development.
 </p>
 
 I prioritised ruthlessly, dropping design concepts which didn't perform. This was particularly important since developer time was severely limited. Both the customer facing and back-office aspects of the business were relying on their effort. The bottleneck was partly due to our highly custom Ruby codebase and the difficulty at that time of hiring Ruby specialists.
 
-Being embedded in the technology team, I was able to compliment the handoff by being available for questions and followup. This was particularly important for tuning specific user interactions like input validation or fixing UX problems like missing URL encoded discount codes (we moved to a session based system).
+Being embedded in the technology team, I was able to compliment the handoff by being available for questions and followup. This was particularly important for tuning specific user interactions like input validation or fixing emergent UX problems like missing URL encoded discount codes (we moved to a session based system).
 
 <!-- I complimented the design specs by being constantly available for questions.
 
@@ -868,14 +872,18 @@ In order to act quickly, I slotted into the role of front-end developer to build
   The new signup experience had an immediate impact on funnel conversion rate.
 </p>
 
-To gain granular information about the effect of each initiative, we built and released sequentially with A/B tests and qualitative evaluation. The final funnel is accessible with fast performance on both desktop and mobile devices.
+To gain granular information about the effect of each initiative, we built and released sequentially with A/B tests and qualitative evaluation.
 
-<!-- I A/B tested changes as they were released. There were challenges in measuring the long-term impact of each change (including phased releases, seasonal fluctuations and incomplete historical data). The estimate of impact is therefore conservative. -->
+<!-- I A/B tested changes as they were released. There were challenges in measuring the long-term impact of each change (including phased releases, seasonal fluctuations and incomplete historical data). The estimate of impact is therefore conservative.
+
+The final funnel is accessible with fast performance on both desktop and mobile devices.
+
+ -->
 
 
 ### What went well
 
-The collaborative research and discovery phase of this project had a transformational effect on the broader organisation. In response to the challenges and insights uncovered, other teams rolled out significant changes to their business processes and activities, adopting a 'product mindset'.
+This project's collaborative research and discovery phase had a transformational effect on the broader organisation. In response to the challenges and insights uncovered, other teams rolled out significant changes to their business processes and activities, adopting a 'product mindset'.
 
  <!-- in areas such as marketing, customer service and operations.
 
@@ -890,7 +898,7 @@ The donation experience project had a transformational effect within the greater
 
 ### Lessons learnt
 
-The only disappointment was how long it took to access the valuable outcomes. As the only full-time member of the project team I needed to split my time between management and UX design. Although I relished the varied work, combined with the developer bottleneck, the delay between identifying problems and applying remedies was costly. We agreed to address this issue by hiring a specialised front-end developer and a product manager.
+The only disappointment was how long it took to access the valuable outcomes. As the only full&#8209;time member of the project team I needed to split my time between management and UX design. Although I relished the varied work, combined with the developer bottleneck, the delay between identifying problems and applying remedies was costly. We agreed to address this issue by hiring a specialised front-end developer and a product manager.
 
 <!-- I was the only full-time member of the project team; coordinating the research, executing the design process, writing front-end code, planning tests and shipping releases. We were a small team with many competing priorities and a limited budget. This meant a delay between identifying the problems and releasing the improvements.
 
@@ -901,7 +909,7 @@ We addressed this problem in early 2018 by hiring a dedicated front-end develope
 ### Going forward
 
 <p>
-Based on the up-front research from this project, it was clear the greatest potential for further improvement to the user experience lay with the two so-far unaddressed 'Product Design Principles' (Flexible and Personalised). I would tackle them in a <Content-ModalLink label="future project">
+It was clear the greatest potential for further improvement to the user experience lay with two so&#8209;far unaddressed principles; <em>Flexible and Personalised</em>. I would tackle them in a <Content-ModalLink label="future project">
 <template v-slot:modal>
 
 <Content :page-key="$site.pages.find(p => p.path === '/extra/toucanbox-personalisation/').key"/>
@@ -942,9 +950,9 @@ I created a static mirror of the toucanBox homepage at the conclusion of this pr
 
 
 <Content-MetricsSection padding="is-medium-large" :metrics="[
-{ metric:'25%', description:'Estimated cumulative average increase in funnel conversion rate.' },
-{ metric:'35%', description:'Reduction in homepage data transfer. I implemented SVG spritesheets, lazy loading and progressive enhancement.' },
-{ metric:'20%', description:'Reduction in the number of CS cases relating to a misunderstanding of the value proposition.' },
+{ metric:'25%', description:'Cumulative average increase in funnel conversion rate' },
+{ metric:'35%', description:'Reduction in homepage data transfer. I implemented SVG spritesheets, lazy loading and progressive enhancement' },
+{ metric:'20%', description:'Reduction in the number of CS cases relating to a misunderstanding of the value proposition' },
 ]"/>
 
 <!-- _Data reflects year-over-year activity for a defined period of time as of December 2017._ -->

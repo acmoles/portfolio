@@ -80,7 +80,7 @@ Product designer
 :::
 
 
-<Content-TextSection rag="rag-3" columnOffset="title-offset" padding="is-initial is-continuous">
+<Content-TextSection rag="rag-4" columnOffset="title-offset" padding="is-initial is-continuous">
 
 <!-- Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec.
 
@@ -94,7 +94,7 @@ Ecosia is a search engine that uses 80% of profits from advertising to plant tre
 
 <!-- We made impressive progress on our mobile apps with only two developers and a share of my overall capacity as a product designer.  -->
 
-The apps' primary purpose is to make searching with Ecosia easy on major platforms. Web search resides in a meta space. It's naturally multi-platform; one way in which devices augment our mental abilities. So _it's critically important that Ecosia's apps fit seamlessly into users' daily lives_. This requires deep empathy and platform knowledge. We also enrich our search results with green data to help users make sustainable choices while on the go.
+The apps' primary purpose is to make searching with Ecosia easy on major platforms. We enrich our search results with green data to help users make sustainable choices. Web search resides in a meta space. It's naturally multi-platform; one way in which devices augment our mental abilities. So _it's critically important that Ecosia's apps fit seamlessly into users' daily lives_. This requires deep empathy and platform knowledge.
 
 <!--
 
@@ -120,7 +120,7 @@ I initially joined Ecosia as a product designer and gradually transitioned into 
 </Content-TextSection>
 
 
-<Content-TextSection columnOffset="title-offset" rag="rag-3" padding="is-medium">
+<Content-TextSection columnOffset="title-offset" rag="rag-4" padding="is-medium">
 
 ## Reflections
 
@@ -135,8 +135,10 @@ Leading projects and mentoring individuals gave me a good foundation to take on 
 ### Product design at scale
 
 <p>
-When I joined Ecosia it was at an inflection point. We would soon experience rapid growth, reaching over 10 million daily users. The organisation scaled accordingly and the design guild doubled. At that time (before I began working as a PM) it was critical to foster collaborative practices, establish a set of design principles and take the first steps towards a component-based design system. These considerations were forefront in my mind as I worked on projects such as <Content-ModalLink label="Maps">
+When I joined Ecosia it was at an inflection point. We would soon experience rapid growth, reaching over 10 million daily users. The organisation scaled accordingly and the design guild doubled. At that time it was critical to foster collaborative practices, establish a set of design principles and take the first steps towards a component-based design system. These considerations were forefront in my mind as I worked on projects such as <Content-ModalLink label="Maps">
 <template v-slot:modal>
+
+<!-- (before I began working as a PM) -->
 
 <Content-FreeSection padding="is-small">
 
@@ -219,7 +221,7 @@ I collaborated with a backend developer, data scientist and marketing manager to
 ### Mobile team highlights
 
 <p>
-Early on, we had a standout success with the iOS App. Users were clear that the app was lagging in usability and missing key browser features. Browsing tabs were the top request. I worked closely with developers to shape an interface we named the <Content-ModalLink label="Organiser">
+Early on, we had a standout success with the iOS App. Users were telling us that the app lagged in usability and missed key browser features. Browsing tabs were the top request. I worked closely with developers to shape an interface we named the <Content-ModalLink label="Organiser">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
@@ -241,11 +243,11 @@ With the iOS App Organiser, Ecosia could stand as a viable alternative browser t
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> for favourites, history, tabs and settings. This release immediately raised 1-week retention by an average of 18%. Over the same period our daily active users count jumped 3x. Its success influenced the strategic decision to invest in mobile apps.
+</Content-ModalLink> for favourites, history, tabs and settings. This release immediately raised 1-week retention by an average of 18%. Over the same period our daily active users count jumped 3x. These results influenced the strategic decision to invest in mobile apps.
 </p>
 
 <p>
-The greatest business impact was achieved with a project where I supported the team to deliver complex technical solutions. The Ecosia <Content-ModalLink label="Android App">
+The greatest business impact came from a project where I supported the team to deliver complex technical solutions. The Ecosia <Content-ModalLink label="Android App">
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">

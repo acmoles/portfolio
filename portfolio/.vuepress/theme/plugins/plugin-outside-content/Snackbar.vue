@@ -62,12 +62,22 @@ export default {
     align-items: center
     justify-content: center
     background-color: $slate
-    box-shadow: 0 1.5em 4em 0 rgba($pitch, 0.56)
+    &::after
+      content: ' '
+      position: absolute
+      width: 100%
+      height: 4em
+      background-image: linear-gradient(0deg, rgba($pitch,0.00) 0%, rgba($pitch,0.42) 60%, $pitch 100%)
+      bottom: -4em
+      opacity: 0.24
     &.bottom
       top: auto
       bottom: 0
-      box-shadow: 0 -1.5em 4em 0 rgba($pitch, 0.56)
       height: 16em
+      &::after
+        top: -4em
+        bottom: auto
+        background-image: linear-gradient(0deg, $pitch 0%, rgba($pitch,0.42) 20%, rgba($pitch,0.00) 100%)
       @media screen and (min-width: $tablet)
         height: 12em
 

@@ -53,15 +53,42 @@ Individual project
 :::
 
 
-<Content-TextSection rag="rag-4" columnOffset="title-offset" padding="is-initial">
+<Content-FreeSection padding="is-initial is-continuous">
+
+<div class="columns is-multiline">
+<div class="column is-half">
 
 ## Sprint
 
-Colour details are strictly limited by cost in toy design and manufacture. Three options are available; decals, hand painting or the creative use of split lines between parts of different colour. These constraints often lead to smart design solutions. But if these limitations were lifted, it could enable toys with the kind of colour and material detail we're only used to seeing in on&#8209;screen entertainment.
+Colour details are strictly limited by cost in toy design and manufacture. Three options are available; decals, hand painting or the creative use of split lines between parts. These constraints often lead to smart design solutions. But if these limitations were lifted, _it could enable toys with the colour detail we're used to in on&#8209;screen entertainment._
 
-In late 2013, 3D Systems announced the Projet-4500 with the promise of full colour 3D printing in a durable plastic material comparable to SLS nylon. Previous colour printers produced a brittle sandstone-like ceramic unsuitable for toys. In response, I started experimenting with workflows to enable the application of colour information to high accuracy geometry created in software like Rhino 3D.
+</div>
+<div class="column is-half title-offset">
+<p class="sprint-p2">
+In late 2013, 3D Systems announced the Projet-4500 with the promise of colour 3D printing in a durable plastic comparable to SLS nylon. Previous colour printers produced a brittle sandstone-like ceramic unsuitable for toys. In response, I experimented with workflows to enable the application of colour information to high accuracy geometry created in software like Rhino 3D.
+</p>
+</div>
+<div class="column is-half">
+<p class="sprint-p1">
+To demonstrate my findings I created Sprint - jetpack wielding athletes with parkour skills. I Drew inspiration from sports brands and automotive design. I believe they remain the only example of colour 3D printed articulated action figures for children. The new printer hinted at the potential, but didn't answer the demands of toy durability, nor my hopes for detail and colour resolution.
+</p>
+</div>
+</div>
 
-To demonstrate my findings I created Sprint - jetpack wielding athletes, racing through your living room and dodging obstacles with their parkour skills. I Drew inspiration from sports brands and automotive design. I believe they remain the only example of full colour articulated action figures for children. The new printer hinted at the potential, but didn't answer the demands of toy durability, nor my hopes for detail and colour resolution.
+<style lang=sass>
+
+@import "@theme/styles/variables.sass"
+
+@media screen and (min-width: $tablet)
+  .sprint-p1
+    position: relative
+    top: 1.5em
+
+  .sprint-p2
+    position: relative
+    left: -1em
+
+</style>
 
 
 <!-- The same colour and material information could be used directly in the toy.
@@ -102,19 +129,10 @@ how the mechanical accuracy of 3D geometry created in industrial design and engi
 
 -->
 
-<template v-slot:aside>
 
-**Product** Colour 3D printed action figures
+</Content-FreeSection>
 
-**Sector** Children's toys
 
-**Timeframe** 2014
-
-**Individual project**
-
-</template>
-
-</Content-TextSection>
 
 
 <style lang="sass">

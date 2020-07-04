@@ -21,11 +21,11 @@ hasFooter: false
 
 ## toucanBox personalisation
 
-The best products elevate a commodity (like music, holidays or crafts in this case) into a valuable holistic experience. After completing a user-centred design process focussing on customer onboarding, I had both a wealth of insights and the momentum of a company-wide shift to a 'product mindset'.
+The best products elevate a commodity (like music or holidays, or crafts in this case) into a valuable holistic experience. After completing a user-centred design process focussing on customer onboarding, I had both a pool of insights and the momentum of a company-wide shift to a 'product mindset'.
 
-The next challenge was customer retention. How might we make customers so satisfied with toucanBox that they want to stay subscribed for longer? I had a clear answer from my research: _Get the right craft box to the right customer in the right quantity._ toucanBox was uniquely positioned to leverage a personalised experience, with a bespoke technology platform and a direct relationship with customers.
+The next challenge was customer retention. How might we make customers so satisfied with toucanBox that they want to stay subscribed for longer? Research offered a clear answer: _Get the right craft box to the right customer in the right quantity_. With a bespoke technology platform and a direct relationship with customers, toucanBox was uniquely positioned to leverage a personalised experience.
 
-I created several concepts, the most promising of which we named the 'Box builder'. We built prototypes to test on a limited audience in production, with promising results. This was my last project at toucanBox, which sadly had to be left unfinished. I hired, onboarded and handed over the project to a new UX designer. This feature is now released.
+I created several concepts, the most promising of which we named the _Box builder_. We tested live-data prototypes on a limited audience in production, with promising results. Sadly I was unable to finish this project before my move to Berlin. I hired, onboarded and handed over the project to a new UX designer.
 
 <div class="columns" style="padding-top: 2em;">
 <div class="column">
@@ -58,7 +58,12 @@ I created several concepts, the most promising of which we named the 'Box builde
 
 </Content-TextSection>
 
-<!-- <Content-ImageFrames-FullImageSection url="/images/toucanBox/personalisation-montage.jpg" alt="Personalisation discovery montage"/>
+<!--
+
+ It's now released.
+
+
+ <Content-ImageFrames-FullImageSection url="/images/toucanBox/personalisation-montage.jpg" alt="Personalisation discovery montage"/>
 
 
 

@@ -246,6 +246,7 @@ export default {
 @import "@theme/styles/mixins.sass"
 
 .navbar
+  @include make3d
   user-select: none
   text-rendering: geometricPrecision
   pointer-events: none
@@ -253,8 +254,9 @@ export default {
   height: 6em
   width: 100%
   z-index: 3
-  transform: translate3d(0px, -100%, 0px)
-  transform: translate3d(0px, 0px, 0px)
+  // TODO what's this?
+  // transform: translate3d(0px, -100%, 0px)
+  // transform: translate3d(0px, 0px, 0px)
 
 .home-link
   display: flex
@@ -314,6 +316,6 @@ export default {
       text-align: right
 
   .text-site-title
-    margin-left: 2em  
+    margin-left: 2em
 
 </style>

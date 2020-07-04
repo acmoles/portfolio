@@ -62,7 +62,7 @@ Creative Director
 
 
 
-<Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial is-continuous">
+<Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial">
 
 <p class="subtitle">
 Art Lebedev Studio is the first and largest independent design studio in Russia. Founded in 1995 with over 300 employees today.
@@ -88,8 +88,11 @@ Outsider status is appealing. So is the irreverent sense of humour. I wanted to 
 
 
 
+<Content-QuoteSection rag="rag-4" quote="Anthony has shown a great persistence on one particular project where almost everyone in the design team lost hope due to very strict technological, ergonomic and layout constrains. He literally saved the project and brought back optimism and belief." attribute="Timour Bourbaev, Creative Director of Product Design, referring to NITA air traffic control" color="blue"/>
 
-<Content-ImageFrames-SquareImagesRow padding="is-medium-large"  :images="[
+
+
+<Content-ImageFrames-SquareImagesRow padding="is-large" :images="[
 { url:'/images/als/als1.jpg', alt:'ATC console', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
   type: 'link',
   label: 'Read more',
@@ -111,11 +114,11 @@ Outsider status is appealing. So is the irreverent sense of humour. I wanted to 
 
 ## Highlights
 
-<p class="subtitle" style="padding-right: 1em;">
+<!-- <p class="subtitle" style="padding-right: 1em;">
 Anthony has shown a great persistence on one particular project where almost everyone in the design team lost hope due to very strict technological, ergonomic and layout constrains. He literally saved the project and brought back optimism and belief.
 </p>
 
-Timour Bourbaev, Creative Director of Product Design, referring to NITA air traffic control
+Timour Bourbaev, Creative Director of Product Design, referring to NITA air traffic control -->
 
 
 </template>
@@ -124,7 +127,7 @@ Timour Bourbaev, Creative Director of Product Design, referring to NITA air traf
 
 #### NITA air traffic control
 
-The console can be configured for various workflows including command post, flight controller and operations. In each case there are strict international regulations regarding ergonomics and safety.
+The console can be configured for various purposes including command post, flight controller and operations. In each case there are strict international regulations regarding ergonomics and safety.
 
 </template>
 
@@ -132,7 +135,7 @@ The console can be configured for various workflows including command post, flig
 
 #### Oktopus toilet plunger
 
-It started as a humorous 'what if?' and became of product for ALS's network of designer stores. The challenge lay in finding an iconic form which could be convincingly rendered in the typical materials of a plunger to cost.
+It started as a humorous 'what if?' and became a product for ALS's network of designer stores. The challenge lay in finding an iconic form which could be convincingly represented to cost in the typical materials of a plunger.
 
 </template>
 
