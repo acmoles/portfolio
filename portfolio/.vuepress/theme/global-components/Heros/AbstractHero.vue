@@ -44,7 +44,7 @@ export default {
       this.abstract = new module.Abstract(this.$refs.presentation)
 
       this.abstract.addEventListener('abstract-loaded', () => {
-        console.log('abstract scene ready')
+        // console.log('abstract scene ready')
         this.doLoad()
         this.abstract.begin()
       })
@@ -55,7 +55,7 @@ export default {
 
   destroyed() {
     this.abstract.destroy()
-    console.log('destroyed')
+    // console.log('destroyed')
   },
 
 }

@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="80" height="144" viewBox="0 0 80 144">
-  <path fill="#FFC737" fill-rule="evenodd" d="M37.7777778,0 C94.0740741,43.2 94.0740741,91.2 37.7777778,144 C-12.5925926,91.2 -12.5925926,43.2 37.7777778,0 Z" transform="rotate(180 40 72)"/>
-</svg>
+<svg height="144" viewBox="0 0 80 144" width="80" xmlns="http://www.w3.org/2000/svg"><path d="m37.7777778 0c56.2962963 43.2 56.2962963 91.2 0 144-50.3703704-52.8-50.3703704-100.8 0-144z" fill="#ffc737" fill-rule="evenodd" transform="matrix(-1 0 0 -1 80 144)"/></svg>

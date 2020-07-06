@@ -127,12 +127,13 @@ function resolvePageLink (
       top: 0
       bottom: 0
       transition: background-color 200ms ease, filter 200ms ease
-  .prev, .action
+  .prev
     .text-group
       @media screen and (min-width: $desktop)
         max-width: 80%
       @media screen and (min-width: $widescreen)
         max-width: 50%
+  .prev, .action
     .background
       left: -50vw
       width: 200vw

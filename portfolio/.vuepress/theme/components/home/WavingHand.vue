@@ -1,6 +1,6 @@
 <template>
-  <button @click="handClick" type="button" name="button" class="hand-button" :class="{ 'animate': active }">
-    <svg ref="hand-container" id="hand-container" height="100" viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+  <div class="hand" :class="{ 'animate': active }">
+    <svg ref="hand-container" id="hand-container" height="32" viewBox="0 0 100 100" width="32" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="waveGradient">
           <stop stop-color="#FF51DE" offset="0%"></stop>
@@ -16,8 +16,7 @@
         fill-rule="evenodd"
       />
     </svg>
-    <div class="hitbox"></div>
-  </button>
+  </div>
 </template>
 
 <script>
@@ -87,7 +86,6 @@ export default {
       }
     });
 
-    // this.pauseAnimation();
     this.straightAnimation();
   },
 
@@ -100,14 +98,14 @@ export default {
       }
     },
 
-    handClick() {
-      clearTimeout(this.delayTimeout);
-      if (this.finished) {
-        this.timeline2.play();
-      } else {
-        this.animateHand();
-      }
-    },
+    // handClick() {
+    //   clearTimeout(this.delayTimeout);
+    //   if (this.finished) {
+    //     this.timeline2.play();
+    //   } else {
+    //     this.animateHand();
+    //   } @click="handClick"
+    // },
 
     animateHand() {
       this.timeline.play();
@@ -115,7 +113,7 @@ export default {
     },
 
     restartRandom() {
-      let delay = anime.random(12000, 24000);
+      let delay = anime.random(6000, 12000);
       this.delayTimeout = setTimeout( () => {
         this.timeline2.play();
       }, delay);
@@ -125,9 +123,10 @@ export default {
       this.timeline
       .add({
         targets: this.$refs['hand-container'],
-        translateX: [-40, 0],
-        translateY: -3,
+        translateX: [-18, 0],
+        translateY: -1,
         rotateZ: [-360, 24],
+        scale: 1,
         duration: 800,
         delay: 600,
         easing: 'easeOutCubic'
@@ -180,83 +179,12 @@ export default {
       }, '-=1000');
     },
 
-    pauseAnimation() {
-      this.timeline
-      .add({
-        targets: this.$refs['hand-container'],
-        translateX: [-40, 0],
-        translateY: -4,
-        rotateZ: [-360, 10],
-        duration: 800,
-        delay: 600,
-        easing: 'easeOutCubic'
-      })
-      .add({ //down hand
-        targets: this.$refs['hand-path'],
-        d: this.downHand,
-        duration: 800,
-        delay: 0,
-        easing: 'easeOutCubic'
-      }, '-=600')
-      .add({ // rest rotation
-        targets: this.$refs['hand-container'],
-        rotateZ: 0,
-        duration: 600,
-        easing: 'easeOutCubic'
-      }, '-=100')
-      .add({ // rest hand
-        targets: this.$refs['hand-path'],
-        d: this.midHand,
-        duration: 600,
-        delay: 0,
-        easing: 'easeOutCubic'
-      }, '-=600')
-      .add({ // down rotation
-        targets: this.$refs['hand-container'],
-        rotateZ: 40,
-        duration: 600,
-        easing: 'easeOutCubic'
-      }, '+=800')
-      .add({ // down hand
-        targets: this.$refs['hand-path'],
-        d: this.downHand,
-        duration: 600,
-        delay: 0,
-        easing: 'easeOutCubic'
-      }, '-=600')
-      .add({ // up rotation
-        targets: this.$refs['hand-container'],
-        rotateZ: -40,
-        duration: 600,
-        easing: 'easeOutCubic'
-      }, '-=100')
-      .add({ // up hand
-        targets: this.$refs['hand-path'],
-        d: this.upHand,
-        duration: 600,
-        delay: 0,
-        easing: 'easeOutCubic'
-      }, '-=600')
-      .add({ // rest rotation
-        targets: this.$refs['hand-container'],
-        rotateZ: 0,
-        duration: 1000,
-          easing: 'easeOutBack'
-      }, '-=100')
-      .add({ // rest hand
-        targets: this.$refs['hand-path'],
-        d: this.midHand,
-        duration: 1000,
-        delay: 0,
-        easing: 'easeOutCubic'
-      }, '-=1000');
-    },
-
     extraAnimation() {
       this.timeline2
       .add({ // down rotation
         targets: this.$refs['hand-container'],
         rotateZ: 24,
+        scale: 1,
         duration: 600,
         easing: 'easeOutCubic'
       }, '+=100' )
@@ -313,59 +241,23 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../../styles/variables.sass"
-@import "../../styles/mixins.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
-.hand-button
-  @include button-override
+.hand
   display: inline
-  width: 1em
-  height: 1em
-  bottom: 0.82em
-  left: 0.4em
-  vertical-align: bottom
-  padding: 0
+  width: 32px
+  height: 32px
   position: relative
-  transform-origin: 0 100%
-  transform: scale(0.24)
-  @media screen and (min-width: $tablet)
-    bottom: 0.7em
-  @media screen and (min-width: $fullhd)
-    bottom: 0.72em
-    transform: scale(0.3)
-
-.hand-button.animate::after
-  animation: handGlow 6s 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86)
-  transition: opacity 0.6s ease
-
-.hand-button.animate:hover::after
-  opacity: 1
-
-.hitbox
-  position: absolute
-  @include cover-screen
-  transform: scale(4)
-  cursor: pointer
-
-@keyframes handGlow
-  0%
-    transform: translateX(-48px) scale(0.5)
-    opacity: 0
-
-  13%
-    transform: translateX(0) scale(1)
-    opacity: 1
-
-  100%
-    transform: translateX(0) scale(1)
-    opacity: 0
+  margin-left: 18px
 
 #hand-container
-  cursor: pointer
+  @include make3d
   position: relative
-  transform-origin: 29px 82px
-  display: inline-block
-  vertical-align: middle
-  transform: translateX(-40px) rotateZ(-360deg)
+  bottom: 0.2em
+  // @media screen and (min-width: $fullhd)
+  //   bottom: 0.22em
+  transform-origin: 9px 26px
+  transform: translateX(-18px) translateY(-6px) rotateZ(-360deg)
 
 </style>

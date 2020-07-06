@@ -9,8 +9,6 @@ import { Grid } from './grid.js'
 import { Interactions } from './interactions.js'
 
 
-// console.log('watch out! 3D content loaded.');
-
 export class ThreeComposition extends EventTarget {
 
   constructor(domParent) {
