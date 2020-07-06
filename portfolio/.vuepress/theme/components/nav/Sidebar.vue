@@ -134,7 +134,7 @@ export default {
   bottom: 0
   right: 0
 
-@media screen and (max-width: $tablet)
+@media screen and (max-width: $tablet - 1px)
   .sidebar-container
     height: calc( 100% - 6em )
     top: 6em

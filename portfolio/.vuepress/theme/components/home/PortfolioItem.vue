@@ -376,7 +376,7 @@ export default {
     position: absolute
     top: 0
     right: 0
-    @media screen and (max-width: $tablet)
+    @media screen and (max-width: $tablet - 1px)
       width: auto
       max-width: unset
       height: 100%

@@ -132,7 +132,7 @@ export default {
   .section.is-timeline
     padding: 3rem 0 12rem 0
 
-  @media screen and (max-width: $tablet)
+  @media screen and (max-width: $tablet - 1px)
     .timeline-columns
       flex-direction: column-reverse
       display: flex
@@ -153,7 +153,7 @@ export default {
       text-align: left
       .icon
         transition: opacity 0.3s ease
-        @media screen and (max-width: $tablet)
+        @media screen and (max-width: $tablet - 1px)
           visibility: hidden
       &.is-active
         cursor: default

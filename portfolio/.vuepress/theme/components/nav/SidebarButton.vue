@@ -128,10 +128,12 @@ $hamburger-layer-border-radius : 0px
     display: block
 
   &::before
-    top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1
+    // top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1
+    top: -4px
 
   &::after
-    bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1
+    // bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1
+    bottom: -4px
 
 .hamburger-box
     .hamburger-inner

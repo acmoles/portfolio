@@ -5,10 +5,13 @@
   width: 100%
   padding: 0 1em
   position: static
+  @media screen and (max-width: $tablet - 1px)
+    &.is-fullhd
+      max-width: 600px
   @media screen and (min-width: $desktop)
     padding: 0 $gap
-  @media screen and (min-width: $fullhd)
-    padding: 0
+  @media screen and (min-width: $fullhd - 1px)
+    padding: 0 $gap/2
 
 .section
   position: relative
@@ -37,6 +40,8 @@
   height: 2px
   background-color: rgba($pitch, 0.24)
   top: 4em
+  @media screen and (max-width: $desktop)
+    top: 3em
 
 @media screen and (max-width: $desktop)
   .section
@@ -45,6 +50,8 @@
     padding: 6em 0
   .section.is-medium-large
     padding: 0 0 6em 0
+    &.has-divider
+      padding-top: 6em
   .section.is-small
     padding: 1em 0
   .section.is-initial

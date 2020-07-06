@@ -103,7 +103,7 @@ export default {
     display: flex
     width: 100%
     align-items: flex-end
-    @media screen and (min-width: $tablet)
+    @media screen and (min-width: $tablet - 1px)
       display: inline-flex
       width: auto
   .footer-title
@@ -118,10 +118,10 @@ export default {
   .footer-contact-links
     margin-left: 1em
   .copy
-    @media screen and (max-width: $tablet)
+    @media screen and (max-width: $tablet - 1px)
       margin-top: 4em
   .footer-about
-    @media screen and (max-width: $tablet)
+    @media screen and (max-width: $tablet - 1px)
       margin-left: 0
       margin-top: 1.5em
     &::after

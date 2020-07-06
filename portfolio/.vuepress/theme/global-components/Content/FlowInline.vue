@@ -50,7 +50,7 @@ export default {
       .box::after
         content: none
 
-  @media screen and (max-width: $tablet)
+  @media screen and (max-width: $tablet - 1px)
     .step-columns
       .box::after
         top: 100%
