@@ -307,7 +307,7 @@ export default {
 .burgered .home-link
   pointer-events: all
 
-@media screen and (max-width: $tablet)
+@media screen and (max-width: $tablet - 1px)
   .navbar-menu
     box-shadow: none
     justify-content: flex-end

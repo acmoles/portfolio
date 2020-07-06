@@ -101,7 +101,7 @@ CTO
 
 @media screen and (min-width: $fullhd)
   .toucan-rag
-    padding-right: 4em
+    padding-right: 3em
 
 </style>
 
@@ -635,7 +635,7 @@ Single page signup form, the simplest and most usable solution we could currentl
 
 <template slot="modal1">
 
-<figure class="image is-5by3">
+<figure class="image is-2by1">
   <img class="lazyload" data-src="/images/toucanBox/wireframe-flow-signup.png" alt="Iterations of the Main Stage">
 </figure>
 

@@ -76,7 +76,7 @@ export default {
         width: 50vw
         border-left: 2px solid $black
 
-  @media screen and (max-width: $tablet)
+  @media screen and (max-width: $tablet - 1px)
     .about-nav .page-nav-column .action .text-group
       padding-right: 4em
 

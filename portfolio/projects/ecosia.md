@@ -59,8 +59,8 @@ Team leader
 
 Product designer
 ~ 2 iOS developers
-~ 1 Android developer
-~ 1 Back-end developer
+~ Android developer
+~ Back-end developer
 
 </template>
 
@@ -73,7 +73,7 @@ Product designer
   position: absolute
   left: -14%
   width: 144%
-  @media screen and (max-width: $tablet)
+  @media screen and (max-width: $tablet - 1px)
     top: -24%
 </style>
 
@@ -142,19 +142,18 @@ When I joined Ecosia it was at an inflection point. We would soon experience rap
 
 <Content-FreeSection padding="is-small">
 
-<div class="columns is-centered">
-<div class="column is-three-fifths">
+<div class="columns">
+<div class="column is-half modal-image-limit">
 <Content-ModalWrapper type="link" url="https://acmoles.github.io/maps-ui/" label="Wireframe interaction prototype">
-<figure class="image is-5by4 modal-image-limit">
+<figure class="image is-5by4">
 <img class="lazyload" data-src="/images/ecosia/EcosiaMaps-modal.jpg" alt="Ecosia maps vertical">
 </figure>
 </Content-ModalWrapper>
-
-<figcaption>
+</div>
+<div class="column">
 
 Ecosia maps posed a unique design challenge. As part of slicing the feature we decided to exclude the search box from the first release. Rather, we would enable users to make pseudo searches for common keywords such as hotels and shopping. These constraints called for creativity. It was satisfying to work on a completely new search vertical.
 
-</figcaption>
 </div>
 </div>
 
@@ -194,19 +193,20 @@ Even as we grew, there remained the need to be hands-on and responsive. I design
 
 <Content-FreeSection padding="is-small">
 
-<div class="columns is-centered">
-<div class="column is-three-fifths">
+<div class="columns">
+<div class="column is-half modal-image-limit">
 <Content-ModalWrapper type="link" url="https://mapvis.netlify.app/" label="View live visualisation">
 <figure class="image is-5by4">
 <img class="lazyload" data-src="/images/ecosia/SearchMap-modal.jpg" alt="Searches map visualisation">
 </figure>
 </Content-ModalWrapper>
+</div>
+<div class="column">
 
-<figcaption>
+I collaborated with a backend developer, data scientist and marketing manager to design and build this data visualisation in 4 days.
 
-I collaborated with a backend developer, data scientist and marketing manager to design and build this data visualisation in 4 days. As a bonus feature we plotted Ecosia's tree planting sites on the map. In Brazil there are users searching within 10km of rainforest restored by Ecosia.
+As a bonus feature we plotted Ecosia's tree planting sites on the map. This makes it possible to see some amazing things, for instance in Brazil, where there are users searching within 10km of rainforest restored by Ecosia.
 
-</figcaption>
 </div>
 </div>
 
@@ -226,17 +226,16 @@ Early on, we had a standout success with the iOS App. Users were telling us that
 
 <Content-FreeSection padding="is-small">
 
-<div class="columns is-centered">
-<div class="column is-three-fifths">
+<div class="columns">
+<div class="column is-half modal-image-limit">
 <figure class="image is-5by4">
 <img class="lazyload" data-src="/images/ecosia/iOS-modal.jpg" alt="Ecosia iOS App">
 </figure>
-
-<figcaption>
+</div>
+<div class="column">
 
 With the iOS App Organiser, Ecosia could stand as a viable alternative browser to Safari.
 
-</figcaption>
 </div>
 </div>
 
@@ -251,18 +250,16 @@ The greatest business impact came from a project where I supported the team to d
 <template v-slot:modal>
 
 <Content-FreeSection padding="is-small">
-
-<div class="columns is-centered">
-<div class="column is-three-fifths">
+<div class="columns">
+<div class="column is-half modal-image-limit">
 <figure class="image is-5by4">
 <img class="lazyload" data-src="/images/ecosia/Android-modal.jpg" alt="Ecosia Android App">
 </figure>
+</div>
+<div class="column">
 
-<figcaption>
+The Ecosia Android app offers the familiarity of Chromium with Ecosia search. It connects users to the cause through tree planting news, financial reporting and other content on the New Tab Page.
 
-The Ecosia Android app offers the familiarity of Chromium with Ecosia search. It connects users to the cause through tree planting news, financial reporting and other content.
-
-</figcaption>
 </div>
 </div>
 

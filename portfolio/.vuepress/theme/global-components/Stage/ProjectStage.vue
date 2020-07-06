@@ -30,7 +30,6 @@
           </p>
         </div>
         <div
-          ref="column-parallax"
           v-if="hasVisulColumnSlot"
           class="column is-one-third visual-column"
           :class="[{'in-view': visible}, {'appear-stage-up': animating}]"
@@ -314,12 +313,14 @@ export default {
     display: flex
     flex: none
     padding-top: 7em
+    position: relative
     .subtitle
       margin-bottom: 0
     .columns
       justify-content: space-between
       will-change: transform
       @include make3d
+      position: relative
     @media screen and (min-width: $tablet)
       padding-top: 8em
       padding-bottom: 3em
@@ -332,6 +333,13 @@ export default {
     margin-bottom: 0.25em
     @media screen and (min-width: $tablet)
       font-size: 3.5em
+
+// In-column hero
+.column.visual-column
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
 
 // .stage, .stage-intro, .visual
 //   transform: translate3d(0,0,0)
@@ -387,6 +395,7 @@ export default {
   background-color: $black
   flex-grow: 1
   padding: 3em 0 4em 0
+  min-height: 16em
   @media screen and (min-width: $tablet)
     padding: 1em 0
   border-top: 1px solid rgba($pitch, 0.42)
@@ -399,10 +408,12 @@ export default {
     @media screen and (min-width: $tablet)
       display: block
 
-@media screen and (min-width: $tablet)
-  .overview-lower-mobile
+.overview-lower-mobile
+  strong
+    display: block
+    margin-bottom: 0.5em
+  @media screen and (min-width: $tablet)
     display: none !important
-
 
 
 // Overview modal shading
@@ -421,6 +432,7 @@ export default {
 .modal-background-only.upper-mask-nonblur
   backdrop-filter: none
   --webkit-backdrop-filter: none
+  // background-image: none
 
 
 // Background
@@ -429,8 +441,8 @@ export default {
   height: calc(100vh + 24px + 6em)
   width: 100%
   position: absolute
-  overflow: hidden
   will-change: transform
+  overflow: hidden
   @include make3d
   top: -24px
   @media screen and (min-width: $tablet)
@@ -460,17 +472,6 @@ figure.full-screen
     // img
     //   height: 100%
     //   max-width: none
-
-// In-column hero
-
-.column.visual-column
-  // padding: 0
-  // margin: -4em
-  position: relative
-  will-change: transform
-  display: flex
-  justify-content: center
-  align-items: center
 
 
 // Animations

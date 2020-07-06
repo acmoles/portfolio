@@ -126,7 +126,8 @@ export default {
   z-index: 3
   .content-wrapper
     overflow-y: hidden
-    @media screen and (max-width: $tablet)
+    width: 100%
+    @media screen and (max-width: $tablet - 1px)
       overflow-y: scroll
 
   .video-wrapper

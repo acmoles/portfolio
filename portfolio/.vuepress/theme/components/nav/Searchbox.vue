@@ -298,7 +298,7 @@ export default {
       .header
         color: $grey-light
 
-@media screen and (max-width: $tablet)
+@media screen and (max-width: $tablet - 1px)
   .search-dropdown
     // TODO hiding searchbox mobile for now
     display: none

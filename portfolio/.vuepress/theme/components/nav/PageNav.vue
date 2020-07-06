@@ -160,7 +160,7 @@ function resolvePageLink (
     color: $white
     opacity: 0.78
 
-@media screen and (max-width: $tablet)
+@media screen and (max-width: $tablet - 1px)
   .page-nav, .page-nav .container
     height: 12em
   .page-nav-column.columns
