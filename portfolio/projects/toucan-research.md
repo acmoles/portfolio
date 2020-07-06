@@ -18,7 +18,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" rag="rag-6" ragTitle="rag-1" ctaLabel="create.toucanbox.com" ctaUrl="https://create.toucanbox.com"
+<Stage-ProjectStage :noise="true" rag="rag-6" ragTitle="rag-2" ctaLabel="create.toucanbox.com" ctaUrl="https://create.toucanbox.com"
 description="I explored whether adding digital value to the physical craft box can lift activation rate at a critical point in the first box experience.">
 
 <template v-slot:visual-background>
@@ -441,7 +441,7 @@ Useability testing a high fidelity iteration with children.
 
 
 <Content-MetricsSection padding="is-medium-large" :metrics="[
-{ metric:'3x', description:'higher average time on page.' },
-{ metric:'56', description:'minutes longest session.' },
-{ metric:'3.4%', description:'of trialists accessed the experience.' },
+{ metric:'3x', description:'higher average time on page' },
+{ metric:'56', description:'minutes longest session' },
+{ metric:'3.4%', description:'of trialists accessed the experience' },
 ]"/>

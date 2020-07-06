@@ -425,6 +425,7 @@ export default {
   @include make3d
   transition: opacity 0.4s ease
   background-color: transparent
+  background-image: none
   opacity: 0
   &.finished
     opacity: 1
@@ -432,7 +433,8 @@ export default {
 .modal-background-only.upper-mask-nonblur
   backdrop-filter: none
   --webkit-backdrop-filter: none
-  // background-image: none
+  background-image: url('../../plugins/plugin-outside-content/dark-noise-heavy-2extra.png')
+
 
 
 // Background

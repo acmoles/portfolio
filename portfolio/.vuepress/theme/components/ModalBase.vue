@@ -138,6 +138,7 @@ export default {
     //   overflow: hidden
 
 .modal-close
+  background: rgba($black, 0.42)
   position: absolute
   top: 0
   right: 0

@@ -7,8 +7,7 @@
 import { loadableHero } from '@theme/mixins/loadableHero.js'
 // import { ThreeComposition } from '../application/three/threeComposition.js'
 
-
-// TODO maybe left align in column?
+import { EventTarget } from 'event-target-shim/dist/event-target-shim.mjs';
 
 export default {
 
@@ -42,19 +41,24 @@ export default {
     import('@application/three/threeComposition.js').then(module => {
       this.threeComposition = new module.ThreeComposition(this.$refs.presentation)
 
-      this.threeComposition.addEventListener('comp-loaded', () => {
-        console.log('three scene ready')
-        this.doLoad()
+      var promise = new Promise((resolve, reject) => {
+        this.threeComposition.addEventListener('comp-loaded', () => {
+          console.log('load: ', this.doLoad)
+          this.doLoad()
+        })
+        resolve()
       })
 
-      this.threeComposition.init()
+      promise.then(() => {
+        this.threeComposition.init()
+      })
     })
 
   },
 
   beforeDestroy() {
     this.threeComposition.destroy()
-    console.log('destroyed')
+    // console.log('destroyed')
   },
 }
 

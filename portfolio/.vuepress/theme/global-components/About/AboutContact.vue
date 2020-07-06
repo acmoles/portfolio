@@ -48,11 +48,17 @@ export default {
       top: 0
     .item-title
       display: inline-flex
-      align-items: center
+      align-items: flex-end
+      position: relative
     .action
       @include button-override
       text-align: left
       cursor: pointer
+      .text-group
+        @media screen and (min-width: $desktop)
+          max-width: 24em
+        @media screen and (min-width: $widescreen)
+          max-width: 80%
       .small-title
         color: $extraDarkSmoke
         opacity: 1
@@ -91,6 +97,8 @@ export default {
 
     .photo
       padding-top: 1.25em
+
+
 
 
 
