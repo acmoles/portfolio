@@ -56,5 +56,7 @@ export default {
         grid-column-start: 1
         grid-column-end: 3
         width: 80%
+    @media screen and (min-width: $fullhd + 1)
+      padding: 12em 0 4em 0
 
 </style>

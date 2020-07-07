@@ -56,9 +56,7 @@ export default {
       cursor: pointer
       .text-group
         @media screen and (min-width: $desktop)
-          max-width: 24em
-        @media screen and (min-width: $widescreen)
-          max-width: 80%
+          max-width: 36em
       .small-title
         color: $extraDarkSmoke
         opacity: 1
