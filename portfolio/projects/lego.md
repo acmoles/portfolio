@@ -71,7 +71,7 @@ Design Manager
 <div class="columns">
 <div class="column">
 
-My early career was defined by my time at LEGO, both in-house and later as a consultant at [Design by Touch](https://www.designbytouch.com/). Among diverse projects including Nexo Knights, Bionicle, Hero Factory, City, Mario and numerous undisclosed concepts, Dimensions stands out as my enduring favourite. It's the LEGO answer to Skylanders, Disney Infinity, and Nintendo Amiibo. I joined the core team as we took it from back-of-the-napkin idea to major strategic initiative backed by the whole company.
+My early career was defined by my time at LEGO, both in-house and later as a consultant at [Design by Touch](https://www.designbytouch.com/). Among diverse projects including Nexo Knights, Bionicle, Hero Factory, City, Mario and numerous undisclosed concepts, Dimensions stands out as my enduring favourite. It's the LEGO answer to Skylanders, Disney Infinity, and Nintendo Amiibo. I joined the core team as we took it from a back-of-the-napkin idea to a major strategic initiative backed by the whole company.
 { .rag-2 }
 
 </div>

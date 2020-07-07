@@ -25,7 +25,7 @@
             <transition name="fade-fast" mode="out-in">
               <ArrowIcon
                 class="back-arrow"
-                v-if="navbarBurgered && !isMobileHome"
+                v-if="(navbarBurgered || isModalOpen) && !isMobileHome"
                 />
               <span
                 class="text-site-title"
@@ -180,7 +180,9 @@ export default {
       }
 
       this.scrollPosition = getScrollTop()
-      this.navbarPosition = getOffsetY(this.$refs.navbar)
+      if (this.$refs.navbar) {
+        this.navbarPosition = getOffsetY(this.$refs.navbar)
+      }
 
       if ( this.scrollPosition > (this.$window.height / 1.618) && this.navbarBurgered === false ) {
         this.navbarBurgered = true

@@ -35,11 +35,14 @@ import Navbar from '@theme/components/nav/Navbar.vue'
 import Footer from '@theme/components/nav/Footer.vue'
 import PageNav from '@theme/components/nav/PageNav.vue'
 import Sidebar from '@theme/components/nav/Sidebar.vue'
+import { browserDetection } from '@theme/mixins/browserDetection.js'
 
-import config from '../../config.js'
+import config from '@theme/../config.js'
 
 export default {
   components: { Sidebar, Navbar, Footer, PageNav },
+
+  mixins: [browserDetection],
 
   computed: {
     pageLoadingStatus () {
@@ -53,9 +56,11 @@ export default {
     pageClasses () {
       const userPageClass = this.$page.frontmatter.pageClass
       const tintStyle = this.$page.frontmatter.navStyle.tint
+      const Firefox = this.isFirefox ? 'firefox' : null
       return [
         this.pageLoadingStatus,
         tintStyle,
+        Firefox,
         userPageClass
       ]
     },
@@ -75,7 +80,7 @@ export default {
         this.$nextTick( () => {
           if (anchor && document.getElementById(split)) {
             this.$store.dispatch('setFirstLoad', false)
-            location.href = anchor
+            location.assign(this.$router.currentRoute.fullPath)
           }
         });
       }
@@ -90,27 +95,11 @@ export default {
 @import "@theme/styles/mixins.sass"
 
 .page-content
-  // height: 100%
-  min-height: 100%
   display: flex
   flex-direction: column
   align-content: space-between
 
-  &.content__default
-    padding: 0 2em
-    flex-grow: 1
-
-  .main.container.content
-    padding-top: 8em
-
 // Page transitions
-
-// .loading
-//   display: none
-
-// .revealing, .covering, .loading
-//   .page-content
-//     overflow: hidden
 
 .layout.home
   position: relative
@@ -119,7 +108,7 @@ export default {
     position: fixed
     content: ' '
     display: block
-    background: darken($black, 3%)
+    background: darken($black, 8%)
     transition: opacity .4s linear
     opacity: 0
     pointer-events: none

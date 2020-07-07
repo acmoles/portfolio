@@ -114,7 +114,7 @@ I started my career as a teacher and transitioned to UX about 10 years ago. But 
 <h1 class="stage-title">Hello! I'm Ant</h1>
 
 <p class="subtitle" style="padding-right: 3em;">
-  A designer and leader creating useful and playful experiences centred on people
+  A designer and leader creating useful and playful experiences centred on people.
 </p>
 
 Let’s break that down a bit. I started my career as a [Toy Designer at LEGO](/projects/lego), having trained in [Product Design Engineering](http://www.gsa.ac.uk/study/undergraduate-degrees/product-design-engineering/) at the Glasgow School of Art. I transitioned into UX about 5 years ago, pursuing a desire to blend technology and interactivity into my design practice. Recently I've been leading an agile product team as a [Product Manager](/projects/ecosia). But I haven't forgotten my roots and I'm at my best when bridging digital/physical and design/technology divides.
@@ -370,7 +370,7 @@ Industrial Ecology
 
 <About-TimelineItem type="Course">
 
-Human Scale Biogas, graduate project PDE (1st Class Meng)
+Human Scale Biogas, graduate project PDE (1st Class MEng)
 
 </About-TimelineItem>
 

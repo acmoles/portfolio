@@ -3,6 +3,9 @@
     <figure class="image" :class="imageClass ? imageClass : 'is-2by1'">
       <img class="lazyload" :data-src="url" :alt="alt">
     </figure>
+    <div v-if="hasCaption" class="container is-fullhd">
+      <figcaption><slot name="caption"></slot></figcaption>
+    </div>
   </section>
 </template>
 
@@ -10,12 +13,18 @@
 
 export default {
 
-  // TODO responsive images
+  // TODO responsive image sizes
 
   props: {
     url: String,
     alt: String,
     imageClass: String,
+  },
+
+  computed: {
+    hasCaption () {
+      return !!this.$slots['caption']
+    },
   }
 
 }

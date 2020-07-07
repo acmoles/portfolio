@@ -24,8 +24,8 @@
 
 <script>
 import nprogress from 'nprogress'
-import config from '../../../config.js'
-import { getViewport, getViewportInner, getScrollTop } from '../../util'
+import config from '@theme/../config.js'
+import { getViewport, getViewportInner, getScrollTop } from '@theme/util'
 import { disableScroll } from '@theme/mixins/disableScroll.js'
 
 // import IncomingTitle from './IncomingTitle.vue'
@@ -222,22 +222,22 @@ export default {
 
 <style lang="sass">
 
-@import '../../styles/variables.sass'
-@import '../../styles/mixins.sass'
+@import '@theme/styles/variables.sass'
+@import '@theme/styles/mixins.sass'
 
 .revealer-container
   pointer-events: none
   @include cover-screen-units
-  z-index: 99
+  z-index: 998
   opacity: 1
 
 .revealer
   @include cover-screen-units
   @include make3d
+  z-index: 999
   transform-origin: 0 0
   border-radius: 0
-  // TODO border-radius transition doesn't work on webkit - slows down things in general - any way to spoof?
-  // Tested but not much improvement - main problem is Firefox
+  // TODO border-radius transition doesn't work on webkit
 
 // revealer transition states
 

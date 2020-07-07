@@ -62,7 +62,7 @@ description="I built an intuitive 3D customisation tool which enables anyone to 
 It's manufactured on demand by a blend of modern and traditional techniques.
 <li>2018</li> -->
 
-<Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial">
+<Content-TextSection rag="rag-4" padding="is-initial">
 
 ## Case study
 
@@ -70,9 +70,9 @@ Recent years have seen a gradual increase in awareness of product customisation 
 
 In 2015 I helped pioneer customisable children’s toys at [Makielab.](/projects/makielab) We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage the lessons learnt and push the envelope of consumer Mass Customisation software.
 
-Firstly, I wanted to explore the possibility of a lightly constrained creation experience, able to generate infinite variations while being intuitive and fun to use. _I was convinced that suitable constraints could enhance the creativity of customers, rather than restrict it._ Secondly, to completely automate and outsource the fulfilment process.
+I wanted to explore the possibility of a lightly constrained creation experience, able to generate infinite variations while being intuitive and fun to use. _I was convinced that suitable constraints could enhance the creativity of users, rather than restrict it._ I also wanted to completely automate and outsource the fulfilment process.
 
-I also hoped to increase my empathy for colleagues and stakeholders by building a product end-to-end. To re-experience digital product development from every perspective - founder, marketer, product, design, developer and operations.
+By building a product end-to-end, I hoped to increase my empathy for colleagues and stakeholders. To re-experience digital product development from every perspective - founder, marketer, product, design, developer and operations.
 
 <!--
 
@@ -90,11 +90,11 @@ I also hoped to increase my empathy for colleagues and stakeholders by building 
 
 <template v-slot:aside>
 
-###  The challenge
+###  The challenge{ .challenge-title }
 
 Enable customers to customise a product in the web browser. Make it possible to save and order their creation with automatic fulfilment by outsourced operations and manufacturing.
 
-### The outcome
+### The outcome{ .challenge-title }
 
 Wesen fulfils my original success criteria. It taught me a great deal but the most valuable lessons I didn't expect; the importance of _getting the word out_ and _working in teams._
 
@@ -163,10 +163,10 @@ Entrepreneur
 
 ## Research
 
-My approach was to broadly investigate the mass customisation market and choose a product category based on estimated product-market fit. I used digital marketing techniques to gauge the market size.
+My approach was to broadly investigate the mass customisation market and choose a product category based on estimated product-market fit.
 
 <p class="subtitle">
-  I followed up with qualitative interviews; four designers and one non&#8209;designer, each who had recently designed or commissioned bespoke jewellery.
+  I used digital marketing techniques to gauge the market size and followed up with qualitative interviews; four designers and one non&#8209;designer, each who had recently designed or commissioned bespoke jewellery.
 </p>
 
 </template>
@@ -692,9 +692,9 @@ Wesen features a compelling, usable customisation tool and enables customers to 
 
 ### Lessons learnt
 
-Although business success was never my primary goal, I was still somewhat disappointed Wesen didn't exceed the modest reach predicted by my initial research. Were this to be a priority in any future venture, I draw an important lesson: _the importance of working in teams._
+Although business success was never my primary goal, I was still somewhat disappointed Wesen didn't exceed the modest reach predicted by my initial research. Were this to be a priority in any future venture, I draw an valuable lesson: _the importance of working in teams._
 
-Building a product oneself is empowering, but it's also inefficient and risky. For a start, I'm not a natural marketer or sales person. _Getting the word out_ is critically important to product success. Diverse perspectives lead to better products. Specialists get things done better and faster. Correspondingly, I intend build teams for any future projects at this level of resolution.
+Building a product oneself is empowering, but it's also inefficient and risky. For a start, I'm not a natural marketer or sales person. _Getting the word out_ is critically important to product success. Diverse perspectives lead to better products. Specialists get things done better and faster. Correspondingly, I intend to build teams for any future projects at this level of resolution.
 
 ### Going forward
 

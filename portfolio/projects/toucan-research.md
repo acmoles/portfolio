@@ -60,7 +60,7 @@ Stakeholders in:
 
 :::
 
-<Content-TextSection padding="is-initial" style="padding-top: 4em;" columnOffset="title-offset" rag="rag-6">
+<Content-TextSection padding="is-initial" style="padding-top: 4em;" rag="rag-5">
 
 ## Case study
 
@@ -68,17 +68,17 @@ A toucanBox subscription craft box contains all the materials needed to complete
 
 In my hybrid role as digital product designer and R&D manager, I was given a broad remit to tackle projects across the customer journey. I set strict criteria - setting up a _Project Passport_ to ensure we were laser focussed on key metrics.
 
-Consequently, some initiatives aimed to improve the experience for children, some for parents and typically both benefited. For example in early 2017 I led a project to refine the onboarding flow for new customers, that is, the parents ([read the case study](/projects/toucanbox)).
+Consequently, some of my initiatives focused on parents and some on children, but typically the experience was elevated for both. For example in early 2017 I led a project to refine the onboarding flow for new customers, that is, the parents ([read the case study](/projects/toucanbox)).
 
-Create by toucanBox aims to move the needle of _customer activation_ - the rate at which trialists convert to fully paying subscribers. We knew the top two reasons for cancellation in trial were _affordability_ and _value for money_. My hypothesis was that exclusive digital content could help address this, without increasing the variable cost of the box.
+This project - Create by toucanBox - introduces new play activities for the children, in order to change the parents perception of the product. It aims to move the needle of _customer activation_ - the rate at which trialists convert to fully paying subscribers. We knew the top two reasons for cancellation in trial were _affordability_ and _value for money_. My hypothesis was that exclusive digital content could help address this, without increasing the variable cost of the box.
 
 <template v-slot:aside>
 
-###  The challenge
+###  The challenge{ .challenge-title }
 
 Establish to what extent digital content linked to the trial box can increase activation rate. Estimate the costs and benefits of producing further digital content.
 
-### The outcome
+### The outcome{ .challenge-title }
 
 Promising pilot with some very engaged users but high friction moving to a device from the magazine reduced the reach, leading to low overall impact on activation.
 

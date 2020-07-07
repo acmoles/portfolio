@@ -16,6 +16,9 @@
   z-index: 2
   @include modal-background
 
+.medium-zoom--opened .medium-zoom-overlay
+  z-index: 4
+
 .modal-background-only
   @include modal-background
 
@@ -26,6 +29,11 @@
 // .modal-image-limit
 //   margin: 0 auto
 //   max-width: 60vw
+
+// Browser tweaks
+.firefox
+  .modal-background, .medium-zoom--opened .medium-zoom-overlay, .modal-background-only
+    background-color: rgba($steel, 0.98)
 
 // Modal buttons
 
