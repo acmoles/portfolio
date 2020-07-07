@@ -180,7 +180,9 @@ export default {
       }
 
       this.scrollPosition = getScrollTop()
-      this.navbarPosition = getOffsetY(this.$refs.navbar)
+      if (this.$refs.navbar) {
+        this.navbarPosition = getOffsetY(this.$refs.navbar)
+      }
 
       if ( this.scrollPosition > (this.$window.height / 1.618) && this.navbarBurgered === false ) {
         this.navbarBurgered = true

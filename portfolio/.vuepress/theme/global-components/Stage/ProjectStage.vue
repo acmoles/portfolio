@@ -17,11 +17,15 @@
     </div>
 
     <div ref="stage-intro" class="stage-intro container is-fullhd">
-      <div class="columns" :style="{transform: transform}">
+      <div
+        class="columns"
+        :style="{transform: transform}"
+        :class="[{'in-view': visible}, {'appear-stage-up': animating}]"
+        v-on:transitionend="stageTransitionEnd()"
+      >
         <div
           class="column stage-column"
-          :class="[{'in-view': visible}, {'appear-stage-up': animating}, titleColumnClass]"
-          v-on:transitionend="stageTransitionEnd()"
+          :class="[titleColumnClass]"
         >
           <p class="small-title">{{ processedTitle(subtitle) }}</p>
           <h1 class="stage-title" :class="ragTitle">{{ title }}</h1>
@@ -32,7 +36,6 @@
         <div
           v-if="hasVisulColumnSlot"
           class="column is-one-third visual-column"
-          :class="[{'in-view': visible}, {'appear-stage-up': animating}]"
         >
             <slot name="visual-column"></slot>
         </div>
@@ -223,7 +226,7 @@ export default {
     pageLoadingStatus (latest, last) {
       if (!this.isMobile) {
 
-        if (latest === 'finished' && this.intersected) {
+        if (latest === 'finished') {
           this.$forceNextTick(() => {
             this.visible = true
             this.visibleCallback()
@@ -319,7 +322,6 @@ export default {
     .columns
       justify-content: space-between
       will-change: transform
-      @include make3d
       position: relative
     @media screen and (min-width: $tablet)
       padding-top: 8em
