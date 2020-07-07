@@ -109,12 +109,12 @@ CTO
 
 
 
-<Content-TextSection rag="rag-4" columnOffset="title-offset" padding="is-initial">
+<Content-TextSection rag="rag-4" padding="is-initial">
 
 ##  Case study
 
 <p class="subtitle">
-toucanBox is an award winning startup subscription service delivering creative craft boxes to children aged 3-8.
+toucanBox is an award-winning startup subscription service delivering creative craft boxes to children aged 3-8.
 </p>
 
 Each toucanBox is addressed directly to the child and contains all the materials needed to complete crafty projects, with colourful step by step instructions and an activity magazine. New customers register through the website.
@@ -127,11 +127,11 @@ As project lead, I guided the organisation through a human-centred process of re
 
 <template v-slot:aside>
 
-###  The challenge
+###  The challenge{ .challenge-title }
 
 How might we increase funnel conversion rate; achieving our business goal but also helping our customers achieve their goals. How might we build a shared organisational understanding of the customer journey.
 
-### The outcome
+### The outcome{ .challenge-title }
 
 A usable, reassuring, and technologically sustainable homepage and signup experience which raised funnel conversion rate by an average of **25%** while reducing messaging related customer service cases.
 
@@ -219,7 +219,7 @@ Analytics, asking customer service, interviewing existing customers and parents 
 </Content-PointsSection>
 
 
-<Content-QuoteSection rag="rag-4" quote="It’s fun, I can see it’s for kids. But what I can't see straight away why I might want it or how it works." attribute="Ameera Algarni, Mum to Rafi"/>
+<Content-QuoteSection rag="rag-4" quote="It’s fun, I can see it’s for kids. But I can't see straight away why I might want it or how it works." attribute="Ameera, mum to Rafi"/>
 
 
 <Content-ThreeColumnSection padding="is-large" columnOffset="three-offset">
@@ -316,7 +316,13 @@ The box experience is all about the child. Their enjoyment drives the decision t
 </Content-ThreeColumnSection>
 
 
-<Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse-wide.jpg" alt="Montage of discovery artefacts"/>
+<Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse-wide.jpg" alt="Montage of discovery artefacts">
+<template v-slot:caption>
+
+The toucanBox fulfilment warehouse at Heathrow
+
+</template>
+</Content-ImageFrames-FullImageSection>
 
 
 <Content-ThreeColumnSection padding="is-large" rag="rag-5" columnOffset="three-offset">
@@ -898,7 +904,7 @@ The donation experience project had a transformational effect within the greater
 
 ### Lessons learnt
 
-The only disappointment was how long it took to access the valuable outcomes. As the only full&#8209;time member of the project team I needed to split my time between management and UX design. Although I relished the varied work, combined with the developer bottleneck, the delay between identifying problems and applying remedies was costly. We agreed to address this issue by hiring a specialised front-end developer and a product manager.
+The only disappointment was how long it took to complete the process and access the valuable outcomes. As the only full&#8209;time member of the project team I needed to split my time between management and UX design. Although I relished the varied work, combined with the developer bottleneck, the delay between identifying problems and applying remedies was costly. We agreed to address this issue by hiring a specialised front-end developer and a product manager.
 
 <!-- I was the only full-time member of the project team; coordinating the research, executing the design process, writing front-end code, planning tests and shipping releases. We were a small team with many competing priorities and a limited budget. This meant a delay between identifying the problems and releasing the improvements.
 

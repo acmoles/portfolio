@@ -68,12 +68,12 @@ Designer / Developer
 
 :::
 
-<Content-TextSection rag="rag-6" columnOffset="title-offset" padding="is-initial is-continuous">
+<Content-TextSection rag="rag-3" columnOffset="title-offset" padding="is-initial is-continuous">
 
-In 2013 I joined forces with my brother [Simon Moles](https://www.simonmoles.com/) (systems developer at [Rockstar North](https://www.rockstarnorth.com/)) to build video games specifically for tablet devices. We worked in the Unity game engine, enabling us to target all major platforms.
+In 2013 I joined forces with my brother [Simon Moles](https://www.simonmoles.com/) (systems developer at <span style="white-space: nowrap;">[Rockstar North](https://www.rockstarnorth.com/))</span> to build video games specifically for tablet devices. We worked in the Unity game engine, enabling us to target all major platforms.
 
 <p class="subtitle">
-We had just witnessed the dawn of ubiquitous touch-based tablet computing and believed we could exploit this fresh input medium to reimagine some of our favourite game genres.
+We had just witnessed the dawn of ubiquitous touch-based tablet computing and believed we could exploit this fresh interaction medium to reimagine some of our favourite game genres.
 </p>
 
 <p>

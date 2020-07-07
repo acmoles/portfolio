@@ -35,11 +35,14 @@ import Navbar from '@theme/components/nav/Navbar.vue'
 import Footer from '@theme/components/nav/Footer.vue'
 import PageNav from '@theme/components/nav/PageNav.vue'
 import Sidebar from '@theme/components/nav/Sidebar.vue'
+import { browserDetection } from '@theme/mixins/browserDetection.js'
 
 import config from '@theme/../config.js'
 
 export default {
   components: { Sidebar, Navbar, Footer, PageNav },
+
+  mixins: [browserDetection],
 
   computed: {
     pageLoadingStatus () {
@@ -53,9 +56,11 @@ export default {
     pageClasses () {
       const userPageClass = this.$page.frontmatter.pageClass
       const tintStyle = this.$page.frontmatter.navStyle.tint
+      const Firefox = this.isFirefox ? 'firefox' : null
       return [
         this.pageLoadingStatus,
         tintStyle,
+        Firefox,
         userPageClass
       ]
     },
@@ -75,7 +80,7 @@ export default {
         this.$nextTick( () => {
           if (anchor && document.getElementById(split)) {
             this.$store.dispatch('setFirstLoad', false)
-            location.href = anchor
+            location.assign(this.$router.currentRoute.fullPath)
           }
         });
       }

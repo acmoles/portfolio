@@ -65,7 +65,7 @@ Creative Director
 <Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial">
 
 <p class="subtitle">
-Art Lebedev Studio is the first and largest independent design studio in Russia. Founded in 1995 with over 300 employees today.
+Art Lebedev Studio is the first and largest independent design studio in Russia. Founded in 1995, today it has over 300 employees.
 </p>
 
 The studio is best known internationally for the [Optimus Maximus](https://www.artlebedev.com/optimus/) keyboard which features a customisable OLED display in every key. Within Russia it's famous for redesigning the Moscow metro map and synonymous with internet brands like Yandex and Alfa-bank.
@@ -88,7 +88,7 @@ Outsider status is appealing. So is the irreverent sense of humour. I wanted to 
 
 
 
-<Content-QuoteSection rag="rag-4" quote="Anthony has shown a great persistence on one particular project where almost everyone in the design team lost hope due to very strict technological, ergonomic and layout constrains. He literally saved the project and brought back optimism and belief." attribute="Timour Bourbaev, Creative Director of Product Design, referring to NITA air traffic control" color="blue"/>
+<Content-QuoteSection rag="rag-4" quote="Anthony has shown a great persistence on one particular project where almost everyone in the design team lost hope due to very strict technological, ergonomic and layout constraints. He literally saved the project and brought back optimism and belief." attribute="Timour Bourbaev, Creative Director of Product Design, referring to NITA air traffic control" color="blue"/>
 
 
 

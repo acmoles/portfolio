@@ -58,7 +58,7 @@ Engineering Manager
 
 <Content-TextSection rag="rag-4" columnOffset="title-offset" padding="is-initial is-continuous">
 
-Random International design and build technology powered interactive art installations. My ongoing focus is bridging the real and digital worlds, challenging current thinking about interactivity and exploring how people relate to rapidly changing technology. So I was very please to join them as an intern in 2010.
+Random International design and build technology-powered interactive art installations. My ongoing focus is bridging the real and digital worlds, challenging current thinking about interactivity and exploring how people relate to rapidly changing technology. So I was very please to join them as an intern in 2010.
 
 In the first weeks I helped assemble and install [Swarm Study III](https://www.random-international.com/swarm-study-iii-2011) in the V&A, I paid a maintenance visit to [Duplex](https://www.random-international.com/duplex-2011) and created a new PCB bracket for [Self Portrait](https://www.random-international.com/self-portrait-2010). Getting hands on with studio's existing artworks taught me a great deal about how to manufacture bespoke mechanical / electrical objects. It gave me a firm foundation to contribute meaningfully to the next project.
 

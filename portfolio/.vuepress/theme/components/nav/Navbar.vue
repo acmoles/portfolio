@@ -25,7 +25,7 @@
             <transition name="fade-fast" mode="out-in">
               <ArrowIcon
                 class="back-arrow"
-                v-if="navbarBurgered && !isMobileHome"
+                v-if="(navbarBurgered || isModalOpen) && !isMobileHome"
                 />
               <span
                 class="text-site-title"
