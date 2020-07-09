@@ -27,7 +27,7 @@ module.exports = {
       ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
       ['meta', { name: 'msapplication-TileColor', content: '#1F2D3D' }],
       ['meta', { property: 'og:title', content: 'Anthony Moles | Portfolio' }],
-      ['meta', { property: 'og:image', content: 'https://www.acmoles.com/projects/icons/Anthony_Moles_Portfolio.jpg' }],
+      ['meta', { property: 'og:image', content: 'https://www.acmoles.com/icons/Anthony_Moles_Portfolio.jpg' }],
       ['meta', { property: 'og:description', content: 'I\'m a designer and leader creating useful and playful experiences centred on people.' }],
       ['meta', { property: 'og:url', content: 'https://www.acmoles.com' }],
   ],
