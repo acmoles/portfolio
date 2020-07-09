@@ -16,7 +16,6 @@ export class LoadedContent extends EventTarget {
     this.TRANSITION = 1;
     this.animations = [];
     this.interactables = [];
-
     this.LOADPATH = window.location.origin + '/three/characters-3.glb';
 
     this.models = [
@@ -143,13 +142,19 @@ export class LoadedContent extends EventTarget {
       this.enhancedMaterial = true;
       material.onBeforeCompile = ( shader ) => {
         shader.uniforms.time = { value: 0 };
+        if (window.devicePixelRatio < 1.5) {
+          console.log('low PR');
+          shader.uniforms.noise = { value: 0.42 };
+        } else {
+          shader.uniforms.noise = { value: 0.64 };
+        }
         shader.vertexShader = 'varying float vY;\n' + shader.vertexShader;
 
         shader.vertexShader = shader.vertexShader.replace(
           '#include <fog_vertex>', SharedShader.vertexShader
         );
 
-        shader.fragmentShader = 'uniform float time;\nvarying float vY;\n' + SharedShader.randomFunction + SharedShader.blendFunction + shader.fragmentShader;
+        shader.fragmentShader = 'uniform float time;\nuniform float noise;\nvarying float vY;\n' + SharedShader.randomFunction + SharedShader.blendFunction + shader.fragmentShader;
 
         shader.fragmentShader = shader.fragmentShader.replace(
           '#include <specularmap_fragment>', SharedShader.fragmentShaderOutput
