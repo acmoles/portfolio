@@ -57,7 +57,7 @@ vec3 col = mix( vec3( .6 ), vec3( .0 ), 1. - val );
 diffuseColor.rgb = blendOverlay( diffuseColor.rgb, col );
 
 
-float n = ( 1. - .64 * random( vec3( 1. ), length( gl_FragCoord ) ) );
+float n = ( 1. - noise * random( vec3( 1. ), length( gl_FragCoord ) ) );
 
 diffuseColor.rgb = blendOverlay( diffuseColor.rgb, vec3( n ) );
 `

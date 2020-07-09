@@ -43,7 +43,6 @@ export default {
 
       var promise = new Promise((resolve, reject) => {
         this.threeComposition.addEventListener('comp-loaded', () => {
-          console.log('load: ', this.doLoad)
           this.doLoad()
         })
         resolve()
