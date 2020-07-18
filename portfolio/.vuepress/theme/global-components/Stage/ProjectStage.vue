@@ -3,7 +3,6 @@
   <section class="stage" :class="navStyle">
 
     <div
-      ref="parent"
       class="visual project-card"
       :class="background">
       <div
@@ -321,7 +320,7 @@ export default {
       margin-bottom: 0
     .columns
       justify-content: space-between
-      will-change: transform
+      will-change: transform, opacity
       position: relative
     @media screen and (min-width: $tablet)
       padding-top: 8em
@@ -445,7 +444,7 @@ export default {
   height: calc(100vh + 24px + 6em)
   width: 100%
   position: absolute
-  will-change: transform
+  will-change: transform, opacity
   overflow: hidden
   @include make3d
   top: -24px

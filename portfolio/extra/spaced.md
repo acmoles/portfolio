@@ -43,7 +43,7 @@ hasFooter: false
 </Content-GridSection>
 
 <div class="container is-fullhd content">
-<p style="width: 60%; margin-top: 1.5em;">
+<p margin-top: 1.5em;">
   Spaced challenges the player to keep a fully simulated spaceship functioning in the face of routine (and not-so-routine) missions.
 </p>
 </div>
