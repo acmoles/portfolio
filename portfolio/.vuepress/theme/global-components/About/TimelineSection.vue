@@ -26,12 +26,16 @@
         <div class="columns">
           <div class="slider-controls-container column is-one-third">
             <div class="columns is-gapless">
-              <button class="button section-toggle column is-one-quarter back" :class="{'is-active': currentPage === 1}" type="button" @click="changePage('prev')">
-                <i class="icon" aria-hidden="true"><img src="/svg-icons/icon_right.svg" alt="right icon"></i> Back
-              </button>
-              <button class="button section-toggle column" :class="{'is-active': currentPage === numberOfPages}" type="button" @click="changePage('next')">
-                Forward <i class="icon" aria-hidden="true"><img src="/svg-icons/icon_right.svg" alt="right icon"></i>
-              </button>
+              <div class="column is-one-quarter">
+                <button class="button section-toggle back" :class="{'is-active': currentPage === 1}" type="button" @click="changePage('prev')">
+                  <i class="icon" aria-hidden="true"><img src="/svg-icons/icon_right.svg" alt="right icon"></i> Back
+                </button>
+              </div>
+              <div class="column">
+                <button class="button section-toggle" :class="{'is-active': currentPage === numberOfPages}" type="button" @click="changePage('next')">
+                  Forward <i class="icon" aria-hidden="true"><img src="/svg-icons/icon_right.svg" alt="right icon"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -163,7 +167,7 @@ export default {
           transform: rotate(0)
       &.back
         position: relative
-        left: -1.75em
+        left: -1.5em
         .icon
           transform: rotate(180deg)
 </style>
