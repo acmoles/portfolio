@@ -11,7 +11,7 @@ navStyle:
 background: purple
 sidebar: false
 date: 2019-09-11
-prev: ./interaction
+prev: ./play
 next: ./stompy-robot
 hasFooter: true
 ---
@@ -23,7 +23,7 @@ description="I explored whether adding digital value to the physical craft box c
 
 <template v-slot:visual-background>
   <figure class="full-screen">
-    <Heros-ImageHero src="/images/toucan-rnd/all-together4.jpg" alt="Ecosia mobile devices"/>
+    <Heros-ImageHero src="/images/toucan-rnd/all-together5.jpg" alt="Ecosia mobile devices"/>
   </figure>
 </template>
 
@@ -60,7 +60,7 @@ Stakeholders in:
 
 :::
 
-<Content-TextSection padding="is-initial" style="padding-top: 4em;" rag="rag-5">
+<Content-TextSection padding="is-initial" style="padding-top: 4em;" rag="rag-5" columnOffset="title-offset">
 
 ## Case study
 
@@ -74,11 +74,13 @@ This project - Create by toucanBox - introduces new play activities for the chil
 
 <template v-slot:aside>
 
-###  The challenge{ .challenge-title }
+####  The challenge{ .challenge-title }
 
 Establish to what extent digital content linked to the trial box can increase activation rate. Estimate the costs and benefits of producing further digital content.
 
-### The outcome{ .challenge-title }
+<br>
+
+#### The outcome{ .challenge-title }
 
 Promising pilot with some very engaged users but high friction moving to a device from the magazine reduced the reach, leading to low overall impact on activation.
 

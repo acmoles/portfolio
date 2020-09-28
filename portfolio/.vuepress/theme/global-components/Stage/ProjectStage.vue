@@ -4,27 +4,27 @@
 
     <div
       class="visual project-card"
-      :class="background">
+      :class="background"
+      ref="visual"
+      :style="{height: checkedHeight + 'px'}"
+    >
       <div
         ref="parallax"
         v-if="!hasVisulColumnSlot"
         class="parallax"
-        :class="[{'in-view': visible}, {'appear-stage-up': animating && !fadeless}]"
-        :style="{transform: transform}">
+        :class="[{'in-view': visible}, {'appear-fade': animating && !fadeless && upless}, {'appear-fade-up': animating && !fadeless && !upless}]"
+        :style="{transform: transform}"
+        v-on:transitionend="stageTransitionEnd()"
+      >
         <slot name="visual-background"></slot>
       </div>
     </div>
 
     <div ref="stage-intro" class="stage-intro container is-fullhd">
-      <div
-        class="columns"
-        :style="{transform: transform}"
-        :class="[{'in-view': visible}, {'appear-stage-up': animating}]"
-        v-on:transitionend="stageTransitionEnd()"
-      >
+      <div class="columns">
         <div
           class="column stage-column"
-          :class="[titleColumnClass]"
+          :class="[titleColumnClass, {'in-view': visible}, {'appear-fade-up': !fadeless}]"
         >
           <p class="small-title">{{ processedTitle(subtitle) }}</p>
           <h1 class="stage-title" :class="ragTitle">{{ title }}</h1>
@@ -35,6 +35,9 @@
         <div
           v-if="hasVisulColumnSlot"
           class="column is-one-third visual-column"
+          :class="[{'in-view': visible}, {'appear-fade-up': animating}]"
+          :style="{transform: transform}"
+          v-on:transitionend="stageTransitionEnd()"
         >
             <slot name="visual-column"></slot>
         </div>
@@ -43,14 +46,9 @@
 
     <div
       class="overview content"
-      :class="[ {'wipe-up': readyForWipe} ]"
-      :style="{ transform: 'translate3D(0,' + displacement + 'px, 0)' }"
-      v-on:transitionend="wipeEnd()"
     >
-    <div class="modal-background-only upper-mask" :class="{ 'finished': wipeFinished }"></div>
-
     <div class="overview-upper">
-      <div class="modal-background-only upper-mask-nonblur" :class="{ 'finished': wipeFinished }"></div>
+      <div class="modal-background-only upper-mask"></div>
       <div class="container is-fullhd">
 
         <div class="columns is-vcentered is-gapless">
@@ -60,13 +58,13 @@
                 <strong>{{ platform }}</strong>
               </div>
               <div class="column">
-                <strong>Team</strong>
+                <strong>{{ team }}</strong>
               </div>
               <div class="column">
-                <strong>My role</strong>
+                <strong>{{ myRole }}</strong>
               </div>
               <div class="column">
-                <strong>Timeframe</strong>
+                <strong>{{ timeframe }}</strong>
               </div>
             </div>
           </div>
@@ -151,7 +149,7 @@ import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
 import { processedTitle } from '@theme/mixins/processedTitle.js'
 
 import updateOnScroll from 'uos'
-// import debounce from 'lodash.debounce'
+import throttle from 'lodash/throttle'
 import { getScrollTop, getViewport } from '@theme/util'
 import config from '@theme/../config.js'
 
@@ -164,6 +162,7 @@ export default {
     ctaUrl: String,
     description: String,
     fadeless: Boolean,
+    upless: Boolean,
     rag: String,
     ragTitle: String,
     hasModal: Boolean,
@@ -171,9 +170,29 @@ export default {
       type: String,
       default: 'Platform'
     },
+    platform: {
+      type: String,
+      default: 'Platform'
+    },
+    team: {
+      type: String,
+      default: 'Team'
+    },
+    myRole: {
+      type: String,
+      default: 'My role'
+    },
+    timeframe: {
+      type: String,
+      default: 'Timeframe'
+    },
     titleColumnClass: {
       type: String,
       default: 'is-two-thirds'
+    },
+    doParallax: {
+      type: Boolean,
+      default: true
     },
   },
 
@@ -184,14 +203,15 @@ export default {
       transform: ``,
       oneTime: true,
       animating: true,
-      readyForWipe: false,
-      wipeFinished: false,
-      displacement: null
+      checkedHeight: null
     }
   },
 
   computed: {
     // TODO make description slot pull from page metadata? Could also be used for SEO
+    pageLoadingStatus () {
+      return this.$store.state.pageLoadingStatus
+    },
     navStyle () {
       return this.$page.frontmatter.navStyle.style
     },
@@ -221,36 +241,25 @@ export default {
     },
   },
 
-  watch: {
-    pageLoadingStatus (latest, last) {
-      if (!this.isMobile) {
-
-        if (latest === 'finished') {
-          this.$forceNextTick(() => {
-            this.visible = true
-            this.visibleCallback()
-          })
-        } else if (latest === 'revealing') {
-          this.$forceNextTick(() => {
-            // console.log('scrolltop: ', getScrollTop());
-            if (getScrollTop() === 0) {
-              this.displacement = getViewport('y') - this.$refs['stage-intro'].getBoundingClientRect().height
-              // console.log('rect is: ', this.$el.getBoundingClientRect().y);
-              // console.log('viewport is: ', getViewport('y'));
-              // console.log('displacement is: ', this.displacement);
-            }
-          })
-        }
-
-      }
-    }
-  },
-
   mounted () {
+    // let throttledScroll = throttle(() => {
+    //   if (this.visible && !this.isModalOpen) {
+    //     this.animateElement()
+    //   }
+    // }, 16)
+    //
+    // this.$nextTick(() => {
+    //     updateOnScroll(0, 1, progress => {
+    //       throttledScroll()
+    //     })
+    // })
+
     this.$nextTick(() => {
+        this.checkHeight()
+
         updateOnScroll(0, 1, progress => {
           window.requestAnimationFrame(() => {
-            if (this.visible && !this.isModalOpen) {
+            if (this.visible && !this.isModalOpen && this.pageLoadingStatus === 'finished' && this.doParallax) {
               this.animateElement()
             }
           })
@@ -260,28 +269,24 @@ export default {
 
   methods: {
     animateElement () {
-      let animationValue = (getScrollTop() * 0.3) // speed factor
+      let animationValue = (getScrollTop() * 0.2) // speed factor
       if (animationValue >= 0 && animationValue <= 300) {
         this.transform = `translate3d(0, ${animationValue}px, 0)`
       }
     },
-    visibleCallback () {
-      // console.log('visible callback');
-      this.readyForWipe = true
-      this.$forceNextTick(() => {
-        this.displacement = 0
-      })
-    },
-    wipeEnd () {
-      // console.log('whipe end');
-      this.wipeFinished = true
-    },
     stageTransitionEnd () {
       // console.log('stage end');
       this.animating = false
+    },
+    checkHeight () {
+      let visual = this.$refs['visual'].getBoundingClientRect().height
+      let naturalStage = this.$refs['stage-intro'].getBoundingClientRect().height
+      if (naturalStage > visual) {
+        this.checkedHeight = visual + 192
+        console.log('check height', naturalStage);
+      }
     }
   }
-
 }
 
 </script>
@@ -312,21 +317,23 @@ export default {
 
   .stage-intro
     min-height: 100vh
-    display: flex
-    flex: none
     padding-top: 7em
     position: relative
+    pointer-events: none
     .subtitle
       margin-bottom: 0
     .columns
+      pointer-events: all
+      grid-row-start: 2
       justify-content: space-between
       will-change: transform, opacity
       position: relative
     @media screen and (min-width: $tablet)
-      padding-top: 8em
-      padding-bottom: 3em
-      min-height: calc(100vh / 1.618)
-      align-items: center
+      padding-top: 0
+      display: grid
+      grid-template-rows: 1.618fr 1fr
+      .columns
+        top: -4em
 
   .stage-title
     font-size: 2em
@@ -342,13 +349,9 @@ export default {
   justify-content: center
   align-items: center
 
-// .stage, .stage-intro, .visual
-//   transform: translate3d(0,0,0)
-
 // Overview
 
 .overview
-  @include make3d
   display: flex
   flex-grow: 1
   flex-direction: column
@@ -419,23 +422,10 @@ export default {
 
 // Overview modal shading
 
-.modal-background-only.upper-mask, .modal-background-only.upper-mask-nonblur
-  @include cover-screen
-
 .modal-background-only.upper-mask
+  @include cover-screen
   @include make3d
-  transition: opacity 0.4s ease
-  background-color: transparent
-  background-image: none
-  opacity: 0
-  &.finished
-    opacity: 1
-
-.modal-background-only.upper-mask-nonblur
-  backdrop-filter: none
-  --webkit-backdrop-filter: none
   background-image: url('../../plugins/plugin-outside-content/dark-noise-heavy-2extra.png')
-
 
 
 // Background
@@ -444,14 +434,23 @@ export default {
   height: calc(100vh + 24px + 6em)
   width: 100%
   position: absolute
-  will-change: transform, opacity
-  overflow: hidden
-  @include make3d
   top: -24px
-  @media screen and (min-width: $tablet)
-    height: calc(100vh + 24px)
+
+.visual
+  overflow: hidden
+
+.visual .parallax, .column.visual-column
+  @include make3d
+  will-change: transform, opacity
+  &.appear-fade-up, &.appear-fade
+    transition-delay: 0.3s
+  &.appear-fade
+    transition-duration: 1.6s
+  &.appear-fade-up
+    transition-duration: 1.2s
 
 figure.full-screen
+  height: 100%
   img
     object-fit: cover
     width: 100%
@@ -475,32 +474,5 @@ figure.full-screen
     // img
     //   height: 100%
     //   max-width: none
-
-
-// Animations
-
-html:not(.disable-motion)
-  // .stage-column
-  //   transition: opacity .8s $coverTransition, transform .8s $coverTransition
-  //   transition-delay: $base-project-delay + $first-mover-delay
-
-  .appear-stage-up
-    transition: opacity .8s $fadeUpTransition ($base-project-delay + $first-mover-delay), transform 1s $coverTransition
-    opacity: 0
-    transform: translateY(144px)
-    // transition: opacity 0.5s $fadeUpTransition, transform 0.5s $fadeUpTransition
-    // transition-delay: $base-project-delay + $first-mover-delay
-
-  .appear-stage-up.in-view
-    transform: translateY(0)
-    opacity: 1
-
-
-
-  .overview.wipe-up
-    // transition: transform $project-wipe-time $coverTransition
-    transition: transform $project-wipe-time $coverTransition
-    // cubic-bezier(.215,.61,.355,1)
-    transition-delay: $base-project-delay
 
 </style>

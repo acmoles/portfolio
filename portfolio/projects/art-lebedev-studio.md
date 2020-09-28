@@ -19,7 +19,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage rag="rag-2" ragTitle="rag-3" platform="Product" ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/"
+<Stage-ProjectStage rag="rag-2" ragTitle="rag-3" :upless="true" platform="Product" ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/"
 description="I spent 9 months in Moscow, honing my craft among an award-winning industrial design team.">
 
 <template v-slot:visual-background>

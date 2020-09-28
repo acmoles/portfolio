@@ -18,7 +18,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage rag="rag-4" titleRag="rag-2" platform="Product" ctaLabel="random-international.com" ctaUrl="https://www.random-international.com/"
+<Stage-ProjectStage rag="rag-4" titleRag="rag-2" :upless="true" platform="Product" ctaLabel="random-international.com" ctaUrl="https://www.random-international.com/"
 description="I designed all physical aspects of an art installation for the 4th Moscow Biennial of Contemporary Art.">
 
   <template v-slot:visual-background>

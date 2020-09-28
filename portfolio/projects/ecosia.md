@@ -11,7 +11,7 @@ background: orange
 sidebar: false
 date: 2019-09-11
 prev: ./wesen
-next: ./interaction
+next: ./play
 image:
 hasFooter: true
 ---
@@ -71,8 +71,9 @@ Product designer
 
 .ecosia-image
   position: absolute
-  left: -14%
-  width: 144%
+  left: -32%;
+  width: 180%;
+  top: -100%;
   @media screen and (max-width: $tablet - 1px)
     top: -24%
 </style>

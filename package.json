@@ -22,32 +22,33 @@
   },
   "homepage": "https://github.com/acmoles/portfolio#readme",
   "devDependencies": {
-    "@vuepress/plugin-active-header-links": "^1.5.0",
-    "@vuepress/plugin-medium-zoom": "^1.5.0",
-    "@vuepress/plugin-nprogress": "^1.5.0",
-    "@vuepress/plugin-pwa": "^1.5.0",
-    "autoprefixer": "^9.8.0",
-    "markdown-it-attrs": "^3.0.2",
-    "markdown-it-deflist": "^2.0.3",
+    "@vuepress/plugin-active-header-links": "^1.6.0",
+    "@vuepress/plugin-medium-zoom": "^1.6.0",
+    "@vuepress/plugin-nprogress": "^1.6.0",
+    "@vuepress/plugin-pwa": "^1.6.0",
+    "autoprefixer": "^10.0.1",
+    "markdown-it-attrs": "^3.0.3",
+    "markdown-it-deflist": "^2.1.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^7.3.1",
-    "vuepress": "^1.5.0",
-    "vuepress-plugin-clean-urls": "^1.1.1",
+    "vuepress": "^1.6.0",
+    "vuepress-plugin-clean-urls": "^1.1.2",
     "vuepress-plugin-reading-time": "^0.1.1",
-    "webpack": "^4.43.0"
+    "webpack": "^4.44.2"
   },
   "dependencies": {
-    "airtable": "^0.8.1",
+    "airtable": "^0.10.0",
     "animejs": "^3.2.0",
-    "bulma": "^0.8.2",
+    "bulma": "^0.9.0",
     "event-target-shim": "^5.0.1",
     "imagesloaded": "^4.1.4",
-    "lazysizes": "^5.2.1-rc2",
+    "lazysizes": "^5.2.2",
     "portal-vue": "^2.1.7",
     "three": "^0.116.1",
     "uos": "^1.2.0",
+    "vue": "^2.6.12",
     "vue-clipboard2": "^0.3.1",
     "vue-force-next-tick": "^1.1.0",
-    "vuex": "^3.4.0"
+    "vuex": "^3.5.1"
   }
 }

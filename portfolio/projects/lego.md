@@ -1,7 +1,7 @@
 ---
 uid: 9
 title: LEGO
-subtitle: Building a unique video game experience
+subtitle: Building a unique play experience
 type: single
 navStyle:
   style: light
@@ -17,7 +17,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage rag="rag-3" ragTitle="rag-1" platform="Product" ctaLabel="none" ctaUrl="#"
+<Stage-ProjectStage rag="rag-6" ragTitle="rag-3" platform="Product" ctaLabel="none" ctaUrl="#"
 description="I was a core member of a skunkworks team tasked with blending brick building with video games.">
 
 <template v-slot:visual-column>
@@ -58,8 +58,9 @@ Design Manager
 
 .lego-image
   position: absolute
-  left: -25%
-  width: 200%
+  left: -32%
+  width: 50vw
+  top: -16%
 
 </style>
 

@@ -31,7 +31,7 @@ description="I guided the organisation through a human-centred design process wh
     <!-- <b class="decoration svg-confetti-red"/> -->
     <b class="decoration svg-confetti-yellow"/>
     <b class="decoration svg-flash-blue"/>
-    <!-- <b class="decoration svg-flash-yellow"/> -->
+    <b class="decoration svg-flash-yellow"/>
     <!-- <b class="decoration svg-pencil-parachute"/> -->
   </figure>
 </template>
@@ -86,11 +86,15 @@ CTO
   max-height: 16em
   top: 0
   @media screen and (min-width: $tablet)
-    top: auto
-    left: -16%
-    height: 38vh
-    max-height: 26em
-    min-height: 22em
+    top: -32%
+    left: -28%
+    height: 128%
+    max-height: none
+  @media screen and (min-width: $fullhd)
+    top: -38%
+    left: -28%
+    height: 128%
+    max-height: none
   img
     position: relative
     height: 100%
@@ -109,7 +113,7 @@ CTO
 
 
 
-<Content-TextSection rag="rag-4" padding="is-initial">
+<Content-TextSection rag="rag-4" padding="is-initial" columnOffset="title-offset">
 
 ##  Case study
 
@@ -127,11 +131,13 @@ As project lead, I guided the organisation through a human-centred process of re
 
 <template v-slot:aside>
 
-###  The challenge{ .challenge-title }
+####  The challenge{ .challenge-title }
 
 How might we increase funnel conversion rate; achieving our business goal but also helping our customers achieve their goals. How might we build a shared organisational understanding of the customer journey.
 
-### The outcome{ .challenge-title }
+<br>
+
+#### The outcome{ .challenge-title }
 
 A usable, reassuring, and technologically sustainable homepage and signup experience which raised funnel conversion rate by an average of **25%** while reducing messaging related customer service cases.
 
@@ -511,7 +517,7 @@ I gathered everything we learnt about our users into a set of 'Product Principle
 ## Testing prototypes
 
 <p class="subtitle">
-  Equipped with strategic objectives generated with input from across the organisation, my next step was to iterate towards a design solution. 
+  Equipped with strategic objectives generated with input from across the organisation, my next step was to iterate towards a design solution.
 </p>
 
 Four design challenges stood out as critical to the project’s success; the 'main stage', product section, site navigation and the details form. I didn't rely solely on upfront research and tested continuously with stakeholders and users. NB: trialist mode is activated when a user enters a valid discount code or if they arrive from a paid marketing source with a URL embedded code.

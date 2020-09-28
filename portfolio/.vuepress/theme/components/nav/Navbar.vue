@@ -28,11 +28,11 @@
             </router-link>
           </transition>
 
-          <transition name="fade-fast">
+          <transition name="fade-fast-delay">
           <router-link
             :to="$localePath"
             class="home-link"
-            v-if="(!(navbarBurgered || isModalOpen) || isMobileHome) && pageLoadingStatus !== 'covering'"
+            v-if="!(navbarBurgered || isModalOpen) && pageLoadingStatus !== 'covering' || isMobileHome"
           >
             <!-- <Logo class="logo-site-title"/> -->
               <span class="text-site-title">
@@ -314,7 +314,8 @@ export default {
     display: none
   .home-link
     pointer-events: none
-    opacity: 1 !important
+    &:active
+      opacity: 1
     @media screen and (min-width: $tablet)
       margin-left: 1.75em
   .navbar-end
@@ -330,7 +331,7 @@ export default {
   .navbar-menu
     box-shadow: none
     justify-content: flex-end
-    margin-right: 1.5em
+    margin-right: -1em
     .navbar-item
       text-align: right
 </style>

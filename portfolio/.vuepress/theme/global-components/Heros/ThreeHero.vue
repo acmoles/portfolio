@@ -68,7 +68,12 @@ export default {
   @import "@theme/styles/mixins.sass"
 
   .presentation
-    height: 44em
+    position: relative
+    height: 100vh
+    top: 12em
+    @media screen and (min-width: $tablet)
+      height: calc(100vh - 4em)
+      top: 0
     canvas
       position: absolute
       top: 0

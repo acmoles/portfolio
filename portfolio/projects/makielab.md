@@ -16,8 +16,8 @@ hasFooter: true
 ---
 
 ::: slot top
-
-<Stage-ProjectStage rag="rag-4" titleRag="rag-2" :fadeless="true" ctaLabel="none" ctaUrl="#"
+<!-- :fadeless="true" -->
+<Stage-ProjectStage rag="rag-4" titleRag="rag-2" ctaLabel="none" ctaUrl="#"
 description="I played a central role in Makielab's collaboration with Disney, who eventually acquired the company.">
 
 <template v-slot:visual-background>
@@ -89,6 +89,8 @@ Before joining Makielab I was already exploring the possibility of toy manufactu
 
 </Content-TextSection>
 
+
+<!-- <Content-QuoteSection rag="rag-4" quote="Anthony has shown a great persistence on one particular project where almost everyone in the design team lost hope due to very strict technological, ergonomic and layout constraints. He literally saved the project and brought back optimism and belief." attribute="Timour Bourbaev, Creative Director of Product Design, referring to NITA air traffic control" color="blue"/> -->
 
 
 

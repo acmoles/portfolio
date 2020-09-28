@@ -57,12 +57,17 @@ Designer / Developer
 </Stage-ProjectStage>
 
 <style lang="sass">
+@import "@theme/styles/variables.sass"
 
 .stompy-image
   position: absolute
-  left: -56%
-  top: -2%
-  width: 200%
+  left: -96%
+  top: -42%
+  width: 256%
+  @media screen and (min-width: $fullhd)
+    left: -90%;
+    top: -42%;
+    width: 280%;
 
 </style>
 

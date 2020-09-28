@@ -8,7 +8,7 @@ module.exports = {
       '/': {
         lang: 'en-GB',
         title: 'Ant Moles | Portfolio',
-        description: 'I\'m a designer and leader creating useful and playful experiences centred on people.'
+        description: 'I\'m a designer, coder and leader creating useful and playful experiences centred on people.'
       }
   },
   head: [
@@ -47,7 +47,7 @@ module.exports = {
     ],
   },
   sass: {
-    indentedSyntax: true
+    indentedSyntax: true // trouble updating sass loader...
   },
   fadeTransitionTime: 400, // sass variable $fadeTime
   revealTransitionTime: 800, // sass variable $revealTime
@@ -62,7 +62,8 @@ module.exports = {
     resolve: {
       alias: {
         "@assets": path.resolve(__dirname, '../assets'),
-        "@application": path.resolve(__dirname, './theme/application')
+        "@application": path.resolve(__dirname, './theme/application'),
+        "@plugins": path.resolve(__dirname, './theme/plugins')
       }
     }
   },

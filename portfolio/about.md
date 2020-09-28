@@ -1,5 +1,7 @@
 ---
 title: About
+subtitle: Hello! I'm Ant
+pageClass: about
 sidebar: false
 date: 2019-09-11
 navStyle:
@@ -10,21 +12,120 @@ hasFooter: true
 ---
 
 <style lang="sass">
+  @import "@theme/styles/variables.sass"
+  @import "@theme/styles/mixins.sass"
 
   .section.about-text
     padding-top: 0
     position: relative
     top: -5em
 
+  .about .stage .stage-intro .columns
+    top: 0
+
+  .about .stage .small-title
+    display: none
+
+  .about .stage-column
+    @media screen and (max-width: $tablet - 1px)
+      position: relative
+      top: 1em
+      border-top: solid 1px $black
+      background-color: rgba($black, 0.9)
+      padding-top: 1em
+      padding-bottom: 1em
+
+  .about .stage .stage-intro
+    @media screen and (min-width: $tablet)
+      grid-template-rows: 1.618fr 0.618fr
+
 </style>
 
 ::: slot top
 
-<Heros-ThreeHero/>
+<Stage-ProjectStage rag="rag-6" ragTitle="rag-3" platform="Design" team="Tech" myRole="People" timeframe="Product" ctaLabel="none" ctaUrl="#"
+description="A designer, coder and leader creating useful and playful experiences centred on people." :doParallax="false">
+
+<template v-slot:visual-background>
+  <Heros-ThreeHero/>
+</template>
+
+<template v-slot:platform>
+
+UX, UI, interaction, motion, research, testing, sketching, 3D modelling
+
+</template>
+
+<template v-slot:timeframe>
+
+Strategy, OKRs, analytics, A/B testing
+
+</template>
+
+<template v-slot:my-role>
+
+Leadership, stakeholders, team building, mentoring, training
+
+</template>
+
+<template v-slot:team>
+
+<Content-ModalLink label="Web" style="margin-right: -0.25em;">
+<template v-slot:modal>
+<Content-ThreeColumnSection padding="is-small">
+
+<template v-slot:column1>
+
+###  Front-end
+
+CSS (SCSS, SASS)
+~ JS (ES6, Typescript)
+~ UI frameworks (React, Vue, Angular, Ionic)
+~ Motion (Anime.js, Greensock)
+~ WebGL/XR (A-frame, Three.js)
+~ Datavis (D3.js, Mapbox)
+~ Analytics (Google, Snowplough)
+
+</template>
+
+<template v-slot:column2>
+
+### Back-end
+
+Node.js stack (Express, Harp)
+~ Database (MongoDB, Postgres)
+~ REST APIs
+~ Websocket (Socket.io)
+~ Familiar with Ruby/Rails, Go, PHP
+
+</template>
+
+<template v-slot:column3>
+
+### Ops
+
+Version control (Git)
+~ Front-end build systems (Gulp, Webpack, Browserify)
+~ Static hosting (Netlify, Github Pages)
+~ App hosting (Heroku, Digital Ocean)
+~ Familiar with Docker, Circle CI
+
+</template>
+
+</Content-ThreeColumnSection>
+</template>
+</Content-ModalLink>
+, Unity, iOS, Android, prototyping, hardware, electronics
+
+</template>
+
+
+</Stage-ProjectStage>
 
 :::
 
-<Content-TextSection columnOffset="big-title-offset" padding="about-text" rag="rag-4">
+
+<Content-TextSection columnOffset="big-title-offset" padding="is-initial" rag="rag-4">
 
 <!-- INTERACTION (INTERFACE DESIGN AND HUMAN-COMPUTER INTERACTION), EXPERIENCE (UX DESIGN AND ALL OTHER EXPERIENCE) AND PRODUCT DESIGNER -->
 
@@ -111,13 +212,7 @@ I started my career as a teacher and transitioned to UX about 10 years ago. But 
 
 -->
 
-<h1 class="stage-title">Hello! I'm Ant</h1>
-
-<p class="subtitle" style="padding-right: 3em;">
-  A designer and leader creating useful and playful experiences centred on people.
-</p>
-
-Let’s break that down a bit. I started my career as a [Toy Designer at LEGO](/projects/lego), having trained in [Product Design Engineering](http://www.gsa.ac.uk/study/undergraduate-degrees/product-design-engineering/) at the Glasgow School of Art. I transitioned into UX about 5 years ago, pursuing a desire to blend technology and interactivity into my design practice. Recently I've been leading an agile product team as a [Product Manager](/projects/ecosia). But I haven't forgotten my roots and I'm at my best when bridging digital/physical and design/technology divides.
+I started my career as a [Toy Designer at LEGO](/projects/lego), having trained in [Product Design Engineering](http://www.gsa.ac.uk/study/undergraduate-degrees/product-design-engineering/) at the Glasgow School of Art. I transitioned into UX about 5 years ago, pursuing a desire to blend technology and interactivity into my design practice. Recently I've been leading an agile product team as a [Product Manager](/projects/ecosia). But I haven't forgotten my roots and I'm at my best when bridging digital/physical and design/technology divides.
 
 I've had the pleasure to collaborate with great people on diverse products, from time-critical [MVPs](/projects/toucanbox) at startups to [iterative features](/projects/ecosia/#product-design-at-scale) reaching millions of users. My natural curiosity, adaptability and love of learning have led me to play varied roles. A lifetime of tinkering with tools, languages and technologies enables me to empathise with engineering stakeholders as much as I do with users.
 
@@ -179,7 +274,7 @@ Rapha feedback highlights
 
 -->
 
-<template v-slot:aside>
+<!-- <template v-slot:aside>
 
 <div class="columns is-mobile" style="padding-top: 0.25em;">
 <div class="column is-one-quarter">
@@ -270,10 +365,10 @@ Strategy, OKRs, analytics, A/B testing
 
 <br>
 
-<!-- _I originally hail from Edinburgh, I recently called London home and I'm currently based in Berlin._
-{ .secondary } -->
+_I originally hail from Edinburgh, I recently called London home and I'm currently based in Berlin._
+{ .secondary }
 
-</template>
+</template> -->
 
 </Content-TextSection>
 

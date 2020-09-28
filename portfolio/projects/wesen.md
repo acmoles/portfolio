@@ -19,7 +19,7 @@ hasFooter: true
 ::: slot top
 
 <!-- Can customers be creators? -->
-<Stage-ProjectStage :noise="true" rag="rag-4" ragTitle="rag-2" titleColumnClass="is-three-fifths" ctaLabel="wesen.studio" ctaUrl="http://www.wesen.studio"
+<Stage-ProjectStage :noise="true" :upless="true" rag="rag-4" ragTitle="rag-2" titleColumnClass="is-three-fifths" ctaLabel="wesen.studio" ctaUrl="http://www.wesen.studio"
 description="I built an intuitive 3D customisation tool which enables anyone to create and order their unique pendant necklace.">
 
   <template v-slot:visual-background>
@@ -62,7 +62,7 @@ description="I built an intuitive 3D customisation tool which enables anyone to 
 It's manufactured on demand by a blend of modern and traditional techniques.
 <li>2018</li> -->
 
-<Content-TextSection rag="rag-4" padding="is-initial">
+<Content-TextSection rag="rag-4" padding="is-initial" columnOffset="title-offset">
 
 ## Case study
 
@@ -90,11 +90,13 @@ By building a product end-to-end, I hoped to increase my empathy for colleagues 
 
 <template v-slot:aside>
 
-###  The challenge{ .challenge-title }
+####  The challenge{ .challenge-title }
 
 Enable customers to customise a product in the web browser. Make it possible to save and order their creation with automatic fulfilment by outsourced operations and manufacturing.
 
-### The outcome{ .challenge-title }
+<br>
+
+#### The outcome{ .challenge-title }
 
 Wesen fulfils my original success criteria. It taught me a great deal but the most valuable lessons I didn't expect; the importance of _getting the word out_ and _working in teams._
 

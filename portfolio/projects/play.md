@@ -21,7 +21,7 @@ hasFooter: true -->
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" :fadeless="true" ctaLabel="none" ctaUrl="#"
+<Stage-ProjectStage :noise="true" ctaLabel="none" ctaUrl="#"
 description="Hand tracking, realtime 3D graphics, shaders. Nothing here yet. Watch this space.">
 
   <template v-slot:visual-background>
@@ -55,6 +55,6 @@ I'm uniquely placed to excel in this new world of 3D interactions.
 
 <Content-TextSection rag="rag-4" padding="is-initial">
 
-This page will feature a curated selection of interaction design experiments and workflow explorations. I'm currently inspired by the implications of spatial computing, 3D interfaces and machine learning. _"A generation is coming up who are fluent in 3D interfaces. The next generation will be XR natives."_
+This page will feature a curated selection of interaction design experiments and workflow explorations. I'm currently inspired by the implications of spatial computing, machine learning and (as always) the interface of digital and physical experiences. _"A generation is coming up who are fluent in 3D interfaces. The next generation will be XR natives."_
 
 </Content-TextSection>
