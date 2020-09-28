@@ -5,7 +5,7 @@
           <!-- <i class="icon"><Logo/></i> -->
           <router-link class="column" :to="$localePath">
             <strong class="footer-title">
-              Anthony Moles
+              Ant Moles
             </strong>
           </router-link>
           <div class="column">

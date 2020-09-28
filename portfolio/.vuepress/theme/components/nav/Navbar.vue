@@ -14,28 +14,33 @@
       role="navigation"
       aria-label="main navigation"
     >
+
       <div class="container is-fullhd">
         <div class="navbar-brand">
+
+          <transition name="fade-fast-delay">
+            <router-link
+              :to="$localePath"
+              class="home-link home-link-arrow"
+              v-if="(navbarBurgered || isModalOpen) && !isMobileHome"
+            >
+              <ArrowIcon class="back-arrow"/>
+            </router-link>
+          </transition>
+
+          <transition name="fade-fast">
           <router-link
             :to="$localePath"
             class="home-link"
+            v-if="(!(navbarBurgered || isModalOpen) || isMobileHome) && pageLoadingStatus !== 'covering'"
           >
             <!-- <Logo class="logo-site-title"/> -->
-
-            <transition name="fade-fast" mode="out-in">
-              <ArrowIcon
-                class="back-arrow"
-                v-if="(navbarBurgered || isModalOpen) && !isMobileHome"
-                />
-              <span
-                class="text-site-title"
-                v-else
-              >
-                <strong>Ant<span class="dot">·</span>Moles</strong>
+              <span class="text-site-title">
+                <strong>Ant Moles</strong>
                 <!-- <span>design, product and technology</span> -->
               </span>
-            </transition>
-          </router-link>
+            </router-link>
+          </transition>
 
           <transition name="fade-fast-delay">
             <div
@@ -271,6 +276,11 @@ export default {
   right: 0
   pointer-events: all
 
+.home-link-arrow
+  position: absolute
+  left: 0
+  height: 6em
+
 .navbar-end, .navbar-start
   align-items: center
 
@@ -281,7 +291,6 @@ export default {
 
 .text-site-title
   color: $white-ter
-  font-size: 1.125em
   .dot
     opacity: 0.42
     margin: 0 0.1em

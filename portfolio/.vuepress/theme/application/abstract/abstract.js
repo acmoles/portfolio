@@ -63,7 +63,7 @@ export class Abstract extends EventTarget {
     this.camera = new THREE.PerspectiveCamera(45, this.vw / this.vh, 1, this.far);
 
     this.controls = new OrbitControls( this.camera, this.renderer.domElement );
-
+    this.controls.enableZoom = false;
     this.renderer.setClearColor( 0x13CE66, 0 );
     this.renderer.setPixelRatio( window.devicePixelRatio );
     this.renderer.setSize( this.vw, this.vh );
