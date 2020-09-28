@@ -11,7 +11,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import WavingHand from '@theme/components/home/WavingHand.vue'
 
@@ -47,7 +46,7 @@ export default {
       margin-left: 1rem
       width: 88%
     @media screen and (min-width: $tablet)
-      padding: 9em 0 4em 0
+      // padding: 8em 0 4em 0
       display: grid
       grid-template-columns: repeat(3, 1fr)
       column-gap: $columnGap
@@ -57,6 +56,6 @@ export default {
         grid-column-end: 3
         width: 80%
     @media screen and (min-width: $fullhd + 1)
-      padding: 12em 0 4em 0
+      // padding: 12em 0 4em 0
 
 </style>

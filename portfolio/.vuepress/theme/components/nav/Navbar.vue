@@ -14,7 +14,7 @@
       role="navigation"
       aria-label="main navigation"
     >
-      <!-- <div class="container is-fullhd"> -->
+      <div class="container is-fullhd">
         <div class="navbar-brand">
           <router-link
             :to="$localePath"
@@ -31,7 +31,7 @@
                 class="text-site-title"
                 v-else
               >
-                <strong>Anthony Moles</strong>
+                <strong>Ant<span class="dot">·</span>Moles</strong>
                 <!-- <span>design, product and technology</span> -->
               </span>
             </transition>
@@ -55,7 +55,7 @@
           :active="isSidebarOpen"
           :burgered="navbarBurgered"
         />
-      <!-- </div> -->
+      </div>
     </header>
   </transition>
 </template>
@@ -256,9 +256,6 @@ export default {
   height: 6em
   width: 100%
   z-index: 3
-  // TODO what's this?
-  // transform: translate3d(0px, -100%, 0px)
-  // transform: translate3d(0px, 0px, 0px)
 
 .home-link
   display: flex
@@ -266,6 +263,7 @@ export default {
   justify-content: center
   white-space: nowrap
   pointer-events: all
+  padding: 0 0.75em
   min-width: 6em
 
 .nav-sidebar-button-wrapper
@@ -283,7 +281,12 @@ export default {
 
 .text-site-title
   color: $white-ter
-  margin-left: 2.5em
+  font-size: 1.125em
+  .dot
+    opacity: 0.42
+    margin: 0 0.1em
+    position: relative
+    top: 0.056em
 
 .light
   .text-site-title
@@ -302,6 +305,11 @@ export default {
     display: none
   .home-link
     pointer-events: none
+    opacity: 1 !important
+    @media screen and (min-width: $tablet)
+      margin-left: 1.75em
+  .navbar-end
+    margin-right: 1.5em
 
 .back-arrow
   transform: rotate(180deg)
@@ -316,8 +324,4 @@ export default {
     margin-right: 1.5em
     .navbar-item
       text-align: right
-
-  .text-site-title
-    margin-left: 2em
-
 </style>
