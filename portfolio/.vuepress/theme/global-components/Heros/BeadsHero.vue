@@ -79,7 +79,7 @@ $colors: #583C87, #E45A84, #FFACAC
         $backgroundImage: if(random() > 0.5, '/images/makielab/bead-sag.svg', '/images/makielab/bead.svg')
         background: url($backgroundImage)
         background-size: $particleWidth * $widthModifier $particleHeight * $heightModifier
-        opacity: random(42) * 0.01 + 0.05
+        opacity: random(42) * 0.01 + 0.32
         animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s
         animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s
         // color: nth($colors, random(length($colors)))

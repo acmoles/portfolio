@@ -12,7 +12,7 @@
         ref="parallax"
         v-if="!hasVisulColumnSlot"
         class="parallax"
-        :class="[{'in-view': visible}, {'appear-fade': animating && !fadeless && upless}, {'appear-fade-up': animating && !fadeless && !upless}]"
+        :class="[{'in-view': visible}, {'appear-fade': animating && !fadeless}]"
         :style="{transform: transform}"
         v-on:transitionend="stageTransitionEnd()"
       >
@@ -24,7 +24,7 @@
       <div class="columns">
         <div
           class="column stage-column"
-          :class="[titleColumnClass, {'in-view': visible}, {'appear-fade-up': !fadeless}]"
+          :class="[titleColumnClass, {'in-view': visible}, {'appear-fade': !fadeless}]"
         >
           <p class="small-title">{{ processedTitle(subtitle) }}</p>
           <h1 class="stage-title" :class="ragTitle">{{ title }}</h1>
@@ -35,7 +35,7 @@
         <div
           v-if="hasVisulColumnSlot"
           class="column is-one-third visual-column"
-          :class="[{'in-view': visible}, {'appear-fade-up': animating}]"
+          :class="[{'in-view': visible}, {'appear-fade': animating  && !fadeless}]"
           :style="{transform: transform}"
           v-on:transitionend="stageTransitionEnd()"
         >
@@ -118,15 +118,15 @@
               <slot name="platform"></slot>
             </div>
             <div class="column is-half">
-              <strong>Timeframe</strong>
+              <strong>{{ timeframe }}</strong>
               <slot name="timeframe"></slot>
             </div>
             <div class="column is-half">
-              <strong>Team</strong>
+              <strong>{{ team }}</strong>
               <slot name="team"></slot>
             </div>
             <div class="column is-half">
-              <strong>My role</strong>
+              <strong>{{ myRole }}</strong>
               <slot name="my-role"></slot>
             </div>
         </div>
@@ -280,10 +280,12 @@ export default {
     },
     checkHeight () {
       let visual = this.$refs['visual'].getBoundingClientRect().height
+      // console.log('check visual ', visual)
       let naturalStage = this.$refs['stage-intro'].getBoundingClientRect().height
-      if (naturalStage > visual) {
-        this.checkedHeight = visual + 192
-        console.log('check height', naturalStage);
+      // console.log('check natural stage ', naturalStage)
+      if (naturalStage >= visual) {
+        this.checkedHeight = naturalStage + 96 + 24
+        // console.log('given total height ', this.checkedHeight)
       }
     }
   }
@@ -298,7 +300,6 @@ export default {
 // Stage
 
 .stage
-  @include make3d
   display: flex
   flex-direction: column
   overflow: hidden
@@ -431,23 +432,20 @@ export default {
 // Background
 
 .visual, .parallax
-  height: calc(100vh + 24px + 6em)
+  height: 100%
   width: 100%
   position: absolute
   top: -24px
 
 .visual
+  height: calc(100vh + 24px + 6em)
   overflow: hidden
 
-.visual .parallax, .column.visual-column
+.visual .parallax, .column.visual-column, .column.stage-column
   @include make3d
   will-change: transform, opacity
   &.appear-fade-up, &.appear-fade
-    transition-delay: 0.3s
-  &.appear-fade
     transition-duration: 1.6s
-  &.appear-fade-up
-    transition-duration: 1.2s
 
 figure.full-screen
   height: 100%

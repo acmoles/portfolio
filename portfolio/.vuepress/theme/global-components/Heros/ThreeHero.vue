@@ -69,10 +69,10 @@ export default {
 
   .presentation
     position: relative
-    height: 100vh
+    height: 100%
     top: 12em
     @media screen and (min-width: $tablet)
-      height: calc(100vh - 4em)
+      height: calc(100% - 6em)
       top: 0
     canvas
       position: absolute

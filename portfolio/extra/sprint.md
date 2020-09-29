@@ -62,16 +62,14 @@ Individual project
 
 Colour details are strictly limited by cost in toy design and manufacture. Three options are available; decals, hand painting or the creative use of split lines between parts. These constraints often lead to smart design solutions. But if these limitations were lifted, _it could enable toys with the colour detail we're used to in on&#8209;screen entertainment._
 
+To demonstrate my findings I created Sprint - jetpack wielding athletes with parkour skills. I Drew inspiration from sports brands and automotive design. I believe they remain the only example of colour 3D printed articulated action figures for children. The new printer hinted at the potential, but didn't answer the demands of toy durability, nor my hopes for detail and colour resolution.
+
+
 </div>
 <div class="column is-half title-offset">
-<p class="sprint-p2">
+
 In late 2013, 3D Systems announced the Projet-4500 with the promise of colour 3D printing in a durable plastic comparable to SLS nylon. Previous colour printers produced a brittle sandstone-like ceramic unsuitable for toys. In response, I experimented with workflows to enable the application of colour information to high accuracy geometry created in software like Rhino 3D.
-</p>
-</div>
-<div class="column is-half">
-<p class="sprint-p1">
-To demonstrate my findings I created Sprint - jetpack wielding athletes with parkour skills. I Drew inspiration from sports brands and automotive design. I believe they remain the only example of colour 3D printed articulated action figures for children. The new printer hinted at the potential, but didn't answer the demands of toy durability, nor my hopes for detail and colour resolution.
-</p>
+
 </div>
 </div>
 
@@ -89,6 +87,8 @@ To demonstrate my findings I created Sprint - jetpack wielding athletes with par
     left: -1em
 
 </style>
+
+</Content-FreeSection>
 
 
 <!-- The same colour and material information could be used directly in the toy.
@@ -130,10 +130,6 @@ how the mechanical accuracy of 3D geometry created in industrial design and engi
 -->
 
 
-</Content-FreeSection>
-
-
-
 
 <style lang="sass">
 
@@ -145,10 +141,9 @@ how the mechanical accuracy of 3D geometry created in industrial design and engi
     column-gap: 2em
     row-gap: 2em
 
-.image.sprint-tall img
-  height: auto
-  bottom: 0
-  top: auto
+.image.sprint-tall.span-3
+  grid-row: auto / span 3
+
 
 </style>
 
@@ -165,7 +160,7 @@ how the mechanical accuracy of 3D geometry created in industrial design and engi
     <figure class="image is-square">
       <img class="lazyload" data-src="/images/makielab/sprint-wip-body-details.jpg" alt="3D modelling details">
     </figure>
-    <figure class="image is-16by9 span-3 sprint-tall">
+    <figure class="image is-square span-3 sprint-tall">
       <img class="lazyload sketch-group" data-src="/images/makielab/sketch-group.jpg" alt="Figure sketches">
     </figure>
     <figure class="image is-square">
@@ -176,6 +171,15 @@ how the mechanical accuracy of 3D geometry created in industrial design and engi
     </figure>
     <figure class="image is-square">
       <img class="lazyload" data-src="/images/makielab/sprint-wip-materials.jpg" alt="Face with materials">
+    </figure>
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/makielab/sprint-wip-uvs.jpg" alt="Character face sketch">
+    </figure>
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/makielab/sprint-wip-print.jpg" alt="Face sculpt">
+    </figure>
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/makielab/sprint-wip-test.jpg" alt="Face with materials">
     </figure>
     <figure class="image is-square span-2">
       <img class="lazyload" data-src="/images/makielab/render-group.jpg" alt="Render of figures">

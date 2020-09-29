@@ -17,11 +17,13 @@ hasFooter: true
 
 ::: slot top
 <!-- :fadeless="true" -->
-<Stage-ProjectStage rag="rag-4" titleRag="rag-2" ctaLabel="none" ctaUrl="#"
+<Stage-ProjectStage rag="rag-4" ragTitle="rag-1" ctaLabel="none" ctaUrl="#"
 description="I played a central role in Makielab's collaboration with Disney, who eventually acquired the company.">
 
 <template v-slot:visual-background>
-  <Heros-BeadsHero :noise="true"/>
+  <figure class="full-screen">
+    <Heros-ImageHero src="/images/makielab/sprint-header.jpg" alt="Sprint 3D printed figures"/>
+  </figure>
 </template>
 
 <template v-slot:platform>
@@ -79,18 +81,24 @@ Monetising mobile games is a tricky subject, particularly when it comes to child
 figures.
 </p>
 
-Before joining Makielab I was already exploring the possibility of toy manufacture without the usual requisite investment (tooling, factories etc) with [Sprint](/extra/sprint).
-
 <!-- I was part of the agile product team responsible for the website and physical products. We worked closely with the games team to ensure a holistic experience across touch-points and I spanned teams -->
-
-<template v-slot:aside>
-
-</template>
 
 </Content-TextSection>
 
+<style lang="sass">
 
-<!-- <Content-QuoteSection rag="rag-4" quote="Anthony has shown a great persistence on one particular project where almost everyone in the design team lost hope due to very strict technological, ergonomic and layout constraints. He literally saved the project and brought back optimism and belief." attribute="Timour Bourbaev, Creative Director of Product Design, referring to NITA air traffic control" color="blue"/> -->
+.sprint .stage-column .subtitle
+  width: 82%
+
+.sprint .section
+  .grid-wrapper-content
+    column-gap: 2em
+    row-gap: 2em
+
+.image.sprint-tall.span-3
+  grid-row: auto / span 3
+
+</style>
 
 
 
@@ -104,7 +112,7 @@ Before joining Makielab I was already exploring the possibility of toy manufactu
   Creative dolls for creative kids and the world's first 3D printed toys.
 </p>
 
-Makies are toys with a digital twin. They're the child's personalised avatar for Makielab's mobile games but they're also a physical toy which encourages hands-on creativity, crafting, DIY making, modification and learning. Makies are designed to get children excited about technology and can be extended with Arduino kits. Each Makie is hand-assembled in the UK.
+Makies are toys with a digital twin. They're the child's personalised avatar for Makielab's mobile games but they're also a physical toy which encourages hands-on creativity, crafting, DIY making, modification and learning. Makies are designed to get children excited about technology and can be extended with Arduino. Each Makie is hand-assembled in the UK.
 
 <!-- Character with a digital and physical existence. Personalised by the child, avatar/character from the mobile game or made online before purchase. On-demand manufacture. Creative, DIY toy, crafting, hands-on play/learning, modification e.g. Arduino, RFID, RC. Counterpart to on-screen play. Get children excited about technology, particularly girls. Sustainable and locally made. -->
 
@@ -120,3 +128,82 @@ Makies are toys with a digital twin. They're the child's personalised avatar for
 </template>
 
 </Content-ImageFrames-MainImageSection>
+
+
+
+<Content-FreeSection class="sprint-text" padding="is-continuous">
+
+<div class="columns is-multiline">
+<div class="column is-half">
+
+## Sprint
+
+Before joining Makielab I was already exploring the possibility of toy manufacture with 3D printing. Colour and material detail are strictly limited by cost in toy design and manufacture. If these limitations were lifted, _it could enable toys with the surface detail we're used to in on&#8209;screen entertainment._
+
+</div>
+<div class="column is-half title-offset">
+
+To demonstrate my findings I created Sprint - jetpack wielding athletes, drawing inspiration from sports brands and automotive design. I targeted the 3D Systems Projet-4500 which promised to match the colour detail of sandstone printers with the physical properties of SLS nylon. Results were promising but quality was unpredictable.
+
+</div>
+</div>
+
+<style lang=sass>
+
+.sprint-text
+  padding-bottom: 1em
+
+</style>
+
+</Content-FreeSection>
+
+
+
+<Content-GridSection padding="is-medium-large sprint">
+
+  <template v-slot:grid>
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/makielab/sprint-wip-rough.jpg" alt="3D modelling rough forms">
+    </figure>
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/makielab/sprint-wip-body.jpg" alt="3D modelling body WIP">
+    </figure>
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/makielab/sprint-wip-body-details.jpg" alt="3D modelling details">
+    </figure>
+    <figure class="image is-square span-3 sprint-tall">
+      <img class="lazyload sketch-group" data-src="/images/makielab/sketch-group.jpg" alt="Figure sketches">
+    </figure>
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/makielab/sprint-wip-sketch.jpg" alt="Character face sketch">
+    </figure>
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/makielab/sprint-wip-sculpt.jpg" alt="Face sculpt">
+    </figure>
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/makielab/sprint-wip-materials.jpg" alt="Face with materials">
+    </figure>
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/makielab/sprint-wip-uvs.jpg" alt="Character face sketch">
+    </figure>
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/makielab/sprint-wip-print.jpg" alt="Face sculpt">
+    </figure>
+    <figure class="image is-square">
+      <img class="lazyload" data-src="/images/makielab/sprint-wip-test.jpg" alt="Face with materials">
+    </figure>
+    <figure class="image is-square span-2">
+      <img class="lazyload" data-src="/images/makielab/render-group.jpg" alt="Render of figures">
+    </figure>
+    <figure class="image is-square span-2">
+      <img class="lazyload" data-src="/images/makielab/render-action.jpg" alt="Render of figures in action">
+    </figure>
+    <figure class="image is-square span-2">
+      <img class="lazyload" data-src="/images/makielab/photo-close.jpg" alt="Printed figures closeup">
+    </figure>
+  </template>
+
+</Content-GridSection>
+
+
+<!-- <Content-QuoteSection rag="rag-4" quote="Anthony has shown a great persistence on one particular project where almost everyone in the design team lost hope due to very strict technological, ergonomic and layout constraints. He literally saved the project and brought back optimism and belief." attribute="Timour Bourbaev, Creative Director of Product Design, referring to NITA air traffic control" color="blue"/> -->

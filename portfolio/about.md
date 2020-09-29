@@ -96,7 +96,7 @@ Node.js stack (Express, Harp)
 ~ Database (MongoDB, Postgres)
 ~ REST APIs
 ~ Websocket (Socket.io)
-~ Familiar with Ruby/Rails, Go, PHP
+~ Familiar with .NET/C#, Ruby/Rails, Python, Go, PHP
 
 </template>
 
@@ -115,7 +115,7 @@ Version control (Git)
 </Content-ThreeColumnSection>
 </template>
 </Content-ModalLink>
-, Unity, iOS, Android, prototyping, hardware, electronics
+, Unity, iOS, Android, prototyping, hardware
 
 </template>
 
@@ -736,9 +736,9 @@ The code is available on [Github](https://github.com/acmoles/portfolio).
 </p>
 </About-TimelineItem>
 
-<About-TimelineItem type="XR">
+<About-TimelineItem type="Play">
 
-[Interaction experiments](/projects/interaction)
+[Interaction experiments](/projects/play)
 
 </About-TimelineItem>
 

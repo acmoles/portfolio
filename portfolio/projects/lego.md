@@ -58,9 +58,9 @@ Design Manager
 
 .lego-image
   position: absolute
-  left: -32%
-  width: 50vw
-  top: -16%
+  left: -56%
+  width: 240%
+  top: -50%
 
 </style>
 
