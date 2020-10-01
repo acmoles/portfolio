@@ -212,11 +212,11 @@ I started my career as a teacher and transitioned to UX about 10 years ago. But 
 
 -->
 
-I started my career as a [Toy Designer at LEGO](/projects/lego), having trained in [Product Design Engineering](http://www.gsa.ac.uk/study/undergraduate-degrees/product-design-engineering/) at the Glasgow School of Art. I transitioned into UX about 5 years ago, pursuing a desire to blend technology and interactivity into my design practice. Recently I've been leading an agile product team as a [Product Manager](/projects/ecosia). But I haven't forgotten my roots and I'm at my best when bridging digital/physical and design/technology divides.
+I started my career as a [Toy Designer at LEGO](/projects/lego), having trained in [Product Design Engineering](http://www.gsa.ac.uk/study/undergraduate-degrees/product-design-engineering/) at the Glasgow School of Art. About 5 years ago, I began to blend technology and interactivity into my design practice. Recently I've been leading an agile product team as a [Product Manager](/projects/ecosia). But I haven't forgotten my roots and I'm at my best when bridging digital/physical and design/technology divides.
 
 I've had the pleasure to collaborate with great people on diverse products, from time-critical [MVPs](/projects/toucanbox) at startups to [iterative features](/projects/ecosia/#product-design-at-scale) reaching millions of users. My natural curiosity, adaptability and love of learning have led me to play varied roles. A lifetime of tinkering with tools, languages and technologies enables me to empathise with engineering stakeholders as much as I do with users.
 
-What drives me is the belief that everyone's creativity and learning can be enhanced by technology. By distilling complexity through design, I strive to open up this potential to wider audiences. I see rigorously designed interfaces with playful interactions as a key ingredient. Another is iteration - testing with users early and often. _The human-centred design process is the thread that runs through my career._
+What drives me is the belief that everyone's creativity and learning can be enhanced by playful and approachable technology. By distilling complexity through design, I strive to open up this potential to wider audiences. Iteration is a key ingredient - testing with users early and often. _The human-centred design process is the thread that runs through my career._
 
 <!--
 as a force for good in our lives
