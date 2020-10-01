@@ -12,7 +12,6 @@
         ref="parallax"
         v-if="!hasVisulColumnSlot"
         class="parallax"
-        :class="[{'in-view': visible}, {'appear-fade': animating && !fadeless}]"
         :style="{transform: transform}"
         v-on:transitionend="stageTransitionEnd()"
       >
@@ -24,7 +23,7 @@
       <div class="columns">
         <div
           class="column stage-column"
-          :class="[titleColumnClass, {'in-view': visible}, {'appear-fade': !fadeless}]"
+          :class="[titleColumnClass]"
         >
           <p class="small-title">{{ processedTitle(subtitle) }}</p>
           <h1 class="stage-title" :class="ragTitle">{{ title }}</h1>
@@ -35,9 +34,7 @@
         <div
           v-if="hasVisulColumnSlot"
           class="column is-one-third visual-column"
-          :class="[{'in-view': visible}, {'appear-fade': animating  && !fadeless}]"
           :style="{transform: transform}"
-          v-on:transitionend="stageTransitionEnd()"
         >
             <slot name="visual-column"></slot>
         </div>
@@ -202,7 +199,6 @@ export default {
     return {
       transform: ``,
       oneTime: true,
-      animating: true,
       checkedHeight: null
     }
   },
@@ -273,10 +269,6 @@ export default {
       if (animationValue >= 0 && animationValue <= 300) {
         this.transform = `translate3d(0, ${animationValue}px, 0)`
       }
-    },
-    stageTransitionEnd () {
-      // console.log('stage end');
-      this.animating = false
     },
     checkHeight () {
       let visual = this.$refs['visual'].getBoundingClientRect().height

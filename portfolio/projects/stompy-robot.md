@@ -23,7 +23,7 @@ description="I helped start Stompy Robot, an independent studio based in Edinbur
 
 <template v-slot:visual-column>
   <figure class="stompy-image">
-    <Heros-ImageHero src="/images/stompy-robot/header-comp-export-grid.png" alt="Ecosia mobile devices"/>
+    <Heros-ImageHero src="/images/stompy-robot/header-comp-export-grid.png" alt="Stompy Robot software"/>
   </figure>
 </template>
 
@@ -112,8 +112,7 @@ Game jam
 
 
 
-
-<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="https://www.youtube.com/embed/xZELuhMO9es" alt="placeholder" :aside="true" rag="rag-4" :iframe="true">
+<Content-ImageFrames-MainImageSection imageClass="is-16by9" url="https://www.youtube.com/embed/xZELuhMO9es" alt="Nova showreel" :aside="true" rag="rag-4" :iframe="true">
 
 <template v-slot:content>
 
@@ -151,7 +150,24 @@ Players will acquire new heroes and weaponry as they progress in the game. Heroe
 </Content-ImageFrames-MainImageSection>
 
 
+<Content-TextSection rag="rag-4" columnOffset="title-offset">
 
+## Spaced
+
+<p class="subtitle">
+  We shifted our focus from narrative driven gameplay to a procedurally generated sandbox.
+</p>
+
+Spaced challenges the player to keep a physically simulated spaceship functioning in the face of routine (and not-so-routine) missions. We wanted to create a game which was fun and compelling, but without classic gameplay elements like linear progression or rewards. Instead, enjoyment and replay value are derived from _how_ the player approaches challenging situations like a hull breach or power core overload.
+
+<br>
+
+</Content-TextSection>
+
+<Content :page-key="$site.pages.find(p => p.path === '/extra/spaced/').key"/>
+
+
+<div style="padding-bottom: 9em;"></div>
 
 
 

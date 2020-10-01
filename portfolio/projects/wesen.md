@@ -62,7 +62,7 @@ description="I built an intuitive 3D customisation tool which enables anyone to 
 It's manufactured on demand by a blend of modern and traditional techniques.
 <li>2018</li> -->
 
-<Content-TextSection rag="rag-4" padding="is-initial" columnOffset="title-offset">
+<Content-TextSection rag="rag-4" padding="is-initial" style="padding-bottom: 0;" columnOffset="title-offset">
 
 ## Case study
 
@@ -103,6 +103,10 @@ Wesen fulfils my original success criteria. It taught me a great deal but the mo
 </template>
 
 </Content-TextSection>
+
+
+<Content-ImageFrames-MainImageSection padding="is-medium-large" imageClass="is-4by3" url="https://player.vimeo.com/video/463897939" alt="Wesen demo" :iframe="true"/>
+
 
 
 
