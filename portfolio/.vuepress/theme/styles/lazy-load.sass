@@ -10,9 +10,9 @@
 .lazyloading
   opacity: 0
 
-.lazyloaded
+.image .lazyloaded
   opacity: 1
-  transition: 2s cubic-bezier(0.215, 0.61, 0.355, 1)
+  transition: opacity 2s cubic-bezier(0.215, 0.61, 0.355, 1), transform .3s cubic-bezier(.2,0,.2,1) !important
 
 .image iframe
 	position: absolute
