@@ -317,7 +317,7 @@ export default {
     &:active
       opacity: 1
     @media screen and (min-width: $tablet)
-      margin-left: 1.75em
+      margin-left: 2.125em
   .navbar-end
     margin-right: 1.5em
 

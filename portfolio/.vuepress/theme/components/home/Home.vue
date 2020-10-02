@@ -149,12 +149,13 @@ export default {
     @media screen and (min-width: $tablet)
       column-gap: $columnGap
       row-gap: $columnGap
-      grid-template-columns: repeat(3, 1fr)
+      grid-template-columns: repeat(3, minmax(0, 1fr))
     padding-bottom: 2em
 
   .grid-item
     article
       height: 100%
+
 
   .grid-wrapper::before
     content: ' '

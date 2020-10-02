@@ -381,6 +381,6 @@ export default {
       max-width: unset
       height: 100%
       right: auto
-      left: -2.5em
+      left: -28%
 
 </style>

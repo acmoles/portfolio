@@ -43,7 +43,7 @@ export default {
     .subtitle
       position: relative
     .intro-container
-      margin-left: 1rem
+      margin-left: 0.75em
       width: 88%
     @media screen and (min-width: $tablet)
       // padding: 8em 0 4em 0
@@ -51,11 +51,13 @@ export default {
       grid-template-columns: repeat(3, 1fr)
       column-gap: $columnGap
       .intro-container
-        margin-left: 1.75em
+        margin-left: 2em
         grid-column-start: 1
         grid-column-end: 3
         width: 80%
     @media screen and (min-width: $fullhd + 1)
       // padding: 12em 0 4em 0
+      .intro-container
+        margin-left: 1.75em
 
 </style>
