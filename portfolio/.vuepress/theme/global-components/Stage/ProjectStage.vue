@@ -87,12 +87,12 @@
       </div>
     </div>
 
-    <div class="background-noise overview-lower">
+    <div class="overview-lower">
       <div class="container is-fullhd">
 
         <div class="columns is-gapless overview-lower-row" v-if="hasOverview">
           <div class="column is-two-thirds">
-            <div class="columns is-gapless">
+            <div class="columns is-gapless overview-desktop-columns">
               <div class="column">
                 <slot name="platform"></slot>
               </div>
@@ -389,7 +389,6 @@ export default {
     margin-left: 1em
 
 .overview-lower
-  background-color: $black
   flex-grow: 1
   padding: 3em 0 4em 0
   min-height: 16em
@@ -404,6 +403,8 @@ export default {
     display: none
     @media screen and (min-width: $tablet)
       display: block
+  .overview-desktop-columns .column
+    margin-right: 1em
 
 .overview-lower-mobile
   strong
