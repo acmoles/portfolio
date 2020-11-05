@@ -22,6 +22,14 @@
         :class="imageClass"
       >
         <img
+          v-if="uid === 1"
+          ref="image"
+          :src="src"
+          :alt="title"
+          :style="{ height: isFirefox ? '100%' :null }"
+        >
+        <img
+          v-else
           ref="image"
           class="lazyload"
           :data-src="src"
