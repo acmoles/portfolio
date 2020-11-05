@@ -11,7 +11,7 @@ background: dark
 case1: Case study
 sidebar: false
 date: 2019-09-12
-src: /images/homepage/wesen-mock-baked.jpg
+src: /images/homepage/wesen-homepage.jpg
 next: ./ecosia
 hasFooter: true
 ---

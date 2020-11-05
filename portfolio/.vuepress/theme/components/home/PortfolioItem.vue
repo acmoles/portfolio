@@ -21,7 +21,13 @@
         class="image"
         :class="imageClass"
       >
-        <img class="lazyload" :data-src="src"  :alt="title" :style="{ height: isFirefox ? '100%' :null }">
+        <img
+          ref="image"
+          class="lazyload"
+          :data-src="src"
+          :alt="title"
+          :style="{ height: isFirefox ? '100%' :null }"
+        >
       </figure>
 
       <div :ref="'caption' + uid" class="item-caption" :class="{ 'transition': !mouseOn }">
@@ -56,6 +62,7 @@ export default {
     case2: String,
     background: String,
     src: String,
+    srcLow: String,
     rag: String
   },
 
@@ -107,6 +114,14 @@ export default {
     if (this.type === 'double-left' || this.type === 'double-right') {
       this.options.article.rotation = {x: -2, y: 2, z: 0}
       this.options.caption.translation = {x: 8, y: 8, z: 0}
+    }
+
+    if (this.uid === 1) {
+      let image = this.$refs['image']
+      image.onload = () => {
+        this.$emit('image-load')
+      };
+      this.$refs['image'].onerror = (err) => {console.error(err)}
     }
   },
 

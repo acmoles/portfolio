@@ -19,8 +19,10 @@
             :case2="project.frontmatter.case2"
             :background="project.frontmatter.background"
             :src="project.frontmatter.src"
+            :srcLow="project.frontmatter.srcLow"
             :rag="project.frontmatter.rag"
             v-on:project-click="handleProjectClick"
+            v-on:image-load="handleImageLoad"
           />
     </div>
   </div>
@@ -49,11 +51,8 @@ export default {
 
   mounted() {
 
-    // TODO wait for project images to load before signalling ready (remove lazy load)
-
     setTimeout(() => {
       this.festRowClass = this.rowClass
-      this.doLoad()
     }, 500)
 
   },
@@ -98,7 +97,10 @@ export default {
 
         // Fade up in only for first load of homepage
         this.$store.dispatch('setHomeMotion', false)
-      }
+      },
+      handleImageLoad(data) {
+        this.doLoad()
+      },
   }
 }
 

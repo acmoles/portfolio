@@ -87,7 +87,7 @@
       </div>
     </div>
 
-    <div class="overview-lower">
+    <div class="overview-lower background-noise">
       <div class="container is-fullhd">
 
         <div class="columns is-gapless overview-lower-row" v-if="hasOverview">
@@ -109,7 +109,7 @@
           </div>
         </div>
 
-        <div class="columns is-mobile is-variable is-1 is-multiline overview-lower-mobile" v-if="hasOverview">
+        <div class="columns is-mobile is-variable is-1 is-multiline overview-lower-mobile background-noise" v-if="hasOverview">
             <div class="column is-half">
               <strong>{{ platform }}</strong>
               <slot name="platform"></slot>
@@ -392,6 +392,7 @@ export default {
   flex-grow: 1
   padding: 3em 0 4em 0
   min-height: 16em
+  background-color: $black
   @media screen and (min-width: $tablet)
     padding: 1em 0
   border-top: 1px solid rgba($pitch, 0.42)
@@ -407,6 +408,7 @@ export default {
     margin-right: 1em
 
 .overview-lower-mobile
+  background-color: $black
   strong
     display: block
     margin-bottom: 0.5em
