@@ -42,7 +42,7 @@ description="I built an intuitive 3D customisation tool which enables anyone to 
 
   <template v-slot:my-role>
 
-  UX/UI Designer
+  UI/UX Designer
   ~ Full-stack JS developer
 
   </template>

@@ -63,7 +63,7 @@ Responsive web app
 <template v-slot:my-role>
 
 Project lead
-~ UX/UI Designer
+~ UI/UX Designer
 
 </template>
 
@@ -174,7 +174,7 @@ A usable, reassuring, and technologically sustainable homepage and signup experi
 
 Project Management
 ~ Customer Research
-~ UX/UI Design
+~ UI/UX Design
 ~ Analysis and Evaluation
 
 </template>

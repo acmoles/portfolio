@@ -42,7 +42,7 @@ Responsive web app
 <template v-slot:my-role>
 
 Project lead
-~ UX/UI Designer
+~ UI/UX Designer
 ~ Front-end Developer
 
 </template>

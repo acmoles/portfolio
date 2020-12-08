@@ -42,7 +42,7 @@ Responsive web app
 <template v-slot:my-role>
 
 Toy Designer
-~ UX/UI Designer
+~ UI/UX Designer
 
 </template>
 

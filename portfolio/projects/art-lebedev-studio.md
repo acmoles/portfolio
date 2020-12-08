@@ -1,7 +1,7 @@
 ---
 uid: 10
 title: Art Lebedev Studio
-subtitle: Channelling a house style
+subtitle: Designing a specialist workstation
 type: single
 rag: rag-3
 navStyle:
