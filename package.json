@@ -3,6 +3,10 @@
   "version": "0.2.0",
   "description": "Portfolio of Anthony Moles",
   "main": "index.js",
+  "engines": {
+    "node": ">=14.15.1",
+    "npm": ">=6.14.8"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev portfolio",
