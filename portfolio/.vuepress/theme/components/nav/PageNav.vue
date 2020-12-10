@@ -13,7 +13,15 @@
           </div>
         </router-link>
         <router-link  v-if="next" class="column no-fade is-one-third next" :to="next.path">
-          <div class="background project-card" :class="next.frontmatter.background"></div>
+          <div class="background project-card" :class="next.frontmatter.background">
+             <div class="ticker-content">
+              <div class="img-ticker" v-for="n in 8">
+                <div class="ticker-inner">
+                  <img class="lazyload chevron" data-src="/svg-icons/chevron.svg" alt="chevron"></img>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="text-group">
             <p class="small-title">{{ processedTitle(next.frontmatter.title) }}</p>
             <h2 class="item-title">{{ next.frontmatter.subtitle }}</h2>
@@ -42,6 +50,15 @@ import { processedTitle } from '@theme/mixins/processedTitle.js'
 export default {
   name: 'PageNav',
   mixins: [processedTitle],
+  mounted() {
+    let value = 0
+
+    for (let index = 1; index <= 8; index++) {
+      value += (3 * index)
+    }
+
+    console.log(value)
+  },
   computed: {
     prev () {
       return resolvePageLink(LINK_TYPES.PREV, this)
@@ -52,6 +69,7 @@ export default {
     },
   }
 }
+
 
 const LINK_TYPES = {
   NEXT: {
@@ -150,6 +168,7 @@ function resolvePageLink (
     left: -2em
     width: 50vw
     border-left: 2px solid $black
+    overflow: hidden
     &:hover, &:active
       filter: brightness(1.1)
   .item-title
@@ -177,6 +196,35 @@ function resolvePageLink (
         max-width: unset
         padding-right: 2.75em
 
+@keyframes ticker-kf 
+  0%
+    transform: translate3d(-100%, 0, 0)
+  
+  // 217px native
+  100%
+    transform: translate3d(0, 0, 0)
+  
+.ticker-content
+  width: 100000px
+
+.img-ticker
+  float: left
+  animation: ticker-kf 3s linear infinite
+  height: 20em
+  width: 10em
+  .ticker-inner
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    display: flex
+    align-items: center
+    .chevron
+      transform: scale(1.2)
+
+
+  
 
 
 </style>
