@@ -52,6 +52,14 @@ export default ({
       onWindowResize()
     }, false )
 
+    // global image event
+    function lazy() {
+      document.addEventListener('lazyloaded', function (e)  {
+        e.target.parentNode.classList.add('parent-loaded');
+        e.target.parentNode.classList.remove('parent-loading');
+      });
+    }
+    // lazy();
   }
 
 }

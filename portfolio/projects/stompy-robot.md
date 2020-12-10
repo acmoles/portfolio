@@ -9,7 +9,7 @@ navStyle:
   progress: light
 background: stompy
 sidebar: false
-date: 2019-09-12
+date: 2013-03-12
 src: /images/homepage/stompy-robot-tile.jpg
 prev: ./toucan-research
 next: ./makielab

@@ -9,7 +9,7 @@ navStyle:
   progress: light
 background: random
 sidebar: false
-date: 2019-09-11
+date: 2010-04-11
 src: /images/homepage/random-tile.jpg
 prev: ./toucanbox
 next: ./lego
@@ -87,30 +87,30 @@ the group’s work invites active participation. RANDOM INTERNATIONAL explores t
 <Content-GridSection padding="is-medium-large" style="padding-bottom: 14em;">
 
   <template v-slot:grid>
-    <figure class="image is-square span-2">
+    <figure class="image parent-loading is-square span-2">
       <img class="lazyload" data-src="/images/random-international/fly-inner.jpg" alt="Internal workings">
     </figure>
-    <figure class="image is-square span-2">
+    <figure class="image parent-loading is-square span-2">
       <img class="lazyload" data-src="/images/random-international/fly-close.jpg" alt="Fly ball">
     </figure>
-    <figure class="image is-square span-2">
+    <figure class="image parent-loading is-square span-2">
       <img class="lazyload" data-src="/images/random-international/fly-dark.jpg" alt="Fly in darkness">
     </figure>
     <div class="grid-item-container span-4">
-      <figure class="image is-16by9">
+      <figure class="image parent-loading is-16by9">
         <iframe src="https://player.vimeo.com/video/30915879" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
       </figure>
     </div>
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/random-international/wip-row/1.jpg" alt="Prototype">
     </figure>
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/random-international/wip-row/6.jpg" alt="Fly centre">
     </figure>
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/random-international/wip-row/5.jpg" alt="Pulley system">
     </figure>
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/random-international/wip-row/4.jpg" alt="Prototype close up">
     </figure>
   </template>

@@ -2,13 +2,46 @@
 @import 'mixins'
 
 /* fade image in after load */
+img.lazyload:not([src])
+	visibility: hidden
 
 .image
-	position: relative
+  position: relative
+  overflow: hidden
 
 .lazyload,
 .lazyloading
   opacity: 0
+
+$loading-gradient: linear-gradient(90deg, transparent 0%, transparent 20%, rgba(255, 255, 255, 0.04) 50%, transparent 70%, transparent 100%)
+$loading-relative-noise: url('../plugins/plugin-outside-content/dark-noise-heavy.png')
+$loading-relative-noise-stronger: url('../plugins/plugin-outside-content/dark-noise-heavy-1_5extra.png')
+
+.parent-loading
+  background-image: $loading-relative-noise
+  background-blend-mode: overlay
+  @media only screen and #{$media-queries}
+    background-image: $loading-relative-noise-stronger
+  &::before 
+    content: ' '
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+    animation: shine 2.4s cubic-bezier(0.4, 0.0, 0.2, 1) infinite
+    background-blend-mode: overlay
+    background-size: 150%
+    background-position: 50% 50%
+    background-image: $loading-gradient
+
+@keyframes shine
+  0%
+    transform: translateX(-100%)
+  
+  100%
+    transform: translateX(100%)
 
 .image .lazyloaded
   opacity: 1

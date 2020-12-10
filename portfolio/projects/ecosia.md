@@ -9,10 +9,10 @@ navStyle:
   progress: light
 background: orange
 sidebar: false
-date: 2019-09-11
+date: 2021-01-01
 prev: ./wesen
 next: ./play
-image:
+src: /images/homepage/ecosia-tile.png
 hasFooter: true
 ---
 
@@ -146,7 +146,7 @@ When I joined Ecosia it was at an inflection point. We would soon experience rap
 <div class="columns">
 <div class="column is-half modal-image-limit">
 <Content-ModalWrapper type="link" url="https://acmoles.github.io/maps-ui/" label="Wireframe interaction prototype">
-<figure class="image is-5by4">
+<figure class="image parent-loading is-5by4">
 <img class="lazyload" data-src="/images/ecosia/EcosiaMaps-modal.jpg" alt="Ecosia maps vertical">
 </figure>
 </Content-ModalWrapper>
@@ -170,7 +170,7 @@ Even as we grew, there remained the need to be hands-on and responsive. I design
 
 <Content-FreeSection padding="is-small">
 
-<figure class="image is-16by9">
+<figure class="image parent-loading is-16by9">
 <iframe style="background: white;" class="lazyload" data-src="https://ecosia-50-million.netlify.app" frameborder="0"></iframe>
 </figure>
 
@@ -182,7 +182,7 @@ Even as we grew, there remained the need to be hands-on and responsive. I design
 
 <Content-FreeSection padding="is-small">
 
-<figure class="image is-16by9">
+<figure class="image parent-loading is-16by9">
 <iframe style="background: white;" class="lazyload" data-src="https://ecosia-10-years.netlify.app" frameborder="0"></iframe>
 </figure>
 
@@ -197,7 +197,7 @@ Even as we grew, there remained the need to be hands-on and responsive. I design
 <div class="columns">
 <div class="column is-half modal-image-limit">
 <Content-ModalWrapper type="link" url="https://mapvis.netlify.app/" label="View live visualisation">
-<figure class="image is-5by4">
+<figure class="image parent-loading is-5by4">
 <img class="lazyload" data-src="/images/ecosia/SearchMap-modal.jpg" alt="Searches map visualisation">
 </figure>
 </Content-ModalWrapper>
@@ -229,7 +229,7 @@ Early on, we had a standout success with the iOS App. Users were telling us that
 
 <div class="columns">
 <div class="column is-half modal-image-limit">
-<figure class="image is-5by4">
+<figure class="image parent-loading is-5by4">
 <img class="lazyload" data-src="/images/ecosia/iOS-modal.jpg" alt="Ecosia iOS App">
 </figure>
 </div>
@@ -253,7 +253,7 @@ The greatest business impact came from a project where I supported the team to d
 <Content-FreeSection padding="is-small">
 <div class="columns">
 <div class="column is-half modal-image-limit">
-<figure class="image is-5by4">
+<figure class="image parent-loading is-5by4">
 <img class="lazyload" data-src="/images/ecosia/Android-modal.jpg" alt="Ecosia Android App">
 </figure>
 </div>
@@ -272,15 +272,15 @@ The Ecosia Android app offers the familiarity of Chromium with Ecosia search. It
 
 <template slot="aside">
 
-<figure class="image is-16by9">
+<figure class="image parent-loading is-16by9">
   <img class="lazyload" data-src="/images/ecosia/Ecosia-support1.jpg" alt="Ecosia offices">
 </figure>
 
-<figure class="image is-16by9">
+<figure class="image parent-loading is-16by9">
   <img class="lazyload" data-src="/images/ecosia/Ecosia-support2.jpg" alt="Ecosia offices">
 </figure>
 
-<figure class="image is-16by9">
+<figure class="image parent-loading is-16by9">
   <img class="lazyload" data-src="/images/ecosia/Ecosia-support3.jpg" alt="Ecosia tree saplings">
 </figure>
 
@@ -332,7 +332,7 @@ The greatest business impact came from two projects where I supported the team t
 
 <div class="columns is-centered">
 <div class="column is-two-thirds">
-<figure class="image is-5by4">
+<figure class="image parent-loading is-5by4">
 <img class="lazyload" data-src="/images/ecosia/MacApp-modal.jpg" alt="Safari App Extension">
 </figure>
 
@@ -362,7 +362,7 @@ Our browser extensions add Ecosia as default search engine. Users expect that th
 
 <div class="columns is-centered">
 <div class="column is-two-thirds">
-<figure class="image is-5by4">
+<figure class="image parent-loading is-5by4">
 <img class="lazyload" data-src="/images/ecosia/Login-modal.jpg" alt="Ecosia accounts login">
 </figure>
 

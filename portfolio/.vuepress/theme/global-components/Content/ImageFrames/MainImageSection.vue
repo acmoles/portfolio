@@ -12,7 +12,7 @@
         <div class="columns">
 
           <div class="column is-two-thirds">
-            <figure class="image" :class="$imageClass">
+            <figure class="image parent-loading" :class="$imageClass">
               <iframe v-if="iframe" class="lazyload" :data-src="url" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               <img v-else class="lazyload medium-zoom" :data-src="url" :alt="alt">
             </figure>

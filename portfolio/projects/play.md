@@ -9,9 +9,10 @@ navStyle:
   progress: light
 background: green
 sidebar: false
-date: 2019-09-11
+date: 2020-10-11
 prev: ./ecosia
 next: ./toucan-research
+srcComponent: AbstractHome
 hasFooter: true
 ---
 
@@ -22,7 +23,7 @@ hasFooter: true -->
 ::: slot top
 
 <Stage-ProjectStage :noise="true" ctaLabel="none" ctaUrl="#"
-description="I love learning and creating. This is a selection of personal design, technology and workflow experiments.">
+description="I love learning and creating. This is a selection of personal design and  technology experiments.">
 
   <template v-slot:visual-background>
     <Heros-AbstractHero :noise="false"/>
@@ -148,7 +149,7 @@ My background in industrial design lends itself well to sketching quick iteratio
 
 <template slot="modalSketch">
 
-<figure class="image is-16by9">
+<figure class="image parent-loading is-16by9">
   <img class="lazyload" data-src="/images/play/turntable-full.jpg" alt="Iterations of the Main Stage">
 </figure>
 
@@ -195,39 +196,3 @@ The clone sphere has similar behaviour, cloning the held brick when the countdow
 </template>
 
 </Content-ImageFrames-SquareImagesRow>
-
-
-
-
-<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="/images/play/blkbrd/context.jpg" alt="Nova showreel" :aside="true" rag="rag-6" :iframe="false">
-
-<template slot="content">
-
-## BLKBRD
-
-<p class="subtitle" style="padding-right: 3em;">
-  A messaging app which explores the possibility of public clients in static locations.
-</p>
-
-Smartphones and messaging apps are by definition mobile. But I began to wonder if messages could gain additional meaning if it was possible to display them on shared client devices with known locations. I imagined a number of use cases, for example in a family home, where a device in the kitchen could display messages to be seen by snack-seeking children when they return from school. Similarly an elderly non-tech-savvy relative could receive (and perhaps send) text messages from their grandchildren (which they greatly prefer to phone calls) on a device set up beside the landline.
-
-I prototyped the idea using the [Ionic Framework](https://ionicframework.com/) and [Google Firebase](https://firebase.google.com/). Due to the flexibility of webview-based Ionic, I was able to install it as an app on several static clients and widely distribute the URL to friends and family. The data model was inspired by Slack, with 'channels' hosting conversations. Each channel usually has an associated static client device. [BLKBRD](http://bit.ly/blkbrdapp) is free to use and available to try.
-
-</template>
-
-<template slot="aside">
-
-<figure class="image is-9by16">
-  <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190729" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</figure>
-
-<!-- <figcaption>
-
-Useability testing a high fidelity iteration with children.
-
-</figcaption> -->
-
-</template>
-
-
-</Content-ImageFrames-MainImageSection>

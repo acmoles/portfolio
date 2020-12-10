@@ -5,7 +5,7 @@
           <!-- <i class="icon"><Logo/></i> -->
           <router-link class="column" :to="$localePath">
             <strong class="footer-title">
-              Ant Moles
+              Anthony Moles
             </strong>
           </router-link>
           <div class="column">
@@ -39,6 +39,8 @@
 // import Logo from '@theme/components/icons/Logo.vue'
 import { isExternal, isMailto, isTel } from '@theme/util'
 import { copyText } from '@theme/mixins/copyText.js'
+
+// {{ $siteTitle }}
 
 export default {
   // components: { Logo },

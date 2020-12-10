@@ -143,7 +143,7 @@ export class LoadedContent extends EventTarget {
       material.onBeforeCompile = ( shader ) => {
         shader.uniforms.time = { value: 0 };
         if (window.devicePixelRatio < 1.5) {
-          console.log('low PR');
+          console.log('Low Pixel Ratio');
           shader.uniforms.noise = { value: 0.42 };
         } else {
           shader.uniforms.noise = { value: 0.64 };

@@ -10,9 +10,10 @@ navStyle:
   progress: light
 background: purple
 sidebar: false
-date: 2019-09-11
+date: 2016-09-11
 prev: ./play
 next: ./stompy-robot
+src: /images/homepage/colouring-tile.png
 hasFooter: true
 ---
 
@@ -153,7 +154,7 @@ I facilitated a company-wide brainstorm for content ideas. They broadly split in
 
 <div class="columns is-gapless">
   <div class="column is-two-thirds">
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/toucan-rnd/page.jpg" alt="magazine page which links to digital content">
     </figure>
   </div>
@@ -258,7 +259,7 @@ Many adult testers requested that hand-held items move when the hand moves | Thi
 
 <template slot="aside">
 
-<figure class="image is-9by16">
+<figure class="image parent-loading is-9by16">
   <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190638" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </figure>
 <figcaption>
@@ -293,7 +294,7 @@ In early 2018 the Creative Team updated the look and feel of the activity magazi
 
 <div class="column is-two-thirds">
 
-<figure class="image is-square">
+<figure class="image parent-loading is-square">
   <img class="lazyload" data-src="/images/toucan-rnd/magazine-cover-en.jpg" alt="toucanBox magazines">
 </figure>
 
@@ -334,7 +335,7 @@ I selected WebGL Canvas rather than DOM or SVG. My rationale was performance on 
 
 <template v-slot:column1>
 
-<figure class="image is-square">
+<figure class="image parent-loading is-square">
   <img class="lazyload" data-src="/images/toucan-rnd/production-assets.jpg" alt="tile map of image assets">
 </figure>
 
@@ -348,7 +349,7 @@ Dozens of Toucanoo accessories packed on a compressed PNG sprite sheet
 
 <template v-slot:column2>
 
-<figure class="image is-square">
+<figure class="image parent-loading is-square">
   <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190505" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </figure>
 
@@ -426,7 +427,7 @@ Was there a future for digital interactive experiences as part of the toucanBox 
 
 <template slot="aside">
 
-<figure class="image is-9by16">
+<figure class="image parent-loading is-9by16">
   <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190429" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </figure>
 <!-- <figcaption>

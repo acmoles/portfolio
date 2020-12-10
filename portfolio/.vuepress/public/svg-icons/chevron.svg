@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="217px" height="600px" viewBox="0 0 217 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Polygon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="31.9805762%" x2="50%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#EEEEEE" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.32">
+        <g id="Artboard" transform="translate(-600.000000, -124.000000)" fill="url(#linearGradient-1)">
+            <path d="M481.702282,86.4164079 L796.60799,315.208797 C799.411889,317.245949 800.585154,320.856888 799.51416,324.153069 L679.230883,694.346931 C678.159889,697.643112 675.088241,699.874795 671.622431,699.874795 L282.377569,699.874795 C278.911759,699.874795 275.840111,697.643112 274.769117,694.346931 L154.48584,324.153069 C153.414846,320.856888 154.588111,317.245949 157.39201,315.208797 L472.297718,86.4164079 C475.101617,84.3792558 478.898383,84.3792558 481.702282,86.4164079 Z" id="Polygon" transform="translate(477.000000, 424.000000) rotate(-270.000000) translate(-477.000000, -424.000000) "></path>
+        </g>
+    </g>
+</svg>

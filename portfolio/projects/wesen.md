@@ -10,7 +10,7 @@ navStyle:
 background: dark
 case1: Case study
 sidebar: false
-date: 2019-09-12
+date: 2018-10-12
 src: /images/homepage/wesen-homepage.jpg
 next: ./ecosia
 hasFooter: true
@@ -245,7 +245,7 @@ _“People expect me to find the next trend”_
 
 <template v-slot:column3>
 
-<figure class="image is-square">
+<figure class="image parent-loading is-square">
   <img class="lazyload" data-src="/images/wesen/journey_characters2.jpg" alt="Cartoon of enthusiasts and gifters">
 </figure>
 
@@ -340,7 +340,7 @@ Enable customers to purchase their creation and automatically fulfil their order
 
 <template v-slot:column3>
 
-<figure class="image is-square">
+<figure class="image parent-loading is-square">
   <img class="lazyload medium-zoom" data-src="/images/wesen/draft-journey-mvp.png" alt="Flowchart of user journey">
 </figure>
 <figcaption class="small">
@@ -442,7 +442,7 @@ _“The first thing I wanted to do was push all the sliders to maximum”_ In so
 
 <div class="columns is-gapless">
   <div class="column is-two-thirds">
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/wesen/in-use.jpg" alt="webGL prototype in use">
     </figure>
   </div>
@@ -523,7 +523,7 @@ I developed systems to detect each of these problems. The notification window be
 
 <template v-slot:aside>
 
-<figure class="image is-square">
+<figure class="image parent-loading is-square">
   <img class="lazyload" data-src="/images/wesen/messages-square.png" alt="3D geometry error messages"/>
 </figure>
 
@@ -741,7 +741,7 @@ The final lesson from Wesen was the importance of team. It's certainly a romanti
 <div class="columns is-gapless">
   <div class="column is-three-quarters">
     <Content-ModalWrapper type="link" url="http://www.wesen.studio" label="wesen.studio">
-      <figure class="image is-square">
+      <figure class="image parent-loading is-square">
         <img class="lazyload" data-src="/images/wesen/evaluation.jpg" alt="Pendant worn by a customer">
       </figure>
     </Content-ModalWrapper>

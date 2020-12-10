@@ -9,9 +9,10 @@ navStyle:
   progress: light
 background: yellow
 sidebar: false
-date: 2019-09-12
+date: 2015-09-12
 prev: ./stompy-robot
 next: ./toucanbox
+srcComponent: BeadsHome
 hasFooter: true
 ---
 
@@ -120,7 +121,7 @@ Makies are toys with a digital twin. They're the child's personalised avatar for
 
 <template v-slot:aside>
 
-<figure class="image is-square">
+<figure class="image parent-loading is-square">
   <img class="lazyload" data-src="/images/makielab/Makies-present1.5x.jpg" alt="Makies product and web interface">
 </figure>
 
@@ -162,43 +163,43 @@ To demonstrate my findings I created Sprint - jetpack wielding athletes, drawing
 <Content-GridSection padding="is-medium-large sprint">
 
   <template v-slot:grid>
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/makielab/sprint-wip-rough.jpg" alt="3D modelling rough forms">
     </figure>
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/makielab/sprint-wip-body.jpg" alt="3D modelling body WIP">
     </figure>
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/makielab/sprint-wip-body-details.jpg" alt="3D modelling details">
     </figure>
-    <figure class="image is-square span-3 sprint-tall">
+    <figure class="image parent-loading is-square span-3 sprint-tall">
       <img class="lazyload sketch-group" data-src="/images/makielab/sketch-group.jpg" alt="Figure sketches">
     </figure>
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/makielab/sprint-wip-sketch.jpg" alt="Character face sketch">
     </figure>
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/makielab/sprint-wip-sculpt.jpg" alt="Face sculpt">
     </figure>
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/makielab/sprint-wip-materials.jpg" alt="Face with materials">
     </figure>
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/makielab/sprint-wip-uvs.jpg" alt="Character face sketch">
     </figure>
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/makielab/sprint-wip-print.jpg" alt="Face sculpt">
     </figure>
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/makielab/sprint-wip-test.jpg" alt="Face with materials">
     </figure>
-    <figure class="image is-square span-2">
+    <figure class="image parent-loading is-square span-2">
       <img class="lazyload" data-src="/images/makielab/render-group.jpg" alt="Render of figures">
     </figure>
-    <figure class="image is-square span-2">
+    <figure class="image parent-loading is-square span-2">
       <img class="lazyload" data-src="/images/makielab/render-action.jpg" alt="Render of figures in action">
     </figure>
-    <figure class="image is-square span-2">
+    <figure class="image parent-loading is-square span-2">
       <img class="lazyload" data-src="/images/makielab/photo-close.jpg" alt="Printed figures closeup">
     </figure>
   </template>

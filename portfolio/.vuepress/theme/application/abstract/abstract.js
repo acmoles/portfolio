@@ -10,11 +10,13 @@ import { SphereShader } from './sphereShader.js'
 
 export class Abstract extends EventTarget {
 
-  constructor(domParent) {
+  constructor(domParent, home) {
     super();
 
-    this.vw = window.innerWidth;
-		this.vh = window.innerHeight;
+    this.home = home;
+
+    this.vw = domParent.offsetWidth;
+		this.vh = domParent.offsetHeight;
 
     this.container = domParent;
     this.clock = new THREE.Clock();
@@ -35,25 +37,66 @@ export class Abstract extends EventTarget {
     // this.gui.add(this, 'far', 100, 1000);
     // this.gui.add(this, 'zoom', 0, 100);
 
-    // window.getCamera = this.getCamera.bind(this);
+    window.getCamera = this.getCamera.bind(this);
 
     this.configRenderer();
     this.configScene();
     this.configSphere();
+    if (this.controls) {
+      this.controls.addEventListener( 'change', this.stopAnimate.bind(this) );
+    }
     this.dispatchEvent(new Event('abstract-loaded'));
+  }
+
+  stopAnimate() {
+    if (this.longZoomAnimation && !this.longZoomAnimation.paused) {
+      this.longZoomAnimation.pause();
+    }
   }
 
   begin() {
     this.animate();
 
-    anime({
-      targets: this.camera.position,
-      x: 3.84,
-      y: -19.35,
-      z: 57.66,
-      duration: 4000,
-      easing: 'easeOutQuad',
-    })
+    if (this.home) {
+      anime({
+        targets: this.camera.position,
+        x: -30,
+        y: -60,
+        z: 50,
+        duration: 4000,
+        easing: 'easeOutQuad',
+        complete: (anim) => {
+          this.longZoomAnimation = anime({
+            targets: this.camera.position,
+            x: -30,
+            y: -60,
+            z: 65,
+            duration: 60000,
+            easing: 'linear',
+          })
+        }
+      })
+    } else {
+      anime({
+        targets: this.camera.position,
+        x: 3.84,
+        y: -19.35,
+        z: 57.66,
+        duration: 4000,
+        easing: 'easeOutQuad',
+        complete: (anim) => {
+          this.longZoomAnimation = anime({
+            targets: this.camera.position,
+            x: 4.5,
+            y: -23,
+            z: 65,
+            duration: 60000,
+            easing: 'linear',
+          })
+        }
+      })
+    }
+
   }
 
   configRenderer() {
@@ -62,8 +105,10 @@ export class Abstract extends EventTarget {
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(45, this.vw / this.vh, 1, this.far);
 
-    this.controls = new OrbitControls( this.camera, this.renderer.domElement );
-    this.controls.enableZoom = false;
+    if (this.vw > 768) {
+      this.controls = new OrbitControls( this.camera, this.renderer.domElement );
+      this.controls.enableZoom = false;  
+    }
     this.renderer.setClearColor( 0x13CE66, 0 );
     this.renderer.setPixelRatio( window.devicePixelRatio );
     this.renderer.setSize( this.vw, this.vh );
@@ -73,7 +118,11 @@ export class Abstract extends EventTarget {
   }
 
   configScene() {
-    this.camera.position.set( 5, -25, 75 );
+    if (this.home) {
+      this.camera.position.set( -5, -60, 75 );
+    } else {
+      this.camera.position.set( 5, -25, 75 );
+    }
 
     this.camera.lookAt(this.scene.position);
 
@@ -88,9 +137,9 @@ export class Abstract extends EventTarget {
     // window.addEventListener( 'resize', ref, false );
   }
 
-  // getCamera() {
-  //   console.log(this.camera.position);
-  // }
+  getCamera() {
+    console.log(this.camera.position);
+  }
 
   configSphere() {
     this.geometry = new THREE.IcosahedronGeometry(12, 2);
@@ -110,7 +159,11 @@ export class Abstract extends EventTarget {
 		} );
 
     this.sphere = new THREE.Mesh(this.geometry, this.material);
-    this.sphere.position.set( 10, 10, 0 );
+    if (this.home) {
+      this.sphere.position.set( -10, -30, 0 );
+    } else {
+      this.sphere.position.set( 10, 10, 0 );
+    }
     this.sphere.rotation.x = Math.PI / 3
     this.sphere.rotation.y = Math.PI / 8
     this.sphere.rotation.z = Math.PI / 6
@@ -125,31 +178,28 @@ export class Abstract extends EventTarget {
 
     this.renderer.render( this.scene, this.camera );
     // this.stats.update();
-
+    if (this.controls) {
+      this.controls.update();
+    }
 		this.uniforms.time.value = .00005 * ( Date.now() - this.start );
-
-    // console.log(this.uniforms.time.value);
-
-    // this.uniforms.near.value = this.near;
-    // this.uniforms.far.value = this.far;
-
-    // TODO remove
-    // this.camera.far = this.far;
-    // this.camera.zoom = this.zoom;
-    // this.camera.updateProjectionMatrix();
   }
 
   destroy() {
     cancelAnimationFrame( this.animationFrame );
     // window.removeEventListener('resize', this.ref, false);
-
+    // this.longZoomAnimation.pause();
+    let activeInstances = anime.running;
+    let index = activeInstances.indexOf(this.longZoomAnimation);
+    activeInstances.splice(index, 1);
     this.scene.remove(this.sphere);
     this.geometry.dispose();
     this.material.dispose();
     this.uniforms = null;
     this.scene.dispose();
     this.scene = null;
-    this.controls.dispose();
+    if (this.controls) {
+      this.controls.dispose();
+    }
     this.camera = null;
     this.renderer.renderLists.dispose();
     this.renderer.dispose();
@@ -158,9 +208,9 @@ export class Abstract extends EventTarget {
   }
 
   onWindowResize(width, height) {
-    console.log('resize abstract');
-    this.vw = width;
-    this.vh = height;
+    // console.log('resize abstract');
+    this.vw = this.container.offsetWidth;
+		this.vh = this.container.offsetHeight;
     this.renderer.setSize( this.vw, this.vh );
     // this.composer.setSize( this.vw, this.vh );
 

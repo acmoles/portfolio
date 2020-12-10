@@ -1,6 +1,6 @@
 <template>
   <section class="section full-image">
-    <figure class="image" :class="imageClass ? imageClass : 'is-2by1'">
+    <figure class="image parent-loading" :class="imageClass ? imageClass : 'is-2by1'">
       <img class="lazyload" :data-src="url" :alt="alt">
     </figure>
     <div v-if="hasCaption" class="container is-fullhd">

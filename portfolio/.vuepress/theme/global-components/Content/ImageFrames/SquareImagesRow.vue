@@ -16,7 +16,7 @@
         >
 
           <button v-if="image.action" class="action-button background-noise" :class="image.action.type" type="button" name="action" @click="action(image, i)">
-            <figure class="image is-square">
+            <figure class="image parent-loading is-square">
               <img class="lazyload" :data-src="image.url" :alt="image.alt">
             </figure>
             <span>{{ image.action.label }}
@@ -36,7 +36,7 @@
 
           <figure
             v-else
-            class="image is-square"
+            class="image parent-loading is-square"
             :class="{'sibling-action-padding': siblingAction}"
           >
             <iframe v-if="image.iframe" class="lazyload" :data-src="image.url" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

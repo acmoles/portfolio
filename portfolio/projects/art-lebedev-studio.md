@@ -10,7 +10,7 @@ navStyle:
   progress: light
 background: als
 sidebar: false
-date: 2019-09-12
+date: 2012-09-12
 src: /images/homepage/art-lebedev-tile.jpg
 prev: ./lego
 next: ./wesen

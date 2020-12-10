@@ -9,9 +9,10 @@ navStyle:
   progress: light
 background: pink
 sidebar: false
-date: 2019-09-12
+date: 2013-09-12
 prev: ./random-international
 next: ./art-lebedev-studio
+src: /images/homepage/lego-tile.png
 hasFooter: true
 ---
 
@@ -136,26 +137,26 @@ The LEGO DIMENSIONS Starter Pack has everything you need to set out on epic mash
 
 <div class="columns is-multiline">
   <div class="column is-half">
-    <figure class="image is-lego">
+    <figure class="image parent-loading is-lego">
       <img class="lazyload" data-src="/images/lego/lego-sketches.jpg" alt="Sketching out the concept">
     </figure>
   </div>
 
   <div class="column is-half">
-    <figure class="image is-lego">
+    <figure class="image parent-loading is-lego">
       <img class="lazyload" data-src="/images/lego/lego-details.jpg" alt="Refining details">
     </figure>
   </div>
 
   <div class="column is-half">
-    <figure class="image is-16by9">
+    <figure class="image parent-loading is-16by9">
       <img class="lazyload" data-src="/images/lego/Lego-dimensions.jpg" alt="Trailer still">
     </figure>
   </div>
 
 
   <div class="column is-half">
-    <figure class="image is-16by9">
+    <figure class="image parent-loading is-16by9">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/0kmnrwfDewo" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
     </figure>
   </div>

@@ -13,7 +13,15 @@
           </div>
         </router-link>
         <router-link  v-if="next" class="column no-fade is-one-third next" :to="next.path">
-          <div class="background project-card" :class="next.frontmatter.background"></div>
+          <div class="background project-card" :class="next.frontmatter.background">
+             <div class="ticker-content">
+              <div class="img-ticker" v-for="n in 8">
+                <div class="ticker-inner">
+                  <img class="lazyload chevron" :class="chevronClass" data-src="/svg-icons/chevron.svg" alt="chevron"></img>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="text-group">
             <p class="small-title">{{ processedTitle(next.frontmatter.title) }}</p>
             <h2 class="item-title">{{ next.frontmatter.subtitle }}</h2>
@@ -50,8 +58,23 @@ export default {
     next () {
       return resolvePageLink(LINK_TYPES.NEXT, this)
     },
+
+    chevronClass() {
+      let uid = this.next.frontmatter.uid
+      // 4, 7, 9
+      let uidsToSet = [2, 4, 5, 8, 10]
+      let uidsToSetDouble = [1]
+      if (uidsToSet.includes(uid)) {
+        return 'chevron-dimmed'
+      } else if (uidsToSetDouble.includes(uid)) {
+        return 'chevron-dimmed-double'
+      } else {
+        return null
+      }
+    }
   }
 }
+
 
 const LINK_TYPES = {
   NEXT: {
@@ -150,6 +173,7 @@ function resolvePageLink (
     left: -2em
     width: 50vw
     border-left: 2px solid $black
+    overflow: hidden
     &:hover, &:active
       filter: brightness(1.1)
   .item-title
@@ -177,6 +201,38 @@ function resolvePageLink (
         max-width: unset
         padding-right: 2.75em
 
+@keyframes ticker-kf 
+  0%
+    transform: translate3d(-100%, 0, 0)
+  
+  // 217px native
+  100%
+    transform: translate3d(0, 0, 0)
+  
+.ticker-content
+  width: 100000px
+
+.img-ticker
+  float: left
+  animation: ticker-kf 3s linear infinite
+  height: 20em
+  width: 10em
+  .ticker-inner
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    display: flex
+    align-items: center
+    .chevron
+      transform: scale(1.2)
+      &.chevron-dimmed
+        opacity: 0.5
+      &.chevron-dimmed-double
+        opacity: 0.25
+
+  
 
 
 </style>

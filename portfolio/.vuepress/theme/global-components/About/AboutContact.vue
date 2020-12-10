@@ -13,7 +13,7 @@
         </button>
         <div class="column photo is-narrow">
           <div class="background background-noise"></div>
-          <figure class="image is-square">
+          <figure class="image parent-loading is-square">
             <img class="lazyload" data-src="/images/about/me-photo.jpg" alt="Photo of me">
           </figure>
         </div>

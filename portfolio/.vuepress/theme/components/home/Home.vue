@@ -20,6 +20,7 @@
             :background="project.frontmatter.background"
             :src="project.frontmatter.src"
             :srcLow="project.frontmatter.srcLow"
+            :srcComponent="project.frontmatter.srcComponent"
             :rag="project.frontmatter.rag"
             v-on:project-click="handleProjectClick"
             v-on:image-load="handleImageLoad"

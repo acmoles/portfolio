@@ -3,7 +3,7 @@ title: About
 subtitle: Hello! I'm Ant
 pageClass: about
 sidebar: false
-date: 2019-09-11
+date: 2020-12-23
 navStyle:
   style: light
   tint: regular-tint

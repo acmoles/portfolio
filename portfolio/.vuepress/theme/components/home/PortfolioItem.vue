@@ -22,21 +22,28 @@
         :class="imageClass"
       >
         <img
-          v-if="uid === 1"
           ref="image"
-          :src="src"
-          :alt="title"
-          :style="{ height: isFirefox ? '100%' :null }"
-        >
-        <img
-          v-else
-          ref="image"
-          class="lazyload"
+          :class="{ 'lazyload': uid !== 1, 'lego-blend-mode': uid === 9 }"
+          :src="(uid === 1 || imageLoaded) ? src : null"
+          v-on:lazybeforeunveil="beforeUnveil"
           :data-src="src"
           :alt="title"
-          :style="{ height: isFirefox ? '100%' :null }"
+          :style="{ height: isFirefox ? '100%' : null }"
         >
       </figure>
+      <template
+        v-else-if="srcComponent"
+      >
+        <component :is="srcComponent" />
+      </template>
+
+      <div 
+        class="glow"
+        :class="{ 'transition': !mouseOn }"
+        :style="{ opacity: glowOpacity }"
+        :ref="'glow' + uid"
+      >
+      </div>
 
       <div :ref="'caption' + uid" class="item-caption" :class="{ 'transition': !mouseOn }">
         <p class="small-title">{{ processedTitle(title) }}</p>
@@ -58,6 +65,10 @@ import { fadeUpInLoad } from '@theme/mixins/fadeUpInLoad.js'
 import { browserDetection } from '@theme/mixins/browserDetection.js'
 import { processedTitle } from '@theme/mixins/processedTitle.js'
 
+// Component tile backgrounds
+import BeadsHome from '@theme/components/home/BeadsHome.vue'
+import AbstractHome from '@theme/components/home/AbstractHome.vue'
+
 export default {
 
   props: {
@@ -71,15 +82,20 @@ export default {
     background: String,
     src: String,
     srcLow: String,
+    srcComponent: String,
     rag: String
   },
 
   mixins: [fadeUpInLoad, processedTitle, browserDetection],
 
+  components: { BeadsHome, AbstractHome },
+
   data () {
     return {
       mouseOn: false,
+      glowOpacity: 0,
       transitionTimeout: null,
+      imageLoaded: false,
       base: {},
       animatables: {},
       options: {
@@ -90,7 +106,7 @@ export default {
           translation : {x: 0, y: 0, z: 1},
         },
         caption: {
-          translation : {x: 10, y: 10, z: 0},
+          translation : {x: 8, y: 8, z: 0},
         },
       }
     }
@@ -112,6 +128,10 @@ export default {
   },
 
   mounted() {
+    // if (this.srcComponent) {
+    //   console.log(this.srcComponent)
+    // }
+
     this.base = this.$refs['base' + this.uid].$el
     this.animatables.article = this.$refs['article' + this.uid]
     // if (this.src) {
@@ -146,6 +166,9 @@ export default {
           childHeight: rect.height,
         }
         this.$emit('project-click', data)
+      },
+      beforeUnveil() {
+        this.imageLoaded = true
       },
       getMousePosition(event) {
         var posx = 0, posy = 0
@@ -184,11 +207,10 @@ export default {
         this.mouseOn = false
 
         this.$forceNextTick(() => {
-          // requestAnimationFrame(() => {
             for(var key in this.animatables) {
               this.animatables[key].style.WebkitTransform = this.animatables[key].style.transform = 'translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1)'
             }
-          // })
+            this.glowOpacity = 0
         })
       },
       layout(event) {
@@ -201,6 +223,9 @@ export default {
 
         // Mouse position relative to the main element (this.DOM.el).
     		const	relativeMousePosition = { x : mousePosition.x - bounds.left - documentScrolls.left, y : mousePosition.y - bounds.top - documentScrolls.top }
+
+        // this.glow.style.WebkitTransform = this.glow.style.transform = 'translateX(' + (relativeMousePosition.x - 128) + 'px) translateY(' + (relativeMousePosition.y - 128) + 'px)'
+        this.glowOpacity = relativeMousePosition.x/bounds.width
 
           // Movement settings for the animatable elements.
       		for(var key in this.animatables) {
@@ -237,7 +262,7 @@ export default {
       			}
 
       			this.animatables[key].style.WebkitTransform = this.animatables[key].style.transform = 'translateX(' + transforms.translation.x + 'px) translateY(' + transforms.translation.y + 'px) translateZ(' + transforms.translation.z + 'px) rotateX(' + transforms.rotation.x + 'deg) rotateY(' + transforms.rotation.y + 'deg) rotateZ(' + transforms.rotation.z + 'deg) scale3d(1, 1, 1)'
-      		}
+          }
       }
   }
 }
@@ -260,13 +285,14 @@ export default {
     padding: 2rem 4rem 2rem 2rem
     position: relative
     box-shadow: $element-shadow
+    perspective: none
   &.orange
     &.project-panel::after
       box-shadow: 0 0 2em 0 rgba($orange, 0.56)
     background-color: $orange
-    background-image: $relative-noise-url, $gradientMid
+    background-image: $relative-noise-url, $gradient
     @media only screen and #{$media-queries}
-      background-image: $relative-noise-url-stronger, $gradientMid
+      background-image: $relative-noise-url-stronger, $gradient
   &.dark
     background-color: $slate
     background-image: $relative-noise-url, $gradientSubtle
@@ -357,6 +383,17 @@ export default {
     // box-shadow: $element-shadow
     color: $white
 
+.glow
+  @include cover-screen
+  border-radius: $radius
+  mix-blend-mode: overlay
+  opacity: 0
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 60%, transparent 100%)
+  background-size: 200%
+  pointer-events: none
+  &.transition
+    transition: opacity 0.2s ease-out
+
 // Card Typeography
 
 @media screen and (min-width: $tablet)
@@ -405,5 +442,8 @@ export default {
       height: 100%
       right: auto
       left: -28%
+
+.lego-blend-mode
+  mix-blend-mode: luminosity
 
 </style>

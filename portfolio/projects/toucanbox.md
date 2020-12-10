@@ -11,7 +11,7 @@ background: blue
 case1: Case study
 case2: Two parts
 sidebar: false
-date: 2019-09-12
+date: 2017-03-12
 src: /images/homepage/toucan-baked.jpg
 prev: ./makielab
 next: ./random-international
@@ -313,7 +313,7 @@ The box experience is all about the child. Their enjoyment drives the decision t
 
 <template v-slot:column3>
 
-<figure class="image is-square">
+<figure class="image parent-loading is-square">
   <img class="lazyload" data-src="/images/toucanBox/users.jpg" alt="Cartoon of users">
 </figure>
 
@@ -563,7 +563,7 @@ Leveraging our newly optimised messaging to communicate the value proposition cl
 
 <template slot="modal1">
 
-<figure class="image is-2by1">
+<figure class="image parent-loading is-2by1">
   <img class="lazyload" data-src="/images/toucanBox/main-stage-detail.png" alt="Iterations of the Main Stage">
 </figure>
 
@@ -583,7 +583,7 @@ Enabling comparison between each box, while emphasising their different proposit
 
 <template slot="modal2">
 
-<figure class="image is-2by1">
+<figure class="image parent-loading is-2by1">
   <img class="lazyload" data-src="/images/toucanBox/product-section-detail.png" alt="Iterations of the Product Section">
 </figure>
 
@@ -647,7 +647,7 @@ Single page signup form, the simplest and most usable solution we could currentl
 
 <template slot="modal1">
 
-<figure class="image is-2by1">
+<figure class="image parent-loading is-2by1">
   <img class="lazyload" data-src="/images/toucanBox/wireframe-flow-signup.png" alt="Iterations of the Main Stage">
 </figure>
 
@@ -682,7 +682,7 @@ We experimented with adding additional choice at signup but found this reduced c
 
 <div class="video-wrapper">
 
-  <figure class="image is-9by16 single-image">
+  <figure class="image parent-loading is-9by16 single-image">
     <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190532" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   </figure>
   <figcaption>
@@ -736,7 +736,7 @@ _“I don’t remember making a password, now I need one to log in?”_ Around 1
 
 <div class="columns is-gapless" style="margin-bottom: 3em;">
   <div class="column is-half">
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/toucanBox/user-testing-1.jpg" alt="User tester 1">
     </figure>
   </div>
@@ -744,7 +744,7 @@ _“I don’t remember making a password, now I need one to log in?”_ Around 1
 
 <div class="columns is-gapless">
   <div class="column is-half">
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/toucanBox/user-testing-2.jpg" alt="User tester 2">
     </figure>
   </div>
@@ -935,7 +935,7 @@ It was clear the greatest potential for further improvement to the user experien
 
 <!-- <div class="columns is-gapless">
   <div class="column is-two-thirds">
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/toucanBox/post-its-principles.jpg" alt="Design principles">
     </figure>
   </div>
@@ -949,7 +949,7 @@ I created a static mirror of the toucanBox homepage at the conclusion of this pr
 </Content-InfoBox>
 
 <!-- <Content-ModalWrapper type="link" url="http://toucanwww.herokuapp.com/" label="toucanBox static website circa 2017">
-  <figure class="image is-3by2">
+  <figure class="image parent-loading is-3by2">
     <img class="lazyload" data-src="/images/toucanbox/onboarding-desktop.jpg"" alt="touanBox website in 2017">
   </figure>
 </Content-ModalWrapper> -->

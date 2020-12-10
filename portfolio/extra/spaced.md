@@ -20,22 +20,22 @@ hasFooter: false
 <Content-GridSection padding="is-small">
 
   <template v-slot:grid>
-    <figure class="image is-square span-2">
+    <figure class="image parent-loading is-square span-2">
       <img class="lazyload" data-src="/images/stompy-robot/birds-eye-sketch.jpg" alt="Spaced sketching">
     </figure>
-    <figure class="image is-square span-2">
+    <figure class="image parent-loading is-square span-2">
     <img class="lazyload" data-src="/images/stompy-robot/character-sketch.jpg" alt="Spaced character sketching">
     </figure>
-    <figure class="image is-square span-2">
+    <figure class="image parent-loading is-square span-2">
     <img class="lazyload" data-src="/images/stompy-robot/character-model.jpg" alt="Spaced 3D modelling">
     </figure>
-    <figure class="image is-square span-2">
+    <figure class="image parent-loading is-square span-2">
     <iframe class="lazyload" data-src="https://player.vimeo.com/video/424005109" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </figure>
-    <figure class="image is-square span-2">
+    <figure class="image parent-loading is-square span-2">
     <iframe class="lazyload" data-src="https://player.vimeo.com/video/424004636" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </figure>
-    <figure class="image is-square span-2">
+    <figure class="image parent-loading is-square span-2">
     <iframe class="lazyload" data-src="https://player.vimeo.com/video/424006246" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </figure>
   </template>

@@ -14,6 +14,9 @@ var SphereShader = {
 // Distributed under the MIT license. See LICENSE file.
 // https://github.com/ashima/webgl-noise
 //
+
+precision highp float;
+
 vec3 mod289(vec3 x)
 {
   return x - floor(x * (1.0 / 289.0)) * 289.0;
@@ -127,22 +130,26 @@ void main() {
 `
 	,
 
-	fragmentShader: `
+  fragmentShader: `
+precision highp float;
+
 varying vec2 vUv;
 varying float noise;
 
 uniform float near;
 uniform float far;
 
-float random(vec3 scale,float seed){return fract(sin(dot(gl_FragCoord.xyz+seed,scale))*43758.5453+seed);}
+float random(vec3 scale, float seed) {
+  return fract(sin(dot(gl_FragCoord.xyz + seed, scale)) * 43758.5453 + seed);
+}
 
 void main()	{
 	const float LOG2 = 1.442695;
 	float depth = gl_FragCoord.z / gl_FragCoord.w;
 	depth = exp2( 0.1 * depth * LOG2 );
 
-	vec3 colorNoise = vec3( vUv*noise, 1.0 );
-	vec3 finalColor = vec3( colorNoise.g, colorNoise.b*2., colorNoise.b*3. );
+	vec3 colorNoise = vec3( vUv * noise, 1.0 );
+	vec3 finalColor = vec3( colorNoise.g, colorNoise.b * 2., colorNoise.b * 3. );
 
 	float n = ( .5 - random( vec3( 1. ), length( gl_FragCoord ) ) );
 

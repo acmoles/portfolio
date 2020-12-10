@@ -29,12 +29,12 @@ I created several concepts, the most promising of which we named the _Box builde
 
 <div class="columns" style="padding-top: 2em;">
 <div class="column">
-<figure class="image is-2by1">
+<figure class="image parent-loading is-2by1">
   <img class="lazyload" data-src="/images/toucanBox/personalised-experience.jpg" alt="Cartoon of a personalised experience">
 </figure>
 </div>
 <div class="column">
-<figure class="image is-2by1 transparent-image">
+<figure class="image parent-loading is-2by1 transparent-image">
   <img class="lazyload" data-src="/images/toucanBox/high-fidelity-sketching.png" alt="Flowchart of personalisation interface in the account section">
 </figure>
 </div>
@@ -46,7 +46,7 @@ I created several concepts, the most promising of which we named the _Box builde
 <div class="columns is-gapless">
   <div class="column is-three-quarters">
     <Content-ModalWrapper type="link" url="http://personalisation.herokuapp.com/" label="Prototype">
-      <figure class="image is-9by16">
+      <figure class="image parent-loading is-9by16">
         <img class="lazyload" data-src="/images/toucanBox/choose-interface.png" alt="Screenshot of box personalisation prototype">
       </figure>
     </Content-ModalWrapper>
@@ -91,7 +91,7 @@ Best products (Airbnb and Spotify) blend the boundary between the digital produc
 
 <template v-slot:aside>
 
-<figure class="image is-5by3">
+<figure class="image parent-loading is-5by3">
   <img class="lazyload medium-zoom" data-src="/images/toucanBox/warehouse.jpg" alt="toucanBox warehouse">
 </figure>
 <figcaption>
@@ -138,7 +138,7 @@ Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas
 
 <div class="columns is-gapless">
   <div class="column is-two-thirds">
-    <figure class="image is-square">
+    <figure class="image parent-loading is-square">
       <img class="lazyload" data-src="/images/toucanBox/user-testing-2.jpg" alt="User tester 2">
     </figure>
   </div>
@@ -164,7 +164,7 @@ Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere puru
 
 <template slot="aside">
 
-<figure class="image is-5by3 transparent-image">
+<figure class="image parent-loading is-5by3 transparent-image">
   <img class="lazyload medium-zoom" data-src="/images/toucanBox/personalisation-desktop.png" alt="Iteration for desktop">
 </figure>
 
@@ -208,7 +208,7 @@ Must resonate with the core value proposition (hands-on crafting and creativity)
 <div class="columns is-gapless">
   <div class="column is-three-quarters">
     <Content-ModalWrapper type="link" url="http://personalisation.herokuapp.com/" label="Prototype">
-      <figure class="image is-9by16">
+      <figure class="image parent-loading is-9by16">
         <img class="lazyload" data-src="/images/toucanBox/choose-interface.png" alt="Screenshot of latest prototype">
       </figure>
     </Content-ModalWrapper>

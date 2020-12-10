@@ -36,7 +36,7 @@
           >
             <!-- <Logo class="logo-site-title"/> -->
               <span class="text-site-title">
-                <strong>Ant Moles</strong>
+                <strong>Anthony Moles</strong>
                 <!-- <span>design, product and technology</span> -->
               </span>
             </router-link>

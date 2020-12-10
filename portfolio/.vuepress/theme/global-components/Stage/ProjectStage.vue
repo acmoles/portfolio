@@ -438,9 +438,10 @@ export default {
 
 .visual .parallax, .column.visual-column, .column.stage-column
   @include make3d
-  will-change: transform, opacity
-  &.appear-fade-up, &.appear-fade
-    transition-duration: 1.6s
+  will-change: transform
+  // will-change: transform, opacity
+  // &.appear-fade-up, &.appear-fade
+  //   transition-duration: 1.6s
 
 figure.full-screen
   height: 100%

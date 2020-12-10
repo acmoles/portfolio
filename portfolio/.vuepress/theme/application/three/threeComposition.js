@@ -121,7 +121,7 @@ export class ThreeComposition extends EventTarget {
     // var axesHelper = new THREE.AxesHelper( 5 );
     // worldScene.add( axesHelper );
 
-    // TODO add these to restrict user camera
+    // Add these to restrict user camera
     let maxAngle = (7 / 20) * Math.PI;
     this.controls.target.set( 0, 5.5, 0 );
 
@@ -133,7 +133,9 @@ export class ThreeComposition extends EventTarget {
       this.controls.enabled = false;
     }
 
-    this.controls.update();
+    if (this.controls) {
+      this.controls.update();
+    }
 
     // TODO replace application watch resize with global
     // const ref = () => { this.onWindowResize(); };
@@ -181,7 +183,9 @@ export class ThreeComposition extends EventTarget {
 
     this.worldScene.dispose();
     this.worldScene = null;
-    this.controls.dispose();
+    if (this.controls) {
+      this.controls.dispose();
+    }
     this.camera = null;
     this.renderer.renderLists.dispose();
     this.renderer.dispose();

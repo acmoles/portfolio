@@ -3,11 +3,11 @@ const path = require('path')
 module.exports = {
   dest: './dist',
   // temp: './tmp',
-  title: 'Ant Moles | Portfolio',
+  title: 'Anthony Moles | Portfolio',
   locales: {
       '/': {
         lang: 'en-GB',
-        title: 'Ant Moles | Portfolio',
+        title: 'Anthony Moles | Portfolio',
         description: 'I\'m a designer, coder and leader creating useful and playful experiences centred on people.'
       }
   },
