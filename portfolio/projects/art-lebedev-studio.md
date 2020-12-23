@@ -19,12 +19,12 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage rag="rag-2" ragTitle="rag-3" :upless="true" platform="Product" ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/"
+<Stage-ProjectStage rag="rag-3" ragTitle="rag-1" :upless="true" platform="Product" ctaLabel="artlebedev.ru" ctaUrl="https://www.artlebedev.ru/nita"
 description="I spent 9 months in Moscow, honing my craft among an award-winning industrial design team.">
 
 <template v-slot:visual-background>
   <figure class="full-screen">
-    <Heros-ImageHero src="/images/als/moscow.jpg" alt="Ecosia mobile devices"/>
+    <Heros-ImageHero src="/images/als/nita.jpg" alt="Ecosia mobile devices"/>
   </figure>
 </template>
 
@@ -62,7 +62,9 @@ Creative Director
 
 
 
-<Content-TextSection rag="rag-5" columnOffset="title-offset" padding="is-initial">
+<Content-ImageFrames-MainImageSection style="padding-bottom: 0" imageClass="is-5by4" url="/images/als/nita-full.jpg" alt="Nova showreel" :aside="true" rag="rag-5" padding="is-initial">
+
+<template v-slot:content>
 
 <p class="subtitle">
 Art Lebedev Studio is the first and largest independent design studio in Russia. Founded in 1995, today it has over 300 employees.
@@ -70,49 +72,64 @@ Art Lebedev Studio is the first and largest independent design studio in Russia.
 
 The studio is best known internationally for the [Optimus Maximus](https://www.artlebedev.com/optimus/) keyboard which features a customisable OLED display in every key. Within Russia it's famous for redesigning the Moscow metro map and synonymous with internet brands like Yandex and Alfa-bank.
 
-I was attracted by the irreverent humour and the product design department's emphasis on craft, with influences from automotive design, a discipline I've always admired. As an intern, I was immediately treated as a fully fledged member of the team and thrown into diverse projects covering consumer electronics, aviation, gifts, architecture and urban objects.
+I was attracted by the irreverent humour and the product design department's emphasis on craft. As an intern, I was immediately treated as a fully fledged member of the team and thrown into diverse projects covering consumer electronics, aviation, gifts, architecture and urban objects.
 
 My motivation to pursue an opportunity in far-flung Moscow was to refine my skills, particularly sketching and styling form. Just under 9 months emulating the studio's house style under the highest standards for quality have left a lasting impression on my design practice.
 
 
+### NITA air traffic control
+
+The most challenging project, where I also believe I had the most impact, was a modular air traffic control console for NITA. The team were struggling with the client and bogged down in regulations and cost considerations. I percevered in the face of this adversity, which is noted in my review by the team's creative director on [Linkedin](https://uk.linkedin.com/in/anthonymoles)
+
+The console can be configured for various purposes including command post, flight controller and operations. In each case there are strict international regulations regarding ergonomics and safety.
+
+</template>
 
 <!--
 
-Automotive inspired consumer product design. I've always admired the craft and skill involved in automotive design.
+Automotive inspired consumer product design. I've always admired the craft and skill involved in automotive design. , with influences from automotive design, a discipline I've always admired
 
 Outsider status is appealing. So is the irreverent sense of humour. I wanted to learn this craft for myself. To be able to channel the studio house style.
 
  -->
 
-</Content-TextSection>
+ <template slot="aside">
+
+<figure class="image parent-loading is-3by4">
+<img class="lazyload" data-src="/images/als/nita-support.jpg" alt="Ecosia Android App">
+</figure>
+
+ </template>
+
+</Content-ImageFrames-MainImageSection>
 
 
 
-<Content-QuoteSection rag="rag-4" quote="Anthony has shown a great persistence on one particular project where almost everyone in the design team lost hope due to very strict technological, ergonomic and layout constraints. He literally saved the project and brought back optimism and belief." attribute="Timour Bourbaev, Creative Director of Product Design, referring to NITA air traffic control" color="blue"/>
+<!-- <Content-QuoteSection rag="rag-4" quote="Anthony has shown a great persistence on one particular project where almost everyone in the design team lost hope due to very strict technological, ergonomic and layout constraints. He literally saved the project and brought back optimism and belief." attribute="Timour Bourbaev, Creative Director of Product Design, referring to NITA air traffic control" color="blue"/> -->
 
 
 
 <Content-ImageFrames-SquareImagesRow padding="is-large" :images="[
-{ url:'/images/als/als1.jpg', alt:'ATC console', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
+{ url:'/images/als/als1-alt.jpg', alt:'ATC console', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
   type: 'link',
   label: 'Read more',
-  url: 'https://www.artlebedev.ru/nita/'
+  url: 'https://www.artlebedev.ru/ironlogic/process'
   } },
 { url:'/images/als/als2.jpg', alt:'Toilet plunger', caption:'Square image caption 2', slot:'slot2', iframe:false, action: {
   type: 'link',
   label: 'Read more',
-  url: 'https://www.artlebedev.ru/oktopus/'
+  url: 'https://www.artlebedev.ru/oktopus/process'
   } },
 { url:'/images/als/als3.jpg', alt:'Helicopter', caption:'Square image caption 3', slot:'slot3', iframe:false, action: {
   type: 'link',
   label: 'Read more',
-  url: 'https://www.artlebedev.ru/scout/exterior/'
+  url: 'https://www.artlebedev.ru/scout/exterior/process'
   } },
 ]">
 
 <template slot="content">
 
-## Highlights
+## Other highlights
 
 <!-- <p class="subtitle" style="padding-right: 1em;">
 Anthony has shown a great persistence on one particular project where almost everyone in the design team lost hope due to very strict technological, ergonomic and layout constrains. He literally saved the project and brought back optimism and belief.
@@ -125,9 +142,9 @@ Timour Bourbaev, Creative Director of Product Design, referring to NITA air traf
 
 <template slot="slot1">
 
-#### NITA air traffic control
+#### Iron Logic door entry system
 
-The console can be configured for various purposes including command post, flight controller and operations. In each case there are strict international regulations regarding ergonomics and safety.
+The device is multi-functional, supporting facial recognition, keycards and dongals. It can be fastened to a wall or place on a table. The design attempts to harmonize these requirements.
 
 </template>
 
@@ -135,7 +152,7 @@ The console can be configured for various purposes including command post, fligh
 
 #### Oktopus toilet plunger
 
-It started as a humorous 'what if?' and became a product for ALS's network of designer stores. The challenge lay in finding an iconic form which could be convincingly represented to cost in the typical materials of a plunger.
+It started as a humorous 'what if?' and became a gift item sold in designer stores. The challenge was to find an iconic form that worked with the typical materials and manufacturing methods of toilet plungers.
 
 </template>
 

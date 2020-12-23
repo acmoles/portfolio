@@ -3,9 +3,9 @@
     <svg ref="hand-container" id="hand-container" height="32" viewBox="0 0 100 100" width="32" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="waveGradient">
-          <stop stop-color="#85D7FF" offset="0%"></stop>
-          <stop stop-color="#1FB6FF" offset="42%"></stop>
-          <stop stop-color="#009EEB" offset="100%"></stop>
+          <stop stop-color="#FF51DE" offset="0%"></stop>
+          <stop stop-color="#FF51DE" offset="42%"></stop>
+          <stop stop-color="#FF0FBC" offset="100%"></stop>
         </linearGradient>
       </defs>
       <path

@@ -101,7 +101,7 @@ I'm uniquely placed to excel in this new world of 3D interactions.
 
 
 
-<Content-ImageFrames-SquareImagesRow rag="rag-4" padding="is-initial" :images="[
+<Content-ImageFrames-SquareImagesRow rag="rag-6" padding="is-initial" :images="[
 { url:'/images/play/reduced/wireframe-reduced.gif', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
 { url:'/images/play/reduced/wireframe-dial-reduced.gif', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
 { url:'/images/play/turntable.jpg', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false, action: {

@@ -409,7 +409,7 @@ Tuning tweens and sinusoidal motion sometimes produced unexpected results
 
 ### What went well
 
-The pilot launched in the first box magazine for all trialists. Those customers that accessed the experience were very engaged. There was internal enthusiasm about the initiative and a general feeling it embodied our values.
+The pilot launched in the first box magazine for all trialists, you can [try the live app](https://create.toucanbox.com). Those customers that accessed the experience were very engaged. There was internal enthusiasm about the initiative and a general feeling it embodied our values.
 
 ### Lessons Learnt
 
@@ -435,10 +435,6 @@ Was there a future for digital interactive experiences as part of the toucanBox 
 Useability testing a high fidelity iteration with children.
 
 </figcaption> -->
-
-#### External links
-
-[create.toucanbox.com](create.toucanbox.com)
 
 </template>
 

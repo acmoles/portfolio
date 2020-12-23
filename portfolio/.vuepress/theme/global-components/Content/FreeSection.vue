@@ -1,6 +1,13 @@
 <template>
   <section class="section" :class="padding">
     <div class="container is-fullhd content">
+      <div v-if="hasContent" class="columns">
+        <div class="column is-two-thirds content" :class="rag">
+          <slot name="content"></slot>
+          <br>
+        </div>
+      </div>
+
       <slot></slot>
     </div>
   </section>
@@ -12,8 +19,15 @@
 export default {
 
   props: {
-    padding: String
+    padding: String,
+    rag: String
   },
+
+  computed: {
+    hasContent () {
+      return !!this.$slots['content']
+    },
+  }
 
 }
 

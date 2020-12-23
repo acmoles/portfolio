@@ -15,7 +15,7 @@ hasFooter: false
 
 :::
 
-<Loader current="blkbrd"/>
+<Loader current="BLKBRD"/>
 
 <Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="/images/play/blkbrd/context.jpg" alt="Nova showreel" :aside="true" rag="rag-6" :iframe="false">
 

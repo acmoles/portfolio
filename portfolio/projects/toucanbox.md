@@ -941,9 +941,9 @@ It was clear the greatest potential for further improvement to the user experien
   </div>
 </div> -->
 
-<Content-InfoBox :hasIcon="true" :hasAction="true" type="link" label="toucanbox.com 2017" url="https://toucanwww.netlify.app/">
+<Content-InfoBox :hasIcon="true" :hasAction="true" type="link" label="toucanbox.com mirror" url="https://toucanwww.netlify.app/">
 
-I created a static mirror of the toucanBox homepage at the conclusion of this project.
+I created a static mirror of the toucanBox homepage at the conclusion of this project in 2017.
 { .rag-2 }
 
 </Content-InfoBox>

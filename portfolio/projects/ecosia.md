@@ -28,7 +28,7 @@ hasFooter: true
 ::: slot top
 
 <Stage-ProjectStage rag="rag-3" ragTitle="rag-3" ctaLabel="ecosia.org" ctaUrl="https://www.ecosia.org"
-description="I created the right conditions for designers and engineers to build impactful features reaching millions of users.">
+description="I created the right conditions for a multidisciplinary team to build impactful features reaching millions of users.">
 
 <template v-slot:visual-column>
   <figure class="ecosia-image">
@@ -81,7 +81,7 @@ Product designer
 :::
 
 
-<Content-TextSection rag="rag-4" columnOffset="title-offset" padding="is-initial is-continuous">
+<Content-TextSection rag="rag-4" padding="is-initial is-continuous">
 
 <!-- Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec.
 
@@ -112,11 +112,13 @@ I initially joined Ecosia as a product designer and gradually transitioned into 
 -->
 
 
-<template v-slot:aside>
+<!-- <template v-slot:aside>
 
+<figure class="image parent-loading is-16by9">
+  <img class="lazyload" data-src="/images/ecosia/Ecosia-support3.jpg" alt="Ecosia offices">
+</figure>
 
-
-</template>
+</template> -->
 
 </Content-TextSection>
 
@@ -145,7 +147,7 @@ When I joined Ecosia it was at an inflection point. We would soon experience rap
 
 <div class="columns">
 <div class="column is-half modal-image-limit">
-<Content-ModalWrapper type="link" url="https://acmoles.github.io/maps-ui/" label="Wireframe interaction prototype">
+<Content-ModalWrapper type="link" url="https://acmoles.github.io/maps-ui/" label="Maps interaction prototype">
 <figure class="image parent-loading is-5by4">
 <img class="lazyload" data-src="/images/ecosia/EcosiaMaps-modal.jpg" alt="Ecosia maps vertical">
 </figure>
@@ -196,7 +198,7 @@ Even as we grew, there remained the need to be hands-on and responsive. I design
 
 <div class="columns">
 <div class="column is-half modal-image-limit">
-<Content-ModalWrapper type="link" url="https://mapvis.netlify.app/" label="View live visualisation">
+<Content-ModalWrapper type="link" url="https://mapvis.netlify.app/" label="Live visualisation">
 <figure class="image parent-loading is-5by4">
 <img class="lazyload" data-src="/images/ecosia/SearchMap-modal.jpg" alt="Searches map visualisation">
 </figure>
@@ -207,6 +209,8 @@ Even as we grew, there remained the need to be hands-on and responsive. I design
 I collaborated with a backend developer, data scientist and marketing manager to design and build this data visualisation in 4 days.
 
 As a bonus feature we plotted Ecosia's tree planting sites on the map. This makes it possible to see some amazing things, for instance in Brazil, where there are users searching within 10km of rainforest restored by Ecosia.
+
+Since leaving Ecosia, I've replaced the live feed of search data with a recorded snapshot.
 
 </div>
 </div>
@@ -235,7 +239,7 @@ Early on, we had a standout success with the iOS App. Users were telling us that
 </div>
 <div class="column">
 
-With the iOS App Organiser, Ecosia could stand as a viable alternative browser to Safari.
+The Organiser enables users to do typcial browsing tasks with tabs, favourites, history and settings. With this long-awaited feature the iOS app could stand as a viable alternative browser to Safari.
 
 </div>
 </div>
@@ -272,17 +276,34 @@ The Ecosia Android app offers the familiarity of Chromium with Ecosia search. It
 
 <template slot="aside">
 
+<Content-ModalWrapper type="link" url="https://acmoles.github.io/maps-ui/" label="Maps interaction prototype">
+<figure class="image parent-loading is-5by4">
+<img class="lazyload" data-src="/images/ecosia/EcosiaMaps-modal.jpg" alt="Ecosia maps vertical">
+</figure>
+</Content-ModalWrapper>
+
+<Content-ModalWrapper type="link" url="https://mapvis.netlify.app/" label="Live visualisation" style="margin-top: 2em">
+<figure class="image parent-loading is-5by4">
+<img class="lazyload" data-src="/images/ecosia/SearchMap-modal.jpg" alt="Searches map visualisation">
+</figure>
+</Content-ModalWrapper>
+
+<figure class="image parent-loading is-5by4">
+<img class="lazyload" data-src="/images/ecosia/Android-modal.jpg" alt="Ecosia Android App">
+</figure>
+
+<!-- 
 <figure class="image parent-loading is-16by9">
   <img class="lazyload" data-src="/images/ecosia/Ecosia-support1.jpg" alt="Ecosia offices">
-</figure>
+</figure> -->
 
-<figure class="image parent-loading is-16by9">
+<!-- <figure class="image parent-loading is-16by9">
   <img class="lazyload" data-src="/images/ecosia/Ecosia-support2.jpg" alt="Ecosia offices">
-</figure>
+</figure> -->
 
-<figure class="image parent-loading is-16by9">
+<!-- <figure class="image parent-loading is-16by9">
   <img class="lazyload" data-src="/images/ecosia/Ecosia-support3.jpg" alt="Ecosia tree saplings">
-</figure>
+</figure> -->
 
 </template>
 

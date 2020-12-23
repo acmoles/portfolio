@@ -146,9 +146,47 @@ Players will acquire new heroes and weaponry as they progress in the game. Heroe
 
 </template>
 
+<template slot="aside">
+
+<div class="stompy-vertical-fill-parent">
+<div class="stompy-vertical-fill">
+
+<figure class="image parent-loading is-3by2">
+<img class="lazyload" data-src="/images/stompy-robot/nova-support-1.jpg" alt="Nova screenshot 1">
+</figure>
+
+<figure class="image parent-loading is-3by2">
+<img class="lazyload" data-src="/images/stompy-robot/nova-support-2.jpg" alt="Nova screenshot 2">
+</figure>
+
+</div>
+</div>
+
+</template>
+
 
 </Content-ImageFrames-MainImageSection>
 
+<style lang="sass">
+@import "@theme/styles/variables.sass"
+/* TODO generalize */
+.stompy-vertical-fill-parent
+  position: relative
+  height: 100%
+
+.stompy-vertical-fill
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  width: 76%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  .image
+    margin: 0 !important
+
+</style>
 
 <Content-TextSection rag="rag-4" columnOffset="title-offset">
 

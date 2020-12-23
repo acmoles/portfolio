@@ -62,12 +62,15 @@ export default {
     chevronClass() {
       let uid = this.next.frontmatter.uid
       // 4, 7, 9
-      let uidsToSet = [2, 10]
-      let uidsToSetDouble = [1, 4, 5, 8]
+      let uidsToSet = [2]
+      let uidsToSetDouble = [4, 5, 8, 10]
+      let uidsToSetTriple = [1]
       if (uidsToSet.includes(uid)) {
         return 'chevron-dimmed'
       } else if (uidsToSetDouble.includes(uid)) {
         return 'chevron-dimmed-double'
+      } else if (uidsToSetTriple.includes(uid)) {
+        return 'chevron-dimmed-triple'
       } else {
         return null
       }
@@ -228,9 +231,11 @@ function resolvePageLink (
     .chevron
       transform: scale(1.2)
       &.chevron-dimmed
-        opacity: 0.5
+        opacity: 0.35
       &.chevron-dimmed-double
         opacity: 0.25
+      &.chevron-dimmed-triple
+        opacity: 0.15
 
   
 

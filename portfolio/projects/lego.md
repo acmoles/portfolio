@@ -19,7 +19,7 @@ hasFooter: true
 ::: slot top
 
 <Stage-ProjectStage rag="rag-6" ragTitle="rag-3" platform="Product" ctaLabel="none" ctaUrl="#"
-description="I was a core member of a skunkworks team tasked with blending brick building with video games.">
+description="I was privileged to join a team tasked with combining brick building with video games.">
 
 <template v-slot:visual-column>
   <figure class="lego-image">

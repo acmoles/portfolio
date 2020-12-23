@@ -630,7 +630,7 @@ Co-founded [Stompy Robot](/projects/stompy-robot), Edinburgh
 
 <About-TimelineItem type="App">
 
-[BLKBRD](http://bit.ly/blkbrdapp) digital messages located in the physical world
+[BLKBRD](/extra/blkbrd) digital messages located in the physical world
 { .blkbrd }
 
 </About-TimelineItem>
