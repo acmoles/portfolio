@@ -129,13 +129,10 @@ export class ThreeComposition extends EventTarget {
     this.controls.minPolarAngle = maxAngle;
     this.controls.enableZoom = false;
     this.controls.enablePan = false;
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 1024) {
       this.controls.enabled = false;
     }
-
-    if (this.controls) {
-      this.controls.update();
-    }
+    this.controls.update();
 
     // TODO replace application watch resize with global
     // const ref = () => { this.onWindowResize(); };
@@ -183,9 +180,7 @@ export class ThreeComposition extends EventTarget {
 
     this.worldScene.dispose();
     this.worldScene = null;
-    if (this.controls) {
-      this.controls.dispose();
-    }
+    this.controls.dispose();
     this.camera = null;
     this.renderer.renderLists.dispose();
     this.renderer.dispose();

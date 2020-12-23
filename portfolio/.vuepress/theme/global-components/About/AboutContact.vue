@@ -4,13 +4,17 @@
     <div class="container is-fullhd content">
 
       <div class="page-nav-column columns">
-        <button class="column action" @click="doCopy('acmoles@gmail.com', 'Email copied to clipboard', 'bottom')">
-          <div class="background background-noise"></div>
+        <div class="column">
           <div class="text-group">
             <h2 class="item-title">Get in touch <WavingHand/></h2>
-            <p class="small-title">I’m glad you dropped by. I’d love to chat about design, technology, startups or opportunities. Shoot me a message and we <span class="no-wrap">can work</span> something out.</p>
+            <p class="small-title">
+              I’m glad you dropped by. I’d love to chat about design, technology, startups or opportunities. 
+               <button class="contact-action" @click="doCopy('acmoles@gmail.com', 'Email copied to clipboard', 'bottom')">
+                  Shoot me a message 
+               </button>
+              and we <span class="no-wrap">can work</span> something out.</p>
           </div>
-        </button>
+        </div>
         <div class="column photo is-narrow">
           <div class="background background-noise"></div>
           <figure class="image parent-loading is-square">
@@ -50,16 +54,21 @@ export default {
       display: inline-flex
       align-items: flex-end
       position: relative
-    .action
+    .contact-action
       @include button-override
-      text-align: left
+      @include opacity-filter-transition
+      padding: 0
+      display: inline
       cursor: pointer
-      .text-group
-        @media screen and (min-width: $desktop)
-          max-width: 36em
-      .small-title
-        color: $extraDarkSmoke
-        opacity: 1
+      color: $blue
+    .text-group
+      button
+        pointer-events: all
+      @media screen and (min-width: $desktop)
+        max-width: 36em
+    .small-title
+      color: $extraDarkSmoke
+      opacity: 1
     .photo
       &::after
         content: ' '

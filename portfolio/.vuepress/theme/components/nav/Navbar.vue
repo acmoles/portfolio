@@ -312,14 +312,14 @@ export default {
 .layout.home
   .back-arrow
     display: none
+  .navbar-end
+    margin-right: 1.5em
   .home-link
     pointer-events: none
     &:active
       opacity: 1
     @media screen and (min-width: $tablet)
       margin-left: 2.125em
-  .navbar-end
-    margin-right: 1.5em
 
 .back-arrow
   transform: rotate(180deg)
@@ -334,4 +334,10 @@ export default {
     margin-right: -1em
     .navbar-item
       text-align: right
+
+@media screen and (max-width: $desktop - 1px)
+  .navbar-menu.is-active
+    .navbar-end
+      margin-right: 6em
+
 </style>

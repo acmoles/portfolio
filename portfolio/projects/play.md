@@ -143,7 +143,7 @@ I drew inspiration from the physical interfaces designed by Dieter Rams for Brau
 
 #### Sketching
 
-My background in industrial design lends itself well to sketching quick iterations of 3D interfaces.
+My background in industrial design lends itself to sketching quick iterations of 3D interfaces.
 
 </template>
 

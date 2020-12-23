@@ -151,7 +151,6 @@ export default {
     .columns
       width: 100%
     .section-toggle
-      transition: color 0.3s ease
       padding: 0
       margin-right: 0
       text-align: left

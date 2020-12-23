@@ -208,7 +208,7 @@ Project Management
 ## Research
 
 <p class="subtitle">
-  I usability tested the existing flow and engaged both customers and non-customers in a dialogue to uncover core motivations.
+  I tested the usability of the existing flow and engaged both customers and non-customers in a dialogue to uncover core motivations.
 </p>
 
 To supplement this, I collected data insights and stakeholder knowledge from across the business; customer service (CS), website analytics, net promoter score (NPS), customer surveys and the production database, sometimes asking new questions of our data to fill in the gaps (including writing a few database queries of my own). Along the way, I captured insights in a central location accessible to the whole organisation.

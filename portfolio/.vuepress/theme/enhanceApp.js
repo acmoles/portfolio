@@ -59,7 +59,7 @@ export default ({
         e.target.parentNode.classList.remove('parent-loading');
       });
     }
-    // lazy();
+    lazy();
   }
 
 }

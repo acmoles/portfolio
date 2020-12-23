@@ -44,7 +44,7 @@ hasFooter: true
 ::: slot top
 
 <Stage-ProjectStage rag="rag-6" ragTitle="rag-3" platform="Design" team="Tech" myRole="People" timeframe="Product" ctaLabel="none" ctaUrl="#"
-description="A designer, coder and leader creating useful and playful experiences centred on people." :doParallax="false">
+description="A designer, coder and leader creating useful and playful experiences centred on people." :doParallax="false" :minimal="true">
 
 <template v-slot:visual-background>
   <Heros-ThreeHero/>
@@ -115,7 +115,9 @@ Version control (Git)
 </Content-ThreeColumnSection>
 </template>
 </Content-ModalLink>
-, Unity, iOS, Android, prototyping, hardware
+<br>
+
+Unity, iOS, Android, prototyping, hardware
 
 </template>
 

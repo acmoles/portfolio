@@ -62,8 +62,8 @@ export default {
     chevronClass() {
       let uid = this.next.frontmatter.uid
       // 4, 7, 9
-      let uidsToSet = [2, 4, 5, 8, 10]
-      let uidsToSetDouble = [1]
+      let uidsToSet = [2, 10]
+      let uidsToSetDouble = [1, 4, 5, 8]
       if (uidsToSet.includes(uid)) {
         return 'chevron-dimmed'
       } else if (uidsToSetDouble.includes(uid)) {

@@ -45,7 +45,7 @@
       class="overview content"
     >
     <div class="overview-upper">
-      <div class="modal-background-only upper-mask"></div>
+      <div v-if="!minimal" class="modal-background-only upper-mask"></div>
       <div class="container is-fullhd">
 
         <div class="columns is-vcentered is-gapless">
@@ -80,7 +80,7 @@
                 :href="ctaUrl"
               />
             </template>
-            <CopyButton/>
+            <CopyButton v-if="!minimal"/>
           </div>
         </div>
 
@@ -191,6 +191,7 @@ export default {
       type: Boolean,
       default: true
     },
+    minimal: Boolean
   },
 
   mixins: [fadeUpInLoad, processedTitle],
