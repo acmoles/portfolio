@@ -500,7 +500,7 @@ Human Scale Biogas, graduate project PDE (1st Class MEng)
 
 <About-TimelineItem type="Product">
 
-[NITA](/projects/art-lebedev-studio/#highlights) air traffic control consoles
+[NITA](/projects/art-lebedev-studio/#nita-air-traffic-control) air traffic control consoles
 
 </About-TimelineItem>
 
