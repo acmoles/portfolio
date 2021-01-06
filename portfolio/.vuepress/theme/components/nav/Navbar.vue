@@ -336,7 +336,7 @@ export default {
       text-align: right
 
 @media screen and (max-width: $desktop - 1px)
-  .navbar-menu.is-active
+  .navbar-menu.burgered
     .navbar-end
       margin-right: 6em
 
