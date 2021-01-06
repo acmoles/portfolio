@@ -79,9 +79,9 @@ My motivation to pursue an opportunity in far-flung Moscow was to refine my skil
 
 ### NITA air traffic control
 
-The most challenging project, where I also believe I had the most impact, was a modular air traffic control console for NITA. The team were struggling with the client and bogged down in regulations and cost considerations. I percevered in the face of this adversity, which is noted in my review by the team's creative director on [Linkedin](https://uk.linkedin.com/in/anthonymoles)
+The most challenging project, where I also had the most impact, was a modular air traffic control console for NITA. We were struggling with stringent constraints (regulatory, cost, historical) and team morale was low. After persevering with many iterations, I eventually reached a design that satisfied the client. The creative director notes this in my recommendation on [Linkedin](https://uk.linkedin.com/in/anthonymoles).
 
-The console can be configured for various purposes including command post, flight controller and operations. In each case there are strict international regulations regarding ergonomics and safety.
+The console can be configured for various purposes including command post, flight controller and operations. In each case there are strict international regulations regarding ergonomics and safety. Further details of the design process are available [here](https://www.artlebedev.com/nita/process/).
 
 </template>
 
@@ -113,17 +113,17 @@ Outsider status is appealing. So is the irreverent sense of humour. I wanted to 
 { url:'/images/als/als1-alt.jpg', alt:'ATC console', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
   type: 'link',
   label: 'Read more',
-  url: 'https://www.artlebedev.ru/ironlogic/process'
+  url: 'https://www.artlebedev.ru/ironlogic'
   } },
 { url:'/images/als/als2.jpg', alt:'Toilet plunger', caption:'Square image caption 2', slot:'slot2', iframe:false, action: {
   type: 'link',
   label: 'Read more',
-  url: 'https://www.artlebedev.ru/oktopus/process'
+  url: 'https://www.artlebedev.ru/oktopus'
   } },
 { url:'/images/als/als3.jpg', alt:'Helicopter', caption:'Square image caption 3', slot:'slot3', iframe:false, action: {
   type: 'link',
   label: 'Read more',
-  url: 'https://www.artlebedev.ru/scout/exterior/process'
+  url: 'https://www.artlebedev.ru/scout/exterior'
   } },
 ]">
 
