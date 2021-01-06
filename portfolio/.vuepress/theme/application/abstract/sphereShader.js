@@ -15,8 +15,6 @@ var SphereShader = {
 // https://github.com/ashima/webgl-noise
 //
 
-precision highp float;
-
 vec3 mod289(vec3 x)
 {
   return x - floor(x * (1.0 / 289.0)) * 289.0;
@@ -131,7 +129,10 @@ void main() {
 	,
 
   fragmentShader: `
+
 precision highp float;
+precision highp int;
+#define HIGH_PRECISION
 
 varying vec2 vUv;
 varying float noise;
@@ -139,12 +140,22 @@ varying float noise;
 uniform float near;
 uniform float far;
 
-float random(vec3 scale, float seed) {
+highp float random(vec3 scale, float seed) {
   return fract(sin(dot(gl_FragCoord.xyz + seed, scale)) * 43758.5453 + seed);
 }
 
+#ifdef HIGH_PRECISION
+	float precisionSafeLength( vec3 v ) { return length( v ); }
+#else
+	float max3( vec3 v ) { return max( max( v.x, v.y ), v.z ); }
+	float precisionSafeLength( vec3 v ) {
+		float maxComponent = max3( abs( v ) );
+		return length( v / maxComponent ) * maxComponent;
+  }
+#endif
+
 void main()	{
-	const float LOG2 = 1.442695;
+	const highp float LOG2 = 1.442695;
 	float depth = gl_FragCoord.z / gl_FragCoord.w;
 	depth = exp2( 0.1 * depth * LOG2 );
 
