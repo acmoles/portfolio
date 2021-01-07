@@ -60,7 +60,7 @@ Team leader
 Product designer
 ~ 2 iOS developers
 ~ Android developer
-~ Back-end developer
+<!-- ~ Back-end developer -->
 
 </template>
 
@@ -81,13 +81,7 @@ Product designer
 :::
 
 
-<Content-TextSection rag="rag-4" padding="is-initial is-continuous">
-
-<!-- Nulla facilisi. Proin volutpat in purus a lobortis. Praesent nec purus eu metus volutpat placerat a eu sapien. Quisque eu sapien ut quam venenatis convallis. Vestibulum porta aliquam elit et fringilla. Etiam semper iaculis massa, sit amet fringilla lorem lacinia nec.
-
-Proin velit neque, ornare nec luctus at, sollicitudin a erat. Nunc consectetur tortor in nibh vulputate viverra. Integer fringilla orci enim, non efficitur erat elementum vel. Quisque sollicitudin risus sed pretium auctor. Quisque sit amet fermentum nibh. Proin tristique neque vitae ipsum malesuada, ac feugiat justo suscipit. Pellentesque euismod sodales ipsum in mattis.
-
-Suspendisse potenti. Praesent risus massa, vulputate eget turpis in, dignissim tincidunt odio -->
+<Content-TextSection rag="rag-4" padding="is-initial">
 
 <p class="subtitle">
 Ecosia is a search engine that uses 80% of profits from advertising to plant trees around the world, where they're needed the most.
@@ -95,15 +89,15 @@ Ecosia is a search engine that uses 80% of profits from advertising to plant tre
 
 <!-- We made impressive progress on our mobile apps with only two developers and a share of my overall capacity as a product designer.  -->
 
-The apps' primary purpose is to make searching with Ecosia easy on major platforms. We enrich our search results with green data to help users make sustainable choices. Web search resides in a meta space. It's naturally multi-platform; one way in which devices augment our mental abilities. So _it's critically important that Ecosia's apps fit seamlessly into users' daily lives_. This requires deep empathy and platform knowledge.
+The primary purpose of the apps is to make searching with Ecosia easy on major platforms. Additionally, we enrich our search results with green data to help users make sustainable choices while on the go. 
+
+Web search is naturally multi-platform and one way in which devices augment our mental abilities. It resides in a meta space close to the OS. So _it's critically important that Ecosia's apps fit seamlessly into users' daily lives_. As product manager and team leader for the mobile team, I sought to ground my decisions in user empathy, balanced with technical and platform knowledge.
 
 <!--
 
 I lead the mobile apps team. Our native Android and iOS apps make it easy to search with Ecosia, connect with the cause and make an incremental difference every day while on the go. My activities include:
 
 Product management | UI/UX design | interactive prototypes | usability and value testing | product illustrations | analytics, optimisation, A/B testing (custom tooling with Looker) | embedded with developers in an agile product team
-
-
 
 When I joined Ecosia as a product designer, native apps were part of a large product team with a broad remit for user engagement. In this environment I was able to pioneer several initiatives for mobile - growing our user numbers so that we could begin to consider investing resources and concerted attention into this space.
 
@@ -123,19 +117,24 @@ I initially joined Ecosia as a product designer and gradually transitioned into 
 </Content-TextSection>
 
 
-<Content-TextSection columnOffset="title-offset" rag="rag-4" padding="is-medium">
 
-## Reflections
+<Content-ImageFrames-FullImageSection url="/images/ecosia/environment_comp.jpg" alt="Data visualisation of searches by Ecosia users">
+<template v-slot:caption>
 
-<p class="subtitle" style="padding-right: 1em;">
-  With a growing user base and a renewed strategic focus on mobile, in mid 2019 it was time to found a new agile product team with a focus on mobile apps.
-</p>
+We planned and built this [geo-data visualisation](https://mapvis.netlify.app/) of realtime searches by Ecosia users (and our tree planting projects) over four days in Hack Week 2019. This version of the visualisation uses a looping 5 minute snapshot rather than the live data feed. I collaborated with a back-end developer and data analyst, where my focus was design and code for the front-end. 
 
-Having been closely involved on a strategic level as a product designer, I was a natural fit to take on the role of product manager and team leader. Over the next three months we grew the team from two to four developers and added a dedicated designer.
+<!-- Plotting user searches beside tree planting sites allowed us to see that some users in Brazil are within 10km of rainforest restored by Ecosia. -->
 
-Leading projects and mentoring individuals gave me a good foundation to take on a position of formal team leadership, but I was glad conditions were favourable. My relationships with the founding team members were strong. Everyone in the team responded well to a culture promoting trust, autonomy and respect.
+</template>
+</Content-ImageFrames-FullImageSection>
 
-### Product design at scale
+
+
+<Content-ImageFrames-MainImageSection rag="rag-4" imageClass="is-5by4" url="/images/ecosia/EcosiaMaps-modal.jpg" alt="Ecosia maps">
+
+<template v-slot:content>
+
+## Product design at scale
 
 <p>
 When I joined Ecosia it was at an inflection point. We would soon experience rapid growth, reaching over 10 million daily users. The organisation scaled accordingly and the design guild doubled. At that time it was critical to foster collaborative practices, establish a set of design principles and take the first steps towards a component-based design system. These considerations were forefront in my mind as I worked on projects such as <Content-ModalLink label="Maps">
@@ -155,7 +154,9 @@ When I joined Ecosia it was at an inflection point. We would soon experience rap
 </div>
 <div class="column">
 
-Ecosia maps posed a unique design challenge. As part of slicing the feature we decided to exclude the search box from the first release. Rather, we would enable users to make pseudo searches for common keywords such as hotels and shopping. These constraints called for creativity. It was satisfying to work on a completely new search vertical.
+Ecosia maps posed a unique design challenge. As part of slicing the feature we decided to exclude the search box from the first release. Rather, we would enable users to make pseudo searches for common keywords such as hotels and shopping. 
+
+These constraints called for creativity; our interim solution was a 'dial pad' of common map search queries. It was satisfying to work on a completely new search vertical, laying the foundations for iterative improvements.
 
 </div>
 </div>
@@ -191,37 +192,39 @@ Even as we grew, there remained the need to be hands-on and responsive. I design
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink>. A particular personal highlight was <Content-ModalLink label="Hack Days 2019">
-<template v-slot:modal>
-
-<Content-FreeSection padding="is-small">
-
-<div class="columns">
-<div class="column is-half modal-image-limit">
-<Content-ModalWrapper type="link" url="https://mapvis.netlify.app/" label="Live visualisation">
-<figure class="image parent-loading is-5by4">
-<img class="lazyload" data-src="/images/ecosia/SearchMap-modal.jpg" alt="Searches map visualisation">
-</figure>
-</Content-ModalWrapper>
-</div>
-<div class="column">
-
-I collaborated with a backend developer, data scientist and marketing manager to design and build this data visualisation in 4 days.
-
-As a bonus feature we plotted Ecosia's tree planting sites on the map. This makes it possible to see some amazing things, for instance in Brazil, where there are users searching within 10km of rainforest restored by Ecosia.
-
-Since leaving Ecosia, I've replaced the live feed of search data with a recorded snapshot.
-
-</div>
-</div>
-
-</Content-FreeSection>
-
-</template>
-</Content-ModalLink> where we visualised global searches in realtime. I designed and coded the visualisation frontend.
+</Content-ModalLink>.
 </p>
 
+</template>
+
+</Content-ImageFrames-MainImageSection>
+
+
+<Content-TextSection columnOffset="title-offset" rag="rag-4" padding="is-large">
+
+## Product designer to product manager
+
+<p class="subtitle" style="padding-right: 1em;">
+  With a growing user base and a renewed strategic focus on mobile, in mid 2019 it was time to found a new agile product team with a focus on mobile apps.
+</p>
+
+Having been closely involved on a strategic level as a product designer, I was a natural fit to take on the role of product manager and team leader. Over the next three months we grew the team from two to four developers and added a dedicated designer.
+
+Leading projects and mentoring individuals gave me a good foundation to take on a position of formal team leadership, but I was glad conditions were favourable. My relationships with the founding team members were strong. Everyone in the team responded well to a culture promoting trust, autonomy and respect.
+
 <!-- ### On leadership -->
+
+</Content-TextSection>
+
+
+
+<Content-ImageFrames-MobileDevices padding="is-large" :gaplessBottom="true" :devices="[
+{ url:'/images/als/als1-alt.jpg', alt:'ATC console', caption:'Square image caption 1'},
+{ url:'/images/als/als2.jpg', alt:'Toilet plunger', caption:'Square image caption 2'},
+{ url:'/images/als/als3.jpg', alt:'Helicopter', caption:'Square image caption 3'},
+]"/>
+
+<Content-TextSection columnOffset="title-offset" rag="rag-4">
 
 ### Mobile team highlights
 
@@ -274,38 +277,28 @@ The Ecosia Android app offers the familiarity of Chromium with Ecosia search. It
 </Content-ModalLink> is a fork of the Chromium browser. This offers a ready&#8209;made, familiar browsing experience but at the cost of enormous investment to keep it up-to-date. <em>I facilitated a design thinking process with developers where we identified ways we might accelerate the update process.</em> Then I helped them prioritise initiatives, slice the work, establish milestones and finally evaluate based on success criteria. My technical background enabled me to participate meaningfully in discussions and offer effective leadership.
 </p>
 
-<template slot="aside">
+<script>
+// <template slot="aside">
 
-<Content-ModalWrapper type="link" url="https://acmoles.github.io/maps-ui/" label="Maps interaction prototype">
-<figure class="image parent-loading is-5by4">
-<img class="lazyload" data-src="/images/ecosia/EcosiaMaps-modal.jpg" alt="Ecosia maps vertical">
-</figure>
-</Content-ModalWrapper>
+// <figure class="image parent-loading is-5by4">
+// <img class="lazyload" data-src="/images/ecosia/Android-modal.jpg" alt="Ecosia Android App">
+// </figure>
 
-<Content-ModalWrapper type="link" url="https://mapvis.netlify.app/" label="Live visualisation" style="margin-top: 2em">
-<figure class="image parent-loading is-5by4">
-<img class="lazyload" data-src="/images/ecosia/SearchMap-modal.jpg" alt="Searches map visualisation">
-</figure>
-</Content-ModalWrapper>
+// <!-- 
+// <figure class="image parent-loading is-16by9">
+//   <img class="lazyload" data-src="/images/ecosia/Ecosia-support1.jpg" alt="Ecosia offices">
+// </figure> -->
 
-<figure class="image parent-loading is-5by4">
-<img class="lazyload" data-src="/images/ecosia/Android-modal.jpg" alt="Ecosia Android App">
-</figure>
+// <!-- <figure class="image parent-loading is-16by9">
+//   <img class="lazyload" data-src="/images/ecosia/Ecosia-support2.jpg" alt="Ecosia offices">
+// </figure> -->
 
-<!-- 
-<figure class="image parent-loading is-16by9">
-  <img class="lazyload" data-src="/images/ecosia/Ecosia-support1.jpg" alt="Ecosia offices">
-</figure> -->
+// <!-- <figure class="image parent-loading is-16by9">
+//   <img class="lazyload" data-src="/images/ecosia/Ecosia-support3.jpg" alt="Ecosia tree saplings">
+// </figure> -->
 
-<!-- <figure class="image parent-loading is-16by9">
-  <img class="lazyload" data-src="/images/ecosia/Ecosia-support2.jpg" alt="Ecosia offices">
-</figure> -->
-
-<!-- <figure class="image parent-loading is-16by9">
-  <img class="lazyload" data-src="/images/ecosia/Ecosia-support3.jpg" alt="Ecosia tree saplings">
-</figure> -->
-
-</template>
+// </template>
+</script>
 
 </Content-TextSection>
 

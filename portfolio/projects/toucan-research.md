@@ -278,7 +278,7 @@ Low-fi prototype of the Toucanoo colouring sheet maker, used in early testing
 
 
 
-<Content-ImageFrames-MainImageSection rag="rag-3" imageClass="is-5by3" url="/images/toucan-rnd/colouring-design.png" alt="placeholder" :aside="true" >
+<Content-ImageFrames-MainImageSection rag="rag-3" imageClass="is-5by3" url="/images/toucan-rnd/colouring-design.png" alt="Detailed design iteration" :aside="true" >
 
 <template v-slot:content>
 

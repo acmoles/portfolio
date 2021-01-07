@@ -322,7 +322,7 @@ The box experience is all about the child. Their enjoyment drives the decision t
 </Content-ThreeColumnSection>
 
 
-<Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse-wide.jpg" alt="Montage of discovery artefacts">
+<Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse-wide.jpg" alt="The toucanBox fulfilment warehouse at Heathrow">
 <template v-slot:caption>
 
 The toucanBox fulfilment warehouse at Heathrow
