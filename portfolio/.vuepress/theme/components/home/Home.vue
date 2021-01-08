@@ -46,7 +46,8 @@ export default {
 
   data () {
     return {
-      festRowClass: null
+      festRowClass: null,
+      imagesLoaded: 0
     }
   },
 
@@ -100,7 +101,10 @@ export default {
         this.$store.dispatch('setHomeMotion', false)
       },
       handleImageLoad(data) {
-        this.doLoad()
+        this.imagesLoaded++
+        if (this.imagesLoaded >= 2) {
+          this.doLoad()
+        }
       },
   }
 }

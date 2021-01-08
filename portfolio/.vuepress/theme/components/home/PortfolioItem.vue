@@ -23,8 +23,8 @@
       >
         <img
           ref="image"
-          :class="{ 'lazyload': uid !== 1, 'lego-blend-mode': uid === 9 }"
-          :src="(uid === 1 || imageLoaded) ? src : null"
+          :class="{ 'lazyload': !(uid === 1 || uid ===2), 'lego-blend-mode': uid === 9 }"
+          :src="(uid === 1 || uid === 2 || imageLoaded) ? src : null"
           v-on:lazybeforeunveil="beforeUnveil"
           :data-src="src"
           :alt="title"
@@ -144,7 +144,7 @@ export default {
       this.options.caption.translation = {x: 8, y: 8, z: 0}
     }
 
-    if (this.uid === 1) {
+    if (this.uid === 1 || this.uid === 2) {
       let image = this.$refs['image']
       image.onload = () => {
         this.$emit('image-load')
