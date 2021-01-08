@@ -54,7 +54,6 @@ export default {
 
   props: {
     devices: Array,
-    type: String,
     gaplessBottom: Boolean
   },
 
