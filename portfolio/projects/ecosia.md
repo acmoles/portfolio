@@ -130,7 +130,7 @@ We planned and built this [geo-data visualisation](https://mapvis.netlify.app/) 
 
 
 
-<Content-ImageFrames-MainImageSection rag="rag-4" imageClass="is-5by4" url="/images/ecosia/EcosiaMaps-modal.jpg" alt="Ecosia maps">
+<Content-ImageFrames-MainImageSection rag="rag-2" imageClass="is-5by4" url="/images/ecosia/EcosiaMaps-modal.jpg" alt="Ecosia maps">
 
 <template v-slot:content>
 
@@ -146,19 +146,17 @@ When I joined Ecosia it was at an inflection point. We would soon experience rap
 
 <div class="columns">
 <div class="column is-half modal-image-limit">
-<Content-ModalWrapper type="link" url="https://acmoles.github.io/maps-ui/" label="Maps interaction prototype">
 <figure class="image parent-loading is-5by4">
 <img class="lazyload" data-src="/images/ecosia/EcosiaMaps-modal.jpg" alt="Ecosia maps vertical">
 </figure>
-</Content-ModalWrapper>
 </div>
 <div class="column">
 
-Ecosia maps posed a unique design challenge. As part of slicing the feature we decided to exclude the search box from the first release. Rather, we would enable users to make pseudo searches for common keywords such as hotels and shopping. 
+Ecosia maps posed a unique design challenge. As part of slicing the feature (in order to iteratively deliver user value with meaningful release milestones) we decided to exclude the search box from the first release. Rather, we would enable users to make pseudo searches for common keywords such as hotels and shopping. 
 
-These constraints called for creativity; our interim solution was a 'dial pad' of common map search queries which we were confident we could serve in a. It was satisfying to work on a completely new search vertical, laying the foundations for iterative improvements.
+These constraints called for creativity; our interim solution was a 'dial pad' of common map search queries which we were confident would produce useful results for the user. It was satisfying to work on a completely new search vertical, laying the foundations for iterative improvements.
 
-As part of my process 
+The mobile use-case is especially important for any maps product. One of my early iteration steps was to produce an [interactive wireframe](https://acmoles.github.io/maps-ui/) which demonstrated the various interaction patterns I envisioned. This tool helped us avoid a number of useability pitfalls and smooth the communication between product and engineering.
 
 </div>
 </div>
@@ -202,7 +200,7 @@ Even as we grew, there remained the need to be hands-on and responsive. I design
 </Content-ImageFrames-MainImageSection>
 
 
-<Content-TextSection columnOffset="title-offset" rag="rag-4" padding="is-large">
+<Content-TextSection columnOffset="title-offset" rag="rag-4">
 
 ## Product designer to product manager
 
@@ -220,13 +218,13 @@ Leading projects and mentoring individuals gave me a good foundation to take on 
 
 
 
-<Content-ImageFrames-MobileDevices padding="is-large" :gaplessBottom="true" :devices="[
+<!-- <Content-ImageFrames-MobileDevices padding="is-large" :gaplessBottom="true" :devices="[
 { url:'/images/als/als1-alt.jpg', alt:'ATC console', caption:'Square image caption 1'},
 { url:'/images/als/als2.jpg', alt:'Toilet plunger', caption:'Square image caption 2'},
 { url:'/images/als/als3.jpg', alt:'Helicopter', caption:'Square image caption 3'},
-]"/>
+]"/> -->
 
-<Content-TextSection columnOffset="title-offset" rag="rag-4">
+<Content-TextSection columnOffset="title-offset" rag="rag-4" padding="is-medium">
 
 ### Mobile team highlights
 
