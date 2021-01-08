@@ -156,7 +156,9 @@ When I joined Ecosia it was at an inflection point. We would soon experience rap
 
 Ecosia maps posed a unique design challenge. As part of slicing the feature we decided to exclude the search box from the first release. Rather, we would enable users to make pseudo searches for common keywords such as hotels and shopping. 
 
-These constraints called for creativity; our interim solution was a 'dial pad' of common map search queries. It was satisfying to work on a completely new search vertical, laying the foundations for iterative improvements.
+These constraints called for creativity; our interim solution was a 'dial pad' of common map search queries which we were confident we could serve in a. It was satisfying to work on a completely new search vertical, laying the foundations for iterative improvements.
+
+As part of my process 
 
 </div>
 </div>
@@ -164,7 +166,7 @@ These constraints called for creativity; our interim solution was a 'dial pad' o
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> and Accounts.
+</Content-ModalLink> (below) and Accounts.
 </p>
 
 <p>
