@@ -192,7 +192,7 @@ Even as we grew, there remained the need to be hands-on and responsive. I design
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink>.
+</Content-ModalLink>. I worked across all aspects of product design, from conducting dozens of user interviews and usability tests to getting into the details of design library components and interaction patterns.
 </p>
 
 </template>
