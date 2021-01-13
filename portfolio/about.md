@@ -117,7 +117,7 @@ Version control (Git)
 </Content-ModalLink>
 <br>
 
-Unity, iOS, Android, prototyping, hardware
+Unity, iOS, Android, [prototyping](/extra/prototyping), hardware
 
 </template>
 
@@ -127,7 +127,7 @@ Unity, iOS, Android, prototyping, hardware
 :::
 
 
-<Content-TextSection columnOffset="big-title-offset" padding="is-initial" rag="rag-4">
+<Content-TextSection columnOffset="big-title-offset" padding="is-initial" rag="rag-3">
 
 <!-- INTERACTION (INTERFACE DESIGN AND HUMAN-COMPUTER INTERACTION), EXPERIENCE (UX DESIGN AND ALL OTHER EXPERIENCE) AND PRODUCT DESIGNER -->
 
@@ -234,13 +234,11 @@ ech and design - tinkerer.
 Strong believer in iteration. Testing early and often.
 Software and technology as an enabler. bridge between people and technology.
 to deliver meaningful, lasting experiences through playful interactions and rigorous design thinking.
-filtering complex problems into simple and actionable solutions which allows people to be more efficient with their time -->
+filtering complex problems into simple and actionable solutions which allows people to be more efficient with their time
 
-<!-- By ‘multidisciplinary designer’ I mean. I'm a design engineer by training and I began my career working as a children's toy designer. I transitioned into digital product five years ago, where I've worked both as a designer and a product manager. sed iaculis ultrices dui, ut lobortis enim commodo et. Nulla id justo in neque aliquet aliquam. Quisque ante ante, consequat in purus sit amet, ornare tempus erat. Phasellus euismod elit sapien, ac ultricies neque viverra vel. Proin suscipit aliquam dui id cursus. Morbi vitae urna vehicula, commodo tortor vitae, laoreet tortor. Praesent dapibus quam vitae dui hendrerit, sed fringilla orci rutrum. Etiam viverra a lorem quis pellentesque. Vivamus ultricies massa est, nec cursus ipsum eleifend quis. Suspendisse sodales pretium tristique.
+By ‘multidisciplinary designer’ I mean. I'm a design engineer by training and I began my career working as a children's toy designer. I transitioned into digital product five years ago, where I've worked both as a designer and a product manager.
 
-Nulla urna magna, feugiat in hendrerit consequat, fermentum vel enim. Etiam maximus dolor sit amet vehicula eleifend. Morbi fringilla lorem urna, nec aliquet odio dictum a. Donec nunc augue, tincidunt vel viverra ac, congue vitae sem. Cras ultrices sapien ac imperdiet ullamcorper. Ut a nisi in mauris finibus porttitor. Mauris volutpat tristique commodo. -->
-
-<!-- <p class="subtitle">
+<p class="subtitle">
   How would we survive without apps? Apps can transform your mobile device into essential tools like a harmonica, disco ball or convincing moustache. Somewhere out there is the perfect storm of touchscreen technology to fix everything that’s wrong with your life.
 </p>
 

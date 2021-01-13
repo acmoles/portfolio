@@ -1,7 +1,7 @@
 <template>
-  <div class="timeline-item">
+  <div class="timeline-item" :class="{'borderless': noBorder}">
     <div class="columns is-gapless is-mobile">
-      <div class="column is-one-quarter">
+      <div class="column" :class="keyColumn">
         {{ type }}
       </div>
       <div class="column">
@@ -18,7 +18,12 @@ export default {
 
   props: {
     type: String,
-    label: String
+    label: String,
+    noBorder: Boolean,
+    keyColumn: {
+      default: 'is-one-quarter',
+      type: String,
+    },
   },
   computed: {
     hasSlot () {
@@ -47,10 +52,14 @@ export default {
   .column
     align-items: center
     display: flex
-  .column.is-one-quarter
+  .column.is-one-quarter, .column.is-prototyping
     color: $silver
 
-.timeline-item:not(:last-child)
+.timeline-item:not(:last-child):not(.borderless)
   border-bottom: 2px solid $steel
+
+.column.is-prototyping
+  flex: none
+  width: 6em
 
 </style>

@@ -63,7 +63,7 @@ export class Abstract extends EventTarget {
         x: -30,
         y: -60,
         z: 50,
-        delay: 2000,
+        delay: 1000,
         duration: 4000,
         easing: 'easeOutQuad',
         complete: (anim) => {

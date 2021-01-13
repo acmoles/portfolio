@@ -314,7 +314,7 @@ The box experience is all about the child. Their enjoyment drives the decision t
 <template v-slot:column3>
 
 <figure class="image parent-loading is-square">
-  <img class="lazyload" data-src="/images/toucanBox/users.jpg" alt="Cartoon of users">
+  <img class="lazyload" data-src="/images/toucanbox/users.jpg" alt="Cartoon of users">
 </figure>
 
 </template>
@@ -322,7 +322,7 @@ The box experience is all about the child. Their enjoyment drives the decision t
 </Content-ThreeColumnSection>
 
 
-<Content-ImageFrames-FullImageSection url="/images/toucanBox/warehouse-wide.jpg" alt="The toucanBox fulfilment warehouse at Heathrow">
+<Content-ImageFrames-FullImageSection url="/images/toucanbox/warehouse-wide.jpg" alt="The toucanBox fulfilment warehouse at Heathrow">
 <template v-slot:caption>
 
 The toucanBox fulfilment warehouse at Heathrow
@@ -491,7 +491,7 @@ I gathered everything we learnt about our users into a set of 'Product Principle
 
 
 
-<Content-ImageFrames-FullImageSection url="/images/toucanBox/onboarding-montage.jpg" alt="Montage of discovery artefacts"/>
+<Content-ImageFrames-FullImageSection url="/images/toucanbox/onboarding-montage.jpg" alt="Montage of discovery artefacts"/>
 
 
 
@@ -499,17 +499,17 @@ I gathered everything we learnt about our users into a set of 'Product Principle
 
 
 <Content-ImageFrames-SquareImagesRow rag="rag-4" :images="[
-{ url:'/images/toucanBox/main-stage-square.png', alt:'Optimise the \'main stage\'', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
+{ url:'/images/toucanbox/main-stage-square.png', alt:'Optimise the \'main stage\'', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
   type: 'modal',
   label: 'Iterations',
   slot: 'modal1'
   } },
-{ url:'/images/toucanBox/product-section.png', alt:'Optimise the product section', caption:'Square image caption 2', slot:'slot2', iframe:false, action: {
+{ url:'/images/toucanbox/product-section.png', alt:'Optimise the product section', caption:'Square image caption 2', slot:'slot2', iframe:false, action: {
   type: 'modal',
   label: 'Iterations',
   slot: 'modal2'
   } },
-{ url:'/images/toucanBox/ia-nav.png', alt:'Optimise site nav and IA', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'/images/toucanbox/ia-nav.png', alt:'Optimise site nav and IA', caption:'Square image caption 3', slot:'slot3', iframe:false },
 ]">
 
 <template slot="content">
@@ -564,7 +564,7 @@ Leveraging our newly optimised messaging to communicate the value proposition cl
 <template slot="modal1">
 
 <figure class="image parent-loading is-2by1">
-  <img class="lazyload" data-src="/images/toucanBox/main-stage-detail.png" alt="Iterations of the Main Stage">
+  <img class="lazyload" data-src="/images/toucanbox/main-stage-detail.png" alt="Iterations of the Main Stage">
 </figure>
 
 </template>
@@ -584,7 +584,7 @@ Enabling comparison between each box, while emphasising their different proposit
 <template slot="modal2">
 
 <figure class="image parent-loading is-2by1">
-  <img class="lazyload" data-src="/images/toucanBox/product-section-detail.png" alt="Iterations of the Product Section">
+  <img class="lazyload" data-src="/images/toucanbox/product-section-detail.png" alt="Iterations of the Product Section">
 </figure>
 
 </template>
@@ -609,17 +609,17 @@ Redesigned sitemap and site-wide navigation, able to accommodate existing conten
 
 
 <Content-ImageFrames-SquareImagesRow padding="is-medium"  :images="[
-{ url:'/images/toucanBox/signup-funnel.png', alt:'Optimise the signup funnel', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
+{ url:'/images/toucanbox/signup-funnel.png', alt:'Optimise the signup funnel', caption:'Square image caption 1', slot:'slot1', iframe:false, action: {
   type: 'modal',
   label: 'Wireframes',
   slot: 'modal1'
   } },
-{ url:'/images/toucanBox/mobile-steps.png', alt:'Mobile friendly steps', caption:'Square image caption 2', slot:'slot2', iframe:false, action: {
+{ url:'/images/toucanbox/mobile-steps.png', alt:'Mobile friendly steps', caption:'Square image caption 2', slot:'slot2', iframe:false, action: {
   type: 'link',
   label: 'Prototype',
   url: 'https://signup-prototype.netlify.app/?code=test'
   } },
-{ url:'/images/toucanBox/choose-plan.png', alt:'Choose a plan', caption:'Square image caption 3', slot:'slot3', iframe:false, action: {
+{ url:'/images/toucanbox/choose-plan.png', alt:'Choose a plan', caption:'Square image caption 3', slot:'slot3', iframe:false, action: {
   type: 'modal',
   label: 'Video',
   slot: 'modal3'
@@ -648,7 +648,7 @@ Single page signup form, the simplest and most usable solution we could currentl
 <template slot="modal1">
 
 <figure class="image parent-loading is-2by1">
-  <img class="lazyload" data-src="/images/toucanBox/wireframe-flow-signup.png" alt="Iterations of the Main Stage">
+  <img class="lazyload" data-src="/images/toucanbox/wireframe-flow-signup.png" alt="Iterations of the Main Stage">
 </figure>
 
 </template>
@@ -737,7 +737,7 @@ _“I don’t remember making a password, now I need one to log in?”_ Around 1
 <div class="columns is-gapless" style="margin-bottom: 3em;">
   <div class="column is-half">
     <figure class="image parent-loading is-square">
-      <img class="lazyload" data-src="/images/toucanBox/user-testing-1.jpg" alt="User tester 1">
+      <img class="lazyload" data-src="/images/toucanbox/user-testing-1.jpg" alt="User tester 1">
     </figure>
   </div>
 </div>
@@ -745,7 +745,7 @@ _“I don’t remember making a password, now I need one to log in?”_ Around 1
 <div class="columns is-gapless">
   <div class="column is-half">
     <figure class="image parent-loading is-square">
-      <img class="lazyload" data-src="/images/toucanBox/user-testing-2.jpg" alt="User tester 2">
+      <img class="lazyload" data-src="/images/toucanbox/user-testing-2.jpg" alt="User tester 2">
     </figure>
   </div>
 </div>
@@ -762,7 +762,7 @@ _“I don’t remember making a password, now I need one to log in?”_ Around 1
 
 
 
-<Content-ImageFrames-MainImageSection padding="is-large" url="/images/toucanBox/styles.png" alt="toucanBox design system" :aside="true" rag="rag-5" imageClass="is-2by1">
+<Content-ImageFrames-MainImageSection padding="is-large" url="/images/toucanbox/styles.png" alt="toucanBox design system" :aside="true" rag="rag-5" imageClass="is-2by1">
 
 <template v-slot:content>
 
@@ -823,7 +823,7 @@ Having been involved in the earlier stages of the project, they were primed and 
 
 
 
-<Content-ImageFrames-FullImageSection imageClass="is-16by9" url="/images/toucanBox/toucan-together.jpg" alt="Montage of discovery artefacts"/>
+<Content-ImageFrames-FullImageSection imageClass="is-16by9" url="/images/toucanbox/toucan-together.jpg" alt="Montage of discovery artefacts"/>
 
 
 
@@ -936,7 +936,7 @@ It was clear the greatest potential for further improvement to the user experien
 <!-- <div class="columns is-gapless">
   <div class="column is-two-thirds">
     <figure class="image parent-loading is-square">
-      <img class="lazyload" data-src="/images/toucanBox/post-its-principles.jpg" alt="Design principles">
+      <img class="lazyload" data-src="/images/toucanbox/post-its-principles.jpg" alt="Design principles">
     </figure>
   </div>
 </div> -->
