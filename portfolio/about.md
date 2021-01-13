@@ -272,101 +272,6 @@ Rapha feedback highlights
 ~ Testing (Jest, Cypress)
 ~ Legacy stacks (JQuery, Backbone)
 
-
-
--->
-
-<!-- <template v-slot:aside>
-
-<div class="columns is-mobile" style="padding-top: 0.25em;">
-<div class="column is-one-quarter">
-
-**Design**
-
-</div>
-<div class="column">
-UX, UI, interaction, motion, user research and testing, sketching, 3D modelling
-</div>
-</div>
-
-<div class="columns is-mobile">
-<div class="column is-one-quarter">
-<strong>Tech</strong>
-</div>
-<div class="column">
-<Content-ModalLink label="Web" style="margin-right: -0.25em;">
-<template v-slot:modal>
-<Content-ThreeColumnSection padding="is-small">
-
-<template v-slot:column1>
-
-###  Front-end
-
-CSS (SCSS, SASS)
-~ JS (ES6, Typescript)
-~ UI frameworks (React, Vue, Angular, Ionic)
-~ Motion (Anime.js, Greensock)
-~ WebGL/XR (A-frame, Three.js)
-~ Datavis (D3.js, Mapbox)
-~ Analytics (Google, Snowplough)
-
-</template>
-
-<template v-slot:column2>
-
-### Back-end
-
-Node.js stack (Express, Harp)
-~ Database (MongoDB, Postgres)
-~ REST APIs
-~ Websocket (Socket.io)
-~ Familiar with Ruby/Rails, Go, PHP
-
-</template>
-
-<template v-slot:column3>
-
-### Ops
-
-Version control (Git)
-~ Front-end build systems (Gulp, Webpack, Browserify)
-~ Static hosting (Netlify, Github Pages)
-~ App hosting (Heroku, Digital Ocean)
-~ Familiar with Docker, Circle CI
-
-</template>
-
-</Content-ThreeColumnSection>
-</template>
-</Content-ModalLink>
-, Unity, familiar with native iOS and Android
-</div>
-</div>
-
-<div class="columns is-mobile">
-<div class="column is-one-quarter">
-
-**People**
-
-</div>
-<div class="column">
-Leadership, stakeholders, team building, mentoring, training
-</div>
-</div>
-
-<div class="columns is-mobile">
-<div class="column is-one-quarter">
-
-**Product**
-
-</div>
-<div class="column">
-Strategy, OKRs, analytics, A/B testing
-</div>
-</div>
-
-<br>
-
 _I originally hail from Edinburgh, I recently called London home and I'm currently based in Berlin._
 { .secondary }
 
@@ -546,7 +451,7 @@ Co-founded [Stompy Robot](/projects/stompy-robot), Edinburgh
 <About-TimelineItem type="Toy" label="LEGO undisclosed concepts"/>
 <About-TimelineItem type="Toy">
 
-[Sprint](/extra/sprint), colour 3DP action figures
+[Sprint](/projects/makielab/#sprint), colour 3DP action figures
 
 </About-TimelineItem>
 
@@ -617,6 +522,8 @@ Co-founded [Stompy Robot](/projects/stompy-robot), Edinburgh
 [toucanBox onboarding](/projects/toucanbox)
 
 </About-TimelineItem>
+
+<!-- TODO switch to personalisation page -->
 
 <About-TimelineItem type="Web">
 

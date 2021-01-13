@@ -63,6 +63,7 @@ export class Abstract extends EventTarget {
         x: -30,
         y: -60,
         z: 50,
+        delay: 2000,
         duration: 4000,
         easing: 'easeOutQuad',
         complete: (anim) => {
@@ -70,8 +71,8 @@ export class Abstract extends EventTarget {
             targets: this.camera.position,
             x: -30,
             y: -60,
-            z: 70,
-            duration: 80000,
+            z: 68,
+            duration: 60000,
             easing: 'linear',
           })
         }

@@ -1,7 +1,7 @@
 ---
 uid: 3
 title: Play
-subtitle: Experimenting with the tools of the future
+subtitle: Experimenting with future products and interactions
 type: single
 navStyle:
   style: light
@@ -15,10 +15,6 @@ next: ./toucan-research
 srcComponent: AbstractHome
 hasFooter: true
 ---
-
-<!-- prev: ./ecosia
-next: ./toucan-research
-hasFooter: true -->
 
 ::: slot top
 

@@ -67,7 +67,7 @@ CTO
 Makielab was a mobile games and e-commerce startup acquired by Disney in 2016. We created Makies, an award-winning customisable digital avatar, which could be ordered as a bespoke 3D printed toy.
 </p>
 
-Monetising mobile games is a tricky subject, particularly when it comes to children. Makielab was founded to explore a new angle on the problem by enabling children to buy physical products based on their unique in-game content. To this end, the company focused equally on mobile games, toys and e-commerce.
+Monetising mobile games is a difficult challenge, particularly when it comes to children. Makielab was founded to explore a new angle on the problem by enabling children to buy physical products based on their unique in-game content. To this end, the company focused equally on mobile games, toys and e-commerce.
 
 <p>
  I worked across teams as we developed Makies (below) and new toy experiences leveraging the underlying technology. One such project involved a partnership with Disney via the Disney / Techstars accelerator, where I demonstrated the possibility of personalised
