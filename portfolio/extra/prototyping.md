@@ -3,7 +3,7 @@ title: Prototyping
 subtitle: None
 navStyle:
   style: dark
-  tint: blue-tint
+  tint: regular-tint
   progress: light
 background: blue
 sidebar: false
@@ -23,6 +23,8 @@ hasFooter: false
 </style>
 
 <Loader current="Prototyping"/>
+
+
 
 <Content-TextSection padding="is-large">
 

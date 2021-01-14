@@ -27,6 +27,9 @@ export default {
 <style lang="sass">
 
   .page-loader-generic
+    height: 10em
+
+  .popup-wrapper .page-loader-generic
     display: none
 
 </style>

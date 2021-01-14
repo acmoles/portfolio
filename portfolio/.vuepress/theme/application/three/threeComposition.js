@@ -125,6 +125,11 @@ export class ThreeComposition extends EventTarget {
     let maxAngle = (7 / 20) * Math.PI;
     this.controls.target.set( 0, 5.5, 0 );
 
+    if (this.container.offsetWidth > 1500) {
+      this.camera.zoom = 1.25;
+      this.camera.updateProjectionMatrix();      
+    }
+
     this.controls.maxPolarAngle = maxAngle;
     this.controls.minPolarAngle = maxAngle;
     this.controls.enableZoom = false;

@@ -6,7 +6,7 @@
       <div class="page-nav-column columns">
         <div class="column">
           <div class="text-group">
-            <h2 class="item-title">Get in touch <WavingHand/></h2>
+            <h2 class="item-title">Hello again <WavingHand/></h2>
             <p class="small-title">
               I’m glad you dropped by. I’d love to chat about design, technology, startups or opportunities. 
                <button class="contact-action" @click="doCopy('acmoles@gmail.com', 'Email copied to clipboard', 'bottom')">

@@ -3,7 +3,7 @@ title: toucanBox Principles
 subtitle: None
 navStyle:
   style: dark
-  tint: blue-tint
+  tint: regular-tint
   progress: light
 background: blue
 sidebar: false
@@ -15,7 +15,7 @@ hasFooter: false
 
 :::
 
-<Loader current="toucanbox-principles"/>
+<Loader current="toucanBox Principles"/>
 
 <!-- toucanBox principles. -->
 

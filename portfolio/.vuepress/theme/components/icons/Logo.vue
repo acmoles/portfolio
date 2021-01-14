@@ -26,7 +26,12 @@ export default {
 @import "@theme/styles/variables.sass"
 @import "@theme/styles/mixins.sass"
 
+// align icon with content
+.home .logo-svg
+  margin-left: 0
+
 .logo-svg
-  transform: scale(0.7)
+  transform: scale(0.75)
+  margin-left: -3em
 
 </style>

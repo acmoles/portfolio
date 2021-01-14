@@ -26,6 +26,9 @@ hasFooter: true
   .about .stage .small-title
     display: none
 
+  .about .visual, .about .overview-lower
+    background: none
+
   .about .stage-column
     @media screen and (max-width: $tablet - 1px)
       position: relative
@@ -38,6 +41,12 @@ hasFooter: true
   .about .stage .stage-intro
     @media screen and (min-width: $tablet)
       grid-template-rows: 1.618fr 0.618fr
+
+  .about .parallax
+    z-index: 3
+
+  .about .stage-intro
+    z-index: 3
 
 </style>
 
@@ -52,13 +61,13 @@ description="A designer, coder and leader creating useful and playful experience
 
 <template v-slot:platform>
 
-UX, UI, interaction, motion, research, testing, sketching, 3D modelling
+UX, UI, interaction, research, testing, motion, 3D, immersive, sketching
 
 </template>
 
 <template v-slot:timeframe>
 
-Strategy, OKRs, analytics, A/B testing
+Strategy, OKRs, consensus building, analytics, datavis, A/B testing
 
 </template>
 
@@ -285,6 +294,12 @@ _I originally hail from Edinburgh, I recently called London home and I'm current
 
 
 <template v-slot:2009>
+
+<About-TimelineItem type="Build">
+
+Dozens of websites, games and artworks as a school pupil
+
+</About-TimelineItem>
 
 <About-TimelineItem type="Course">
 
@@ -602,13 +617,13 @@ Stompy Robot [Game Jam](/#)
 
 <About-TimelineItem type="Role">
 
-Product Manager, Mobile Apps team
+Product Manager, Ecosia Mobile Apps team
 
 </About-TimelineItem>
 <About-TimelineItem type="Read" label="Inspired by Marty Cagan"/>
 <About-TimelineItem type="Web">
 
-Ecosia hack days [Search Map](https://mapvis.netlify.app/)
+Ecosia hack days [Geodata visualisation](https://mapvis.netlify.app/)
 
 </About-TimelineItem>
 
@@ -633,9 +648,9 @@ Ecosia hack days [Search Map](https://mapvis.netlify.app/)
 <template v-slot:modal>
 <Content-TextSection padding="is-small" rag="rag-6">
 
-I designed this website in [Sketch](https://www.sketch.com/) and hand coded it in [Vue.js](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), [Three.js](https://threejs.org/), SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress.](https://vuepress.vuejs.org/)
+I designed this website in [Sketch](https://www.sketch.com/) and coded it in [Vue.js](https://vuejs.org/) [Vuex](https://vuex.vuejs.org/) [Three.js](https://threejs.org/) SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress](https://vuepress.vuejs.org/)
 
-The code is available on [Github](https://github.com/acmoles/portfolio).
+The code is available on [Github](https://github.com/acmoles/portfolio)
 
 </Content-TextSection>
 </template>
@@ -645,7 +660,7 @@ The code is available on [Github](https://github.com/acmoles/portfolio).
 
 <About-TimelineItem type="Play">
 
-[Interaction experiments](/projects/play)
+[LEGO XR](/projects/play/#lego-xr)
 
 </About-TimelineItem>
 

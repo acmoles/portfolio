@@ -3,7 +3,7 @@ title: Spaced
 subtitle: None
 navStyle:
   style: dark
-  tint: blue-tint
+  tint: regular-tint
   progress: light
 background: blue
 sidebar: false
@@ -15,7 +15,7 @@ hasFooter: false
 
 :::
 
-<Loader current="spaced"/>
+<Loader current="Spaced"/>
 
 <Content-GridSection padding="is-small">
 

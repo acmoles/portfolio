@@ -3,7 +3,7 @@ title: toucanBox 2
 subtitle: Personalised experience
 navStyle:
   style: dark
-  tint: blue-tint
+  tint: regular-tint
   progress: light
 background: blue
 sidebar: false
@@ -30,12 +30,12 @@ I created several concepts, the most promising of which we named the _Box builde
 <div class="columns" style="padding-top: 2em;">
 <div class="column">
 <figure class="image parent-loading is-2by1">
-  <img class="lazyload" data-src="/images/toucanBox/personalised-experience.jpg" alt="Cartoon of a personalised experience">
+  <img class="lazyload" data-src="/images/toucanbox/personalised-experience.jpg" alt="Cartoon of a personalised experience">
 </figure>
 </div>
 <div class="column">
 <figure class="image parent-loading is-2by1 transparent-image">
-  <img class="lazyload" data-src="/images/toucanBox/high-fidelity-sketching.png" alt="Flowchart of personalisation interface in the account section">
+  <img class="lazyload" data-src="/images/toucanbox/high-fidelity-sketching.png" alt="Flowchart of personalisation interface in the account section">
 </figure>
 </div>
 </div>
@@ -47,7 +47,7 @@ I created several concepts, the most promising of which we named the _Box builde
   <div class="column is-three-quarters">
     <Content-ModalWrapper type="link" url="http://personalisation.herokuapp.com/" label="Prototype">
       <figure class="image parent-loading is-9by16">
-        <img class="lazyload" data-src="/images/toucanBox/choose-interface.png" alt="Screenshot of box personalisation prototype">
+        <img class="lazyload" data-src="/images/toucanbox/choose-interface.png" alt="Screenshot of box personalisation prototype">
       </figure>
     </Content-ModalWrapper>
   </div>

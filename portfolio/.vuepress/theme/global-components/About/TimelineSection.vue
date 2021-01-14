@@ -16,7 +16,7 @@
               v-for="i in 3"
               class="column"
             >
-              <h4 class="timeline-year">{{ slotName( n, i ) === '2009' ? '< ' + slotName( n, i ) : slotName( n, i ) }}</h4>
+              <h4 class="timeline-year">{{ slotName( n, i ) === '2009' ? slotName( n, i ) + ' and earlier' : slotName( n, i ) }}</h4>
               <slot :name="slotName( n, i )"></slot>
             </div>
 

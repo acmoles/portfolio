@@ -3,7 +3,7 @@ title: BLKBRD
 subtitle: None
 navStyle:
   style: dark
-  tint: green-tint
+  tint: regular-tint
   progress: light
 background: green
 sidebar: false
@@ -17,7 +17,7 @@ hasFooter: false
 
 <Loader current="BLKBRD"/>
 
-<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="/images/play/blkbrd/context.jpg" alt="Nova showreel" :aside="true" rag="rag-6" :iframe="false">
+<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="/images/play/blkbrd/Context.jpg" alt="Nova showreel" :aside="true" rag="rag-6" :iframe="false">
 
 <template slot="content">
 

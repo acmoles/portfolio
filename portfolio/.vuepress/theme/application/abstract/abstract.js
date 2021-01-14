@@ -71,8 +71,8 @@ export class Abstract extends EventTarget {
             targets: this.camera.position,
             x: -30,
             y: -60,
-            z: 68,
-            duration: 60000,
+            z: 75,
+            duration: 100000,
             easing: 'linear',
           })
         }
@@ -90,8 +90,8 @@ export class Abstract extends EventTarget {
             targets: this.camera.position,
             x: 4.5,
             y: -23,
-            z: 75,
-            duration: 80000,
+            z: 80,
+            duration: 100000,
             easing: 'linear',
           })
         }
