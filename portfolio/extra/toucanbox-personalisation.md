@@ -2,7 +2,7 @@
 title: toucanBox 2
 subtitle: Personalised experience
 navStyle:
-  style: light
+  style: dark
   tint: blue-tint
   progress: light
 background: blue

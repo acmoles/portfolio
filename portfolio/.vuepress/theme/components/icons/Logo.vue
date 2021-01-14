@@ -1,79 +1,32 @@
 <template>
-  <svg class="logo-svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <defs>
-        <path id="path" d="M12.8682431,5.5194255 L19.1450635,16.5038611 C19.4190734,16.9833785 19.2524767,17.5942332 18.7729593,17.8682431 C18.6218616,17.9545847 18.4508473,18 18.2768203,18 L5.72317968,18 C5.17089493,18 4.72317968,17.5522847 4.72317968,17 C4.72317968,16.8259731 4.768595,16.6549588 4.85493654,16.5038611 L11.1317569,5.5194255 C11.4057668,5.03990805 12.0166215,4.87331133 12.4961389,5.14732129 C12.6511702,5.2359106 12.7796538,5.36439422 12.8682431,5.5194255 Z"></path>
+  <div class="logo-svg">
 
-        <clipPath id="clip">
-          <use xlink:href="#path" overflow="visible"/>
-        </clipPath>
+    <svg v-if="white" height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a" x1="63.959268%" x2="39.180104%" y1="65.838954%" y2="42.620513%"><stop offset="0" stop-color="#fff" stop-opacity=".76"/><stop offset=".4631" stop-color="#fff" stop-opacity=".76"/><stop offset="1" stop-color="#fff" stop-opacity=".56"/></linearGradient><linearGradient id="b" x1="70.592383%" x2="33.049425%" y1="73.383973%" y2="38.2966%"><stop offset="0" stop-color="#fff" stop-opacity=".64"/><stop offset=".9064" stop-color="#fff" stop-opacity=".32"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="c" x1="67.498965%" x2="26.122118%" y1="34.165051%" y2="72.935636%"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".5"/></linearGradient><linearGradient id="d" x1="62.257533%" x2="28.070207%" y1="39.334262%" y2="71.285434%"><stop offset="0" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity=".5"/></linearGradient><g fill="none" fill-rule="nonzero"><path d="m20.5217815 4.53087174c1.0810241 1.74588269 1.0810241 3.96128476 0 5.70716746-3.2332891 5.2224533-6.466202 10.4452864-9.6991149 15.6677397 1.1306917 4.6169405 7.2025627 5.5943461 9.6991149 1.560886 1.7778764-2.8714376 3.5553764-5.7424954 5.3332528-8.6143128 1.0806477-1.7462626 1.0806477-3.9612848 0-5.7071675-1.7778764-2.8710578-3.5553764-5.74287524-5.3332528-8.61431286z" fill="url(#a)"/><path d="m21.4884195 25.9057789c.7871571 3.2148402 4.2352965 4.9569242 7.255993 3.665366 3.0206966-1.2915581 4.1818662-5.0032683 2.4431219-7.8112676-1.7778763-2.8714376-3.5553764-5.7428752-5.3328764-8.6143128 1.0806478 1.7458827 1.0806478 3.9609049 0 5.7071674-1.4550366 2.3506358-2.9108257 4.7016515-4.3662385 7.053047z" fill="url(#b)"/><path d="m20.5217815 4.53087174c1.0810241 1.74588269 1.0810241 3.96128476 0 5.70716746-3.2332891 5.2224533-6.466202 10.4452864-9.6991149 15.6677397 1.1306917 4.6169405 7.2025627 5.5943461 9.6991149 1.560886 1.7778764-2.8714376 3.5553764-5.7424954 5.3332528-8.6143128 1.0806477-1.7462626 1.0806477-3.9612848 0-5.7071675-1.7778764-2.8710578-3.5553764-5.74287524-5.3332528-8.61431286z" fill="url(#c)"/><path d="m21.4884195 25.9057789c.7871571 3.2148402 4.2352965 4.9569242 7.255993 3.665366 3.0206966-1.2915581 4.1818662-5.0032683 2.4431219-7.8112676-1.7778763-2.8714376-3.5553764-5.7428752-5.3328764-8.6143128 1.0806478 1.7458827 1.0806478 3.9609049 0 5.7071674-1.4550366 2.3506358-2.9108257 4.7016515-4.3662385 7.053047z" fill="url(#d)" opacity=".8"/><path d="m9.85565235 27.4666649c-1.56076847 2.5219572-4.8512507 3.2881551-7.34855551 1.7124541-2.49768107-1.5760807-3.25661791-4.8980442-1.69584944-7.4192417 3.55537639-5.7428752 7.11037652-11.4857505 10.6661292-17.22862569 1.5607685-2.52157731 4.8512507-3.28815505 7.3485555-1.71207426s3.2569942 4.8976644 1.6958494 7.41924175c-3.5550001 5.7424953-7.1103765 11.4857504-10.66612915 17.2282458z" fill="#fff"/></g>
+    </svg>
 
-        <linearGradient x1="25%" y1="50%" x2="89.5%" y2="88%" id="linearGradientLight">
-          <stop stop-color="#FFFFFF" offset="0%"></stop>
-          <stop stop-color="#FFFFFF" offset="31%"></stop>
-          <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="32%"></stop>
-          <stop stop-color="#FFFFFF" offset="100%"></stop>
-        </linearGradient>
+    <svg v-else height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a" x1="63.959268%" x2="39.180104%" y1="65.838954%" y2="42.620513%"><stop offset="0" stop-color="#c0e5fb"/><stop offset=".4631" stop-color="#c0e5fb"/><stop offset="1" stop-color="#8bd2f6"/></linearGradient><linearGradient id="b" x1="70.592383%" x2="33.049425%" y1="73.383973%" y2="38.2966%"><stop offset="0" stop-color="#8bd2f6"/><stop offset=".9064" stop-color="#48afe4"/><stop offset="1" stop-color="#2f99d5"/></linearGradient><linearGradient id="c" x1="67.498965%" x2="26.122118%" y1="34.165051%" y2="72.935636%"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".5"/></linearGradient><linearGradient id="d" x1="62.257533%" x2="28.070207%" y1="39.334262%" y2="71.285434%"><stop offset="0" stop-color="#8bd2f6" stop-opacity="0"/><stop offset="1" stop-color="#8bd2f6" stop-opacity=".5"/></linearGradient><g fill="none" fill-rule="nonzero"><path d="m20.5217815 4.53087174c1.0810241 1.74588269 1.0810241 3.96128476 0 5.70716746-3.2332891 5.2224533-6.466202 10.4452864-9.6991149 15.6677397 1.1306917 4.6169405 7.2025627 5.5943461 9.6991149 1.560886 1.7778764-2.8714376 3.5553764-5.7424954 5.3332528-8.6143128 1.0806477-1.7462626 1.0806477-3.9612848 0-5.7071675-1.7778764-2.8710578-3.5553764-5.74287524-5.3332528-8.61431286z" fill="url(#a)"/><path d="m21.4884195 25.9057789c.7871571 3.2148402 4.2352965 4.9569242 7.255993 3.665366 3.0206966-1.2915581 4.1818662-5.0032683 2.4431219-7.8112676-1.7778763-2.8714376-3.5553764-5.7428752-5.3328764-8.6143128 1.0806478 1.7458827 1.0806478 3.9609049 0 5.7071674-1.4550366 2.3506358-2.9108257 4.7016515-4.3662385 7.053047z" fill="url(#b)"/><path d="m20.5217815 4.53087174c1.0810241 1.74588269 1.0810241 3.96128476 0 5.70716746-3.2332891 5.2224533-6.466202 10.4452864-9.6991149 15.6677397 1.1306917 4.6169405 7.2025627 5.5943461 9.6991149 1.560886 1.7778764-2.8714376 3.5553764-5.7424954 5.3332528-8.6143128 1.0806477-1.7462626 1.0806477-3.9612848 0-5.7071675-1.7778764-2.8710578-3.5553764-5.74287524-5.3332528-8.61431286z" fill="url(#c)"/><path d="m21.4884195 25.9057789c.7871571 3.2148402 4.2352965 4.9569242 7.255993 3.665366 3.0206966-1.2915581 4.1818662-5.0032683 2.4431219-7.8112676-1.7778763-2.8714376-3.5553764-5.7428752-5.3328764-8.6143128 1.0806478 1.7458827 1.0806478 3.9609049 0 5.7071674-1.4550366 2.3506358-2.9108257 4.7016515-4.3662385 7.053047z" fill="url(#d)"/><path d="m9.85565235 27.4666649c-1.56076847 2.5219572-4.8512507 3.2881551-7.34855551 1.7124541-2.49768107-1.5760807-3.25661791-4.8980442-1.69584944-7.4192417 3.55537639-5.7428752 7.11037652-11.4857505 10.6661292-17.22862569 1.5607685-2.52157731 4.8512507-3.28815505 7.3485555-1.71207426s3.2569942 4.8976644 1.6958494 7.41924175c-3.5550001 5.7424953-7.1103765 11.4857504-10.66612915 17.2282458z" fill="#fff"/></g>
+    </svg>
 
-        <linearGradient x1="25%" y1="50%" x2="89.5%" y2="88%" id="linearGradientDark">
-          <stop stop-color="#273444" offset="0%"></stop>
-          <stop stop-color="#273444" offset="31%"></stop>
-          <stop stop-color="#273444" stop-opacity="0.5" offset="32%"></stop>
-          <stop stop-color="#273444" offset="100%"></stop>
-        </linearGradient>
-
-      </defs>
-      <g id="logo" clip-path="url(#clip)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <rect id="rectangle" fill="url(#linearGradientLight)" x="0" y="0" width="24" height="24"></rect>
-      </g>
-      <!-- <use id="outline" xlink:href="#path" stroke="#FFFFFF" stroke-width="1.5" fill="none" fill-rule="evenodd" /> -->
-  </svg>
+  </div>
 </template>
 
 <script>
-// TODO outline logo?
-// <stop stop-color="#FFFFFF" offset="0%"></stop>
-// <stop stop-color="#FFFFFF" offset="24%"></stop>
-// <stop stop-color="#FFFFFF" stop-opacity="0" offset="25%"></stop>
-// <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
-
-// <stop stop-color="#273444" offset="0%"></stop>
-// <stop stop-color="#273444" offset="24%"></stop>
-// <stop stop-color="#273444" stop-opacity="0" offset="25%"></stop>
-// <stop stop-color="#273444" stop-opacity="0" offset="100%"></stop>
-
 
 export default {
+
+  props: {
+    white: Boolean,
+  },
 
 }
 
 </script>
 
 <style lang="sass">
-@import "../../styles/variables.sass"
+@import "@theme/styles/variables.sass"
+@import "@theme/styles/mixins.sass"
 
 .logo-svg
-  position: relative
-  bottom: 1px
-  transform: scale(1.2)
-  transition: transform 0.3s ease
-  transform-origin: 50% 54%
-  #rectangle
-    transition: transform 0.9s ease
-    transform-origin: 50% 50%
-
-.layout:not(.home)
-  .home-link:hover, .home-link:focus
-    .logo-svg
-      transform: rotateZ(-90deg) translateY(-0.05em) scale(1.2)
-      #rectangle
-        transform: scale(3) rotate(-31deg) translate(0, 0.36em)
-
-.dark:not(.force)
-  #outline
-    stroke: $steel
-
-.dark:not(.force)
-  #rectangle
-    fill: url(#linearGradientDark)
+  transform: scale(0.7)
 
 </style>

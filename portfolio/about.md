@@ -5,7 +5,7 @@ pageClass: about
 sidebar: false
 date: 2020-12-23
 navStyle:
-  style: light
+  style: dark
   tint: regular-tint
   progress: light
 hasFooter: true

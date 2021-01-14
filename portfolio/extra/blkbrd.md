@@ -2,7 +2,7 @@
 title: BLKBRD
 subtitle: None
 navStyle:
-  style: light
+  style: dark
   tint: green-tint
   progress: light
 background: green

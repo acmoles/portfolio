@@ -2,7 +2,7 @@
 title: Disney Infinity
 subtitle: None
 navStyle:
-  style: light
+  style: dark
   tint: blue-tint
   progress: light
 background: blue

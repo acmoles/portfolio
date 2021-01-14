@@ -34,7 +34,7 @@
             class="home-link"
             v-if="!(navbarBurgered || isModalOpen) && pageLoadingStatus !== 'covering' || isMobileHome"
           >
-            <!-- <Logo class="logo-site-title"/> -->
+            <Logo :white="navStyle === 'light'" class="logo-site-title"/>
               <span class="text-site-title">
                 <strong>Anthony Moles</strong>
                 <!-- <span>design, product and technology</span> -->
@@ -261,6 +261,9 @@ export default {
   height: 6em
   width: 100%
   z-index: 3
+  &:not(.light):not(.burgered)
+    border-bottom: 1px solid $divider
+    
 
 .home-link
   display: flex
@@ -284,10 +287,18 @@ export default {
 .navbar-end, .navbar-start
   align-items: center
 
+// logo desktop, text mobile
+
 .logo-site-title
-  opacity: 0
-.burgered .logo-site-title
-  opacity: 1
+  display: none
+
+@media screen and (min-width: $tablet)
+  .text-site-title
+    display: none
+  .logo-site-title
+    display: block
+
+
 
 .text-site-title
   color: $white-ter
@@ -319,7 +330,7 @@ export default {
     &:active
       opacity: 1
     @media screen and (min-width: $tablet)
-      margin-left: 2.125em
+      margin-left: .5em
 
 .back-arrow
   transform: rotate(180deg)
