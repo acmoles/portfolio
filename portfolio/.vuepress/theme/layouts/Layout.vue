@@ -94,6 +94,9 @@ export default {
 @import "@theme/styles/variables.sass"
 @import "@theme/styles/mixins.sass"
 
+.layout
+  background-color: $black
+
 .page-content
   display: flex
   flex-direction: column

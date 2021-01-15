@@ -3,6 +3,7 @@ uid: 5
 title: Stompy Robot
 subtitle: Co-founding a games studio
 type: single
+pageClass: stompy
 navStyle:
   style: light
   tint: regular-tint
@@ -68,6 +69,9 @@ Designer / Developer
     left: -90%;
     top: -42%;
     width: 280%;
+
+.stompy .page-loader-generic
+  display: none
 
 </style>
 
