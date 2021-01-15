@@ -260,10 +260,7 @@ export default {
   position: absolute
   height: 6em
   width: 100%
-  z-index: 3
-  &:not(.light):not(.burgered)
-    border-bottom: 1px solid $divider
-    
+  z-index: 3    
 
 .home-link
   display: flex

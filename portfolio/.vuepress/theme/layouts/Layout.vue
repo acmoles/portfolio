@@ -3,6 +3,7 @@
     class="layout background-noise"
     :class="pageClasses"
   >
+    <div v-if="navStyle !== 'light'" class="navbar-rule"></div>
     <Navbar/>
 
     <Sidebar>
@@ -67,6 +68,10 @@ export default {
 
     hasFooter () {
       return this.$page.frontmatter.hasFooter
+    },
+
+    navStyle () {
+      return this.$page.frontmatter.navStyle.style
     }
   },
 
@@ -120,6 +125,13 @@ export default {
 .layout.home.covering, .layout.home.loading
   &::after
     opacity: 1
+
+.navbar-rule
+  position: absolute
+  top: 0
+  width: 100%
+  height: 6em
+  border-bottom: 1px solid $divider
 
 
 </style>

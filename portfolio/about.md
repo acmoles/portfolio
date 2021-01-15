@@ -42,12 +42,6 @@ hasFooter: true
     @media screen and (min-width: $tablet)
       grid-template-rows: 1.618fr 0.618fr
 
-  .about .parallax
-    z-index: 3
-
-  .about .stage-intro
-    z-index: 3
-
 </style>
 
 ::: slot top
@@ -651,6 +645,14 @@ Ecosia hack days [Geodata visualisation](https://mapvis.netlify.app/)
 I designed this website in [Sketch](https://www.sketch.com/) and coded it in [Vue.js](https://vuejs.org/) [Vuex](https://vuex.vuejs.org/) [Three.js](https://threejs.org/) SASS and Webpack. Sensible defaults and static rendering are provided by [Vuepress](https://vuepress.vuejs.org/)
 
 The code is available on [Github](https://github.com/acmoles/portfolio)
+
+<template v-slot:aside>
+
+  <figure class="image parent-loading is-3by1">
+    <img class="lazyload" data-src="/images/about/logo-layout.jpg" alt="website logo">
+  </figure>
+
+</template>
 
 </Content-TextSection>
 </template>

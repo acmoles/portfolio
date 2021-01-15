@@ -32,6 +32,7 @@ export default {
 
 .logo-svg
   transform: scale(0.75)
-  margin-left: -3em
+  @media screen and (min-width: $widescreen)
+    margin-left: -3em
 
 </style>
