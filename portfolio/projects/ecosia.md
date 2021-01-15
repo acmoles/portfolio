@@ -140,14 +140,12 @@ We planned and built this [geo-data visualisation](https://mapvis.netlify.app/) 
 When I joined Ecosia it was at an inflection point. We would soon experience rapid growth, reaching over 10 million daily users. The organisation scaled accordingly and the design guild doubled. At that time it was critical to foster collaborative practices, establish a set of design principles and take the first steps towards a component-based design system. These considerations were forefront in my mind as I worked on projects such as <Content-ModalLink label="Maps">
 <template v-slot:modal>
 
-<!-- (before I began working as a PM) -->
-
 <Content-FreeSection padding="is-small">
 
 <div class="columns">
 <div class="column is-half modal-image-limit">
-<figure class="image parent-loading is-5by4">
-<img class="lazyload" data-src="/images/ecosia/EcosiaMaps-modal.jpg" alt="Ecosia maps vertical">
+<figure class="image parent-loading is-3by2">
+<img class="lazyload" data-src="/images/ecosia/Maps-wireframe-modal.jpg" alt="Ecosia maps vertical wireframes">
 </figure>
 </div>
 <div class="column">
@@ -164,7 +162,23 @@ The mobile use-case is especially important for any maps product. One of my earl
 </Content-FreeSection>
 
 </template>
-</Content-ModalLink> (below) and Accounts.
+</Content-ModalLink> (below) and <Content-ModalLink label="Accounts">
+<template v-slot:modal>
+
+<Content-FreeSection padding="is-small">
+
+<div class="columns">
+<div class="column is-two-thirds modal-image-limit">
+<figure class="image parent-loading is-5by4">
+<img class="lazyload" data-src="/images/ecosia/Login-modal.jpg" alt="Ecosia account login flow">
+</figure>
+</div>
+</div>
+
+</Content-FreeSection>
+
+</template>
+</Content-ModalLink>.
 </p>
 
 <p>
