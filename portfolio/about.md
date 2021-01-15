@@ -530,15 +530,9 @@ Co-founded [Stompy Robot](/projects/stompy-robot), Edinburgh
 
 </About-TimelineItem>
 
-<!-- TODO switch to personalisation page -->
-
 <About-TimelineItem type="Web">
 
-<Content-ModalLink label="toucanBox personalisation">
-<template v-slot:modal>
-<Content :page-key="$site.pages.find(p => p.path === '/extra/toucanbox-personalisation/').key"/>
-</template>
-</Content-ModalLink>
+[toucanBox personalisation](/extra/toucanbox-personalisation/)
 
 </About-TimelineItem>
 

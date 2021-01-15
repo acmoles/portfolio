@@ -1,5 +1,5 @@
 <template>
-  <div class="box content" :class="{'with-action': hasAction}">
+  <div class="box content background-noise" :class="{'with-action': hasAction}">
     <i v-if="hasIcon" class="icon is-medium point-icon"><img src="/svg-icons/icon_info_small.svg" alt="Info icon"/></i>
     <slot/>
     <button v-if="hasAction" class="action-button background-noise" type="button" name="action" @click="action()">
@@ -57,6 +57,7 @@ export default {
     &.with-action
       padding-bottom: 0
     .point-icon
+      @include icon-outline
       margin-bottom: 1em
     .action-button
       margin-top: 1em

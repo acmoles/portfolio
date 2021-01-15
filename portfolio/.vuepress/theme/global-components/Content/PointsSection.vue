@@ -54,8 +54,7 @@ export default {
   @import "@theme/styles/mixins.sass"
 
   .point-icon
-    border: 1.5px solid $silver
-    border-radius: 50%
+    @include icon-outline
     margin-bottom: 2em
 
   .content .point-title

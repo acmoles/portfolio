@@ -310,7 +310,7 @@ export default {
     min-height: 100vh
 
   .stage-intro
-    min-height: 100vh
+    height: 100vh
     padding-top: 7em
     position: relative
     pointer-events: none

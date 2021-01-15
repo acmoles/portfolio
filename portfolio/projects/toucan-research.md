@@ -418,11 +418,7 @@ I measured _no noticeable change in activation rate_ due to low reach. When I fo
 ### Going forward
 
 <p>
-Was there a future for digital interactive experiences as part of the toucanBox value proposition? Perhaps, buit not in the short-term. The pilot proved that departing from the core value proposition could have potential, but that resources would probably be better spent focussing on what was already working. My next initiatives focussed on <router-link to="/projects/toucanbox">optimising customer onboarding</router-link>, addressing known pain points and <Content-ModalLink label="enhancing the subscription experience">
-<template v-slot:modal>
-<Content :page-key="$site.pages.find(p => p.path === '/extra/toucanbox-personalisation/').key"/>
-</template>
-</Content-ModalLink>.
+Was there a future for digital interactive experiences as part of the toucanBox value proposition? Perhaps, buit not in the short-term. The pilot proved that departing from the core value proposition could have potential, but that resources would probably be better spent focussing on what was already working. My next initiatives focussed on <router-link to="/projects/toucanbox">optimising customer onboarding</router-link>, addressing known pain points and <router-link to="/extra/toucanbox-personalisation/">enhancing the subscription experience</router-link>.
 </p>
 
 <template slot="aside">

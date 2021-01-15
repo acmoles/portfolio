@@ -1,229 +1,131 @@
 ---
 title: toucanBox 2
-subtitle: Personalised experience
+subtitle: Increasing satisfaction with a personalised experience
+case1: Case study
 navStyle:
-  style: dark
-  tint: regular-tint
+  style: light
+  tint: green-tint
   progress: light
-background: blue
+background: green
 sidebar: false
 date: 2019-09-12
-hasFooter: false
+hasFooter: true
 ---
 
 ::: slot top
 
+<Stage-ProjectStage rag="rag-6" ragTitle="rag-1" ctaLabel="Prototype" ctaUrl="http://personalisation.herokuapp.com/" description="I spearheaded a strategic design project to identify new ways of improving customer retention.">
+
+<template v-slot:visual-column>
+  <figure class="combined-image">
+    <Heros-ImageHero src="/images/toucanbox/personalisation/combined_personalisation.png" alt="Ecosia mobile devices"/>
+  </figure>
+</template>
+
+<template v-slot:platform>
+
+Web application (accounts)
+
+</template>
+
+<template v-slot:timeframe>
+
+2017-2018
+
+</template>
+
+<template v-slot:my-role>
+
+UX/UI Designer
+~ Project Manager
+
+</template>
+
+<template v-slot:team>
+
+Front-end developer
+~ Marketing manager
+
+</template>
+
+</Stage-ProjectStage>
+
 :::
 
-<Loader current="toucanBox 2"/>
 
-<Content-TextSection padding="is-small" rag="rag-3" columnOffset="title-offset">
-
-## toucanBox personalisation
+<Content-TextSection padding="is-initial" rag="rag-4">
 
 The best products elevate a commodity (like music or holidays, or crafts in this case) into a valuable holistic experience. After completing a user-centred design process focussing on customer onboarding, I had both a pool of insights and the momentum of a company-wide shift to a 'product mindset'.
 
-The next challenge was customer retention. How might we make customers so satisfied with toucanBox that they want to stay subscribed for longer? Research offered a clear answer: _Get the right craft box to the right customer in the right quantity_. With a bespoke technology platform and a direct relationship with customers, toucanBox was uniquely positioned to leverage a personalised experience.
-
-I created several concepts, the most promising of which we named the _Box builder_. We tested live-data prototypes on a limited audience in production, with promising results. Sadly I was unable to finish this project before my move to Berlin. I hired, onboarded and handed over the project to a new UX designer.
-
-<div class="columns" style="padding-top: 2em;">
-<div class="column">
-<figure class="image parent-loading is-2by1">
-  <img class="lazyload" data-src="/images/toucanbox/personalised-experience.jpg" alt="Cartoon of a personalised experience">
-</figure>
-</div>
-<div class="column">
-<figure class="image parent-loading is-2by1 transparent-image">
-  <img class="lazyload" data-src="/images/toucanbox/high-fidelity-sketching.png" alt="Flowchart of personalisation interface in the account section">
-</figure>
-</div>
-</div>
-
-
-<template slot="aside">
-
-<div class="columns is-gapless">
-  <div class="column is-three-quarters">
-    <Content-ModalWrapper type="link" url="http://personalisation.herokuapp.com/" label="Prototype">
-      <figure class="image parent-loading is-9by16">
-        <img class="lazyload" data-src="/images/toucanbox/choose-interface.png" alt="Screenshot of box personalisation prototype">
-      </figure>
-    </Content-ModalWrapper>
-  </div>
-</div>
-
+<p>
+The next challenge was customer retention. How might we make customers so satisfied with toucanBox that they want to stay subscribed for longer? Referring back to the research I conducted to generate toucanBox's 
+<Content-ModalLink label="Product Principles">
+<template v-slot:modal>
+<Content :page-key="$site.pages.find(p => p.path === '/extra/toucanbox-principles/').key"/>
 </template>
-
-
-</Content-TextSection>
-
-<!--
-
- It's now released.
-
-
- <Content-ImageFrames-FullImageSection url="/images/toucanBox/personalisation-montage.jpg" alt="Personalisation discovery montage"/>
-
-
-
-Best products (Airbnb and Spotify) blend the boundary between the digital product and the commodity. In toucanbox too.  In toucanbox too.  toucanbox - small team, involved in the core product but - central question for me: how can the online product enhance the overall experience for parents, and also children. The leadership at toucanBox didn’t think of themselves as a tech company, even though by this point the desire for flexibility, customisation, by a series of incremental steps, we had replaced almost all the off-the-shelf tools for subscription businesses with our own systems.
-
-
-
-
-
-
-
-<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-2by1" url="/images/toucanBox/personalised-experience.jpg" alt="Cartoon of a personalised experience" :aside="true" >
-
-<template v-slot:content>
-
-<p class="subtitle">
-  Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
+</Content-ModalLink>, we had a clear answer: <em>Get the right craft box to the right customer in the right quantity</em>. With a bespoke technology platform and a direct relationship with customers, toucanBox was uniquely positioned to leverage a personalised experience.
 </p>
 
-The leadership at toucanBox didn’t think of themselves as a tech company, even though by this point the desire for flexibility, customisation, by a series of incremental steps, we had replaced almost all the off-the-shelf tools for subscription businesses with our own systems. In dui odio, posuere eget tristique in, pellentesque nec dolor. Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet.
-
-Best products (Airbnb and Spotify) blend the boundary between the digital product and the commodity. In toucanbox too.  toucanbox - small team, involved in the core product but - central question for me: how can the online product enhance the overall experience for parents, and also children.  
-
-</template>
+I created several concepts, the most successful in user testing we named the _Box builder_. We tested live-data prototypes on a limited audience in production, with promising results. Sadly I was unable to finish this project before my move to Berlin. I hired, onboarded and handed over the project to a new UX designer. Today the box builder is live as part of the signup flow and user accounts.
 
 <template v-slot:aside>
 
-<figure class="image parent-loading is-5by3">
-  <img class="lazyload medium-zoom" data-src="/images/toucanBox/warehouse.jpg" alt="toucanBox warehouse">
+<figure class="image parent-loading image image is-4by5">
+  <img class="lazyload" data-src="/images/toucanbox/personalisation/personalised-experience.jpg" alt="Cartoon of a personalised experience">
 </figure>
-<figcaption>
 
-Nulla at arcu sagittis, egestas libero ut, finibus massa.
+</template>
 
-</figcaption>
+</Content-TextSection>
+
+
+
+
+
+<Content-ImageFrames-FullImageSection url="/images/toucanbox/personalisation/personalisation-montage.jpg" alt="Personalisation discovery montage"/>
+
+
+
+
+
+<Content-ImageFrames-MainImageSection url="/images/toucanbox/personalisation/high-fidelity-sketching.png" alt="Flowchart of personalisation interface in the account section" imageClass="is-2by1 transparent-image" padding="is-large" :aside="true" >
+
+<template v-slot:content>
+
+## Reflections
+
+<p class="subtitle">
+  "I wouldn't want to add my preferences if I can choose my box. It's basically the same thing, except choosing is better."
+</p>
+
+For me, this quote from one of my user testing sessions nicely captures the main challenge of this project - discovering the right personalised experience for toucanBox. I prototyped dozens of ideas, some of which were released as live beta tests to gather data insights, such as a past box rating system, child personality quiz and parent survey/preferences. What emerged were two strong themes. Customers either wanted to directly choose their next box(es) or they didn't want to be involved in personalising their experience at all. 
+
+I believe this dichotomy reflects people's broader expectations of digital technology "Either I'm in total control, or I expect the algorithm to anticipate my needs". We knew we needed to tackle both these opportunities, for both types of user. Ultimately toucanBox customers should be able to choose their boxes months ahead (adding additional materials, books and other add-ons if desired) and provide as much or as little information about their child as they want, always getting the best possible box. The Box Builder focusses on choice but you can see from the sketch below I was imagining it as part of a broader interface that also included preferences and settings.
+
+</template>
+
+
+<template slot="aside">
+
+<Content-InfoBox :hasIcon="true" :hasAction="true" type="link" label="Prototype" url="http://personalisation.herokuapp.com/">
+
+I created a realistic prototype of the Box Builder interface for in-house value and usability testing.
+{ .rag-1 }
+
+</Content-InfoBox>
 
 </template>
 
 </Content-ImageFrames-MainImageSection>
 
 
+<!-- Best products (Airbnb and Spotify) blend the boundary between the digital product and the commodity. In toucanbox too.  toucanbox - small team, involved in the core product but - central question for me: how can the online product enhance the overall experience for parents, and also children. The leadership at toucanBox didn’t think of themselves as a tech company, even though by this point the desire for flexibility, customisation, by a series of incremental steps, we had replaced almost all the off-the-shelf tools for subscription businesses with our own systems.
 
-<Content-ImageFrames-FullImageSection url="/images/toucanBox/personalisation-montage.jpg" alt="Personalisation discovery montage"/>
+The leadership at toucanBox didn’t think of themselves as a tech company, even though by this point the desire for flexibility, customisation, by a series of incremental steps, we had replaced almost all the off-the-shelf tools for subscription businesses with our own systems. 
 
+The two main challenges - Defining personalisation and handling complexity The leadership at toucanBox didn’t think of themselves as a tech company, even though by this point the desire for flexibility, customisation, by a series of incremental steps, we had replaced almost all the off-the-shelf tools for subscription businesses with our own systems.
 
-
-<Content-MainAsideSection  :aside="true" columnOffset="table-offset">
-
-<template slot="content">
-
-## Defining personalisation
-
-Best products (Airbnb and Spotify) blend the boundary between the digital product and the commodity. In toucanbox too.  
-
-Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Maecenas maximus nibh turpis. Vestibulum finibus felis quis imperdiet placerat. Phasellus dapibus, quam et finibus auctor, ipsum sem ultricies ipsum, vitae suscipit enim turpis nec eros. Etiam vitae enim lorem.
-
-Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
-
-</template>
-
-<template>
-
-**Observation** | **Remedy** |
---- | --- |
-Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added a text box in the print modal where an older child or parent could type the name and have it appear on the printout |
-Vestibulum quis metus purus. Fusce varius rhoncus enim sit amet semper. Maecenas non nunc id justo vehicula ultricies vestibulum eget ex. Integer mattis faucibus nunc, ut tristique magna bibendum sit amet. | I added skirts, wellington boots and several other accessories |
-{.table .is-fullwidth}
-
-</template>
-
-<template slot="aside">
-
-<div class="columns is-gapless">
-  <div class="column is-two-thirds">
-    <figure class="image parent-loading is-square">
-      <img class="lazyload" data-src="/images/toucanBox/user-testing-2.jpg" alt="User tester 2">
-    </figure>
-  </div>
-</div>
-
-</template>
-
-</Content-MainAsideSection>
+Best products (Airbnb and Spotify) blend the boundary between the digital product and the commodity. In toucanbox too.  toucanbox - small team, involved in the core product but - central question for me: how can the online product enhance the overall experience for parents, and also children.  
 
 
-
-<Content-ImageFrames-MainImageSection padding="is-large" url="/images/toucanBox/high-fidelity-sketching.png" alt="Detailing feature screens" imageClass="is-2by1 transparent-image" :aside="true"  caption="Aliquam a cursus erat, sit amet ultricies risus. Nulla at arcu sagittis, egestas libero ut, finibus massa.">
-
-<template slot="content">
-
-<p class="subtitle">
-  Fusce ac nunc posuere, tristique nibh at, lacinia nunc. Duis eget fringilla enim. Sed elementum elementum tincidunt.
-</p>
-
-Nullam a metus quis eros pretium hendrerit ut a turpis. Suspendisse posuere purus ut lectus commodo, ac pulvinar neque blandit. Mauris a volutpat neque. Ut iaculis ipsum a elementum sodales. Duis eget fringilla enim. Sed elementum elementum tincidunt. Morbi porta elit porta dolor feugiat convallis. Suspendisse ornare et mi sit amet lacinia. Proin eget dui purus.
-
-</template>
-
-<template slot="aside">
-
-<figure class="image parent-loading is-5by3 transparent-image">
-  <img class="lazyload medium-zoom" data-src="/images/toucanBox/personalisation-desktop.png" alt="Iteration for desktop">
-</figure>
-
-</template>
-
-</Content-ImageFrames-MainImageSection>
-
-
-
-
-<Content-QuoteSection quote="I wouldn't want to add my preferences if I can choose my box. It's basically the same thing, except choosing is better." attribute="Sandra Whitehouse, Mum to Harry and Scarlet"/>
-
-
-
-<Content-TextSection padding="is-large" columnOffset="title-offset">
-
-## A promising pilot
-
-<p class="subtitle">
-  I asked existing toucanBox customers what ‘value for money’ means to them and gathered their attitudes to children's digital media.
-</p>
-
-Customer acquisition and retention were two of the most discussed performance metrics at toucanBox. This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
-
-
-### Detailed Prototyping
-
-Establish to what extent digital content linked to the trial box can increase activation rate. Estimate the costs and benefits of producing more digital content.
-
-### Gathering more data with an MVP
-
-Must resonate with the core value proposition (hands-on crafting and creativity) . High friction when moving to a device from the magazine reduced the reach leading to low overal impact.
-
-### Handover
-
-Must resonate with the core value proposition (hands-on crafting and creativity) . High friction when moving to a device from the magazine reduced the reach leading to low overal impact.
-
-
-<template slot="aside">
-
-<div class="columns is-gapless">
-  <div class="column is-three-quarters">
-    <Content-ModalWrapper type="link" url="http://personalisation.herokuapp.com/" label="Prototype">
-      <figure class="image parent-loading is-9by16">
-        <img class="lazyload" data-src="/images/toucanBox/choose-interface.png" alt="Screenshot of latest prototype">
-      </figure>
-    </Content-ModalWrapper>
-  </div>
-</div>
-
-
-
-<figcaption>
-
-This project however, focused on an equally important but somewhat subtler metric; the rate at which trialists convert to fully paid customers (activation rate).
-
-</figcaption>
-
-</template>
-
-
-</Content-TextSection> -->
+<Content-QuoteSection quote="I wouldn't want to add my preferences if I can choose my box. It's basically the same thing, except choosing is better." attribute="Sandra Whitehouse, Mum to Harry and Scarlet"/> -->

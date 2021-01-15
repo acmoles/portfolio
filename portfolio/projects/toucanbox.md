@@ -24,7 +24,7 @@ hasFooter: true
 description="I guided the organisation through a human-centred design process which had a transformative effect on our approach to product development.">
 
 <template v-slot:visual-column>
-  <figure class="toucan-image">
+  <figure class="combined-image">
     <b class="decoration svg-yellow-splat"/>
     <Heros-ImageHero src="/images/toucanbox/combined_onboarding.png" alt="toucanBox homepage"/>
     <!-- <b class="decoration svg-bee"/> -->
@@ -79,26 +79,6 @@ CTO
 
 <style lang="sass">
 @import "@theme/styles/variables.sass"
-
-.toucan-image
-  position: absolute
-  height: 28vh
-  max-height: 16em
-  top: 0
-  @media screen and (min-width: $tablet)
-    top: -32%
-    left: -28%
-    height: 128%
-    max-height: none
-  @media screen and (min-width: $fullhd)
-    top: -38%
-    left: -28%
-    height: 128%
-    max-height: none
-  img
-    position: relative
-    height: 100%
-    max-width: initial
 
 .toucan-rag
   padding-right: 2em
@@ -921,13 +901,7 @@ We addressed this problem in early 2018 by hiring a dedicated front-end develope
 ### Going forward
 
 <p>
-It was clear the greatest potential for further improvement to the user experience lay with two so&#8209;far unaddressed principles; <em>Flexible and Personalised</em>. I would tackle them in a <Content-ModalLink label="future project">
-<template v-slot:modal>
-
-<Content :page-key="$site.pages.find(p => p.path === '/extra/toucanbox-personalisation/').key"/>
-
-</template>
-</Content-ModalLink> focussing on retention.
+It was clear the greatest potential for further improvement to the user experience lay with two so&#8209;far unaddressed principles; <em>Flexible and Personalised</em>. I would tackle them in a <router-link to="/extra/toucanbox-personalisation/">future project</router-link> focussing on retention.
 </p>
 
 
