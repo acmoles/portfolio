@@ -18,7 +18,7 @@ hasFooter: true
 
 ::: slot top
 
-<Stage-ProjectStage :noise="true" ctaLabel="none" ctaUrl="#"
+<Stage-ProjectStage rag="rag-2" :noise="true" ctaLabel="none" ctaUrl="#"
 description="I love learning and creating. This is a selection of personal design and  technology experiments.">
 
   <template v-slot:visual-background>

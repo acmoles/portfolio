@@ -121,7 +121,7 @@ _I have omitted confidential information in this case study._
   I asked existing toucanBox customers what <em>value for money</em> means to them and collected their attitudes to children's digital media.
 </p>
 
-While I engaged parents with an in-depth interview, I simultaneously offered their children a selection of apps to play on an iPhone. We later switched our attention to the child, discussed what they were doing and asked them questions. This way I fleshed out my existing data insights with qualitative information and play tested competitor apps.
+While engaging parents with an in-depth interview, I simultaneously offered their children a selection of apps to play on an iPhone. We later switched focus to the child, discussed what they were doing and asked them questions. In this way I fleshed out my existing data insights with qualitative information and play tested competitor apps.
 
 <!-- to flesh out our existing data insights (unsubscribe reasons)
 Once the interview concluded we switched our attention
