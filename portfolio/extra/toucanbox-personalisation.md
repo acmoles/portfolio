@@ -94,13 +94,17 @@ I created several concepts, the most successful in user testing we named the _Bo
 
 ## Reflections
 
+Finding the right personalised experience for toucanBox users proved to be the core challenge.  I prototyped dozens of ideas, some of which we released as live tests to gather data insights. These included a past box rating system, child personality quiz and parent survey/preferences. What emerged were two strong themes. Customers either wanted to directly choose their next box(es) or they hardly wanted to be involved in personalising their experience at all. 
+
 <p class="subtitle">
-  "I wouldn't want to add my preferences if I can choose my box. It's basically the same thing, except choosing is better."
+  "I wouldn't add my preferences if I can choose my box. It's basically the same thing, except choosing is better."
 </p>
 
-For me, this quote from one of my user testing sessions nicely captures the main challenge of this project - discovering the right personalised experience for toucanBox. I prototyped dozens of ideas, some of which were released as live beta tests to gather data insights, such as a past box rating system, child personality quiz and parent survey/preferences. What emerged were two strong themes. Customers either wanted to directly choose their next box(es) or they didn't want to be involved in personalising their experience at all. 
+<p class="subtitle">
+  "I simply don't have time for that [level of engagement]. I like toucanBox because I trust what you send is good for my kids."
+</p>
 
-I believe this dichotomy reflects people's broader expectations of digital technology "Either I'm in total control, or I expect the algorithm to anticipate my needs". We knew we needed to tackle both these opportunities, for both types of user. Ultimately toucanBox customers should be able to choose their boxes months ahead (adding additional materials, books and other add-ons if desired) and provide as much or as little information about their child as they want, always getting the best possible box. The Box Builder focusses on choice but you can see from the sketch below I was imagining it as part of a broader interface that also included preferences and settings.
+I believe this dichotomy reflects people's broader expectations of digital technology _"Either I'm in total control, or I expect the algorithm to anticipate my needs"._ We knew we needed to tackle both these opportunities, for both types of user. Ultimately toucanBox customers should be able to choose their boxes months ahead (adding additional materials, books and other add-ons if desired) and provide as much or as little information about their child as they want, always getting the best possible box. The Box Builder focusses on choice but I imagined it as part of a broader interface that also includes preferences and settings.
 
 </template>
 
