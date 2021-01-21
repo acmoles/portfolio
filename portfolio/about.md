@@ -34,7 +34,7 @@ hasFooter: true
       position: relative
       top: 1em
       border-top: solid 1px $black
-      @include modal-background
+      background-color: rgba($black, 0.9)
       padding-top: 1em
       padding-bottom: 1em
 
