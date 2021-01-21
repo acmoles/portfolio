@@ -694,7 +694,7 @@ Shapeways order API
 
 ### What went well
 
-You can [try the live app](https://www.wesen.studio) and order your pendant from Shapeways. I believe Wesen is a compelling and usable customisation tool, satisfying my original success criteria; _Gifter friendly_ and _End-to-end_. A proportion of Wesen's audience don't consider themselves creative or technical. I also significantly expanded my skills, building deeper empathy for my product and engineering colleagues.
+You can [try the live app](http://www.wesen.studio) and order your pendant from Shapeways. I believe Wesen is a compelling and usable customisation tool, satisfying my original success criteria; _Gifter friendly_ and _End-to-end_. A proportion of Wesen's audience don't consider themselves creative or technical. I also significantly expanded my skills, building deeper empathy for my product and engineering colleagues.
 
 ### Lessons learnt
 
