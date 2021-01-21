@@ -67,7 +67,7 @@ export default {
   @import "@theme/styles/variables.sass"
   @import "@theme/styles/mixins.sass"
 
-  .presentation
+  .presentation:not(.abstract)
     position: relative
     height: 100%
     top: 12em
