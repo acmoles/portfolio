@@ -72,7 +72,7 @@ export class Abstract extends EventTarget {
             x: -30,
             y: -60,
             z: 74,
-            duration: 100000,
+            duration: 160000,
             easing: 'linear',
           })
         }
