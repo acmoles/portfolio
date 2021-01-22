@@ -55,7 +55,7 @@ description="A designer, coder and leader creating useful and playful experience
 
 <template v-slot:platform>
 
-UX, UI, interaction, research, testing, motion, 3D, immersive, sketching
+UX, UI, interaction, research, testing, motion, 3D, immersive
 
 </template>
 
