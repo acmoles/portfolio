@@ -90,23 +90,23 @@ Our guiding principle was touch-centricity. Mobile games of the time often borro
 <template v-slot:modal>
 <Content :page-key="$site.pages.find(p => p.path === '/extra/spaced/').key"/>
 </template>
-</Content-ModalLink> was our last game in development.
-</p>
-
-But it was with tools that the studio had a breakout success. The insights gained building games enabled us to identify valuable workflow improvements in coding and debugging. [SRDebugger](https://assetstore.unity.com/packages/tools/gui/srdebugger-console-tools-on-device-27688) is still available in the Unity Asset Store.
-
-<!--
-and we occasionally game jam
+</Content-ModalLink> was our last game in development and we occasionally game jam
 
 
 <Content-ModalLink label="Game jam">
 <template v-slot:modal>
 
-Game jam
+<div class="container is-fullhd">
+<figure class="image parent-loading is-16by9">
+    <iframe class="lazyload" data-src="https://player.vimeo.com/video/507179190" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</figure>
+</div>
 
 </template>
-</Content-ModalLink>
-. -->
+</Content-ModalLink>.
+</p>
+
+But it was with tools that the studio had a breakout success. The insights gained building games enabled us to identify valuable workflow improvements in coding and debugging. [SRDebugger](https://assetstore.unity.com/packages/tools/gui/srdebugger-console-tools-on-device-27688) is still available in the Unity Asset Store.
 
 <template v-slot:aside>
 
