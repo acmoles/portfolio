@@ -86,11 +86,11 @@ We had just witnessed the dawn of ubiquitous touch-based tablet computing and be
 </p>
 
 <p>
-Our guiding principle was touch-centricity. Mobile games of the time often borrowed existing interaction models, such as on-screen joysticks or pointers. We wanted to play to the strengths of touch. Our pioneering effort was Nova (below), <Content-ModalLink label="Spaced">
+Our guiding principle was touch-centricity. Mobile games of the time often borrowed existing interaction models, such as on-screen joysticks or pointers. We wanted to play to the strengths of touch. Our pioneering effort was Nova (below), our last game in development was <Content-ModalLink label="Spaced">
 <template v-slot:modal>
 <Content :page-key="$site.pages.find(p => p.path === '/extra/spaced/').key"/>
 </template>
-</Content-ModalLink> was our last game in development and we occasionally 
+</Content-ModalLink> and we occasionally 
 
 
 <Content-ModalLink label="Game jam">
