@@ -90,7 +90,7 @@ Our guiding principle was touch-centricity. Mobile games of the time often borro
 <template v-slot:modal>
 <Content :page-key="$site.pages.find(p => p.path === '/extra/spaced/').key"/>
 </template>
-</Content-ModalLink> was our last game in development and we occasionally game jam
+</Content-ModalLink> was our last game in development and we occasionally 
 
 
 <Content-ModalLink label="Game jam">
