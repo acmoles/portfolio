@@ -1,5 +1,9 @@
 <template>
-  <button class="button is-dark project-external-link is-fullwidth background-noise" @click="action()">
+  <button 
+    class="button is-dark project-external-link is-fullwidth background-noise"
+    :class="'umami--click--project-modal-link-' + label"
+    @click="action()"
+  >
     <span>{{ label }}</span>
     <MaximiseIcon/>
     <ModalBase

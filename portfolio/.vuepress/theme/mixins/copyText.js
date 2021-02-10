@@ -30,6 +30,8 @@ export const copyText = {
           text: text,
           position: position || 'top'
         })
+        // library seems to block native event
+        umami('copy-text-' + text + ' ' + position)
 
       }, (e) => {
 
@@ -38,6 +40,7 @@ export const copyText = {
           text: 'Clipboard copy error',
           position: position || 'top'
         })
+        umami('copy-text-failed')
 
       })
     }

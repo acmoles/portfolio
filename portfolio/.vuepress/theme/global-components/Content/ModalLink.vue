@@ -1,5 +1,5 @@
 <template>
-  <button class="modal-inline" type="button" name="action" @click="action()">
+  <button class="modal-inline" :class="'umami--click--modal-link-' + label" type="button" name="action" @click="action()">
     {{ label }}
     <i class="icon" aria-hidden="true">
       <img src="/svg-icons/icon_maximise.svg" alt="Maximise icon">

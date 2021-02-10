@@ -1,5 +1,10 @@
 <template>
-  <a class="button is-dark project-external-link is-fullwidth background-noise" target="_blank" rel="noopener noreferrer">
+  <a 
+  class="button is-dark project-external-link is-fullwidth background-noise"
+  :class="'umami--click--project-link-' + label"
+  target="_blank"
+  rel="noopener noreferrer"
+>
     <span>{{ label }}</span>
     <ExternalIcon/>
   </a>

@@ -5,10 +5,10 @@
       <slot/>
 
       <div class="action-group">
-        <a :href="url1" class="action-button background-noise no-fade" target="blank" rel="noopener noreferrer">
+        <a :href="url1" class="action-button background-noise no-fade" :class="'umami--click--alert-' + label1" target="blank" rel="noopener noreferrer">
           <span>{{ label1 }}</span>
         </a>
-        <a :href="url2" class="action-button background-noise no-fade" target="blank" rel="noopener noreferrer">
+        <a :href="url2" class="action-button background-noise no-fade" :class="'umami--click--alert-' + label2" target="blank" rel="noopener noreferrer">
           <span>{{ label2 }}</span>
         </a>
       </div>

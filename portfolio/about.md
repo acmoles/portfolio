@@ -22,6 +22,7 @@ hasFooter: true
 
   .about .stage .stage-intro .columns
     top: 0
+    pointer-events: none
 
   .about .stage .small-title
     display: none

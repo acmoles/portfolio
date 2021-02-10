@@ -30,6 +30,7 @@ module.exports = {
       ['meta', { property: 'og:image', content: 'https://www.acmoles.com/icons/Anthony_Moles_Portfolio.jpg' }],
       ['meta', { property: 'og:description', content: 'I\'m a designer and leader creating useful and playful experiences centred on people.' }],
       ['meta', { property: 'og:url', content: 'https://www.acmoles.com' }],
+      ['script', { async: true, defer: true, 'data-website-id': '5e7158bf-612d-49c2-ba70-6cfcb9a80ed7', src: 'https://umami-ecru.vercel.app/umami.js'}],  
   ],
   ga: '',
   description: 'I\'m a designer and leader creating useful and playful experiences centred on people.',

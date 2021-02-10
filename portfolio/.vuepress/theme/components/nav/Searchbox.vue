@@ -1,6 +1,6 @@
 <template>
   <div
-    class="navbar-item has-dropdown search-dropdown"
+    class="navbar-item has-dropdown search-dropdown umami--click--nav-search"
     :class="[open ? 'is-active' : null, ]"
     aria-label="dropdown navigation"
   >

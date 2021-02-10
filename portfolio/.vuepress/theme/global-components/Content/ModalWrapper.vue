@@ -1,5 +1,5 @@
 <template>
-  <button class="action-button background-noise" :class="type"  type="button" name="action" @click="action()">
+  <button class="action-button background-noise" :class="[type, 'umami--click--modal-wrapper-' + label]"  type="button" name="action" @click="action()">
     <slot></slot>
     <span>{{ label }}
       <i class="icon">

@@ -18,6 +18,7 @@
     :href="link"
     @focusout="focusoutAction"
     class="navbar-item external"
+    :class="'umami--click--external-' + item.text"
     :target="isTel(link) ? null : '_blank'"
     :rel="isTel(link) ? null : 'noopener noreferrer'"
   >

@@ -5,7 +5,7 @@
     aria-label="dropdown navigation"
   >
     <a
-      class="navbar-link is-arrowless"
+      class="navbar-link is-arrowless umami--click--nav-dropdown"
       role="button"
       :aria-label="dropdownAriaLabel"
       aria-haspopup="true"

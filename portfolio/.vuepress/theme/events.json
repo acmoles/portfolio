@@ -1,0 +1,11 @@
+{
+    "events": {
+        "copy buttons incl. main nav email": "js mixin",
+        "project exteral link and modal": "class",
+        "main nav dropdown": "class",
+        "main nav external link": "class",
+        "main nav search": "class",
+        "about back/forward timeline": "class",
+        "modal alert, link and wrapper": "class"
+    }
+}

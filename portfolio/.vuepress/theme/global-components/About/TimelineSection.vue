@@ -27,12 +27,12 @@
           <div class="slider-controls-container column is-one-third">
             <div class="columns is-gapless">
               <div class="column is-one-quarter">
-                <button class="button section-toggle back" :class="{'is-active': currentPage === 1}" type="button" @click="changePage('prev')">
+                <button class="button section-toggle back umami--click--about-timeline-back" :class="{'is-active': currentPage === 1}" type="button" @click="changePage('prev')">
                   <i class="icon" aria-hidden="true"><img src="/svg-icons/icon_right.svg" alt="right icon"></i> Back
                 </button>
               </div>
               <div class="column">
-                <button class="button section-toggle" :class="{'is-active': currentPage === numberOfPages}" type="button" @click="changePage('next')">
+                <button class="button section-toggle umami--click--about-timeline-forward" :class="{'is-active': currentPage === numberOfPages}" type="button" @click="changePage('next')">
                   Forward <i class="icon" aria-hidden="true"><img src="/svg-icons/icon_right.svg" alt="right icon"></i>
                 </button>
               </div>
