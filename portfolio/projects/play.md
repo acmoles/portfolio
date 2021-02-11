@@ -115,7 +115,9 @@ I'm uniquely placed to excel in this new world of 3D interactions.
   What if tactile real-world play experiences could be translated into XR?
 </p>
 
-I firmly believe creative tools are among the most promising applications of XR. Indeed, this is clear when we consider likes of [Tiltbrush](https://www.tiltbrush.com/), but I wanted to extend the discussion to creative experiences for children. It's well known that even toddlers intuitively understand swipe gestures on mobile devices - will we see similarly rapid intuitive understanding of XR interaction? _This project is a work in progress._ I'm using a [Leap Motion](https://www.ultraleap.com/) and [Unity](https://unity3d.com/).
+I firmly believe creative tools are among the most promising applications of XR. Indeed, this is clear when we consider likes of [Tiltbrush](https://www.tiltbrush.com/), but I wanted to extend the discussion to creative experiences for children. It's well known that even toddlers intuitively understand swipe gestures on mobile devices - will we see similarly rapid intuitive understanding of XR interaction? 
+
+I originally imagined an AR experience for see-through HMDs like Hololens and Magic Leap. It could be called LEGO Anywhere and enable children to build with virtual bricks in places which are usually unsuitable like public transport. But without access to such a device (nor widespread adoption), I decided a VR experience would be a sufficient proof of concept. _This is a work in progress._ I'm using a [Leap Motion](https://www.ultraleap.com/) and [Unity](https://unity3d.com/).
 
 </template>
 
