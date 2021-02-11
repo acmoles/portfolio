@@ -36,10 +36,11 @@
 
           <figure
             v-else
-            class="image parent-loading is-square"
-            :class="{'sibling-action-padding': siblingAction}"
+            class="image is-square"
+            :class="[{'sibling-action-padding': siblingAction}, {'parent-loading': allowLoader}]"
           >
             <iframe v-if="image.iframe" class="lazyload" :data-src="image.url" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <video v-else-if="image.videoUrl && !isMobile" v-on:play="speedUpVideo" class="has-ratio" preload="auto" loop="" muted="" autoplay=""><source :src="image.videoUrl"></video>
             <img v-else class="lazyload" :class="{'medium-zoom': image.zoomable}" :data-src="image.url" :alt="image.alt">
           </figure>
 
@@ -75,6 +76,7 @@ export default {
   data() {
     return {
       showDialog: -1,
+      allowLoader: true
     };
   },
 
@@ -91,6 +93,9 @@ export default {
     hasContent () {
       return !!this.$slots['content']
     },
+    isMobile () {
+      return window.innerWidth < 1024
+    }
   },
 
   methods: {
@@ -105,6 +110,13 @@ export default {
     close() {
       this.$store.dispatch('setModalStatus', false)
       this.showDialog = -1
+    },
+    speedUpVideo(event) {
+      console.log(event.target)
+      event.target.playbackRate = 1.8
+      if (this.allowLoader) {
+        this.allowLoader = false
+      }
     }
   }
 

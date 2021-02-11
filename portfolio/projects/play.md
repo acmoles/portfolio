@@ -164,9 +164,9 @@ My background in industrial design lends itself to sketching quick iterations of
 
 
 <Content-ImageFrames-SquareImagesRow style="padding-top: 2em;" padding="is-large" :images="[
-{ url:'/images/play/reduced/side-build.gif', alt:'square test 1', caption:'Square image caption 1', slot:'slot1', iframe:false },
-{ url:'/images/play/reduced/dial-reduced.gif', alt:'square test 2', caption:'Square image caption 2', slot:'slot2', iframe:false },
-{ url:'/images/play/reduced/explode-reduced.gif', alt:'square test 3', caption:'Square image caption 3', slot:'slot3', iframe:false },
+{ url:'/images/play/reduced/side-build.gif', alt:'Build assist', caption:'Square image caption 1', slot:'slot1', iframe:false, videoUrl:'/images/play/video/side-build.mp4' },
+{ url:'/images/play/reduced/dial-reduced.gif', alt:'Colour dial', caption:'Square image caption 2', slot:'slot2', iframe:false, videoUrl:'/images/play/video/colour-dial.mp4' },
+{ url:'/images/play/reduced/explode-reduced.gif', alt:'Clone sphere', caption:'Square image caption 3', slot:'slot3', iframe:false, videoUrl:'/images/play/video/clone-sphere.mp4' },
 ]">
 
 <template slot="slot1">
