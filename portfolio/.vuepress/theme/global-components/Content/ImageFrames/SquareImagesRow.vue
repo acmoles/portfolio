@@ -93,8 +93,11 @@ export default {
     hasContent () {
       return !!this.$slots['content']
     },
+    $window () {
+      return this.$store.state.window
+    },
     isMobile () {
-      return window.innerWidth < 1024
+      return this.$window.innerWidth < 1024
     }
   },
 
