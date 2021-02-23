@@ -102,9 +102,9 @@ export default {
         article: {
     			rotation : {x: -3, y: 3, z: 0},
         },
-        image: {
-          translation : {x: 0, y: 0, z: 1},
-        },
+        // image: {
+        //   translation : {x: 0, y: 0, z: 1},
+        // },
         caption: {
           translation : {x: 8, y: 8, z: 0},
         },
@@ -139,8 +139,13 @@ export default {
     // }
     this.animatables.caption = this.$refs['caption' + this.uid]
 
-    if (this.type === 'double-left' || this.type === 'double-right') {
-      this.options.article.rotation = {x: -2, y: 2, z: 0}
+    if (
+      this.type === 'double-left' ||
+      this.type === 'double-right' ||
+      this.type === 'double-left-top' ||
+      this.type === 'double-right-bottom'
+    ) {
+      this.options.article.rotation = {x: -1.5, y: 1.5, z: 0}
       this.options.caption.translation = {x: 8, y: 8, z: 0}
     }
 
@@ -221,7 +226,7 @@ export default {
 
         const	bounds = this.base.getBoundingClientRect()
 
-        // Mouse position relative to the main element (this.DOM.el).
+        // Mouse position relative to the main element.
     		const	relativeMousePosition = { x : mousePosition.x - bounds.left - documentScrolls.left, y : mousePosition.y - bounds.top - documentScrolls.top }
 
         // this.glow.style.WebkitTransform = this.glow.style.transform = 'translateX(' + (relativeMousePosition.x - 128) + 'px) translateY(' + (relativeMousePosition.y - 128) + 'px)'
