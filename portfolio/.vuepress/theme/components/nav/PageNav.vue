@@ -21,6 +21,7 @@
                 </div>
               </div>
             </div>
+            <div class="background-noise noise-overlay"></div>
           </div>
           <div class="text-group">
             <p class="small-title">{{ processedTitle(next.frontmatter.title) }}</p>
