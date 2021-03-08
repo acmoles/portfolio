@@ -259,7 +259,7 @@ Many adult testers requested that hand-held items move when the hand moves | Thi
 
 <template slot="aside">
 
-<figure class="image parent-loading is-9by16">
+<figure class="image parent-loading is-square">
   <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190638" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </figure>
 <figcaption>

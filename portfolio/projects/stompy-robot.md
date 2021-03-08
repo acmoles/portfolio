@@ -86,12 +86,7 @@ We had just witnessed the dawn of ubiquitous touch-based tablet computing and be
 </p>
 
 <p>
-Our guiding principle was touch-centricity. Mobile games of the time often borrowed existing interaction models, such as on-screen joysticks or pointers. We wanted to play to the strengths of touch. Our pioneering effort was Nova (below), our last game in development was <Content-ModalLink label="Spaced">
-<template v-slot:modal>
-<Content :page-key="$site.pages.find(p => p.path === '/extra/spaced/').key"/>
-</template>
-</Content-ModalLink> and we occasionally 
-
+Our guiding principle was touch-centricity. Mobile games of the time often borrowed existing interaction models, such as on-screen joysticks or pointers. We wanted to play to the strengths of touch. Our pioneering effort was Nova (below), our last game in development was <a href="#spaced">Spaced</a> and we occasionally 
 
 <Content-ModalLink label="Game jam">
 <template v-slot:modal>
@@ -178,17 +173,18 @@ Players will acquire new heroes and weaponry as they progress in the game. Heroe
   position: relative
   height: 100%
 
-.stompy-vertical-fill
-  position: absolute
-  top: 0
-  bottom: 0
-  left: 0
-  width: 76%
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  .image
-    margin: 0 !important
+@media screen and (min-width: $desktop)
+  .stompy-vertical-fill
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    width: 76%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    .image
+      margin: 0 !important
 
 </style>
 
