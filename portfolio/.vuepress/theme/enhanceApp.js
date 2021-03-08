@@ -55,9 +55,31 @@ export default ({
     // global image event
     function lazy() {
       document.addEventListener('lazyloaded', function (e)  {
-        e.target.parentNode.classList.add('parent-loaded');
-        e.target.parentNode.classList.remove('parent-loading');
+        checkParent(e.target, processNode)
+
+        // if (e.target.parentNode.classList.contains('parent-loading')) {
+        //   e.target.parentNode.classList.add('parent-loaded');
+        //   e.target.parentNode.classList.remove('parent-loading');  
+        // } else {
+        //   e.target.parentNode.parentNode.classList.add('parent-loaded');
+        //   e.target.parentNode.parentNode.classList.remove('parent-loading');  
+        // }
       });
+    }
+    function checkParent(target, callback) {
+      if (!target.parentNode) {
+        return
+      }
+
+      if (target.parentNode.classList && target.parentNode.classList.contains('parent-loading')) {
+        callback(target.parentNode)
+      } else {
+        checkParent(target.parentNode, callback)
+      }
+    }
+    function processNode(node) {
+      node.classList.add('parent-loaded');
+      node.classList.remove('parent-loading');  
     }
     lazy();
   }

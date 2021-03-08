@@ -98,7 +98,7 @@ the group’s work invites active participation. RANDOM INTERNATIONAL explores t
     </figure>
     <div class="grid-item-container span-4">
       <figure class="image parent-loading is-16by9">
-        <iframe src="https://player.vimeo.com/video/30915879" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
+        <Content-ImageFrames-Iframer url="https://player.vimeo.com/video/30915879"></Content-ImageFrames-Iframer>
       </figure>
     </div>
     <figure class="image parent-loading is-square">

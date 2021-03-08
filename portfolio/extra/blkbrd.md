@@ -36,7 +36,7 @@ I prototyped the idea using the [Ionic Framework](https://ionicframework.com/) a
 <template slot="aside">
 
 <figure class="image parent-loading is-9by16">
-  <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190729" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <Content-ImageFrames-Iframer url="https://player.vimeo.com/video/293190729"></Content-ImageFrames-Iframer>
 </figure>
 
 <!-- <figcaption>

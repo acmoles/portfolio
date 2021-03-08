@@ -17,7 +17,7 @@
              <div class="ticker-content">
               <div class="img-ticker" v-for="n in 8">
                 <div class="ticker-inner">
-                  <img class="lazyload chevron" :class="chevronClass" data-src="/svg-icons/chevron.svg" alt="chevron"></img>
+                  <img class="chevron" :class="chevronClass" src="/svg-icons/chevron.svg" alt="chevron"></img>
                 </div>
               </div>
             </div>
@@ -62,8 +62,8 @@ export default {
 
     chevronClass() {
       let uid = this.next.frontmatter.uid
-      // 4, 7, 9
-      let uidsToSet = [2]
+      // How much to dim
+      let uidsToSet = [2, 3, 7, 9]
       let uidsToSetDouble = [4, 5, 8, 10]
       let uidsToSetTriple = [1]
       if (uidsToSet.includes(uid)) {
@@ -232,7 +232,7 @@ function resolvePageLink (
     .chevron
       transform: scale(1.2)
       &.chevron-dimmed
-        opacity: 0.35
+        opacity: 0.5
       &.chevron-dimmed-double
         opacity: 0.25
       &.chevron-dimmed-triple

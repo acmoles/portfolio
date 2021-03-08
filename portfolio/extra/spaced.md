@@ -30,13 +30,13 @@ hasFooter: false
     <img class="lazyload" data-src="/images/stompy-robot/character-model.jpg" alt="Spaced 3D modelling">
     </figure>
     <figure class="image parent-loading is-square span-2">
-    <iframe class="lazyload" data-src="https://player.vimeo.com/video/424005109" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <Content-ImageFrames-Iframer url="https://player.vimeo.com/video/424005109"></Content-ImageFrames-Iframer>
     </figure>
     <figure class="image parent-loading is-square span-2">
-    <iframe class="lazyload" data-src="https://player.vimeo.com/video/424004636" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <Content-ImageFrames-Iframer url="https://player.vimeo.com/video/424004636"></Content-ImageFrames-Iframer>
     </figure>
     <figure class="image parent-loading is-square span-2">
-    <iframe class="lazyload" data-src="https://player.vimeo.com/video/424006246" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <Content-ImageFrames-Iframer url="https://player.vimeo.com/video/424006246"></Content-ImageFrames-Iframer>
     </figure>
   </template>
 
