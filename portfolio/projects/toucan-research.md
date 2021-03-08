@@ -260,7 +260,7 @@ Many adult testers requested that hand-held items move when the hand moves | Thi
 <template slot="aside">
 
 <figure class="image parent-loading is-square">
-  <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190638" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <Content-ImageFrames-Iframer url="https://player.vimeo.com/video/293190638"></Content-ImageFrames-Iframer>
 </figure>
 <figcaption>
 
@@ -350,7 +350,7 @@ Dozens of Toucanoo accessories packed on a compressed PNG sprite sheet
 <template v-slot:column2>
 
 <figure class="image parent-loading is-square">
-  <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190505" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <Content-ImageFrames-Iframer url="https://player.vimeo.com/video/293190505"></Content-ImageFrames-Iframer>
 </figure>
 
 <figcaption>
@@ -424,7 +424,7 @@ Was there a future for digital interactive experiences as part of the toucanBox 
 <template slot="aside">
 
 <figure class="image parent-loading is-9by16">
-  <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190429" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <Content-ImageFrames-Iframer url="https://player.vimeo.com/video/293190429"></Content-ImageFrames-Iframer>
 </figure>
 <!-- <figcaption>
 

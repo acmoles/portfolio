@@ -39,7 +39,7 @@
             class="image is-square"
             :class="[{'sibling-action-padding': siblingAction}, {'parent-loading': allowLoader}]"
           >
-            <iframe v-if="image.iframe" class="lazyload" :data-src="image.url" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <Iframer v-if="image.iframe" :url="image.url"></Iframer>
             <video v-else-if="image.videoUrl && !isMobile" v-on:play="speedUpVideo" class="has-ratio" preload="auto" loop="" muted="" autoplay=""><source :src="image.videoUrl"></video>
             <img v-else class="lazyload" :class="{'medium-zoom': image.zoomable}" :data-src="image.url" :alt="image.alt">
           </figure>
@@ -61,10 +61,11 @@
 <script>
 
 import ModalBase from '@theme/components/ModalBase.vue'
+import Iframer from '@theme/global-components/Content/ImageFrames/Iframer.vue'
 
 export default {
 
-  components: { ModalBase },
+  components: { ModalBase, Iframer },
 
   props: {
     images: Array,
@@ -115,7 +116,6 @@ export default {
       this.showDialog = -1
     },
     speedUpVideo(event) {
-      console.log(event.target)
       event.target.playbackRate = 1.8
       if (this.allowLoader) {
         this.allowLoader = false

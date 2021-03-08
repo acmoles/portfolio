@@ -57,10 +57,13 @@
   .section.is-initial
     padding: 1em 0 6em 0
 
-
-.section
-  figure:not(.transparent-image)
+.section figure:not(.transparent-image)
     background-color: rgba($pitch, 0.2)
+
+// TODO remove if Chrome compositor artefacts get fixed
+.modal-background
+  .section figure:not(.transparent-image)
+      background-color: $black
 
 .content figure
   margin-left: 0

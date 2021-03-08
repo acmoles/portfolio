@@ -93,7 +93,7 @@ Our guiding principle was touch-centricity. Mobile games of the time often borro
 
 <div class="container is-fullhd">
 <figure class="image parent-loading is-16by9">
-    <iframe class="lazyload" data-src="https://player.vimeo.com/video/507179190" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <Content-ImageFrames-Iframer url="https://player.vimeo.com/video/507179190"></Content-ImageFrames-Iframer>
 </figure>
 </div>
 

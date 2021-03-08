@@ -212,7 +212,7 @@ export default {
 
       if ( this.scrollPosition > this.lastScrollPosition && this.scrollDirection !== 'down') {
         if ( this.navbarPosition < 0 ) {
-          console.log('navbar problem')
+          console.log('navbar check')
           this.cssPosition = 'absolute'
           this.cssTop = 0
           return

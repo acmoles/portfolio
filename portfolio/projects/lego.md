@@ -159,7 +159,7 @@ The LEGO DIMENSIONS Starter Pack has everything you need to set out on epic mash
 
   <div class="column is-half">
     <figure class="image parent-loading is-16by9">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/0kmnrwfDewo" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
+      <Content-ImageFrames-Iframer url="https://www.youtube.com/embed/0kmnrwfDewo"></Content-ImageFrames-Iframer>
     </figure>
   </div>
 

@@ -663,7 +663,7 @@ We experimented with adding additional choice at signup but found this reduced c
 <div class="video-wrapper">
 
   <figure class="image parent-loading is-9by16 single-image">
-    <iframe class="lazyload" data-src="https://player.vimeo.com/video/293190532" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <Content-ImageFrames-Iframer url="https://player.vimeo.com/video/293190532"></Content-ImageFrames-Iframer>
   </figure>
   <figcaption>
     User testing a subscription plans design iteration

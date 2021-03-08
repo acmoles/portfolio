@@ -13,7 +13,7 @@
 
           <div class="column is-two-thirds">
             <figure class="image parent-loading" :class="$imageClass">
-              <iframe v-if="iframe" class="lazyload" :data-src="url" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <Iframer v-if="iframe" :url="url"></Iframer>
               <img v-else class="lazyload medium-zoom" :data-src="url" :alt="alt">
             </figure>
             <figcaption v-if="!aside">
@@ -33,7 +33,11 @@
 
 <script>
 
+import Iframer from '@theme/global-components/Content/ImageFrames/Iframer.vue'
+
 export default {
+
+  components: { Iframer },
 
   props: {
     url: String,
