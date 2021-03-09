@@ -27,16 +27,21 @@ vY = position.y;
 `,
 
 vertexShader:`
-
-// vec3 n_position = normalize(position.xyz);
-// vY = n_position.y - .5;
 vec4 v = projectionMatrix * modelViewMatrix * vec4( position, 1. );
 vY = v.y / v.z;
 vY2 = position.y;
 `,
 
 randomFunction: `
-float random(vec3 scale,float seed){return fract(sin(dot(gl_FragCoord.xyz+seed,scale))*43758.5453+seed);}
+highp float random(vec2 co)
+{
+    highp float a = 12.9898;
+    highp float b = 78.233;
+    highp float c = 43758.5453;
+    highp float dt= dot(co.xy ,vec2(a,b));
+    highp float sn= mod(dt,3.14);
+    return fract(sin(sn) * c);
+}
 `,
 
 blendFunction: `
@@ -59,8 +64,7 @@ vec3 col2 = mix( vec3( 1.1 ), vec3( 0. ), val2 * 1.2 );
 //diffuseColor.rgb = (col2 + col) * master;
 diffuseColor.rgb = blendOverlay( diffuseColor.rgb, (col2 + col) * master );
 
-
-float n = ( 1. - noise * random( vec3( 1. ), length( gl_FragCoord ) ) );
+float n = 1. - noise * random( gl_FragCoord.xy );
 
 diffuseColor.rgb = blendOverlay( diffuseColor.rgb, vec3( n ) );
 `
@@ -74,7 +78,7 @@ vec3 col = mix( vec3( 1. ), vec3( 0.14 ), val );
 diffuseColor.rgb = blendOverlay( diffuseColor.rgb, col );
 
 
-float n = ( 1.42 - .64 * random( vec3( 1. ), length( gl_FragCoord ) ) );
+float n = .9 - .32 * random( gl_FragCoord.xy );
 
 diffuseColor.rgb = blendOverlay( diffuseColor.rgb, vec3( n ) );
 `

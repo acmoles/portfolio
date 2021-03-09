@@ -183,7 +183,6 @@ export class ThreeComposition extends EventTarget {
     });
     this.grid.gridContainer = null;
 
-    this.worldScene.dispose();
     this.worldScene = null;
     this.controls.dispose();
     this.camera = null;
