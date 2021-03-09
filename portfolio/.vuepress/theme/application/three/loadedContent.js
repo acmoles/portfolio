@@ -23,8 +23,8 @@ export class LoadedContent extends EventTarget {
         mesh: null,
         position: { x: -8.5, y: 0, z: 4.2 },
         rotation: { x: 0, y: 0.84 * Math.PI, z: 0 },
-        startAction: 'idleStandard',
-        actionSequence: ['headNodYes', 'pointing', 'headNodYes'],
+        startAction: 'idle',
+        actionSequence: ['yes', 'pointing', 'yes'],
         actionSequenceProgress: 0,
         actions: {},
         mixer: null,
@@ -34,8 +34,8 @@ export class LoadedContent extends EventTarget {
         mesh: null,
         position: { x: 3.5, y: 0, z: 9 },
         rotation: { x: 0, y: 1.16 * Math.PI, z: 0 },
-        startAction: 'idleStandard',
-        actionSequence: ['pointing', 'headNodYes', 'headNodYes'],
+        startAction: 'idle',
+        actionSequence: ['pointing', 'yes', 'yes'],
         actionSequenceProgress: 0,
         actions: {},
         mixer: null,
@@ -45,8 +45,8 @@ export class LoadedContent extends EventTarget {
         mesh: null,
         position: { x: 10, y: -0.33, z: 3.2 },
         rotation: { x: 0, y: 1.38 * Math.PI, z: 0 },
-        startAction: 'idleStandard',
-        actionSequence: ['headNodYes', 'pointing', 'pointing'],
+        startAction: 'idle',
+        actionSequence: ['yes', 'pointing', 'pointing'],
         actionSequenceProgress: 0,
         actions: {},
         mixer: null,
@@ -72,6 +72,8 @@ export class LoadedContent extends EventTarget {
   init() {
     this.loadModels( () => {
       this.startAnimationSequence();
+      // console.log(this.models)
+      window.threemodels = this.models;
       this.dispatchEvent(new Event('loaded'));
     } );
   }
@@ -92,6 +94,8 @@ export class LoadedContent extends EventTarget {
           if (child.name === 'Leg') {
             this.equipModel( this.getModelByName('Leg'), child );
           }
+
+          ///
 
           if (child.name === 'AntMesh') {
             this.equipModel( this.getModelByName('Ant'), child );
@@ -122,7 +126,7 @@ export class LoadedContent extends EventTarget {
 
   equipModel( model, child ) {
     model.mesh = child;
-    this.interactables.push(model.mesh);
+    this.interactables.push(model.mesh); // for click events
 
     if (model.actionSequence[0] !== null) { // then is for animating
       model.mesh.animations = this.animations; // Set to stored extracted animations
@@ -132,32 +136,31 @@ export class LoadedContent extends EventTarget {
   }
 
   startAnimation( model ) {
-    let mesh = model.mesh, modelActions = model.actions, startActionName = model.startAction;
 
-    let mixer = new THREE.AnimationMixer( mesh );
-    console.log( model.name )
-    console.log( 'animations: ', mesh.animations )
+    let mixer = new THREE.AnimationMixer( model.mesh );
+    // console.log( model.name )
+    // console.log( 'animations: ', mesh.animations )
 
-    mesh.animations.forEach((animationClip) => {
+    model.mesh.animations.forEach((animationClip) => {
       let action = mixer.clipAction( animationClip );
-      modelActions[ animationClip.name ] = action;
-      this.setWeight( modelActions[ animationClip.name ] , 0 );
+      model.actions[ animationClip.name ] = action;
+      this.setWeight( model.actions[ animationClip.name ] , 0, 'set clip to zero: ' + animationClip.name );
     });
 
-    console.log('model actions: ', modelActions)
+    // console.log('model actions: ', model.actions)
 
     // Set inital animation weight to 1 (it's nice we can key into the actions object by name)
-    this.setWeight( modelActions[ startActionName ], 1 );
+    this.setWeight( model.actions[ model.startAction ], 1, 'set start action: ' + model.startAction );
 
     // Start playing all actions
-    for (var key in modelActions) {
+    for (var key in model.actions) {
       // skip loop if the property is from prototype
-      if (!modelActions.hasOwnProperty(key)) continue;
+      if (!model.actions.hasOwnProperty(key)) continue;
 
-      modelActions[key].play();
+      model.actions[key].play();
     }
 
-    // modelActions[ startActionName ].time = anime.random(0, 5);
+    model.actions[ model.startAction ].time = anime.random(0, 5);
 
     return mixer;
   }
@@ -169,13 +172,15 @@ export class LoadedContent extends EventTarget {
 
   scroll(progress) {
     if (progress > 0) {
+      const MODIFIER = 3.2;
 
       this.models.forEach((model, i) => {
         if (model.mixer !== null) {
           clearTimeout(model.timeout);
           let currentActionName = model.actionSequence[model.actionSequenceProgress];
-          this.setWeight( model.actions['floating'], this.tanh(2.2*progress) );
-          this.setWeight( model.actions[currentActionName], 1 - this.tanh(2.2*progress) );
+          this.setWeight( model.actions['floating'], this.tanh(MODIFIER*progress), 'increase floating scroll' );
+          this.setWeight( model.actions[currentActionName], 1 - this.tanh(MODIFIER*progress), 'decrease current action scroll' );
+          this.setWeight( model.actions['idle'], 1 - this.tanh(MODIFIER*progress), 'decrease idle scroll' );
         }
       });
 
@@ -186,7 +191,7 @@ export class LoadedContent extends EventTarget {
           model.actions['floating'].fadeOut(postScrollTransition);
           clearTimeout(model.timeout);
           let currentActionName = model.actionSequence[model.actionSequenceProgress];
-          this.executeCrossFade(model.actions[currentActionName], model.actions['idleStandard'], postScrollTransition);
+          this.executeCrossFade(model.actions[currentActionName], model.actions['idle'], postScrollTransition, 'finish floating after scroll');
           this.catalystAction(model, i);
         }
       });
@@ -214,7 +219,7 @@ export class LoadedContent extends EventTarget {
 
     // setTimout till first action in sequence
     model.timeout = setTimeout( () => {
-      this.executeCrossFade( model.actions['idleStandard'], firstAction, this.TRANSITION );
+      this.executeCrossFade( model.actions['idle'], firstAction, this.TRANSITION );
     }, (this.models.length - i) * 2000 * Math.random() );
 
   }
@@ -230,7 +235,7 @@ export class LoadedContent extends EventTarget {
 
         let nextAction = model.actions[ model.actionSequence[model.actionSequenceProgress] ];
 
-        this.advanceInSequence( model, model.actions[currentActionName], model.actions['idleStandard'], nextAction, i);
+        this.advanceInSequence( model, model.actions[currentActionName], model.actions['idle'], nextAction, i);
       }
   }
 
@@ -247,11 +252,11 @@ export class LoadedContent extends EventTarget {
 
   advanceInSequence(model, currentAction, idleAction, nextAction, i) {
     // Crossfade out current step to idle if not idle
-    this.executeCrossFade( currentAction, idleAction, this.TRANSITION );
+    this.executeCrossFade( currentAction, idleAction, this.TRANSITION, 'advance in sequence to idle' );
 
     // Start the next step in the sequence after a timeout
     model.timeout = setTimeout( () => {
-      this.executeCrossFade( idleAction, nextAction, this.TRANSITION );
+      this.executeCrossFade( idleAction, nextAction, this.TRANSITION, 'advance in sequence to next step' );
     }, Math.max(1500, 6000 * Math.random()) + (i * 100) );
 
   }
@@ -297,20 +302,24 @@ export class LoadedContent extends EventTarget {
     return null;
   }
 
-  setWeight( action, weight ) {
+  setWeight( action, weight, caller ) {
     if ( typeof action !== 'undefined' ) {
       action.enabled = true;
       action.setEffectiveTimeScale( 1 );
       action.setEffectiveWeight( weight );  
     } else {
-      console.log('invalid caller')
+      console.log('invalid caller: ', caller)
     }
   }
 
-  executeCrossFade( startAction, endAction, duration ) {
-      this.setWeight( endAction, 1 );
+  executeCrossFade( startAction, endAction, duration, caller ) {
+    if ( typeof startAction !== 'undefined' && typeof endAction !== 'undefined' ) {
+      this.setWeight( endAction, 1, caller );
       endAction.time = 0;
       startAction.crossFadeTo( endAction, duration, true );
+    } else {
+      console.log('invalid crossfade caller: ', caller)
+    }
   }
 
   positionModel( model ) {
