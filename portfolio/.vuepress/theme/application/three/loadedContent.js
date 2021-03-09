@@ -16,7 +16,7 @@ export class LoadedContent extends EventTarget {
     this.TRANSITION = 1;
     this.animations = [];
     this.interactables = [];
-    this.LOADPATH = window.location.origin + '/three/characters-3.glb';
+    this.LOADPATH = window.location.origin + '/three/characters-export-modified-fourth-sampled.glb';
 
     this.models = [
       { name: 'Ant',
@@ -86,28 +86,23 @@ export class LoadedContent extends EventTarget {
           this.enhanceMaterial(child.material);
 
           if (child.name === 'Whiteboard') {
-            this.equipMesh( this.getModelByName('Whiteboard'), child );
+            this.equipModel( this.getModelByName('Whiteboard'), child );
           }
 
           if (child.name === 'Leg') {
-            this.equipMesh( this.getModelByName('Leg'), child );
+            this.equipModel( this.getModelByName('Leg'), child );
           }
 
           if (child.name === 'AntMesh') {
-            this.equipMesh( this.getModelByName('Ant'), child );
+            this.equipModel( this.getModelByName('Ant'), child );
           }
 
           if (child.name === 'ColFMesh') {
-            this.equipMesh( this.getModelByName('ColF'), child );
+            this.equipModel( this.getModelByName('ColF'), child );
           }
 
           if (child.name === 'ColMMesh') {
-            this.equipMesh( this.getModelByName('ColM'), child );
-          }
-
-          if (child.name === 'Bulb') {
-            child.visible = false;
-            // TODO something with the bulb...
+            this.equipModel( this.getModelByName('ColM'), child );
           }
 
         }
@@ -125,14 +120,14 @@ export class LoadedContent extends EventTarget {
 
   }
 
-  equipMesh( meshobject, child ) {
-    meshobject.mesh = child;
-    this.interactables.push(meshobject.mesh);
+  equipModel( model, child ) {
+    model.mesh = child;
+    this.interactables.push(model.mesh);
 
-    if (meshobject.actionSequence[0] !== null) {
-      meshobject.mesh.animations = this.animations; // Set to stored extracted animations
-      let mixer = this.startAnimation( meshobject.mesh, meshobject.actions, meshobject.startAction );
-      meshobject.mixer = mixer;
+    if (model.actionSequence[0] !== null) { // then is for animating
+      model.mesh.animations = this.animations; // Set to stored extracted animations
+      let mixer = this.startAnimation( model );
+      model.mixer = mixer;
     }
   }
 
@@ -166,16 +161,20 @@ export class LoadedContent extends EventTarget {
     }
   }
 
-  startAnimation( skinnedMesh, modelActions, startActionName ) {
-    let mixer = new THREE.AnimationMixer( skinnedMesh );
-    skinnedMesh.animations.forEach((animationClip) => {
+  startAnimation( model ) {
+    let mesh = model.mesh, modelActions = model.actions, startActionName = model.startAction;
+
+    let mixer = new THREE.AnimationMixer( mesh );
+    mesh.animations.forEach((animationClip) => {
+      console.log( model.name )
+      console.log( animationClip )
       let action = mixer.clipAction( animationClip );
       modelActions[ animationClip.name ] = action;
-      this.setWeight( modelActions[ animationClip.name ] , 0 );
+      // this.setWeight( modelActions[ animationClip.name ] , 0 );
     });
 
     // Set inital animation weight to 1 (it's nice we can key into the actions object by name)
-    this.setWeight( modelActions[ startActionName ], 1 );
+    // this.setWeight( modelActions[ startActionName ], 1 );
 
     // Start playing all actions
     for (var key in modelActions) {
@@ -185,7 +184,7 @@ export class LoadedContent extends EventTarget {
       modelActions[key].play();
     }
 
-    modelActions[ startActionName ].time = anime.random(0, 5);
+    // modelActions[ startActionName ].time = anime.random(0, 5);
 
     return mixer;
   }
@@ -296,6 +295,7 @@ export class LoadedContent extends EventTarget {
       ( gltf ) => {
         // Store animations in global object
         this.animations = gltf.animations;
+        console.log('animations: ', this.animations)
         // console.log(animations);
 
         // Store loaded scene in global object

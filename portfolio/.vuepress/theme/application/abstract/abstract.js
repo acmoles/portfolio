@@ -196,7 +196,6 @@ export class Abstract extends EventTarget {
     this.geometry.dispose();
     this.material.dispose();
     this.uniforms = null;
-    this.scene.dispose();
     this.scene = null;
     if (this.controls) {
       this.controls.dispose();
