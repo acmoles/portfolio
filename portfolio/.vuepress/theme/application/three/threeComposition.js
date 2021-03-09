@@ -119,7 +119,7 @@ export class ThreeComposition extends EventTarget {
 
     this.onWindowResize();
     // var axesHelper = new THREE.AxesHelper( 5 );
-    // worldScene.add( axesHelper );
+    // this.worldScene.add( axesHelper );
 
     // Add these to restrict user camera
     let maxAngle = (7 / 20) * Math.PI;
