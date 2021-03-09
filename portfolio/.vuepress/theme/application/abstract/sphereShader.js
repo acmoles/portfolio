@@ -165,7 +165,8 @@ void main()	{
 	float n = ( .5 - random( vec3( 1. ), length( gl_FragCoord ) ) );
 
 	float fogFactor = smoothstep( near, far, depth );
-	gl_FragColor.rgb = finalColor + vec3( n );
+	// gl_FragColor.rgb = finalColor + vec3( n );
+  gl_FragColor.rgb = finalColor;
 	gl_FragColor.a = mix( 1.0, 0.0, fogFactor );
 }
 `
