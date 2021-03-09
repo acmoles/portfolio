@@ -131,50 +131,23 @@ export class LoadedContent extends EventTarget {
     }
   }
 
-  enhanceMaterial(material) {
-    if (!this.enhancedMaterial) {
-
-      this.enhancedMaterial = true;
-      material.onBeforeCompile = ( shader ) => {
-        shader.uniforms.time = { value: 0 };
-        if (window.devicePixelRatio < 1.5) {
-          console.log('Low Pixel Ratio');
-          shader.uniforms.noise = { value: 0.42 };
-        } else {
-          shader.uniforms.noise = { value: 0.64 };
-        }
-        shader.vertexShader = 'varying float vY;\n' + shader.vertexShader;
-
-        shader.vertexShader = shader.vertexShader.replace(
-          '#include <fog_vertex>', SharedShader.vertexShader
-        );
-
-        shader.fragmentShader = 'uniform float time;\nuniform float noise;\nvarying float vY;\n' + SharedShader.randomFunction + SharedShader.blendFunction + shader.fragmentShader;
-
-        shader.fragmentShader = shader.fragmentShader.replace(
-          '#include <specularmap_fragment>', SharedShader.fragmentShaderOutput
-        );
-
-        this.shaderMaterial = shader;
-      }
-
-    }
-  }
-
   startAnimation( model ) {
     let mesh = model.mesh, modelActions = model.actions, startActionName = model.startAction;
 
     let mixer = new THREE.AnimationMixer( mesh );
+    console.log( model.name )
+    console.log( 'animations: ', mesh.animations )
+
     mesh.animations.forEach((animationClip) => {
-      console.log( model.name )
-      console.log( animationClip )
       let action = mixer.clipAction( animationClip );
       modelActions[ animationClip.name ] = action;
-      // this.setWeight( modelActions[ animationClip.name ] , 0 );
+      this.setWeight( modelActions[ animationClip.name ] , 0 );
     });
 
+    console.log('model actions: ', modelActions)
+
     // Set inital animation weight to 1 (it's nice we can key into the actions object by name)
-    // this.setWeight( modelActions[ startActionName ], 1 );
+    this.setWeight( modelActions[ startActionName ], 1 );
 
     // Start playing all actions
     for (var key in modelActions) {
@@ -296,7 +269,6 @@ export class LoadedContent extends EventTarget {
         // Store animations in global object
         this.animations = gltf.animations;
         console.log('animations: ', this.animations)
-        // console.log(animations);
 
         // Store loaded scene in global object
         this.gltfScene = gltf.scene;
@@ -326,9 +298,13 @@ export class LoadedContent extends EventTarget {
   }
 
   setWeight( action, weight ) {
-    action.enabled = true;
-    action.setEffectiveTimeScale( 1 );
-    action.setEffectiveWeight( weight );
+    if ( typeof action !== 'undefined' ) {
+      action.enabled = true;
+      action.setEffectiveTimeScale( 1 );
+      action.setEffectiveWeight( weight );  
+    } else {
+      console.log('invalid caller')
+    }
   }
 
   executeCrossFade( startAction, endAction, duration ) {
@@ -348,6 +324,36 @@ export class LoadedContent extends EventTarget {
     if (model.rotation !== null) {
       let parent = model.mesh.parent;
       parent.rotation.y = model.rotation.y;
+    }
+  }
+
+  enhanceMaterial(material) {
+    if (!this.enhancedMaterial) {
+
+      this.enhancedMaterial = true;
+      material.onBeforeCompile = ( shader ) => {
+        shader.uniforms.time = { value: 0 };
+        if (window.devicePixelRatio < 1.5) {
+          console.log('Low Pixel Ratio');
+          shader.uniforms.noise = { value: 0.42 };
+        } else {
+          shader.uniforms.noise = { value: 0.64 };
+        }
+        shader.vertexShader = 'varying float vY;\n' + shader.vertexShader;
+
+        shader.vertexShader = shader.vertexShader.replace(
+          '#include <fog_vertex>', SharedShader.vertexShader
+        );
+
+        shader.fragmentShader = 'uniform float time;\nuniform float noise;\nvarying float vY;\n' + SharedShader.randomFunction + SharedShader.blendFunction + shader.fragmentShader;
+
+        shader.fragmentShader = shader.fragmentShader.replace(
+          '#include <specularmap_fragment>', SharedShader.fragmentShaderOutput
+        );
+
+        this.shaderMaterial = shader;
+      }
+
     }
   }
 
