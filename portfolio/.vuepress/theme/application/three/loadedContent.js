@@ -328,9 +328,9 @@ export class LoadedContent extends EventTarget {
         shader.uniforms.time = { value: 0 };
         if (window.devicePixelRatio < 1.5) {
           console.log('Low Pixel Ratio');
-          shader.uniforms.noise = { value: 0.42 };
+          shader.uniforms.noise = { value: 0.4 };
         } else {
-          shader.uniforms.noise = { value: 0.64 };
+          shader.uniforms.noise = { value: 0.6 };
         }
         shader.vertexShader = 'varying float vY;\nvarying float vY2;\n' + shader.vertexShader;
 
