@@ -30,9 +30,9 @@ vertexShader:`
 
 // vec3 n_position = normalize(position.xyz);
 // vY = n_position.y - .5;
-vec4 v = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+vec4 v = projectionMatrix * modelViewMatrix * vec4( position, 1. );
 vY = v.y / v.z;
-
+vY2 = position.y;
 `,
 
 randomFunction: `
@@ -50,11 +50,14 @@ vec3 blendOverlay(vec3 base, vec3 blend) {
 `,
 
 fragmentShaderOutput: `
-float val = smoothstep( .4, .8, .5 - vY );
-vec3 col = mix( vec3( .6 ), vec3( .0 ), 1. - val );
+float val = smoothstep( 0., 1.75, .5 - vY );
+float val2 = smoothstep( 1., .01, vY2 / 40. );
 
-// diffuseColor.rgb = col;
-diffuseColor.rgb = blendOverlay( diffuseColor.rgb, col );
+vec3 col = mix( vec3( 2. ), vec3( 0. ), 1. - val );
+vec3 col2 = mix( vec3( 1.1 ), vec3( 0. ), val2 * 1.2 );
+
+//diffuseColor.rgb = (col2 + col) * master;
+diffuseColor.rgb = blendOverlay( diffuseColor.rgb, (col2 + col) * master );
 
 
 float n = ( 1. - noise * random( vec3( 1. ), length( gl_FragCoord ) ) );

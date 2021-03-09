@@ -16,15 +16,15 @@ export class LoadedContent extends EventTarget {
     this.TRANSITION = 1;
     this.animations = [];
     this.interactables = [];
-    this.LOADPATH = window.location.origin + '/three/characters-3.glb';
+    this.LOADPATH = window.location.origin + '/three/characters-export-modified-fourth-sampled.glb';
 
     this.models = [
       { name: 'Ant',
         mesh: null,
         position: { x: -8.5, y: 0, z: 4.2 },
         rotation: { x: 0, y: 0.84 * Math.PI, z: 0 },
-        startAction: 'idleStandard',
-        actionSequence: ['headNodYes', 'pointing', 'headNodYes'],
+        startAction: 'idle',
+        actionSequence: ['yes', 'pointing', 'yes'],
         actionSequenceProgress: 0,
         actions: {},
         mixer: null,
@@ -34,8 +34,8 @@ export class LoadedContent extends EventTarget {
         mesh: null,
         position: { x: 3.5, y: 0, z: 9 },
         rotation: { x: 0, y: 1.16 * Math.PI, z: 0 },
-        startAction: 'idleStandard',
-        actionSequence: ['pointing', 'headNodYes', 'headNodYes'],
+        startAction: 'idle',
+        actionSequence: ['pointing', 'yes', 'yes'],
         actionSequenceProgress: 0,
         actions: {},
         mixer: null,
@@ -45,8 +45,8 @@ export class LoadedContent extends EventTarget {
         mesh: null,
         position: { x: 10, y: -0.33, z: 3.2 },
         rotation: { x: 0, y: 1.38 * Math.PI, z: 0 },
-        startAction: 'idleStandard',
-        actionSequence: ['headNodYes', 'pointing', 'pointing'],
+        startAction: 'idle',
+        actionSequence: ['yes', 'pointing', 'pointing'],
         actionSequenceProgress: 0,
         actions: {},
         mixer: null,
@@ -93,6 +93,8 @@ export class LoadedContent extends EventTarget {
             this.equipModel( this.getModelByName('Leg'), child );
           }
 
+          ///
+
           if (child.name === 'AntMesh') {
             this.equipModel( this.getModelByName('Ant'), child );
           }
@@ -103,11 +105,6 @@ export class LoadedContent extends EventTarget {
 
           if (child.name === 'ColMMesh') {
             this.equipModel( this.getModelByName('ColM'), child );
-          }
-
-          if (child.name === 'Bulb') {
-            child.visible = false;
-            // TODO something with the bulb...
           }
 
         }
@@ -167,13 +164,14 @@ export class LoadedContent extends EventTarget {
   scroll(progress) {
     if (progress > 0) {
       const MODIFIER = 2.4;
+      this.shaderMaterial.uniforms.master.value = 1 - (progress * 1.5);
       this.models.forEach((model, i) => {
         if (model.mixer !== null) {
           clearTimeout(model.timeout);
           let currentActionName = model.actionSequence[model.actionSequenceProgress];
           this.setWeight( model.actions['floating'], this.tanh(MODIFIER*progress) );
           this.setWeight( model.actions[currentActionName], 1 - this.tanh(MODIFIER*progress) );
-          this.setWeight( model.actions['idleStandard'], 1 - this.tanh(MODIFIER*progress) );
+          this.setWeight( model.actions['idle'], 1 - this.tanh(MODIFIER*progress) );
         }
       });
 
@@ -184,7 +182,7 @@ export class LoadedContent extends EventTarget {
           model.actions['floating'].fadeOut(postScrollTransition);
           clearTimeout(model.timeout);
           let currentActionName = model.actionSequence[model.actionSequenceProgress];
-          this.executeCrossFade(model.actions[currentActionName], model.actions['idleStandard'], postScrollTransition);
+          this.executeCrossFade(model.actions[currentActionName], model.actions['idle'], postScrollTransition);
           this.catalystAction(model, i);
         }
       });
@@ -212,7 +210,7 @@ export class LoadedContent extends EventTarget {
 
     // setTimout till first action in sequence
     model.timeout = setTimeout( () => {
-      this.executeCrossFade( model.actions['idleStandard'], firstAction, this.TRANSITION );
+      this.executeCrossFade( model.actions['idle'], firstAction, this.TRANSITION );
     }, (this.models.length - i) * 2000 * Math.random() );
 
   }
@@ -228,7 +226,7 @@ export class LoadedContent extends EventTarget {
 
         let nextAction = model.actions[ model.actionSequence[model.actionSequenceProgress] ];
 
-        this.advanceInSequence( model, model.actions[currentActionName], model.actions['idleStandard'], nextAction, i);
+        this.advanceInSequence( model, model.actions[currentActionName], model.actions['idle'], nextAction, i);
       }
   }
 
@@ -326,6 +324,7 @@ export class LoadedContent extends EventTarget {
 
       this.enhancedMaterial = true;
       material.onBeforeCompile = ( shader ) => {
+        shader.uniforms.master = { value: 1 };
         shader.uniforms.time = { value: 0 };
         if (window.devicePixelRatio < 1.5) {
           console.log('Low Pixel Ratio');
@@ -333,13 +332,13 @@ export class LoadedContent extends EventTarget {
         } else {
           shader.uniforms.noise = { value: 0.64 };
         }
-        shader.vertexShader = 'varying float vY;\n' + shader.vertexShader;
+        shader.vertexShader = 'varying float vY;\nvarying float vY2;\n' + shader.vertexShader;
 
         shader.vertexShader = shader.vertexShader.replace(
           '#include <fog_vertex>', SharedShader.vertexShader
         );
 
-        shader.fragmentShader = 'uniform float time;\nuniform float noise;\nvarying float vY;\n' + SharedShader.randomFunction + SharedShader.blendFunction + shader.fragmentShader;
+        shader.fragmentShader = 'uniform float master;\nuniform float time;\nuniform float noise;\nvarying float vY;\nvarying float vY2;\n' + SharedShader.randomFunction + SharedShader.blendFunction + shader.fragmentShader;
 
         shader.fragmentShader = shader.fragmentShader.replace(
           '#include <specularmap_fragment>', SharedShader.fragmentShaderOutput
