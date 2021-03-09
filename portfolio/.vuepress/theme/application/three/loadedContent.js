@@ -86,23 +86,23 @@ export class LoadedContent extends EventTarget {
           this.enhanceMaterial(child.material);
 
           if (child.name === 'Whiteboard') {
-            this.equipMesh( this.getModelByName('Whiteboard'), child );
+            this.equipModel( this.getModelByName('Whiteboard'), child );
           }
 
           if (child.name === 'Leg') {
-            this.equipMesh( this.getModelByName('Leg'), child );
+            this.equipModel( this.getModelByName('Leg'), child );
           }
 
           if (child.name === 'AntMesh') {
-            this.equipMesh( this.getModelByName('Ant'), child );
+            this.equipModel( this.getModelByName('Ant'), child );
           }
 
           if (child.name === 'ColFMesh') {
-            this.equipMesh( this.getModelByName('ColF'), child );
+            this.equipModel( this.getModelByName('ColF'), child );
           }
 
           if (child.name === 'ColMMesh') {
-            this.equipMesh( this.getModelByName('ColM'), child );
+            this.equipModel( this.getModelByName('ColM'), child );
           }
 
           if (child.name === 'Bulb') {
@@ -125,68 +125,37 @@ export class LoadedContent extends EventTarget {
 
   }
 
-  equipMesh( meshobject, child ) {
-    meshobject.mesh = child;
-    this.interactables.push(meshobject.mesh);
+  equipModel( model, child ) {
+    model.mesh = child;
+    this.interactables.push(model.mesh);
 
-    if (meshobject.actionSequence[0] !== null) {
-      meshobject.mesh.animations = this.animations; // Set to stored extracted animations
-      let mixer = this.startAnimation( meshobject.mesh, meshobject.actions, meshobject.startAction );
-      meshobject.mixer = mixer;
+    if (model.actionSequence[0] !== null) {
+      model.mesh.animations = this.animations; // Set to stored extracted animations
+      let mixer = this.startAnimation( model );
+      model.mixer = mixer;
     }
   }
 
-  enhanceMaterial(material) {
-    if (!this.enhancedMaterial) {
+  startAnimation( model ) {
 
-      this.enhancedMaterial = true;
-      material.onBeforeCompile = ( shader ) => {
-        shader.uniforms.time = { value: 0 };
-        if (window.devicePixelRatio < 1.5) {
-          console.log('Low Pixel Ratio');
-          shader.uniforms.noise = { value: 0.42 };
-        } else {
-          shader.uniforms.noise = { value: 0.64 };
-        }
-        shader.vertexShader = 'varying float vY;\n' + shader.vertexShader;
+    let mixer = new THREE.AnimationMixer( model.mesh );
 
-        shader.vertexShader = shader.vertexShader.replace(
-          '#include <fog_vertex>', SharedShader.vertexShader
-        );
-
-        shader.fragmentShader = 'uniform float time;\nuniform float noise;\nvarying float vY;\n' + SharedShader.randomFunction + SharedShader.blendFunction + shader.fragmentShader;
-
-        shader.fragmentShader = shader.fragmentShader.replace(
-          '#include <specularmap_fragment>', SharedShader.fragmentShaderOutput
-        );
-
-        this.shaderMaterial = shader;
-      }
-
-    }
-  }
-
-  startAnimation( skinnedMesh, modelActions, startActionName ) {
-    let mixer = new THREE.AnimationMixer( skinnedMesh );
-    skinnedMesh.animations.forEach((animationClip) => {
+    model.mesh.animations.forEach((animationClip) => {
       let action = mixer.clipAction( animationClip );
-      modelActions[ animationClip.name ] = action;
-      this.setWeight( modelActions[ animationClip.name ] , 0 );
+      model.actions[ animationClip.name ] = action;
+      this.setWeight( model.actions[ animationClip.name ] , 0 );
     });
 
-    // Set inital animation weight to 1 (it's nice we can key into the actions object by name)
-    this.setWeight( modelActions[ startActionName ], 1 );
+    // Set inital animation weight to 1
+    this.setWeight( model.actions[ model.startAction ], 1 );
 
     // Start playing all actions
-    for (var key in modelActions) {
-      // skip loop if the property is from prototype
-      if (!modelActions.hasOwnProperty(key)) continue;
-
-      modelActions[key].play();
+    for (var key in model.actions) {
+      if (!model.actions.hasOwnProperty(key)) continue;
+      model.actions[key].play();
     }
 
-    modelActions[ startActionName ].time = anime.random(0, 5);
-
+    model.actions[ model.startAction ].time = anime.random(0, 5);
     return mixer;
   }
 
@@ -197,13 +166,14 @@ export class LoadedContent extends EventTarget {
 
   scroll(progress) {
     if (progress > 0) {
-
+      const MODIFIER = 2.4;
       this.models.forEach((model, i) => {
         if (model.mixer !== null) {
           clearTimeout(model.timeout);
           let currentActionName = model.actionSequence[model.actionSequenceProgress];
-          this.setWeight( model.actions['floating'], this.tanh(2.2*progress) );
-          this.setWeight( model.actions[currentActionName], 1 - this.tanh(2.2*progress) );
+          this.setWeight( model.actions['floating'], this.tanh(MODIFIER*progress) );
+          this.setWeight( model.actions[currentActionName], 1 - this.tanh(MODIFIER*progress) );
+          this.setWeight( model.actions['idleStandard'], 1 - this.tanh(MODIFIER*progress) );
         }
       });
 
@@ -348,6 +318,36 @@ export class LoadedContent extends EventTarget {
     if (model.rotation !== null) {
       let parent = model.mesh.parent;
       parent.rotation.y = model.rotation.y;
+    }
+  }
+
+  enhanceMaterial(material) {
+    if (!this.enhancedMaterial) {
+
+      this.enhancedMaterial = true;
+      material.onBeforeCompile = ( shader ) => {
+        shader.uniforms.time = { value: 0 };
+        if (window.devicePixelRatio < 1.5) {
+          console.log('Low Pixel Ratio');
+          shader.uniforms.noise = { value: 0.42 };
+        } else {
+          shader.uniforms.noise = { value: 0.64 };
+        }
+        shader.vertexShader = 'varying float vY;\n' + shader.vertexShader;
+
+        shader.vertexShader = shader.vertexShader.replace(
+          '#include <fog_vertex>', SharedShader.vertexShader
+        );
+
+        shader.fragmentShader = 'uniform float time;\nuniform float noise;\nvarying float vY;\n' + SharedShader.randomFunction + SharedShader.blendFunction + shader.fragmentShader;
+
+        shader.fragmentShader = shader.fragmentShader.replace(
+          '#include <specularmap_fragment>', SharedShader.fragmentShaderOutput
+        );
+
+        this.shaderMaterial = shader;
+      }
+
     }
   }
 
