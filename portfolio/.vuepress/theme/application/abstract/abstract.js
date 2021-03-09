@@ -151,10 +151,13 @@ export class Abstract extends EventTarget {
       far: { value: this.far },
     };
 
+    let vertexShader = SphereShader.perlinNoise + SphereShader.vertexShader;
+    let fragmentShader = SphereShader.perlinNoise + SphereShader.fragmentShader;
+
     this.material = new THREE.ShaderMaterial( {
 			uniforms: this.uniforms,
-			vertexShader : SphereShader.vertexShader,
-			fragmentShader : SphereShader.fragmentShader,
+			vertexShader : vertexShader,
+			fragmentShader : fragmentShader,
       transparent: true,
       fog: true
 		} );
@@ -196,7 +199,6 @@ export class Abstract extends EventTarget {
     this.geometry.dispose();
     this.material.dispose();
     this.uniforms = null;
-    this.scene.dispose();
     this.scene = null;
     if (this.controls) {
       this.controls.dispose();

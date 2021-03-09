@@ -1,6 +1,6 @@
 var SphereShader = {
 
-	vertexShader: `
+	perlinNoise: `
 //
 // GLSL textureless classic 3D noise "cnoise",
 // with an RSL-style periodic variant "pnoise".
@@ -107,8 +107,9 @@ float turbulence( vec3 p ) {
     }
     return t;
 }
-
-
+`,
+vertexShader: 
+`
 // START
 
 uniform float time;
@@ -139,20 +140,26 @@ varying float noise;
 
 uniform float near;
 uniform float far;
+uniform float time;
 
-highp float random(vec3 scale, float seed) {
-  return fract(sin(dot(gl_FragCoord.xyz + seed, scale)) * 43758.5453 + seed);
+// TODO remove duplication
+highp float random(vec2 co)
+{
+    highp float a = 12.9898;
+    highp float b = 78.233;
+    highp float c = 43758.5453;
+    highp float dt= dot(co.xy ,vec2(a,b));
+    highp float sn= mod(dt,3.14);
+    return fract(sin(sn) * c);
 }
 
-#ifdef HIGH_PRECISION
-	float precisionSafeLength( vec3 v ) { return length( v ); }
-#else
-	float max3( vec3 v ) { return max( max( v.x, v.y ), v.z ); }
-	float precisionSafeLength( vec3 v ) {
-		float maxComponent = max3( abs( v ) );
-		return length( v / maxComponent ) * maxComponent;
-  }
-#endif
+vec3 blendOverlay(vec3 base, vec3 blend) {
+	return mix(
+        sqrt(base) * (2.0 * blend - 1.0) + 2.0 * base * (1.0 - blend),
+        2.0 * base * blend + base * base * (1.0 - 2.0 * blend),
+        step(base, vec3(0.5))
+    );
+}
 
 void main()	{
 	const highp float LOG2 = 1.442695;
@@ -162,11 +169,14 @@ void main()	{
 	vec3 colorNoise = vec3( vUv * noise, 1.0 );
 	vec3 finalColor = vec3( colorNoise.g, colorNoise.b * 2., colorNoise.b * 3. );
 
-	float n = ( .5 - random( vec3( 1. ), length( gl_FragCoord ) ) );
+	float n = .5 - random( gl_FragCoord.xy + sin(time/300.) );
+  float n2 = 1. - turbulence( 0.1  * gl_FragCoord.xyz + sin(time/30.) );
 
 	float fogFactor = smoothstep( near, far, depth );
-	// gl_FragColor.rgb = finalColor + vec3( n );
-  gl_FragColor.rgb = finalColor;
+	// gl_FragColor.rgb = finalColor + vec3( n + n2 );
+  gl_FragColor.rgb = blendOverlay( finalColor, vec3( n + n2 ) );
+ 
+  gl_FragColor.a = 1.;
 	gl_FragColor.a = mix( 1.0, 0.0, fogFactor );
 }
 `
