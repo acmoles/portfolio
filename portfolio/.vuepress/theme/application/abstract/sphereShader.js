@@ -170,9 +170,10 @@ void main()	{
 	vec3 finalColor = vec3( colorNoise.g, colorNoise.b * 2., colorNoise.b * 3. );
 
 	float n = .5 - random( gl_FragCoord.xy + sin(time/300.) );
-  float n2 = 1. - turbulence( 0.1  * gl_FragCoord.xyz + sin(time/30.) );
+  float n2 = 1. - turbulence( 0.07  * gl_FragCoord.xyz + sin(time/30.) );
 
 	float fogFactor = smoothstep( near, far, depth );
+  fogFactor = fogFactor - 0.1*(n + n2);
 	// gl_FragColor.rgb = finalColor + vec3( n + n2 );
   gl_FragColor.rgb = blendOverlay( finalColor, vec3( n + n2 ) );
  
