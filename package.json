@@ -48,7 +48,7 @@
     "imagesloaded": "^4.1.4",
     "lazysizes": "^5.2.2",
     "portal-vue": "^2.1.7",
-    "three": "0.120.1",
+    "three": "0.125.0",
     "uos": "^1.2.0",
     "vue": "^2.6.12",
     "vue-clipboard2": "^0.3.1",
