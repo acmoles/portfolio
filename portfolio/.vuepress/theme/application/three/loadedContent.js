@@ -73,6 +73,7 @@ export class LoadedContent extends EventTarget {
     this.loadModels( () => {
       this.startAnimationSequence();
       this.dispatchEvent(new Event('loaded'));
+      console.log(this.interactables)
     } );
   }
 

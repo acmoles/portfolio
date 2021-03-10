@@ -32,8 +32,8 @@ export class Interactions extends EventTarget {
       this.HOVER_Y = this.NOMINAL_GRID_Y + 0.25;
 
       if (getViewport('x') > config.breakpoints.tablet) {
-        this.container.addEventListener( 'mousemove', this.updateMouse.bind(this), false );
-        this.container.addEventListener( 'mousedown', this.onClick.bind(this), false );
+        this.container.addEventListener( 'pointermove', this.updateMouse.bind(this), false );
+        this.container.addEventListener( 'pointerdown', this.onClick.bind(this), false );
         this.container.addEventListener( 'touchstart', this.onClick.bind(this), false );
       }
 
@@ -60,7 +60,6 @@ export class Interactions extends EventTarget {
   }
 
   updateMouse( event ) {
-    event.preventDefault();
     const relativeX = event.clientX - this.containerRect.left;
     const relativeY = event.clientY - this.containerRect.top;
     this.mouse.x = ( relativeX / this.container.offsetWidth ) * 2 - 1;
@@ -89,7 +88,8 @@ export class Interactions extends EventTarget {
       if ( intersects.length > 0 ) {
 
         var object = this.findParentGridElement(intersects[ 0 ].object, 'Grid');
-
+        // console.log('intersect all: ', intersects);
+        // console.log('parent: ', object.name);
         if ( callback ) {
           // click animation
           callback(object);
