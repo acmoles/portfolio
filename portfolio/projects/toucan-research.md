@@ -403,9 +403,11 @@ Tuning tweens and sinusoidal motion sometimes produced unexpected results
 
 <Content-TextSection rag="rag-6">
 
-<p class="subtitle" style="padding-right: 3em;">
+<p class="subtitle" style="padding-right: 3em; margin-bottom: 0.5em;">
   "When I try to imagine what kind of app or game toucanBox would make, this feels exactly right."
 </p>
+
+Sara Barokas, toucanBox CPO and co-founder{ .attribute }
 
 ### What went well
 
