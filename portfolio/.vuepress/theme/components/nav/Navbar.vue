@@ -6,6 +6,7 @@
       class="navbar"
       :class="[
         navStyle,
+        { 'up-transition': scrollDirection === 'up' },
         { force: forceLight },
         { burgered: navbarBurgered },
         {'modal-background-only': hasModalBackground }
@@ -95,8 +96,7 @@ export default {
       scrollDirection: 'down',
       cssPosition: 'absolute',
       cssTop: 0,
-      burgerBottom: true,
-      problemy: false
+      burgerBottom: true
     }
   },
 
@@ -204,24 +204,34 @@ export default {
 
       // Sticky
       if ( this.navbarPosition >= this.scrollPosition ) {
+        // console.log('on screen')
         this.cssPosition = 'fixed'
         this.cssTop = 0
+
+      } else if ( this.scrollPosition >= ( this.navbarPosition + this.navbarHeight ) ) {
+        // console.log('off screen')
+
+        this.cssPosition = 'fixed'
+        this.cssTop = - this.navbarHeight
       }
 
       // Up
       if ( this.scrollPosition < this.lastScrollPosition && this.scrollDirection !== 'up' ) {
-        this.scrollDirection = 'up';
+        // console.log('up')
+        this.scrollDirection = 'up'
+        this.cssPosition = 'fixed'
+        this.cssTop = 0
+        // this.cssPosition = 'absolute'
+        // this.cssTop = this.scrollPosition - this.navbarHeight
 
-        if( this.scrollPosition >= ( this.navbarPosition + this.navbarHeight ) ) {
-          this.cssPosition = 'absolute'
-          this.cssTop = this.scrollPosition - this.navbarHeight
-        }
         this.scrollExitFast()
         return       
       }
 
       // Down
       if ( this.scrollPosition > this.lastScrollPosition && this.scrollDirection !== 'down') {
+        //console.log('down')
+
         if ( this.navbarPosition < 0 ) {
           console.log('navbar check')
           this.cssPosition = 'absolute'
@@ -237,10 +247,6 @@ export default {
       }
 
         this.scrollExitSlow(progress)
-        return
-
-
-
     },
     scrollExitFast() {
       this.lastScrollPosition = this.scrollPosition
@@ -284,6 +290,8 @@ export default {
   height: 6em
   width: 100%
   z-index: 3
+  &.up-transition
+    transition: top 0.4s ease
 
 .home-link
   display: flex
