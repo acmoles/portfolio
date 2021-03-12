@@ -19,7 +19,7 @@ module.exports = {
       ['link', { rel: 'icon', type:'image/x-icon', href: `/favicon.ico` }],
       ['link', { rel: 'shortcut icon', type:'image/x-icon', href: `/favicon.ico` }],
       ['link', { rel: 'manifest', href: '/manifest.json' }],
-      ['meta', { name: 'theme-color', content: '#1F2D3D' }],
+      ['meta', { name: 'theme-color', content: '#15202B' }],
       ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
       ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
       ['link', { rel: 'apple-touch-icon', href: `/icons/apple-touch-icon-152x152.png` }],
