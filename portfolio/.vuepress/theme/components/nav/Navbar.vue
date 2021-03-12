@@ -8,7 +8,8 @@
         navStyle,
         { force: forceLight },
         { burgered: navbarBurgered },
-        {'modal-background-only': hasModalBackground } ]"
+        {'modal-background-only': hasModalBackground }
+      ]"
       ref="navbar"
       :style="{ position: cssPosition, top: cssTop + 'px' }"
       role="navigation"
@@ -94,7 +95,8 @@ export default {
       scrollDirection: 'down',
       cssPosition: 'absolute',
       cssTop: 0,
-      burgerBottom: true
+      burgerBottom: true,
+      problemy: false
     }
   },
 
@@ -178,6 +180,7 @@ export default {
       // TODO // https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
       // Perhaps uos already offers this?
       // https://lodash.com/docs/#debounce
+      
       if (this.isSidebarOpen) {
         this.cssPosition = 'fixed'
         this.cssTop = 0
@@ -187,14 +190,25 @@ export default {
       this.scrollPosition = getScrollTop()
       if (this.$refs.navbar) {
         this.navbarPosition = getOffsetY(this.$refs.navbar)
+      } else {
+        return
       }
 
-      if ( this.scrollPosition > (this.$window.height / 1.618) && this.navbarBurgered === false ) {
-        this.navbarBurgered = true
-      } else if (progress === 0 && !this.isNarrow) {
-        this.navbarBurgered = false
+      if (this.lastScrollPosition - this.scrollPosition > this.navbarHeight) {
+          // Fast scroll up, bail out
+          this.cssPosition = 'fixed'
+          this.cssTop = 0
+          this.scrollExitFast()
+          return
       }
 
+      // Sticky
+      if ( this.navbarPosition >= this.scrollPosition ) {
+        this.cssPosition = 'fixed'
+        this.cssTop = 0
+      }
+
+      // Up
       if ( this.scrollPosition < this.lastScrollPosition && this.scrollDirection !== 'up' ) {
         this.scrollDirection = 'up';
 
@@ -202,14 +216,11 @@ export default {
           this.cssPosition = 'absolute'
           this.cssTop = this.scrollPosition - this.navbarHeight
         }
-
+        this.scrollExitFast()
+        return       
       }
 
-      if ( this.scrollPosition <= this.navbarPosition ) {
-        this.cssPosition = 'fixed'
-        this.cssTop = 0
-      }
-
+      // Down
       if ( this.scrollPosition > this.lastScrollPosition && this.scrollDirection !== 'down') {
         if ( this.navbarPosition < 0 ) {
           console.log('navbar check')
@@ -220,16 +231,31 @@ export default {
 
         this.cssPosition = 'absolute'
         this.cssTop = this.navbarPosition
-        this.scrollDirection = 'down';
+        this.scrollDirection = 'down'
+        this.scrollExitFast()
+        return
       }
 
-      // TODO scrolled state for sticky header
-      // if( this.scrollPosition > overlap height ) {
-      //   Add overlap class
-      // } else {
-      //   Remove overlap class
-      // }
+        this.scrollExitSlow(progress)
+        return
 
+
+
+    },
+    scrollExitFast() {
+      this.lastScrollPosition = this.scrollPosition
+    },
+    scrollExitSlow(progress) {
+      this.lastScrollPosition = this.scrollPosition
+
+      // Switch to burgered
+      if ( this.scrollPosition > (this.$window.height / 2) && this.navbarBurgered === false ) {
+        this.navbarBurgered = true
+      } else if (progress === 0 && !this.isNarrow) {
+        this.navbarBurgered = false
+      }
+
+      // Page bottom
       if ((this.$window.height + this.scrollPosition) >= document.body.offsetHeight) {
         this.burgerBottom = false
         this.$forceNextTick(() => {
@@ -239,9 +265,6 @@ export default {
           // console.log('bottom')
         })
       }
-
-      this.lastScrollPosition = this.scrollPosition
-
     }
   }
 }
@@ -260,7 +283,7 @@ export default {
   position: absolute
   height: 6em
   width: 100%
-  z-index: 3    
+  z-index: 3
 
 .home-link
   display: flex
