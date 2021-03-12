@@ -10,7 +10,7 @@
 </template>
 
 <script>
-
+import Player from '@vimeo/player';
 
 export default {
 
@@ -31,11 +31,20 @@ export default {
       this.iframeEl = e.target
       this.iframeSrc = e.target.getAttribute('data-src')
 
-      // TODO more correct conditions?
-      if (!!e.target.querySelectorAll('#player')) {
-        // Seems to be ok, allow iframe click events to cover retry button
+      if (this.iframeSrc.includes('vimeo') && this.iframeEl.getAttribute('src') !== null ) {
+
+        let player = new Player(this.iframeEl)
+
+        player.getVideoTitle().then((title) => {
+            // console.log('title:', title);
+            // Seems to be ok, allow iframe click events to cover retry button
+            this.loadingChecked = true
+        });
+      } else {
+        // no solution for youtube and other iframes right now
         this.loadingChecked = true
       }
+
     },
     reloadVideo() {
       this.iframeEl.src = this.iframeSrc

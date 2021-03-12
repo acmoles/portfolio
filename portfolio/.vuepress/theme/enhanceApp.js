@@ -32,7 +32,9 @@ export default ({
     Vue.use(VueClipboard)
     Vue.use(PortalVue)
 
+    lazySizes.cfg.iframeLoadMode  = 1
     lazySizes.init()
+
 
     // fixes scroll jump in modern browsers
     if ('scrollRestoration' in window.history) {
