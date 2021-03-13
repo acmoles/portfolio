@@ -24,6 +24,13 @@ export class Abstract extends EventTarget {
     // this.stats = new Stats();
     // this.gui = new dat.GUI();
 
+    // FPS check
+    this.filterStrength = 20;
+    this.frameTime = 0;
+    this.lastLoop = Date.now();
+    this.thisLoop;
+    this.fpsTimeout;
+
     // Variables
     this.near = 1;
     this.far = 196;
@@ -46,6 +53,14 @@ export class Abstract extends EventTarget {
       this.controls.addEventListener( 'change', this.stopAnimate.bind(this) );
     }
     this.dispatchEvent(new Event('abstract-loaded'));
+
+    this.fpsTimeout = setTimeout( () => {
+      let fps = ( 1000 / this.frameTime ).toFixed(1);
+      console.log( fps + ' fps' );
+      if (fps < 50) {
+        this.uniforms.usePerlin.value = false;
+      }
+    }, 4000 );
   }
 
   stopAnimate() {
@@ -149,6 +164,7 @@ export class Abstract extends EventTarget {
       time: { type:"f", value: this.start },
       near: { value: this.near },
       far: { value: this.far },
+      usePerlin: { value: true }
     };
 
     let vertexShader = SphereShader.perlinNoise + SphereShader.vertexShader;
@@ -186,6 +202,11 @@ export class Abstract extends EventTarget {
       this.controls.update();
     }
 		this.uniforms.time.value = .00005 * ( Date.now() - this.start );
+
+    // FPS check
+    let thisFrameTime = ( this.thisLoop = Date.now() ) - this.lastLoop;
+    this.frameTime += ( thisFrameTime - this.frameTime ) / this.filterStrength;
+    this.lastLoop = this.thisLoop;
   }
 
   destroy() {

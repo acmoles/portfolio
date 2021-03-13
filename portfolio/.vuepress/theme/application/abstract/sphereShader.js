@@ -141,6 +141,7 @@ varying float noise;
 uniform float near;
 uniform float far;
 uniform float time;
+uniform bool usePerlin;
 
 // TODO remove duplication
 highp float random(vec2 co)
@@ -170,7 +171,8 @@ void main()	{
 	vec3 finalColor = vec3( colorNoise.g, colorNoise.b * 2., colorNoise.b * 3. );
 
 	float n = .5 - random( gl_FragCoord.xy + sin(time/300.) );
-  float n2 = 1. - turbulence( 0.07  * gl_FragCoord.xyz + sin(time/30.) );
+  float n2 = 0.;
+  if (usePerlin) n2 = 1. - turbulence( 0.07  * gl_FragCoord.xyz + sin(time/30.) );
 
 	float fogFactor = smoothstep( near, far, depth );
   fogFactor = fogFactor - 0.1*(n + n2);
