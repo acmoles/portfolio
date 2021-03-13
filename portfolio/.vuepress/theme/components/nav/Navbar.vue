@@ -6,7 +6,6 @@
       class="navbar"
       :class="[
         navStyle,
-        { 'up-transition': scrollDirection === 'up' },
         { force: forceLight },
         { burgered: navbarBurgered },
         {'modal-background-only': hasModalBackground }
@@ -177,9 +176,6 @@ export default {
       // }
     },
     handleScroll ( progress ) {
-      // TODO // https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
-      // Perhaps uos already offers this?
-      // https://lodash.com/docs/#debounce
       
       if (this.isSidebarOpen) {
         this.cssPosition = 'fixed'
@@ -195,7 +191,7 @@ export default {
       }
 
       if (this.lastScrollPosition - this.scrollPosition > this.navbarHeight) {
-          // Fast scroll up, bail out
+          console.log('Fast scroll up, bail out')
           this.cssPosition = 'fixed'
           this.cssTop = 0
           this.scrollExitFast()
@@ -204,25 +200,22 @@ export default {
 
       // Sticky
       if ( this.navbarPosition >= this.scrollPosition ) {
-        // console.log('on screen')
+        console.log('on screen')
         this.cssPosition = 'fixed'
         this.cssTop = 0
-
-      } else if ( this.scrollPosition >= ( this.navbarPosition + this.navbarHeight ) ) {
-        // console.log('off screen')
-
-        this.cssPosition = 'fixed'
-        this.cssTop = - this.navbarHeight
       }
 
       // Up
       if ( this.scrollPosition < this.lastScrollPosition && this.scrollDirection !== 'up' ) {
-        // console.log('up')
+        console.log('up')
         this.scrollDirection = 'up'
-        this.cssPosition = 'fixed'
-        this.cssTop = 0
-        // this.cssPosition = 'absolute'
-        // this.cssTop = this.scrollPosition - this.navbarHeight
+
+        if ( this.scrollPosition >= ( this.navbarPosition + this.navbarHeight ) ) {
+          // Bottom of page case
+          console.log('up-granular')
+          this.cssPosition = 'absolute'
+          this.cssTop = this.scrollPosition - this.navbarHeight
+        }
 
         this.scrollExitFast()
         return       
@@ -230,7 +223,7 @@ export default {
 
       // Down
       if ( this.scrollPosition > this.lastScrollPosition && this.scrollDirection !== 'down') {
-        //console.log('down')
+        console.log('down')
 
         if ( this.navbarPosition < 0 ) {
           console.log('navbar check')
