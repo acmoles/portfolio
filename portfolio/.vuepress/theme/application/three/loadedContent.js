@@ -73,7 +73,7 @@ export class LoadedContent extends EventTarget {
     this.loadModels( () => {
       this.startAnimationSequence();
       this.dispatchEvent(new Event('loaded'));
-      console.log(this.interactables)
+      //console.log(this.interactables)
     } );
   }
 
@@ -328,7 +328,7 @@ export class LoadedContent extends EventTarget {
         shader.uniforms.master = { value: 1 };
         shader.uniforms.time = { value: 0 };
         if (window.devicePixelRatio < 1.5) {
-          console.log('Low Pixel Ratio');
+          console.log('1.0 Pixel Ratio');
           shader.uniforms.noise = { value: 0.4 };
         } else {
           shader.uniforms.noise = { value: 0.6 };
