@@ -191,7 +191,7 @@ export default {
       }
 
       if (this.lastScrollPosition - this.scrollPosition > this.navbarHeight) {
-          console.log('Fast scroll up, bail out')
+          //console.log('Fast scroll up, bail out')
           this.cssPosition = 'fixed'
           this.cssTop = 0
           this.scrollExitFast()
@@ -200,19 +200,19 @@ export default {
 
       // Sticky
       if ( this.navbarPosition >= this.scrollPosition ) {
-        console.log('on screen')
+        //console.log('on screen')
         this.cssPosition = 'fixed'
         this.cssTop = 0
       }
 
       // Up
       if ( this.scrollPosition < this.lastScrollPosition && this.scrollDirection !== 'up' ) {
-        console.log('up')
+        //console.log('up')
         this.scrollDirection = 'up'
 
         if ( this.scrollPosition >= ( this.navbarPosition + this.navbarHeight ) ) {
           // Bottom of page case
-          console.log('up-granular')
+          //console.log('up-granular')
           this.cssPosition = 'absolute'
           this.cssTop = this.scrollPosition - this.navbarHeight
         }
@@ -223,7 +223,7 @@ export default {
 
       // Down
       if ( this.scrollPosition > this.lastScrollPosition && this.scrollDirection !== 'down') {
-        console.log('down')
+        //console.log('down')
 
         if ( this.navbarPosition < 0 ) {
           console.log('navbar check')
