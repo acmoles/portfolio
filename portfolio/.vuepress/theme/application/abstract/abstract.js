@@ -56,7 +56,7 @@ export class Abstract extends EventTarget {
 
     this.fpsTimeout = setTimeout( () => {
       let fps = ( 1000 / this.frameTime ).toFixed(1);
-      console.log( fps + ' fps' );
+      // console.log( fps + ' fps' );
       if (fps < 50) {
         this.uniforms.usePerlin.value = false;
       }
