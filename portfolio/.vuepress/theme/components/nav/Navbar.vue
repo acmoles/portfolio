@@ -33,14 +33,14 @@
           <router-link
             :to="$localePath"
             class="home-link"
-            v-if="!(navbarBurgered || isModalOpen) && pageLoadingStatus !== 'covering' || isMobileHome"
+            v-if="!(navbarBurgered || isModalOpen) || isMobileHome"
           >
             <Logo :white="navStyle === 'light'" class="logo-site-title"/>
               <span class="text-site-title">
                 <strong>Anthony Moles</strong>
                 <!-- <span>design, product and technology</span> -->
               </span>
-            </router-link>
+          </router-link>
           </transition>
 
           <transition name="fade-fast-delay">
@@ -103,6 +103,9 @@ export default {
     pageLoadingStatus () {
       return this.$store.state.pageLoadingStatus
     },
+    projectPosition () {
+      return this.$store.state.projectPosition
+    },
     $window () {
       return this.$store.state.window
     },
@@ -137,9 +140,11 @@ export default {
     this.setBodyEl()
 
     this.$router.beforeEach((to, from, next) => {
-      // console.log('nav router guard');
+      console.log('nav router guard');
       this.cssPosition = 'absolute'
       this.cssTop = 0
+      this.navbarBurgered = false
+
       next()
     })
 
@@ -168,7 +173,7 @@ export default {
       let status = typeof to === 'boolean' ? to : !this.isSidebarOpen
       this.$store.dispatch('setSidebarStatus', status)
 
-      // TODO fix effect of scroll lock on nav links...
+      // TODO fix effect of scroll lock on sidebar nav links...
       // if (status === true) {
       //   this.disableScrolling(true)
       // } else {
@@ -194,8 +199,6 @@ export default {
           //console.log('Fast scroll up, bail out')
           this.cssPosition = 'fixed'
           this.cssTop = 0
-          this.scrollExitFast()
-          return
       }
 
       // Sticky
@@ -215,10 +218,7 @@ export default {
           //console.log('up-granular')
           this.cssPosition = 'absolute'
           this.cssTop = this.scrollPosition - this.navbarHeight
-        }
-
-        this.scrollExitFast()
-        return       
+        }    
       }
 
       // Down
@@ -235,8 +235,6 @@ export default {
         this.cssPosition = 'absolute'
         this.cssTop = this.navbarPosition
         this.scrollDirection = 'down'
-        this.scrollExitFast()
-        return
       }
 
         this.scrollExitSlow(progress)
