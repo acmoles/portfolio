@@ -208,7 +208,7 @@ The clone sphere has similar behaviour, cloning the held brick when the countdow
   What if learning to code with turtle graphics could be an immersive spatial experience?
 </p>
 
-Continuing my investigation into whether emerging interfaces can make digital technology more intuitive for children. I envision an experience where users write code with a keyboard in a web-based editor and hit play. It's then sent via http to a paired AR device like a phone or HMD where the results are visualised in world-space. _This is a work in progress._
+I'm continuing my investigation into whether emerging interfaces can make digital technology more intuitive for children. I envision an experience where users write code with a keyboard in a web-based editor and hit play. It's then sent via http to a paired AR device like a phone or HMD where the results are visualised in world-space. Taking advantage of the 3D context, there is a new turtle command `Dive()` for rotating the drawing plane. _This is a work in progress._
 
 </template>
 
