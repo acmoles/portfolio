@@ -156,7 +156,7 @@ My background in industrial design lends itself to sketching quick iterations of
 </Content-ImageFrames-SquareImagesRow>
 
 
-<Content-ImageFrames-MainImageSection padding="is-small" imageClass="is-16by9" url="https://player.vimeo.com/video/488558845" alt="Nova showreel" :aside="true" rag="rag-4" :iframe="true">
+<Content-ImageFrames-MainImageSection padding="is-small" imageClass="is-16by9" url="https://player.vimeo.com/video/488558845" alt="Lego XR" :aside="true" rag="rag-4" :iframe="true">
 
 </Content-ImageFrames-MainImageSection>
 
@@ -194,3 +194,22 @@ The clone sphere has similar behaviour, cloning the held brick when the countdow
 </template>
 
 </Content-ImageFrames-SquareImagesRow>
+
+
+
+
+<Content-ImageFrames-MainImageSection padding="is-large" imageClass="is-16by9" url="https://player.vimeo.com/video/528802503" alt="Turtle Graphics 3D" :aside="true" rag="rag-4" :iframe="true">
+
+<template slot="content">
+
+## Turtle Graphics 3D
+
+<p class="subtitle">
+  What if learning to code with turtle graphics could be an immersive spatial experience?
+</p>
+
+My investigation into whether emerging interfaces can make digital technology more intuitive for children continues with Turtle Graphics 3D (wip). I envision an experience where users write code with a keyboard in a web-based editor and hit play, sending it via http to a paired AR device like a phone or HMD where the results are visualised in world-space.
+
+</template>
+
+</Content-ImageFrames-MainImageSection>
