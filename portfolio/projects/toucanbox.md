@@ -875,7 +875,7 @@ The final funnel is accessible with fast performance on both desktop and mobile 
 
 ### What went well
 
-This project's collaborative research and discovery phase had a transformational effect on the broader organisation. In response to the challenges and insights uncovered, other teams rolled out significant changes to their business processes and activities, adopting a 'product mindset'.
+The collaborative research and discovery phase had a transformational effect on the broader organisation. In response to the challenges and insights uncovered, other teams rolled out significant changes to their business processes and activities, adopting a 'product mindset'.
 
  <!-- in areas such as marketing, customer service and operations.
 
@@ -890,7 +890,7 @@ The donation experience project had a transformational effect within the greater
 
 ### Lessons learnt
 
-The only disappointment was how long it took to complete the process and access the valuable outcomes. As the only full&#8209;time member of the project team I needed to split my time between management and UX design. Although I relished the varied work, combined with the developer bottleneck, the delay between identifying problems and applying remedies was costly. We agreed to address this issue by hiring a specialised front-end developer and a product manager.
+ It took rather a long time to complete the process and access the valuable outcomes. As the only full&#8209;time member of the project team I needed to split my time between management and UX design. Although I relished the varied work, combined with the developer bottleneck, the delay between identifying problems and applying remedies was costly. We agreed to address this issue by hiring a specialised front-end developer and a product manager.
 
 <!-- I was the only full-time member of the project team; coordinating the research, executing the design process, writing front-end code, planning tests and shipping releases. We were a small team with many competing priorities and a limited budget. This meant a delay between identifying the problems and releasing the improvements.
 
@@ -901,7 +901,7 @@ We addressed this problem in early 2018 by hiring a dedicated front-end develope
 ### Going forward
 
 <p>
-It was clear the greatest potential for further improvement to the user experience lay with two so&#8209;far unaddressed principles; <em>Flexible and Personalised</em>. I would tackle them in a <router-link to="/extra/toucanbox-personalisation/">future project</router-link> focussing on retention.
+In this project I focussed on giving customers a strong reason to start a toucanBox subscription. The greatest potential going forward lay in giving them a strong reason to stay. This meant tackling the two remaining principles, <em>Flexible and Personalised</em>, in a <router-link to="/extra/toucanbox-personalisation/">future project</router-link> focussing on customer retention.
 </p>
 
 

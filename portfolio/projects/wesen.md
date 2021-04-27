@@ -70,7 +70,7 @@ Recent years have seen a gradual increase in awareness of product customisation 
 
 In 2015 I helped pioneer customisable children’s toys at [Makielab.](/projects/makielab) We enjoyed modest success, catching the attention of Disney who eventually bought the startup. My intention with Wesen was to leverage the lessons learnt and push the envelope of consumer Mass Customisation software.
 
-I wanted to explore the possibility of a lightly constrained creation experience, able to generate infinite variations while being intuitive and fun to use. _I was convinced that suitable constraints could enhance the creativity of users, rather than restrict it._ I also wanted to completely automate and outsource the fulfilment process.
+I wanted to explore the possibility of a playful, lightly constrained creation experience, able to generate infinite variations while being intuitive and fun to use. _I was convinced that suitable constraints could enhance the creativity of users, rather than restrict it._ I also wanted to completely automate and outsource the fulfilment process.
 
 By building a product end-to-end, I hoped to increase my empathy for colleagues and stakeholders. To re-experience digital product development from every perspective - founder, marketer, product, design, developer and operations.
 

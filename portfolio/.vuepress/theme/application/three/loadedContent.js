@@ -331,7 +331,7 @@ export class LoadedContent extends EventTarget {
           console.log('1.0 Pixel Ratio');
           shader.uniforms.noise = { value: 0.4 };
         } else {
-          shader.uniforms.noise = { value: 0.6 };
+          shader.uniforms.noise = { value: 0.5 };
         }
         shader.vertexShader = 'varying float vY;\nvarying float vY2;\n' + shader.vertexShader;
 

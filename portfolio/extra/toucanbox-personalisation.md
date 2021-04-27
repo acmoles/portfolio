@@ -1,6 +1,6 @@
 ---
 title: toucanBox 2
-subtitle: Increasing satisfaction with a personalised experience
+subtitle: Increasing satisfaction with personalisation
 case1: Case study
 navStyle:
   style: light
@@ -53,12 +53,12 @@ Front-end developer
 :::
 
 
-<Content-TextSection padding="is-initial" rag="rag-4">
+<Content-TextSection padding="is-initial" rag="rag-6">
 
 The best products elevate a commodity (like music or holidays, or crafts in this case) into a valuable holistic experience. After completing a user-centred design process focussing on customer onboarding, I had both a pool of insights and the momentum of a company-wide shift to a 'product mindset'.
 
 <p>
-The next challenge was customer retention. How might we make customers so satisfied with toucanBox that they want to stay subscribed for longer? Referring back to the research I conducted to generate toucanBox's 
+iterative design, prototype, test cycles can systematically answer intractable business challenges and customer retention was the next such challenge. How might we make customers so satisfied with toucanBox that they want to stay subscribed for longer? Referring back to the research I conducted to generate toucanBox's 
 <Content-ModalLink label="Product Principles">
 <template v-slot:modal>
 <Content :page-key="$site.pages.find(p => p.path === '/extra/toucanbox-principles/').key"/>
@@ -66,7 +66,7 @@ The next challenge was customer retention. How might we make customers so satisf
 </Content-ModalLink>, we had a clear answer: <em>Get the right craft box to the right customer in the right quantity</em>. With a bespoke technology platform and a direct relationship with customers, toucanBox was uniquely positioned to leverage a personalised experience.
 </p>
 
-I created several concepts, the most successful in user testing we named the _Box builder_. We tested live-data prototypes on a limited audience in production, with promising results. Sadly I was unable to finish this project before my move to Berlin. I hired, onboarded and handed over the project to a new UX designer. Today the box builder is live as part of the signup flow and user accounts.
+I created several prototypes, including a past box rating system, child personality quiz and child preferences survey. The most promising concept was called the _Box builder_ which showed high engagement in a limited traffic live-data test. Sadly I moved to Berlin before the impact on retention could be fully felt, but today the box builder is live as part of the signup flow and in users' accounts.
 
 <template v-slot:aside>
 
@@ -94,7 +94,7 @@ I created several concepts, the most successful in user testing we named the _Bo
 
 ## Reflections
 
-Finding the right personalised experience for toucanBox users proved to be the core challenge.  I prototyped dozens of ideas, some of which we released as live tests to gather data insights. These included a past box rating system, child personality quiz and parent survey/preferences. What emerged were two strong themes. Customers either wanted to directly choose their next box(es) or they hardly wanted to be involved in personalising their experience at all. 
+Finding the right personalised experience for toucanBox users proved to be the core challenge. By gathering qualitative data from user testing and quantitative data from live-data prototypes (released to a small segment of traffic), two strong themes emerged. Customers either wanted to directly choose their next box(es) or they hardly wanted to be involved in personalising their experience at all. 
 
 <p class="subtitle">
   "I wouldn't add my preferences if I can choose my box. It's basically the same thing, except choosing is better."
@@ -105,6 +105,8 @@ Finding the right personalised experience for toucanBox users proved to be the c
 </p>
 
 I believe this dichotomy reflects people's broader expectations of digital technology _"Either I'm in total control, or I expect the algorithm to anticipate my needs"._ We knew we needed to tackle both these opportunities, for both types of user. Ultimately toucanBox customers should be able to choose their boxes months ahead (adding additional materials, books and other add-ons if desired) and provide as much or as little information about their child as they want, always getting the best possible box. The Box Builder focusses on choice but I imagined it as part of a broader interface that also includes preferences and settings.
+
+
 
 </template>
 
