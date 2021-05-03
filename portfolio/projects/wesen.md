@@ -105,7 +105,15 @@ Wesen fulfils my original success criteria. It taught me a great deal but the mo
 </Content-TextSection>
 
 
-<Content-ImageFrames-MainImageSection padding="is-medium-large" imageClass="is-4by3" url="https://player.vimeo.com/video/463897939" alt="Wesen demo" :iframe="true"/>
+<Content-ImageFrames-MainImageSection padding="is-medium-large" imageClass="is-4by3" url="https://player.vimeo.com/video/463897939" alt="Wesen demo" :iframe="true" :aside="true">
+ 
+<template v-slot:aside>
+  <figure class="image parent-loading is-square">
+    <img class="lazyload" data-src="/images/wesen/context.jpg" alt="wesen pendant">
+  </figure>
+</template>
+
+</Content-ImageFrames-MainImageSection>
 
 
 
