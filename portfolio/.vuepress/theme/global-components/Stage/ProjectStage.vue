@@ -335,6 +335,9 @@ export default {
     margin-bottom: 0.25em
     @media screen and (min-width: $tablet)
       font-size: 3.5em
+  
+.stage.dark .stage-title
+  color: $white-bis
 
 // In-column hero
 .column.visual-column
